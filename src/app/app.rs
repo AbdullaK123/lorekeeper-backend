@@ -1,25 +1,29 @@
 use axum::{Router};
 use axum::routing::get;
+use neo4rs::Graph;
 use tower_http::trace::{
     DefaultMakeSpan, DefaultOnFailure, DefaultOnRequest, DefaultOnResponse, TraceLayer,
 };
 use tracing::Level;
 use sqlx::postgres::PgPool;
-use crate::infrastructure::{create_pool, load_config, load_settings};
+use crate::infrastructure::{create_graph, create_pool, load_config, load_settings};
 
 #[derive(Clone)]
 struct AppState {
-    pool: PgPool
+    pool: PgPool,
+    graph: Graph
 }
 
 pub async fn create_app() -> Router {
 
     let settings = load_settings();
     let config = load_config();
-    let pool = create_pool(&settings, &config).await.expect("Failed to initialize database pool");
+    let pool = create_pool(&settings, &config.db).await;
+    let graph = create_graph(&settings, &config.memgraph).await;
 
     let app_state = AppState {
-        pool
+        pool,
+        graph
     };
 
     let app = Router::new()

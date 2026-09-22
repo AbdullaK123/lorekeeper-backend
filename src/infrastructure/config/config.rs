@@ -4,7 +4,10 @@ use serde_yaml_bw;
 
 #[derive(Debug, Deserialize)]
 pub struct Settings {
-    pub database_url: String
+    pub database_url: String,
+    pub memgraph_uri: String,
+    pub memgraph_user: String,
+    pub memgraph_password: String,
 }
 #[derive(Debug, Deserialize)]
 pub struct DatabaseConfig {
@@ -16,8 +19,15 @@ pub struct DatabaseConfig {
 }
 
 #[derive(Debug, Deserialize)]
+pub struct MemgraphConfig {
+    pub max_connections: usize,
+    pub fetch_size: usize
+}
+
+#[derive(Debug, Deserialize)]
 pub struct Config {
-    pub(crate) db: DatabaseConfig
+    pub(crate) db: DatabaseConfig,
+    pub(crate) memgraph: MemgraphConfig
 }
 
 pub fn load_settings() -> Settings {

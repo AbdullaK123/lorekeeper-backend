@@ -1,5 +1,6 @@
 mod app;
 mod infrastructure;
+mod data;
 
 use app::create_app;
 use tracing::{info};

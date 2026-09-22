@@ -6,8 +6,11 @@ services:
     env_file: .env
     environment:
       DATABASE_URL: postgresql://dev:password@app-db:5432/app_db
+      MEMGRAPH_URI: bolt://app-memgraph:7687
     depends_on:
-      pulp-db:
+      app-db:
+        condition: service_healthy
+      app-memgraph:
         condition: service_healthy
     networks:
       - app-network
@@ -32,9 +35,27 @@ services:
       - app-network
     restart: always
 
+  app-memgraph:
+    image: memgraph/memgraph
+    ports:
+      - "7687:7687"
+      - "7444:7444"
+    volumes:
+      - memgraph_data:/var/lib/memgraph
+    healthcheck:
+      test: ["CMD-SHELL", "echo 'RETURN 0;' | mgconsole || exit 1"]
+      interval: 10s
+      retries: 5
+      timeout: 5s
+      start_period: 10s
+    networks:
+      - app-network
+    restart: always
+
 networks:
   app-network:
     driver: bridge
 
 volumes:
   app_db_data:
+  memgraph_data:
