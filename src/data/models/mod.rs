@@ -1,4 +1,5 @@
 pub mod user;
-mod graph;
+pub mod graph;
 
 pub use user::*;
+pub use graph::*;
