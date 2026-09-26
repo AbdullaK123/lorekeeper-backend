@@ -14,6 +14,19 @@ pub struct User {
 }
 
 #[derive(Debug, Clone, Deserialize)]
+pub struct LoginRequest {
+    pub email: String,
+    pub password: String
+}
+
+#[derive(Debug, Clone, Deserialize)]
+pub struct SignupRequest {
+    pub username: String,
+    pub email: String,
+    pub password: String
+}
+
+#[derive(Debug, Clone, Deserialize)]
 pub struct UserResponse {
     pub id: Uuid,
     pub username: String,
