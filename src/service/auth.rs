@@ -1,11 +1,9 @@
 use tokio;
 use crate::data::{
     UserRepository,
-    User,
-    UserResponse
+    User
 };
 use argon2::{Argon2, PasswordHash, PasswordHasher, PasswordVerifier};
-use argon2::password_hash::phc::SaltString;
 use crate::service::ServiceError;
 
 #[derive(Clone)]
@@ -34,8 +32,7 @@ impl AuthService {
 
     async fn authenticate_user(&self, email: String, password: String) -> Result<User, ServiceError> {
         let user = self.user_repo.get_user_by_email(email)
-            .await
-            .map_err(|e| ServiceError::InternalError(e.to_string()) )?;
+            .await?;
         if user.is_none() {
             return Err(ServiceError::NotFound("A user with that email does not exist".to_string()))
         }
