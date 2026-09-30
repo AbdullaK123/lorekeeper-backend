@@ -6,12 +6,15 @@ use tower_http::trace::{
 };
 use tracing::Level;
 use sqlx::postgres::PgPool;
+use crate::data::UserRepository;
 use crate::infrastructure::{create_graph, create_pool, load_config, load_settings};
+use crate::service::AuthService;
 
 #[derive(Clone)]
-struct AppState {
+pub struct AppState {
     pool: PgPool,
-    graph: Graph
+    graph: Graph,
+    pub auth_service: AuthService
 }
 
 pub async fn create_app() -> Router {
@@ -20,10 +23,13 @@ pub async fn create_app() -> Router {
     let config = load_config();
     let pool = create_pool(&settings, &config.db).await;
     let graph = create_graph(&settings, &config.memgraph).await;
+    let user_repo = UserRepository::new(pool.clone());
+    let auth_service = AuthService::new(user_repo);
 
     let app_state = AppState {
         pool,
-        graph
+        graph,
+        auth_service
     };
 
     let app = Router::new()

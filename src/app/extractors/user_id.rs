@@ -4,7 +4,7 @@ use tower_sessions::Session;
 use uuid::Uuid;
 use crate::app::errors::AppError;
 
-pub struct UserId(Uuid);
+pub struct UserId(pub Uuid);
 
 impl <S> FromRequestParts<S> for UserId
 where

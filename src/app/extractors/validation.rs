@@ -4,7 +4,7 @@ use serde::de::DeserializeOwned;
 use validator::Validate;
 use crate::app::errors::AppError;
 
-pub struct ValidatedJson<T>(T);
+pub struct ValidatedJson<T>(pub T);
 
 impl <S, T> FromRequest<S> for ValidatedJson<T>
 where

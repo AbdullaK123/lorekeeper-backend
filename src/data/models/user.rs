@@ -1,10 +1,9 @@
 use sqlx::FromRow;
-use serde::{Deserialize};
+use serde::{Deserialize, Serialize};
 use chrono::prelude::*;
 use uuid::Uuid;
 use validator::Validate;
 use passcheck::PasswordChecker;
-use crate::data::errors::DataError;
 
 #[derive(FromRow, Debug, Clone, Deserialize)]
 pub struct User {
@@ -50,7 +49,7 @@ pub struct SignupRequest {
     pub password: String
 }
 
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct UserResponse {
     pub id: Uuid,
     pub username: String,

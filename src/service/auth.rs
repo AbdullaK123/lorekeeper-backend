@@ -1,9 +1,7 @@
 use tokio;
-use crate::data::{
-    UserRepository,
-    User
-};
+use crate::data::{UserRepository, User, LoginRequest, UserResponse, SignupRequest};
 use argon2::{Argon2, PasswordHash, PasswordHasher, PasswordVerifier};
+use uuid::Uuid;
 use crate::service::ServiceError;
 
 #[derive(Clone)]
@@ -30,7 +28,7 @@ impl AuthService {
         Ok(hash)
     }
 
-    async fn authenticate_user(&self, email: String, password: String) -> Result<User, ServiceError> {
+    pub async fn authenticate_user(&self, email: String, password: String) -> Result<User, ServiceError> {
         let user = self.user_repo.get_user_by_email(email)
             .await?;
         if user.is_none() {
@@ -50,10 +48,22 @@ impl AuthService {
         }
         Ok(unwrapped_user.clone())
     }
-
-    // login
-
-    // signup
-
-    // logout
+    
+    pub async fn signup(&self, payload: SignupRequest) -> Result<UserResponse, ServiceError> {
+        let password_hash = Self::hash_password(payload.password).await?;
+        let user = self.user_repo.sign_up(
+            payload.username,
+            payload.email,
+            password_hash
+        ).await?;
+        Ok(user.into())
+    }
+    
+    pub async fn get_profile(&self, user_id: Uuid) -> Result<UserResponse, ServiceError> {
+        let user = self.user_repo.get_user_by_id(user_id).await?;
+        match user {
+            Some(user) => Ok(user.into()),
+            None => Err(ServiceError::AuthError)
+        }
+    }
 }
