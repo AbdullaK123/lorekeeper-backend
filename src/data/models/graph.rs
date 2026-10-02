@@ -10,6 +10,7 @@ pub trait FromRow: Sized {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Entity {
     pub id: String,
+    pub world_id: String,
     pub name: String,
     pub aliases: Vec<String>,
     pub kind: Vec<String>,
@@ -22,6 +23,7 @@ impl FromRow for Entity {
         let node: Node = row.get(alias)?;
         Ok(Entity {
             id: node.get("id")?,
+            world_id: node.get("world_id")?,
             name: node.get("name")?,
             aliases: node.get("aliases")?,
             kind: node.get("kind")?,
@@ -35,6 +37,7 @@ impl FromRow for Entity {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Relationship {
     pub id: String,
+    pub world_id: String,
     pub from_id: String,
     pub to_id: String,
     pub rel_type: String,
@@ -48,6 +51,7 @@ impl FromRow for Relationship {
         let rel: Relation = row.get(alias)?;
         Ok(Relationship {
             id: rel.get("id")?,
+            world_id: rel.get("world_id")?,
             from_id: rel.get("from_id")?,
             to_id: rel.get("to_id")?,
             rel_type: rel.typ().to_string(),
@@ -62,6 +66,7 @@ impl FromRow for Relationship {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Conversation {
     pub id: String,
+    pub world_id: String,
     pub created_at: String,
     pub summary: Option<String>,
 }
@@ -71,6 +76,7 @@ impl FromRow for Conversation {
         let node: Node = row.get(alias)?;
         Ok(Conversation {
             id: node.get("id")?,
+            world_id: node.get("world_id")?,
             created_at: node.get("created_at")?,
             summary: node.get::<String>("summary").ok(),
         })
@@ -81,6 +87,7 @@ impl FromRow for Conversation {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Conflict {
     pub id: String,
+    pub world_id: String,
     pub entity_id: String,
     pub field: String,
     pub existing_value: serde_json::Value,
@@ -94,6 +101,7 @@ impl FromRow for Conflict {
         let node: Node = row.get(alias)?;
         Ok(Conflict {
             id: node.get("id")?,
+            world_id: node.get("world_id")?,
             entity_id: node.get("entity_id")?,
             field: node.get("field")?,
             existing_value: serde_json::from_str(&node.get::<String>("existing_value")?)

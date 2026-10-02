@@ -47,6 +47,7 @@ impl GraphRepository {
             query(
                "CREATE (e:Entity {
                    id: $id,
+                   world_id: $world_id,
                    name: $name,
                    aliases: $aliases,
                    kind: $kind,
@@ -55,6 +56,7 @@ impl GraphRepository {
                })"
             )
                 .param("id", entity.id.clone())
+                .param("world_id", entity.world_id.clone())
                 .param("name", entity.name.clone())
                 .param("aliases", entity.aliases.clone())
                 .param("kind", entity.kind.clone())
@@ -75,7 +77,7 @@ impl GraphRepository {
     ) -> Result<bool, InfrastructureError> {
         let mut result = self.graph.execute(
             query(
-                "MATCH (e:Entity {id: $id})
+                "MATCH (e:Entity {id: $id, world_id: $world_id})
              SET e.name = $name,
                  e.aliases = $aliases,
                  e.kind = $kind,
@@ -84,6 +86,7 @@ impl GraphRepository {
              RETURN e.id AS id"
             )
                 .param("id", id)
+                .param("world_id", entity.world_id.clone())
                 .param("name", entity.name.clone())
                 .param("aliases", entity.aliases.clone())
                 .param("kind", entity.kind.clone())
@@ -96,16 +99,19 @@ impl GraphRepository {
     pub async fn delete_entity(
         &self,
         id: &str,
+        world_id: &str
     ) -> Result<bool, InfrastructureError> {
         let mut result = self.graph.execute(
-            query("MATCH (e:Entity {id: $id}) RETURN e.id AS id")
+            query("MATCH (e:Entity {id: $id, world_id: $world_id}) RETURN e.id AS id")
                 .param("id", id)
+                .param("world_id", world_id)
         ).await?;
         let exists = result.next().await?.is_some();
         if exists {
             self.graph.run(
-                query("MATCH (e:Entity {id: $id}) DETACH DELETE e")
+                query("MATCH (e:Entity {id: $id, world_id: $world_id}) DETACH DELETE e")
                     .param("id", id)
+                    .param("world_id", world_id)
             ).await?;
         }
         Ok(exists)
@@ -113,11 +119,13 @@ impl GraphRepository {
 
     pub async fn get_entity(
         &self,
-        id: &str
+        id: &str,
+        world_id: &str
     ) -> Result<Option<Entity>, InfrastructureError> {
         self.fetch_one::<Entity>(
-            query("MATCH (e: Entity {id: $id}) RETURN e")
-                .param("id", id),
+            query("MATCH (e:Entity {id: $id, world_id: $world_id}) RETURN e")
+                .param("id", id)
+                .param("world_id", world_id),
             "e"
         ).await
     }
@@ -125,6 +133,7 @@ impl GraphRepository {
     pub async fn get_entity_neighbors(
         &self,
         id: &str,
+        world_id: &str,
         rel_type: Option<&str>,
         kind: Option<&str>,
     ) -> Result<Vec<(Entity, Relationship)>, InfrastructureError> {
@@ -134,12 +143,12 @@ impl GraphRepository {
             .unwrap_or_default();
 
         let cypher = format!(
-            "MATCH (e:Entity {{id: $id}})-[r{rel}]-(m:Entity)
+            "MATCH (e:Entity {{id: $id, world_id: $world_id}})-[r{rel}]-(m:Entity)
          {kind_filter}
          RETURN r, m"
         );
 
-        let mut q = query(&cypher).param("id", id);
+        let mut q = query(&cypher).param("id", id).param("world_id", world_id);
         if let Some(k) = kind {
             q = q.param("kind", k);
         }
@@ -162,6 +171,7 @@ impl GraphRepository {
             "MATCH (a:Entity {{id: $from_id}}), (b:Entity {{id: $to_id}})
          CREATE (a)-[r:{} {{
              id: $id,
+             world_id: $world_id,
              from_id: $from_id,
              to_id: $to_id,
              description: $description,
@@ -174,6 +184,7 @@ impl GraphRepository {
         self.graph.run(
             query(&cypher)
                 .param("id", relationship.id.clone())
+                .param("world_id", relationship.world_id.clone())
                 .param("from_id", relationship.from_id.clone())
                 .param("to_id", relationship.to_id.clone())
                 .param("description", relationship.description.clone())
@@ -186,16 +197,18 @@ impl GraphRepository {
     pub async fn update_relationship(
         &self,
         id: &str,
+        world_id: &str,
         relationship: &Relationship,
     ) -> Result<bool, InfrastructureError> {
         let mut result = self.graph.execute(
             query(
-                "MATCH ()-[r {id: $id}]-()
+                "MATCH ()-[r {id: $id, world_id: $world_id}]-()
              SET r.description = $description,
                  r.properties = $properties
              RETURN r.id AS id"
             )
                 .param("id", id)
+                .param("world_id", world_id)
                 .param("description", relationship.description.clone())
                 .param("properties", serde_json::to_string(&relationship.properties).unwrap_or_default())
         ).await?;
@@ -205,16 +218,20 @@ impl GraphRepository {
     pub async fn delete_relationship(
         &self,
         id: &str,
+        world_id: &str,
     ) -> Result<bool, InfrastructureError> {
+        // same two-step pattern but with world_id
         let mut result = self.graph.execute(
-            query("MATCH ()-[r {id: $id}]-() RETURN r.id AS id")
+            query("MATCH ()-[r {id: $id, world_id: $world_id}]-() RETURN r.id AS id")
                 .param("id", id)
+                .param("world_id", world_id)
         ).await?;
         let exists = result.next().await?.is_some();
         if exists {
             self.graph.run(
-                query("MATCH ()-[r {id: $id}]-() DELETE r")
+                query("MATCH ()-[r {id: $id, world_id: $world_id}]-() DELETE r")
                     .param("id", id)
+                    .param("world_id", world_id)
             ).await?;
         }
         Ok(exists)
@@ -230,11 +247,13 @@ impl GraphRepository {
             query(
                 "CREATE (c:Conversation {
                     id: $id,
+                    world_id: $world_id,
                     created_at: $created_at,
                     summary: $summary
                 })"
             )
                 .param("id", conversation.id.clone())
+                .param("world_id", conversation.world_id.clone())
                 .param("created_at", conversation.created_at.clone())
                 .param("summary", conversation.summary.clone().unwrap_or_default())
         ).await?;
@@ -244,15 +263,17 @@ impl GraphRepository {
     pub async fn update_conversation(
         &self,
         id: &str,
+        world_id: &str,
         conversation: &Conversation,
     ) -> Result<bool, InfrastructureError> {
         let mut result = self.graph.execute(
             query(
-                "MATCH (c:Conversation {id: $id})
-                 SET c.summary = $summary
-                 RETURN c.id AS id"
+                "MATCH (c:Conversation {id: $id, world_id: $world_id})
+             SET c.summary = $summary
+             RETURN c.id AS id"
             )
                 .param("id", id)
+                .param("world_id", world_id)
                 .param("summary", conversation.summary.clone().unwrap_or_default())
         ).await?;
         Ok(result.next().await?.is_some())
@@ -261,16 +282,19 @@ impl GraphRepository {
     pub async fn delete_conversation(
         &self,
         id: &str,
+        world_id: &str,
     ) -> Result<bool, InfrastructureError> {
         let mut result = self.graph.execute(
-            query("MATCH (c:Conversation {id: $id}) RETURN c.id AS id")
+            query("MATCH (c:Conversation {id: $id, world_id: $world_id}) RETURN c.id AS id")
                 .param("id", id)
+                .param("world_id", world_id)
         ).await?;
         let exists = result.next().await?.is_some();
         if exists {
             self.graph.run(
-                query("MATCH (c:Conversation {id: $id}) DETACH DELETE c")
+                query("MATCH (c:Conversation {id: $id, world_id: $world_id}) DETACH DELETE c")
                     .param("id", id)
+                    .param("world_id", world_id)
             ).await?;
         }
         Ok(exists)
@@ -279,10 +303,12 @@ impl GraphRepository {
     pub async fn get_conversation(
         &self,
         id: &str,
+        world_id: &str,
     ) -> Result<Option<Conversation>, InfrastructureError> {
         self.fetch_one::<Conversation>(
-            query("MATCH (c:Conversation {id: $id}) RETURN c")
-                .param("id", id),
+            query("MATCH (c:Conversation {id: $id, world_id: $world_id}) RETURN c")
+                .param("id", id)
+                .param("world_id", world_id),
             "c"
         ).await
     }
@@ -298,6 +324,7 @@ impl GraphRepository {
                 "MATCH (e:Entity {id: $entity_id})
                  CREATE (e)-[:HAS_CONFLICT]->(c:Conflict {
                      id: $id,
+                     world_id: $world_id,
                      entity_id: $entity_id,
                      field: $field,
                      existing_value: $existing_value,
@@ -307,6 +334,7 @@ impl GraphRepository {
                  })"
             )
                 .param("id", conflict.id.clone())
+                .param("world_id", conflict.world_id.clone())
                 .param("entity_id", conflict.entity_id.clone())
                 .param("field", conflict.field.clone())
                 .param("existing_value", serde_json::to_string(&conflict.existing_value).unwrap_or_default())
@@ -320,15 +348,17 @@ impl GraphRepository {
     pub async fn update_conflict(
         &self,
         id: &str,
+        world_id: &str,
         conflict: &Conflict,
     ) -> Result<bool, InfrastructureError> {
         let mut result = self.graph.execute(
             query(
-                "MATCH (c:Conflict {id: $id})
-                 SET c.resolved = $resolved
-                 RETURN c.id AS id"
+                "MATCH (c:Conflict {id: $id, world_id: $world_id})
+             SET c.resolved = $resolved
+             RETURN c.id AS id"
             )
                 .param("id", id)
+                .param("world_id", world_id)
                 .param("resolved", conflict.resolved)
         ).await?;
         Ok(result.next().await?.is_some())
@@ -337,10 +367,12 @@ impl GraphRepository {
     pub async fn get_conflict(
         &self,
         id: &str,
+        world_id: &str,
     ) -> Result<Option<Conflict>, InfrastructureError> {
         self.fetch_one::<Conflict>(
-            query("MATCH (c:Conflict {id: $id}) RETURN c")
-                .param("id", id),
+            query("MATCH (c:Conflict {id: $id, world_id: $world_id}) RETURN c")
+                .param("id", id)
+                .param("world_id", world_id),
             "c"
         ).await
     }
@@ -348,13 +380,15 @@ impl GraphRepository {
     pub async fn get_conflicts_by_entity(
         &self,
         entity_id: &str,
+        world_id: &str,
     ) -> Result<Vec<Conflict>, InfrastructureError> {
         self.fetch_all::<Conflict>(
             query(
-                "MATCH (e:Entity {id: $entity_id})-[:HAS_CONFLICT]->(c:Conflict)
-                 RETURN c"
+                "MATCH (e:Entity {id: $entity_id, world_id: $world_id})-[:HAS_CONFLICT]->(c:Conflict)
+             RETURN c"
             )
-                .param("entity_id", entity_id),
+                .param("entity_id", entity_id)
+                .param("world_id", world_id),
             "c"
         ).await
     }
@@ -364,13 +398,15 @@ impl GraphRepository {
     pub async fn get_relationships_by_entity(
         &self,
         entity_id: &str,
+        world_id: &str,
     ) -> Result<Vec<Relationship>, InfrastructureError> {
         self.fetch_all::<Relationship>(
             query(
-                "MATCH (e:Entity {id: $entity_id})-[r]-()
-                 RETURN r"
+                "MATCH (e:Entity {id: $entity_id, world_id: $world_id})-[r]-()
+             RETURN r"
             )
-                .param("entity_id", entity_id),
+                .param("entity_id", entity_id)
+                .param("world_id", world_id),
             "r"
         ).await
     }
@@ -378,14 +414,16 @@ impl GraphRepository {
     pub async fn get_entities_by_conversation(
         &self,
         conversation_id: &str,
+        world_id: &str,
     ) -> Result<Vec<Entity>, InfrastructureError> {
         self.fetch_all::<Entity>(
             query(
-                "MATCH (e:Entity)-[r]-()
-                 WHERE r.source_conversation = $conversation_id
-                 RETURN DISTINCT e"
+                "MATCH (e:Entity {world_id: $world_id})-[r]-()
+             WHERE r.source_conversation = $conversation_id
+             RETURN DISTINCT e"
             )
-                .param("conversation_id", conversation_id),
+                .param("conversation_id", conversation_id)
+                .param("world_id", world_id),
             "e"
         ).await
     }
