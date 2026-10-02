@@ -1,19 +1,19 @@
 services:
-  api:
-    build: .
-    ports:
-      - "8000:8000"
-    env_file: .env
-    environment:
-      DATABASE_URL: postgresql://dev:password@app-db:5432/app_db
-      MEMGRAPH_URI: bolt://app-memgraph:7687
-    depends_on:
-      app-db:
-        condition: service_healthy
-      app-memgraph:
-        condition: service_healthy
-    networks:
-      - app-network
+#  api:
+#    build: .
+#    ports:
+#      - "8000:8000"
+#    env_file: .env
+#    environment:
+#      DATABASE_URL: postgresql://dev:password@app-db:5432/app_db
+#      MEMGRAPH_URI: bolt://app-memgraph:7687
+#    depends_on:
+#      app-db:
+#        condition: service_healthy
+#      app-memgraph:
+#        condition: service_healthy
+#    networks:
+#      - app-network
 
   app-db:
     image: postgres:18

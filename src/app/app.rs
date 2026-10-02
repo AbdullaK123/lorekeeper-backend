@@ -6,6 +6,7 @@ use tower_http::trace::{
 };
 use tracing::Level;
 use sqlx::postgres::PgPool;
+use crate::app::create_auth_controller;
 use crate::data::UserRepository;
 use crate::infrastructure::{create_graph, create_pool, load_config, load_settings};
 use crate::service::AuthService;
@@ -34,6 +35,7 @@ pub async fn create_app() -> Router {
 
     let app = Router::new()
         .route("/health", get(|| async { "ok" }))
+        .nest("/auth", create_auth_controller())
         .layer(
             TraceLayer::new_for_http()
                 // Ensure spans and events are emitted at INFO by default
