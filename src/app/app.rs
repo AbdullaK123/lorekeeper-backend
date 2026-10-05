@@ -6,7 +6,7 @@ use tower_http::trace::{
 };
 use tracing::Level;
 use sqlx::postgres::PgPool;
-use crate::app::create_auth_controller;
+use crate::app::{create_auth_controller, create_session_layer};
 use crate::data::UserRepository;
 use crate::infrastructure::{create_graph, create_pool, load_config, load_settings};
 use crate::service::AuthService;
@@ -28,7 +28,7 @@ pub async fn create_app() -> Router {
     let auth_service = AuthService::new(user_repo);
 
     let app_state = AppState {
-        pool,
+        pool: pool.clone(),
         graph,
         auth_service
     };
@@ -36,14 +36,9 @@ pub async fn create_app() -> Router {
     let app = Router::new()
         .route("/health", get(|| async { "ok" }))
         .nest("/auth", create_auth_controller())
-        .layer(
-            TraceLayer::new_for_http()
-                // Ensure spans and events are emitted at INFO by default
-                .make_span_with(DefaultMakeSpan::new().level(Level::INFO))
-                .on_request(DefaultOnRequest::new().level(Level::INFO))
-                .on_response(DefaultOnResponse::new().level(Level::INFO))
-                .on_failure(DefaultOnFailure::new().level(Level::ERROR)),
-        )
+        .layer(settings.trace_layer())
+        .layer(settings.session_layer(pool.clone()).await)
+        .layer(settings.cors_layer())
         .with_state(app_state);
 
     app
