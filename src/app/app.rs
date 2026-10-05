@@ -1,12 +1,8 @@
 use axum::{Router};
 use axum::routing::get;
 use neo4rs::Graph;
-use tower_http::trace::{
-    DefaultMakeSpan, DefaultOnFailure, DefaultOnRequest, DefaultOnResponse, TraceLayer,
-};
-use tracing::Level;
 use sqlx::postgres::PgPool;
-use crate::app::{create_auth_controller, create_session_layer};
+use crate::app::{create_auth_controller};
 use crate::data::UserRepository;
 use crate::infrastructure::{create_graph, create_pool, load_config, load_settings};
 use crate::service::AuthService;
