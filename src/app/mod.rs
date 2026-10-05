@@ -9,3 +9,4 @@ pub use app::*;
 pub use middleware::*;
 pub use extractors::*;
 pub use controllers::*;
+pub use config::*;
