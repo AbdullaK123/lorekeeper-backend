@@ -14,6 +14,16 @@ impl GraphRepository {
         }
     }
 
+    fn validate_cypher_identifier(value: &str) -> Result<(), InfrastructureError> {
+        if value.is_empty()
+            || !value.chars().all(|c| c.is_ascii_alphanumeric() || c == '_')
+            || value.chars().next().unwrap().is_ascii_digit()
+        {
+            return Err(InfrastructureError::CypherInjection(value.to_string()));
+        }
+        Ok(())
+    }
+
    async fn fetch_all<T: FromRow>(
         &self,
         q: Query,
@@ -137,6 +147,11 @@ impl GraphRepository {
         rel_type: Option<&str>,
         kind: Option<&str>,
     ) -> Result<Vec<(Entity, Relationship)>, InfrastructureError> {
+
+        if let Some(rel_type) = rel_type {
+            Self::validate_cypher_identifier(rel_type)?;
+        }
+
         let rel = rel_type.map(|r| format!(":{r}")).unwrap_or_default();
         let kind_filter = kind
             .map(|_| "WHERE $kind IN m.kind")
@@ -167,6 +182,9 @@ impl GraphRepository {
         &self,
         relationship: &Relationship,
     ) -> Result<(), InfrastructureError> {
+
+        Self::validate_cypher_identifier(&relationship.rel_type)?;
+
         let cypher = format!(
             "MATCH (a:Entity {{id: $from_id}}), (b:Entity {{id: $to_id}})
          CREATE (a)-[r:{} {{

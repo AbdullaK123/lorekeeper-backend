@@ -95,7 +95,7 @@ pub fn load_settings() -> Settings {
 }
 
 pub fn load_config() -> Config {
-    let file = File::open("./config.yaml")
+    let file = File::open("./src/app/config/config.yaml")
         .expect("Failed to read config file.");
     serde_yaml_bw::from_reader::<File, Config>(file)
         .expect("Failed to parse config file.")

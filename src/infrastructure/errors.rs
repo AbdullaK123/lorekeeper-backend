@@ -10,4 +10,8 @@ pub enum InfrastructureError {
     Memgraph(#[from] neo4rs::Error),
     #[error("Memgraph deserialization error")]
     MemgraphDeserialize(#[from] neo4rs::DeError),
+    #[error("Invalid Cypher identifier: {0}")]
+    CypherInjection(String),
+    #[error("Internal error: {0}")]
+    InternalError(String)
 }
