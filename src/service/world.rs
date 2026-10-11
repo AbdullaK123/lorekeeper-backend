@@ -35,14 +35,17 @@ impl WorldService {
         id: Uuid,
         user_id: Uuid,
         payload: UpdateWorldRequest
-    ) -> Result<Option<WorldResponse>, ServiceError> {
+    ) -> Result<WorldResponse, ServiceError> {
         let result = self.world_repo.update(
             id,
             user_id,
             payload.new_name,
             payload.new_description
         ).await?;
-        Ok(result.map(|w| w.into()))
+        match result {
+            Some(world) => Ok(world.into()),
+            None => Err(ServiceError::NotFound("World not found".to_string()))
+        }
     }
 
     // delete a world
@@ -63,12 +66,15 @@ impl WorldService {
         &self,
         id: Uuid,
         user_id: Uuid
-    ) -> Result<Option<WorldResponse>, ServiceError> {
+    ) -> Result<WorldResponse, ServiceError> {
         let result = self.world_repo.get_by_id(
             id,
             user_id
         ).await?;
-        Ok(result.map(|w| w.into()))
+        match result {
+            Some(world) => Ok(world.into()),
+            None => Err(ServiceError::NotFound("World not found".to_string()))
+        }
     }
 
     // get a user's worlds

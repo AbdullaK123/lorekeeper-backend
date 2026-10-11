@@ -45,3 +45,45 @@ pub struct ConversationRow {
     pub created_at: DateTime<Utc>,
     pub updated_at: DateTime<Utc>
 }
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ConversationResponse {
+    pub id: Uuid,
+    pub title: String,
+    pub messages: Json<Vec<Message>>,
+    pub updated_at: DateTime<Utc>
+}
+
+impl From<ConversationRow> for ConversationResponse {
+    fn from(value: ConversationRow) -> Self {
+        Self {
+            id: value.id, 
+            title: value.title,
+            messages: value.messages,
+            updated_at: value.updated_at
+        }
+    }
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ConversationItem {
+    pub id: Uuid,
+    pub title: String,
+    pub updated_at: DateTime<Utc>
+}
+
+impl From<ConversationRow> for ConversationItem {
+    fn from(value: ConversationRow) -> Self {
+        Self {
+            id: value.id,
+            title: value.title,
+            updated_at: value.updated_at
+        }
+    }
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ConversationItemsResponse {
+    pub conversations: Vec<ConversationItem>
+}
+

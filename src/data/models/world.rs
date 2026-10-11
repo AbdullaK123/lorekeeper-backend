@@ -2,6 +2,7 @@ use chrono::{DateTime, Utc};
 use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
 use uuid::Uuid;
+use validator::Validate;
 
 #[derive(FromRow, Debug, Clone, Deserialize)]
 pub struct World {
@@ -13,19 +14,19 @@ pub struct World {
     pub updated_at: DateTime<Utc>
 }
 
-#[derive(Debug, Clone, Deserialize, Serialize)]
+#[derive(Debug, Clone, Deserialize, Serialize, Validate)]
 pub struct CreateWorldRequest {
     pub name: String,
     pub description: String
 }
 
-#[derive(Debug, Clone, Deserialize, Serialize)]
+#[derive(Debug, Clone, Deserialize, Serialize, Validate)]
 pub struct UpdateWorldRequest {
     pub new_name: Option<String>,
     pub new_description: Option<String>
 }
 
-#[derive(Debug, Clone, Serialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct WorldResponse {
     pub id: Uuid,
     pub name: String,
