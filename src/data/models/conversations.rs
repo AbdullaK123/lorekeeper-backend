@@ -3,6 +3,7 @@ use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
 use sqlx::types::Json;
 use uuid::Uuid;
+use validator::Validate;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ToolCall {
@@ -70,6 +71,12 @@ pub struct ConversationItem {
     pub id: Uuid,
     pub title: String,
     pub updated_at: DateTime<Utc>
+}
+
+
+#[derive(Debug, Clone, Serialize, Deserialize, Validate)]
+pub struct CreateConversationRequest {
+    pub title: String
 }
 
 impl From<ConversationRow> for ConversationItem {

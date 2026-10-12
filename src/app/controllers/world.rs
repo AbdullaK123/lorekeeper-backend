@@ -5,7 +5,7 @@ use axum::routing::{get, post};
 use uuid::Uuid;
 use crate::app::{AppState, UserId, ValidatedJson};
 use crate::app::errors::AppError;
-use crate::data::{CreateWorldRequest, UpdateWorldRequest, WorldResponse};
+use crate::data::{ConversationItemsResponse, ConversationResponse, CreateConversationRequest, CreateWorldRequest, UpdateWorldRequest, WorldResponse};
 
 async fn create_world(
     State(ctx): State<AppState>,
@@ -58,8 +58,32 @@ async fn delete_world(
     Ok(NoContent)
 }
 
+async fn get_conversations(
+    State(ctx): State<AppState>,
+    UserId(user_id): UserId,
+    Path(world_id): Path<Uuid>
+) -> Result<Json<ConversationItemsResponse>, AppError> {
+    let result = ctx.conversation_service.get_conversations(world_id, user_id).await?;
+    Ok(Json(result))
+}
+
+async fn create_conversation(
+    State(ctx): State<AppState>,
+    UserId(user_id): UserId,
+    Path(world_id): Path<Uuid>,
+    ValidatedJson(payload): ValidatedJson<CreateConversationRequest>
+) -> Result<Json<ConversationResponse>, AppError> {
+    let result = ctx.conversation_service.create_conversation(
+        world_id,
+        user_id,
+        payload.title
+    ).await?;
+    Ok(Json(result))
+}
+
 pub fn create_world_controller() -> Router<AppState> {
     Router::new()
         .route("", post(create_world).get(get_worlds))
         .route("/{world_id}", get(get_world).patch(update_world).delete(delete_world))
+        .route("/world_id/conversations", get(get_conversations).post(create_conversation))
 }
