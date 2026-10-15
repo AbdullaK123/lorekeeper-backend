@@ -1,6 +1,8 @@
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use neo4rs::{Node, Relation, Row};
+use uuid::Uuid;
+use crate::data::{ExtractedConflict, ExtractedEntity, ExtractedRelationship};
 use crate::infrastructure::InfrastructureError;
 
 pub trait FromRow: Sized {
@@ -17,6 +19,22 @@ pub struct Entity {
     pub description: String,
     pub properties: HashMap<String, serde_json::Value>,
 }
+
+impl Entity {
+    pub fn from_extraction(extracted_entity: ExtractedEntity, world_id: Uuid) -> Self {
+        let id = Uuid::new_v4().to_string();
+        Self {
+            id,
+            world_id: world_id.to_string(),
+            name: extracted_entity.name,
+            aliases: extracted_entity.aliases,
+            kind: extracted_entity.kind,
+            description: extracted_entity.description,
+            properties: extracted_entity.properties
+        }
+    }
+}
+
 
 impl FromRow for Entity {
     fn from_row(row: &Row, alias: &str) -> Result<Self, InfrastructureError> {
@@ -44,6 +62,26 @@ pub struct Relationship {
     pub description: String,
     pub properties: HashMap<String, serde_json::Value>,
     pub source_conversation: String,
+}
+
+impl Relationship {
+    pub fn from_extraction(
+        extracted_relationship: ExtractedRelationship,
+        world_id: Uuid,
+        source_conversation_id: Uuid
+    ) -> Self {
+        let id = Uuid::new_v4().to_string();
+        Self {
+            id,
+            world_id: world_id.to_string(),
+            from_id: extracted_relationship.from_name,
+            to_id: extracted_relationship.to_name,
+            rel_type: extracted_relationship.rel_type,
+            description: extracted_relationship.description,
+            source_conversation: source_conversation_id.to_string(),
+            properties: extracted_relationship.properties
+        }
+    }
 }
 
 impl FromRow for Relationship {
@@ -92,8 +130,32 @@ pub struct Conflict {
     pub field: String,
     pub existing_value: serde_json::Value,
     pub new_value: serde_json::Value,
+    pub severity: String,
+    pub explanation: String,
     pub source_conversation: String,
     pub resolved: bool,
+}
+
+impl Conflict {
+    pub fn from_extraction(
+        extracted_conflict: ExtractedConflict,
+        world_id: Uuid,
+        source_conversation_id: Uuid
+    ) -> Self {
+        let id = Uuid::new_v4().to_string();
+        Self {
+            id,
+            world_id: world_id.to_string(),
+            entity_id: extracted_conflict.entity_id,
+            field: extracted_conflict.field,
+            existing_value: extracted_conflict.existing_value,
+            new_value: extracted_conflict.new_value,
+            severity: extracted_conflict.severity,
+            explanation: extracted_conflict.explanation,
+            source_conversation: source_conversation_id.to_string(),
+            resolved: false
+        }
+    }
 }
 
 impl FromRow for Conflict {
@@ -108,6 +170,8 @@ impl FromRow for Conflict {
                 .unwrap_or_default(),
             new_value: serde_json::from_str(&node.get::<String>("new_value")?)
                 .unwrap_or_default(),
+            severity: node.get("severity")?,
+            explanation: node.get("explanation")?,
             source_conversation: node.get("source_conversation")?,
             resolved: node.get("resolved")?,
         })
