@@ -1,11 +1,16 @@
-use axum::{Router};
+use crate::app::{create_auth_controller, create_conversation_controller, create_world_controller};
+use crate::data::{
+    ConflictExtraction, ConversationRepository, GraphExtraction, GraphRepository, UserRepository,
+    WorldRepository,
+};
+use crate::infrastructure::{create_graph, create_pool, load_config, load_prompt, load_settings};
+use crate::service::{AuthService, ConversationService, ExtractionService, WorldService};
+use axum::Router;
 use axum::routing::get;
 use neo4rs::Graph;
+use rig::extractor::ExtractorBuilder;
+use rig::providers::openrouter;
 use sqlx::postgres::PgPool;
-use crate::app::{create_auth_controller, create_conversation_controller, create_world_controller};
-use crate::data::{ConversationRepository, UserRepository, WorldRepository};
-use crate::infrastructure::{create_graph, create_pool, load_config, load_settings};
-use crate::service::{AuthService, ConversationService, WorldService};
 
 #[derive(Clone)]
 pub struct AppState {
@@ -13,15 +18,16 @@ pub struct AppState {
     graph: Graph,
     pub auth_service: AuthService,
     pub world_service: WorldService,
-    pub conversation_service: ConversationService
+    pub conversation_service: ConversationService,
+    pub extraction_service: ExtractionService,
 }
 
 pub async fn create_app() -> Router {
-
     let settings = load_settings();
     let config = load_config();
     let pool = create_pool(&settings, &config.db).await;
     let graph = create_graph(&settings, &config.memgraph).await;
+    let graph_repo = GraphRepository::new(graph.clone());
     let user_repo = UserRepository::new(pool.clone());
     let world_repo = WorldRepository::new(pool.clone());
     let conversation_repo = ConversationRepository::new(pool.clone());
@@ -29,12 +35,35 @@ pub async fn create_app() -> Router {
     let world_service = WorldService::new(world_repo);
     let conversation_service = ConversationService::new(conversation_repo);
 
+    graph_repo
+        .ensure_constraints()
+        .await
+        .expect("Failed to ensure constraints");
+
+    let client = openrouter::from_env().expect("OPENROUTER_API_KEY not set");
+
+    let model = client.chat("openai/gpt-6-luna");
+
+    let entity_extractor = ExtractorBuilder::<GraphExtraction>::new(model.clone())
+        .append_preamble(&load_prompt("extraction").expect("Prompt not found!"))
+        .retries(3)
+        .build();
+
+    let conflict_extractor = ExtractorBuilder::<ConflictExtraction>::new(model.clone())
+        .append_preamble(&load_prompt("conflict").expect("Prompt not found!"))
+        .retries(3)
+        .build();
+
+    let extraction_service =
+        ExtractionService::new(graph_repo, entity_extractor, conflict_extractor);
+
     let app_state = AppState {
         pool: pool.clone(),
         graph,
         auth_service,
         world_service,
-        conversation_service
+        conversation_service,
+        extraction_service,
     };
 
     let app = Router::new()

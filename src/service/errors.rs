@@ -1,3 +1,4 @@
+use rig::completion::StructuredOutputError;
 use thiserror::Error;
 use crate::infrastructure::InfrastructureError;
 
@@ -13,6 +14,12 @@ pub enum ServiceError {
 
 impl From<InfrastructureError> for ServiceError {
     fn from(value: InfrastructureError) -> Self {
+        Self::InternalError(value.to_string())
+    }
+}
+
+impl From<StructuredOutputError> for ServiceError {
+    fn from(value: StructuredOutputError) -> Self {
         Self::InternalError(value.to_string())
     }
 }

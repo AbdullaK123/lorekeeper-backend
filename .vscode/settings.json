@@ -1,0 +1,28 @@
+{
+    // Show real compiler errors. Your global settings turn this off.
+    "rust-analyzer.checkOnSave": true,
+    // `check` is fast. Switch to "clippy" for extra style hints once WSL has more memory.
+    "rust-analyzer.check.command": "check",
+    // Also check tests, so errors in test files show up too.
+    "rust-analyzer.check.allTargets": true,
+
+    // Own build folder, so rust-analyzer and `cargo` in the terminal stop waiting on each other.
+    "rust-analyzer.cargo.targetDir": true,
+    // Fewer parallel jobs = less memory at once. WSL only has ~7.6 GB.
+    "rust-analyzer.cachePriming.numThreads": 2,
+    "rust-analyzer.check.extraArgs": ["--jobs", "4"],
+
+    // Tidy the code on every save.
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true
+    },
+
+    // Don't let VS Code watch or search the huge build folder.
+    "files.watcherExclude": {
+        "**/target/**": true
+    },
+    "search.exclude": {
+        "**/target": true
+    }
+}

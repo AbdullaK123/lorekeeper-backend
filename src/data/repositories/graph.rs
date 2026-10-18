@@ -1,5 +1,5 @@
 use neo4rs::{query, Graph, Query};
-use crate::data::models::{Conflict, Conversation, Entity, FromRow, Relationship};
+use crate::data::models::{name_key, Conflict, Conversation, Entity, FromRow, Relationship};
 use crate::infrastructure::InfrastructureError;
 
 #[derive(Clone)]
@@ -49,33 +49,10 @@ impl GraphRepository {
         }
     }
 
-    pub async fn create_entity(
-        &self,
-        entity: &Entity
-    ) -> Result<(), InfrastructureError> {
+    /// Idempotent: Memgraph skips a constraint that already exists. Run once at startup.
+    pub async fn ensure_constraints(&self) -> Result<(), InfrastructureError> {
         self.graph.run(
-            query(
-               "CREATE (e:Entity {
-                   id: $id,
-                   world_id: $world_id,
-                   name: $name,
-                   aliases: $aliases,
-                   kind: $kind,
-                   description: $description,
-                   properties: $properties
-               })"
-            )
-                .param("id", entity.id.clone())
-                .param("world_id", entity.world_id.clone())
-                .param("name", entity.name.clone())
-                .param("aliases", entity.aliases.clone())
-                .param("kind", entity.kind.clone())
-                .param("description", entity.description.clone())
-                .param(
-                    "properties",
-                    serde_json::to_string(&entity.properties)
-                        .unwrap_or_default()
-                )
+            query("CREATE CONSTRAINT ON (e:Entity) ASSERT e.world_id, e.name_key IS UNIQUE")
         ).await?;
         Ok(())
     }
@@ -89,6 +66,7 @@ impl GraphRepository {
             query(
                 "MATCH (e:Entity {id: $id, world_id: $world_id})
              SET e.name = $name,
+                 e.name_key = $name_key,
                  e.aliases = $aliases,
                  e.kind = $kind,
                  e.description = $description,
@@ -98,6 +76,7 @@ impl GraphRepository {
                 .param("id", id)
                 .param("world_id", entity.world_id.clone())
                 .param("name", entity.name.clone())
+                .param("name_key", name_key(&entity.name))
                 .param("aliases", entity.aliases.clone())
                 .param("kind", entity.kind.clone())
                 .param("description", entity.description.clone())
@@ -119,7 +98,12 @@ impl GraphRepository {
         let exists = result.next().await?.is_some();
         if exists {
             self.graph.run(
-                query("MATCH (e:Entity {id: $id, world_id: $world_id}) DETACH DELETE e")
+                // Conflicts only make sense against their entity, so they go with it.
+                query(
+                    "MATCH (e:Entity {id: $id, world_id: $world_id})
+                 OPTIONAL MATCH (e)-[:HAS_CONFLICT]->(c:Conflict)
+                 DETACH DELETE e, c"
+                )
                     .param("id", id)
                     .param("world_id", world_id)
             ).await?;
@@ -136,6 +120,38 @@ impl GraphRepository {
             query("MATCH (e:Entity {id: $id, world_id: $world_id}) RETURN e")
                 .param("id", id)
                 .param("world_id", world_id),
+            "e"
+        ).await
+    }
+
+    pub async fn get_entities_by_world(
+        &self,
+        world_id: &str,
+    ) -> Result<Vec<Entity>, InfrastructureError> {
+        self.fetch_all::<Entity>(
+            query("MATCH (e:Entity {world_id: $world_id}) RETURN e ORDER BY e.name_key")
+                .param("world_id", world_id),
+            "e"
+        ).await
+    }
+
+    /// Entities whose name or any alias matches one of `names` (compared via `name_key`).
+    /// This is how extraction finds `existing_entities` for a message.
+    pub async fn find_entities_by_names(
+        &self,
+        world_id: &str,
+        names: &[String],
+    ) -> Result<Vec<Entity>, InfrastructureError> {
+        let keys: Vec<String> = names.iter().map(|n| name_key(n)).collect();
+        self.fetch_all::<Entity>(
+            query(
+                "MATCH (e:Entity {world_id: $world_id})
+             WHERE e.name_key IN $keys
+                OR any(a IN e.aliases WHERE toLower(trim(a)) IN $keys)
+             RETURN e"
+            )
+                .param("world_id", world_id)
+                .param("keys", keys),
             "e"
         ).await
     }
@@ -178,40 +194,6 @@ impl GraphRepository {
         Ok(items)
     }
 
-    pub async fn create_relationship(
-        &self,
-        relationship: &Relationship,
-    ) -> Result<(), InfrastructureError> {
-
-        Self::validate_cypher_identifier(&relationship.rel_type)?;
-
-        let cypher = format!(
-            "MATCH (a:Entity {{id: $from_id}}), (b:Entity {{id: $to_id}})
-         CREATE (a)-[r:{} {{
-             id: $id,
-             world_id: $world_id,
-             from_id: $from_id,
-             to_id: $to_id,
-             description: $description,
-             properties: $properties,
-             source_conversation: $source_conversation
-         }}]->(b)",
-            relationship.rel_type
-        );
-
-        self.graph.run(
-            query(&cypher)
-                .param("id", relationship.id.clone())
-                .param("world_id", relationship.world_id.clone())
-                .param("from_id", relationship.from_id.clone())
-                .param("to_id", relationship.to_id.clone())
-                .param("description", relationship.description.clone())
-                .param("properties", serde_json::to_string(&relationship.properties).unwrap_or_default())
-                .param("source_conversation", relationship.source_conversation.clone())
-        ).await?;
-        Ok(())
-    }
-
     pub async fn update_relationship(
         &self,
         id: &str,
@@ -220,7 +202,7 @@ impl GraphRepository {
     ) -> Result<bool, InfrastructureError> {
         let mut result = self.graph.execute(
             query(
-                "MATCH ()-[r {id: $id, world_id: $world_id}]-()
+                "MATCH ()-[r {id: $id, world_id: $world_id}]->()
              SET r.description = $description,
                  r.properties = $properties
              RETURN r.id AS id"
@@ -240,14 +222,14 @@ impl GraphRepository {
     ) -> Result<bool, InfrastructureError> {
         // same two-step pattern but with world_id
         let mut result = self.graph.execute(
-            query("MATCH ()-[r {id: $id, world_id: $world_id}]-() RETURN r.id AS id")
+            query("MATCH ()-[r {id: $id, world_id: $world_id}]->() RETURN r.id AS id")
                 .param("id", id)
                 .param("world_id", world_id)
         ).await?;
         let exists = result.next().await?.is_some();
         if exists {
             self.graph.run(
-                query("MATCH ()-[r {id: $id, world_id: $world_id}]-() DELETE r")
+                query("MATCH ()-[r {id: $id, world_id: $world_id}]->() DELETE r")
                     .param("id", id)
                     .param("world_id", world_id)
             ).await?;
@@ -333,36 +315,6 @@ impl GraphRepository {
 
     // --- Conflicts ---
 
-    pub async fn create_conflict(
-        &self,
-        conflict: &Conflict,
-    ) -> Result<(), InfrastructureError> {
-        self.graph.run(
-            query(
-                "MATCH (e:Entity {id: $entity_id})
-                 CREATE (e)-[:HAS_CONFLICT]->(c:Conflict {
-                     id: $id,
-                     world_id: $world_id,
-                     entity_id: $entity_id,
-                     field: $field,
-                     existing_value: $existing_value,
-                     new_value: $new_value,
-                     source_conversation: $source_conversation,
-                     resolved: $resolved
-                 })"
-            )
-                .param("id", conflict.id.clone())
-                .param("world_id", conflict.world_id.clone())
-                .param("entity_id", conflict.entity_id.clone())
-                .param("field", conflict.field.clone())
-                .param("existing_value", serde_json::to_string(&conflict.existing_value).unwrap_or_default())
-                .param("new_value", serde_json::to_string(&conflict.new_value).unwrap_or_default())
-                .param("source_conversation", conflict.source_conversation.clone())
-                .param("resolved", conflict.resolved)
-        ).await?;
-        Ok(())
-    }
-
     pub async fn update_conflict(
         &self,
         id: &str,
@@ -443,6 +395,136 @@ impl GraphRepository {
                 .param("conversation_id", conversation_id)
                 .param("world_id", world_id),
             "e"
+        ).await
+    }
+
+    pub async fn upsert_entity(
+        &self,
+        entity: &Entity
+    ) -> Result<Entity, InfrastructureError> {
+        self.fetch_one::<Entity>(
+            query(
+                "
+                MERGE (e:Entity {world_id: $world_id, name_key: $name_key})
+                ON CREATE SET
+                    e.id          = $id,
+                    e.name        = $name,
+                    e.aliases     = $aliases,
+                    e.kind        = $kind,
+                    e.description = $description,
+                    e.properties  = $properties
+                ON MATCH SET
+                    e.aliases     = $aliases,
+                    e.kind        = $kind,
+                    e.description = $description,
+                    e.properties  = $properties
+                RETURN e
+                "
+            )
+                .param("id", entity.id.clone())
+                .param("world_id", entity.world_id.clone())
+                .param("name_key", entity.name_key.clone())
+                .param("name", entity.name.clone())
+                .param("aliases", entity.aliases.clone())
+                .param("kind", entity.kind.clone())
+                .param("description", entity.description.clone())
+                .param(
+                    "properties",
+                    serde_json::to_string(&entity.properties)
+                        .unwrap_or_default()
+                ),
+                "e"
+        ).await?.ok_or_else(|| InfrastructureError::InternalError("MERGE returned no row".into()))
+    }
+
+    // Returns None when either endpoint entity doesn't exist in this world.
+    pub async fn upsert_relationship(
+        &self,
+        relationship: &Relationship
+    ) -> Result<Option<Relationship>, InfrastructureError> {
+
+        Self::validate_cypher_identifier(&relationship.rel_type)?;
+
+        let cypher = format!(
+            "
+            MATCH (a:Entity {{id: $from_id, world_id: $world_id}}),
+                  (b:Entity {{id: $to_id, world_id: $world_id}})
+            MERGE (a)-[r:{}]->(b)
+            ON CREATE SET
+                r.id                  = $id,
+                r.world_id            = $world_id,
+                r.from_id             = $from_id,
+                r.to_id               = $to_id,
+                r.description         = $description,
+                r.properties          = $properties,
+                r.source_conversation = $source_conversation
+            ON MATCH SET
+                r.description         = $description,
+                r.properties          = $properties
+            RETURN r
+            ",
+            relationship.rel_type
+        );
+
+        self.fetch_one::<Relationship>(
+            query(&cypher)
+                .param("id", relationship.id.clone())
+                .param("world_id", relationship.world_id.clone())
+                .param("from_id", relationship.from_id.clone())
+                .param("to_id", relationship.to_id.clone())
+                .param("description", relationship.description.clone())
+                .param(
+                    "properties",
+                    serde_json::to_string(&relationship.properties)
+                        .unwrap_or_default()
+                )
+                .param("source_conversation", relationship.source_conversation.clone()),
+            "r"
+        ).await
+    }
+
+    // One open conflict per entity field: a retry, or a later message contradicting
+    // the same field, updates that conflict instead of adding another.
+    // Returns None when the entity doesn't exist in this world.
+    pub async fn upsert_conflict(
+        &self,
+        conflict: &Conflict
+    ) -> Result<Option<Conflict>, InfrastructureError> {
+        self.fetch_one::<Conflict>(
+            query(
+                "
+                MATCH (e:Entity {id: $entity_id, world_id: $world_id})
+                MERGE (e)-[:HAS_CONFLICT]->(c:Conflict {
+                    world_id: $world_id,
+                    entity_id: $entity_id,
+                    field: $field,
+                    resolved: false
+                })
+                ON CREATE SET
+                    c.id                  = $id,
+                    c.existing_value      = $existing_value,
+                    c.new_value           = $new_value,
+                    c.severity            = $severity,
+                    c.explanation         = $explanation,
+                    c.source_conversation = $source_conversation
+                ON MATCH SET
+                    c.new_value           = $new_value,
+                    c.severity            = $severity,
+                    c.explanation         = $explanation,
+                    c.source_conversation = $source_conversation
+                RETURN c
+                "
+            )
+                .param("id", conflict.id.clone())
+                .param("world_id", conflict.world_id.clone())
+                .param("entity_id", conflict.entity_id.clone())
+                .param("field", conflict.field.clone())
+                .param("existing_value", serde_json::to_string(&conflict.existing_value).unwrap_or_default())
+                .param("new_value", serde_json::to_string(&conflict.new_value).unwrap_or_default())
+                .param("severity", conflict.severity.clone())
+                .param("explanation", conflict.explanation.clone())
+                .param("source_conversation", conflict.source_conversation.clone()),
+            "c"
         ).await
     }
 }

@@ -14,19 +14,28 @@ pub struct Entity {
     pub id: String,
     pub world_id: String,
     pub name: String,
+    pub name_key: String,
     pub aliases: Vec<String>,
     pub kind: Vec<String>,
     pub description: String,
     pub properties: HashMap<String, serde_json::Value>,
 }
 
+/// The identity an entity is matched on within a world. Every write and lookup
+/// must go through this, or the same name produces two keys and MERGE duplicates.
+pub fn name_key(name: &str) -> String {
+    name.trim().to_lowercase()
+}
+
 impl Entity {
     pub fn from_extraction(extracted_entity: ExtractedEntity, world_id: Uuid) -> Self {
         let id = Uuid::new_v4().to_string();
+        let name_key = name_key(&extracted_entity.name);
         Self {
             id,
             world_id: world_id.to_string(),
             name: extracted_entity.name,
+            name_key,
             aliases: extracted_entity.aliases,
             kind: extracted_entity.kind,
             description: extracted_entity.description,
@@ -43,6 +52,7 @@ impl FromRow for Entity {
             id: node.get("id")?,
             world_id: node.get("world_id")?,
             name: node.get("name")?,
+            name_key: node.get("name_key")?,
             aliases: node.get("aliases")?,
             kind: node.get("kind")?,
             description: node.get("description")?,
@@ -65,8 +75,12 @@ pub struct Relationship {
 }
 
 impl Relationship {
+    /// `from_id` and `to_id` are the graph IDs of the endpoint entities, resolved
+    /// from the extraction's `from_name` / `to_name` (e.g. via `upsert_entity`).
     pub fn from_extraction(
         extracted_relationship: ExtractedRelationship,
+        from_id: String,
+        to_id: String,
         world_id: Uuid,
         source_conversation_id: Uuid
     ) -> Self {
@@ -74,8 +88,8 @@ impl Relationship {
         Self {
             id,
             world_id: world_id.to_string(),
-            from_id: extracted_relationship.from_name,
-            to_id: extracted_relationship.to_name,
+            from_id,
+            to_id,
             rel_type: extracted_relationship.rel_type,
             description: extracted_relationship.description,
             source_conversation: source_conversation_id.to_string(),

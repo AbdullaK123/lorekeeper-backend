@@ -4344,6 +4344,7 @@ dependencies = [
  "neo4rs",
  "passcheck",
  "rig",
+ "schemars 1.2.3",
  "serde",
  "serde_json",
  "serde_yaml_bw",
