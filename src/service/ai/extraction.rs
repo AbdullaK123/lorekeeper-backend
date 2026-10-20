@@ -1,12 +1,14 @@
-use std::collections::{HashMap, HashSet};
-use std::sync::Arc;
-use rig::extractor::Extractor;
-use serde_json::json;
-use uuid::Uuid;
 use crate::data::{
-    Conflict, ConflictExtraction, Entity, ExtractedConflict, ExtractedEntity, ExtractedRelationship, GraphExtraction, GraphRepository, Relationship, name_key
+    Conflict, ConflictExtraction, Entity, ExtractedConflict, ExtractedEntity,
+    ExtractedRelationship, GraphExtraction, GraphRepository, Relationship, name_key,
 };
 use crate::service::{ServiceError, relationships};
+use rig::DynModel;
+use rig::extractor::Extractor;
+use serde_json::json;
+use std::collections::{HashMap, HashSet};
+use std::sync::Arc;
+use uuid::Uuid;
 
 /// What one `process_message` run changed in the graph.
 #[derive(Debug, Default)]
@@ -33,6 +35,7 @@ pub struct ExtractionService {
     graph_repo: GraphRepository,
     entity_extractor: Arc<Extractor<GraphExtraction>>,
     conflict_extractor: Arc<Extractor<ConflictExtraction>>,
+    embedding_model: DynModel<rig::operation::Embedding>,
 }
 
 impl ExtractionService {
@@ -40,12 +43,25 @@ impl ExtractionService {
         graph_repo: GraphRepository,
         entity_extractor: Extractor<GraphExtraction>,
         conflict_extractor: Extractor<ConflictExtraction>,
+        embedding_model: DynModel<rig::operation::Embedding>,
     ) -> Self {
         Self {
             graph_repo,
             entity_extractor: Arc::new(entity_extractor),
             conflict_extractor: Arc::new(conflict_extractor),
+            embedding_model,
         }
+    }
+
+    async fn embed(&self, entity: &Entity) -> Result<Vec<f64>, ServiceError> {
+        let text = format!(
+            "{}. {}. {}",
+            entity.name,
+            entity.kind.join(", "),
+            entity.description
+        );
+        let embedding = self.embedding_model.embed_text(&text).await?;
+        Ok(embedding.vec)
     }
 
     /// Entry point for the background job: find candidates, extract, apply entities,
@@ -66,14 +82,11 @@ impl ExtractionService {
             .collect();
 
         for extracted in extraction.entities {
+            let applied = self
+                .apply_entity(world_id, conversation_id, message, extracted)
+                .await?;
 
-            let applied = 
-                self.apply_entity(world_id, conversation_id, message, extracted).await?;
-            
-            name_to_id.insert(
-                applied.entity.name_key.clone(),
-                applied.entity.id.clone()
-            );
+            name_to_id.insert(applied.entity.name_key.clone(), applied.entity.id.clone());
 
             if applied.created {
                 report.entities_created += 1
@@ -83,12 +96,14 @@ impl ExtractionService {
             report.conflicts_flagged += applied.conflicts_flagged;
         }
 
-        let (relationships_written, relationships_skipped) =  self.apply_relationships(
-            world_id, 
-            conversation_id, 
-            extraction.relationships, 
-            &name_to_id
-        ).await?;
+        let (relationships_written, relationships_skipped) = self
+            .apply_relationships(
+                world_id,
+                conversation_id,
+                extraction.relationships,
+                &name_to_id,
+            )
+            .await?;
 
         report.relationships_written += relationships_written;
         report.relationships_skipped += relationships_skipped;
@@ -98,12 +113,11 @@ impl ExtractionService {
 
     /// Option A: every entity in the world, so the extractor can resolve references
     /// like "the Conclave" itself. Swap for a name/alias lookup if worlds get large.
-    async fn find_candidates(
-        &self,
-        world_id: Uuid,
-    ) -> Result<Vec<Entity>, ServiceError> {
-        let result = 
-            self.graph_repo.get_entities_by_world(&world_id.to_string()).await?;
+    async fn find_candidates(&self, world_id: Uuid) -> Result<Vec<Entity>, ServiceError> {
+        let result = self
+            .graph_repo
+            .get_entities_by_world(&world_id.to_string())
+            .await?;
         Ok(result)
     }
 
@@ -114,23 +128,25 @@ impl ExtractionService {
         candidates: &[Entity],
     ) -> Result<GraphExtraction, ServiceError> {
         let candidates_json = serde_json::to_string_pretty(
-            &candidates.iter()
-                .map(|e| serde_json::json!({
-                    "id": e.id,
-                    "name": e.name,
-                    "aliases": e.aliases,
-                    "kind": e.kind,
-                }))
-                .collect::<Vec<_>>()
-        ).unwrap_or_else(|_| "[]".into());
+            &candidates
+                .iter()
+                .map(|e| {
+                    serde_json::json!({
+                        "id": e.id,
+                        "name": e.name,
+                        "aliases": e.aliases,
+                        "kind": e.kind,
+                    })
+                })
+                .collect::<Vec<_>>(),
+        )
+        .unwrap_or_else(|_| "[]".into());
 
         let user_prompt = format!(
             "<existing_entities>\n{}\n</existing_entities>\n\n<user_message>\n{}\n</user_message>",
-            candidates_json,
-            message,
+            candidates_json, message,
         );
-        let result = 
-            self.entity_extractor.extract(user_prompt).await?;
+        let result = self.entity_extractor.extract(user_prompt).await?;
         Ok(result.output)
     }
 
@@ -143,52 +159,58 @@ impl ExtractionService {
         message: &str,
         extracted: ExtractedEntity,
     ) -> Result<AppliedEntity, ServiceError> {
-
-
         if extracted.existing_id.is_none() {
             let entity = Entity::from_extraction(extracted, world_id);
+            let embedding = self.embed(&entity).await?;
+            let saved = self.graph_repo.upsert_entity(&entity, embedding).await?;
 
-            let saved = 
-                self.graph_repo.upsert_entity(&entity).await?;
-
-            return Ok(AppliedEntity { 
-                entity: saved, created: true, conflicts_flagged: 0
-             })
+            return Ok(AppliedEntity {
+                entity: saved,
+                created: true,
+                conflicts_flagged: 0,
+            });
         }
-       
+
         let existing_id = extracted.existing_id.clone().unwrap();
 
-        let existing = self.graph_repo
+        let existing = self
+            .graph_repo
             .get_entity(&existing_id, &world_id.to_string())
             .await?;
 
         if let Some(existing) = existing {
-            let conflicts = 
-                self.detect_conflicts(&existing, &extracted, message).await?;
-            
+            let conflicts = self
+                .detect_conflicts(&existing, &extracted, message)
+                .await?;
+
             for c in &conflicts {
-                let conflict = 
-                    Conflict::from_extraction(c.clone(), world_id, conversation_id);
+                let conflict = Conflict::from_extraction(c.clone(), world_id, conversation_id);
 
                 self.graph_repo.upsert_conflict(&conflict).await?;
             }
 
-            let conflicting_fields: Vec<String> = conflicts.iter().map(|c| c.field.clone()).collect();
+            let conflicting_fields: Vec<String> =
+                conflicts.iter().map(|c| c.field.clone()).collect();
             let merged = Self::merge(&existing, &extracted, &conflicting_fields);
-            let saved = self.graph_repo.upsert_entity(&merged).await?;
+            let embedding = self.embed(&merged).await?;
+            let saved = self.graph_repo.upsert_entity(&merged, embedding).await?;
 
-            Ok(AppliedEntity { entity: saved, created: false, conflicts_flagged: conflicts.len() })
+            Ok(AppliedEntity {
+                entity: saved,
+                created: false,
+                conflicts_flagged: conflicts.len(),
+            })
         } else {
             let entity = Entity::from_extraction(extracted, world_id);
+            let embedding = self.embed(&entity).await?;
+            let saved = self.graph_repo.upsert_entity(&entity, embedding).await?;
 
-            let saved = 
-                self.graph_repo.upsert_entity(&entity).await?;
-
-            return Ok(AppliedEntity { 
-                entity: saved, created: true, conflicts_flagged: 0
-             })
+            return Ok(AppliedEntity {
+                entity: saved,
+                created: true,
+                conflicts_flagged: 0,
+            });
         }
-
     }
 
     /// Runs the conflict extractor comparing the stored entity with the new extraction.
@@ -198,25 +220,19 @@ impl ExtractionService {
         extracted: &ExtractedEntity,
         message: &str,
     ) -> Result<Vec<ExtractedConflict>, ServiceError> {
-        let existing_entity_json = 
-            serde_json::to_string_pretty(existing)
-                .unwrap_or_else(|_| "{}".into());
+        let existing_entity_json =
+            serde_json::to_string_pretty(existing).unwrap_or_else(|_| "{}".into());
 
-        let extracted_json = 
-            serde_json::to_string_pretty(extracted)
-                .unwrap_or_else(|_| "{}".into());
+        let extracted_json =
+            serde_json::to_string_pretty(extracted).unwrap_or_else(|_| "{}".into());
 
         let user_prompt = format!(
             "<existing_entity>\n{}\n</existing_entity>\n\n\
              <extracted_entity>\n{}\n</extracted_entity>\n\n\
              <source_message>\n{}\n</source_message>",
-            existing_entity_json,
-            extracted_json,
-            message,
+            existing_entity_json, extracted_json, message,
         );
-        let result = 
-            self.conflict_extractor.extract(user_prompt)
-                .await?;
+        let result = self.conflict_extractor.extract(user_prompt).await?;
         let conflicts = result.output.conflicts;
         Ok(conflicts)
     }
@@ -228,7 +244,6 @@ impl ExtractionService {
         extracted: &ExtractedEntity,
         conflicting_fields: &[String],
     ) -> Entity {
-
         let mut merged_entity = existing.clone();
 
         for (key, value) in &extracted.properties {
@@ -258,9 +273,10 @@ impl ExtractionService {
             && !new_text.is_empty()
             && !merged_entity.description.contains(new_text)
         {
-            merged_entity.description = format!("{} {}", merged_entity.description.trim(), new_text)
-                .trim()
-                .to_string();
+            merged_entity.description =
+                format!("{} {}", merged_entity.description.trim(), new_text)
+                    .trim()
+                    .to_string();
         }
 
         merged_entity
@@ -275,10 +291,9 @@ impl ExtractionService {
         relationships: Vec<ExtractedRelationship>,
         name_to_id: &HashMap<String, String>,
     ) -> Result<(usize, usize), ServiceError> {
-
         let mut skipped: usize = 0;
         let mut written: usize = 0;
-        
+
         for rel in relationships.into_iter() {
             let from_id = name_to_id.get(&name_key(&rel.from_name));
             let to_id = name_to_id.get(&name_key(&rel.to_name));
@@ -286,14 +301,13 @@ impl ExtractionService {
                 skipped += 1;
                 continue;
             }
-            let rel = 
-                Relationship::from_extraction(
-                    rel, 
-                    from_id.unwrap().to_string(), 
-                    to_id.unwrap().to_string(), 
-                    world_id, 
-                    conversation_id
-                );
+            let rel = Relationship::from_extraction(
+                rel,
+                from_id.unwrap().to_string(),
+                to_id.unwrap().to_string(),
+                world_id,
+                conversation_id,
+            );
             let result = self.graph_repo.upsert_relationship(&rel).await?;
             if result.is_some() {
                 written += 1;

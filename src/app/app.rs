@@ -43,6 +43,9 @@ pub async fn create_app() -> Router {
     let client = openrouter::from_env().expect("OPENROUTER_API_KEY not set");
 
     let model = client.chat("openai/gpt-6-luna");
+    let embedding_model = client
+        .embedding("openai/text-embedding-3-small", None)
+        .into();
 
     let entity_extractor = ExtractorBuilder::<GraphExtraction>::new(model.clone())
         .append_preamble(&load_prompt("extraction").expect("Prompt not found!"))
@@ -54,8 +57,12 @@ pub async fn create_app() -> Router {
         .retries(3)
         .build();
 
-    let extraction_service =
-        ExtractionService::new(graph_repo, entity_extractor, conflict_extractor);
+    let extraction_service = ExtractionService::new(
+        graph_repo,
+        entity_extractor,
+        conflict_extractor,
+        embedding_model,
+    );
 
     let app_state = AppState {
         pool: pool.clone(),

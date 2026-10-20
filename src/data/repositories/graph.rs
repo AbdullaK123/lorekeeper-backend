@@ -1,17 +1,15 @@
-use neo4rs::{query, Graph, Query};
-use crate::data::models::{name_key, Conflict, Conversation, Entity, FromRow, Relationship};
+use crate::data::models::{Conflict, Conversation, Entity, FromRow, Relationship, name_key};
 use crate::infrastructure::InfrastructureError;
+use neo4rs::{Graph, Query, query};
 
 #[derive(Clone)]
 pub struct GraphRepository {
-    graph: Graph
+    graph: Graph,
 }
 
 impl GraphRepository {
     pub fn new(graph: Graph) -> Self {
-        Self {
-            graph
-        }
+        Self { graph }
     }
 
     fn validate_cypher_identifier(value: &str) -> Result<(), InfrastructureError> {
@@ -24,36 +22,50 @@ impl GraphRepository {
         Ok(())
     }
 
-   async fn fetch_all<T: FromRow>(
+    async fn fetch_all<T: FromRow>(
         &self,
         q: Query,
-        alias: &str
-    )  -> Result<Vec<T>, InfrastructureError> {
-       let mut result = self.graph.execute(q).await?;
-       let mut rows = Vec::new();
-       while let Some(row) = result.next().await? {
-           rows.push(T::from_row(&row, alias)?)
-       }
-       Ok(rows)
+        alias: &str,
+    ) -> Result<Vec<T>, InfrastructureError> {
+        let mut result = self.graph.execute(q).await?;
+        let mut rows = Vec::new();
+        while let Some(row) = result.next().await? {
+            rows.push(T::from_row(&row, alias)?)
+        }
+        Ok(rows)
     }
 
     async fn fetch_one<T: FromRow>(
         &self,
         q: Query,
-        alias: &str
+        alias: &str,
     ) -> Result<Option<T>, InfrastructureError> {
         let mut result = self.graph.execute(q).await?;
         match result.next().await? {
             Some(row) => Ok(Some(T::from_row(&row, alias)?)),
-            None => Ok(None)
+            None => Ok(None),
         }
     }
 
     /// Idempotent: Memgraph skips a constraint that already exists. Run once at startup.
     pub async fn ensure_constraints(&self) -> Result<(), InfrastructureError> {
-        self.graph.run(
-            query("CREATE CONSTRAINT ON (e:Entity) ASSERT e.world_id, e.name_key IS UNIQUE")
-        ).await?;
+        self.graph
+            .run(query(
+                "CREATE CONSTRAINT ON (e:Entity) ASSERT e.world_id, e.name_key IS UNIQUE",
+            ))
+            .await?;
+        self.graph
+            .run(query(
+                r#"CREATE VECTOR INDEX entity_embedding ON :Entity(embedding)
+                WITH CONFIG {"dimension": 1536, "capacity": 100000, "metric": "cos"}
+                "#,
+            ))
+            .await?;
+        self.graph
+            .run(query(
+                r#"CREATE TEXT INDEX entity_text ON :Entity(name, description)"#,
+            ))
+            .await?;
         Ok(())
     }
 
@@ -62,17 +74,19 @@ impl GraphRepository {
         id: &str,
         entity: &Entity,
     ) -> Result<bool, InfrastructureError> {
-        let mut result = self.graph.execute(
-            query(
-                "MATCH (e:Entity {id: $id, world_id: $world_id})
+        let mut result = self
+            .graph
+            .execute(
+                query(
+                    "MATCH (e:Entity {id: $id, world_id: $world_id})
              SET e.name = $name,
                  e.name_key = $name_key,
                  e.aliases = $aliases,
                  e.kind = $kind,
                  e.description = $description,
                  e.properties = $properties
-             RETURN e.id AS id"
-            )
+             RETURN e.id AS id",
+                )
                 .param("id", id)
                 .param("world_id", entity.world_id.clone())
                 .param("name", entity.name.clone())
@@ -80,33 +94,42 @@ impl GraphRepository {
                 .param("aliases", entity.aliases.clone())
                 .param("kind", entity.kind.clone())
                 .param("description", entity.description.clone())
-                .param("properties", serde_json::to_string(&entity.properties).unwrap_or_default())
-        ).await?;
+                .param(
+                    "properties",
+                    serde_json::to_string(&entity.properties).unwrap_or_default(),
+                ),
+            )
+            .await?;
         Ok(result.next().await?.is_some())
     }
 
     pub async fn delete_entity(
         &self,
         id: &str,
-        world_id: &str
+        world_id: &str,
     ) -> Result<bool, InfrastructureError> {
-        let mut result = self.graph.execute(
-            query("MATCH (e:Entity {id: $id, world_id: $world_id}) RETURN e.id AS id")
-                .param("id", id)
-                .param("world_id", world_id)
-        ).await?;
+        let mut result = self
+            .graph
+            .execute(
+                query("MATCH (e:Entity {id: $id, world_id: $world_id}) RETURN e.id AS id")
+                    .param("id", id)
+                    .param("world_id", world_id),
+            )
+            .await?;
         let exists = result.next().await?.is_some();
         if exists {
-            self.graph.run(
-                // Conflicts only make sense against their entity, so they go with it.
-                query(
-                    "MATCH (e:Entity {id: $id, world_id: $world_id})
+            self.graph
+                .run(
+                    // Conflicts only make sense against their entity, so they go with it.
+                    query(
+                        "MATCH (e:Entity {id: $id, world_id: $world_id})
                  OPTIONAL MATCH (e)-[:HAS_CONFLICT]->(c:Conflict)
-                 DETACH DELETE e, c"
-                )
+                 DETACH DELETE e, c",
+                    )
                     .param("id", id)
-                    .param("world_id", world_id)
-            ).await?;
+                    .param("world_id", world_id),
+                )
+                .await?;
         }
         Ok(exists)
     }
@@ -114,14 +137,15 @@ impl GraphRepository {
     pub async fn get_entity(
         &self,
         id: &str,
-        world_id: &str
+        world_id: &str,
     ) -> Result<Option<Entity>, InfrastructureError> {
         self.fetch_one::<Entity>(
             query("MATCH (e:Entity {id: $id, world_id: $world_id}) RETURN e")
                 .param("id", id)
                 .param("world_id", world_id),
-            "e"
-        ).await
+            "e",
+        )
+        .await
     }
 
     pub async fn get_entities_by_world(
@@ -131,8 +155,9 @@ impl GraphRepository {
         self.fetch_all::<Entity>(
             query("MATCH (e:Entity {world_id: $world_id}) RETURN e ORDER BY e.name_key")
                 .param("world_id", world_id),
-            "e"
-        ).await
+            "e",
+        )
+        .await
     }
 
     /// Entities whose name or any alias matches one of `names` (compared via `name_key`).
@@ -148,12 +173,13 @@ impl GraphRepository {
                 "MATCH (e:Entity {world_id: $world_id})
              WHERE e.name_key IN $keys
                 OR any(a IN e.aliases WHERE toLower(trim(a)) IN $keys)
-             RETURN e"
+             RETURN e",
             )
-                .param("world_id", world_id)
-                .param("keys", keys),
-            "e"
-        ).await
+            .param("world_id", world_id)
+            .param("keys", keys),
+            "e",
+        )
+        .await
     }
 
     pub async fn get_entity_neighbors(
@@ -163,15 +189,12 @@ impl GraphRepository {
         rel_type: Option<&str>,
         kind: Option<&str>,
     ) -> Result<Vec<(Entity, Relationship)>, InfrastructureError> {
-
         if let Some(rel_type) = rel_type {
             Self::validate_cypher_identifier(rel_type)?;
         }
 
         let rel = rel_type.map(|r| format!(":{r}")).unwrap_or_default();
-        let kind_filter = kind
-            .map(|_| "WHERE $kind IN m.kind")
-            .unwrap_or_default();
+        let kind_filter = kind.map(|_| "WHERE $kind IN m.kind").unwrap_or_default();
 
         let cypher = format!(
             "MATCH (e:Entity {{id: $id, world_id: $world_id}})-[r{rel}]-(m:Entity)
@@ -200,18 +223,24 @@ impl GraphRepository {
         world_id: &str,
         relationship: &Relationship,
     ) -> Result<bool, InfrastructureError> {
-        let mut result = self.graph.execute(
-            query(
-                "MATCH ()-[r {id: $id, world_id: $world_id}]->()
+        let mut result = self
+            .graph
+            .execute(
+                query(
+                    "MATCH ()-[r {id: $id, world_id: $world_id}]->()
              SET r.description = $description,
                  r.properties = $properties
-             RETURN r.id AS id"
-            )
+             RETURN r.id AS id",
+                )
                 .param("id", id)
                 .param("world_id", world_id)
                 .param("description", relationship.description.clone())
-                .param("properties", serde_json::to_string(&relationship.properties).unwrap_or_default())
-        ).await?;
+                .param(
+                    "properties",
+                    serde_json::to_string(&relationship.properties).unwrap_or_default(),
+                ),
+            )
+            .await?;
         Ok(result.next().await?.is_some())
     }
 
@@ -221,18 +250,23 @@ impl GraphRepository {
         world_id: &str,
     ) -> Result<bool, InfrastructureError> {
         // same two-step pattern but with world_id
-        let mut result = self.graph.execute(
-            query("MATCH ()-[r {id: $id, world_id: $world_id}]->() RETURN r.id AS id")
-                .param("id", id)
-                .param("world_id", world_id)
-        ).await?;
+        let mut result = self
+            .graph
+            .execute(
+                query("MATCH ()-[r {id: $id, world_id: $world_id}]->() RETURN r.id AS id")
+                    .param("id", id)
+                    .param("world_id", world_id),
+            )
+            .await?;
         let exists = result.next().await?.is_some();
         if exists {
-            self.graph.run(
-                query("MATCH ()-[r {id: $id, world_id: $world_id}]->() DELETE r")
-                    .param("id", id)
-                    .param("world_id", world_id)
-            ).await?;
+            self.graph
+                .run(
+                    query("MATCH ()-[r {id: $id, world_id: $world_id}]->() DELETE r")
+                        .param("id", id)
+                        .param("world_id", world_id),
+                )
+                .await?;
         }
         Ok(exists)
     }
@@ -243,20 +277,22 @@ impl GraphRepository {
         &self,
         conversation: &Conversation,
     ) -> Result<(), InfrastructureError> {
-        self.graph.run(
-            query(
-                "CREATE (c:Conversation {
+        self.graph
+            .run(
+                query(
+                    "CREATE (c:Conversation {
                     id: $id,
                     world_id: $world_id,
                     created_at: $created_at,
                     summary: $summary
-                })"
-            )
+                })",
+                )
                 .param("id", conversation.id.clone())
                 .param("world_id", conversation.world_id.clone())
                 .param("created_at", conversation.created_at.clone())
-                .param("summary", conversation.summary.clone().unwrap_or_default())
-        ).await?;
+                .param("summary", conversation.summary.clone().unwrap_or_default()),
+            )
+            .await?;
         Ok(())
     }
 
@@ -266,16 +302,19 @@ impl GraphRepository {
         world_id: &str,
         conversation: &Conversation,
     ) -> Result<bool, InfrastructureError> {
-        let mut result = self.graph.execute(
-            query(
-                "MATCH (c:Conversation {id: $id, world_id: $world_id})
+        let mut result = self
+            .graph
+            .execute(
+                query(
+                    "MATCH (c:Conversation {id: $id, world_id: $world_id})
              SET c.summary = $summary
-             RETURN c.id AS id"
-            )
+             RETURN c.id AS id",
+                )
                 .param("id", id)
                 .param("world_id", world_id)
-                .param("summary", conversation.summary.clone().unwrap_or_default())
-        ).await?;
+                .param("summary", conversation.summary.clone().unwrap_or_default()),
+            )
+            .await?;
         Ok(result.next().await?.is_some())
     }
 
@@ -284,18 +323,23 @@ impl GraphRepository {
         id: &str,
         world_id: &str,
     ) -> Result<bool, InfrastructureError> {
-        let mut result = self.graph.execute(
-            query("MATCH (c:Conversation {id: $id, world_id: $world_id}) RETURN c.id AS id")
-                .param("id", id)
-                .param("world_id", world_id)
-        ).await?;
+        let mut result = self
+            .graph
+            .execute(
+                query("MATCH (c:Conversation {id: $id, world_id: $world_id}) RETURN c.id AS id")
+                    .param("id", id)
+                    .param("world_id", world_id),
+            )
+            .await?;
         let exists = result.next().await?.is_some();
         if exists {
-            self.graph.run(
-                query("MATCH (c:Conversation {id: $id, world_id: $world_id}) DETACH DELETE c")
-                    .param("id", id)
-                    .param("world_id", world_id)
-            ).await?;
+            self.graph
+                .run(
+                    query("MATCH (c:Conversation {id: $id, world_id: $world_id}) DETACH DELETE c")
+                        .param("id", id)
+                        .param("world_id", world_id),
+                )
+                .await?;
         }
         Ok(exists)
     }
@@ -309,8 +353,9 @@ impl GraphRepository {
             query("MATCH (c:Conversation {id: $id, world_id: $world_id}) RETURN c")
                 .param("id", id)
                 .param("world_id", world_id),
-            "c"
-        ).await
+            "c",
+        )
+        .await
     }
 
     // --- Conflicts ---
@@ -321,16 +366,19 @@ impl GraphRepository {
         world_id: &str,
         conflict: &Conflict,
     ) -> Result<bool, InfrastructureError> {
-        let mut result = self.graph.execute(
-            query(
-                "MATCH (c:Conflict {id: $id, world_id: $world_id})
+        let mut result = self
+            .graph
+            .execute(
+                query(
+                    "MATCH (c:Conflict {id: $id, world_id: $world_id})
              SET c.resolved = $resolved
-             RETURN c.id AS id"
-            )
+             RETURN c.id AS id",
+                )
                 .param("id", id)
                 .param("world_id", world_id)
-                .param("resolved", conflict.resolved)
-        ).await?;
+                .param("resolved", conflict.resolved),
+            )
+            .await?;
         Ok(result.next().await?.is_some())
     }
 
@@ -343,8 +391,9 @@ impl GraphRepository {
             query("MATCH (c:Conflict {id: $id, world_id: $world_id}) RETURN c")
                 .param("id", id)
                 .param("world_id", world_id),
-            "c"
-        ).await
+            "c",
+        )
+        .await
     }
 
     pub async fn get_conflicts_by_entity(
@@ -373,12 +422,13 @@ impl GraphRepository {
         self.fetch_all::<Relationship>(
             query(
                 "MATCH (e:Entity {id: $entity_id, world_id: $world_id})-[r]-()
-             RETURN r"
+             RETURN r",
             )
-                .param("entity_id", entity_id)
-                .param("world_id", world_id),
-            "r"
-        ).await
+            .param("entity_id", entity_id)
+            .param("world_id", world_id),
+            "r",
+        )
+        .await
     }
 
     pub async fn get_entities_by_conversation(
@@ -390,17 +440,19 @@ impl GraphRepository {
             query(
                 "MATCH (e:Entity {world_id: $world_id})-[r]-()
              WHERE r.source_conversation = $conversation_id
-             RETURN DISTINCT e"
+             RETURN DISTINCT e",
             )
-                .param("conversation_id", conversation_id)
-                .param("world_id", world_id),
-            "e"
-        ).await
+            .param("conversation_id", conversation_id)
+            .param("world_id", world_id),
+            "e",
+        )
+        .await
     }
 
     pub async fn upsert_entity(
         &self,
-        entity: &Entity
+        entity: &Entity,
+        embedding: Vec<f64>,
     ) -> Result<Entity, InfrastructureError> {
         self.fetch_one::<Entity>(
             query(
@@ -412,37 +464,40 @@ impl GraphRepository {
                     e.aliases     = $aliases,
                     e.kind        = $kind,
                     e.description = $description,
-                    e.properties  = $properties
+                    e.properties  = $properties,
+                    e.embedding   = $embedding
                 ON MATCH SET
                     e.aliases     = $aliases,
                     e.kind        = $kind,
                     e.description = $description,
-                    e.properties  = $properties
+                    e.properties  = $properties,
+                    e.embedding   = $embedding
                 RETURN e
-                "
+                ",
             )
-                .param("id", entity.id.clone())
-                .param("world_id", entity.world_id.clone())
-                .param("name_key", entity.name_key.clone())
-                .param("name", entity.name.clone())
-                .param("aliases", entity.aliases.clone())
-                .param("kind", entity.kind.clone())
-                .param("description", entity.description.clone())
-                .param(
-                    "properties",
-                    serde_json::to_string(&entity.properties)
-                        .unwrap_or_default()
-                ),
-                "e"
-        ).await?.ok_or_else(|| InfrastructureError::InternalError("MERGE returned no row".into()))
+            .param("id", entity.id.clone())
+            .param("world_id", entity.world_id.clone())
+            .param("name_key", entity.name_key.clone())
+            .param("name", entity.name.clone())
+            .param("aliases", entity.aliases.clone())
+            .param("kind", entity.kind.clone())
+            .param("embedding", embedding.clone())
+            .param("description", entity.description.clone())
+            .param(
+                "properties",
+                serde_json::to_string(&entity.properties).unwrap_or_default(),
+            ),
+            "e",
+        )
+        .await?
+        .ok_or_else(|| InfrastructureError::InternalError("MERGE returned no row".into()))
     }
 
     // Returns None when either endpoint entity doesn't exist in this world.
     pub async fn upsert_relationship(
         &self,
-        relationship: &Relationship
+        relationship: &Relationship,
     ) -> Result<Option<Relationship>, InfrastructureError> {
-
         Self::validate_cypher_identifier(&relationship.rel_type)?;
 
         let cypher = format!(
@@ -475,12 +530,15 @@ impl GraphRepository {
                 .param("description", relationship.description.clone())
                 .param(
                     "properties",
-                    serde_json::to_string(&relationship.properties)
-                        .unwrap_or_default()
+                    serde_json::to_string(&relationship.properties).unwrap_or_default(),
                 )
-                .param("source_conversation", relationship.source_conversation.clone()),
-            "r"
-        ).await
+                .param(
+                    "source_conversation",
+                    relationship.source_conversation.clone(),
+                ),
+            "r",
+        )
+        .await
     }
 
     // One open conflict per entity field: a retry, or a later message contradicting
@@ -488,7 +546,7 @@ impl GraphRepository {
     // Returns None when the entity doesn't exist in this world.
     pub async fn upsert_conflict(
         &self,
-        conflict: &Conflict
+        conflict: &Conflict,
     ) -> Result<Option<Conflict>, InfrastructureError> {
         self.fetch_one::<Conflict>(
             query(
@@ -513,18 +571,83 @@ impl GraphRepository {
                     c.explanation         = $explanation,
                     c.source_conversation = $source_conversation
                 RETURN c
-                "
+                ",
             )
-                .param("id", conflict.id.clone())
-                .param("world_id", conflict.world_id.clone())
-                .param("entity_id", conflict.entity_id.clone())
-                .param("field", conflict.field.clone())
-                .param("existing_value", serde_json::to_string(&conflict.existing_value).unwrap_or_default())
-                .param("new_value", serde_json::to_string(&conflict.new_value).unwrap_or_default())
-                .param("severity", conflict.severity.clone())
-                .param("explanation", conflict.explanation.clone())
-                .param("source_conversation", conflict.source_conversation.clone()),
-            "c"
-        ).await
+            .param("id", conflict.id.clone())
+            .param("world_id", conflict.world_id.clone())
+            .param("entity_id", conflict.entity_id.clone())
+            .param("field", conflict.field.clone())
+            .param(
+                "existing_value",
+                serde_json::to_string(&conflict.existing_value).unwrap_or_default(),
+            )
+            .param(
+                "new_value",
+                serde_json::to_string(&conflict.new_value).unwrap_or_default(),
+            )
+            .param("severity", conflict.severity.clone())
+            .param("explanation", conflict.explanation.clone())
+            .param("source_conversation", conflict.source_conversation.clone()),
+            "c",
+        )
+        .await
+    }
+
+    pub async fn vector_search_entities(
+        &self,
+        world_id: &str,
+        query_embedding: Vec<f64>,
+    ) -> Result<Vec<Entity>, InfrastructureError> {
+        let results = self
+            .fetch_all::<Entity>(
+                query(
+                    r#"
+                CALL vector_search.search("entity_embedding", 50, $embedding) YIELD node, similarity
+                WHERE node.world_id = $world_id
+                RETURN node, similarity
+                ORDER BY similarity DESC
+                LIMIT 10
+                "#,
+                )
+                .param("world_id", world_id)
+                .param("embedding", query_embedding),
+                "node",
+            )
+            .await?;
+        Ok(results)
+    }
+
+    pub async fn fts_search_entities(
+        &self,
+        world_id: &str,
+        query_text: &str,
+    ) -> Result<Vec<Entity>, InfrastructureError> {
+        let cleaned: String = query_text
+            .chars()
+            .map(|c| if c.is_alphanumeric() { c } else { ' ' })
+            .collect();
+
+        if cleaned.trim().is_empty() {
+            return Ok(Vec::new());
+        }
+
+        let results = self
+            .fetch_all::<Entity>(
+                query(
+                    r#"
+                    CALL text_search.search_all("entity_text", $text) YIELD node, score
+                    WITH node, score
+                    WHERE node.world_id = $world_id
+                    RETURN node
+                    ORDER BY score DESC
+                    LIMIT 10
+                "#,
+                )
+                .param("world_id", world_id)
+                .param("text", cleaned),
+                "node",
+            )
+            .await?;
+        Ok(results)
     }
 }

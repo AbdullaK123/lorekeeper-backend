@@ -1,6 +1,6 @@
-use rig::completion::StructuredOutputError;
-use thiserror::Error;
 use crate::infrastructure::InfrastructureError;
+use rig::{ProviderError, completion::StructuredOutputError};
+use thiserror::Error;
 
 #[derive(Error, Debug)]
 pub enum ServiceError {
@@ -9,7 +9,7 @@ pub enum ServiceError {
     #[error("Resource not found: {0}")]
     NotFound(String),
     #[error("Invalid Credentials")]
-    AuthError
+    AuthError,
 }
 
 impl From<InfrastructureError> for ServiceError {
@@ -20,6 +20,12 @@ impl From<InfrastructureError> for ServiceError {
 
 impl From<StructuredOutputError> for ServiceError {
     fn from(value: StructuredOutputError) -> Self {
+        Self::InternalError(value.to_string())
+    }
+}
+
+impl From<ProviderError> for ServiceError {
+    fn from(value: ProviderError) -> Self {
         Self::InternalError(value.to_string())
     }
 }
