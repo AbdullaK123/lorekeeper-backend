@@ -4,11 +4,15 @@ use crate::data::{
     WorldRepository,
 };
 use crate::infrastructure::{create_graph, create_pool, load_config, load_prompt, load_settings};
-use crate::service::{AuthService, ConversationService, ExtractionService, WorldService};
+use crate::service::{
+    AuthService, ConversationService, ExtractionService, RetrievalService, WorldService,
+};
 use axum::Router;
 use axum::routing::get;
 use neo4rs::Graph;
+use rig::DynModel;
 use rig::extractor::ExtractorBuilder;
+use rig::operation::Embedding;
 use rig::providers::openrouter;
 use sqlx::postgres::PgPool;
 
@@ -20,6 +24,7 @@ pub struct AppState {
     pub world_service: WorldService,
     pub conversation_service: ConversationService,
     pub extraction_service: ExtractionService,
+    pub retrieval_service: RetrievalService,
 }
 
 pub async fn create_app() -> Router {
@@ -43,7 +48,7 @@ pub async fn create_app() -> Router {
     let client = openrouter::from_env().expect("OPENROUTER_API_KEY not set");
 
     let model = client.chat("openai/gpt-6-luna");
-    let embedding_model = client
+    let embedding_model: DynModel<Embedding> = client
         .embedding("openai/text-embedding-3-small", None)
         .into();
 
@@ -58,11 +63,13 @@ pub async fn create_app() -> Router {
         .build();
 
     let extraction_service = ExtractionService::new(
-        graph_repo,
+        graph_repo.clone(),
         entity_extractor,
         conflict_extractor,
-        embedding_model,
+        embedding_model.clone(),
     );
+
+    let retrieval_service = RetrievalService::new(graph_repo.clone(), embedding_model.clone());
 
     let app_state = AppState {
         pool: pool.clone(),
@@ -71,6 +78,7 @@ pub async fn create_app() -> Router {
         world_service,
         conversation_service,
         extraction_service,
+        retrieval_service,
     };
 
     let app = Router::new()

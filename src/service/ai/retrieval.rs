@@ -10,6 +10,55 @@ pub struct SearchHit {
     pub neighbors: Vec<(Entity, Relationship)>,
 }
 
+/// "Kael (character): A warrior from the Ashlands."
+fn describe(entity: &Entity) -> String {
+    let mut line = format!("{} ({})", entity.name, entity.kind.join(", "));
+    if !entity.description.is_empty() {
+        line.push_str(": ");
+        line.push_str(&entity.description);
+    }
+    line
+}
+
+/// Renders search hits as the plain-text lore block the chat agent reads.
+/// Arrows always read in the relationship's real direction, whichever side the match is on.
+pub fn format_hits(hits: &[SearchHit]) -> String {
+    if hits.is_empty() {
+        return "No matching lore found in this world.".to_string();
+    }
+
+    let mut blocks = Vec::new();
+    for hit in hits {
+        let mut lines = vec![describe(&hit.entity)];
+
+        if !hit.entity.properties.is_empty() {
+            let mut props: Vec<String> = hit
+                .entity
+                .properties
+                .iter()
+                .map(|(key, value)| match value {
+                    serde_json::Value::String(s) => format!("{key}: {s}"),
+                    other => format!("{key}: {other}"),
+                })
+                .collect();
+            props.sort();
+            lines.push(format!("  Properties: {}", props.join("; ")));
+        }
+
+        for (neighbor, rel) in &hit.neighbors {
+            let line = if rel.from_id == hit.entity.id {
+                format!("  - {} → {}", rel.rel_type, describe(neighbor))
+            } else {
+                format!("  - ← {} from {}", rel.rel_type, describe(neighbor))
+            };
+            lines.push(line);
+        }
+
+        blocks.push(lines.join("\n"));
+    }
+    blocks.join("\n\n")
+}
+
 #[derive(Clone)]
 pub struct RetrievalService {
     graph: GraphRepository,
@@ -60,3 +109,6 @@ impl RetrievalService {
         Ok(hits)
     }
 }
+
+#[cfg(test)]
+mod tests;
