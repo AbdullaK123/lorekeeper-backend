@@ -21,7 +21,6 @@ fn update() -> ExtractedEntity {
         kind: vec![],
         description: String::new(),
         properties: HashMap::new(),
-        is_updated: true,
         existing_id: Some("abc-123".into()),
     }
 }

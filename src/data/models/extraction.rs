@@ -15,9 +15,7 @@ pub struct ExtractedEntity {
     pub description: String,
     /// Structured attributes explicitly stated or directly implied, e.g. {"population": "~50,000", "climate": "arctic"}. Keep units as stated. Empty if none. For an update, include only new or changed attributes.
     pub properties: HashMap<String, serde_json::Value>,
-    /// True when this entity matches one in existing_entities by name, alias, or strong contextual signal; false for a new entity.
-    pub is_updated: bool,
-    /// The ID of the matching entity from existing_entities when is_updated is true; null otherwise.
+    /// The ID of the matching entity from existing_entities when this entity matches one by name, alias, or strong contextual signal; null for a new entity.
     pub existing_id: Option<String>
 }
 

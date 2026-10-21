@@ -5,7 +5,8 @@ use crate::data::{
 };
 use crate::infrastructure::{create_graph, create_pool, load_config, load_prompt, load_settings};
 use crate::service::{
-    AuthService, ConversationService, ExtractionService, RetrievalService, WorldService,
+    AuthService, ChatAgentFactory, ConversationService, ExtractionService, RetrievalService,
+    WorldService,
 };
 use axum::Router;
 use axum::routing::get;
@@ -25,6 +26,7 @@ pub struct AppState {
     pub conversation_service: ConversationService,
     pub extraction_service: ExtractionService,
     pub retrieval_service: RetrievalService,
+    pub agent_factory: ChatAgentFactory,
 }
 
 pub async fn create_app() -> Router {
@@ -71,6 +73,12 @@ pub async fn create_app() -> Router {
 
     let retrieval_service = RetrievalService::new(graph_repo.clone(), embedding_model.clone());
 
+    let agent_factory = ChatAgentFactory::new(
+        model.clone().into(),
+        load_prompt("agents").expect("Agent prompt not found"),
+        retrieval_service.clone(),
+    );
+
     let app_state = AppState {
         pool: pool.clone(),
         graph,
@@ -79,6 +87,7 @@ pub async fn create_app() -> Router {
         conversation_service,
         extraction_service,
         retrieval_service,
+        agent_factory,
     };
 
     let app = Router::new()

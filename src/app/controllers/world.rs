@@ -83,7 +83,7 @@ async fn create_conversation(
 
 pub fn create_world_controller() -> Router<AppState> {
     Router::new()
-        .route("", post(create_world).get(get_worlds))
+        .route("/", post(create_world).get(get_worlds))
         .route("/{world_id}", get(get_world).patch(update_world).delete(delete_world))
-        .route("/world_id/conversations", get(get_conversations).post(create_conversation))
+        .route("/{world_id}/conversations", get(get_conversations).post(create_conversation))
 }

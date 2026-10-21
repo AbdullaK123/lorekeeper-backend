@@ -24,6 +24,8 @@ pub async fn create_graph(settings: &Settings, config: &MemgraphConfig) -> Graph
     let neo_config =
         ConfigBuilder::default()
             .uri(&settings.memgraph_uri)
+            // neo4rs defaults to Neo4j's "neo4j" database; Memgraph's is "memgraph".
+            .db("memgraph")
             .user(&settings.memgraph_user)
             .password(&settings.memgraph_password)
             .max_connections(config.max_connections)

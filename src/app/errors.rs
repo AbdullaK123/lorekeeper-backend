@@ -1,11 +1,11 @@
-use axum::http::StatusCode;
+use crate::infrastructure::InfrastructureError;
+use crate::service::ServiceError;
 use axum::Json;
+use axum::http::StatusCode;
 use axum::response::{IntoResponse, Response};
 use serde_json::json;
 use thiserror::Error;
 use validator::ValidationErrors;
-use crate::infrastructure::InfrastructureError;
-use crate::service::ServiceError;
 
 #[derive(Error, Debug)]
 pub enum AppError {
@@ -20,7 +20,7 @@ pub enum AppError {
     #[error("Downstream service failed: {0}")]
     DownstreamServiceError(String),
     #[error("Resource not found: {0}")]
-    NotFound(String)
+    NotFound(String),
 }
 
 impl From<InfrastructureError> for AppError {
@@ -34,7 +34,7 @@ impl From<ServiceError> for AppError {
         match value {
             ServiceError::AuthError => Self::AuthError(value.to_string()),
             ServiceError::NotFound(e) => Self::NotFound(e.to_string()),
-            ServiceError::InternalError(e) => Self::InternalError(e.to_string())
+            ServiceError::InternalError(e) => Self::InternalError(e.to_string()),
         }
     }
 }
@@ -45,11 +45,9 @@ impl From<ValidationErrors> for AppError {
             .field_errors()
             .into_iter()
             .flat_map(|(field, errors)| {
-                errors.iter().map(move |e| {
-                    match &e.message {
-                        Some(msg) => format!("{}: {}", field, msg),
-                        None => format!("{}: invalid", field),
-                    }
+                errors.iter().map(move |e| match &e.message {
+                    Some(msg) => format!("{}: {}", field, msg),
+                    None => format!("{}: invalid", field),
                 })
             })
             .collect();
@@ -66,8 +64,16 @@ impl IntoResponse for AppError {
             AppError::NotFound(e) => (StatusCode::NOT_FOUND, "not_found", e),
             AppError::ForbiddenError(e) => (StatusCode::FORBIDDEN, "forbidden", e),
             AppError::ValidationError(e) => (StatusCode::UNPROCESSABLE_ENTITY, "validation", e),
-            AppError::DownstreamServiceError(e) => (StatusCode::SERVICE_UNAVAILABLE, "downstream", e),
+            AppError::DownstreamServiceError(e) => {
+                (StatusCode::SERVICE_UNAVAILABLE, "downstream", e)
+            }
         };
         (status, Json(json!({"error": tag, "message": message}))).into_response()
+    }
+}
+
+impl From<rig::completion::PromptError> for AppError {
+    fn from(value: rig::completion::PromptError) -> Self {
+        AppError::DownstreamServiceError(value.to_string())
     }
 }

@@ -27,7 +27,6 @@ A structured JSON object with two arrays:
       "properties": {
         "key": "value — structured attributes extracted from the message"
       },
-      "is_updated": false,
       "existing_id": null
     }
   ],
@@ -53,7 +52,7 @@ A structured JSON object with two arrays:
 - **kind** is an array because entities can have multiple types: a character who is also a deity, a location that is also an artifact.
 - **description** should be a concise synthesis of what the message tells us, not a verbatim quote. Write it as a reference entry, not a conversation snippet.
 - **properties** capture structured attributes: `{ "population": "~50,000", "climate": "arctic", "founded": "after the Shattering" }`. Only include properties that are explicitly stated or directly implied.
-- Set **is_updated** to `true` and provide **existing_id** when the entity matches one in **existing_entities**. Match on name, aliases, or strong contextual signals.
+- Provide **existing_id** when the entity matches one in **existing_entities**. Match on name, aliases, or strong contextual signals.
 
 ### Relationship Extraction
 
@@ -67,8 +66,8 @@ A structured JSON object with two arrays:
 ### Matching Against Existing Entities
 
 - Before creating a new entity, check if it matches any entry in **existing_entities** by name or alias (case-insensitive, ignoring articles like "the").
-- If a match is found, set `is_updated: true` and `existing_id` to the matched entity's ID. The description and properties should contain **only the new information** from this message — the system will merge, not replace.
-- If no match is found, `is_updated: false` and `existing_id: null`.
+- If a match is found, set `existing_id` to the matched entity's ID. The description and properties should contain **only the new information** from this message — the system will merge, not replace.
+- If no match is found, set `existing_id: null`.
 
 ## 5. Constraints
 
@@ -98,7 +97,6 @@ A structured JSON object with two arrays:
         "terrain": "volcanic wasteland",
         "relative_position": "east of the Spire Mountains"
       },
-      "is_updated": false,
       "existing_id": null
     },
     {
@@ -107,7 +105,6 @@ A structured JSON object with two arrays:
       "kind": ["location"],
       "description": "A mountain range located west of the Ashlands.",
       "properties": {},
-      "is_updated": false,
       "existing_id": null
     },
     {
@@ -120,7 +117,6 @@ A structured JSON object with two arrays:
         "members": "fire mages",
         "in_power_since": "the Cataclysm"
       },
-      "is_updated": false,
       "existing_id": null
     },
     {
@@ -129,7 +125,6 @@ A structured JSON object with two arrays:
       "kind": ["event"],
       "description": "A past event after which the Ember Court came to power in the Ashlands.",
       "properties": {},
-      "is_updated": false,
       "existing_id": null
     }
   ],
@@ -170,7 +165,6 @@ A structured JSON object with two arrays:
       "properties": {
         "species": "half-elf"
       },
-      "is_updated": true,
       "existing_id": "abc-123"
     },
     {
@@ -181,7 +175,6 @@ A structured JSON object with two arrays:
       "properties": {
         "type": "sword"
       },
-      "is_updated": false,
       "existing_id": null
     }
   ],
