@@ -25,3 +25,7 @@ target
 # Added by cargo
 
 /target
+
+# Playground (dev UI) build output
+playground/node_modules/
+playground/dist/

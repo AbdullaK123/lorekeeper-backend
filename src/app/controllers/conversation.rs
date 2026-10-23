@@ -3,10 +3,13 @@ use crate::app::{AppState, UserId, ValidatedJson};
 use crate::data::{ChatRequest, ConversationResponse, Message};
 use crate::service::format_hits;
 use axum::extract::{Path, State};
+use axum::response::sse::{Event, Sse};
 use axum::response::{IntoResponse, NoContent};
 use axum::routing::{Route, get, post};
 use axum::{Json, Router};
 use chrono::Utc;
+use futures::{Stream, StreamExt};
+use rig::agent::MultiTurnStreamItem;
 use rig::message::Message as RigMessage;
 use uuid::Uuid;
 
@@ -42,7 +45,7 @@ async fn chat_turn(
     UserId(user_id): UserId,
     Path(id): Path<Uuid>,
     ValidatedJson(payload): ValidatedJson<ChatRequest>,
-) -> Result<impl IntoResponse, AppError> {
+) -> Result<Sse<impl Stream<Item = Result<Event, axum::Error>>>, AppError> {
     let conversation = ctx
         .conversation_service
         .get_conversation(id, user_id)
@@ -64,34 +67,48 @@ async fn chat_turn(
     let agent = ctx
         .agent_factory
         .create_agent(conversation.world_id.to_string(), lore);
-    let response = agent
-        .prompt(payload.content.clone())
-        .history(history)
-        .max_turns(5)
-        .await?;
-    let reply = response.output().to_string();
-    ctx.conversation_service
-        .append_message(id, user_id, message)
-        .await?;
 
-    let reply_message = Message::Assistant {
-        content: Some(reply.clone()),
-        tool_calls: None,
-        created_at: Utc::now(),
-    };
-    let updated = ctx
-        .conversation_service
-        .append_message(id, user_id, reply_message)
-        .await?;
-    let extraction = ctx.extraction_service.clone();
-    let world_id = conversation.world_id;
-    let text = payload.content.clone();
-    tokio::spawn(async move {
-        if let Err(e) = extraction.process_message(world_id, id, &text).await {
-            tracing::error!("extraction failed for conversation {id}: {e}");
+    let events = async_stream::stream! {
+        let mut rig_stream = agent
+            .prompt(payload.content.clone())
+            .history(history)
+            .max_turns(5)
+            .stream();
+        while let Some(item) = rig_stream.next().await {
+            match item {
+                Ok(item) => {
+                    if let MultiTurnStreamItem::FinalResponse(resp) = &item {
+                        let reply = Message::Assistant {
+                            content: Some(resp.output().to_string()),
+                            tool_calls: None,
+                            created_at: Utc::now()
+                        };
+                        let svc = &ctx.conversation_service;
+                        if let Err(e) = svc.append_message(id, user_id, message.clone()).await {
+                            tracing::error!("saving user message failed: {e}");
+                        }
+                        if let Err(e) = svc.append_message(id, user_id, reply).await {
+                            tracing::error!("saving reply failed: {e}");
+                        }
+                        let extraction = ctx.extraction_service.clone();
+                        let world_id = conversation.world_id;
+                        let text = payload.content.clone();
+                        tokio::spawn(async move {
+                            if let Err(e) = extraction.process_message(world_id, id, &text).await {
+                                tracing::error!("extraction failed for conversation {id}: {e}");
+                            }
+                        });
+                    }
+                    yield Event::default().json_data(&item)
+                },
+                Err(e) => {
+                    yield Ok(Event::default().event("error").data(e.to_string()));
+                    break;
+                }
+            }
         }
-    });
-    Ok(Json(updated))
+    };
+    Ok(Sse::new(events))
 }
 
 pub fn create_conversation_controller() -> Router<AppState> {

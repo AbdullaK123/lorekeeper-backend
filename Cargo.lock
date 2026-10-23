@@ -4337,10 +4337,12 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "argon2",
+ "async-stream",
  "axum",
  "chrono",
  "clap",
  "envy",
+ "futures",
  "neo4rs",
  "passcheck",
  "rig",
