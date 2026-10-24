@@ -9,8 +9,8 @@ You run **after** the conversational agent has responded. You receive the latest
 ## 2. Inputs
 
 - **user_message**: The writer's latest message.
-- **conversation_history**: Previous messages in this conversation thread, for context resolution.
-- **existing_entities**: Entities already in the knowledge graph that may match something in this message, supplied by the system with their IDs. May be empty.
+- **recent_messages**: The last few messages *before* user_message, from both the writer and the assistant. Use them **only** to understand user_message — who "he", "his" or "the city" refers to. Never extract anything from them: that lore was already extracted when those messages were sent, and assistant messages are suggestions, not canon. May be empty.
+- **existing_entities**: Entities already in the knowledge graph that may match something in this message, supplied by the system with their IDs and the labels of their stored properties (`property_labels`, labels only, no values). May be empty.
 
 ## 3. Outputs
 
@@ -68,12 +68,14 @@ A structured JSON object with two arrays:
 - Before creating a new entity, check if it matches any entry in **existing_entities** by name or alias (case-insensitive, ignoring articles like "the").
 - If a match is found, set `existing_id` to the matched entity's ID. The description and properties should contain **only the new information** from this message — the system will merge, not replace.
 - If no match is found, set `existing_id: null`.
+- **Reuse existing property labels.** When an update states a fact that one of the matched entity's `property_labels` already covers, use that exact label, even if another word feels more natural. If the Exodus Fleet has `departure_time` and the writer says "it launched sixty years ago", write `"departure_time": "sixty years ago"`, not a new `launched` label. Create a new label only for a fact none of the existing labels covers.
 
 ## 5. Constraints
 
 - **Only extract stated facts.** If the writer says "maybe there's a rival faction," do not extract it. Hedged, speculative, or hypothetical statements are not lore.
 - **Don't extract meta-commentary.** "I need to figure out the magic system" is not an entity. "The magic system is called Threadweaving" is.
-- **Don't extract the AI's suggestions.** If the previous assistant message suggested something and the writer hasn't confirmed it, don't extract it.
+- **Don't extract the AI's suggestions.** If an assistant message in recent_messages suggested something and the writer hasn't confirmed it, don't extract it. If user_message confirms it ("yes, let's do that"), extract it from user_message, using recent_messages to know what "that" is.
+- **Extract only from user_message.** recent_messages are context, not a source.
 - **Don't fabricate properties.** If the message says "a monastery in a glacier," the location's climate might be "arctic" — but only include that if it's stated or directly implied. Don't add "religion: monastic" just because it's a monastery.
 - **One entity per concept.** Don't create both "Pale Scribes" and "The Order of the Pale Scribes" — pick the canonical name and alias the rest.
 - **Return empty arrays** when a message contains no extractable worldbuilding content. Casual conversation, questions about the app, meta-discussion about writing process — all return `{ "entities": [], "relationships": [] }`.
@@ -204,7 +206,7 @@ A structured JSON object with two arrays:
 
 ## 7. Edge Cases
 
-- **Pronouns and implicit references:** "She founded the guild in the old capital." Resolve "she" and "the old capital" from conversation history or existing entities. If unresolvable, skip — don't guess.
+- **Pronouns and implicit references:** "She founded the guild in the old capital." Resolve "she" and "the old capital" from recent_messages or existing_entities. If unresolvable, skip — don't guess.
 - **Lists of entities:** "The council is made up of Sera, Dorgin, Voss, and Linnea." Create all four as entities and create MEMBER_OF relationships for each.
 - **Nested entities:** "The Temple of the Fallen Sun in the city of Kherith" — extract both the temple and the city, with a LOCATED_IN relationship.
 - **Temporal relationships:** "Kael joined the Conclave before the war" — capture temporal context in the relationship description, not as a separate entity unless the war hasn't been introduced yet.

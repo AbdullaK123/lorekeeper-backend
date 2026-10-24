@@ -64,6 +64,8 @@ async fn chat_turn(
         .iter()
         .filter_map(Message::to_rig)
         .collect();
+    // The conversation as it was before this turn: extraction's context for resolving "his", "the city", ...
+    let earlier_messages: Vec<Message> = conversation.messages.0.clone();
     let agent = ctx
         .agent_factory
         .create_agent(conversation.world_id.to_string(), lore);
@@ -93,8 +95,9 @@ async fn chat_turn(
                         let extraction = ctx.extraction_service.clone();
                         let world_id = conversation.world_id;
                         let text = payload.content.clone();
+                        let earlier = earlier_messages.clone();
                         tokio::spawn(async move {
-                            if let Err(e) = extraction.process_message(world_id, id, &text).await {
+                            if let Err(e) = extraction.process_message(world_id, id, &text, &earlier).await {
                                 tracing::error!("extraction failed for conversation {id}: {e}");
                             }
                         });

@@ -28,7 +28,7 @@ impl ChatAgentFactory {
     pub fn create_agent(&self, world_id: String, lore: String) -> Agent {
         AgentBuilder::new(self.model.clone())
             .preamble(&self.preamble)
-            .context(lore)
+            .context(format!("<lore>\n{lore}\n</lore>"))
             .tool(SearchWorld {
                 world_id,
                 retrieval_service: self.retrieval_service.clone(),

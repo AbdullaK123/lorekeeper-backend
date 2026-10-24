@@ -8,9 +8,11 @@ Contradictions are normal in worldbuilding. Writers change their minds, forget d
 
 ## 2. Inputs
 
-- **extracted_entity**: The newly extracted entity data (from the extraction step), including name, kind, description, and properties.
-- **existing_entity**: The current state of the matching entity in the knowledge graph, including all its fields.
-- **source_message**: The user's message that triggered the extraction (for context).
+- **extracted**: Everything the extraction step found in this message: `entities` (name, kind, description, properties, and `existing_id` when it matches a saved entity) and `relationships` (from_name, rel_type, to_name, description).
+- **related**: Saved entities from the knowledge graph that this message touches, plus the entities linked to them. Each has an `id` and its full stored fields.
+- **source_message**: The writer's message that triggered the extraction (for context).
+
+Compare **all** of extracted against **all** of related at once. A contradiction can cross entities: a new fact about one entity, or a new relationship, can clash with what is stored on a *different* entity.
 
 ## 3. Outputs
 
@@ -35,12 +37,20 @@ Return an empty array when there are no conflicts.
 
 ## 4. Instructions
 
+### Which entity a conflict belongs to
+
+Set `entity_id` to the `id` of the **saved entity in related whose stored fact is contradicted**. That is the fact the writer needs to reconsider. It may not be the entity the message is mainly about. Never use an id that isn't in related.
+
 ### What Counts as a Conflict
 
 - **Direct contradiction:** An existing property or description states X, the new information states not-X or a different, incompatible value.
     - "Kael is from the desert" → "Kael is from the northern wastes" = conflict on origin.
     - "Population: 50,000" → "Population: 500,000" = conflict on population.
     - "Allied with the Crown" → "At war with the Crown" = conflict on political alignment.
+
+- **Cross-entity contradiction:** a new fact or relationship is impossible given what is stored on another entity.
+    - Saved: Void Gate "destroyed in the Battle of Kessara". New: `Lirien -[WALKED_THROUGH]-> Void Gate`, after the battle = conflict on the Void Gate's description.
+    - Saved: Kael "died in the Siege of Varn". New: Kael "leads the northern rebellion today" = conflict on Kael.
 
 - **Kind changes:** The entity's fundamental type changes in a way that's incompatible.
     - "monks" → "scholarly guild" = conflict (organizational type change).
@@ -184,6 +194,46 @@ Return an empty array when there are no conflicts.
   ]
 }
 ```
+
+### Example 4: Cross-entity conflict — a destroyed place
+
+**Related (saved):**
+```json
+[
+  { "id": "gate-1", "name": "Void Gate", "kind": ["location", "artifact"],
+    "description": "An ancient portal destroyed in the Battle of Kessara.", "properties": { "status": "destroyed" } },
+  { "id": "battle-1", "name": "Battle of Kessara", "kind": ["event"], "description": "The battle in which the Void Gate was destroyed." }
+]
+```
+
+**Extracted:**
+```json
+{
+  "entities": [
+    { "name": "Commander Lirien", "kind": ["character"], "description": "Recently walked through the Void Gate.", "properties": {}, "existing_id": null }
+  ],
+  "relationships": [
+    { "from_name": "Commander Lirien", "to_name": "Void Gate", "rel_type": "WALKED_THROUGH", "description": "Walked through the gate last week." }
+  ]
+}
+```
+
+**Output:**
+```json
+{
+  "conflicts": [
+    {
+      "entity_id": "gate-1",
+      "field": "properties.status",
+      "existing_value": "destroyed",
+      "new_value": "usable (Commander Lirien walked through it)",
+      "severity": "hard",
+      "explanation": "The Void Gate was destroyed in the Battle of Kessara, but Commander Lirien just walked through it."
+    }
+  ]
+}
+```
+*(Lirien is new, so nothing about Lirien conflicts. The clash is with what is stored on the Void Gate, so the conflict belongs to the Void Gate.)*
 
 ## 7. Edge Cases
 

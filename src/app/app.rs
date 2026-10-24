@@ -40,7 +40,7 @@ pub async fn create_app() -> Router {
     let conversation_repo = ConversationRepository::new(pool.clone());
     let auth_service = AuthService::new(user_repo);
     let world_service = WorldService::new(world_repo);
-    let conversation_service = ConversationService::new(conversation_repo);
+    let conversation_service = ConversationService::new(conversation_repo.clone());
 
     graph_repo
         .ensure_constraints()

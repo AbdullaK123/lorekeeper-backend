@@ -1,11 +1,11 @@
 use crate::data::{
     Conflict, ConflictExtraction, Entity, ExtractedConflict, ExtractedEntity,
-    ExtractedRelationship, GraphExtraction, GraphRepository, Relationship, name_key,
+    ExtractedRelationship, GraphExtraction, GraphRepository, Message, Relationship, name_key,
 };
-use crate::service::{ServiceError, relationships};
+use crate::service::ServiceError;
+use itertools::Itertools;
 use rig::DynModel;
 use rig::extractor::Extractor;
-use serde_json::json;
 use std::collections::{HashMap, HashSet};
 use std::sync::Arc;
 use uuid::Uuid;
@@ -25,7 +25,6 @@ pub struct ExtractionReport {
 pub struct AppliedEntity {
     pub entity: Entity,
     pub created: bool,
-    pub conflicts_flagged: usize,
 }
 
 /// Turns a writer's message into graph writes. The only writer of lore to the graph.
@@ -66,15 +65,43 @@ impl ExtractionService {
 
     /// Entry point for the background job: find candidates, extract, apply entities,
     /// then apply relationships using the IDs the entities resolved to.
+    ///
+    /// `history` is the conversation as it was *before* this message: the caller passes
+    /// it in, so the job never races the handler's saves and is self-contained for retries.
     pub async fn process_message(
         &self,
         world_id: Uuid,
         conversation_id: Uuid,
         message: &str,
+        history: &[Message],
     ) -> Result<ExtractionReport, ServiceError> {
         let candidates = self.find_candidates(world_id).await?;
-        let extraction = self.extract(message, &candidates).await?;
+        let extraction = self.extract(message, history, &candidates).await?;
         let mut report = ExtractionReport::default();
+
+        // One conflict check for the whole message, before anything is saved, so it can
+        // catch clashes that span entities and relationships (the Void Gate case).
+        let related = self
+            .find_related(world_id, &extraction, &candidates)
+            .await?;
+        let conflicts = if related.is_empty() {
+            Vec::new()
+        } else {
+            self.detect_conflicts(&extraction, &related, message)
+                .await?
+        };
+        let mut conflicting_fields: HashMap<String, Vec<String>> = HashMap::new();
+        for c in &conflicts {
+            let conflict = Conflict::from_extraction(c.clone(), world_id, conversation_id);
+            // None = the AI named an entity that isn't in this world; skip it.
+            if self.graph_repo.upsert_conflict(&conflict).await?.is_some() {
+                report.conflicts_flagged += 1;
+                conflicting_fields
+                    .entry(c.entity_id.clone())
+                    .or_default()
+                    .push(c.field.clone());
+            }
+        }
 
         let mut name_to_id: HashMap<String, String> = candidates
             .iter()
@@ -83,7 +110,7 @@ impl ExtractionService {
 
         for extracted in extraction.entities {
             let applied = self
-                .apply_entity(world_id, conversation_id, message, extracted)
+                .apply_entity(world_id, extracted, &conflicting_fields)
                 .await?;
 
             name_to_id.insert(applied.entity.name_key.clone(), applied.entity.id.clone());
@@ -93,7 +120,6 @@ impl ExtractionService {
             } else {
                 report.entities_updated += 1
             }
-            report.conflicts_flagged += applied.conflicts_flagged;
         }
 
         let (relationships_written, relationships_skipped) = self
@@ -121,116 +147,160 @@ impl ExtractionService {
         Ok(result)
     }
 
-    /// Runs the entity extractor on the message, with the candidates as `existing_entities`.
+    /// Runs the entity extractor on the message, with the candidates as `existing_entities`
+    /// and the last few earlier messages as context for resolving references like "his".
     async fn extract(
         &self,
         message: &str,
+        history: &[Message],
         candidates: &[Entity],
     ) -> Result<GraphExtraction, ServiceError> {
         let candidates_json = serde_json::to_string_pretty(
             &candidates
                 .iter()
                 .map(|e| {
+                    // Property labels only (no values): lets the extractor reuse a label
+                    // like `departure_time` instead of inventing `launched`, so a changed
+                    // value lands on the same key and the conflict check can protect it.
+                    let mut property_labels: Vec<&String> = e.properties.keys().collect();
+                    property_labels.sort();
                     serde_json::json!({
                         "id": e.id,
                         "name": e.name,
                         "aliases": e.aliases,
                         "kind": e.kind,
+                        "property_labels": property_labels,
                     })
                 })
                 .collect::<Vec<_>>(),
         )
         .unwrap_or_else(|_| "[]".into());
 
+        let history: String = history
+            .iter()
+            .filter_map(|m| match m {
+                Message::User { content, .. } => Some(format!("User:\n{content}\n")),
+                Message::Assistant {
+                    content: Some(content),
+                    ..
+                } => Some(format!("Assistant:\n{content}\n")),
+                _ => None,
+            })
+            .tail(6)
+            .join("\n");
+
         let user_prompt = format!(
-            "<existing_entities>\n{}\n</existing_entities>\n\n<user_message>\n{}\n</user_message>",
+            "<existing_entities>\n{}\n</existing_entities>\n\n<recent_messages>\n{history}\n</recent_messages>\n\n<user_message>\n{}\n</user_message>",
             candidates_json, message,
         );
         let result = self.entity_extractor.extract(user_prompt).await?;
         Ok(result.output)
     }
 
-    /// New entity: upsert it. Existing entity (`existing_id` set): load it, flag
-    /// conflicts, merge only the non-conflicting fields, then upsert.
+    /// New entity: upsert it. Existing entity (`existing_id` set): merge in the new
+    /// information, leaving fields flagged by the conflict check at their stored values.
     async fn apply_entity(
         &self,
         world_id: Uuid,
-        conversation_id: Uuid,
-        message: &str,
         extracted: ExtractedEntity,
+        conflicting_fields: &HashMap<String, Vec<String>>,
     ) -> Result<AppliedEntity, ServiceError> {
-        if extracted.existing_id.is_none() {
-            let entity = Entity::from_extraction(extracted, world_id);
-            let embedding = self.embed(&entity).await?;
-            let saved = self.graph_repo.upsert_entity(&entity, embedding).await?;
-
-            return Ok(AppliedEntity {
-                entity: saved,
-                created: true,
-                conflicts_flagged: 0,
-            });
-        }
-
-        let existing_id = extracted.existing_id.clone().unwrap();
-
-        let existing = self
-            .graph_repo
-            .get_entity(&existing_id, &world_id.to_string())
-            .await?;
-
-        if let Some(existing) = existing {
-            let conflicts = self
-                .detect_conflicts(&existing, &extracted, message)
-                .await?;
-
-            for c in &conflicts {
-                let conflict = Conflict::from_extraction(c.clone(), world_id, conversation_id);
-
-                self.graph_repo.upsert_conflict(&conflict).await?;
+        let existing = match &extracted.existing_id {
+            Some(id) => {
+                self.graph_repo
+                    .get_entity(id, &world_id.to_string())
+                    .await?
             }
+            None => None,
+        };
 
-            let conflicting_fields: Vec<String> =
-                conflicts.iter().map(|c| c.field.clone()).collect();
-            let merged = Self::merge(&existing, &extracted, &conflicting_fields);
-            let embedding = self.embed(&merged).await?;
-            let saved = self.graph_repo.upsert_entity(&merged, embedding).await?;
-
-            Ok(AppliedEntity {
-                entity: saved,
-                created: false,
-                conflicts_flagged: conflicts.len(),
-            })
-        } else {
+        // New, or the AI gave an ID that isn't in the graph: save it as new.
+        let Some(existing) = existing else {
             let entity = Entity::from_extraction(extracted, world_id);
             let embedding = self.embed(&entity).await?;
             let saved = self.graph_repo.upsert_entity(&entity, embedding).await?;
-
             return Ok(AppliedEntity {
                 entity: saved,
                 created: true,
-                conflicts_flagged: 0,
             });
+        };
+
+        let flagged = conflicting_fields
+            .get(&existing.id)
+            .map(Vec::as_slice)
+            .unwrap_or(&[]);
+        let merged = Self::merge(&existing, &extracted, flagged);
+        let embedding = self.embed(&merged).await?;
+        let saved = self.graph_repo.upsert_entity(&merged, embedding).await?;
+        Ok(AppliedEntity {
+            entity: saved,
+            created: false,
+        })
+    }
+
+    /// Saved entities this message touches (matched entities + relationship endpoints
+    /// that name a candidate), plus everything linked to them. The conflict check
+    /// compares the whole extraction against this set.
+    async fn find_related(
+        &self,
+        world_id: Uuid,
+        extraction: &GraphExtraction,
+        candidates: &[Entity],
+    ) -> Result<Vec<Entity>, ServiceError> {
+        let world = world_id.to_string();
+
+        // 1. Which saved entities does this message touch?
+        let mut ids: Vec<String> = extraction
+            .entities
+            .iter()
+            .filter_map(|e| e.existing_id.clone())
+            .collect();
+        for rel in &extraction.relationships {
+            for name in [&rel.from_name, &rel.to_name] {
+                if let Some(c) = candidates.iter().find(|c| c.name_key == name_key(name)) {
+                    ids.push(c.id.clone());
+                }
+            }
         }
+
+        // 2. Load each one, plus everything linked to it.
+        let mut related = Vec::new();
+        for id in ids {
+            if let Some(entity) = self.graph_repo.get_entity(&id, &world).await? {
+                related.push(entity);
+            }
+            for (neighbor, _) in self
+                .graph_repo
+                .get_entity_neighbors(&id, &world, None, None)
+                .await?
+            {
+                related.push(neighbor);
+            }
+        }
+
+        // 3. Keep each entity once.
+        let mut seen = HashSet::new();
+        related.retain(|e| seen.insert(e.id.clone()));
+        Ok(related)
     }
 
     /// Runs the conflict extractor comparing the stored entity with the new extraction.
     async fn detect_conflicts(
         &self,
-        existing: &Entity,
-        extracted: &ExtractedEntity,
+        extraction: &GraphExtraction,
+        related: &[Entity],
         message: &str,
     ) -> Result<Vec<ExtractedConflict>, ServiceError> {
-        let existing_entity_json =
-            serde_json::to_string_pretty(existing).unwrap_or_else(|_| "{}".into());
-
         let extracted_json =
-            serde_json::to_string_pretty(extracted).unwrap_or_else(|_| "{}".into());
+            serde_json::to_string_pretty(extraction).unwrap_or_else(|_| "{}".into());
+
+        let related_json = serde_json::to_string_pretty(related).unwrap_or_else(|_| "[]".into());
 
         let user_prompt = format!(
-            "<existing_entity>\n{}\n</existing_entity>\n\n\
-             <extracted_entity>\n{}\n</extracted_entity>\n\n\
+            "<extracted>\n{}\n</extracted>\n\n\
+             <related>\n{}\n</related>\n\n\
              <source_message>\n{}\n</source_message>",
-            existing_entity_json, extracted_json, message,
+            extracted_json, related_json, message,
         );
         let result = self.conflict_extractor.extract(user_prompt).await?;
         let conflicts = result.output.conflicts;

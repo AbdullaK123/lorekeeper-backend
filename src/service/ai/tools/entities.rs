@@ -22,8 +22,12 @@ impl PortableTool for SearchWorld {
     type Error = ServiceError;
 
     fn description(&self) -> String {
-        "Search this world's lore by meaning and by name. Returns matching entities \
-         and what they're connected to."
+        "Search this world's saved lore by meaning and by name. Returns matching \
+         entities and what they're connected to. Lore from the writer's message was \
+         already searched for you and is in your context — call this only to find \
+         something that lore doesn't cover, such as an earlier detail or a connection \
+         further out. It can't find anything the writer said in the current message: \
+         that isn't saved until after you reply."
             .to_string()
     }
 
