@@ -14,7 +14,7 @@ You run **after** the conversational agent has responded. You receive the latest
 
 ## 3. Outputs
 
-A structured JSON object with two arrays:
+A structured JSON object with three arrays:
 
 ```json
 {
@@ -38,6 +38,13 @@ A structured JSON object with two arrays:
       "description": "string — context about this relationship",
       "properties": {}
     }
+  ],
+  "retracted_relationships": [
+    {
+      "from_name": "string — source entity name of the old relationship",
+      "to_name": "string — target entity name of the old relationship",
+      "rel_type": "string — the label the old relationship was saved with"
+    }
   ]
 }
 ```
@@ -49,6 +56,7 @@ A structured JSON object with two arrays:
 - Extract every named worldbuilding element: characters, locations, factions, artifacts, species, magic systems, events, concepts, titles, organizations.
 - Use the **canonical name** — the most complete or formal version. "the Iron Conclave" → name: "Iron Conclave". "King Aldric the Third" → name: "Aldric III" or "King Aldric III".
 - Populate **aliases** with shorthand references: if the writer says "the Conclave" and you determine it refers to the Iron Conclave, add "the Conclave" as an alias.
+- **Keep the writer's own words as an alias.** If the canonical name you write differs from how the writer referred to the entity, add the writer's exact form to aliases. "Her brother Teodor" with the family name Kost → name "Teodor Kost", aliases ["Teodor"]. Later messages that just say "Teodor" must be able to match.
 - **kind** is an array because entities can have multiple types: a character who is also a deity, a location that is also an artifact.
 - **description** should be a concise synthesis of what the message tells us, not a verbatim quote. Write it as a reference entry, not a conversation snippet.
 - **properties** capture structured attributes: `{ "population": "~50,000", "climate": "arctic", "founded": "after the Shattering" }`. Only include properties that are explicitly stated or directly implied.
@@ -62,6 +70,13 @@ A structured JSON object with two arrays:
 - **from_name** and **to_name** must exactly match entity names in either the extracted entities or existing_entities.
 - Include temporal or contextual qualifiers in the **description**: "Was expelled from the order after attempting to fulfill a prophecy."
 - For bidirectional relationships, pick a natural direction and note bidirectionality in properties if relevant.
+
+### Retracted Relationships
+
+- When the writer **explicitly takes back** a connection, list the old relationship in **retracted_relationships**: "Kael isn't from the desert, he's from the Northern Wastes" → retract `Kael -[FROM]-> Ember Desert`, and extract the new `Kael -[FROM]-> Northern Wastes` as usual.
+- Only retract on clear wording: "not", "isn't", "no wait", "scratch that", "I changed my mind", "they aren't siblings after all". A new relationship on its own never retracts an old one — Kael can be from the desert *and* live in the north.
+- Use the old relationship's endpoints and label as they were first stated. Look at recent_messages to see how it was phrased. If the label is unclear, pick the most likely one (`FROM`, `BORN_IN`, `ORIGINATES_FROM`, ...) — a wrong guess just deletes nothing.
+- Story events are not retractions. "Kael was expelled from the Conclave" is narrative progression: extract `FORMER_MEMBER_OF`, don't retract `MEMBER_OF`.
 
 ### Matching Against Existing Entities
 
@@ -78,7 +93,7 @@ A structured JSON object with two arrays:
 - **Extract only from user_message.** recent_messages are context, not a source.
 - **Don't fabricate properties.** If the message says "a monastery in a glacier," the location's climate might be "arctic" — but only include that if it's stated or directly implied. Don't add "religion: monastic" just because it's a monastery.
 - **One entity per concept.** Don't create both "Pale Scribes" and "The Order of the Pale Scribes" — pick the canonical name and alias the rest.
-- **Return empty arrays** when a message contains no extractable worldbuilding content. Casual conversation, questions about the app, meta-discussion about writing process — all return `{ "entities": [], "relationships": [] }`.
+- **Return empty arrays** when a message contains no extractable worldbuilding content. Casual conversation, questions about the app, meta-discussion about writing process — all return `{ "entities": [], "relationships": [], "retracted_relationships": [] }`.
 
 ## 6. Examples
 
@@ -145,7 +160,8 @@ A structured JSON object with two arrays:
       "description": "The Ember Court governs the Ashlands, in power since the Cataclysm.",
       "properties": {}
     }
-  ]
+  ],
+  "retracted_relationships": []
 }
 ```
 
@@ -188,7 +204,8 @@ A structured JSON object with two arrays:
       "description": "Kael carries the sword Dawnfang.",
       "properties": {}
     }
-  ]
+  ],
+  "retracted_relationships": []
 }
 ```
 
@@ -200,7 +217,8 @@ A structured JSON object with two arrays:
 ```json
 {
   "entities": [],
-  "relationships": []
+  "relationships": [],
+  "retracted_relationships": []
 }
 ```
 

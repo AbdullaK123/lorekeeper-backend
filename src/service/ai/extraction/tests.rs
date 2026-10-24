@@ -175,3 +175,104 @@ fn merging_twice_gives_the_same_result_as_once() {
     assert_eq!(twice.kind, once.kind);
     assert_eq!(twice.properties, once.properties);
 }
+
+// --- resolve_existing: the duplicate safety net ---
+
+fn saved(id: &str, name: &str, aliases: &[&str]) -> Entity {
+    Entity {
+        id: id.into(),
+        world_id: "world-1".into(),
+        name: name.into(),
+        name_key: name.to_lowercase(),
+        aliases: aliases.iter().map(|a| a.to_string()).collect(),
+        kind: vec!["character".into()],
+        description: String::new(),
+        properties: HashMap::new(),
+    }
+}
+
+fn new_entity(name: &str, aliases: &[&str]) -> ExtractedEntity {
+    ExtractedEntity {
+        name: name.into(),
+        aliases: aliases.iter().map(|a| a.to_string()).collect(),
+        kind: vec!["character".into()],
+        description: String::new(),
+        properties: HashMap::new(),
+        existing_id: None,
+    }
+}
+
+#[test]
+fn short_name_matches_a_saved_alias() {
+    let candidates = vec![saved("t1", "Teodor Kost", &["Teodor"])];
+    let mut e = new_entity("Teodor", &[]);
+
+    ExtractionService::resolve_existing(&mut e, &candidates);
+
+    assert_eq!(e.existing_id.as_deref(), Some("t1"));
+}
+
+#[test]
+fn new_alias_matches_a_saved_name() {
+    let candidates = vec![saved("t1", "Teodor", &[])];
+    let mut e = new_entity("Teodor Kost", &["Teodor"]);
+
+    ExtractionService::resolve_existing(&mut e, &candidates);
+
+    assert_eq!(e.existing_id.as_deref(), Some("t1"));
+}
+
+#[test]
+fn matching_ignores_case_and_spaces() {
+    let candidates = vec![saved("t1", "Teodor Kost", &["Teodor"])];
+    let mut e = new_entity("  teodor ", &[]);
+
+    ExtractionService::resolve_existing(&mut e, &candidates);
+
+    assert_eq!(e.existing_id.as_deref(), Some("t1"));
+}
+
+#[test]
+fn the_writers_form_is_kept_as_an_alias() {
+    let candidates = vec![saved("t1", "Teodor Kost", &["Teo"])];
+    let mut e = new_entity("Teodor", &["Teo"]);
+
+    ExtractionService::resolve_existing(&mut e, &candidates);
+
+    assert!(e.aliases.contains(&"Teodor".to_string()), "{:?}", e.aliases);
+}
+
+#[test]
+fn an_ambiguous_match_is_left_alone() {
+    let candidates = vec![
+        saved("a1", "Aurel Dask", &["the Captain"]),
+        saved("b1", "Bren Hollis", &["the Captain"]),
+    ];
+    let mut e = new_entity("the Captain", &[]);
+
+    ExtractionService::resolve_existing(&mut e, &candidates);
+
+    assert_eq!(e.existing_id, None);
+}
+
+#[test]
+fn no_match_stays_new() {
+    let candidates = vec![saved("t1", "Teodor Kost", &["Teodor"])];
+    let mut e = new_entity("Mira Kost", &[]);
+
+    ExtractionService::resolve_existing(&mut e, &candidates);
+
+    assert_eq!(e.existing_id, None);
+    assert!(e.aliases.is_empty());
+}
+
+#[test]
+fn an_id_the_extractor_already_set_is_kept() {
+    let candidates = vec![saved("t1", "Teodor Kost", &["Teodor"])];
+    let mut e = new_entity("Teodor", &[]);
+    e.existing_id = Some("other".into());
+
+    ExtractionService::resolve_existing(&mut e, &candidates);
+
+    assert_eq!(e.existing_id.as_deref(), Some("other"));
+}

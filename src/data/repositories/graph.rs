@@ -650,4 +650,38 @@ impl GraphRepository {
             .await?;
         Ok(results)
     }
+
+    pub async fn delete_relationships_by_endpoints(
+        &self,
+        world_id: &str,
+        from_id: &str,
+        to_id: &str,
+        rel_type: &str,
+    ) -> Result<(), InfrastructureError> {
+        Self::validate_cypher_identifier(rel_type)?;
+
+        let rel = format!(":{}", rel_type);
+
+        let cypher = format!(
+            r#"
+                MATCH (a: Entity) -[r{}]-> (b: Entity) 
+                WHERE a.id = $from_id 
+                    AND b.id = $to_id 
+                    AND a.world_id = $world_id
+                    AND b.world_id = $world_id
+                DELETE r
+            "#,
+            rel
+        );
+
+        Ok(self
+            .graph
+            .run(
+                query(&cypher)
+                    .param("from_id", from_id)
+                    .param("to_id", to_id)
+                    .param("world_id", world_id),
+            )
+            .await?)
+    }
 }

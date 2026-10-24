@@ -76,7 +76,10 @@ impl ExtractionService {
         history: &[Message],
     ) -> Result<ExtractionReport, ServiceError> {
         let candidates = self.find_candidates(world_id).await?;
-        let extraction = self.extract(message, history, &candidates).await?;
+        let mut extraction = self.extract(message, history, &candidates).await?;
+        for extracted in &mut extraction.entities {
+            Self::resolve_existing(extracted, &candidates);
+        }
         let mut report = ExtractionReport::default();
 
         // One conflict check for the whole message, before anything is saved, so it can
@@ -103,17 +106,17 @@ impl ExtractionService {
             }
         }
 
-        let mut name_to_id: HashMap<String, String> = candidates
-            .iter()
-            .map(|e| (e.name_key.clone(), e.id.clone()))
-            .collect();
+        let mut name_to_id: HashMap<String, String> = HashMap::new();
+        for e in &candidates {
+            Self::index_names(&mut name_to_id, e);
+        }
 
         for extracted in extraction.entities {
             let applied = self
                 .apply_entity(world_id, extracted, &conflicting_fields)
                 .await?;
 
-            name_to_id.insert(applied.entity.name_key.clone(), applied.entity.id.clone());
+            Self::index_names(&mut name_to_id, &applied.entity);
 
             if applied.created {
                 report.entities_created += 1
@@ -131,6 +134,16 @@ impl ExtractionService {
             )
             .await?;
 
+        for rel in extraction.retracted_relationships {
+            if let (Some(a), Some(b)) = (
+                name_to_id.get(&name_key(&rel.from_name)),
+                name_to_id.get(&name_key(&rel.to_name)),
+            ) {
+                self.graph_repo
+                    .delete_relationships_by_endpoints(&world_id.to_string(), a, b, &rel.rel_type)
+                    .await?;
+            }
+        }
         report.relationships_written += relationships_written;
         report.relationships_skipped += relationships_skipped;
 
@@ -305,6 +318,45 @@ impl ExtractionService {
         let result = self.conflict_extractor.extract(user_prompt).await?;
         let conflicts = result.output.conflicts;
         Ok(conflicts)
+    }
+
+    /// Safety net for a match the extractor missed. If `extracted` has no `existing_id`
+    /// but exactly one saved entity shares a name or alias with it (compared by
+    /// `name_key`), link it to that entity, and keep the writer's form as an alias.
+    /// "Teodor" then updates "Teodor Kost" (alias "Teodor") instead of becoming a
+    /// second Teodor. Two or more matches are ambiguous, so it leaves those alone.
+    fn resolve_existing(extracted: &mut ExtractedEntity, candidates: &[Entity]) {
+        if extracted.existing_id.is_some() {
+            return;
+        }
+        let keys: HashSet<String> = std::iter::once(&extracted.name)
+            .chain(extracted.aliases.iter())
+            .map(|n| name_key(n))
+            .collect();
+        let mut matches = candidates.iter().filter(|c| {
+            std::iter::once(&c.name)
+                .chain(c.aliases.iter())
+                .any(|n| keys.contains(&name_key(n)))
+        });
+        let (Some(found), None) = (matches.next(), matches.next()) else {
+            return;
+        };
+        extracted.existing_id = Some(found.id.clone());
+        if name_key(&extracted.name) != found.name_key
+            && !extracted.aliases.contains(&extracted.name)
+        {
+            extracted.aliases.push(extracted.name.clone());
+        }
+    }
+
+    /// Adds an entity's name and every alias to `name_to_id`, so a relationship that
+    /// uses any of them finds the right entity. A name already taken keeps its first owner.
+    fn index_names(name_to_id: &mut HashMap<String, String>, entity: &Entity) {
+        for n in std::iter::once(&entity.name).chain(entity.aliases.iter()) {
+            name_to_id
+                .entry(name_key(n))
+                .or_insert_with(|| entity.id.clone());
+        }
     }
 
     /// Pure: combines the stored entity with new information, leaving conflicting

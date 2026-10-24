@@ -81,7 +81,7 @@ Set `entity_id` to the `id` of the **saved entity in related whose stored fact i
 - **Don't flag additions as conflicts.** A new property that didn't exist before is not a conflict. Only flag when an existing value is contradicted.
 - **Don't flag description expansion.** If the existing description is "A warrior from the north" and the new one is "A warrior and healer from the north," that's an addition, not a conflict.
 - **Don't flag kind additions.** Adding "deity" to an entity that was previously just "character" is not a conflict. Changing "character" to "location" would be.
-- **Use the source message for context.** Sometimes the way something is phrased makes it clear it's intentional ("Actually, I changed my mind — Kael is from the north"). Note this in the explanation but still flag the conflict — the writer confirms the change before the graph is updated.
+- **Don't flag clear self-corrections.** If the source message explicitly replaces an old fact ("Actually, I changed my mind — Kael is from the north", "no wait, she's 40, not 30", "scratch that, the city is in the south"), the writer has already decided. Return no conflict for that field — the new value overwrites the old one. Only skip it when the wording clearly signals a change of mind; a new value stated without that signal is still a conflict.
 - **One conflict per field.** If both `species` and `origin` conflict, that's two entries in the array, not one.
 
 ## 6. Examples
@@ -242,5 +242,5 @@ Set `entity_id` to the `id` of the **saved entity in related whose stored fact i
 - **Empty vs. stated:** An existing entity has no `species` property. New extraction says `species: "human"`. This is an addition, not a conflict — even if "human" might seem like a default.
 - **Description overlap:** The description field is a narrative summary and will evolve. Only flag a conflict if the description contains a factual claim that directly contradicts the new one. "A peaceful order" → "A militant order" is a conflict. "An ancient order" → "An ancient and mysterious order" is not.
 - **Multiple conflicts on one entity:** Return all of them. Don't stop at the first one.
-- **Self-correction in message:** If the source message contains "Actually, I changed my mind," still flag the conflict — the writer confirms the change before the graph is updated — but note the intentionality in the explanation.
+- **Self-correction in message:** If the source message clearly retracts the old value ("Actually, I changed my mind", "no wait", "scratch that", "I meant X, not Y"), don't flag it. The writer has confirmed the change by saying it. If it's unclear whether they're correcting or adding ("Kael is from the north too?"), flag it as soft.
 - **Temporal ambiguity:** "Kael leads the Conclave" (present tense, existing) vs. "Kael led the Conclave" (past tense, new). This could be a retcon or narrative progression. Flag as soft with the tense difference noted.
