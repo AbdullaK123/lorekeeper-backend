@@ -24,9 +24,6 @@ pub struct AppState {
     pub auth_service: AuthService,
     pub world_service: WorldService,
     pub conversation_service: ConversationService,
-    pub extraction_service: ExtractionService,
-    pub retrieval_service: RetrievalService,
-    pub agent_factory: ChatAgentFactory,
 }
 
 pub async fn create_app() -> Router {
@@ -39,8 +36,7 @@ pub async fn create_app() -> Router {
     let world_repo = WorldRepository::new(pool.clone());
     let conversation_repo = ConversationRepository::new(pool.clone());
     let auth_service = AuthService::new(user_repo);
-    let world_service = WorldService::new(world_repo);
-    let conversation_service = ConversationService::new(conversation_repo.clone());
+    let world_service = WorldService::new(world_repo.clone());
 
     graph_repo
         .ensure_constraints()
@@ -79,15 +75,20 @@ pub async fn create_app() -> Router {
         retrieval_service.clone(),
     );
 
+    let conversation_service = ConversationService::new(
+        conversation_repo,
+        world_repo,
+        extraction_service,
+        retrieval_service,
+        agent_factory,
+    );
+
     let app_state = AppState {
         pool: pool.clone(),
         graph,
         auth_service,
         world_service,
         conversation_service,
-        extraction_service,
-        retrieval_service,
-        agent_factory,
     };
 
     let app = Router::new()

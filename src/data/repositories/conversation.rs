@@ -1,28 +1,26 @@
+use crate::data::ConversationRow;
 use crate::data::Message;
-use sqlx::PgPool;
-use uuid::Uuid;
-use sqlx::types::Json;
-use crate::data::{ConversationRow};
 use crate::infrastructure::InfrastructureError;
 use serde_json;
+use sqlx::PgPool;
+use sqlx::types::Json;
+use uuid::Uuid;
 
-#[derive(Clone,Debug)]
+#[derive(Clone, Debug)]
 pub struct ConversationRepository {
-    pool: PgPool
+    pool: PgPool,
 }
 
 impl ConversationRepository {
     pub fn new(pool: PgPool) -> Self {
-        Self {
-            pool
-        }
+        Self { pool }
     }
 
     pub async fn create(
         &self,
         world_id: Uuid,
         user_id: Uuid,
-        title: String
+        title: String,
     ) -> Result<ConversationRow, InfrastructureError> {
         let result = sqlx::query_as!(
             ConversationRow,
@@ -38,7 +36,9 @@ impl ConversationRepository {
             world_id,
             user_id,
             title
-        ).fetch_one(&self.pool).await?;
+        )
+        .fetch_one(&self.pool)
+        .await?;
         Ok(result)
     }
 
@@ -46,7 +46,7 @@ impl ConversationRepository {
         &self,
         id: Uuid,
         user_id: Uuid,
-        new_title: String
+        new_title: String,
     ) -> Result<Option<ConversationRow>, InfrastructureError> {
         let result = sqlx::query_as!(
             ConversationRow,
@@ -63,17 +63,19 @@ impl ConversationRepository {
             new_title,
             id,
             user_id
-        ).fetch_optional(&self.pool).await?;
+        )
+        .fetch_optional(&self.pool)
+        .await?;
         Ok(result)
     }
 
-    pub async fn append_message(
+    pub async fn append_messages(
         &self,
         id: Uuid,
         user_id: Uuid,
-        message: Message
+        messages: &[Message],
     ) -> Result<Option<ConversationRow>, InfrastructureError> {
-        let message_json = serde_json::json!([message]);
+        let message_json = serde_json::json!(messages);
         let result = sqlx::query_as!(
             ConversationRow,
             r#"
@@ -91,14 +93,16 @@ impl ConversationRepository {
             message_json,
             id,
             user_id
-        ).fetch_optional(&self.pool).await?;
+        )
+        .fetch_optional(&self.pool)
+        .await?;
         Ok(result)
     }
 
     pub async fn get_by_id(
         &self,
         id: Uuid,
-        user_id: Uuid
+        user_id: Uuid,
     ) -> Result<Option<ConversationRow>, InfrastructureError> {
         let result = sqlx::query_as!(
             ConversationRow,
@@ -116,14 +120,16 @@ impl ConversationRepository {
             "#,
             id,
             user_id
-        ).fetch_optional(&self.pool).await?;
+        )
+        .fetch_optional(&self.pool)
+        .await?;
         Ok(result)
     }
 
     pub async fn get_by_world_id(
         &self,
         world_id: Uuid,
-        user_id: Uuid
+        user_id: Uuid,
     ) -> Result<Vec<ConversationRow>, InfrastructureError> {
         let result = sqlx::query_as!(
             ConversationRow,
@@ -141,24 +147,22 @@ impl ConversationRepository {
             "#,
             world_id,
             user_id
-        ).fetch_all(&self.pool).await?;
+        )
+        .fetch_all(&self.pool)
+        .await?;
         Ok(result)
     }
 
-    pub async fn delete(
-        &self,
-        id: Uuid,
-        user_id: Uuid
-    ) -> Result<bool, InfrastructureError> {
+    pub async fn delete(&self, id: Uuid, user_id: Uuid) -> Result<bool, InfrastructureError> {
         let result = sqlx::query!(
             r#"
             DELETE FROM conversations WHERE id=$1 AND user_id=$2
             "#,
             id,
             user_id
-        ).execute(&self.pool).await?;
+        )
+        .execute(&self.pool)
+        .await?;
         Ok(result.rows_affected() > 0)
     }
-
-
 }

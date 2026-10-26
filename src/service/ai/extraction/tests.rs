@@ -276,3 +276,52 @@ fn an_id_the_extractor_already_set_is_kept() {
 
     assert_eq!(e.existing_id.as_deref(), Some("other"));
 }
+
+#[test]
+fn shared_alias_must_not_route_relationships_to_an_arbitrary_entity() {
+    let mut index = HashMap::new();
+    ExtractionService::index_names(&mut index, &saved("a", "Aurel", &["Captain"]));
+    ExtractionService::index_names(&mut index, &saved("b", "Bren", &["Captain"]));
+    assert!(!index.contains_key("captain"),
+        "A shared alias silently attaches relationships to whichever entity loads first");
+}
+
+#[test]
+fn an_alias_must_not_shadow_another_entitys_canonical_name() {
+    let mut index = HashMap::new();
+    ExtractionService::index_names(&mut index, &saved("person", "Aurel", &["Meridian"]));
+    ExtractionService::index_names(&mut index, &saved("city", "Meridian", &[]));
+    assert_eq!(index.get("meridian").map(String::as_str), Some("city"),
+        "A person's alias steals relationships explicitly naming the city");
+}
+
+#[test]
+fn merge_preserves_nested_json_values() {
+    let mut new = update();
+    let value = json!({"seasons": ["winter", "summer"], "active": true, "count": 0});
+    new.properties.insert("calendar".into(), value.clone());
+    let merged = merge(&kael(), &new, &[]);
+    assert_eq!(merged.properties.get("calendar"), Some(&value),
+        "Structured lore is corrupted while merging an entity");
+}
+
+#[test]
+fn conflicting_nested_property_preserves_the_entire_stored_value() {
+    let mut existing = kael();
+    existing.properties.insert("calendar".into(), json!({"months": 12}));
+    let mut new = update();
+    new.properties.insert("calendar".into(), json!({"months": 9}));
+    let merged = merge(&existing, &new, &["properties.calendar"]);
+    assert_eq!(merged.properties["calendar"], json!({"months": 12}),
+        "A nested property contradiction overwrites accepted canon");
+}
+
+#[test]
+fn repeated_aliases_in_one_extraction_do_not_accumulate_on_retry() {
+    let mut new = update();
+    new.aliases = vec!["Ashborn".into(); 50];
+    let once = merge(&kael(), &new, &[]);
+    let twice = merge(&once, &new, &[]);
+    assert_eq!(twice.aliases, vec!["the Kid", "Ashborn"],
+        "Repeated extraction aliases expand storage every time a job retries");
+}
