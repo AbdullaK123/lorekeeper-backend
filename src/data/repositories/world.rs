@@ -1,36 +1,30 @@
-use sqlx::PgPool;
-use uuid::Uuid;
 use crate::data::World;
 use crate::infrastructure::InfrastructureError;
+use chrono::Utc;
+use sqlx::PgPool;
+use uuid::Uuid;
 
 #[derive(Clone, Debug)]
 pub struct WorldRepository {
-    pool: PgPool
+    pool: PgPool,
 }
 
 impl WorldRepository {
     pub fn new(pool: PgPool) -> Self {
-        Self {
-            pool
-        }
+        Self { pool }
     }
 
-    pub async fn get(
-        &self,
-        user_id: Uuid
-    ) -> Result<Vec<World>, InfrastructureError> {
-        let result = sqlx::query_as!(
-            World,
-            "SELECT * FROM worlds WHERE user_id=$1",
-            user_id
-        ).fetch_all(&self.pool).await?;
+    pub async fn get(&self, user_id: Uuid) -> Result<Vec<World>, InfrastructureError> {
+        let result = sqlx::query_as!(World, "SELECT * FROM worlds WHERE user_id=$1", user_id)
+            .fetch_all(&self.pool)
+            .await?;
         Ok(result)
     }
 
     pub async fn get_by_id(
         &self,
         id: Uuid,
-        user_id: Uuid
+        user_id: Uuid,
     ) -> Result<Option<World>, InfrastructureError> {
         let result = sqlx::query_as!(
             World,
@@ -39,7 +33,9 @@ impl WorldRepository {
             ",
             id,
             user_id
-        ).fetch_optional(&self.pool).await?;
+        )
+        .fetch_optional(&self.pool)
+        .await?;
         Ok(result)
     }
 
@@ -47,7 +43,7 @@ impl WorldRepository {
         &self,
         name: String,
         description: String,
-        user_id: Uuid
+        user_id: Uuid,
     ) -> Result<World, InfrastructureError> {
         let result = sqlx::query_as!(
             World,
@@ -59,7 +55,9 @@ impl WorldRepository {
             user_id,
             name,
             description
-        ).fetch_one(&self.pool).await?;
+        )
+        .fetch_one(&self.pool)
+        .await?;
         Ok(result)
     }
 
@@ -68,7 +66,7 @@ impl WorldRepository {
         id: Uuid,
         user_id: Uuid,
         updated_name: Option<String>,
-        updated_description: Option<String>
+        updated_description: Option<String>,
     ) -> Result<Option<World>, InfrastructureError> {
         let result = sqlx::query_as!(
             World,
@@ -85,15 +83,15 @@ impl WorldRepository {
             updated_description,
             id,
             user_id
-        ).fetch_optional(&self.pool).await?;
+        )
+        .fetch_optional(&self.pool)
+        .await?;
         Ok(result)
     }
 
-    pub async fn delete(
-        &self,
-        id: Uuid,
-        user_id: Uuid
-    ) -> Result<bool, InfrastructureError> {
+    pub async fn delete(&self, id: Uuid, user_id: Uuid) -> Result<bool, InfrastructureError> {
+        let mut tx = self.pool.begin().await?;
+
         let result = sqlx::query!(
             "
             DELETE FROM worlds
@@ -101,7 +99,25 @@ impl WorldRepository {
             ",
             id,
             user_id
-        ).execute(&self.pool).await?;
+        )
+        .execute(&mut *tx)
+        .await?;
+
+        if result.rows_affected() > 0 {
+            sqlx::query!(
+                "
+                INSERT INTO world_cleanup_jobs (world_id, created_at)
+                VALUES ($1, $2)
+                ",
+                id,
+                Utc::now()
+            )
+            .execute(&mut *tx)
+            .await?;
+        }
+
+        tx.commit().await?;
+
         Ok(result.rows_affected() > 0)
     }
 }

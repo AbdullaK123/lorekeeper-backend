@@ -6,7 +6,7 @@ use serde_json::json;
 use tower_sessions::Session;
 use crate::app::{AppState, UserId, ValidatedJson};
 use crate::app::errors::AppError;
-use crate::data::{LoginRequest, SignupRequest, User, UserResponse};
+use crate::data::{LoginRequest, SignupRequest, UserResponse};
 
 async fn login(
     State(ctx) : State<AppState>,

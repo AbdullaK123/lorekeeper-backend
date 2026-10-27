@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n                    DELETE FROM world_cleanup_jobs WHERE world_id=$1\n                    ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Uuid"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "17f28577f4103e3549a753ddf0ce4166cbf1598d8d936b15e3dd0f0de3977480"
+}

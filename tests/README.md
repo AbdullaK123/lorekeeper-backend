@@ -24,13 +24,14 @@ source .env
 set +a
 export DATABASE_URL=postgresql://dev:password@localhost:5433/lorekeeper_adversarial
 sqlx migrate run
-SQLX_OFFLINE=true QA_AI=1 cargo test --offline --test adversarial_live -- --ignored --nocapture
+SQLX_OFFLINE=true cargo test --offline --test adversarial_live -- --ignored --nocapture --test-threads=1
 ```
 
 The test server uses port 18000. The existing server stays running.
 The harness refuses another database name. Fault injection uses a trigger scoped to one test conversation.
 The trigger is removed in `finally`. Do not interrupt the test during fault injection.
-AI tests make paid requests. Omit `QA_AI=1` to skip them.
+AI tests make paid external requests. Set `QA_AI=1` only when those calls are authorized.
+The default command skips them. Run live tests serially because the scheduler processes the shared QA job table.
 Set `QA_TESTS` to space-separated Python test names to select specific checks.
 For example, use `QA_TESTS='ApiTests.test_foreign_world_conversation_creation_is_denied'`.
 Graph tests use the local Memgraph database with fresh world IDs.
@@ -49,6 +50,8 @@ Coverage includes:
 - Concurrent updates to different world fields.
 - Forty concurrent message appends without lost writes.
 - Real graph retries, world isolation, injection attempts, deletion, and structured data.
+- Scheduled world cleanup, including conflicts, job removal, and preservation of another world.
+- Retry after a rejected job removal, without blocking other cleanup jobs.
 - Ambiguous aliases, lost search context, and ranking with duplicate rows.
 
 The duplicate-row ranking test checks defensive behavior. Current graph queries may return only unique rows.

@@ -1,5 +1,5 @@
 use crate::infrastructure::InfrastructureError;
-use rig::{ProviderError, completion::StructuredOutputError};
+use rig::{ProviderError, completion::StructuredOutputError, run::PromptError};
 use thiserror::Error;
 
 #[derive(Error, Debug)]
@@ -26,6 +26,12 @@ impl From<StructuredOutputError> for ServiceError {
 
 impl From<ProviderError> for ServiceError {
     fn from(value: ProviderError) -> Self {
+        Self::InternalError(value.to_string())
+    }
+}
+
+impl From<PromptError> for ServiceError {
+    fn from(value: PromptError) -> Self {
         Self::InternalError(value.to_string())
     }
 }

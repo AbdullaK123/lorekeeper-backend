@@ -1,5 +1,5 @@
 use tokio;
-use crate::data::{UserRepository, User, LoginRequest, UserResponse, SignupRequest};
+use crate::data::{UserRepository, User, UserResponse, SignupRequest};
 use argon2::{Argon2, PasswordHash, PasswordHasher, PasswordVerifier};
 use uuid::Uuid;
 use crate::service::ServiceError;
@@ -32,11 +32,11 @@ impl AuthService {
         let user = self.user_repo.get_user_by_email(email)
             .await?;
         if user.is_none() {
-            return Err(ServiceError::NotFound("A user with that email does not exist".to_string()))
+            return Err(ServiceError::AuthError)
         }
         let unwrapped_user = user.unwrap();
         if unwrapped_user.password_hash.is_none() {
-            return Err(ServiceError::NotFound("Password hash not found. OAuth accounts should not use this method.".to_string()))
+            return Err(ServiceError::AuthError)
         }
         let password_hash = PasswordHash::new(&unwrapped_user.password_hash.clone().unwrap())
             .map_err(|e| ServiceError::InternalError(e.to_string()))?;

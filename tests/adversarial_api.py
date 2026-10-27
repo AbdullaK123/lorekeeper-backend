@@ -119,6 +119,34 @@ class ApiTests(unittest.TestCase):
         self.assertEqual(request(self.a, "GET", f"/conversation/{c}").status_code, 404,
                          "World deletion leaves accessible conversation records")
 
+    def test_scheduled_cleanup_removes_only_the_deleted_world(self):
+        deleted = world(self.a, "Scheduled cleanup QA")
+        kept = world(self.a, "Keep this QA world")
+        conversation(self.a, deleted)
+        try:
+            cypher(f"""CREATE (e:Entity {{world_id: '{deleted}', name: 'QA entity'}}),
+            (c:Conflict {{world_id: '{deleted}'}}), (h:Conversation {{world_id: '{deleted}'}}),
+            (e)-[:HAS_CONFLICT]->(c), (e)-[:SOURCE]->(h),
+            (:Entity {{world_id: '{kept}', name: 'QA survivor'}})""")
+            r = request(self.a, "DELETE", f"/world/{deleted}")
+            self.assertEqual(r.status_code, 204, "World deletion fails before it can queue graph cleanup")
+            deadline = time.monotonic() + 20
+            nodes = jobs = None
+            while time.monotonic() < deadline:
+                snapshot = cypher(f"MATCH (n {{world_id: '{deleted}'}}) RETURN count(n) AS remaining")
+                nodes = int(snapshot.strip().splitlines()[-1].strip('"'))
+                jobs = int(sql(f"SELECT count(*) FROM world_cleanup_jobs WHERE world_id = '{deleted}'"))
+                if nodes == 0 and jobs == 0:
+                    break
+                time.sleep(.25)
+            self.assertEqual(nodes, 0, "Scheduled cleanup leaves deleted-world graph nodes behind")
+            self.assertEqual(jobs, 0, "Successful graph cleanup never removes its pending job")
+            survivor = cypher(f"MATCH (n {{world_id: '{kept}'}}) RETURN count(n) AS remaining")
+            self.assertEqual(int(survivor.strip().splitlines()[-1].strip('"')), 1,
+                             "Cleanup destroys graph data belonging to a different world")
+        finally:
+            cypher(f"MATCH (n) WHERE n.world_id IN ['{deleted}', '{kept}'] DETACH DELETE n")
+
     def test_blank_world_name_is_rejected(self):
         for name in ("", " \t\n", "\u2003"):
             with self.subTest(name=repr(name)):
@@ -190,6 +218,8 @@ class ApiTests(unittest.TestCase):
             self.assertEqual(saved, [], "A failed turn leaves partial chat history and makes retry unsafe")
             self.assertFalse("finalResponse" in r.text,
                              "The stream reports success even though the completed turn was not saved")
+            self.assertIn("event: error", r.text,
+                          "A failed save silently closes the stream instead of notifying the client")
         finally:
             sql(f"DROP TRIGGER {function} ON conversations; DROP FUNCTION {function}();")
 

@@ -1,9 +1,6 @@
-use rig::{Agent, AgentBuilder, DynModel, operation::Completion, providers::openrouter};
+use rig::{Agent, AgentBuilder, DynModel, operation::Completion};
 
-use crate::{
-    infrastructure::load_prompt,
-    service::{RetrievalService, SearchWorld},
-};
+use crate::service::{RetrievalService, SearchWorld};
 
 #[derive(Clone)]
 pub struct ChatAgentFactory {

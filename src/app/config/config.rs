@@ -48,7 +48,7 @@ impl Settings {
         create_cors_layer(
             vec![AUTHORIZATION, CONTENT_TYPE, ACCEPT],
             parsed_origins,
-            vec![Method::GET, Method::POST, Method::PUT, Method::DELETE, Method::OPTIONS],
+            vec![Method::GET, Method::POST, Method::PUT, Method::PATCH, Method::DELETE, Method::OPTIONS],
             true
         )
     }

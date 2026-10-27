@@ -1,7 +1,7 @@
 -- Add migration script here
 CREATE TABLE IF NOT EXISTS conversations (
     id UUID PRIMARY KEY DEFAULT uuidv7(),
-    world_id UUID NOT NULL REFERENCES worlds(id),
+    world_id UUID NOT NULL REFERENCES worlds(id) ON DELETE CASCADE,
     user_id UUID NOT NULL REFERENCES users(id),
     title TEXT NOT NULL DEFAULT '',
     messages JSONB NOT NULL DEFAULT '[]'::jsonb,

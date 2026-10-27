@@ -684,4 +684,19 @@ impl GraphRepository {
             )
             .await?)
     }
+
+    pub async fn delete_graph(&self, world_id: &str) -> Result<(), InfrastructureError> {
+        Ok(self
+            .graph
+            .run(
+                query(
+                    "
+                    MATCH (e { world_id: $world_id })
+                    DETACH DELETE e
+                ",
+                )
+                .param("world_id", world_id),
+            )
+            .await?)
+    }
 }

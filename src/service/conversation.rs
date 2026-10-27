@@ -8,7 +8,6 @@ use crate::service::{
 use chrono::Utc;
 use futures::{Stream, StreamExt};
 use rig::agent::MultiTurnStreamItem;
-use rig::completion::PromptError;
 use rig::message::Message as RigMessage;
 use uuid::Uuid;
 
@@ -109,7 +108,7 @@ impl ConversationService {
         user_id: Uuid,
         content: String,
     ) -> Result<
-        impl Stream<Item = Result<MultiTurnStreamItem, PromptError>> + Send + 'static + use<>,
+        impl Stream<Item = Result<MultiTurnStreamItem, ServiceError>> + Send + 'static + use<>,
         ServiceError,
     > {
         let conversation = self.get_conversation(id, user_id).await?;
@@ -153,6 +152,8 @@ impl ConversationService {
                             let messages = vec![message.clone(), reply];
                             if let Err(e) = svc.append_messages(id, user_id, &messages).await {
                                 tracing::error!("saving chat turn failed: {e}");
+                                yield Err(e.into());
+                                break;
                             }
                             let extraction = service.extraction_service.clone();
                             let world_id = conversation.world_id;
@@ -167,7 +168,7 @@ impl ConversationService {
                         yield Ok(item)
                     },
                     Err(e) => {
-                        yield Err(e);
+                        yield Err(e.into());
                         break;
                     }
                 }

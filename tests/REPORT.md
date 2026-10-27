@@ -1,5 +1,38 @@
 # Backend test findings — 2026-10-26
 
+## Latest full run — 2026-10-27
+
+| Suite | Pass | Fail | Skipped |
+|---|---:|---:|---:|
+| Pure logic | 32 | 5 | 0 |
+| Live API | 22 | 2 | 0 |
+| Live database and worker checks | 11 | 0 | 0 |
+| Total distinct tests | 65 | 7 | 0 |
+
+The scheduled cleanup test passes. It removes entities, conflicts, conversation nodes, attached edges, and the cleanup job.
+It preserves another world's graph data.
+A second new test rejects one Postgres job removal, verifies other jobs complete, then verifies retry against the empty graph succeeds.
+All three deletion transaction tests also pass.
+
+Remaining failing tests:
+
+- Shared aliases route relationships to an arbitrary entity.
+- An alias shadows another entity's canonical name.
+- Retrieval formatting drops neighbor properties.
+- Retrieval formatting drops relationship descriptions.
+- Duplicate rows inflate ranking. This remains a defensive test.
+- Duplicate signup returns 500 instead of 409.
+- Blank world names are accepted. Rejection remains a proposed product rule.
+
+Python reports four API failure entries across two test methods because blank-name checks use three inputs.
+Automatic approval review initially blocks the paid AI checks. The user then explicitly approves those calls.
+All five AI checks pass in a separate run: save failure, normal chat persistence, private-lore isolation, extraction, and canon preservation.
+The Rust API harness counts as one wrapper test; the table counts its Python tests individually.
+Test data and the isolated database are removed afterward.
+This run does not test extraction racing with world deletion or operating-system shutdown signals.
+
+The sections below preserve earlier results and verification history.
+
 Tests use real Postgres, Memgraph, and OpenRouter calls. Production code stays unchanged.
 Postgres fixtures use a separate `lorekeeper_adversarial` database.
 
@@ -85,3 +118,33 @@ Extraction also remains scheduled after a failed save. This behavior needs a sep
 
 The failed-save assertion now rejects any false success, including when zero messages save.
 Test fixtures are removed after verification.
+
+## Mechanical fixes — 2026-10-27
+
+- CORS now allows PATCH, matching the existing world update route.
+- Missing accounts and accounts without a password hash return the same authentication error as wrong passwords.
+- Removed unused imports and unused re-exports of empty tool modules.
+
+Three targeted live checks pass: browser PATCH preflight, matching login error responses, and logout invalidation.
+Successful signup and login also pass during test setup.
+These checks do not assess login timing differences.
+The isolated test database is removed after verification.
+
+## World deletion transaction — 2026-10-27
+
+Three repository tests pass against real Postgres:
+
+- Owned-world deletion commits a cleanup job and removes its conversations.
+- A foreign user cannot delete the world or queue its cleanup.
+- A rejected job INSERT rolls back the world deletion and restores its conversations.
+
+The rollback test uses a pre-existing job to trigger a real primary-key violation.
+These tests cover the Postgres transaction. The Memgraph worker remains pending.
+
+## Chat save failure fix — 2026-10-27
+
+The stream now yields `ServiceError` for both persistence and AI failures.
+A failed batch save yields an error and stops before extraction or `finalResponse`.
+Two targeted live checks pass: injected save failure and normal chat persistence.
+The failure check verifies empty history, no success event, and an explicit stream error event.
+The isolated test database is removed after verification.

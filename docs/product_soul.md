@@ -57,3 +57,23 @@ You want one place — not twelve docs and a wiki and a spreadsheet — where yo
 You want to feel like the god of your tiny little universe.
 
 That's Lorekeeper.
+
+---
+
+## A service writers can trust
+
+Private lore needs dependable service, not just useful answers.
+Writers need secure sign-in, account recovery, and clear control over their data.
+They can export their worlds and request account deletion.
+We explain retention and external AI processing before asking for trust.
+
+Paid plans show prices, included usage, renewal rules, and cancellation terms clearly.
+Limits cover chat and background research without surprise spending.
+Payment failures never silently erase a writer’s world.
+Essential emails explain account actions and important service changes.
+
+The service needs tested backups, failure alerts, safe releases, and a clear support path.
+These responsibilities support the product promise.
+They do not change who owns the canon: the writer.
+
+See the [user stories](user_stories.md), [lifecycle design](design.md), and [project plan](project_plan.md) for delivery scope.

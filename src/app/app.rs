@@ -1,4 +1,5 @@
 use crate::app::{create_auth_controller, create_conversation_controller, create_world_controller};
+use crate::cron_worker::start_scheduler;
 use crate::data::{
     ConflictExtraction, ConversationRepository, GraphExtraction, GraphRepository, UserRepository,
     WorldRepository,
@@ -16,6 +17,7 @@ use rig::extractor::ExtractorBuilder;
 use rig::operation::Embedding;
 use rig::providers::openrouter;
 use sqlx::postgres::PgPool;
+use tokio_cron_scheduler::JobScheduler;
 
 #[derive(Clone)]
 pub struct AppState {
@@ -26,7 +28,7 @@ pub struct AppState {
     pub conversation_service: ConversationService,
 }
 
-pub async fn create_app() -> Router {
+pub async fn create_app() -> (Router, JobScheduler) {
     let settings = load_settings();
     let config = load_config();
     let pool = create_pool(&settings, &config.db).await;
@@ -91,6 +93,10 @@ pub async fn create_app() -> Router {
         conversation_service,
     };
 
+    let scheduler = start_scheduler(pool.clone(), &graph_repo)
+        .await
+        .expect("Failed to start the world cleanup scheduler");
+
     let app = Router::new()
         .route("/health", get(|| async { "ok" }))
         .nest("/auth", create_auth_controller())
@@ -101,5 +107,5 @@ pub async fn create_app() -> Router {
         .layer(settings.cors_layer())
         .with_state(app_state);
 
-    app
+    (app, scheduler)
 }
