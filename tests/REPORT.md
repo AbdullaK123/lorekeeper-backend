@@ -214,3 +214,23 @@ All entity, conflict, and lore relationship source audits pass.
 Hypothetical and recall turns leave the graph unchanged.
 
 See [the result, transcript, and graph](artifacts/smoke-2026-10-29-10turns/summary.md).
+
+## Retrieval context formatting — 2026-10-29
+
+`format_hits` now includes neighbor properties, relationship descriptions, and relationship properties.
+Existing direction arrows and empty-result behavior remain unchanged.
+Both previously failing context-preservation tests now pass.
+The pure Rust suite reports 11 passes and one existing duplicate-row ranking failure.
+No model calls run for this change.
+
+
+## Fresh-conversation retrieval — 2026-10-29
+
+Five separate empty conversations query the retained Ardent Reach world without original history.
+Four reviewed answers pass: corrected/minor facts, relationship conditions, shared titles, and unknown facts.
+One fails: the assistant reports no unresolved contradictions although two unresolved conflicts exist in the graph.
+Search only returns entities and entity neighbors; chat has no tool to read saved conflicts.
+All requests finish without reported errors, and before/after graph snapshots match.
+The successful harness exit reflects transport completion, not five semantic passes.
+
+See [the evidence and full answers](artifacts/fresh-retrieval-2026-10-29/summary.md).

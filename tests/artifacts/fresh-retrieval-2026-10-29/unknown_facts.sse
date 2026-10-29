@@ -1,0 +1,270 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Providing information on lore**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" base"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" my"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" answer"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" solely"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" on"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" provided"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" so"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" no"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" searching"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" necessary"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"’ll"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" mention"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" population"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" water"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" quantity"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" are"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" not"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" specified"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" which"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" an"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" important"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" detail"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"’s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" well"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"-established"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" aqu"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"educt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" was"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" destroyed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" there"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" seems"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" be"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" no"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" alternative"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" However"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" won't"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" infer"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" any"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" current"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" amounts"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" since"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" wouldn't"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" be"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" accurate"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I'll"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" stick"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" what's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" stated"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ensure"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" user"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" gets"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" clear"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" information"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"The"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" lore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" doesn"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"’t"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" specify"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" S"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"able"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"cross"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"’s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" population"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" how"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" much"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" water"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" remains"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" reservoir"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" does"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" establish"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Glass"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Aqu"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"educt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" was"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" destroyed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" "}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"204"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" hasn"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"’t"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" been"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" rebuilt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" with"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" no"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" alternate"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" aqu"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"educt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" bypass"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"The lore doesn’t specify Sablecross’s population or how much water remains in the reservoir. It does establish that the Glass Aqueduct was destroyed in 204 and hasn’t been rebuilt, with no alternate aqueduct or bypass."}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Providing information on lore**\n\nI need to base my answer solely on the provided lore, so no searching is necessary. I’ll mention that the population and water quantity are not specified, which is an important detail. It’s well-established that the aqueduct was destroyed, and there seems to be no alternative. However, I won't infer any current amounts since that wouldn't be accurate. I'll stick to what's stated and ensure the user gets clear information.","native":{"item":{"reasoning":"**Providing information on lore**\n\nI need to base my answer solely on the provided lore, so no searching is necessary. I’ll mention that the population and water quantity are not specified, which is an important detail. It’s well-established that the aqueduct was destroyed, and there seems to be no alternative. However, I won't infer any current amounts since that wouldn't be accurate. I'll stick to what's stated and ensure the user gets clear information.","reasoning_details":[{"type":"reasoning.summary","summary":"**Providing information on lore**\n\nI need to base my answer solely on the provided lore, so no searching is necessary. I’ll mention that the population and water quantity are not specified, which is an important detail. It’s well-established that the aqueduct was destroyed, and there seems to be no alternative. However, I won't infer any current amounts since that wouldn't be accurate. I'll stick to what's stated and ensure the user gets clear information.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zX-C_fs581IgptfP3DDlzYVRUJpkDG8WLnf0wCTxjd64RfJkgDjNKWQLfLZ44hmOxUtgltOwc5dDznKcfe0azWFgT4a6BBKEFctgM4FB63C9_FmnhDrSKWq9n7mtN72733S-BwnCCh_jQS3EixKbw0ouQR5alqR0BGTq0NyTnjeLkOKjvwNMUiGRbqHsV1EMIxeDNb4GGFTwogMinDWXU1cjZJfhp2L1c6Bjl1KIY95yzO0z0H2BBR3ZxlioRjkjAEBci5J7HN4voLoJFVZvkQO09L88MdK0mZ_eClWdrSgg2c7Hlm6ZkQFSpe46pBndBOQ1I41YccuimwwQhfdKK-apFUrNlAgrdAEKrhEWkfODX_yu5fcLI9X-ERJGd2V8vp48RoQVl1bW3VbM8LN0xQj8KOObjuLns5ilu_OSB1-ExLtgsAOEMIfXn1YJMmOfeqmiYnMIOH8B4g8jiFcsmaZIrOeQpGASG9pG6r90MIs8rRWa-CRv1K3KMiaZilhCW0cTtnFbvtSeYrYmnApUhV-fAcDSDzY8_QXKlGmmabwQFyCuPr1KuwxmIE_hZ8rzVPwHHIrBDdsgSzOMJKvuWFh5OAt0GxoDtSWv2NnYEu8DzeoNWzwxURAvEhcy9CsCBCSltNgWZGq7IEhxlmp29H05t-a52d03FDMfJwpEinFE-WFWuZEclBwh_Npc51iOwq8RnSP0zjakXopT98lP8bSb89btZogWzjh38FYi9l-p0OIWl7EToDonSUCK0XQju490sw702FOSLFVXZE6dprkQCzD9RLKbJ-7bIi0-gtiMt6RAKykNqouepMDzS849wj8ks9yrv6_XP7tbeyd1XtGx0cpk8TW9S9d8p_S5S2InaVb6wDzmvHPIXe1UjkJuZfrQIvUbvw7oKVHpRqyRwWE2WGv2nxTMtgAK0wRtm0M0c73WefzU-sSZLDZbjmUDgF--cBSkqg2nsukU6HJgU2hbbhnaM1ddQZA0KVNhEIi_5Djj9vKZhemvK9-NG0q4ueBJ78H9xLy6k1z1Seo11u4qz-oj0sK_xTe1cF-mdqT93yfX0mztsDQ3DUHpvDr7ILrFWbqNbRGVpjteDUkKVPw1PlDSpMb9DvSpBlVfaiYe0yJfAdRP4PU48NpArbS9Nlp5uscQkMQ-7-FYNi365OAvlyLRGNGWrch4WywnoHug5Ym7klWOKjfdcsMujqMUtvJtJL335NX-Bkssm7LJ2_-GQ69b8KAhjupQYuVfItCFaLMJI_tKwi3uoNaQT79BbLo-kdBNY-78OO9Nwt_zwZ1MVBUamIAeFWFxehDvZiMm1OdjLLhyV9iFEy1bSwqgJb__i-ZKtTWCSNCVNckNl1M0mGcEOasGK9GVrX86Lbe7BFWvwpJ2A1TOQ9D6rabeIaHGOdXHY48tocP47xe5h2jnb0z4IKMBuirAdiqzkPtyaTsKL-9p983tRE6amTLfHgRSu3cJtRNim-T7Pl6_UMpw2iOIRug3N-yurCpA4ZhUn59X31ftkwiA7ZkCLS4pf08OcsPCBJ6R5jJMljqKhNSeCFCA5B8XZ0XsscADLIJZ52QWyDqjqHV3FZnjKA0DuCdePHtOySzOaQZys6E6UMfQ975lXS7JUTNTLQT6vVbBUXVNA_EbTqgFehikdC0kJCK3EpYxv5ucdotTSHbECyUBASz_0QYw1ssWuPWvEnT52Y8vK4sLHRMs3Pcn3RsdcKYx_nV-P1CbO4o4o_zPPS2jV1XqeeTWgnGwRF0mAvPYN7Tl81q2FqiZAbxS3yM8onOb4rEmsM5k-J6jJS4GXMxPPqSZNHDRqxCZKQw7EahllBN7dzATwjOIVmEXugsxNBHwJrIEJP6j1MH6Ih0LevQwL0IdiuoO7oVVUIq8TiEqN34HZmQTViqahGyIl9cHxWHswDwzbq0qRlk1r4Fp8GqTsG3iTsTPlFzA_MqK-bf9Ud6-M7xxC8rmTcqcBWkLiReFx34QYDsQEkHYNB1dQ9c2ScvVR0zHJlvnYmyz3Wxvvzi8Fsmy5cc0k6HH85xwfNZadOc0GsRp-Y4Exm06lskpj8-p7X4ei3avdDeg-pRRf_vSxPUiquYm8MM2wgzgECMJN7GLCIVMameGAQ6JcGCGiKQMEGDcm127STN2Tb-Fa2R83VZhW0mIvwez2lPgYs2.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_02ab15cd11d18e69016ae335fca7ac87d1a2f2fbbeeacfdc19","index":1}]},"fingerprint":"4e15e318c0b518eb"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":5547,"output_tokens":95,"total_tokens":5642,"cached_input_tokens":1826,"cache_creation_input_tokens":3718,"reasoning_tokens":43,"cost":{"total":0.00053081}},"response_id":"gen-1793275386-v8GqcWjeAshwUVPyYIu4","finish_reason":"stop","raw":{"id":"gen-1793275386-v8GqcWjeAshwUVPyYIu4","object":"chat.completion","created":1793275386,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"The lore doesn’t specify Sablecross’s population or how much water remains in the reservoir. It does establish that the Glass Aqueduct was destroyed in 204 and hasn’t been rebuilt, with no alternate aqueduct or bypass.","role":"assistant","reasoning":"**Providing information on lore**\n\nI need to base my answer solely on the provided lore, so no searching is necessary. I’ll mention that the population and water quantity are not specified, which is an important detail. It’s well-established that the aqueduct was destroyed, and there seems to be no alternative. However, I won't infer any current amounts since that wouldn't be accurate. I'll stick to what's stated and ensure the user gets clear information.","reasoning_details":[{"type":"reasoning.summary","summary":"**Providing information on lore**\n\nI need to base my answer solely on the provided lore, so no searching is necessary. I’ll mention that the population and water quantity are not specified, which is an important detail. It’s well-established that the aqueduct was destroyed, and there seems to be no alternative. However, I won't infer any current amounts since that wouldn't be accurate. I'll stick to what's stated and ensure the user gets clear information.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zX-C_fs581IgptfP3DDlzYVRUJpkDG8WLnf0wCTxjd64RfJkgDjNKWQLfLZ44hmOxUtgltOwc5dDznKcfe0azWFgT4a6BBKEFctgM4FB63C9_FmnhDrSKWq9n7mtN72733S-BwnCCh_jQS3EixKbw0ouQR5alqR0BGTq0NyTnjeLkOKjvwNMUiGRbqHsV1EMIxeDNb4GGFTwogMinDWXU1cjZJfhp2L1c6Bjl1KIY95yzO0z0H2BBR3ZxlioRjkjAEBci5J7HN4voLoJFVZvkQO09L88MdK0mZ_eClWdrSgg2c7Hlm6ZkQFSpe46pBndBOQ1I41YccuimwwQhfdKK-apFUrNlAgrdAEKrhEWkfODX_yu5fcLI9X-ERJGd2V8vp48RoQVl1bW3VbM8LN0xQj8KOObjuLns5ilu_OSB1-ExLtgsAOEMIfXn1YJMmOfeqmiYnMIOH8B4g8jiFcsmaZIrOeQpGASG9pG6r90MIs8rRWa-CRv1K3KMiaZilhCW0cTtnFbvtSeYrYmnApUhV-fAcDSDzY8_QXKlGmmabwQFyCuPr1KuwxmIE_hZ8rzVPwHHIrBDdsgSzOMJKvuWFh5OAt0GxoDtSWv2NnYEu8DzeoNWzwxURAvEhcy9CsCBCSltNgWZGq7IEhxlmp29H05t-a52d03FDMfJwpEinFE-WFWuZEclBwh_Npc51iOwq8RnSP0zjakXopT98lP8bSb89btZogWzjh38FYi9l-p0OIWl7EToDonSUCK0XQju490sw702FOSLFVXZE6dprkQCzD9RLKbJ-7bIi0-gtiMt6RAKykNqouepMDzS849wj8ks9yrv6_XP7tbeyd1XtGx0cpk8TW9S9d8p_S5S2InaVb6wDzmvHPIXe1UjkJuZfrQIvUbvw7oKVHpRqyRwWE2WGv2nxTMtgAK0wRtm0M0c73WefzU-sSZLDZbjmUDgF--cBSkqg2nsukU6HJgU2hbbhnaM1ddQZA0KVNhEIi_5Djj9vKZhemvK9-NG0q4ueBJ78H9xLy6k1z1Seo11u4qz-oj0sK_xTe1cF-mdqT93yfX0mztsDQ3DUHpvDr7ILrFWbqNbRGVpjteDUkKVPw1PlDSpMb9DvSpBlVfaiYe0yJfAdRP4PU48NpArbS9Nlp5uscQkMQ-7-FYNi365OAvlyLRGNGWrch4WywnoHug5Ym7klWOKjfdcsMujqMUtvJtJL335NX-Bkssm7LJ2_-GQ69b8KAhjupQYuVfItCFaLMJI_tKwi3uoNaQT79BbLo-kdBNY-78OO9Nwt_zwZ1MVBUamIAeFWFxehDvZiMm1OdjLLhyV9iFEy1bSwqgJb__i-ZKtTWCSNCVNckNl1M0mGcEOasGK9GVrX86Lbe7BFWvwpJ2A1TOQ9D6rabeIaHGOdXHY48tocP47xe5h2jnb0z4IKMBuirAdiqzkPtyaTsKL-9p983tRE6amTLfHgRSu3cJtRNim-T7Pl6_UMpw2iOIRug3N-yurCpA4ZhUn59X31ftkwiA7ZkCLS4pf08OcsPCBJ6R5jJMljqKhNSeCFCA5B8XZ0XsscADLIJZ52QWyDqjqHV3FZnjKA0DuCdePHtOySzOaQZys6E6UMfQ975lXS7JUTNTLQT6vVbBUXVNA_EbTqgFehikdC0kJCK3EpYxv5ucdotTSHbECyUBASz_0QYw1ssWuPWvEnT52Y8vK4sLHRMs3Pcn3RsdcKYx_nV-P1CbO4o4o_zPPS2jV1XqeeTWgnGwRF0mAvPYN7Tl81q2FqiZAbxS3yM8onOb4rEmsM5k-J6jJS4GXMxPPqSZNHDRqxCZKQw7EahllBN7dzATwjOIVmEXugsxNBHwJrIEJP6j1MH6Ih0LevQwL0IdiuoO7oVVUIq8TiEqN34HZmQTViqahGyIl9cHxWHswDwzbq0qRlk1r4Fp8GqTsG3iTsTPlFzA_MqK-bf9Ud6-M7xxC8rmTcqcBWkLiReFx34QYDsQEkHYNB1dQ9c2ScvVR0zHJlvnYmyz3Wxvvzi8Fsmy5cc0k6HH85xwfNZadOc0GsRp-Y4Exm06lskpj8-p7X4ei3avdDeg-pRRf_vSxPUiquYm8MM2wgzgECMJN7GLCIVMameGAQ6JcGCGiKQMEGDcm127STN2Tb-Fa2R83VZhW0mIvwez2lPgYs2.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_02ab15cd11d18e69016ae335fca7ac87d1a2f2fbbeeacfdc19","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":5547,"completion_tokens":95,"total_tokens":5642,"cost":0.00053081,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":3718,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00053081,"upstream_inference_prompt_cost":0.00048331,"upstream_inference_completions_cost":0.0000475},"completion_tokens_details":{"reasoning_tokens":43,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":5547,"output_tokens":95,"total_tokens":5642,"cached_input_tokens":1826,"cache_creation_input_tokens":3718,"reasoning_tokens":43,"cost":{"total":0.00053081}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":5547,"output_tokens":95,"total_tokens":5642,"cached_input_tokens":1826,"cache_creation_input_tokens":3718,"reasoning_tokens":43,"cost":{"total":0.00053081}},"response_id":"gen-1793275386-v8GqcWjeAshwUVPyYIu4","finish_reason":"stop","raw":{"id":"gen-1793275386-v8GqcWjeAshwUVPyYIu4","object":"chat.completion","created":1793275386,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"The lore doesn’t specify Sablecross’s population or how much water remains in the reservoir. It does establish that the Glass Aqueduct was destroyed in 204 and hasn’t been rebuilt, with no alternate aqueduct or bypass.","role":"assistant","reasoning":"**Providing information on lore**\n\nI need to base my answer solely on the provided lore, so no searching is necessary. I’ll mention that the population and water quantity are not specified, which is an important detail. It’s well-established that the aqueduct was destroyed, and there seems to be no alternative. However, I won't infer any current amounts since that wouldn't be accurate. I'll stick to what's stated and ensure the user gets clear information.","reasoning_details":[{"type":"reasoning.summary","summary":"**Providing information on lore**\n\nI need to base my answer solely on the provided lore, so no searching is necessary. I’ll mention that the population and water quantity are not specified, which is an important detail. It’s well-established that the aqueduct was destroyed, and there seems to be no alternative. However, I won't infer any current amounts since that wouldn't be accurate. I'll stick to what's stated and ensure the user gets clear information.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zX-C_fs581IgptfP3DDlzYVRUJpkDG8WLnf0wCTxjd64RfJkgDjNKWQLfLZ44hmOxUtgltOwc5dDznKcfe0azWFgT4a6BBKEFctgM4FB63C9_FmnhDrSKWq9n7mtN72733S-BwnCCh_jQS3EixKbw0ouQR5alqR0BGTq0NyTnjeLkOKjvwNMUiGRbqHsV1EMIxeDNb4GGFTwogMinDWXU1cjZJfhp2L1c6Bjl1KIY95yzO0z0H2BBR3ZxlioRjkjAEBci5J7HN4voLoJFVZvkQO09L88MdK0mZ_eClWdrSgg2c7Hlm6ZkQFSpe46pBndBOQ1I41YccuimwwQhfdKK-apFUrNlAgrdAEKrhEWkfODX_yu5fcLI9X-ERJGd2V8vp48RoQVl1bW3VbM8LN0xQj8KOObjuLns5ilu_OSB1-ExLtgsAOEMIfXn1YJMmOfeqmiYnMIOH8B4g8jiFcsmaZIrOeQpGASG9pG6r90MIs8rRWa-CRv1K3KMiaZilhCW0cTtnFbvtSeYrYmnApUhV-fAcDSDzY8_QXKlGmmabwQFyCuPr1KuwxmIE_hZ8rzVPwHHIrBDdsgSzOMJKvuWFh5OAt0GxoDtSWv2NnYEu8DzeoNWzwxURAvEhcy9CsCBCSltNgWZGq7IEhxlmp29H05t-a52d03FDMfJwpEinFE-WFWuZEclBwh_Npc51iOwq8RnSP0zjakXopT98lP8bSb89btZogWzjh38FYi9l-p0OIWl7EToDonSUCK0XQju490sw702FOSLFVXZE6dprkQCzD9RLKbJ-7bIi0-gtiMt6RAKykNqouepMDzS849wj8ks9yrv6_XP7tbeyd1XtGx0cpk8TW9S9d8p_S5S2InaVb6wDzmvHPIXe1UjkJuZfrQIvUbvw7oKVHpRqyRwWE2WGv2nxTMtgAK0wRtm0M0c73WefzU-sSZLDZbjmUDgF--cBSkqg2nsukU6HJgU2hbbhnaM1ddQZA0KVNhEIi_5Djj9vKZhemvK9-NG0q4ueBJ78H9xLy6k1z1Seo11u4qz-oj0sK_xTe1cF-mdqT93yfX0mztsDQ3DUHpvDr7ILrFWbqNbRGVpjteDUkKVPw1PlDSpMb9DvSpBlVfaiYe0yJfAdRP4PU48NpArbS9Nlp5uscQkMQ-7-FYNi365OAvlyLRGNGWrch4WywnoHug5Ym7klWOKjfdcsMujqMUtvJtJL335NX-Bkssm7LJ2_-GQ69b8KAhjupQYuVfItCFaLMJI_tKwi3uoNaQT79BbLo-kdBNY-78OO9Nwt_zwZ1MVBUamIAeFWFxehDvZiMm1OdjLLhyV9iFEy1bSwqgJb__i-ZKtTWCSNCVNckNl1M0mGcEOasGK9GVrX86Lbe7BFWvwpJ2A1TOQ9D6rabeIaHGOdXHY48tocP47xe5h2jnb0z4IKMBuirAdiqzkPtyaTsKL-9p983tRE6amTLfHgRSu3cJtRNim-T7Pl6_UMpw2iOIRug3N-yurCpA4ZhUn59X31ftkwiA7ZkCLS4pf08OcsPCBJ6R5jJMljqKhNSeCFCA5B8XZ0XsscADLIJZ52QWyDqjqHV3FZnjKA0DuCdePHtOySzOaQZys6E6UMfQ975lXS7JUTNTLQT6vVbBUXVNA_EbTqgFehikdC0kJCK3EpYxv5ucdotTSHbECyUBASz_0QYw1ssWuPWvEnT52Y8vK4sLHRMs3Pcn3RsdcKYx_nV-P1CbO4o4o_zPPS2jV1XqeeTWgnGwRF0mAvPYN7Tl81q2FqiZAbxS3yM8onOb4rEmsM5k-J6jJS4GXMxPPqSZNHDRqxCZKQw7EahllBN7dzATwjOIVmEXugsxNBHwJrIEJP6j1MH6Ih0LevQwL0IdiuoO7oVVUIq8TiEqN34HZmQTViqahGyIl9cHxWHswDwzbq0qRlk1r4Fp8GqTsG3iTsTPlFzA_MqK-bf9Ud6-M7xxC8rmTcqcBWkLiReFx34QYDsQEkHYNB1dQ9c2ScvVR0zHJlvnYmyz3Wxvvzi8Fsmy5cc0k6HH85xwfNZadOc0GsRp-Y4Exm06lskpj8-p7X4ei3avdDeg-pRRf_vSxPUiquYm8MM2wgzgECMJN7GLCIVMameGAQ6JcGCGiKQMEGDcm127STN2Tb-Fa2R83VZhW0mIvwez2lPgYs2.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_02ab15cd11d18e69016ae335fca7ac87d1a2f2fbbeeacfdc19","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":5547,"completion_tokens":95,"total_tokens":5642,"cost":0.00053081,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":3718,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00053081,"upstream_inference_prompt_cost":0.00048331,"upstream_inference_completions_cost":0.0000475},"completion_tokens_details":{"reasoning_tokens":43,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"How many people live in Sablecross, and how much water remains in its reservoir? If those facts aren't saved, say so."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Providing information on lore**\n\nI need to base my answer solely on the provided lore, so no searching is necessary. I’ll mention that the population and water quantity are not specified, which is an important detail. It’s well-established that the aqueduct was destroyed, and there seems to be no alternative. However, I won't infer any current amounts since that wouldn't be accurate. I'll stick to what's stated and ensure the user gets clear information.","native":{"item":{"reasoning":"**Providing information on lore**\n\nI need to base my answer solely on the provided lore, so no searching is necessary. I’ll mention that the population and water quantity are not specified, which is an important detail. It’s well-established that the aqueduct was destroyed, and there seems to be no alternative. However, I won't infer any current amounts since that wouldn't be accurate. I'll stick to what's stated and ensure the user gets clear information.","reasoning_details":[{"type":"reasoning.summary","summary":"**Providing information on lore**\n\nI need to base my answer solely on the provided lore, so no searching is necessary. I’ll mention that the population and water quantity are not specified, which is an important detail. It’s well-established that the aqueduct was destroyed, and there seems to be no alternative. However, I won't infer any current amounts since that wouldn't be accurate. I'll stick to what's stated and ensure the user gets clear information.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zX-C_fs581IgptfP3DDlzYVRUJpkDG8WLnf0wCTxjd64RfJkgDjNKWQLfLZ44hmOxUtgltOwc5dDznKcfe0azWFgT4a6BBKEFctgM4FB63C9_FmnhDrSKWq9n7mtN72733S-BwnCCh_jQS3EixKbw0ouQR5alqR0BGTq0NyTnjeLkOKjvwNMUiGRbqHsV1EMIxeDNb4GGFTwogMinDWXU1cjZJfhp2L1c6Bjl1KIY95yzO0z0H2BBR3ZxlioRjkjAEBci5J7HN4voLoJFVZvkQO09L88MdK0mZ_eClWdrSgg2c7Hlm6ZkQFSpe46pBndBOQ1I41YccuimwwQhfdKK-apFUrNlAgrdAEKrhEWkfODX_yu5fcLI9X-ERJGd2V8vp48RoQVl1bW3VbM8LN0xQj8KOObjuLns5ilu_OSB1-ExLtgsAOEMIfXn1YJMmOfeqmiYnMIOH8B4g8jiFcsmaZIrOeQpGASG9pG6r90MIs8rRWa-CRv1K3KMiaZilhCW0cTtnFbvtSeYrYmnApUhV-fAcDSDzY8_QXKlGmmabwQFyCuPr1KuwxmIE_hZ8rzVPwHHIrBDdsgSzOMJKvuWFh5OAt0GxoDtSWv2NnYEu8DzeoNWzwxURAvEhcy9CsCBCSltNgWZGq7IEhxlmp29H05t-a52d03FDMfJwpEinFE-WFWuZEclBwh_Npc51iOwq8RnSP0zjakXopT98lP8bSb89btZogWzjh38FYi9l-p0OIWl7EToDonSUCK0XQju490sw702FOSLFVXZE6dprkQCzD9RLKbJ-7bIi0-gtiMt6RAKykNqouepMDzS849wj8ks9yrv6_XP7tbeyd1XtGx0cpk8TW9S9d8p_S5S2InaVb6wDzmvHPIXe1UjkJuZfrQIvUbvw7oKVHpRqyRwWE2WGv2nxTMtgAK0wRtm0M0c73WefzU-sSZLDZbjmUDgF--cBSkqg2nsukU6HJgU2hbbhnaM1ddQZA0KVNhEIi_5Djj9vKZhemvK9-NG0q4ueBJ78H9xLy6k1z1Seo11u4qz-oj0sK_xTe1cF-mdqT93yfX0mztsDQ3DUHpvDr7ILrFWbqNbRGVpjteDUkKVPw1PlDSpMb9DvSpBlVfaiYe0yJfAdRP4PU48NpArbS9Nlp5uscQkMQ-7-FYNi365OAvlyLRGNGWrch4WywnoHug5Ym7klWOKjfdcsMujqMUtvJtJL335NX-Bkssm7LJ2_-GQ69b8KAhjupQYuVfItCFaLMJI_tKwi3uoNaQT79BbLo-kdBNY-78OO9Nwt_zwZ1MVBUamIAeFWFxehDvZiMm1OdjLLhyV9iFEy1bSwqgJb__i-ZKtTWCSNCVNckNl1M0mGcEOasGK9GVrX86Lbe7BFWvwpJ2A1TOQ9D6rabeIaHGOdXHY48tocP47xe5h2jnb0z4IKMBuirAdiqzkPtyaTsKL-9p983tRE6amTLfHgRSu3cJtRNim-T7Pl6_UMpw2iOIRug3N-yurCpA4ZhUn59X31ftkwiA7ZkCLS4pf08OcsPCBJ6R5jJMljqKhNSeCFCA5B8XZ0XsscADLIJZ52QWyDqjqHV3FZnjKA0DuCdePHtOySzOaQZys6E6UMfQ975lXS7JUTNTLQT6vVbBUXVNA_EbTqgFehikdC0kJCK3EpYxv5ucdotTSHbECyUBASz_0QYw1ssWuPWvEnT52Y8vK4sLHRMs3Pcn3RsdcKYx_nV-P1CbO4o4o_zPPS2jV1XqeeTWgnGwRF0mAvPYN7Tl81q2FqiZAbxS3yM8onOb4rEmsM5k-J6jJS4GXMxPPqSZNHDRqxCZKQw7EahllBN7dzATwjOIVmEXugsxNBHwJrIEJP6j1MH6Ih0LevQwL0IdiuoO7oVVUIq8TiEqN34HZmQTViqahGyIl9cHxWHswDwzbq0qRlk1r4Fp8GqTsG3iTsTPlFzA_MqK-bf9Ud6-M7xxC8rmTcqcBWkLiReFx34QYDsQEkHYNB1dQ9c2ScvVR0zHJlvnYmyz3Wxvvzi8Fsmy5cc0k6HH85xwfNZadOc0GsRp-Y4Exm06lskpj8-p7X4ei3avdDeg-pRRf_vSxPUiquYm8MM2wgzgECMJN7GLCIVMameGAQ6JcGCGiKQMEGDcm127STN2Tb-Fa2R83VZhW0mIvwez2lPgYs2.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_02ab15cd11d18e69016ae335fca7ac87d1a2f2fbbeeacfdc19","index":1}]},"fingerprint":"4e15e318c0b518eb"}},{"type":"text","text":"The lore doesn’t specify Sablecross’s population or how much water remains in the reservoir. It does establish that the Glass Aqueduct was destroyed in 204 and hasn’t been rebuilt, with no alternate aqueduct or bypass."}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793275386-v8GqcWjeAshwUVPyYIu4"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Providing information on lore**\n\nI need to base my answer solely on the provided lore, so no searching is necessary. I’ll mention that the population and water quantity are not specified, which is an important detail. It’s well-established that the aqueduct was destroyed, and there seems to be no alternative. However, I won't infer any current amounts since that wouldn't be accurate. I'll stick to what's stated and ensure the user gets clear information.","native":{"item":{"reasoning":"**Providing information on lore**\n\nI need to base my answer solely on the provided lore, so no searching is necessary. I’ll mention that the population and water quantity are not specified, which is an important detail. It’s well-established that the aqueduct was destroyed, and there seems to be no alternative. However, I won't infer any current amounts since that wouldn't be accurate. I'll stick to what's stated and ensure the user gets clear information.","reasoning_details":[{"type":"reasoning.summary","summary":"**Providing information on lore**\n\nI need to base my answer solely on the provided lore, so no searching is necessary. I’ll mention that the population and water quantity are not specified, which is an important detail. It’s well-established that the aqueduct was destroyed, and there seems to be no alternative. However, I won't infer any current amounts since that wouldn't be accurate. I'll stick to what's stated and ensure the user gets clear information.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zX-C_fs581IgptfP3DDlzYVRUJpkDG8WLnf0wCTxjd64RfJkgDjNKWQLfLZ44hmOxUtgltOwc5dDznKcfe0azWFgT4a6BBKEFctgM4FB63C9_FmnhDrSKWq9n7mtN72733S-BwnCCh_jQS3EixKbw0ouQR5alqR0BGTq0NyTnjeLkOKjvwNMUiGRbqHsV1EMIxeDNb4GGFTwogMinDWXU1cjZJfhp2L1c6Bjl1KIY95yzO0z0H2BBR3ZxlioRjkjAEBci5J7HN4voLoJFVZvkQO09L88MdK0mZ_eClWdrSgg2c7Hlm6ZkQFSpe46pBndBOQ1I41YccuimwwQhfdKK-apFUrNlAgrdAEKrhEWkfODX_yu5fcLI9X-ERJGd2V8vp48RoQVl1bW3VbM8LN0xQj8KOObjuLns5ilu_OSB1-ExLtgsAOEMIfXn1YJMmOfeqmiYnMIOH8B4g8jiFcsmaZIrOeQpGASG9pG6r90MIs8rRWa-CRv1K3KMiaZilhCW0cTtnFbvtSeYrYmnApUhV-fAcDSDzY8_QXKlGmmabwQFyCuPr1KuwxmIE_hZ8rzVPwHHIrBDdsgSzOMJKvuWFh5OAt0GxoDtSWv2NnYEu8DzeoNWzwxURAvEhcy9CsCBCSltNgWZGq7IEhxlmp29H05t-a52d03FDMfJwpEinFE-WFWuZEclBwh_Npc51iOwq8RnSP0zjakXopT98lP8bSb89btZogWzjh38FYi9l-p0OIWl7EToDonSUCK0XQju490sw702FOSLFVXZE6dprkQCzD9RLKbJ-7bIi0-gtiMt6RAKykNqouepMDzS849wj8ks9yrv6_XP7tbeyd1XtGx0cpk8TW9S9d8p_S5S2InaVb6wDzmvHPIXe1UjkJuZfrQIvUbvw7oKVHpRqyRwWE2WGv2nxTMtgAK0wRtm0M0c73WefzU-sSZLDZbjmUDgF--cBSkqg2nsukU6HJgU2hbbhnaM1ddQZA0KVNhEIi_5Djj9vKZhemvK9-NG0q4ueBJ78H9xLy6k1z1Seo11u4qz-oj0sK_xTe1cF-mdqT93yfX0mztsDQ3DUHpvDr7ILrFWbqNbRGVpjteDUkKVPw1PlDSpMb9DvSpBlVfaiYe0yJfAdRP4PU48NpArbS9Nlp5uscQkMQ-7-FYNi365OAvlyLRGNGWrch4WywnoHug5Ym7klWOKjfdcsMujqMUtvJtJL335NX-Bkssm7LJ2_-GQ69b8KAhjupQYuVfItCFaLMJI_tKwi3uoNaQT79BbLo-kdBNY-78OO9Nwt_zwZ1MVBUamIAeFWFxehDvZiMm1OdjLLhyV9iFEy1bSwqgJb__i-ZKtTWCSNCVNckNl1M0mGcEOasGK9GVrX86Lbe7BFWvwpJ2A1TOQ9D6rabeIaHGOdXHY48tocP47xe5h2jnb0z4IKMBuirAdiqzkPtyaTsKL-9p983tRE6amTLfHgRSu3cJtRNim-T7Pl6_UMpw2iOIRug3N-yurCpA4ZhUn59X31ftkwiA7ZkCLS4pf08OcsPCBJ6R5jJMljqKhNSeCFCA5B8XZ0XsscADLIJZ52QWyDqjqHV3FZnjKA0DuCdePHtOySzOaQZys6E6UMfQ975lXS7JUTNTLQT6vVbBUXVNA_EbTqgFehikdC0kJCK3EpYxv5ucdotTSHbECyUBASz_0QYw1ssWuPWvEnT52Y8vK4sLHRMs3Pcn3RsdcKYx_nV-P1CbO4o4o_zPPS2jV1XqeeTWgnGwRF0mAvPYN7Tl81q2FqiZAbxS3yM8onOb4rEmsM5k-J6jJS4GXMxPPqSZNHDRqxCZKQw7EahllBN7dzATwjOIVmEXugsxNBHwJrIEJP6j1MH6Ih0LevQwL0IdiuoO7oVVUIq8TiEqN34HZmQTViqahGyIl9cHxWHswDwzbq0qRlk1r4Fp8GqTsG3iTsTPlFzA_MqK-bf9Ud6-M7xxC8rmTcqcBWkLiReFx34QYDsQEkHYNB1dQ9c2ScvVR0zHJlvnYmyz3Wxvvzi8Fsmy5cc0k6HH85xwfNZadOc0GsRp-Y4Exm06lskpj8-p7X4ei3avdDeg-pRRf_vSxPUiquYm8MM2wgzgECMJN7GLCIVMameGAQ6JcGCGiKQMEGDcm127STN2Tb-Fa2R83VZhW0mIvwez2lPgYs2.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_02ab15cd11d18e69016ae335fca7ac87d1a2f2fbbeeacfdc19","index":1}]},"fingerprint":"4e15e318c0b518eb"}},{"type":"text","text":"The lore doesn’t specify Sablecross’s population or how much water remains in the reservoir. It does establish that the Glass Aqueduct was destroyed in 204 and hasn’t been rebuilt, with no alternate aqueduct or bypass."}]}
+

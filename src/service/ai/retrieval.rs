@@ -66,6 +66,21 @@ pub fn format_hits(hits: &[SearchHit]) -> String {
                 format!("  - ← {} from {}", rel.rel_type, describe(neighbor))
             };
             lines.push(line);
+            if !neighbor.properties.is_empty() {
+                lines.push(format!(
+                    "    Neighbor properties: {}",
+                    format_properties(&neighbor.properties)
+                ));
+            }
+            if !rel.description.is_empty() {
+                lines.push(format!("    Relationship: {}", rel.description));
+            }
+            if !rel.properties.is_empty() {
+                lines.push(format!(
+                    "    Relationship properties: {}",
+                    format_properties(&rel.properties)
+                ));
+            }
         }
 
         blocks.push(lines.join("\n"));

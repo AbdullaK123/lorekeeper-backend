@@ -26,7 +26,7 @@ Working foundations remain valuable and should stay in place during changes.
 | Conversations | Create, list, resume, delete; streamed replies | Long histories, interrupted streams, and concurrent turns need defined behavior |
 | Message storage | User and assistant messages save together before background research starts | Background research lacks durable jobs and visible retry status |
 | Lore storage | Entities, relationships, conflicts, search, graph repository methods | Alias collisions, source tracking, and safe updates need work |
-| Retrieval | Text and vector search, combined ranking, neighbor lookup | Answer context drops neighbor properties and relationship details |
+| Retrieval | Text and vector search, neighbor properties, relationship conditions | Fresh-conversation testing shows saved conflicts do not reach chat |
 | Cleanup | Transactional deletion jobs, scheduled graph cleanup, retry after failure | Shutdown and competing background writes need further checks |
 | Researcher | [Prompt](../prompts/researcher.md), scoped search/read/write/conflict tools, background runtime wiring | Model behavior, durable jobs, and recovery still need acceptance |
 
@@ -43,9 +43,10 @@ These are recorded results, not a new test run for this plan.
 | --- | --- |
 | Shared alias selects the wrong entity | Test contextual identity through the researcher tools |
 | Alias shadows another entity's canonical name | Require exact saved targets for writes; preserve distinct subjects |
-| Neighbor properties disappear from answer context | Include relevant properties in retrieval results |
-| Relationship descriptions disappear from answer context | Preserve descriptions, conditions, and direction |
-| Duplicate search rows inflate ranking | Confirm production exposure; prevent duplicate evidence from changing rank |
+| Neighbor properties disappear from answer context | Fixed; context-preservation test passes |
+| Relationship descriptions disappear from answer context | Fixed; context-preservation test passes |
+| Fresh chat reports no unresolved conflicts despite two saved records | Make saved conflicts accessible to chat retrieval; [observed result](../tests/artifacts/fresh-retrieval-2026-10-29/summary.md) |
+| Synthetic duplicate-row ranking test | No demonstrated occurrence in current queries; no fix scheduled |
 | Duplicate signup returns 500 | Return a clear account conflict response |
 | Blank world names pass validation | Confirm the naming rule, then enforce it consistently |
 

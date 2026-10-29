@@ -428,7 +428,7 @@ async fn researcher_smoke_conversation() {
     let server = tokio::spawn(async move { axum::serve(listener, router).await.unwrap(); });
     let result = tokio::task::spawn_blocking(|| {
         std::process::Command::new("python3")
-            .args(["tests/smoke_conversation.py"])
+            .arg(std::env::var("QA_SMOKE_SCRIPT").unwrap_or_else(|_| "tests/smoke_conversation.py".into()))
             .env("QA_BASE_URL", "http://127.0.0.1:18001")
             .status().expect("Python with requests required")
     }).await.unwrap();
