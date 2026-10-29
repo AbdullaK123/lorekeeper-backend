@@ -1,0 +1,242 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Acknowledging implications briefly**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" respond"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" conc"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ely"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" while"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" making"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" sure"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" distinguish"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" important"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" details"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" might"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" be"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" interesting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" note"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" some"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" implications"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" wonder"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" if"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" necessary"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" given"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" user"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" requested"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" brief"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" response"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" have"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" be"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" careful"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" not"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" con"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"flate"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Ward"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ens"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" could"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" mention"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" O"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ren"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" bars"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" soldiers"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" without"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" permit"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" while"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" L"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ysa"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" provides"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" daylight"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" access"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" for"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" civilian"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" scholars"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" This"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" keeps"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" response"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" focused"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" clear"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"!"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Under"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"stood"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" O"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ren"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" requires"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" council"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" permit"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" for"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" soldiers"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" draw"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" reservoir"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" water"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Separ"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ately"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" L"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ysa"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" admits"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" civilian"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" scholars"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Sun"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Archive"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" during"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" daylight"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" only"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"Understood: Oren requires a council permit for soldiers to draw reservoir water. Separately, Lysa admits civilian scholars to the Sun Archive during daylight only."}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Acknowledging implications briefly**\n\nI need to respond concisely while making sure to distinguish the important details. It might be interesting to note some implications, but I wonder if it's necessary given that the user requested a brief response. I have to be careful not to conflate the Wardens. I could mention that Oren bars soldiers without a permit, while Lysa provides daylight access for civilian scholars. This keeps the response focused and clear!","native":{"item":{"reasoning":"**Acknowledging implications briefly**\n\nI need to respond concisely while making sure to distinguish the important details. It might be interesting to note some implications, but I wonder if it's necessary given that the user requested a brief response. I have to be careful not to conflate the Wardens. I could mention that Oren bars soldiers without a permit, while Lysa provides daylight access for civilian scholars. This keeps the response focused and clear!","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging implications briefly**\n\nI need to respond concisely while making sure to distinguish the important details. It might be interesting to note some implications, but I wonder if it's necessary given that the user requested a brief response. I have to be careful not to conflate the Wardens. I could mention that Oren bars soldiers without a permit, while Lysa provides daylight access for civilian scholars. This keeps the response focused and clear!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zHP-yVlQ9v38pT4e8cUOqg0GlWp4XDhkn4nA83A9aFWJzCGg38FPEFnG1rDy531fq7MtPwUxgFNSolPHDoU1GQaWDylv8xanBUYiR2q5_FKr7rOouiOQPEgHbZ34KDPPTPnr6u2ycShiYvbKDGJ-2rpe2Oub7hlMlXelDwDj7Psq38KtlbiWEM5sucvtYFvgaL_ggeixZYMyHi7ho8rV6r9KfoSCnxBHtxsSF_OtdTMmYheEycwvsXOmruTpvWfdt0moMB7hrRBEpd2d-NAzloCtFDifycqrfzoRYjWyCBwiAKy1WwVz1PJ6lilXUKiaOtEdC0Giw4grjes8PKcp8bDQC8de-vvKGDoLKx3bWhl4HdNPQrZXwxdj2Om7HVFrq-WbhKfnGRxDUqUQQWyVDwDdCENsNuNrqaKoympKK0QQK8cnXQHcSUY1sNB26IK_1E63t8kzbZj5Lsmv-BT0p-I-bbWL2GdpkQDXS6kIBAM8yQd_hUvmy1gPz7EUGBPoy_v-BUZRmbIPmXe-qWk67htjDU7ZFeYipptYFwrHo7kw_hHVevtH-ubqzb6MinC-yF15fu7rAJNmGJDgurNjTJZv3jwrmlWJkVNaA3-BD19gJCqDGu3EeCGr-V2I8LEZBxMEEDXgcSix1tkuwIgcA-tj2fp6u0Clnbysp09hicFgyNYJZiwrfdCqCEB_csmqDB7OiIyerZv9LETaYCU0u7lxqYADY2gMsNjHv_W7_xCvspxr6J1guH266mGV2F7VY0hLOgkCX6yI_Lv5rcA8SfEpv3nTXnldJSkFaHcRAFYIpNpOJlq7VOURivlz3L07VKSpVNCYjXdaKRehSSkcgQel2MOcjIJh73I6wRFEWHZZLv6BTtgFr-rbl5hyC5t34up2jX4dZRGa0b3FDQwFnNruEQwAadtMpuKzY66yvFALY7BloA5R5FSgnj2cNZmvl-J0PEuReX2ARP2q8wmjFuViorWx7lbPacggGNrAYfdQ9ljKEI8YMK8NhH-bAQ7KsjnvHUrVKCAvOVDhsIeGcVNBmWyUCL1KIW7vC83McuP4CPOYJKedH6LWmWtY8ltGIBd4aHvINdpI9__dFxYlW0U3cqF9RqCuNnzTnrzTJwJ_ZoeKLfUop5OpR9ZGVO9E0Zx9EKTy_fKjjUlHuX0tY6--yIiuLCz_NAziy_ZfEG7t8h_-FlSVlxHEcNxGexl54HHIHOk-OsoE053keFiqNgpP9se-ZzEtlxE0pqt3ouqczXuD5ZTTVNYVjV3_Ceh96VVWlWwjTnZsdTlmuVgXgWMfcEghhaC12TH6j30r5VfL74Fw3MYVcWQgJ298xWOo6t0UNY_zrW0vpsXvE-JIC5mxXsdNbX8T74VrxpmZpPHMu5VfVvLFITQxq21tLiG4ETm6_6lJGWmT0Cz8cNsld_ShYa9mOivWvVCxQPi2_PJWRS89GNTX6jCbNQVyKld-eiFy3X-2FmnXUQcVQAe3GM3P0wv--xkEkU_we3hYIxsr1Bhu2Nta8CnfszftvTJCfOwXOIPWUMVS8WBb8WSqA3fnK_iApf-mP-AUYlA5OGUD2_-SCe9kK6CEsFW8IPfh1FhIM_SNhXHrVFBWuz8sGMGgflKdQYOp0tanzsq56M5swgEegHPW-u4YRYamUY5nLfVzKjBD_xUgXqmOfIMQ1saatnlZ9TyCfywngqwbXg6XKSfWMIfdeXN4YpkspDX-QaIk9dYQuk-_sgEhrnAganbdeg_ViaZQTBH1-_-7i0xzghxoCs2kG3azTqJ9kePeRDQHvBXPkykq7HI1a1QEHWZvzdE1Rp_zmnBPqXVeIpDLqI3wgP39FzjvF7A8CbE0pw_YssTfH3zuUNeh1QP_wV0RkCgAJB8wzSqv6zn8uAtyqmM0-4-lCS4MIkG9Rqq4En6eCsqTMNmwssfzFs49dhccXWbvijfx6v1_kvZflQpKZH08vqeUY9ApX7CF9QuV_PT2qWZz6BXdwtDql9xzni_HCyWkLiVwZvl6FsxKxhaOXZMc3gGx9DQ4ZQZGPFAJH9hr9OQxc7L9eV4vzZTuFsy_wjUKEF0mkmscjy4bhxPXxNL959pmA9PSBYeP70ZfrD2gnL9gUGJiAjyctgJj9UjZyV5r5RRl9JV8DgC1gmDMRuNoKTdiU-ULpRxJrdm8OIzoP5XuGf--NP-wsstktfG_BGmekbtf2fBUhnu34K8WEEvjgVBphS2QEqf73kxK9VhMqUDbgN3GIxbOeh8-VhCk6ibEhVAlCklxQgRnV1nqaU_5ZJE7LDKnGBlqsgkMlE1yqFnQUxECnItlpTmJwzUqA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0d6a1fea999c7c2c016ae331cd684087d1a4c1e44c4fe396e5","index":1}]},"fingerprint":"4826bc5b19842efc"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":4021,"output_tokens":92,"total_tokens":4113,"cached_input_tokens":1826,"cache_creation_input_tokens":2192,"reasoning_tokens":54,"cost":{"total":0.00033856}},"response_id":"gen-1793274316-b2ITpQ59umg78XmdOoJP","finish_reason":"stop","raw":{"id":"gen-1793274316-b2ITpQ59umg78XmdOoJP","object":"chat.completion","created":1793274316,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Understood: Oren requires a council permit for soldiers to draw reservoir water. Separately, Lysa admits civilian scholars to the Sun Archive during daylight only.","role":"assistant","reasoning":"**Acknowledging implications briefly**\n\nI need to respond concisely while making sure to distinguish the important details. It might be interesting to note some implications, but I wonder if it's necessary given that the user requested a brief response. I have to be careful not to conflate the Wardens. I could mention that Oren bars soldiers without a permit, while Lysa provides daylight access for civilian scholars. This keeps the response focused and clear!","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging implications briefly**\n\nI need to respond concisely while making sure to distinguish the important details. It might be interesting to note some implications, but I wonder if it's necessary given that the user requested a brief response. I have to be careful not to conflate the Wardens. I could mention that Oren bars soldiers without a permit, while Lysa provides daylight access for civilian scholars. This keeps the response focused and clear!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zHP-yVlQ9v38pT4e8cUOqg0GlWp4XDhkn4nA83A9aFWJzCGg38FPEFnG1rDy531fq7MtPwUxgFNSolPHDoU1GQaWDylv8xanBUYiR2q5_FKr7rOouiOQPEgHbZ34KDPPTPnr6u2ycShiYvbKDGJ-2rpe2Oub7hlMlXelDwDj7Psq38KtlbiWEM5sucvtYFvgaL_ggeixZYMyHi7ho8rV6r9KfoSCnxBHtxsSF_OtdTMmYheEycwvsXOmruTpvWfdt0moMB7hrRBEpd2d-NAzloCtFDifycqrfzoRYjWyCBwiAKy1WwVz1PJ6lilXUKiaOtEdC0Giw4grjes8PKcp8bDQC8de-vvKGDoLKx3bWhl4HdNPQrZXwxdj2Om7HVFrq-WbhKfnGRxDUqUQQWyVDwDdCENsNuNrqaKoympKK0QQK8cnXQHcSUY1sNB26IK_1E63t8kzbZj5Lsmv-BT0p-I-bbWL2GdpkQDXS6kIBAM8yQd_hUvmy1gPz7EUGBPoy_v-BUZRmbIPmXe-qWk67htjDU7ZFeYipptYFwrHo7kw_hHVevtH-ubqzb6MinC-yF15fu7rAJNmGJDgurNjTJZv3jwrmlWJkVNaA3-BD19gJCqDGu3EeCGr-V2I8LEZBxMEEDXgcSix1tkuwIgcA-tj2fp6u0Clnbysp09hicFgyNYJZiwrfdCqCEB_csmqDB7OiIyerZv9LETaYCU0u7lxqYADY2gMsNjHv_W7_xCvspxr6J1guH266mGV2F7VY0hLOgkCX6yI_Lv5rcA8SfEpv3nTXnldJSkFaHcRAFYIpNpOJlq7VOURivlz3L07VKSpVNCYjXdaKRehSSkcgQel2MOcjIJh73I6wRFEWHZZLv6BTtgFr-rbl5hyC5t34up2jX4dZRGa0b3FDQwFnNruEQwAadtMpuKzY66yvFALY7BloA5R5FSgnj2cNZmvl-J0PEuReX2ARP2q8wmjFuViorWx7lbPacggGNrAYfdQ9ljKEI8YMK8NhH-bAQ7KsjnvHUrVKCAvOVDhsIeGcVNBmWyUCL1KIW7vC83McuP4CPOYJKedH6LWmWtY8ltGIBd4aHvINdpI9__dFxYlW0U3cqF9RqCuNnzTnrzTJwJ_ZoeKLfUop5OpR9ZGVO9E0Zx9EKTy_fKjjUlHuX0tY6--yIiuLCz_NAziy_ZfEG7t8h_-FlSVlxHEcNxGexl54HHIHOk-OsoE053keFiqNgpP9se-ZzEtlxE0pqt3ouqczXuD5ZTTVNYVjV3_Ceh96VVWlWwjTnZsdTlmuVgXgWMfcEghhaC12TH6j30r5VfL74Fw3MYVcWQgJ298xWOo6t0UNY_zrW0vpsXvE-JIC5mxXsdNbX8T74VrxpmZpPHMu5VfVvLFITQxq21tLiG4ETm6_6lJGWmT0Cz8cNsld_ShYa9mOivWvVCxQPi2_PJWRS89GNTX6jCbNQVyKld-eiFy3X-2FmnXUQcVQAe3GM3P0wv--xkEkU_we3hYIxsr1Bhu2Nta8CnfszftvTJCfOwXOIPWUMVS8WBb8WSqA3fnK_iApf-mP-AUYlA5OGUD2_-SCe9kK6CEsFW8IPfh1FhIM_SNhXHrVFBWuz8sGMGgflKdQYOp0tanzsq56M5swgEegHPW-u4YRYamUY5nLfVzKjBD_xUgXqmOfIMQ1saatnlZ9TyCfywngqwbXg6XKSfWMIfdeXN4YpkspDX-QaIk9dYQuk-_sgEhrnAganbdeg_ViaZQTBH1-_-7i0xzghxoCs2kG3azTqJ9kePeRDQHvBXPkykq7HI1a1QEHWZvzdE1Rp_zmnBPqXVeIpDLqI3wgP39FzjvF7A8CbE0pw_YssTfH3zuUNeh1QP_wV0RkCgAJB8wzSqv6zn8uAtyqmM0-4-lCS4MIkG9Rqq4En6eCsqTMNmwssfzFs49dhccXWbvijfx6v1_kvZflQpKZH08vqeUY9ApX7CF9QuV_PT2qWZz6BXdwtDql9xzni_HCyWkLiVwZvl6FsxKxhaOXZMc3gGx9DQ4ZQZGPFAJH9hr9OQxc7L9eV4vzZTuFsy_wjUKEF0mkmscjy4bhxPXxNL959pmA9PSBYeP70ZfrD2gnL9gUGJiAjyctgJj9UjZyV5r5RRl9JV8DgC1gmDMRuNoKTdiU-ULpRxJrdm8OIzoP5XuGf--NP-wsstktfG_BGmekbtf2fBUhnu34K8WEEvjgVBphS2QEqf73kxK9VhMqUDbgN3GIxbOeh8-VhCk6ibEhVAlCklxQgRnV1nqaU_5ZJE7LDKnGBlqsgkMlE1yqFnQUxECnItlpTmJwzUqA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0d6a1fea999c7c2c016ae331cd684087d1a4c1e44c4fe396e5","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4021,"completion_tokens":92,"total_tokens":4113,"cost":0.00033856,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":2192,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00033856,"upstream_inference_prompt_cost":0.00029256,"upstream_inference_completions_cost":0.000046},"completion_tokens_details":{"reasoning_tokens":54,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":4021,"output_tokens":92,"total_tokens":4113,"cached_input_tokens":1826,"cache_creation_input_tokens":2192,"reasoning_tokens":54,"cost":{"total":0.00033856}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":4021,"output_tokens":92,"total_tokens":4113,"cached_input_tokens":1826,"cache_creation_input_tokens":2192,"reasoning_tokens":54,"cost":{"total":0.00033856}},"response_id":"gen-1793274316-b2ITpQ59umg78XmdOoJP","finish_reason":"stop","raw":{"id":"gen-1793274316-b2ITpQ59umg78XmdOoJP","object":"chat.completion","created":1793274316,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Understood: Oren requires a council permit for soldiers to draw reservoir water. Separately, Lysa admits civilian scholars to the Sun Archive during daylight only.","role":"assistant","reasoning":"**Acknowledging implications briefly**\n\nI need to respond concisely while making sure to distinguish the important details. It might be interesting to note some implications, but I wonder if it's necessary given that the user requested a brief response. I have to be careful not to conflate the Wardens. I could mention that Oren bars soldiers without a permit, while Lysa provides daylight access for civilian scholars. This keeps the response focused and clear!","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging implications briefly**\n\nI need to respond concisely while making sure to distinguish the important details. It might be interesting to note some implications, but I wonder if it's necessary given that the user requested a brief response. I have to be careful not to conflate the Wardens. I could mention that Oren bars soldiers without a permit, while Lysa provides daylight access for civilian scholars. This keeps the response focused and clear!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zHP-yVlQ9v38pT4e8cUOqg0GlWp4XDhkn4nA83A9aFWJzCGg38FPEFnG1rDy531fq7MtPwUxgFNSolPHDoU1GQaWDylv8xanBUYiR2q5_FKr7rOouiOQPEgHbZ34KDPPTPnr6u2ycShiYvbKDGJ-2rpe2Oub7hlMlXelDwDj7Psq38KtlbiWEM5sucvtYFvgaL_ggeixZYMyHi7ho8rV6r9KfoSCnxBHtxsSF_OtdTMmYheEycwvsXOmruTpvWfdt0moMB7hrRBEpd2d-NAzloCtFDifycqrfzoRYjWyCBwiAKy1WwVz1PJ6lilXUKiaOtEdC0Giw4grjes8PKcp8bDQC8de-vvKGDoLKx3bWhl4HdNPQrZXwxdj2Om7HVFrq-WbhKfnGRxDUqUQQWyVDwDdCENsNuNrqaKoympKK0QQK8cnXQHcSUY1sNB26IK_1E63t8kzbZj5Lsmv-BT0p-I-bbWL2GdpkQDXS6kIBAM8yQd_hUvmy1gPz7EUGBPoy_v-BUZRmbIPmXe-qWk67htjDU7ZFeYipptYFwrHo7kw_hHVevtH-ubqzb6MinC-yF15fu7rAJNmGJDgurNjTJZv3jwrmlWJkVNaA3-BD19gJCqDGu3EeCGr-V2I8LEZBxMEEDXgcSix1tkuwIgcA-tj2fp6u0Clnbysp09hicFgyNYJZiwrfdCqCEB_csmqDB7OiIyerZv9LETaYCU0u7lxqYADY2gMsNjHv_W7_xCvspxr6J1guH266mGV2F7VY0hLOgkCX6yI_Lv5rcA8SfEpv3nTXnldJSkFaHcRAFYIpNpOJlq7VOURivlz3L07VKSpVNCYjXdaKRehSSkcgQel2MOcjIJh73I6wRFEWHZZLv6BTtgFr-rbl5hyC5t34up2jX4dZRGa0b3FDQwFnNruEQwAadtMpuKzY66yvFALY7BloA5R5FSgnj2cNZmvl-J0PEuReX2ARP2q8wmjFuViorWx7lbPacggGNrAYfdQ9ljKEI8YMK8NhH-bAQ7KsjnvHUrVKCAvOVDhsIeGcVNBmWyUCL1KIW7vC83McuP4CPOYJKedH6LWmWtY8ltGIBd4aHvINdpI9__dFxYlW0U3cqF9RqCuNnzTnrzTJwJ_ZoeKLfUop5OpR9ZGVO9E0Zx9EKTy_fKjjUlHuX0tY6--yIiuLCz_NAziy_ZfEG7t8h_-FlSVlxHEcNxGexl54HHIHOk-OsoE053keFiqNgpP9se-ZzEtlxE0pqt3ouqczXuD5ZTTVNYVjV3_Ceh96VVWlWwjTnZsdTlmuVgXgWMfcEghhaC12TH6j30r5VfL74Fw3MYVcWQgJ298xWOo6t0UNY_zrW0vpsXvE-JIC5mxXsdNbX8T74VrxpmZpPHMu5VfVvLFITQxq21tLiG4ETm6_6lJGWmT0Cz8cNsld_ShYa9mOivWvVCxQPi2_PJWRS89GNTX6jCbNQVyKld-eiFy3X-2FmnXUQcVQAe3GM3P0wv--xkEkU_we3hYIxsr1Bhu2Nta8CnfszftvTJCfOwXOIPWUMVS8WBb8WSqA3fnK_iApf-mP-AUYlA5OGUD2_-SCe9kK6CEsFW8IPfh1FhIM_SNhXHrVFBWuz8sGMGgflKdQYOp0tanzsq56M5swgEegHPW-u4YRYamUY5nLfVzKjBD_xUgXqmOfIMQ1saatnlZ9TyCfywngqwbXg6XKSfWMIfdeXN4YpkspDX-QaIk9dYQuk-_sgEhrnAganbdeg_ViaZQTBH1-_-7i0xzghxoCs2kG3azTqJ9kePeRDQHvBXPkykq7HI1a1QEHWZvzdE1Rp_zmnBPqXVeIpDLqI3wgP39FzjvF7A8CbE0pw_YssTfH3zuUNeh1QP_wV0RkCgAJB8wzSqv6zn8uAtyqmM0-4-lCS4MIkG9Rqq4En6eCsqTMNmwssfzFs49dhccXWbvijfx6v1_kvZflQpKZH08vqeUY9ApX7CF9QuV_PT2qWZz6BXdwtDql9xzni_HCyWkLiVwZvl6FsxKxhaOXZMc3gGx9DQ4ZQZGPFAJH9hr9OQxc7L9eV4vzZTuFsy_wjUKEF0mkmscjy4bhxPXxNL959pmA9PSBYeP70ZfrD2gnL9gUGJiAjyctgJj9UjZyV5r5RRl9JV8DgC1gmDMRuNoKTdiU-ULpRxJrdm8OIzoP5XuGf--NP-wsstktfG_BGmekbtf2fBUhnu34K8WEEvjgVBphS2QEqf73kxK9VhMqUDbgN3GIxbOeh8-VhCk6ibEhVAlCklxQgRnV1nqaU_5ZJE7LDKnGBlqsgkMlE1yqFnQUxECnItlpTmJwzUqA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0d6a1fea999c7c2c016ae331cd684087d1a4c1e44c4fe396e5","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4021,"completion_tokens":92,"total_tokens":4113,"cost":0.00033856,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":2192,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00033856,"upstream_inference_prompt_cost":0.00029256,"upstream_inference_completions_cost":0.000046},"completion_tokens_details":{"reasoning_tokens":54,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"For Oren, the reservoir Warden, specifically: he refuses to let soldiers draw water without a council permit. This is not about Lysa. Lysa allows civilian scholars into the Sun Archive during daylight only."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Acknowledging implications briefly**\n\nI need to respond concisely while making sure to distinguish the important details. It might be interesting to note some implications, but I wonder if it's necessary given that the user requested a brief response. I have to be careful not to conflate the Wardens. I could mention that Oren bars soldiers without a permit, while Lysa provides daylight access for civilian scholars. This keeps the response focused and clear!","native":{"item":{"reasoning":"**Acknowledging implications briefly**\n\nI need to respond concisely while making sure to distinguish the important details. It might be interesting to note some implications, but I wonder if it's necessary given that the user requested a brief response. I have to be careful not to conflate the Wardens. I could mention that Oren bars soldiers without a permit, while Lysa provides daylight access for civilian scholars. This keeps the response focused and clear!","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging implications briefly**\n\nI need to respond concisely while making sure to distinguish the important details. It might be interesting to note some implications, but I wonder if it's necessary given that the user requested a brief response. I have to be careful not to conflate the Wardens. I could mention that Oren bars soldiers without a permit, while Lysa provides daylight access for civilian scholars. This keeps the response focused and clear!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zHP-yVlQ9v38pT4e8cUOqg0GlWp4XDhkn4nA83A9aFWJzCGg38FPEFnG1rDy531fq7MtPwUxgFNSolPHDoU1GQaWDylv8xanBUYiR2q5_FKr7rOouiOQPEgHbZ34KDPPTPnr6u2ycShiYvbKDGJ-2rpe2Oub7hlMlXelDwDj7Psq38KtlbiWEM5sucvtYFvgaL_ggeixZYMyHi7ho8rV6r9KfoSCnxBHtxsSF_OtdTMmYheEycwvsXOmruTpvWfdt0moMB7hrRBEpd2d-NAzloCtFDifycqrfzoRYjWyCBwiAKy1WwVz1PJ6lilXUKiaOtEdC0Giw4grjes8PKcp8bDQC8de-vvKGDoLKx3bWhl4HdNPQrZXwxdj2Om7HVFrq-WbhKfnGRxDUqUQQWyVDwDdCENsNuNrqaKoympKK0QQK8cnXQHcSUY1sNB26IK_1E63t8kzbZj5Lsmv-BT0p-I-bbWL2GdpkQDXS6kIBAM8yQd_hUvmy1gPz7EUGBPoy_v-BUZRmbIPmXe-qWk67htjDU7ZFeYipptYFwrHo7kw_hHVevtH-ubqzb6MinC-yF15fu7rAJNmGJDgurNjTJZv3jwrmlWJkVNaA3-BD19gJCqDGu3EeCGr-V2I8LEZBxMEEDXgcSix1tkuwIgcA-tj2fp6u0Clnbysp09hicFgyNYJZiwrfdCqCEB_csmqDB7OiIyerZv9LETaYCU0u7lxqYADY2gMsNjHv_W7_xCvspxr6J1guH266mGV2F7VY0hLOgkCX6yI_Lv5rcA8SfEpv3nTXnldJSkFaHcRAFYIpNpOJlq7VOURivlz3L07VKSpVNCYjXdaKRehSSkcgQel2MOcjIJh73I6wRFEWHZZLv6BTtgFr-rbl5hyC5t34up2jX4dZRGa0b3FDQwFnNruEQwAadtMpuKzY66yvFALY7BloA5R5FSgnj2cNZmvl-J0PEuReX2ARP2q8wmjFuViorWx7lbPacggGNrAYfdQ9ljKEI8YMK8NhH-bAQ7KsjnvHUrVKCAvOVDhsIeGcVNBmWyUCL1KIW7vC83McuP4CPOYJKedH6LWmWtY8ltGIBd4aHvINdpI9__dFxYlW0U3cqF9RqCuNnzTnrzTJwJ_ZoeKLfUop5OpR9ZGVO9E0Zx9EKTy_fKjjUlHuX0tY6--yIiuLCz_NAziy_ZfEG7t8h_-FlSVlxHEcNxGexl54HHIHOk-OsoE053keFiqNgpP9se-ZzEtlxE0pqt3ouqczXuD5ZTTVNYVjV3_Ceh96VVWlWwjTnZsdTlmuVgXgWMfcEghhaC12TH6j30r5VfL74Fw3MYVcWQgJ298xWOo6t0UNY_zrW0vpsXvE-JIC5mxXsdNbX8T74VrxpmZpPHMu5VfVvLFITQxq21tLiG4ETm6_6lJGWmT0Cz8cNsld_ShYa9mOivWvVCxQPi2_PJWRS89GNTX6jCbNQVyKld-eiFy3X-2FmnXUQcVQAe3GM3P0wv--xkEkU_we3hYIxsr1Bhu2Nta8CnfszftvTJCfOwXOIPWUMVS8WBb8WSqA3fnK_iApf-mP-AUYlA5OGUD2_-SCe9kK6CEsFW8IPfh1FhIM_SNhXHrVFBWuz8sGMGgflKdQYOp0tanzsq56M5swgEegHPW-u4YRYamUY5nLfVzKjBD_xUgXqmOfIMQ1saatnlZ9TyCfywngqwbXg6XKSfWMIfdeXN4YpkspDX-QaIk9dYQuk-_sgEhrnAganbdeg_ViaZQTBH1-_-7i0xzghxoCs2kG3azTqJ9kePeRDQHvBXPkykq7HI1a1QEHWZvzdE1Rp_zmnBPqXVeIpDLqI3wgP39FzjvF7A8CbE0pw_YssTfH3zuUNeh1QP_wV0RkCgAJB8wzSqv6zn8uAtyqmM0-4-lCS4MIkG9Rqq4En6eCsqTMNmwssfzFs49dhccXWbvijfx6v1_kvZflQpKZH08vqeUY9ApX7CF9QuV_PT2qWZz6BXdwtDql9xzni_HCyWkLiVwZvl6FsxKxhaOXZMc3gGx9DQ4ZQZGPFAJH9hr9OQxc7L9eV4vzZTuFsy_wjUKEF0mkmscjy4bhxPXxNL959pmA9PSBYeP70ZfrD2gnL9gUGJiAjyctgJj9UjZyV5r5RRl9JV8DgC1gmDMRuNoKTdiU-ULpRxJrdm8OIzoP5XuGf--NP-wsstktfG_BGmekbtf2fBUhnu34K8WEEvjgVBphS2QEqf73kxK9VhMqUDbgN3GIxbOeh8-VhCk6ibEhVAlCklxQgRnV1nqaU_5ZJE7LDKnGBlqsgkMlE1yqFnQUxECnItlpTmJwzUqA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0d6a1fea999c7c2c016ae331cd684087d1a4c1e44c4fe396e5","index":1}]},"fingerprint":"4826bc5b19842efc"}},{"type":"text","text":"Understood: Oren requires a council permit for soldiers to draw reservoir water. Separately, Lysa admits civilian scholars to the Sun Archive during daylight only."}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793274316-b2ITpQ59umg78XmdOoJP"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Acknowledging implications briefly**\n\nI need to respond concisely while making sure to distinguish the important details. It might be interesting to note some implications, but I wonder if it's necessary given that the user requested a brief response. I have to be careful not to conflate the Wardens. I could mention that Oren bars soldiers without a permit, while Lysa provides daylight access for civilian scholars. This keeps the response focused and clear!","native":{"item":{"reasoning":"**Acknowledging implications briefly**\n\nI need to respond concisely while making sure to distinguish the important details. It might be interesting to note some implications, but I wonder if it's necessary given that the user requested a brief response. I have to be careful not to conflate the Wardens. I could mention that Oren bars soldiers without a permit, while Lysa provides daylight access for civilian scholars. This keeps the response focused and clear!","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging implications briefly**\n\nI need to respond concisely while making sure to distinguish the important details. It might be interesting to note some implications, but I wonder if it's necessary given that the user requested a brief response. I have to be careful not to conflate the Wardens. I could mention that Oren bars soldiers without a permit, while Lysa provides daylight access for civilian scholars. This keeps the response focused and clear!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zHP-yVlQ9v38pT4e8cUOqg0GlWp4XDhkn4nA83A9aFWJzCGg38FPEFnG1rDy531fq7MtPwUxgFNSolPHDoU1GQaWDylv8xanBUYiR2q5_FKr7rOouiOQPEgHbZ34KDPPTPnr6u2ycShiYvbKDGJ-2rpe2Oub7hlMlXelDwDj7Psq38KtlbiWEM5sucvtYFvgaL_ggeixZYMyHi7ho8rV6r9KfoSCnxBHtxsSF_OtdTMmYheEycwvsXOmruTpvWfdt0moMB7hrRBEpd2d-NAzloCtFDifycqrfzoRYjWyCBwiAKy1WwVz1PJ6lilXUKiaOtEdC0Giw4grjes8PKcp8bDQC8de-vvKGDoLKx3bWhl4HdNPQrZXwxdj2Om7HVFrq-WbhKfnGRxDUqUQQWyVDwDdCENsNuNrqaKoympKK0QQK8cnXQHcSUY1sNB26IK_1E63t8kzbZj5Lsmv-BT0p-I-bbWL2GdpkQDXS6kIBAM8yQd_hUvmy1gPz7EUGBPoy_v-BUZRmbIPmXe-qWk67htjDU7ZFeYipptYFwrHo7kw_hHVevtH-ubqzb6MinC-yF15fu7rAJNmGJDgurNjTJZv3jwrmlWJkVNaA3-BD19gJCqDGu3EeCGr-V2I8LEZBxMEEDXgcSix1tkuwIgcA-tj2fp6u0Clnbysp09hicFgyNYJZiwrfdCqCEB_csmqDB7OiIyerZv9LETaYCU0u7lxqYADY2gMsNjHv_W7_xCvspxr6J1guH266mGV2F7VY0hLOgkCX6yI_Lv5rcA8SfEpv3nTXnldJSkFaHcRAFYIpNpOJlq7VOURivlz3L07VKSpVNCYjXdaKRehSSkcgQel2MOcjIJh73I6wRFEWHZZLv6BTtgFr-rbl5hyC5t34up2jX4dZRGa0b3FDQwFnNruEQwAadtMpuKzY66yvFALY7BloA5R5FSgnj2cNZmvl-J0PEuReX2ARP2q8wmjFuViorWx7lbPacggGNrAYfdQ9ljKEI8YMK8NhH-bAQ7KsjnvHUrVKCAvOVDhsIeGcVNBmWyUCL1KIW7vC83McuP4CPOYJKedH6LWmWtY8ltGIBd4aHvINdpI9__dFxYlW0U3cqF9RqCuNnzTnrzTJwJ_ZoeKLfUop5OpR9ZGVO9E0Zx9EKTy_fKjjUlHuX0tY6--yIiuLCz_NAziy_ZfEG7t8h_-FlSVlxHEcNxGexl54HHIHOk-OsoE053keFiqNgpP9se-ZzEtlxE0pqt3ouqczXuD5ZTTVNYVjV3_Ceh96VVWlWwjTnZsdTlmuVgXgWMfcEghhaC12TH6j30r5VfL74Fw3MYVcWQgJ298xWOo6t0UNY_zrW0vpsXvE-JIC5mxXsdNbX8T74VrxpmZpPHMu5VfVvLFITQxq21tLiG4ETm6_6lJGWmT0Cz8cNsld_ShYa9mOivWvVCxQPi2_PJWRS89GNTX6jCbNQVyKld-eiFy3X-2FmnXUQcVQAe3GM3P0wv--xkEkU_we3hYIxsr1Bhu2Nta8CnfszftvTJCfOwXOIPWUMVS8WBb8WSqA3fnK_iApf-mP-AUYlA5OGUD2_-SCe9kK6CEsFW8IPfh1FhIM_SNhXHrVFBWuz8sGMGgflKdQYOp0tanzsq56M5swgEegHPW-u4YRYamUY5nLfVzKjBD_xUgXqmOfIMQ1saatnlZ9TyCfywngqwbXg6XKSfWMIfdeXN4YpkspDX-QaIk9dYQuk-_sgEhrnAganbdeg_ViaZQTBH1-_-7i0xzghxoCs2kG3azTqJ9kePeRDQHvBXPkykq7HI1a1QEHWZvzdE1Rp_zmnBPqXVeIpDLqI3wgP39FzjvF7A8CbE0pw_YssTfH3zuUNeh1QP_wV0RkCgAJB8wzSqv6zn8uAtyqmM0-4-lCS4MIkG9Rqq4En6eCsqTMNmwssfzFs49dhccXWbvijfx6v1_kvZflQpKZH08vqeUY9ApX7CF9QuV_PT2qWZz6BXdwtDql9xzni_HCyWkLiVwZvl6FsxKxhaOXZMc3gGx9DQ4ZQZGPFAJH9hr9OQxc7L9eV4vzZTuFsy_wjUKEF0mkmscjy4bhxPXxNL959pmA9PSBYeP70ZfrD2gnL9gUGJiAjyctgJj9UjZyV5r5RRl9JV8DgC1gmDMRuNoKTdiU-ULpRxJrdm8OIzoP5XuGf--NP-wsstktfG_BGmekbtf2fBUhnu34K8WEEvjgVBphS2QEqf73kxK9VhMqUDbgN3GIxbOeh8-VhCk6ibEhVAlCklxQgRnV1nqaU_5ZJE7LDKnGBlqsgkMlE1yqFnQUxECnItlpTmJwzUqA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0d6a1fea999c7c2c016ae331cd684087d1a4c1e44c4fe396e5","index":1}]},"fingerprint":"4826bc5b19842efc"}},{"type":"text","text":"Understood: Oren requires a council permit for soldiers to draw reservoir water. Separately, Lysa admits civilian scholars to the Sun Archive during daylight only."}]}
+

@@ -1,0 +1,348 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"tool_call","name":"search_world"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"{\""}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"query"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"\":\""}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"B"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"ren"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" Vale"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" captain"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" of"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" fishing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" boat"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" Pet"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"rel"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":";"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" whether"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" related"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" A"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"sha"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" Pell"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" member"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" of"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" Lantern"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" Guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":";"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" other"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" known"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" dock"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"side"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" capt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"ains"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"\"}"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"toolcall","id":{"provider":"call_pFEkSvB8lia8xXrsGEu0Lmdt"},"function":{"name":"search_world","arguments":{"query":"Bren Vale, captain of the fishing boat Petrel; whether related to Asha Pell or a member of the Lantern Guild; other known dockside captains"}},"native":{"item":{"id":"call_pFEkSvB8lia8xXrsGEu0Lmdt","type":"function","function":{"name":"search_world","arguments":"{\"query\":\"Bren Vale, captain of the fishing boat Petrel; whether related to Asha Pell or a member of the Lantern Guild; other known dockside captains\"}"}},"fingerprint":"b71ba01770e03bfa"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":3218,"output_tokens":49,"total_tokens":3267,"cached_input_tokens":1826,"cache_creation_input_tokens":1389,"reasoning_tokens":0,"cost":{"total":0.000216685}},"response_id":"gen-1793270388-Z1XVrI8OYfgCIdUOSWIV","finish_reason":"tool_calls","raw":{"id":"gen-1793270388-Z1XVrI8OYfgCIdUOSWIV","object":"chat.completion","created":1793270388,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":null,"role":"assistant","tool_calls":[{"id":"call_pFEkSvB8lia8xXrsGEu0Lmdt","type":"function","function":{"name":"search_world","arguments":"{\"query\":\"Bren Vale, captain of the fishing boat Petrel; whether related to Asha Pell or a member of the Lantern Guild; other known dockside captains\"}"}}]},"finish_reason":"tool_calls","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":3218,"completion_tokens":49,"total_tokens":3267,"cost":0.000216685,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":1389,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000216685,"upstream_inference_prompt_cost":0.000192185,"upstream_inference_completions_cost":0.0000245},"completion_tokens_details":{"reasoning_tokens":0,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"toolCall","tool_call":{"id":{"provider":"call_pFEkSvB8lia8xXrsGEu0Lmdt"},"function":{"name":"search_world","arguments":{"query":"Bren Vale, captain of the fishing boat Petrel; whether related to Asha Pell or a member of the Lantern Guild; other known dockside captains"}},"native":{"item":{"id":"call_pFEkSvB8lia8xXrsGEu0Lmdt","type":"function","function":{"name":"search_world","arguments":"{\"query\":\"Bren Vale, captain of the fishing boat Petrel; whether related to Asha Pell or a member of the Lantern Guild; other known dockside captains\"}"}},"fingerprint":"b71ba01770e03bfa"}}}
+
+data: {"type":"toolExecutionCommitted","tool_call":{"id":{"provider":"call_pFEkSvB8lia8xXrsGEu0Lmdt"},"function":{"name":"search_world","arguments":{"query":"Bren Vale, captain of the fishing boat Petrel; whether related to Asha Pell or a member of the Lantern Guild; other known dockside captains"}},"native":{"item":{"id":"call_pFEkSvB8lia8xXrsGEu0Lmdt","type":"function","function":{"name":"search_world","arguments":"{\"query\":\"Bren Vale, captain of the fishing boat Petrel; whether related to Asha Pell or a member of the Lantern Guild; other known dockside captains\"}"}},"fingerprint":"b71ba01770e03bfa"}}}
+
+data: {"type":"toolResult","tool_result":{"call":{"provider":"call_pFEkSvB8lia8xXrsGEu0Lmdt"},"name":"search_world","content":[{"type":"text","text":"Asha Pell (person) [ID: 731a80b4-1cd1-40e2-9fe7-618d14dd3932] [Aliases: Captain Ash]: Captain of the courier ship Nightjar; she grew up in Vesper and belongs to the Lantern Guild. Her crew usually calls her Captain Ash.\n  Properties: source_conversation: 01a1873c-dda9-7bf5-a8c5-094ae62ee4c8\n  - CAPTAINS â Nightjar (ship, courier ship) [ID: b0cd3a42-d5b0-44dd-972d-da7d960aab40]: A courier ship captained by Asha Pell.\n  - GREW_UP_IN â Vesper (city, port) [ID: 8e5eb323-f581-4ce1-8cf4-8bceb6847598]: Brinewake's main port city, built around a tidal lighthouse.\n  - MEMBER_OF â Lantern Guild (guild) [ID: 8ada2504-3940-4fa0-9142-7b15d6e2c8fa]: The guild that maintains Vesper's tidal lighthouse and buys blue salt from Orin's miners; it does not own the mines.\n\nLantern Guild (guild) [ID: 8ada2504-3940-4fa0-9142-7b15d6e2c8fa]: The guild that maintains Vesper's tidal lighthouse and buys blue salt from Orin's miners; it does not own the mines.\n  - â MEMBER_OF from Asha Pell (person) [ID: 731a80b4-1cd1-40e2-9fe7-618d14dd3932] [Aliases: Captain Ash]: Captain of the courier ship Nightjar; she grew up in Vesper and belongs to the Lantern Guild. Her crew usually calls her Captain Ash.\n  - MAINTAINS â Tidal lighthouse of Vesper (lighthouse) [ID: 76dc2022-8211-4657-b177-03c04d118558]: A tidal lighthouse around which Vesper is built. Its lenses run on blue salt.\n  - BUYS_FROM â Orin's miners (worker group) [ID: 92474181-bc9f-4dc2-bf64-51e67969f1ea]: Miners on Orin who mine blue salt; the Lantern Guild buys salt from them.\n\nNightjar (ship, courier ship) [ID: b0cd3a42-d5b0-44dd-972d-da7d960aab40]: A courier ship captained by Asha Pell.\n  Properties: source_conversation: 01a1873c-dda9-7bf5-a8c5-094ae62ee4c8\n  - â CAPTAINS from Asha Pell (person) [ID: 731a80b4-1cd1-40e2-9fe7-618d14dd3932] [Aliases: Captain Ash]: Captain of the courier ship Nightjar; she grew up in Vesper and belongs to the Lantern Guild. Her crew usually calls her Captain Ash.\n\nBlue salt (mineral, fuel) [ID: 8f0beecf-61cb-4419-99eb-e2030a4eafb7]: A salt mined on the island of Orin that powers the lenses of Vesper's tidal lighthouse.\n  - â USES from Tidal lighthouse of Vesper (lighthouse) [ID: 76dc2022-8211-4657-b177-03c04d118558]: A tidal lighthouse around which Vesper is built. Its lenses run on blue salt.\n  - MINED_ON â Orin (island) [ID: 9bac8802-f464-491c-b86e-9c90ec862af2]: An island where blue salt is mined.\n\nOrin's miners (worker group) [ID: 92474181-bc9f-4dc2-bf64-51e67969f1ea]: Miners on Orin who mine blue salt; the Lantern Guild buys salt from them.\n  - â BUYS_FROM from Lantern Guild (guild) [ID: 8ada2504-3940-4fa0-9142-7b15d6e2c8fa]: The guild that maintains Vesper's tidal lighthouse and buys blue salt from Orin's miners; it does not own the mines.\n  - LOCATED_IN â Orin (island) [ID: 9bac8802-f464-491c-b86e-9c90ec862af2]: An island where blue salt is mined."}]}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Clarifying dock titles**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" acknowledge"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" there"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"âs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" potential"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ambiguity"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" dock"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" title"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" won"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ât"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" search"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" for"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" new"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" entity"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" since"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" seems"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" like"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" search"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" occurred"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" due"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" an"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" earlier"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" reference"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"âs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" important"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" respond"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" naturally"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" without"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" making"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" assumptions"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Maybe"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" title"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" \""}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"Captain"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"\""}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" shared"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" not"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" necessarily"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" related"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" should"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ask"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" whether"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" dock"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" refers"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Bren"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" as"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" \""}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"Captain"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"\""}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" clarify"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" any"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" distinctions"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Keeping"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" concise"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" will"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" be"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" helpful"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"!"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"B"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ren"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" A"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"sha"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" are"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" separate"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" capt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ains"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" he"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" commands"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Pet"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"rel"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" unlike"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" her"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" he"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" has"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" no"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Lantern"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" ties"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" â"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Captain"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"â"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" simply"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" dock"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"side"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" title"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" for"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" any"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" boat"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" captain"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" there"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"?"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"Bren and Asha are separate captains: he commands the Petrel, and unlike her, he has no Lantern Guild ties. Is âCaptainâ simply the dockside title for any boat captain there?"}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Clarifying dock titles**\n\nI need to acknowledge that thereâs a potential ambiguity in the dock title. I wonât search for a new entity since it seems like the search occurred due to an earlier reference. Itâs important to respond naturally without making assumptions. Maybe the title \"Captain\" is shared and not necessarily related. I should ask whether the dock refers to Bren as \"Captain\" to clarify any distinctions. Keeping it concise will be helpful!","native":{"item":{"reasoning":"**Clarifying dock titles**\n\nI need to acknowledge that thereâs a potential ambiguity in the dock title. I wonât search for a new entity since it seems like the search occurred due to an earlier reference. Itâs important to respond naturally without making assumptions. Maybe the title \"Captain\" is shared and not necessarily related. I should ask whether the dock refers to Bren as \"Captain\" to clarify any distinctions. Keeping it concise will be helpful!","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying dock titles**\n\nI need to acknowledge that thereâs a potential ambiguity in the dock title. I wonât search for a new entity since it seems like the search occurred due to an earlier reference. Itâs important to respond naturally without making assumptions. Maybe the title \"Captain\" is shared and not necessarily related. I should ask whether the dock refers to Bren as \"Captain\" to clarify any distinctions. Keeping it concise will be helpful!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yJ5r92TSiLE3XD4Wk2P5s7pN7zO5rH0EcNWeh2zO8ljbr6jtzv3dxhORpFs8eHaUIydktyGEGRuMiR6wiCWseri_tnoUJxRqjp3VQhTd0hVciSHd188Soko7U48b_cjMYcFhIplv8zutSTfLtcx16J1jUxSr7Igh6tbyG4AHa2MvzPTf9DZGSXZnMmCniJ81s37CtcJfB7W0YQS9tvt1fTmP-rVA1RmaBfV7Bs7DE_3J95ZAYMDjhBhNVXDauD4PbVrzmFWinLJTlMDQ9VqzTISAnUBIPvU4ixcFvA1Nj2ElIKjiV0gxEy7x-Tc6xF72AVtJYrGPei7KvNhKQ-abo8bEaYh3re4qh14npjuEjlZRdHQcJI02rF1iVUylpTEgjRZML876Cc_tComqu0PqS02teWG-xbY1hllAzzV8hVT-SEMc8LYvLDeiq88hn_RfI2wHXsz5uOXY_poklpSV4cu4aWv5BqHoMRTNLVClYJU66Nv7pLOcLoNYgfeRMSSw4_BjzUaQOJDsbRJl_ChBdQw0BAY20Xk8kZgGMpX1K_pzamxRPcMHPrHpSSH969mJj3NTEQNuLo45g74BSnb34B6ITSxiihmUCIQguF70NvAFNHIDpOINASsehAvYELHNxVVRgjeE-i7FZISesTICRDMQqP_nYvhXHtwpiFgCX_ZzyAiMcwUFQSW71O8tKBfdXx3sBYDaf0d4twD4gveSEvKUF7ZKEj7P2mm8wXvf39WTbhkONdW5XXQkb-LWQbnW-1TTT_klk0y84hJ0DoC8Ncd7qe_WGr643utcjmNjdkSO3WkFuAq9nAbGw3fZVmcVNpKJSkJUViOhpI00GGsaEfDRj3F2gjS-sghTHzF0J3WASmrwpaD1ICp3cPG8T56W6bRG-kj4T4sm_dEJqgh9ljZnCsn4NDDmz0atlN_srVl0nMNizOc_ZRrEcUsE_uB2IhLANmHHqVPLGqoyb1sx5MDoYIgqSdXOm-FCtT8OxtpAelUqjbYDTrYMufHqNfkJ_GV_RxY2iam9n8q6pb6myadDmjxQqDPypKoBjuNv44fDw6r7wMLG2-8So-HUn1wyt60ezMVs5UNjUz0rB_PMYfdGvZViyavlRvnRfKDSEWKk_fIWxtU6ValWkrVSYjn-XdXOBrY-AVnjxy6UwVeCzk19pMYCrwe8_zOSxOgXSqKJXXzc1VXxT6bNNKYjDnRdUfXfar2EngnpUj-VOiudA1a49mZyH92Jei2RyAMP_w3_EUtYYCJqyf76XmK4vNANCi5WsU4Puv3-s8glTm6amvn-Awlnn8HaoI8pif9-PN9V_8rZS0ZTxbIVSZnxDBnR3qzamdyVFg6exS0Jg5n5PRr6i9y-tGVRWp8MC8Ktf5F6hyEymtduOVo8zooe_ubeiVfc-_hVXOWyE5ZA2oCeqhQ_v41YXjh1-H8IHhg6qvIUuMdJfacE_AtYvVNQ_Tr-GTP3c3pHj7nw_GfzNTvARORYm_4rxVgO7ztAl-9Qkcak66F97vncG53-QATCZqZzyCOwK6w0FPaBdAcBuIHtJJNnWPsP8a9xkCt1i_8m4Yitam99CbIiH-52nmsh7x5V87WiqlCE7bmVZmZZv-O3XG3JiDcy_cqjhmMZqv-rp0gTkVrFkupXFGRY7pQZ8fORTwuvCjF3ioVWO2HAE2ftA1PX9PUnEGptjs_T6zDgab8TADUg3h2I2fNQw9aFPqSE4stl1Aqc4IdfC4uzO_gWbK8Qd5TUmBZCvCCKt7yEzskbQY9o2A87FMSW35CE3WKz38bn2ss5eycOckxtwqEVidH1WdGuiE_PbFS1CD2vJHQ_g9_3ywDiKB-TrvEMlGZL0rQfTadUCNFwEa71VJiwsL0tx4mrSYk8C9MaDh-RAoS-YM2Yc0hCnZ0kA3rUx-qj9H3JUCxMkcSbZdazDv7zS9FyM_gQVfkPNt3427Di4QM5CZSdArtaa2S4cFY5xB5sSYt4saEwy2UzyQNGFJ6iFJrTQsYGoL3h6MuBfiHpKm-rEGYuOGtMYmWeqNQt_L6QVgeviytkmGZp8uWyjmPr7nPITtgrpz_7BN1nYusRTg7aYcf__nHpmW4wIADZ8bSGfVxK7taQOjuGXgqgQmYgeRBRLVBmvD9tFXwC3Fan1ZQIRH6e8rf1RKZ5nx0OQhLP_CcYyHkspbkMopSFHQaOxa5Wvj23ucwSMIKueUqBuYbF4WrreauRljUt9U-LfL5Z_NTP1scK2f6kTN04XN24toZNRSxe570sGo1mrZG-bjcYuIWJmNS6u_SkyL0Nbf8Mo1AUh9zjSdBzPNZotz5IdbjgA5_6wGF9N_1eB8-n-u_b_8=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0535af19ef1e6bba016ae32278084887d1b90219b8e6b70394","index":1}]},"fingerprint":"109ab11d70c9dbb8"}}}}
+
+data: {"type":"completionCall","call_index":1,"usage":{"input_tokens":4287,"output_tokens":105,"total_tokens":4392,"cached_input_tokens":3215,"cache_creation_input_tokens":1069,"reasoning_tokens":57,"cost":{"total":0.000218575}},"response_id":"gen-1793270390-aDGx4mfDuQ6Z4kDj5JU0","finish_reason":"stop","raw":{"id":"gen-1793270390-aDGx4mfDuQ6Z4kDj5JU0","object":"chat.completion","created":1793270390,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Bren and Asha are separate captains: he commands the Petrel, and unlike her, he has no Lantern Guild ties. Is âCaptainâ simply the dockside title for any boat captain there?","role":"assistant","reasoning":"**Clarifying dock titles**\n\nI need to acknowledge that thereâs a potential ambiguity in the dock title. I wonât search for a new entity since it seems like the search occurred due to an earlier reference. Itâs important to respond naturally without making assumptions. Maybe the title \"Captain\" is shared and not necessarily related. I should ask whether the dock refers to Bren as \"Captain\" to clarify any distinctions. Keeping it concise will be helpful!","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying dock titles**\n\nI need to acknowledge that thereâs a potential ambiguity in the dock title. I wonât search for a new entity since it seems like the search occurred due to an earlier reference. Itâs important to respond naturally without making assumptions. Maybe the title \"Captain\" is shared and not necessarily related. I should ask whether the dock refers to Bren as \"Captain\" to clarify any distinctions. Keeping it concise will be helpful!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yJ5r92TSiLE3XD4Wk2P5s7pN7zO5rH0EcNWeh2zO8ljbr6jtzv3dxhORpFs8eHaUIydktyGEGRuMiR6wiCWseri_tnoUJxRqjp3VQhTd0hVciSHd188Soko7U48b_cjMYcFhIplv8zutSTfLtcx16J1jUxSr7Igh6tbyG4AHa2MvzPTf9DZGSXZnMmCniJ81s37CtcJfB7W0YQS9tvt1fTmP-rVA1RmaBfV7Bs7DE_3J95ZAYMDjhBhNVXDauD4PbVrzmFWinLJTlMDQ9VqzTISAnUBIPvU4ixcFvA1Nj2ElIKjiV0gxEy7x-Tc6xF72AVtJYrGPei7KvNhKQ-abo8bEaYh3re4qh14npjuEjlZRdHQcJI02rF1iVUylpTEgjRZML876Cc_tComqu0PqS02teWG-xbY1hllAzzV8hVT-SEMc8LYvLDeiq88hn_RfI2wHXsz5uOXY_poklpSV4cu4aWv5BqHoMRTNLVClYJU66Nv7pLOcLoNYgfeRMSSw4_BjzUaQOJDsbRJl_ChBdQw0BAY20Xk8kZgGMpX1K_pzamxRPcMHPrHpSSH969mJj3NTEQNuLo45g74BSnb34B6ITSxiihmUCIQguF70NvAFNHIDpOINASsehAvYELHNxVVRgjeE-i7FZISesTICRDMQqP_nYvhXHtwpiFgCX_ZzyAiMcwUFQSW71O8tKBfdXx3sBYDaf0d4twD4gveSEvKUF7ZKEj7P2mm8wXvf39WTbhkONdW5XXQkb-LWQbnW-1TTT_klk0y84hJ0DoC8Ncd7qe_WGr643utcjmNjdkSO3WkFuAq9nAbGw3fZVmcVNpKJSkJUViOhpI00GGsaEfDRj3F2gjS-sghTHzF0J3WASmrwpaD1ICp3cPG8T56W6bRG-kj4T4sm_dEJqgh9ljZnCsn4NDDmz0atlN_srVl0nMNizOc_ZRrEcUsE_uB2IhLANmHHqVPLGqoyb1sx5MDoYIgqSdXOm-FCtT8OxtpAelUqjbYDTrYMufHqNfkJ_GV_RxY2iam9n8q6pb6myadDmjxQqDPypKoBjuNv44fDw6r7wMLG2-8So-HUn1wyt60ezMVs5UNjUz0rB_PMYfdGvZViyavlRvnRfKDSEWKk_fIWxtU6ValWkrVSYjn-XdXOBrY-AVnjxy6UwVeCzk19pMYCrwe8_zOSxOgXSqKJXXzc1VXxT6bNNKYjDnRdUfXfar2EngnpUj-VOiudA1a49mZyH92Jei2RyAMP_w3_EUtYYCJqyf76XmK4vNANCi5WsU4Puv3-s8glTm6amvn-Awlnn8HaoI8pif9-PN9V_8rZS0ZTxbIVSZnxDBnR3qzamdyVFg6exS0Jg5n5PRr6i9y-tGVRWp8MC8Ktf5F6hyEymtduOVo8zooe_ubeiVfc-_hVXOWyE5ZA2oCeqhQ_v41YXjh1-H8IHhg6qvIUuMdJfacE_AtYvVNQ_Tr-GTP3c3pHj7nw_GfzNTvARORYm_4rxVgO7ztAl-9Qkcak66F97vncG53-QATCZqZzyCOwK6w0FPaBdAcBuIHtJJNnWPsP8a9xkCt1i_8m4Yitam99CbIiH-52nmsh7x5V87WiqlCE7bmVZmZZv-O3XG3JiDcy_cqjhmMZqv-rp0gTkVrFkupXFGRY7pQZ8fORTwuvCjF3ioVWO2HAE2ftA1PX9PUnEGptjs_T6zDgab8TADUg3h2I2fNQw9aFPqSE4stl1Aqc4IdfC4uzO_gWbK8Qd5TUmBZCvCCKt7yEzskbQY9o2A87FMSW35CE3WKz38bn2ss5eycOckxtwqEVidH1WdGuiE_PbFS1CD2vJHQ_g9_3ywDiKB-TrvEMlGZL0rQfTadUCNFwEa71VJiwsL0tx4mrSYk8C9MaDh-RAoS-YM2Yc0hCnZ0kA3rUx-qj9H3JUCxMkcSbZdazDv7zS9FyM_gQVfkPNt3427Di4QM5CZSdArtaa2S4cFY5xB5sSYt4saEwy2UzyQNGFJ6iFJrTQsYGoL3h6MuBfiHpKm-rEGYuOGtMYmWeqNQt_L6QVgeviytkmGZp8uWyjmPr7nPITtgrpz_7BN1nYusRTg7aYcf__nHpmW4wIADZ8bSGfVxK7taQOjuGXgqgQmYgeRBRLVBmvD9tFXwC3Fan1ZQIRH6e8rf1RKZ5nx0OQhLP_CcYyHkspbkMopSFHQaOxa5Wvj23ucwSMIKueUqBuYbF4WrreauRljUt9U-LfL5Z_NTP1scK2f6kTN04XN24toZNRSxe570sGo1mrZG-bjcYuIWJmNS6u_SkyL0Nbf8Mo1AUh9zjSdBzPNZotz5IdbjgA5_6wGF9N_1eB8-n-u_b_8=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0535af19ef1e6bba016ae32278084887d1b90219b8e6b70394","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4287,"completion_tokens":105,"total_tokens":4392,"cost":0.000218575,"is_byok":false,"prompt_tokens_details":{"cached_tokens":3215,"cache_write_tokens":1069,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000218575,"upstream_inference_prompt_cost":0.000166075,"upstream_inference_completions_cost":0.0000525},"completion_tokens_details":{"reasoning_tokens":57,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":7505,"output_tokens":154,"total_tokens":7659,"cached_input_tokens":5041,"cache_creation_input_tokens":2458,"reasoning_tokens":57,"cost":{"total":0.00043526}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":3218,"output_tokens":49,"total_tokens":3267,"cached_input_tokens":1826,"cache_creation_input_tokens":1389,"reasoning_tokens":0,"cost":{"total":0.000216685}},"response_id":"gen-1793270388-Z1XVrI8OYfgCIdUOSWIV","finish_reason":"tool_calls","raw":{"id":"gen-1793270388-Z1XVrI8OYfgCIdUOSWIV","object":"chat.completion","created":1793270388,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":null,"role":"assistant","tool_calls":[{"id":"call_pFEkSvB8lia8xXrsGEu0Lmdt","type":"function","function":{"name":"search_world","arguments":"{\"query\":\"Bren Vale, captain of the fishing boat Petrel; whether related to Asha Pell or a member of the Lantern Guild; other known dockside captains\"}"}}]},"finish_reason":"tool_calls","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":3218,"completion_tokens":49,"total_tokens":3267,"cost":0.000216685,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":1389,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000216685,"upstream_inference_prompt_cost":0.000192185,"upstream_inference_completions_cost":0.0000245},"completion_tokens_details":{"reasoning_tokens":0,"image_tokens":0,"audio_tokens":0}}}},{"call_index":1,"usage":{"input_tokens":4287,"output_tokens":105,"total_tokens":4392,"cached_input_tokens":3215,"cache_creation_input_tokens":1069,"reasoning_tokens":57,"cost":{"total":0.000218575}},"response_id":"gen-1793270390-aDGx4mfDuQ6Z4kDj5JU0","finish_reason":"stop","raw":{"id":"gen-1793270390-aDGx4mfDuQ6Z4kDj5JU0","object":"chat.completion","created":1793270390,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Bren and Asha are separate captains: he commands the Petrel, and unlike her, he has no Lantern Guild ties. Is âCaptainâ simply the dockside title for any boat captain there?","role":"assistant","reasoning":"**Clarifying dock titles**\n\nI need to acknowledge that thereâs a potential ambiguity in the dock title. I wonât search for a new entity since it seems like the search occurred due to an earlier reference. Itâs important to respond naturally without making assumptions. Maybe the title \"Captain\" is shared and not necessarily related. I should ask whether the dock refers to Bren as \"Captain\" to clarify any distinctions. Keeping it concise will be helpful!","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying dock titles**\n\nI need to acknowledge that thereâs a potential ambiguity in the dock title. I wonât search for a new entity since it seems like the search occurred due to an earlier reference. Itâs important to respond naturally without making assumptions. Maybe the title \"Captain\" is shared and not necessarily related. I should ask whether the dock refers to Bren as \"Captain\" to clarify any distinctions. Keeping it concise will be helpful!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yJ5r92TSiLE3XD4Wk2P5s7pN7zO5rH0EcNWeh2zO8ljbr6jtzv3dxhORpFs8eHaUIydktyGEGRuMiR6wiCWseri_tnoUJxRqjp3VQhTd0hVciSHd188Soko7U48b_cjMYcFhIplv8zutSTfLtcx16J1jUxSr7Igh6tbyG4AHa2MvzPTf9DZGSXZnMmCniJ81s37CtcJfB7W0YQS9tvt1fTmP-rVA1RmaBfV7Bs7DE_3J95ZAYMDjhBhNVXDauD4PbVrzmFWinLJTlMDQ9VqzTISAnUBIPvU4ixcFvA1Nj2ElIKjiV0gxEy7x-Tc6xF72AVtJYrGPei7KvNhKQ-abo8bEaYh3re4qh14npjuEjlZRdHQcJI02rF1iVUylpTEgjRZML876Cc_tComqu0PqS02teWG-xbY1hllAzzV8hVT-SEMc8LYvLDeiq88hn_RfI2wHXsz5uOXY_poklpSV4cu4aWv5BqHoMRTNLVClYJU66Nv7pLOcLoNYgfeRMSSw4_BjzUaQOJDsbRJl_ChBdQw0BAY20Xk8kZgGMpX1K_pzamxRPcMHPrHpSSH969mJj3NTEQNuLo45g74BSnb34B6ITSxiihmUCIQguF70NvAFNHIDpOINASsehAvYELHNxVVRgjeE-i7FZISesTICRDMQqP_nYvhXHtwpiFgCX_ZzyAiMcwUFQSW71O8tKBfdXx3sBYDaf0d4twD4gveSEvKUF7ZKEj7P2mm8wXvf39WTbhkONdW5XXQkb-LWQbnW-1TTT_klk0y84hJ0DoC8Ncd7qe_WGr643utcjmNjdkSO3WkFuAq9nAbGw3fZVmcVNpKJSkJUViOhpI00GGsaEfDRj3F2gjS-sghTHzF0J3WASmrwpaD1ICp3cPG8T56W6bRG-kj4T4sm_dEJqgh9ljZnCsn4NDDmz0atlN_srVl0nMNizOc_ZRrEcUsE_uB2IhLANmHHqVPLGqoyb1sx5MDoYIgqSdXOm-FCtT8OxtpAelUqjbYDTrYMufHqNfkJ_GV_RxY2iam9n8q6pb6myadDmjxQqDPypKoBjuNv44fDw6r7wMLG2-8So-HUn1wyt60ezMVs5UNjUz0rB_PMYfdGvZViyavlRvnRfKDSEWKk_fIWxtU6ValWkrVSYjn-XdXOBrY-AVnjxy6UwVeCzk19pMYCrwe8_zOSxOgXSqKJXXzc1VXxT6bNNKYjDnRdUfXfar2EngnpUj-VOiudA1a49mZyH92Jei2RyAMP_w3_EUtYYCJqyf76XmK4vNANCi5WsU4Puv3-s8glTm6amvn-Awlnn8HaoI8pif9-PN9V_8rZS0ZTxbIVSZnxDBnR3qzamdyVFg6exS0Jg5n5PRr6i9y-tGVRWp8MC8Ktf5F6hyEymtduOVo8zooe_ubeiVfc-_hVXOWyE5ZA2oCeqhQ_v41YXjh1-H8IHhg6qvIUuMdJfacE_AtYvVNQ_Tr-GTP3c3pHj7nw_GfzNTvARORYm_4rxVgO7ztAl-9Qkcak66F97vncG53-QATCZqZzyCOwK6w0FPaBdAcBuIHtJJNnWPsP8a9xkCt1i_8m4Yitam99CbIiH-52nmsh7x5V87WiqlCE7bmVZmZZv-O3XG3JiDcy_cqjhmMZqv-rp0gTkVrFkupXFGRY7pQZ8fORTwuvCjF3ioVWO2HAE2ftA1PX9PUnEGptjs_T6zDgab8TADUg3h2I2fNQw9aFPqSE4stl1Aqc4IdfC4uzO_gWbK8Qd5TUmBZCvCCKt7yEzskbQY9o2A87FMSW35CE3WKz38bn2ss5eycOckxtwqEVidH1WdGuiE_PbFS1CD2vJHQ_g9_3ywDiKB-TrvEMlGZL0rQfTadUCNFwEa71VJiwsL0tx4mrSYk8C9MaDh-RAoS-YM2Yc0hCnZ0kA3rUx-qj9H3JUCxMkcSbZdazDv7zS9FyM_gQVfkPNt3427Di4QM5CZSdArtaa2S4cFY5xB5sSYt4saEwy2UzyQNGFJ6iFJrTQsYGoL3h6MuBfiHpKm-rEGYuOGtMYmWeqNQt_L6QVgeviytkmGZp8uWyjmPr7nPITtgrpz_7BN1nYusRTg7aYcf__nHpmW4wIADZ8bSGfVxK7taQOjuGXgqgQmYgeRBRLVBmvD9tFXwC3Fan1ZQIRH6e8rf1RKZ5nx0OQhLP_CcYyHkspbkMopSFHQaOxa5Wvj23ucwSMIKueUqBuYbF4WrreauRljUt9U-LfL5Z_NTP1scK2f6kTN04XN24toZNRSxe570sGo1mrZG-bjcYuIWJmNS6u_SkyL0Nbf8Mo1AUh9zjSdBzPNZotz5IdbjgA5_6wGF9N_1eB8-n-u_b_8=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0535af19ef1e6bba016ae32278084887d1b90219b8e6b70394","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4287,"completion_tokens":105,"total_tokens":4392,"cost":0.000218575,"is_byok":false,"prompt_tokens_details":{"cached_tokens":3215,"cache_write_tokens":1069,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000218575,"upstream_inference_prompt_cost":0.000166075,"upstream_inference_completions_cost":0.0000525},"completion_tokens_details":{"reasoning_tokens":57,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"Bren Vale captains the fishing boat Petrel. People on the dock call him Captain too. He's unrelated to Asha and isn't a member of the guild."}]},{"role":"assistant","content":[{"type":"toolcall","id":{"provider":"call_pFEkSvB8lia8xXrsGEu0Lmdt"},"function":{"name":"search_world","arguments":{"query":"Bren Vale, captain of the fishing boat Petrel; whether related to Asha Pell or a member of the Lantern Guild; other known dockside captains"}},"native":{"item":{"id":"call_pFEkSvB8lia8xXrsGEu0Lmdt","type":"function","function":{"name":"search_world","arguments":"{\"query\":\"Bren Vale, captain of the fishing boat Petrel; whether related to Asha Pell or a member of the Lantern Guild; other known dockside captains\"}"}},"fingerprint":"b71ba01770e03bfa"}}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793270388-Z1XVrI8OYfgCIdUOSWIV"},"stop":"tool_use"},{"role":"user","content":[{"type":"toolresult","call":{"provider":"call_pFEkSvB8lia8xXrsGEu0Lmdt"},"name":"search_world","content":[{"type":"text","text":"Asha Pell (person) [ID: 731a80b4-1cd1-40e2-9fe7-618d14dd3932] [Aliases: Captain Ash]: Captain of the courier ship Nightjar; she grew up in Vesper and belongs to the Lantern Guild. Her crew usually calls her Captain Ash.\n  Properties: source_conversation: 01a1873c-dda9-7bf5-a8c5-094ae62ee4c8\n  - CAPTAINS â Nightjar (ship, courier ship) [ID: b0cd3a42-d5b0-44dd-972d-da7d960aab40]: A courier ship captained by Asha Pell.\n  - GREW_UP_IN â Vesper (city, port) [ID: 8e5eb323-f581-4ce1-8cf4-8bceb6847598]: Brinewake's main port city, built around a tidal lighthouse.\n  - MEMBER_OF â Lantern Guild (guild) [ID: 8ada2504-3940-4fa0-9142-7b15d6e2c8fa]: The guild that maintains Vesper's tidal lighthouse and buys blue salt from Orin's miners; it does not own the mines.\n\nLantern Guild (guild) [ID: 8ada2504-3940-4fa0-9142-7b15d6e2c8fa]: The guild that maintains Vesper's tidal lighthouse and buys blue salt from Orin's miners; it does not own the mines.\n  - â MEMBER_OF from Asha Pell (person) [ID: 731a80b4-1cd1-40e2-9fe7-618d14dd3932] [Aliases: Captain Ash]: Captain of the courier ship Nightjar; she grew up in Vesper and belongs to the Lantern Guild. Her crew usually calls her Captain Ash.\n  - MAINTAINS â Tidal lighthouse of Vesper (lighthouse) [ID: 76dc2022-8211-4657-b177-03c04d118558]: A tidal lighthouse around which Vesper is built. Its lenses run on blue salt.\n  - BUYS_FROM â Orin's miners (worker group) [ID: 92474181-bc9f-4dc2-bf64-51e67969f1ea]: Miners on Orin who mine blue salt; the Lantern Guild buys salt from them.\n\nNightjar (ship, courier ship) [ID: b0cd3a42-d5b0-44dd-972d-da7d960aab40]: A courier ship captained by Asha Pell.\n  Properties: source_conversation: 01a1873c-dda9-7bf5-a8c5-094ae62ee4c8\n  - â CAPTAINS from Asha Pell (person) [ID: 731a80b4-1cd1-40e2-9fe7-618d14dd3932] [Aliases: Captain Ash]: Captain of the courier ship Nightjar; she grew up in Vesper and belongs to the Lantern Guild. Her crew usually calls her Captain Ash.\n\nBlue salt (mineral, fuel) [ID: 8f0beecf-61cb-4419-99eb-e2030a4eafb7]: A salt mined on the island of Orin that powers the lenses of Vesper's tidal lighthouse.\n  - â USES from Tidal lighthouse of Vesper (lighthouse) [ID: 76dc2022-8211-4657-b177-03c04d118558]: A tidal lighthouse around which Vesper is built. Its lenses run on blue salt.\n  - MINED_ON â Orin (island) [ID: 9bac8802-f464-491c-b86e-9c90ec862af2]: An island where blue salt is mined.\n\nOrin's miners (worker group) [ID: 92474181-bc9f-4dc2-bf64-51e67969f1ea]: Miners on Orin who mine blue salt; the Lantern Guild buys salt from them.\n  - â BUYS_FROM from Lantern Guild (guild) [ID: 8ada2504-3940-4fa0-9142-7b15d6e2c8fa]: The guild that maintains Vesper's tidal lighthouse and buys blue salt from Orin's miners; it does not own the mines.\n  - LOCATED_IN â Orin (island) [ID: 9bac8802-f464-491c-b86e-9c90ec862af2]: An island where blue salt is mined."}]}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Clarifying dock titles**\n\nI need to acknowledge that thereâs a potential ambiguity in the dock title. I wonât search for a new entity since it seems like the search occurred due to an earlier reference. Itâs important to respond naturally without making assumptions. Maybe the title \"Captain\" is shared and not necessarily related. I should ask whether the dock refers to Bren as \"Captain\" to clarify any distinctions. Keeping it concise will be helpful!","native":{"item":{"reasoning":"**Clarifying dock titles**\n\nI need to acknowledge that thereâs a potential ambiguity in the dock title. I wonât search for a new entity since it seems like the search occurred due to an earlier reference. Itâs important to respond naturally without making assumptions. Maybe the title \"Captain\" is shared and not necessarily related. I should ask whether the dock refers to Bren as \"Captain\" to clarify any distinctions. Keeping it concise will be helpful!","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying dock titles**\n\nI need to acknowledge that thereâs a potential ambiguity in the dock title. I wonât search for a new entity since it seems like the search occurred due to an earlier reference. Itâs important to respond naturally without making assumptions. Maybe the title \"Captain\" is shared and not necessarily related. I should ask whether the dock refers to Bren as \"Captain\" to clarify any distinctions. Keeping it concise will be helpful!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yJ5r92TSiLE3XD4Wk2P5s7pN7zO5rH0EcNWeh2zO8ljbr6jtzv3dxhORpFs8eHaUIydktyGEGRuMiR6wiCWseri_tnoUJxRqjp3VQhTd0hVciSHd188Soko7U48b_cjMYcFhIplv8zutSTfLtcx16J1jUxSr7Igh6tbyG4AHa2MvzPTf9DZGSXZnMmCniJ81s37CtcJfB7W0YQS9tvt1fTmP-rVA1RmaBfV7Bs7DE_3J95ZAYMDjhBhNVXDauD4PbVrzmFWinLJTlMDQ9VqzTISAnUBIPvU4ixcFvA1Nj2ElIKjiV0gxEy7x-Tc6xF72AVtJYrGPei7KvNhKQ-abo8bEaYh3re4qh14npjuEjlZRdHQcJI02rF1iVUylpTEgjRZML876Cc_tComqu0PqS02teWG-xbY1hllAzzV8hVT-SEMc8LYvLDeiq88hn_RfI2wHXsz5uOXY_poklpSV4cu4aWv5BqHoMRTNLVClYJU66Nv7pLOcLoNYgfeRMSSw4_BjzUaQOJDsbRJl_ChBdQw0BAY20Xk8kZgGMpX1K_pzamxRPcMHPrHpSSH969mJj3NTEQNuLo45g74BSnb34B6ITSxiihmUCIQguF70NvAFNHIDpOINASsehAvYELHNxVVRgjeE-i7FZISesTICRDMQqP_nYvhXHtwpiFgCX_ZzyAiMcwUFQSW71O8tKBfdXx3sBYDaf0d4twD4gveSEvKUF7ZKEj7P2mm8wXvf39WTbhkONdW5XXQkb-LWQbnW-1TTT_klk0y84hJ0DoC8Ncd7qe_WGr643utcjmNjdkSO3WkFuAq9nAbGw3fZVmcVNpKJSkJUViOhpI00GGsaEfDRj3F2gjS-sghTHzF0J3WASmrwpaD1ICp3cPG8T56W6bRG-kj4T4sm_dEJqgh9ljZnCsn4NDDmz0atlN_srVl0nMNizOc_ZRrEcUsE_uB2IhLANmHHqVPLGqoyb1sx5MDoYIgqSdXOm-FCtT8OxtpAelUqjbYDTrYMufHqNfkJ_GV_RxY2iam9n8q6pb6myadDmjxQqDPypKoBjuNv44fDw6r7wMLG2-8So-HUn1wyt60ezMVs5UNjUz0rB_PMYfdGvZViyavlRvnRfKDSEWKk_fIWxtU6ValWkrVSYjn-XdXOBrY-AVnjxy6UwVeCzk19pMYCrwe8_zOSxOgXSqKJXXzc1VXxT6bNNKYjDnRdUfXfar2EngnpUj-VOiudA1a49mZyH92Jei2RyAMP_w3_EUtYYCJqyf76XmK4vNANCi5WsU4Puv3-s8glTm6amvn-Awlnn8HaoI8pif9-PN9V_8rZS0ZTxbIVSZnxDBnR3qzamdyVFg6exS0Jg5n5PRr6i9y-tGVRWp8MC8Ktf5F6hyEymtduOVo8zooe_ubeiVfc-_hVXOWyE5ZA2oCeqhQ_v41YXjh1-H8IHhg6qvIUuMdJfacE_AtYvVNQ_Tr-GTP3c3pHj7nw_GfzNTvARORYm_4rxVgO7ztAl-9Qkcak66F97vncG53-QATCZqZzyCOwK6w0FPaBdAcBuIHtJJNnWPsP8a9xkCt1i_8m4Yitam99CbIiH-52nmsh7x5V87WiqlCE7bmVZmZZv-O3XG3JiDcy_cqjhmMZqv-rp0gTkVrFkupXFGRY7pQZ8fORTwuvCjF3ioVWO2HAE2ftA1PX9PUnEGptjs_T6zDgab8TADUg3h2I2fNQw9aFPqSE4stl1Aqc4IdfC4uzO_gWbK8Qd5TUmBZCvCCKt7yEzskbQY9o2A87FMSW35CE3WKz38bn2ss5eycOckxtwqEVidH1WdGuiE_PbFS1CD2vJHQ_g9_3ywDiKB-TrvEMlGZL0rQfTadUCNFwEa71VJiwsL0tx4mrSYk8C9MaDh-RAoS-YM2Yc0hCnZ0kA3rUx-qj9H3JUCxMkcSbZdazDv7zS9FyM_gQVfkPNt3427Di4QM5CZSdArtaa2S4cFY5xB5sSYt4saEwy2UzyQNGFJ6iFJrTQsYGoL3h6MuBfiHpKm-rEGYuOGtMYmWeqNQt_L6QVgeviytkmGZp8uWyjmPr7nPITtgrpz_7BN1nYusRTg7aYcf__nHpmW4wIADZ8bSGfVxK7taQOjuGXgqgQmYgeRBRLVBmvD9tFXwC3Fan1ZQIRH6e8rf1RKZ5nx0OQhLP_CcYyHkspbkMopSFHQaOxa5Wvj23ucwSMIKueUqBuYbF4WrreauRljUt9U-LfL5Z_NTP1scK2f6kTN04XN24toZNRSxe570sGo1mrZG-bjcYuIWJmNS6u_SkyL0Nbf8Mo1AUh9zjSdBzPNZotz5IdbjgA5_6wGF9N_1eB8-n-u_b_8=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0535af19ef1e6bba016ae32278084887d1b90219b8e6b70394","index":1}]},"fingerprint":"109ab11d70c9dbb8"}},{"type":"text","text":"Bren and Asha are separate captains: he commands the Petrel, and unlike her, he has no Lantern Guild ties. Is âCaptainâ simply the dockside title for any boat captain there?"}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793270390-aDGx4mfDuQ6Z4kDj5JU0"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Clarifying dock titles**\n\nI need to acknowledge that thereâs a potential ambiguity in the dock title. I wonât search for a new entity since it seems like the search occurred due to an earlier reference. Itâs important to respond naturally without making assumptions. Maybe the title \"Captain\" is shared and not necessarily related. I should ask whether the dock refers to Bren as \"Captain\" to clarify any distinctions. Keeping it concise will be helpful!","native":{"item":{"reasoning":"**Clarifying dock titles**\n\nI need to acknowledge that thereâs a potential ambiguity in the dock title. I wonât search for a new entity since it seems like the search occurred due to an earlier reference. Itâs important to respond naturally without making assumptions. Maybe the title \"Captain\" is shared and not necessarily related. I should ask whether the dock refers to Bren as \"Captain\" to clarify any distinctions. Keeping it concise will be helpful!","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying dock titles**\n\nI need to acknowledge that thereâs a potential ambiguity in the dock title. I wonât search for a new entity since it seems like the search occurred due to an earlier reference. Itâs important to respond naturally without making assumptions. Maybe the title \"Captain\" is shared and not necessarily related. I should ask whether the dock refers to Bren as \"Captain\" to clarify any distinctions. Keeping it concise will be helpful!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yJ5r92TSiLE3XD4Wk2P5s7pN7zO5rH0EcNWeh2zO8ljbr6jtzv3dxhORpFs8eHaUIydktyGEGRuMiR6wiCWseri_tnoUJxRqjp3VQhTd0hVciSHd188Soko7U48b_cjMYcFhIplv8zutSTfLtcx16J1jUxSr7Igh6tbyG4AHa2MvzPTf9DZGSXZnMmCniJ81s37CtcJfB7W0YQS9tvt1fTmP-rVA1RmaBfV7Bs7DE_3J95ZAYMDjhBhNVXDauD4PbVrzmFWinLJTlMDQ9VqzTISAnUBIPvU4ixcFvA1Nj2ElIKjiV0gxEy7x-Tc6xF72AVtJYrGPei7KvNhKQ-abo8bEaYh3re4qh14npjuEjlZRdHQcJI02rF1iVUylpTEgjRZML876Cc_tComqu0PqS02teWG-xbY1hllAzzV8hVT-SEMc8LYvLDeiq88hn_RfI2wHXsz5uOXY_poklpSV4cu4aWv5BqHoMRTNLVClYJU66Nv7pLOcLoNYgfeRMSSw4_BjzUaQOJDsbRJl_ChBdQw0BAY20Xk8kZgGMpX1K_pzamxRPcMHPrHpSSH969mJj3NTEQNuLo45g74BSnb34B6ITSxiihmUCIQguF70NvAFNHIDpOINASsehAvYELHNxVVRgjeE-i7FZISesTICRDMQqP_nYvhXHtwpiFgCX_ZzyAiMcwUFQSW71O8tKBfdXx3sBYDaf0d4twD4gveSEvKUF7ZKEj7P2mm8wXvf39WTbhkONdW5XXQkb-LWQbnW-1TTT_klk0y84hJ0DoC8Ncd7qe_WGr643utcjmNjdkSO3WkFuAq9nAbGw3fZVmcVNpKJSkJUViOhpI00GGsaEfDRj3F2gjS-sghTHzF0J3WASmrwpaD1ICp3cPG8T56W6bRG-kj4T4sm_dEJqgh9ljZnCsn4NDDmz0atlN_srVl0nMNizOc_ZRrEcUsE_uB2IhLANmHHqVPLGqoyb1sx5MDoYIgqSdXOm-FCtT8OxtpAelUqjbYDTrYMufHqNfkJ_GV_RxY2iam9n8q6pb6myadDmjxQqDPypKoBjuNv44fDw6r7wMLG2-8So-HUn1wyt60ezMVs5UNjUz0rB_PMYfdGvZViyavlRvnRfKDSEWKk_fIWxtU6ValWkrVSYjn-XdXOBrY-AVnjxy6UwVeCzk19pMYCrwe8_zOSxOgXSqKJXXzc1VXxT6bNNKYjDnRdUfXfar2EngnpUj-VOiudA1a49mZyH92Jei2RyAMP_w3_EUtYYCJqyf76XmK4vNANCi5WsU4Puv3-s8glTm6amvn-Awlnn8HaoI8pif9-PN9V_8rZS0ZTxbIVSZnxDBnR3qzamdyVFg6exS0Jg5n5PRr6i9y-tGVRWp8MC8Ktf5F6hyEymtduOVo8zooe_ubeiVfc-_hVXOWyE5ZA2oCeqhQ_v41YXjh1-H8IHhg6qvIUuMdJfacE_AtYvVNQ_Tr-GTP3c3pHj7nw_GfzNTvARORYm_4rxVgO7ztAl-9Qkcak66F97vncG53-QATCZqZzyCOwK6w0FPaBdAcBuIHtJJNnWPsP8a9xkCt1i_8m4Yitam99CbIiH-52nmsh7x5V87WiqlCE7bmVZmZZv-O3XG3JiDcy_cqjhmMZqv-rp0gTkVrFkupXFGRY7pQZ8fORTwuvCjF3ioVWO2HAE2ftA1PX9PUnEGptjs_T6zDgab8TADUg3h2I2fNQw9aFPqSE4stl1Aqc4IdfC4uzO_gWbK8Qd5TUmBZCvCCKt7yEzskbQY9o2A87FMSW35CE3WKz38bn2ss5eycOckxtwqEVidH1WdGuiE_PbFS1CD2vJHQ_g9_3ywDiKB-TrvEMlGZL0rQfTadUCNFwEa71VJiwsL0tx4mrSYk8C9MaDh-RAoS-YM2Yc0hCnZ0kA3rUx-qj9H3JUCxMkcSbZdazDv7zS9FyM_gQVfkPNt3427Di4QM5CZSdArtaa2S4cFY5xB5sSYt4saEwy2UzyQNGFJ6iFJrTQsYGoL3h6MuBfiHpKm-rEGYuOGtMYmWeqNQt_L6QVgeviytkmGZp8uWyjmPr7nPITtgrpz_7BN1nYusRTg7aYcf__nHpmW4wIADZ8bSGfVxK7taQOjuGXgqgQmYgeRBRLVBmvD9tFXwC3Fan1ZQIRH6e8rf1RKZ5nx0OQhLP_CcYyHkspbkMopSFHQaOxa5Wvj23ucwSMIKueUqBuYbF4WrreauRljUt9U-LfL5Z_NTP1scK2f6kTN04XN24toZNRSxe570sGo1mrZG-bjcYuIWJmNS6u_SkyL0Nbf8Mo1AUh9zjSdBzPNZotz5IdbjgA5_6wGF9N_1eB8-n-u_b_8=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0535af19ef1e6bba016ae32278084887d1b90219b8e6b70394","index":1}]},"fingerprint":"109ab11d70c9dbb8"}},{"type":"text","text":"Bren and Asha are separate captains: he commands the Petrel, and unlike her, he has no Lantern Guild ties. Is âCaptainâ simply the dockside title for any boat captain there?"}]}
+

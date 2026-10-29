@@ -1,0 +1,320 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Assessing archive notes**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" create"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" brief"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" reactive"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" note"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" about"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" distinct"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" title"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ambiguity"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" surrounding"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" archive"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" plans"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" seems"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" there's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" no"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" search"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" for"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" additional"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" info"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" The"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" graph"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" previously"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" mentioned"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" includes"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" reservoir"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" O"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ren"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" an"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" aqu"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"educt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" user"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" has"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" now"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" added"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" L"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ysa"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" notes"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" some"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" unrelated"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" explicit"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" content"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" should"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" respond"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" engaging"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ly"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" conc"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ely"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" maybe"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" even"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" explore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" interesting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" implications"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Perhaps"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" can"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ask"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" user"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" if"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" their"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" plans"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" reveal"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" any"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" hidden"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" details"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" just"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" acknowledge"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" this"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" effectively"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"So"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" “"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"W"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"arden"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"”"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" shared"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" title"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" not"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" connection"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" O"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ren"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" guards"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" reservoir"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" while"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" L"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ysa"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" keeps"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Sun"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Archive"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" which"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" holds"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" original"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" aqu"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"educt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" plans"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" That"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" makes"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Archive"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" useful"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" counter"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"point"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Mira"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"’s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" hands"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"-on"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" knowledge"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"So “Warden” is a shared title, not a connection: Oren guards the reservoir, while Lysa keeps the Sun Archive, which holds the original aqueduct plans. That makes the Archive a useful counterpoint to Mira’s hands-on knowledge."}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Assessing archive notes**\n\nI need to create a brief, reactive note about the distinct title and ambiguity surrounding the archive plans. It seems there's no need to search for additional info. The lore graph previously mentioned includes a reservoir, Oren, and an aqueduct, and the user has now added Lysa. It notes some unrelated, explicit content. I should respond engagingly and concisely, maybe even explore interesting implications. Perhaps I can ask the user if their plans reveal any hidden details. I just need to acknowledge this effectively.","native":{"item":{"reasoning":"**Assessing archive notes**\n\nI need to create a brief, reactive note about the distinct title and ambiguity surrounding the archive plans. It seems there's no need to search for additional info. The lore graph previously mentioned includes a reservoir, Oren, and an aqueduct, and the user has now added Lysa. It notes some unrelated, explicit content. I should respond engagingly and concisely, maybe even explore interesting implications. Perhaps I can ask the user if their plans reveal any hidden details. I just need to acknowledge this effectively.","reasoning_details":[{"type":"reasoning.summary","summary":"**Assessing archive notes**\n\nI need to create a brief, reactive note about the distinct title and ambiguity surrounding the archive plans. It seems there's no need to search for additional info. The lore graph previously mentioned includes a reservoir, Oren, and an aqueduct, and the user has now added Lysa. It notes some unrelated, explicit content. I should respond engagingly and concisely, maybe even explore interesting implications. Perhaps I can ask the user if their plans reveal any hidden details. I just need to acknowledge this effectively.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zFUgb2QyNNtKxLi3BrjhLM-CoRwTVegQ-CIZwwCkE2FTtv1iaxzfE3gL3EdJ2_I31Zx_TIOpVX32MxLyz3sQqajPakJ02bsVNa6qiA33javATF1GlOzh2nLAxc00O5WgJyjzfS0XxYhgW7kBI38GwePAh04o4KmJ0jmJuLe7rrta1Y6wem-JNCTeD4FBr-J-XwlGgeYYYp8fG38AQ2XRkJip6G5u8xWMnked_TCKIEAICSDXHld95ps02C-XP2fJZWoXiAJMKpdx8k8sxK-nOzRblkCpNdNUTiuVTHraB8JO-SylGjJRnKK1hhEme5FVizYMt_muIZQYQzz02CSFK1xPItWeNNl4ti9AqZjNoSsBO4Qu1H_TOYPSQl2tAPoaKk-g8ygThrzhgbbIcOL_7F7mo-xiGlgqreaMsbpy8fdAhroKMOB6elx1-Ecu7L3QV6HYUmcsNmYTlutZhng73jMybt8dvW0rbrhUbIqbHjS7T1fxFZZtIFg0Vub7EXBxGm2huO1mDMBDWsT4X_GAMf_tjPrL1XcS0RLExHudzyk63xXJICUR9d3K6W_yYyuu9q6CYILAi2tC-pEviowjbqXTkg280ipBT80ZpDpepmTktbzLlQOnOnFMXYhDttVpXZZ2J4K6PuXZhXvyIGduvjxh47ilfRbrBKTa2pyuLHKeD7AseYSWu4T3NVZp_G_rR2BimQe7DYENmtsCp1sEyPleqptYReZKdlOP4W_oxoqUdNZxVFFM90V1NvU1bTz6dnPjICMUI69xPSvVkFNTvu-b6Ykx3XTjsmCMoJKhd4AaZp5I3vj9dcT724j8HGADzMugS6Vnt4Hw5Pl_wTcZb1Kf-Nm7-NHtAtBo1cHac1_Y3KRnmpJ2W5GcYLj7esYPPK-V5jWPcAx5mhpiNOxaZI8RXFSFQGk5oorJp0fcHz5KWpDyYi5YBZM1JnVudAQ5RszuM7JmzZ_A7JgyPXBO3qxF4V1H0BwshVbncjF4TdRxpcTU5b-r97M8I6VmHp2bPNfh4SGKY4bnhvrj7-vclww1vpT9n0HxzlHb15T2iyytd2AygvqA3g-Ut5xW1eCKdmgRFAXGnboZQWLAjWNLYpGnaQW_I27k2oP02mkjSfI7-TmptyhOUqyVE5VKslOrxnd6ZWDHWuGHx5AakzFOMvdaC0VGUxwoVsK0QWowOZ_QLhJpoCIpYOuk2CPMMfiYA7UBWds2ZidwrEFEqmKhLaYzkMsqx6_EMRFuhYdeYWH4yWSF_5AhsQyq4oxjASqGLNAAJAtPPohmMYzq9oWXBfafqvIdt_WdChdwTip7qAO1gWg9W7eGGevVcEwVDkohx1QNy3nK30seaRDibIZnyR0ezc1QTwQEz9vwCexv3S69J0puajMIVaFKYdx1CbOBJ9dhhh8ycJbyAkBc9EG2LOBSBKmuTBjjAOJb3LWYoemd_SXks6jdr5LDg4Cgubg79N9LAy5k-XEKgS39cRu7cV6NJpsdg7Ctu0Bi7qMSkDPLMZeyChHvZ2qeIV_FsPJ63daPbr_iC4IOBwOa2H_y6deEIhAplGpaT99zme2ztlHt4q9sjSKM-HhSdUEYZixYNvA5NwLOqYbOpGQLl2Zx-sEBvvWgCe5KbgAZcx-pNztX4XtXxC2YvYHWjJV9o0zFiLiiN0FtNu_iwq0_5jfv06RmHApBIqsEcrdEvKKhpkvacrAGTOEfSuEcVDKpkXxuLVoU6l68nG-yjBV7oH1RAtPc7MfzZ7uJ4u1P6C89iQkbH4c9mBd1fLBW49MGLJpfVAf3Phjm7t82unmp8Nn7lMCrpeLzejGqP6z7jEjAn5Gh778RpcfDESwJRvyTUZkmA4ZX7UC8Vvshc9xJ4L0O6G-z93asletf265iB9Beyi9n7d76-OpJRDLlsZdg3vU_pXmO_qgMJ_BFnAthnUAyYzDVZVtd3x8xVe9vfPOmg8APQcgyu8GQ1cgqAO26OJH0wvNaK6_v9_rpjGw68Flse75LeBWo1_gwLVtwlYLzcE0bY_PYPju5hNZj5ZCTEy1JuMsPFYlkUJg5h-qkTN9u_fjy6XFad50x3vFPx2xicTiSpC2-su76Ruyt26zmbJyFbhjgf517pDudgQt-c6yhnMUsWsB2thVMOrweQdV3TIgrLVXaOXbdcGr4bYnWiup_Ug5x-fGbtefujrvErLsBR2n8hRNKMmuhmCnFOMes54FmvPdPHWOp3bLhe0X4lCHt5J56INQSnPGNo81_2L6HzEpxzQWrjTx3Lch4tS0mT74xwTsv4y24yacNUptIh18c1cFJRnnuNyyDFv-qbS580qsY_UUf7KvYh3nyBIw7XugyEKXyUyAfoz1-CqmsXkhqJkboxsA0z_B9HsefxkxwAsSFod_cwr8J1DgSQqlokUFplCAnSyZB-n5t8VNHD49e6crULzIEwF0VfLyoJd4tZHGM9vNu011IQVXA0v2Pq5AQJZhCR4Z12v6xAk7k-UaoL85eKLW8fj0ViFEG7guPC8QBA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0c95418b4040c651016ae3315216ac87d191d864ed512ff8b0","index":1}]},"fingerprint":"8844250d8c286791"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":3399,"output_tokens":127,"total_tokens":3526,"cached_input_tokens":1826,"cache_creation_input_tokens":1570,"reasoning_tokens":70,"cost":{"total":0.00027831}},"response_id":"gen-1793274193-QXexrG4PZM18B90Uotl2","finish_reason":"stop","raw":{"id":"gen-1793274193-QXexrG4PZM18B90Uotl2","object":"chat.completion","created":1793274193,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"So “Warden” is a shared title, not a connection: Oren guards the reservoir, while Lysa keeps the Sun Archive, which holds the original aqueduct plans. That makes the Archive a useful counterpoint to Mira’s hands-on knowledge.","role":"assistant","reasoning":"**Assessing archive notes**\n\nI need to create a brief, reactive note about the distinct title and ambiguity surrounding the archive plans. It seems there's no need to search for additional info. The lore graph previously mentioned includes a reservoir, Oren, and an aqueduct, and the user has now added Lysa. It notes some unrelated, explicit content. I should respond engagingly and concisely, maybe even explore interesting implications. Perhaps I can ask the user if their plans reveal any hidden details. I just need to acknowledge this effectively.","reasoning_details":[{"type":"reasoning.summary","summary":"**Assessing archive notes**\n\nI need to create a brief, reactive note about the distinct title and ambiguity surrounding the archive plans. It seems there's no need to search for additional info. The lore graph previously mentioned includes a reservoir, Oren, and an aqueduct, and the user has now added Lysa. It notes some unrelated, explicit content. I should respond engagingly and concisely, maybe even explore interesting implications. Perhaps I can ask the user if their plans reveal any hidden details. I just need to acknowledge this effectively.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zFUgb2QyNNtKxLi3BrjhLM-CoRwTVegQ-CIZwwCkE2FTtv1iaxzfE3gL3EdJ2_I31Zx_TIOpVX32MxLyz3sQqajPakJ02bsVNa6qiA33javATF1GlOzh2nLAxc00O5WgJyjzfS0XxYhgW7kBI38GwePAh04o4KmJ0jmJuLe7rrta1Y6wem-JNCTeD4FBr-J-XwlGgeYYYp8fG38AQ2XRkJip6G5u8xWMnked_TCKIEAICSDXHld95ps02C-XP2fJZWoXiAJMKpdx8k8sxK-nOzRblkCpNdNUTiuVTHraB8JO-SylGjJRnKK1hhEme5FVizYMt_muIZQYQzz02CSFK1xPItWeNNl4ti9AqZjNoSsBO4Qu1H_TOYPSQl2tAPoaKk-g8ygThrzhgbbIcOL_7F7mo-xiGlgqreaMsbpy8fdAhroKMOB6elx1-Ecu7L3QV6HYUmcsNmYTlutZhng73jMybt8dvW0rbrhUbIqbHjS7T1fxFZZtIFg0Vub7EXBxGm2huO1mDMBDWsT4X_GAMf_tjPrL1XcS0RLExHudzyk63xXJICUR9d3K6W_yYyuu9q6CYILAi2tC-pEviowjbqXTkg280ipBT80ZpDpepmTktbzLlQOnOnFMXYhDttVpXZZ2J4K6PuXZhXvyIGduvjxh47ilfRbrBKTa2pyuLHKeD7AseYSWu4T3NVZp_G_rR2BimQe7DYENmtsCp1sEyPleqptYReZKdlOP4W_oxoqUdNZxVFFM90V1NvU1bTz6dnPjICMUI69xPSvVkFNTvu-b6Ykx3XTjsmCMoJKhd4AaZp5I3vj9dcT724j8HGADzMugS6Vnt4Hw5Pl_wTcZb1Kf-Nm7-NHtAtBo1cHac1_Y3KRnmpJ2W5GcYLj7esYPPK-V5jWPcAx5mhpiNOxaZI8RXFSFQGk5oorJp0fcHz5KWpDyYi5YBZM1JnVudAQ5RszuM7JmzZ_A7JgyPXBO3qxF4V1H0BwshVbncjF4TdRxpcTU5b-r97M8I6VmHp2bPNfh4SGKY4bnhvrj7-vclww1vpT9n0HxzlHb15T2iyytd2AygvqA3g-Ut5xW1eCKdmgRFAXGnboZQWLAjWNLYpGnaQW_I27k2oP02mkjSfI7-TmptyhOUqyVE5VKslOrxnd6ZWDHWuGHx5AakzFOMvdaC0VGUxwoVsK0QWowOZ_QLhJpoCIpYOuk2CPMMfiYA7UBWds2ZidwrEFEqmKhLaYzkMsqx6_EMRFuhYdeYWH4yWSF_5AhsQyq4oxjASqGLNAAJAtPPohmMYzq9oWXBfafqvIdt_WdChdwTip7qAO1gWg9W7eGGevVcEwVDkohx1QNy3nK30seaRDibIZnyR0ezc1QTwQEz9vwCexv3S69J0puajMIVaFKYdx1CbOBJ9dhhh8ycJbyAkBc9EG2LOBSBKmuTBjjAOJb3LWYoemd_SXks6jdr5LDg4Cgubg79N9LAy5k-XEKgS39cRu7cV6NJpsdg7Ctu0Bi7qMSkDPLMZeyChHvZ2qeIV_FsPJ63daPbr_iC4IOBwOa2H_y6deEIhAplGpaT99zme2ztlHt4q9sjSKM-HhSdUEYZixYNvA5NwLOqYbOpGQLl2Zx-sEBvvWgCe5KbgAZcx-pNztX4XtXxC2YvYHWjJV9o0zFiLiiN0FtNu_iwq0_5jfv06RmHApBIqsEcrdEvKKhpkvacrAGTOEfSuEcVDKpkXxuLVoU6l68nG-yjBV7oH1RAtPc7MfzZ7uJ4u1P6C89iQkbH4c9mBd1fLBW49MGLJpfVAf3Phjm7t82unmp8Nn7lMCrpeLzejGqP6z7jEjAn5Gh778RpcfDESwJRvyTUZkmA4ZX7UC8Vvshc9xJ4L0O6G-z93asletf265iB9Beyi9n7d76-OpJRDLlsZdg3vU_pXmO_qgMJ_BFnAthnUAyYzDVZVtd3x8xVe9vfPOmg8APQcgyu8GQ1cgqAO26OJH0wvNaK6_v9_rpjGw68Flse75LeBWo1_gwLVtwlYLzcE0bY_PYPju5hNZj5ZCTEy1JuMsPFYlkUJg5h-qkTN9u_fjy6XFad50x3vFPx2xicTiSpC2-su76Ruyt26zmbJyFbhjgf517pDudgQt-c6yhnMUsWsB2thVMOrweQdV3TIgrLVXaOXbdcGr4bYnWiup_Ug5x-fGbtefujrvErLsBR2n8hRNKMmuhmCnFOMes54FmvPdPHWOp3bLhe0X4lCHt5J56INQSnPGNo81_2L6HzEpxzQWrjTx3Lch4tS0mT74xwTsv4y24yacNUptIh18c1cFJRnnuNyyDFv-qbS580qsY_UUf7KvYh3nyBIw7XugyEKXyUyAfoz1-CqmsXkhqJkboxsA0z_B9HsefxkxwAsSFod_cwr8J1DgSQqlokUFplCAnSyZB-n5t8VNHD49e6crULzIEwF0VfLyoJd4tZHGM9vNu011IQVXA0v2Pq5AQJZhCR4Z12v6xAk7k-UaoL85eKLW8fj0ViFEG7guPC8QBA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0c95418b4040c651016ae3315216ac87d191d864ed512ff8b0","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":3399,"completion_tokens":127,"total_tokens":3526,"cost":0.00027831,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":1570,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00027831,"upstream_inference_prompt_cost":0.00021481,"upstream_inference_completions_cost":0.0000635},"completion_tokens_details":{"reasoning_tokens":70,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":3399,"output_tokens":127,"total_tokens":3526,"cached_input_tokens":1826,"cache_creation_input_tokens":1570,"reasoning_tokens":70,"cost":{"total":0.00027831}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":3399,"output_tokens":127,"total_tokens":3526,"cached_input_tokens":1826,"cache_creation_input_tokens":1570,"reasoning_tokens":70,"cost":{"total":0.00027831}},"response_id":"gen-1793274193-QXexrG4PZM18B90Uotl2","finish_reason":"stop","raw":{"id":"gen-1793274193-QXexrG4PZM18B90Uotl2","object":"chat.completion","created":1793274193,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"So “Warden” is a shared title, not a connection: Oren guards the reservoir, while Lysa keeps the Sun Archive, which holds the original aqueduct plans. That makes the Archive a useful counterpoint to Mira’s hands-on knowledge.","role":"assistant","reasoning":"**Assessing archive notes**\n\nI need to create a brief, reactive note about the distinct title and ambiguity surrounding the archive plans. It seems there's no need to search for additional info. The lore graph previously mentioned includes a reservoir, Oren, and an aqueduct, and the user has now added Lysa. It notes some unrelated, explicit content. I should respond engagingly and concisely, maybe even explore interesting implications. Perhaps I can ask the user if their plans reveal any hidden details. I just need to acknowledge this effectively.","reasoning_details":[{"type":"reasoning.summary","summary":"**Assessing archive notes**\n\nI need to create a brief, reactive note about the distinct title and ambiguity surrounding the archive plans. It seems there's no need to search for additional info. The lore graph previously mentioned includes a reservoir, Oren, and an aqueduct, and the user has now added Lysa. It notes some unrelated, explicit content. I should respond engagingly and concisely, maybe even explore interesting implications. Perhaps I can ask the user if their plans reveal any hidden details. I just need to acknowledge this effectively.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zFUgb2QyNNtKxLi3BrjhLM-CoRwTVegQ-CIZwwCkE2FTtv1iaxzfE3gL3EdJ2_I31Zx_TIOpVX32MxLyz3sQqajPakJ02bsVNa6qiA33javATF1GlOzh2nLAxc00O5WgJyjzfS0XxYhgW7kBI38GwePAh04o4KmJ0jmJuLe7rrta1Y6wem-JNCTeD4FBr-J-XwlGgeYYYp8fG38AQ2XRkJip6G5u8xWMnked_TCKIEAICSDXHld95ps02C-XP2fJZWoXiAJMKpdx8k8sxK-nOzRblkCpNdNUTiuVTHraB8JO-SylGjJRnKK1hhEme5FVizYMt_muIZQYQzz02CSFK1xPItWeNNl4ti9AqZjNoSsBO4Qu1H_TOYPSQl2tAPoaKk-g8ygThrzhgbbIcOL_7F7mo-xiGlgqreaMsbpy8fdAhroKMOB6elx1-Ecu7L3QV6HYUmcsNmYTlutZhng73jMybt8dvW0rbrhUbIqbHjS7T1fxFZZtIFg0Vub7EXBxGm2huO1mDMBDWsT4X_GAMf_tjPrL1XcS0RLExHudzyk63xXJICUR9d3K6W_yYyuu9q6CYILAi2tC-pEviowjbqXTkg280ipBT80ZpDpepmTktbzLlQOnOnFMXYhDttVpXZZ2J4K6PuXZhXvyIGduvjxh47ilfRbrBKTa2pyuLHKeD7AseYSWu4T3NVZp_G_rR2BimQe7DYENmtsCp1sEyPleqptYReZKdlOP4W_oxoqUdNZxVFFM90V1NvU1bTz6dnPjICMUI69xPSvVkFNTvu-b6Ykx3XTjsmCMoJKhd4AaZp5I3vj9dcT724j8HGADzMugS6Vnt4Hw5Pl_wTcZb1Kf-Nm7-NHtAtBo1cHac1_Y3KRnmpJ2W5GcYLj7esYPPK-V5jWPcAx5mhpiNOxaZI8RXFSFQGk5oorJp0fcHz5KWpDyYi5YBZM1JnVudAQ5RszuM7JmzZ_A7JgyPXBO3qxF4V1H0BwshVbncjF4TdRxpcTU5b-r97M8I6VmHp2bPNfh4SGKY4bnhvrj7-vclww1vpT9n0HxzlHb15T2iyytd2AygvqA3g-Ut5xW1eCKdmgRFAXGnboZQWLAjWNLYpGnaQW_I27k2oP02mkjSfI7-TmptyhOUqyVE5VKslOrxnd6ZWDHWuGHx5AakzFOMvdaC0VGUxwoVsK0QWowOZ_QLhJpoCIpYOuk2CPMMfiYA7UBWds2ZidwrEFEqmKhLaYzkMsqx6_EMRFuhYdeYWH4yWSF_5AhsQyq4oxjASqGLNAAJAtPPohmMYzq9oWXBfafqvIdt_WdChdwTip7qAO1gWg9W7eGGevVcEwVDkohx1QNy3nK30seaRDibIZnyR0ezc1QTwQEz9vwCexv3S69J0puajMIVaFKYdx1CbOBJ9dhhh8ycJbyAkBc9EG2LOBSBKmuTBjjAOJb3LWYoemd_SXks6jdr5LDg4Cgubg79N9LAy5k-XEKgS39cRu7cV6NJpsdg7Ctu0Bi7qMSkDPLMZeyChHvZ2qeIV_FsPJ63daPbr_iC4IOBwOa2H_y6deEIhAplGpaT99zme2ztlHt4q9sjSKM-HhSdUEYZixYNvA5NwLOqYbOpGQLl2Zx-sEBvvWgCe5KbgAZcx-pNztX4XtXxC2YvYHWjJV9o0zFiLiiN0FtNu_iwq0_5jfv06RmHApBIqsEcrdEvKKhpkvacrAGTOEfSuEcVDKpkXxuLVoU6l68nG-yjBV7oH1RAtPc7MfzZ7uJ4u1P6C89iQkbH4c9mBd1fLBW49MGLJpfVAf3Phjm7t82unmp8Nn7lMCrpeLzejGqP6z7jEjAn5Gh778RpcfDESwJRvyTUZkmA4ZX7UC8Vvshc9xJ4L0O6G-z93asletf265iB9Beyi9n7d76-OpJRDLlsZdg3vU_pXmO_qgMJ_BFnAthnUAyYzDVZVtd3x8xVe9vfPOmg8APQcgyu8GQ1cgqAO26OJH0wvNaK6_v9_rpjGw68Flse75LeBWo1_gwLVtwlYLzcE0bY_PYPju5hNZj5ZCTEy1JuMsPFYlkUJg5h-qkTN9u_fjy6XFad50x3vFPx2xicTiSpC2-su76Ruyt26zmbJyFbhjgf517pDudgQt-c6yhnMUsWsB2thVMOrweQdV3TIgrLVXaOXbdcGr4bYnWiup_Ug5x-fGbtefujrvErLsBR2n8hRNKMmuhmCnFOMes54FmvPdPHWOp3bLhe0X4lCHt5J56INQSnPGNo81_2L6HzEpxzQWrjTx3Lch4tS0mT74xwTsv4y24yacNUptIh18c1cFJRnnuNyyDFv-qbS580qsY_UUf7KvYh3nyBIw7XugyEKXyUyAfoz1-CqmsXkhqJkboxsA0z_B9HsefxkxwAsSFod_cwr8J1DgSQqlokUFplCAnSyZB-n5t8VNHD49e6crULzIEwF0VfLyoJd4tZHGM9vNu011IQVXA0v2Pq5AQJZhCR4Z12v6xAk7k-UaoL85eKLW8fj0ViFEG7guPC8QBA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0c95418b4040c651016ae3315216ac87d191d864ed512ff8b0","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":3399,"completion_tokens":127,"total_tokens":3526,"cost":0.00027831,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":1570,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00027831,"upstream_inference_prompt_cost":0.00021481,"upstream_inference_completions_cost":0.0000635},"completion_tokens_details":{"reasoning_tokens":70,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"Oren Dask guards the reservoir and is called the Warden. Lysa Renn keeps the Sun Archive and is also called Warden. They are unrelated. The archive contains the original aqueduct plans."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Assessing archive notes**\n\nI need to create a brief, reactive note about the distinct title and ambiguity surrounding the archive plans. It seems there's no need to search for additional info. The lore graph previously mentioned includes a reservoir, Oren, and an aqueduct, and the user has now added Lysa. It notes some unrelated, explicit content. I should respond engagingly and concisely, maybe even explore interesting implications. Perhaps I can ask the user if their plans reveal any hidden details. I just need to acknowledge this effectively.","native":{"item":{"reasoning":"**Assessing archive notes**\n\nI need to create a brief, reactive note about the distinct title and ambiguity surrounding the archive plans. It seems there's no need to search for additional info. The lore graph previously mentioned includes a reservoir, Oren, and an aqueduct, and the user has now added Lysa. It notes some unrelated, explicit content. I should respond engagingly and concisely, maybe even explore interesting implications. Perhaps I can ask the user if their plans reveal any hidden details. I just need to acknowledge this effectively.","reasoning_details":[{"type":"reasoning.summary","summary":"**Assessing archive notes**\n\nI need to create a brief, reactive note about the distinct title and ambiguity surrounding the archive plans. It seems there's no need to search for additional info. The lore graph previously mentioned includes a reservoir, Oren, and an aqueduct, and the user has now added Lysa. It notes some unrelated, explicit content. I should respond engagingly and concisely, maybe even explore interesting implications. Perhaps I can ask the user if their plans reveal any hidden details. I just need to acknowledge this effectively.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zFUgb2QyNNtKxLi3BrjhLM-CoRwTVegQ-CIZwwCkE2FTtv1iaxzfE3gL3EdJ2_I31Zx_TIOpVX32MxLyz3sQqajPakJ02bsVNa6qiA33javATF1GlOzh2nLAxc00O5WgJyjzfS0XxYhgW7kBI38GwePAh04o4KmJ0jmJuLe7rrta1Y6wem-JNCTeD4FBr-J-XwlGgeYYYp8fG38AQ2XRkJip6G5u8xWMnked_TCKIEAICSDXHld95ps02C-XP2fJZWoXiAJMKpdx8k8sxK-nOzRblkCpNdNUTiuVTHraB8JO-SylGjJRnKK1hhEme5FVizYMt_muIZQYQzz02CSFK1xPItWeNNl4ti9AqZjNoSsBO4Qu1H_TOYPSQl2tAPoaKk-g8ygThrzhgbbIcOL_7F7mo-xiGlgqreaMsbpy8fdAhroKMOB6elx1-Ecu7L3QV6HYUmcsNmYTlutZhng73jMybt8dvW0rbrhUbIqbHjS7T1fxFZZtIFg0Vub7EXBxGm2huO1mDMBDWsT4X_GAMf_tjPrL1XcS0RLExHudzyk63xXJICUR9d3K6W_yYyuu9q6CYILAi2tC-pEviowjbqXTkg280ipBT80ZpDpepmTktbzLlQOnOnFMXYhDttVpXZZ2J4K6PuXZhXvyIGduvjxh47ilfRbrBKTa2pyuLHKeD7AseYSWu4T3NVZp_G_rR2BimQe7DYENmtsCp1sEyPleqptYReZKdlOP4W_oxoqUdNZxVFFM90V1NvU1bTz6dnPjICMUI69xPSvVkFNTvu-b6Ykx3XTjsmCMoJKhd4AaZp5I3vj9dcT724j8HGADzMugS6Vnt4Hw5Pl_wTcZb1Kf-Nm7-NHtAtBo1cHac1_Y3KRnmpJ2W5GcYLj7esYPPK-V5jWPcAx5mhpiNOxaZI8RXFSFQGk5oorJp0fcHz5KWpDyYi5YBZM1JnVudAQ5RszuM7JmzZ_A7JgyPXBO3qxF4V1H0BwshVbncjF4TdRxpcTU5b-r97M8I6VmHp2bPNfh4SGKY4bnhvrj7-vclww1vpT9n0HxzlHb15T2iyytd2AygvqA3g-Ut5xW1eCKdmgRFAXGnboZQWLAjWNLYpGnaQW_I27k2oP02mkjSfI7-TmptyhOUqyVE5VKslOrxnd6ZWDHWuGHx5AakzFOMvdaC0VGUxwoVsK0QWowOZ_QLhJpoCIpYOuk2CPMMfiYA7UBWds2ZidwrEFEqmKhLaYzkMsqx6_EMRFuhYdeYWH4yWSF_5AhsQyq4oxjASqGLNAAJAtPPohmMYzq9oWXBfafqvIdt_WdChdwTip7qAO1gWg9W7eGGevVcEwVDkohx1QNy3nK30seaRDibIZnyR0ezc1QTwQEz9vwCexv3S69J0puajMIVaFKYdx1CbOBJ9dhhh8ycJbyAkBc9EG2LOBSBKmuTBjjAOJb3LWYoemd_SXks6jdr5LDg4Cgubg79N9LAy5k-XEKgS39cRu7cV6NJpsdg7Ctu0Bi7qMSkDPLMZeyChHvZ2qeIV_FsPJ63daPbr_iC4IOBwOa2H_y6deEIhAplGpaT99zme2ztlHt4q9sjSKM-HhSdUEYZixYNvA5NwLOqYbOpGQLl2Zx-sEBvvWgCe5KbgAZcx-pNztX4XtXxC2YvYHWjJV9o0zFiLiiN0FtNu_iwq0_5jfv06RmHApBIqsEcrdEvKKhpkvacrAGTOEfSuEcVDKpkXxuLVoU6l68nG-yjBV7oH1RAtPc7MfzZ7uJ4u1P6C89iQkbH4c9mBd1fLBW49MGLJpfVAf3Phjm7t82unmp8Nn7lMCrpeLzejGqP6z7jEjAn5Gh778RpcfDESwJRvyTUZkmA4ZX7UC8Vvshc9xJ4L0O6G-z93asletf265iB9Beyi9n7d76-OpJRDLlsZdg3vU_pXmO_qgMJ_BFnAthnUAyYzDVZVtd3x8xVe9vfPOmg8APQcgyu8GQ1cgqAO26OJH0wvNaK6_v9_rpjGw68Flse75LeBWo1_gwLVtwlYLzcE0bY_PYPju5hNZj5ZCTEy1JuMsPFYlkUJg5h-qkTN9u_fjy6XFad50x3vFPx2xicTiSpC2-su76Ruyt26zmbJyFbhjgf517pDudgQt-c6yhnMUsWsB2thVMOrweQdV3TIgrLVXaOXbdcGr4bYnWiup_Ug5x-fGbtefujrvErLsBR2n8hRNKMmuhmCnFOMes54FmvPdPHWOp3bLhe0X4lCHt5J56INQSnPGNo81_2L6HzEpxzQWrjTx3Lch4tS0mT74xwTsv4y24yacNUptIh18c1cFJRnnuNyyDFv-qbS580qsY_UUf7KvYh3nyBIw7XugyEKXyUyAfoz1-CqmsXkhqJkboxsA0z_B9HsefxkxwAsSFod_cwr8J1DgSQqlokUFplCAnSyZB-n5t8VNHD49e6crULzIEwF0VfLyoJd4tZHGM9vNu011IQVXA0v2Pq5AQJZhCR4Z12v6xAk7k-UaoL85eKLW8fj0ViFEG7guPC8QBA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0c95418b4040c651016ae3315216ac87d191d864ed512ff8b0","index":1}]},"fingerprint":"8844250d8c286791"}},{"type":"text","text":"So “Warden” is a shared title, not a connection: Oren guards the reservoir, while Lysa keeps the Sun Archive, which holds the original aqueduct plans. That makes the Archive a useful counterpoint to Mira’s hands-on knowledge."}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793274193-QXexrG4PZM18B90Uotl2"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Assessing archive notes**\n\nI need to create a brief, reactive note about the distinct title and ambiguity surrounding the archive plans. It seems there's no need to search for additional info. The lore graph previously mentioned includes a reservoir, Oren, and an aqueduct, and the user has now added Lysa. It notes some unrelated, explicit content. I should respond engagingly and concisely, maybe even explore interesting implications. Perhaps I can ask the user if their plans reveal any hidden details. I just need to acknowledge this effectively.","native":{"item":{"reasoning":"**Assessing archive notes**\n\nI need to create a brief, reactive note about the distinct title and ambiguity surrounding the archive plans. It seems there's no need to search for additional info. The lore graph previously mentioned includes a reservoir, Oren, and an aqueduct, and the user has now added Lysa. It notes some unrelated, explicit content. I should respond engagingly and concisely, maybe even explore interesting implications. Perhaps I can ask the user if their plans reveal any hidden details. I just need to acknowledge this effectively.","reasoning_details":[{"type":"reasoning.summary","summary":"**Assessing archive notes**\n\nI need to create a brief, reactive note about the distinct title and ambiguity surrounding the archive plans. It seems there's no need to search for additional info. The lore graph previously mentioned includes a reservoir, Oren, and an aqueduct, and the user has now added Lysa. It notes some unrelated, explicit content. I should respond engagingly and concisely, maybe even explore interesting implications. Perhaps I can ask the user if their plans reveal any hidden details. I just need to acknowledge this effectively.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zFUgb2QyNNtKxLi3BrjhLM-CoRwTVegQ-CIZwwCkE2FTtv1iaxzfE3gL3EdJ2_I31Zx_TIOpVX32MxLyz3sQqajPakJ02bsVNa6qiA33javATF1GlOzh2nLAxc00O5WgJyjzfS0XxYhgW7kBI38GwePAh04o4KmJ0jmJuLe7rrta1Y6wem-JNCTeD4FBr-J-XwlGgeYYYp8fG38AQ2XRkJip6G5u8xWMnked_TCKIEAICSDXHld95ps02C-XP2fJZWoXiAJMKpdx8k8sxK-nOzRblkCpNdNUTiuVTHraB8JO-SylGjJRnKK1hhEme5FVizYMt_muIZQYQzz02CSFK1xPItWeNNl4ti9AqZjNoSsBO4Qu1H_TOYPSQl2tAPoaKk-g8ygThrzhgbbIcOL_7F7mo-xiGlgqreaMsbpy8fdAhroKMOB6elx1-Ecu7L3QV6HYUmcsNmYTlutZhng73jMybt8dvW0rbrhUbIqbHjS7T1fxFZZtIFg0Vub7EXBxGm2huO1mDMBDWsT4X_GAMf_tjPrL1XcS0RLExHudzyk63xXJICUR9d3K6W_yYyuu9q6CYILAi2tC-pEviowjbqXTkg280ipBT80ZpDpepmTktbzLlQOnOnFMXYhDttVpXZZ2J4K6PuXZhXvyIGduvjxh47ilfRbrBKTa2pyuLHKeD7AseYSWu4T3NVZp_G_rR2BimQe7DYENmtsCp1sEyPleqptYReZKdlOP4W_oxoqUdNZxVFFM90V1NvU1bTz6dnPjICMUI69xPSvVkFNTvu-b6Ykx3XTjsmCMoJKhd4AaZp5I3vj9dcT724j8HGADzMugS6Vnt4Hw5Pl_wTcZb1Kf-Nm7-NHtAtBo1cHac1_Y3KRnmpJ2W5GcYLj7esYPPK-V5jWPcAx5mhpiNOxaZI8RXFSFQGk5oorJp0fcHz5KWpDyYi5YBZM1JnVudAQ5RszuM7JmzZ_A7JgyPXBO3qxF4V1H0BwshVbncjF4TdRxpcTU5b-r97M8I6VmHp2bPNfh4SGKY4bnhvrj7-vclww1vpT9n0HxzlHb15T2iyytd2AygvqA3g-Ut5xW1eCKdmgRFAXGnboZQWLAjWNLYpGnaQW_I27k2oP02mkjSfI7-TmptyhOUqyVE5VKslOrxnd6ZWDHWuGHx5AakzFOMvdaC0VGUxwoVsK0QWowOZ_QLhJpoCIpYOuk2CPMMfiYA7UBWds2ZidwrEFEqmKhLaYzkMsqx6_EMRFuhYdeYWH4yWSF_5AhsQyq4oxjASqGLNAAJAtPPohmMYzq9oWXBfafqvIdt_WdChdwTip7qAO1gWg9W7eGGevVcEwVDkohx1QNy3nK30seaRDibIZnyR0ezc1QTwQEz9vwCexv3S69J0puajMIVaFKYdx1CbOBJ9dhhh8ycJbyAkBc9EG2LOBSBKmuTBjjAOJb3LWYoemd_SXks6jdr5LDg4Cgubg79N9LAy5k-XEKgS39cRu7cV6NJpsdg7Ctu0Bi7qMSkDPLMZeyChHvZ2qeIV_FsPJ63daPbr_iC4IOBwOa2H_y6deEIhAplGpaT99zme2ztlHt4q9sjSKM-HhSdUEYZixYNvA5NwLOqYbOpGQLl2Zx-sEBvvWgCe5KbgAZcx-pNztX4XtXxC2YvYHWjJV9o0zFiLiiN0FtNu_iwq0_5jfv06RmHApBIqsEcrdEvKKhpkvacrAGTOEfSuEcVDKpkXxuLVoU6l68nG-yjBV7oH1RAtPc7MfzZ7uJ4u1P6C89iQkbH4c9mBd1fLBW49MGLJpfVAf3Phjm7t82unmp8Nn7lMCrpeLzejGqP6z7jEjAn5Gh778RpcfDESwJRvyTUZkmA4ZX7UC8Vvshc9xJ4L0O6G-z93asletf265iB9Beyi9n7d76-OpJRDLlsZdg3vU_pXmO_qgMJ_BFnAthnUAyYzDVZVtd3x8xVe9vfPOmg8APQcgyu8GQ1cgqAO26OJH0wvNaK6_v9_rpjGw68Flse75LeBWo1_gwLVtwlYLzcE0bY_PYPju5hNZj5ZCTEy1JuMsPFYlkUJg5h-qkTN9u_fjy6XFad50x3vFPx2xicTiSpC2-su76Ruyt26zmbJyFbhjgf517pDudgQt-c6yhnMUsWsB2thVMOrweQdV3TIgrLVXaOXbdcGr4bYnWiup_Ug5x-fGbtefujrvErLsBR2n8hRNKMmuhmCnFOMes54FmvPdPHWOp3bLhe0X4lCHt5J56INQSnPGNo81_2L6HzEpxzQWrjTx3Lch4tS0mT74xwTsv4y24yacNUptIh18c1cFJRnnuNyyDFv-qbS580qsY_UUf7KvYh3nyBIw7XugyEKXyUyAfoz1-CqmsXkhqJkboxsA0z_B9HsefxkxwAsSFod_cwr8J1DgSQqlokUFplCAnSyZB-n5t8VNHD49e6crULzIEwF0VfLyoJd4tZHGM9vNu011IQVXA0v2Pq5AQJZhCR4Z12v6xAk7k-UaoL85eKLW8fj0ViFEG7guPC8QBA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0c95418b4040c651016ae3315216ac87d191d864ed512ff8b0","index":1}]},"fingerprint":"8844250d8c286791"}},{"type":"text","text":"So “Warden” is a shared title, not a connection: Oren guards the reservoir, while Lysa keeps the Sun Archive, which holds the original aqueduct plans. That makes the Archive a useful counterpoint to Mira’s hands-on knowledge."}]}
+

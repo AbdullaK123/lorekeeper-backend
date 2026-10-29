@@ -1,0 +1,16 @@
+{
+  "world_name": "Ardent Reach — conflict source smoke",
+  "conversation_title": "Sablecross water and archive notes",
+  "turns": [
+    "I'm building Ardent Reach, a desert region. Its city Sablecross has a reservoir fed by the Glass Aqueduct from the Basalt Hills. Keep your replies brief while I establish the lore.",
+    "Mira Venn is the engineer who maintains the Glass Aqueduct. The Sablecross council owns it; Mira doesn't. Mira was born in Sablecross. She keeps a cracked jade compass inside her right boot, and only her friend Oren Dask knows about it.",
+    "Oren Dask guards the reservoir and is called the Warden. Lysa Renn keeps the Sun Archive and is also called Warden. They are unrelated. The archive contains the original aqueduct plans.",
+    "The Glass Aqueduct was permanently destroyed by a landslide in 204. Nobody has rebuilt it, and there is no alternate aqueduct or bypass.",
+    "My notes also say that in 206 Mira opens the Glass Aqueduct's sluice and fresh water flows through it into Sablecross's reservoir. I haven't reconciled these notes. Flag the conflict; don't invent a repair or alternate channel.",
+    "Clarification: that 206 water-flow note is still unresolved, and the aqueduct remains destroyed in established canon. Separately, correct Mira's birthplace to Greyhaven, a small town on the coast. She moved to Sablecross as an adult. Keep her job, compass, and friendship unchanged.",
+    "For Oren, the reservoir Warden, specifically: he refuses to let soldiers draw water without a council permit. This is not about Lysa. Lysa allows civilian scholars into the Sun Archive during daylight only.",
+    "Hypothetical only: if the council rationed water to one cup per person daily, who would face pressure and what facts are missing? Don't save rationing as canon or invent population numbers, reserve levels, or other water sources.",
+    "Where was Mira born, what is hidden in her boot, who knows about it, and which Warden requires the soldiers' permit? Also remind me of the unresolved aqueduct issue.",
+    "One more unreconciled note: in 207 Lysa gives a civilian scholar access to the Sun Archive at midnight. I haven't decided whether that's an exception or a mistake. Flag that against the daylight-only rule, leave it unresolved, and don't add an exception to canon."
+  ]
+}

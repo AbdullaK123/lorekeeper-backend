@@ -33,6 +33,8 @@ async fn adversarial_live_api() {
     assert!(result.success(), "Live failures identify behavior that can harm users; inspect Python assertions");
 }
 
+const TEST_SOURCE_MESSAGE_ID: &str = "00000000-0000-4000-8000-000000000001";
+
 async fn graph_fixture() -> (data::GraphRepository, String) {
     let settings = infrastructure::load_settings();
     let config = infrastructure::load_config();
@@ -98,8 +100,8 @@ async fn cleanup_retries_failed_job_removal_without_blocking_other_jobs() {
     let (pool, worlds, owner, first, _) = world_deletion_fixture().await;
     let second = worlds.create("QA second cleanup".into(), "".into(), owner).await.unwrap().id;
     let (graph, _) = graph_fixture().await;
-    graph.upsert_entity(&graph_entity(&first.to_string(), "First"), embedding()).await.unwrap();
-    graph.upsert_entity(&graph_entity(&second.to_string(), "Second"), embedding()).await.unwrap();
+    save_graph_entity(&graph, &graph_entity(&first.to_string(), "First")).await;
+    save_graph_entity(&graph, &graph_entity(&second.to_string(), "Second")).await;
     worlds.delete(first, owner).await.unwrap();
     worlds.delete(second, owner).await.unwrap();
 
@@ -144,6 +146,7 @@ fn graph_entity(world: &str, name: &str) -> data::Entity {
         name: name.into(), name_key: data::name_key(name), aliases: vec![],
         kind: vec!["character".into()], description: "QA fixture".into(),
         properties: std::collections::HashMap::new(),
+        source_message_ids: vec![],
     }
 }
 
@@ -153,12 +156,18 @@ fn embedding() -> Vec<f64> {
     value
 }
 
+async fn save_graph_entity(repo: &data::GraphRepository, entity: &data::Entity) -> data::Entity {
+    repo.update_graph_batch(&entity.world_id, &[(entity.clone(), embedding())], &[], &[], TEST_SOURCE_MESSAGE_ID).await.unwrap();
+    repo.get_entity(&entity.id, &entity.world_id).await.unwrap().unwrap()
+}
+
 fn graph_relationship(world: &str, from: &str, to: &str, label: &str) -> data::Relationship {
     data::Relationship {
         id: uuid::Uuid::new_v4().to_string(), world_id: world.into(),
         from_id: from.into(), to_id: to.into(), rel_type: label.into(),
         description: "QA edge".into(), properties: std::collections::HashMap::new(),
         source_conversation: "qa".into(),
+        source_message_ids: vec![],
     }
 }
 
@@ -166,9 +175,13 @@ fn graph_relationship(world: &str, from: &str, to: &str, label: &str) -> data::R
 #[ignore = "requires live Memgraph"]
 async fn graph_retry_preserves_entity_identity() {
     let (repo, world) = graph_fixture().await;
-    let first = repo.upsert_entity(&graph_entity(&world, "Kael"), embedding()).await.unwrap();
-    let second = repo.upsert_entity(&graph_entity(&world, "  KAEL  "), embedding()).await.unwrap();
-    assert_eq!(first.id, second.id, "Retrying normalized names duplicates lore nodes");
+    let first = save_graph_entity(&repo, &graph_entity(&world, "Kael")).await;
+    let mut updated = first.clone();
+    updated.name = "  KAEL  ".into();
+    updated.description = "An updated description".into();
+    let second = save_graph_entity(&repo, &updated).await;
+    assert_eq!(first.id, second.id, "Updating an exact entity ID must preserve its identity");
+    assert_eq!(second.description, updated.description, "Retry must apply new content");
     assert_eq!(repo.get_entities_by_world(&world).await.unwrap().len(), 1,
         "A retry grows the graph instead of updating the existing entity");
 }
@@ -178,10 +191,10 @@ async fn graph_retry_preserves_entity_identity() {
 async fn graph_relationships_cannot_cross_worlds() {
     let (repo, world) = graph_fixture().await;
     let other = format!("qa-graph-{}", uuid::Uuid::new_v4());
-    let a = repo.upsert_entity(&graph_entity(&world, "A"), embedding()).await.unwrap();
-    let b = repo.upsert_entity(&graph_entity(&other, "B"), embedding()).await.unwrap();
-    let result = repo.upsert_relationship(&graph_relationship(&world, &a.id, &b.id, "KNOWS")).await.unwrap();
-    assert!(result.is_none(), "An edge connects private lore across user worlds");
+    let a = save_graph_entity(&repo, &graph_entity(&world, "A")).await;
+    let b = save_graph_entity(&repo, &graph_entity(&other, "B")).await;
+    let result = repo.update_graph_batch(&world, &[], &[graph_relationship(&world, &a.id, &b.id, "KNOWS")], &[], TEST_SOURCE_MESSAGE_ID).await;
+    assert!(result.is_err(), "An edge connects private lore across user worlds");
     assert!(repo.get_entity(&a.id, &other).await.unwrap().is_none(),
         "A guessed entity ID bypasses world isolation");
 }
@@ -190,11 +203,12 @@ async fn graph_relationships_cannot_cross_worlds() {
 #[ignore = "requires live Memgraph"]
 async fn graph_relationship_retry_does_not_duplicate_edges() {
     let (repo, world) = graph_fixture().await;
-    let a = repo.upsert_entity(&graph_entity(&world, "A"), embedding()).await.unwrap();
-    let b = repo.upsert_entity(&graph_entity(&world, "B"), embedding()).await.unwrap();
-    let first = repo.upsert_relationship(&graph_relationship(&world, &a.id, &b.id, "KNOWS")).await.unwrap().unwrap();
-    let second = repo.upsert_relationship(&graph_relationship(&world, &a.id, &b.id, "KNOWS")).await.unwrap().unwrap();
-    assert_eq!(first.id, second.id, "Retrying extraction duplicates a relationship");
+    let a = save_graph_entity(&repo, &graph_entity(&world, "A")).await;
+    let b = save_graph_entity(&repo, &graph_entity(&world, "B")).await;
+    let relationship = graph_relationship(&world, &a.id, &b.id, "KNOWS");
+    for _ in 0..2 {
+        repo.update_graph_batch(&world, &[], &[relationship.clone()], &[], TEST_SOURCE_MESSAGE_ID).await.unwrap();
+    }
     assert_eq!(repo.get_entity_neighbors(&a.id, &world, None, None).await.unwrap().len(), 1,
         "Repeated edges inflate retrieval context and ranking");
 }
@@ -204,7 +218,7 @@ async fn graph_relationship_retry_does_not_duplicate_edges() {
 async fn graph_relationship_injection_is_rejected() {
     let (repo, world) = graph_fixture().await;
     for label in ["", "1BAD", "KNOWS]->(n) DETACH DELETE n //", "A`B", "A B", "认识"] {
-        let result = repo.upsert_relationship(&graph_relationship(&world, "a", "b", label)).await;
+        let result = repo.update_graph_batch(&world, &[], &[graph_relationship(&world, "a", "b", label)], &[], TEST_SOURCE_MESSAGE_ID).await;
         assert!(matches!(result, Err(infrastructure::InfrastructureError::CypherInjection(_))),
             "Untrusted relationship labels can alter a graph query: {label}");
     }
@@ -214,14 +228,14 @@ async fn graph_relationship_injection_is_rejected() {
 #[ignore = "requires live Memgraph"]
 async fn graph_delete_entity_removes_attached_conflicts() {
     let (repo, world) = graph_fixture().await;
-    let entity = repo.upsert_entity(&graph_entity(&world, "A"), embedding()).await.unwrap();
+    let entity = save_graph_entity(&repo, &graph_entity(&world, "A")).await;
     let conflict = data::Conflict {
         id: uuid::Uuid::new_v4().to_string(), world_id: world.clone(), entity_id: entity.id.clone(),
         field: "description".into(), existing_value: serde_json::json!("old"),
         new_value: serde_json::json!("new"), severity: "hard".into(), explanation: "QA".into(),
-        source_conversation: "qa".into(), resolved: false,
+        source_conversation: "qa".into(), resolved: false, source_message_ids: vec![],
     };
-    repo.upsert_conflict(&conflict).await.unwrap().expect("QA conflict must exist");
+    repo.upsert_conflict(&conflict, TEST_SOURCE_MESSAGE_ID).await.unwrap().expect("QA conflict must exist");
     assert!(repo.delete_entity(&entity.id, &world).await.unwrap(), "Existing entities cannot be deleted");
     assert!(repo.get_conflict(&conflict.id, &world).await.unwrap().is_none(),
         "Deleting an entity leaves orphan conflicts that users cannot resolve");
@@ -233,7 +247,7 @@ async fn graph_entity_properties_round_trip_without_loss() {
     let (repo, world) = graph_fixture().await;
     let mut entity = graph_entity(&world, "O'Brien 🐉 ");
     entity.properties.insert("nested".into(), serde_json::json!({"a": [null, true, 3, "雪"]}));
-    let written = repo.upsert_entity(&entity, embedding()).await.unwrap();
+    let written = save_graph_entity(&repo, &entity).await;
     let read = repo.get_entity(&written.id, &world).await.unwrap().unwrap();
     assert_eq!(read.properties, entity.properties, "Graph storage silently corrupts structured or Unicode lore");
 }
@@ -256,6 +270,7 @@ async fn concurrent_message_appends_do_not_lose_writes() {
         let id = conversation.id;
         tasks.push(tokio::spawn(async move {
             repo.append_messages(id, user_id, &[data::Message::User {
+                id: uuid::Uuid::new_v4(),
                 content: format!("message-{index}"), created_at: chrono::Utc::now(),
             }]).await
         }));
@@ -274,4 +289,300 @@ async fn concurrent_message_appends_do_not_lose_writes() {
         data::Message::User { content, .. } => Some(content.as_str()), _ => None,
     }).collect();
     assert_eq!(unique.len(), 40, "Concurrent append results duplicate messages instead of preserving each write");
+}
+
+#[tokio::test]
+#[ignore = "requires Memgraph"]
+async fn graph_batch_missing_endpoint_rolls_back_entities() {
+    let (repo, world) = graph_fixture().await;
+    let entity = graph_entity(&world, "Batch rollback");
+    let edge = graph_relationship(&world, &entity.id, &uuid::Uuid::new_v4().to_string(), "KNOWS");
+    let result = repo.update_graph_batch(&world, &[(entity.clone(), embedding())], &[edge], &[], TEST_SOURCE_MESSAGE_ID).await;
+    let saved = repo.get_entity(&entity.id, &world).await.unwrap();
+    repo.delete_graph(&world).await.unwrap();
+    assert!(result.is_err(), "Missing endpoints must fail the batch");
+    assert!(saved.is_none(), "A failed relationship must not leave an accepted entity write behind");
+}
+
+#[tokio::test]
+#[ignore = "requires Memgraph"]
+async fn graph_batch_retry_preserves_distinct_connections() {
+    let (repo, world) = graph_fixture().await;
+    let a = graph_entity(&world, "Batch A");
+    let b = graph_entity(&world, "Batch B");
+    repo.update_graph_batch(&world, &[(a.clone(), embedding()), (b.clone(), embedding())], &[], &[], TEST_SOURCE_MESSAGE_ID).await.unwrap();
+    let first = graph_relationship(&world, &a.id, &b.id, "KNOWS");
+    let mut second = first.clone();
+    second.id = uuid::Uuid::new_v4().to_string();
+    second.description = "A separate conditional connection".into();
+    for _ in 0..2 {
+        repo.update_graph_batch(&world, &[], &[first.clone(), second.clone()], &[], TEST_SOURCE_MESSAGE_ID).await.unwrap();
+    }
+    let neighbors = repo.get_entity_neighbors(&a.id, &world, None, None).await.unwrap();
+    repo.update_graph_batch(&world, &[], &[], &[first.id.clone()], TEST_SOURCE_MESSAGE_ID).await.unwrap();
+    let remaining = repo.get_entity_neighbors(&a.id, &world, None, None).await.unwrap();
+    repo.delete_graph(&world).await.unwrap();
+    assert_eq!(neighbors.len(), 2, "Retries must preserve two distinct connection IDs without duplicate edges");
+    assert_eq!(remaining.len(), 1, "Retraction must delete only the selected relationship");
+    assert_eq!(remaining[0].1.id, second.id, "Retraction deleted the wrong relationship");
+}
+
+#[tokio::test]
+#[ignore = "requires Memgraph"]
+async fn graph_batch_foreign_endpoint_rolls_back_changes() {
+    let (repo, world) = graph_fixture().await;
+    let foreign_world = format!("qa-foreign-{}", uuid::Uuid::new_v4());
+    let foreign = graph_entity(&foreign_world, "Foreign endpoint");
+    repo.update_graph_batch(&foreign_world, &[(foreign.clone(), embedding())], &[], &[], TEST_SOURCE_MESSAGE_ID).await.unwrap();
+    let local = graph_entity(&world, "Local endpoint");
+    let edge = graph_relationship(&world, &local.id, &foreign.id, "KNOWS");
+    let result = repo.update_graph_batch(&world, &[(local.clone(), embedding())], &[edge], &[], TEST_SOURCE_MESSAGE_ID).await;
+    let saved = repo.get_entity(&local.id, &world).await.unwrap();
+    repo.delete_graph(&world).await.unwrap();
+    repo.delete_graph(&foreign_world).await.unwrap();
+    assert!(result.is_err(), "An endpoint from another world must never create a relationship");
+    assert!(saved.is_none(), "Foreign endpoint failure must roll back earlier writes");
+}
+
+#[tokio::test]
+#[ignore = "requires Memgraph"]
+async fn graph_batch_rejects_retargeting_saved_relationship_id() {
+    let (repo, world) = graph_fixture().await;
+    let a = graph_entity(&world, "Retarget A");
+    let b = graph_entity(&world, "Retarget B");
+    let c = graph_entity(&world, "Retarget C");
+    let edge = graph_relationship(&world, &a.id, &b.id, "KNOWS");
+    repo.update_graph_batch(&world, &[(a.clone(), embedding()), (b.clone(), embedding()), (c.clone(), embedding())], &[edge.clone()], &[], TEST_SOURCE_MESSAGE_ID).await.unwrap();
+    let mut changed = edge.clone();
+    changed.to_id = c.id;
+    let result = repo.update_graph_batch(&world, &[], &[changed], &[], TEST_SOURCE_MESSAGE_ID).await;
+    let neighbors = repo.get_entity_neighbors(&a.id, &world, None, None).await.unwrap();
+    repo.delete_graph(&world).await.unwrap();
+    assert!(result.is_err(), "An existing relationship ID must not silently select another target");
+    assert_eq!(neighbors.len(), 1, "Rejected retargeting must not add a second edge");
+    assert_eq!(neighbors[0].1.to_id, b.id, "Rejected retargeting must preserve the original target");
+}
+
+#[tokio::test]
+#[ignore = "requires Memgraph; makes no AI calls"]
+async fn chat_agent_has_no_graph_write_tools() {
+    let (repo, world) = graph_fixture().await;
+    let client = rig::providers::openrouter::new("unused-test-key");
+    let embedding_model: rig::DynModel<rig::operation::Embedding> = client.embedding("openai/text-embedding-3-small", None).into();
+    let retrieval = service::RetrievalService::new(repo.clone(), embedding_model);
+    let factory = service::ChatAgentFactory::new(client.chat("unused-test-model").into(), "test".into(), retrieval);
+    let agent = factory.create_agent(world, String::new());
+    let names: Vec<_> = agent.tool_server_handle().static_tool_defs().into_iter().map(|d| d.name).collect();
+    assert_eq!(names, vec!["search_world"], "Chat must never mutate lore before message persistence");
+}
+
+#[tokio::test]
+#[ignore = "requires Memgraph; makes no AI calls"]
+async fn researcher_agent_has_complete_lore_tools() {
+    let (repo, world) = graph_fixture().await;
+    let client = rig::providers::openrouter::new("unused-test-key");
+    let embedding_model: rig::DynModel<rig::operation::Embedding> = client.embedding("openai/text-embedding-3-small", None).into();
+    let retrieval = service::RetrievalService::new(repo.clone(), embedding_model.clone());
+    let researcher = service::ResearcherService::new(client.chat("unused-test-model").into(), "test".into(), repo, retrieval, embedding_model);
+    let agent = researcher.create_agent(world, uuid::Uuid::new_v4().to_string(), TEST_SOURCE_MESSAGE_ID.into());
+    let mut names: Vec<_> = agent.tool_server_handle().static_tool_defs().into_iter().map(|d| d.name).collect();
+    names.sort();
+    assert_eq!(names, vec!["flag_conflict", "read_entity", "search_world", "update_graph"],
+        "The researcher needs complete reads and conflict reporting alongside scoped graph writes");
+}
+
+#[tokio::test]
+#[ignore = "requires Memgraph; makes no AI calls"]
+async fn researcher_read_preserves_details_and_rejects_foreign_entities() {
+    use rig::tool::PortableTool;
+    let (repo, world) = graph_fixture().await;
+    let a = graph_entity(&world, "Research read A");
+    let mut b = graph_entity(&world, "Research read B");
+    b.properties.insert("population".into(), serde_json::json!(53000));
+    let mut edge = graph_relationship(&world, &a.id, &b.id, "VISITS");
+    edge.description = "Only during winter.".into();
+    repo.update_graph_batch(&world, &[(a.clone(), embedding()), (b, embedding())], &[edge.clone()], &[], TEST_SOURCE_MESSAGE_ID).await.unwrap();
+    let read = service::ReadEntity { world_id: world.clone(), graph_repo: repo.clone() };
+    let details = read.call(service::ReadEntityArgs { entity_id: a.id.clone() }).await.unwrap();
+    let foreign = service::ReadEntity { world_id: "other-world".into(), graph_repo: repo.clone() };
+    let denied = foreign.call(service::ReadEntityArgs { entity_id: a.id }).await;
+    repo.delete_graph(&world).await.unwrap();
+    assert_eq!(details["neighbors"][0][0]["properties"]["population"], 53000,
+        "Full reads must retain neighbor facts before replacement writes");
+    assert_eq!(details["neighbors"][0][1]["description"], "Only during winter.",
+        "Full reads must retain relationship conditions");
+    assert_eq!(details["neighbors"][0][1]["id"], edge.id,
+        "The researcher needs exact IDs to update or retract relationships");
+    assert!(denied.is_err(), "Foreign entity IDs must not expose private lore");
+}
+
+#[tokio::test(flavor = "multi_thread", worker_threads = 4)]
+#[ignore = "paid conversation smoke test; requires explicit authorization, isolated Postgres, and Memgraph"]
+async fn researcher_smoke_conversation() {
+    assert_eq!(std::env::var("QA_SMOKE_PAID").as_deref(), Ok("1"), "Explicit paid smoke-test opt-in required");
+    let database = std::env::var("DATABASE_URL").expect("DATABASE_URL required");
+    assert!(database.ends_with("/lorekeeper_adversarial"), "Smoke tests must use the isolated QA database");
+    infrastructure::init_tracing();
+    let listener = tokio::net::TcpListener::bind("127.0.0.1:18001").await.unwrap();
+    let (router, mut scheduler) = app::create_app().await;
+    let server = tokio::spawn(async move { axum::serve(listener, router).await.unwrap(); });
+    let result = tokio::task::spawn_blocking(|| {
+        std::process::Command::new("python3")
+            .args(["tests/smoke_conversation.py"])
+            .env("QA_BASE_URL", "http://127.0.0.1:18001")
+            .status().expect("Python with requests required")
+    }).await.unwrap();
+    scheduler.shutdown().await.unwrap();
+    server.abort();
+    assert!(result.success(), "Smoke test did not complete; inspect retained artifacts and logs");
+}
+
+#[tokio::test]
+#[ignore = "requires isolated Postgres; makes no AI calls"]
+async fn message_id_migration_preserves_history_and_existing_ids() {
+    let database = std::env::var("DATABASE_URL").unwrap();
+    assert!(database.ends_with("/lorekeeper_adversarial"), "Migration fixtures require the QA database");
+    let pool = sqlx::PgPool::connect(&database).await.unwrap();
+    let mut txn = pool.begin().await.unwrap();
+    // A temporary table shadows the real table so this test changes no existing histories.
+    sqlx::query("CREATE TEMP TABLE conversations (id uuid PRIMARY KEY, messages jsonb NOT NULL) ON COMMIT DROP")
+        .execute(&mut *txn).await.unwrap();
+    let conversation_id = uuid::Uuid::new_v4();
+    let empty_id = uuid::Uuid::new_v4();
+    let assistant_id = uuid::Uuid::new_v4();
+    let original = serde_json::json!([
+        {"role": "user", "content": "Asha owns a brass key.", "created_at": "2026-10-29T00:00:00Z"},
+        {"role": "assistant", "id": assistant_id, "content": "Who knows?", "tool_calls": [{"id": "call-1", "name": "search_world", "arguments": {"query": "key"}}], "created_at": "2026-10-29T00:00:01Z"},
+        {"role": "tool", "id": null, "tool_call_id": "call-1", "content": "No matches", "created_at": "2026-10-29T00:00:02Z"}
+    ]);
+    sqlx::query("INSERT INTO conversations VALUES ($1, $2), ($3, '[]'::jsonb)")
+        .bind(conversation_id).bind(&original).bind(empty_id).execute(&mut *txn).await.unwrap();
+    let migration = include_str!("../migrations/20261029000000_add_message_ids.sql");
+    sqlx::raw_sql(migration).execute(&mut *txn).await.unwrap();
+    let saved: serde_json::Value = sqlx::query_scalar("SELECT messages FROM conversations WHERE id = $1")
+        .bind(conversation_id).fetch_one(&mut *txn).await.unwrap();
+    sqlx::raw_sql(migration).execute(&mut *txn).await.unwrap();
+    let again: serde_json::Value = sqlx::query_scalar("SELECT messages FROM conversations WHERE id = $1")
+        .bind(conversation_id).fetch_one(&mut *txn).await.unwrap();
+    let empty: serde_json::Value = sqlx::query_scalar("SELECT messages FROM conversations WHERE id = $1")
+        .bind(empty_id).fetch_one(&mut *txn).await.unwrap();
+    txn.rollback().await.unwrap();
+    assert_eq!(saved, again, "Rerunning migration must not replace stable message IDs");
+    assert_eq!(empty, serde_json::json!([]), "Empty histories must stay empty arrays");
+    assert_eq!(saved[1]["id"], assistant_id.to_string(), "Migration must preserve existing IDs");
+    let messages: Vec<data::Message> = serde_json::from_value(saved.clone()).unwrap();
+    let ids: std::collections::HashSet<_> = messages.iter().map(data::Message::id).collect();
+    assert_eq!(ids.len(), 3, "User, assistant, and tool messages need distinct IDs");
+    let mut expected = original;
+    for index in 0..3 {
+        expected[index]["id"] = saved[index]["id"].clone();
+    }
+    assert_eq!(saved, expected, "Adding IDs must preserve content, roles, timestamps, order, and tool-call references");
+}
+
+#[tokio::test]
+#[ignore = "requires isolated Postgres; makes no AI calls"]
+async fn stored_message_ids_survive_repeated_reads() {
+    let (pool, _, user_id, world_id, conversation_id) = world_deletion_fixture().await;
+    let repo = data::ConversationRepository::new(pool.clone());
+    let user = uuid::Uuid::new_v4();
+    let assistant = uuid::Uuid::new_v4();
+    let tool = uuid::Uuid::new_v4();
+    let messages = [
+        data::Message::User { id: user, content: "Asha owns a key.".into(), created_at: chrono::Utc::now() },
+        data::Message::Assistant { id: assistant, content: None, tool_calls: None, created_at: chrono::Utc::now() },
+        data::Message::Tool { id: tool, tool_call_id: "call-1".into(), content: "Saved".into(), created_at: chrono::Utc::now() },
+    ];
+    let appended = repo.append_messages(conversation_id, user_id, &messages).await.unwrap().unwrap();
+    for _ in 0..2 {
+        let read = repo.get_by_id(conversation_id, user_id).await.unwrap().unwrap();
+        assert_eq!(read.messages.0.iter().map(data::Message::id).collect::<Vec<_>>(), vec![user, assistant, tool],
+            "Loading history must never generate replacement message IDs");
+        assert_eq!(serde_json::to_value(&read.messages).unwrap(), serde_json::to_value(&appended.messages).unwrap(),
+            "Message payloads must remain stable across database reads");
+    }
+    sqlx::query("DELETE FROM worlds WHERE id = $1").bind(world_id).execute(&pool).await.unwrap();
+    sqlx::query("DELETE FROM users WHERE id = $1").bind(user_id).execute(&pool).await.unwrap();
+}
+
+#[tokio::test]
+#[ignore = "requires Memgraph; makes no AI calls"]
+async fn graph_source_message_ids_accumulate_without_duplicates() {
+    use rig::tool::PortableTool;
+    let (repo, world) = graph_fixture().await;
+    let a = graph_entity(&world, "Source A");
+    let b = graph_entity(&world, "Source B");
+    let edge = graph_relationship(&world, &a.id, &b.id, "KNOWS");
+    let first = uuid::Uuid::new_v4().to_string();
+    let second = uuid::Uuid::new_v4().to_string();
+    for source in [&first, &second, &first] {
+        repo.update_graph_batch(&world, &[(a.clone(), embedding()), (b.clone(), embedding())], &[edge.clone()], &[], source).await.unwrap();
+    }
+    let read = service::ReadEntity { world_id: world.clone(), graph_repo: repo.clone() };
+    let result = read.call(service::ReadEntityArgs { entity_id: a.id }).await.unwrap();
+    repo.delete_graph(&world).await.unwrap();
+    let expected = serde_json::json!([first, second]);
+    assert_eq!(result["entity"]["source_message_ids"], expected,
+        "Entity reads must expose all source IDs without duplicating a retried source");
+    assert_eq!(result["neighbors"][0][0]["source_message_ids"], expected,
+        "Neighbor reads must expose their saved source IDs");
+    assert_eq!(result["neighbors"][0][1]["source_message_ids"], expected,
+        "Relationship reads must preserve source IDs through replacement updates");
+}
+
+#[tokio::test]
+#[ignore = "requires Memgraph; makes no AI calls"]
+async fn legacy_graph_records_without_source_ids_remain_readable() {
+    let settings = infrastructure::load_settings();
+    let config = infrastructure::load_config();
+    let graph = infrastructure::create_graph(&settings, &config.memgraph).await;
+    let repo = data::GraphRepository::new(graph.clone());
+    let world = format!("qa-legacy-sources-{}", uuid::Uuid::new_v4());
+    let a = graph_entity(&world, "Legacy A");
+    let b = graph_entity(&world, "Legacy B");
+    let edge = graph_relationship(&world, &a.id, &b.id, "KNOWS");
+    repo.update_graph_batch(&world, &[(a.clone(), embedding()), (b, embedding())], &[edge], &[], TEST_SOURCE_MESSAGE_ID).await.unwrap();
+    graph.run(neo4rs::query("MATCH (e:Entity {world_id: $world}) REMOVE e.source_message_ids")
+        .param("world", world.clone())).await.unwrap();
+    graph.run(neo4rs::query("MATCH ()-[r]->() WHERE r.world_id = $world REMOVE r.source_message_ids")
+        .param("world", world.clone())).await.unwrap();
+    let entity = repo.get_entity(&a.id, &world).await.unwrap().unwrap();
+    let neighbors = repo.get_entity_neighbors(&a.id, &world, None, None).await.unwrap();
+    repo.delete_graph(&world).await.unwrap();
+    assert!(entity.source_message_ids.is_empty(), "Missing historical sources must read as an empty list");
+    assert!(neighbors[0].1.source_message_ids.is_empty(), "Legacy relationships must remain readable without invented sources");
+}
+
+#[tokio::test]
+#[ignore = "requires Memgraph; makes no AI calls"]
+async fn conflict_message_sources_accumulate_without_duplicates() {
+    use rig::tool::PortableTool;
+    let settings = infrastructure::load_settings();
+    let config = infrastructure::load_config();
+    let graph = infrastructure::create_graph(&settings, &config.memgraph).await;
+    let repo = data::GraphRepository::new(graph.clone());
+    let world = format!("qa-conflict-sources-{}", uuid::Uuid::new_v4());
+    let entity = save_graph_entity(&repo, &graph_entity(&world, "Sealed archive")).await;
+    let first = uuid::Uuid::new_v4().to_string();
+    let second = uuid::Uuid::new_v4().to_string();
+    for source in [&first, &second, &first] {
+        let tool = service::FlagConflict {
+            world_id: world.clone(), conversation_id: "qa".into(),
+            source_message_id: source.clone(), graph_repo: repo.clone(),
+        };
+        tool.call(service::FlagConflictArgs {
+            entity_id: entity.id.clone(), field: "access".into(),
+            existing_value: serde_json::json!("sealed"), new_value: serde_json::json!("entered"),
+            severity: "hard".into(), explanation: "Unresolved entry into sealed archive".into(),
+        }).await.unwrap();
+    }
+    let conflicts = repo.get_conflicts_by_entity(&entity.id, &world).await.unwrap();
+    assert_eq!(conflicts.len(), 1, "Reporting the same conflict must preserve one unresolved record");
+    assert_eq!(conflicts[0].source_message_ids, vec![first, second],
+        "Conflict sources must preserve earlier reports without duplicating retries");
+    graph.run(neo4rs::query("MATCH (c:Conflict {world_id: $world}) REMOVE c.source_message_ids")
+        .param("world", world.clone())).await.unwrap();
+    let legacy = repo.get_conflicts_by_entity(&entity.id, &world).await.unwrap();
+    repo.delete_graph(&world).await.unwrap();
+    assert!(legacy[0].source_message_ids.is_empty(), "Legacy conflicts need empty source lists, not invented message IDs");
 }

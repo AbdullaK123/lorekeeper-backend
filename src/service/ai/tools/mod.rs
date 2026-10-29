@@ -1,6 +1,6 @@
-pub mod entities;
-pub mod relationships;
-pub mod conversations;
 pub mod conflicts;
+pub mod entities;
 
 pub use entities::*;
+
+pub use conflicts::*;

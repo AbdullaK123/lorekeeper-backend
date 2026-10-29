@@ -3,19 +3,18 @@ use crate::data::{
     WorldRepository,
 };
 use crate::service::{
-    ChatAgentFactory, ExtractionService, RetrievalService, ServiceError, format_hits,
+    ChatAgentFactory, ResearcherService, RetrievalService, ServiceError, format_hits,
 };
 use chrono::Utc;
 use futures::{Stream, StreamExt};
 use rig::agent::MultiTurnStreamItem;
-use rig::message::Message as RigMessage;
 use uuid::Uuid;
 
 #[derive(Clone)]
 pub struct ConversationService {
     pub conversation_repo: ConversationRepository,
     pub world_repo: WorldRepository,
-    extraction_service: ExtractionService,
+    researcher_service: ResearcherService,
     retrieval_service: RetrievalService,
     agent_factory: ChatAgentFactory,
 }
@@ -24,14 +23,14 @@ impl ConversationService {
     pub fn new(
         conversation_repo: ConversationRepository,
         world_repo: WorldRepository,
-        extraction_service: ExtractionService,
+        researcher_service: ResearcherService,
         retrieval_service: RetrievalService,
         agent_factory: ChatAgentFactory,
     ) -> Self {
         Self {
             conversation_repo,
             world_repo,
-            extraction_service,
+            researcher_service,
             retrieval_service,
             agent_factory,
         }
@@ -67,9 +66,7 @@ impl ConversationService {
             .conversation_repo
             .get_by_world_id(world_id, user_id)
             .await?;
-        Ok(ConversationItemsResponse {
-            conversations: result.into_iter().map(|c| c.into()).collect(),
-        })
+        Ok(result.into())
     }
 
     // get a convo by id
@@ -118,15 +115,12 @@ impl ConversationService {
             .await?;
         let lore = format_hits(&hits);
         let message = Message::User {
+            id: Uuid::new_v4(),
             content: content.clone(),
             created_at: Utc::now(),
         };
-        let history: Vec<RigMessage> = conversation
-            .messages
-            .iter()
-            .filter_map(Message::to_rig)
-            .collect();
-        // The conversation as it was before this turn: extraction's context for resolving "his", "the city", ...
+        let history = conversation.rig_history();
+        // The conversation as it was before this turn: researcher context for resolving "his", "the city", ...
         let earlier_messages: Vec<Message> = conversation.messages.0.clone();
         let agent = self
             .agent_factory
@@ -140,10 +134,14 @@ impl ConversationService {
                 .max_turns(5)
                 .stream();
             while let Some(item) = rig_stream.next().await {
+
+                let message = message.clone();
+
                 match item {
                     Ok(item) => {
                         if let MultiTurnStreamItem::FinalResponse(resp) = &item {
                             let reply = Message::Assistant {
+                                id: Uuid::new_v4(),
                                 content: Some(resp.output().to_string()),
                                 tool_calls: None,
                                 created_at: Utc::now()
@@ -155,13 +153,14 @@ impl ConversationService {
                                 yield Err(e.into());
                                 break;
                             }
-                            let extraction = service.extraction_service.clone();
+                            let researcher = service.researcher_service.clone();
                             let world_id = conversation.world_id;
                             let text = content.clone();
                             let earlier = earlier_messages.clone();
                             tokio::spawn(async move {
-                                if let Err(e) = extraction.process_message(world_id, id, &text, &earlier).await {
-                                    tracing::error!("extraction failed for conversation {id}: {e}");
+                                match researcher.process_message(world_id, id, message.clone().id(), &text, &earlier).await {
+                                    Ok(_) => tracing::info!("research completed for conversation {id}"),
+                                    Err(e) => tracing::error!("research failed for conversation {id}: {e}"),
                                 }
                             });
                         }

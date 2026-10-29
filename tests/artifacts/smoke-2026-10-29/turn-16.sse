@@ -1,0 +1,418 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"tool_call","name":"search_world"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"{\""}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"query"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"\":\""}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"V"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"esper"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" lighthouse"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" blue"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" salt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" winter"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" stored"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" supply"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" shipments"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" from"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" Or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" how"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" long"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" reserves"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" last"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" consequences"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" if"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" imports"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" stop"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"\"}"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"toolcall","id":{"provider":"call_GnzaQw0uhgfs6ZbuFZM7xRZ6"},"function":{"name":"search_world","arguments":{"query":"Vesper lighthouse blue salt winter stored supply and shipments from Orin, how long reserves last and consequences if imports stop"}},"native":{"item":{"id":"call_GnzaQw0uhgfs6ZbuFZM7xRZ6","type":"function","function":{"name":"search_world","arguments":"{\"query\":\"Vesper lighthouse blue salt winter stored supply and shipments from Orin, how long reserves last and consequences if imports stop\"}"}},"fingerprint":"e04ef2870d6db93a"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":5061,"output_tokens":40,"total_tokens":5101,"cached_input_tokens":1826,"cache_creation_input_tokens":3232,"reasoning_tokens":0,"cost":{"total":0.00044256}},"response_id":"gen-1793270739-iWYWZT3zfPISvzcSetUq","finish_reason":"tool_calls","raw":{"id":"gen-1793270739-iWYWZT3zfPISvzcSetUq","object":"chat.completion","created":1793270739,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":null,"role":"assistant","tool_calls":[{"id":"call_GnzaQw0uhgfs6ZbuFZM7xRZ6","type":"function","function":{"name":"search_world","arguments":"{\"query\":\"Vesper lighthouse blue salt winter stored supply and shipments from Orin, how long reserves last and consequences if imports stop\"}"}}]},"finish_reason":"tool_calls","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":5061,"completion_tokens":40,"total_tokens":5101,"cost":0.00044256,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":3232,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00044256,"upstream_inference_prompt_cost":0.00042256,"upstream_inference_completions_cost":0.00002},"completion_tokens_details":{"reasoning_tokens":0,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"toolCall","tool_call":{"id":{"provider":"call_GnzaQw0uhgfs6ZbuFZM7xRZ6"},"function":{"name":"search_world","arguments":{"query":"Vesper lighthouse blue salt winter stored supply and shipments from Orin, how long reserves last and consequences if imports stop"}},"native":{"item":{"id":"call_GnzaQw0uhgfs6ZbuFZM7xRZ6","type":"function","function":{"name":"search_world","arguments":"{\"query\":\"Vesper lighthouse blue salt winter stored supply and shipments from Orin, how long reserves last and consequences if imports stop\"}"}},"fingerprint":"e04ef2870d6db93a"}}}
+
+data: {"type":"toolExecutionCommitted","tool_call":{"id":{"provider":"call_GnzaQw0uhgfs6ZbuFZM7xRZ6"},"function":{"name":"search_world","arguments":{"query":"Vesper lighthouse blue salt winter stored supply and shipments from Orin, how long reserves last and consequences if imports stop"}},"native":{"item":{"id":"call_GnzaQw0uhgfs6ZbuFZM7xRZ6","type":"function","function":{"name":"search_world","arguments":"{\"query\":\"Vesper lighthouse blue salt winter stored supply and shipments from Orin, how long reserves last and consequences if imports stop\"}"}},"fingerprint":"e04ef2870d6db93a"}}}
+
+data: {"type":"toolResult","tool_result":{"call":{"provider":"call_GnzaQw0uhgfs6ZbuFZM7xRZ6"},"name":"search_world","content":[{"type":"text","text":"Lantern Guild (guild) [ID: 8ada2504-3940-4fa0-9142-7b15d6e2c8fa]: The guild that maintains Vesper's tidal lighthouse and buys blue salt from Orin's miners; it does not own the mines. When the strait freezes in winter, the guild uses stored blue salt.\n  - â MEMBER_OF from Asha Pell (person) [ID: 731a80b4-1cd1-40e2-9fe7-618d14dd3932] [Aliases: Captain Ash]: Born on Orin, Asha Pell moved to Vesper at age six and grew up there. She captains the courier ship Nightjar and belongs to the Lantern Guild; her crew usually calls her Captain Ash. She keeps a small brass key sewn inside her left coat cuff; only her navigator, Iven Marr, knows she has it.\n  - â HONORS_CIVILIAN_CONTRACTS_WITH from Sera Dain (person) [ID: 4e7f03b3-a66c-4627-9e62-3e2ba6943d5c]: Leader of the Deep Bell Union. She refuses to sell salt to the military but continues to honor civilian contracts with the Lantern Guild.\n  - MAINTAINS â Tidal lighthouse of Vesper (lighthouse) [ID: 76dc2022-8211-4657-b177-03c04d118558]: A tidal lighthouse around which Vesper is built. Its lenses run on blue salt.\n  - BUYS_FROM â Orin's miners (worker group) [ID: 92474181-bc9f-4dc2-bf64-51e67969f1ea]: Miners on Orin who mine blue salt; the Lantern Guild buys salt from them. They formed the Deep Bell Union.\n  - USES_STORED â Blue salt (mineral, fuel) [ID: 8f0beecf-61cb-4419-99eb-e2030a4eafb7]: A salt mined on the island of Orin that powers the lenses of Vesper's tidal lighthouse.\n  - OPPOSES â Toll on blue salt shipments (toll, policy) [ID: 2521192a-96cc-4cd6-849e-31b02c7d959e]: A toll on blue salt shipments imposed in 319 by Vesper's governor, Tal Ren. The Lantern Guild opposes it. Bren Vale supports it because the revenue repairs fishing piers.\n\nBlue salt (mineral, fuel) [ID: 8f0beecf-61cb-4419-99eb-e2030a4eafb7]: A salt mined on the island of Orin that powers the lenses of Vesper's tidal lighthouse.\n  - â USES from Tidal lighthouse of Vesper (lighthouse) [ID: 76dc2022-8211-4657-b177-03c04d118558]: A tidal lighthouse around which Vesper is built. Its lenses run on blue salt.\n  - â TRANSPORTS from Nightjar (ship, courier ship) [ID: b0cd3a42-d5b0-44dd-972d-da7d960aab40]: A courier ship captained by Asha Pell. It carries blue salt from Orin to Vesper between April and September; winter ice closes the strait.\n  - â USES_STORED from Lantern Guild (guild) [ID: 8ada2504-3940-4fa0-9142-7b15d6e2c8fa]: The guild that maintains Vesper's tidal lighthouse and buys blue salt from Orin's miners; it does not own the mines. When the strait freezes in winter, the guild uses stored blue salt.\n  - MINED_ON â Orin (island) [ID: 9bac8802-f464-491c-b86e-9c90ec862af2]: An island where blue salt is mined.\n\nNightjar (ship, courier ship) [ID: b0cd3a42-d5b0-44dd-972d-da7d960aab40]: A courier ship captained by Asha Pell. It carries blue salt from Orin to Vesper between April and September; winter ice closes the strait.\n  Properties: source_conversation: 01a1873c-dda9-7bf5-a8c5-094ae62ee4c8\n  - â CAPTAINS from Asha Pell (person) [ID: 731a80b4-1cd1-40e2-9fe7-618d14dd3932] [Aliases: Captain Ash]: Born on Orin, Asha Pell moved to Vesper at age six and grew up there. She captains the courier ship Nightjar and belongs to the Lantern Guild; her crew usually calls her Captain Ash. She keeps a small brass key sewn inside her left coat cuff; only her navigator, Iven Marr, knows she has it.\n  - â NAVIGATES from Iven Marr (person) [ID: 05ff3f16-a6a5-4f4c-833b-8f226a7a345d]: Asha Pell's navigator on the Nightjar; the only person who knows she has the small brass key sewn inside her left coat cuff. He lost his right eye in the winter storm of 312. He navigates using tide charts, not magic.\n  - TRANSPORTS â Blue salt (mineral, fuel) [ID: 8f0beecf-61cb-4419-99eb-e2030a4eafb7]: A salt mined on the island of Orin that powers the lenses of Vesper's tidal lighthouse.\n\nTidal lighthouse of Vesper (lighthouse) [ID: 76dc2022-8211-4657-b177-03c04d118558]: A tidal lighthouse around which Vesper is built. Its lenses run on blue salt.\n  - â BUILT_AROUND from Vesper (city, port) [ID: 8e5eb323-f581-4ce1-8cf4-8bceb6847598]: Brinewake's main port city, built around a tidal lighthouse.\n  - â MAINTAINS from Lantern Guild (guild) [ID: 8ada2504-3940-4fa0-9142-7b15d6e2c8fa]: The guild that maintains Vesper's tidal lighthouse and buys blue salt from Orin's miners; it does not own the mines. When the strait freezes in winter, the guild uses stored blue salt.\n  - â LOCATED_BENEATH from Old lens room beneath Vesper's lighthouse (room, location) [ID: 287f4345-79ad-4e32-9acc-6168a9aafe18]: An old lens room beneath Vesper's tidal lighthouse, opened by Asha Pell's small brass key. A rockfall permanently sealed it in 318. Nobody has reopened it, and it has no other entrance.\n  - USES â Blue salt (mineral, fuel) [ID: 8f0beecf-61cb-4419-99eb-e2030a4eafb7]: A salt mined on the island of Orin that powers the lenses of Vesper's tidal lighthouse.\n\nOrin (island) [ID: 9bac8802-f464-491c-b86e-9c90ec862af2]: An island where blue salt is mined.\n  - â MINED_ON from Blue salt (mineral, fuel) [ID: 8f0beecf-61cb-4419-99eb-e2030a4eafb7]: A salt mined on the island of Orin that powers the lenses of Vesper's tidal lighthouse.\n  - â LOCATED_IN from Orin's miners (worker group) [ID: 92474181-bc9f-4dc2-bf64-51e67969f1ea]: Miners on Orin who mine blue salt; the Lantern Guild buys salt from them. They formed the Deep Bell Union.\n  - â BORN_IN from Asha Pell (person) [ID: 731a80b4-1cd1-40e2-9fe7-618d14dd3932] [Aliases: Captain Ash]: Born on Orin, Asha Pell moved to Vesper at age six and grew up there. She captains the courier ship Nightjar and belongs to the Lantern Guild; her crew usually calls her Captain Ash. She keeps a small brass key sewn inside her left coat cuff; only her navigator, Iven Marr, knows she has it."}]}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Explaining fuel reserves**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" provide"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" brief"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" hypothetical"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" response"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" regarding"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" fuel"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" reserves"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" The"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" likely"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" duration"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" of"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" reserves"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" uncertain"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" especially"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" since"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" imports"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" are"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" active"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" from"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" April"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" September"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" cessation"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" means"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" current"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" supplies"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" could"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" enable"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" winter"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" use"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" before"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" being"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" depleted"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" The"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" immediate"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" answer"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" relies"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" on"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" stock"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"pile"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" levels"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" usage"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" rates"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" If"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" there"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"âs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" insufficient"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" fuel"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" service"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" may"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" decrease"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" with"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" potential"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" disruptions"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" port"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" navigation"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" specifics"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" are"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" uncertain"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" important"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" distinguish"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" these"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" factors"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" clearly"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Hyp"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ot"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"hetically"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" would"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" rely"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" on"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" its"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" stored"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" blue"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" salt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" through"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" winter"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" we"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" don"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ât"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" know"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" how"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" large"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" its"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" reserves"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" are"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" how"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" quickly"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" lighthouse"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" uses"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" them"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" If"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" stock"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" ran"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" out"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" before"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" exports"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" resumed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" lenses"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" might"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" have"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" dim"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" go"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" dark"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" disrupting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" navigation"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" into"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" V"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"esper"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":";"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" whether"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" there"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"âs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" any"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" backup"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" fuel"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" alternative"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" system"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" unknown"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" This"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" doesn"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ât"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" establish"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" an"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" export"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" ban"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" as"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" canon"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"Hypothetically, the Guild would rely on its stored blue salt through the winter, but we donât know how large its reserves are or how quickly the lighthouse uses them. If the stock ran out before exports resumed, the lenses might have to dim or go dark, disrupting navigation into Vesper; whether thereâs any backup fuel or alternative system is unknown. This doesnât establish an export ban as canon."}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Explaining fuel reserves**\n\nI need to provide a brief, hypothetical response regarding fuel reserves. The likely duration of reserves is uncertain, especially since imports are active from April to September, but a cessation means current supplies could enable winter use before being depleted. The immediate answer relies on stockpile levels and usage rates. If thereâs insufficient fuel, service may decrease, with potential disruptions to port navigation, but the specifics are uncertain. It's important to distinguish these factors clearly.","native":{"item":{"reasoning":"**Explaining fuel reserves**\n\nI need to provide a brief, hypothetical response regarding fuel reserves. The likely duration of reserves is uncertain, especially since imports are active from April to September, but a cessation means current supplies could enable winter use before being depleted. The immediate answer relies on stockpile levels and usage rates. If thereâs insufficient fuel, service may decrease, with potential disruptions to port navigation, but the specifics are uncertain. It's important to distinguish these factors clearly.","reasoning_details":[{"type":"reasoning.summary","summary":"**Explaining fuel reserves**\n\nI need to provide a brief, hypothetical response regarding fuel reserves. The likely duration of reserves is uncertain, especially since imports are active from April to September, but a cessation means current supplies could enable winter use before being depleted. The immediate answer relies on stockpile levels and usage rates. If thereâs insufficient fuel, service may decrease, with potential disruptions to port navigation, but the specifics are uncertain. It's important to distinguish these factors clearly.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yPbL_DdStZtyf33DCMEyNMR-LZ3v8XVoWgn-olrs5WHTsEUi2-YOAh72WvIeIUfjP87TiKGX6PXAsMLEAhnOli0ZxSbHdH5I_HZowY01ztvgv8WS5ooFNQ4RxEO0uocLiPiiR7WFLgeXlwtFqHA8msp2xOo_G96NDdjmupoe7dDVwEpe227FzdjS9BMTAQRgcxlg3XigQ2c6TxwjC9hXDHRxMF7vjOGyYL3qZHeJ-jow3iwftYasKf6qKxLFm_w9BT4JjPlMOGcp8qpWf-9el7w6Jp7zmMq28IpGwBVyG2iVbGWTLwYhuukcVlH7AdnqlkF52JPJIPIFS07rfiwmEtn5E9R2yKmX_7FiIvX4B4PR-Q9fpnWS5HEVKg5WY0R5R5sa5VZvWY_7Gha2tQ6P0RqqOnfea4J1S73Ln80HsvrD5ypY2tavGXOazvnhBTtOqSPwtBzzQNcl8ddCE_6diD-PcwLwjnOLHMhmZi9n3E0YbMhjqvHVOgPNFKQ_ljFb7T2WC5h7tnyIpT61BIwnxmt7IK483nou7gWL2ElARDDFM9aRSWVBo5AS0Pu10PmbszbX7BqgIFw3J3wpar2YGcBkRU3uhwbxksAKLu4z2dcfSy9tD6WZO3PbhzxmRmZIZXX2LoktVU3pZx27ti68NSVl_HAfJG37ju75FBFPy-maFhTdluyg8UoOAwEWi01exVKFXI3EIxy5-e_18wLHuEr3HTFqn8WUzJ_qLkXEuUdwWGW3iB9sJwMmYcKtJN5-EZ8vi3krvm9PA3jZNIDjb1CJCV4jNscM8GiHjA_V8PwzDG3yu1KOUtvBcIXr4-t9tN6U2N9vVzblSqO6AXQEUuDMdsPhQigsIgF-uy6H6JphozwLu8KL9XG-rQA4qoVWzrL-HMjC_pTzVz5IriZSHIlHUIhwMKO1K5xDVq75r-2vDqMm8AfAWV0fpv9b09K0COZUWByb4zAW7Bk_GWoZAvZ-dUCbpAOqGES7A4o3mqebQzYlDcDeW5I7XUktg9xQy4GWM4jJb-rd5FKgcpiJ4SxxD-TRQN7s0LszQjABTf8JlqcM3B6IOc5BodVA8587UtvDmSMYl3eFRdFlssP9TXyNTtjfkXx8fOiYN_lZjSkrfGXcGDLnjqu7SNDhWdk5CnKnyWQyNZvDMC2pS2AF1hAxzNP2HpVvF8bFfPkpiO3gUBwph5YMAMHFz7PXiDZLzFSRtw-wEp5qoMqw3EPoCudhEUQEUzVH-wBi3I5E3gOX6w0MtqeBA9KDCCZW1dmijC0kLTwYIw8eRuy9sWq8O_VHBrAiFI5WPSinW7ugtcg3zTT1RClvgSJFegNEaNXX_zlmGP33PSoyQVc5FEtSEW4V9MQlP7hpJbCCBI8mVogn3IJ54YxyXzW7xKoJPi0lobfVoegznpPDq5VOK1DBZZ9dGD6OVx_9jm6IWxS4G-vbdhzj4wAFaj6F9HflQAAnHTZReEoyLZEht2o6cxSmyJM5LqsjeQyC1SVoS6r6o5SaVLw63dlueuYhTxrHJfWuKGnl7MN5NjTrEY1GpdoCs7YnPk4ht6DgwvO2B0VzczHhQlH_YH5p1diq3BbCkSZvMOfZaHsY7Mn0N78XVTJW3mkZEeZTLW6c2tiXgn27vdXg0QLkI98w087ik-yhl62ZhTJpkwF7ic8K1BJPlmpBam-QA_MofRcPKSTcPECiiiFkGyjxqgYlWdBpD3Kv2mh-jxTtxDJG6W7J-TqyTa7K08AeKBS0n2M5yw7Fo2Jh0LqatuIJe_BRp3g0eWWe1mpnsgnT2hAOoG7AMcBMF5JsMlgYkw7a4TfYficcyp3_O4liD0pg-H1Z1kXv-JL-HIexN_wTJkQmsiTptmmfU_rpIB8GrkxbbCF5GpErAf2Vz8uIlXAmGWF-w7PJpxnWj-xiNDPIMg7nmJjLdtdsMis6VkPSJVescvjY2XLw0D9_VqLebDSxLPpBHnoNDVfkXk8bjQ7aJIFlUq3sRMfLOCxwDjDnTkyfOEx4l8zKxbC2DdWnWBa28udqF9F0wHyQEi2FQ4OdcbsS680wYRFHltUlTLgyCE6Swm-d5WZ_8jZwRKENUraCyCvGzopqacda2271N6YJCGctz5wVolp8IRogK-IuapVOcWR6lGtF4oge-00cXw6R8UbGn1xqaCeyjqYcyILRo4BsxdQtxJ_ce3l4C2tGHExEak83wDWHNYyTVTO62amdr8LTiz7Lal13BKjPJ7BFUbpeMTQFhlBhWQWEwdr-mTROc4MT39ud20sLDxc25ap5G6TN0B3uekM5qqumyq1UZkT997CGC2CK3EI3_a3pCnLnlwOSy5LYD3yCNEQhTWULQ1upqDRrkrTlUIgZyCalKDM6agFNtXl7F75M1iMyvbgMd1Ndatz9IZ3nn6goCaUCH-cEOJUXh1NFSXeJBnzFEWUAikBSTT8aoUDN_aH3oYHcyxnhuHcpSIS3HfG4N_rjVXiejwOy0w_we7wlDoVSq5j1VRwFcPykXPKfZuXsEq-K_vPpqPD-gMoPGGB5JsXmyYHyfgLjnUJGujPuftETYfORUSw8hUJiJ-5dJ-6fJtgzDj22qbLyQn_GkLGK_gSnv5vAJ1-B0VV2l0MZ7MR1fElyErA_TvBwWCQcUF-rwq1DzE0ehwHVjB0xqyJtBwDvYGFcYZOUhW1ixPl7JJy4OcxTnUjnGuFsn7X9zGB_1Pk_4W8gklt8Cbn6UA88NIblO-TOfMNlrF1hTLVDQivVUS2FXxipuADbtbZkP0K9FRnXo1cKg79rNXkb3KcmEjUrjpx5MI6vMicm0HN7jyhXhVUL7CRP_0WDtODnVV26Q==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_071a0657738e375e016ae323d92a8c87d18bca5f40f91ebe62","index":1}]},"fingerprint":"bbbddda2fff4dea4"}}}}
+
+data: {"type":"completionCall","call_index":1,"usage":{"input_tokens":6976,"output_tokens":175,"total_tokens":7151,"cached_input_tokens":5058,"cache_creation_input_tokens":1915,"reasoning_tokens":87,"cost":{"total":0.000377755}},"response_id":"gen-1793270744-MY9mFuXywNGIuGMf7Ohl","finish_reason":"stop","raw":{"id":"gen-1793270744-MY9mFuXywNGIuGMf7Ohl","object":"chat.completion","created":1793270744,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Hypothetically, the Guild would rely on its stored blue salt through the winter, but we donât know how large its reserves are or how quickly the lighthouse uses them. If the stock ran out before exports resumed, the lenses might have to dim or go dark, disrupting navigation into Vesper; whether thereâs any backup fuel or alternative system is unknown. This doesnât establish an export ban as canon.","role":"assistant","reasoning":"**Explaining fuel reserves**\n\nI need to provide a brief, hypothetical response regarding fuel reserves. The likely duration of reserves is uncertain, especially since imports are active from April to September, but a cessation means current supplies could enable winter use before being depleted. The immediate answer relies on stockpile levels and usage rates. If thereâs insufficient fuel, service may decrease, with potential disruptions to port navigation, but the specifics are uncertain. It's important to distinguish these factors clearly.","reasoning_details":[{"type":"reasoning.summary","summary":"**Explaining fuel reserves**\n\nI need to provide a brief, hypothetical response regarding fuel reserves. The likely duration of reserves is uncertain, especially since imports are active from April to September, but a cessation means current supplies could enable winter use before being depleted. The immediate answer relies on stockpile levels and usage rates. If thereâs insufficient fuel, service may decrease, with potential disruptions to port navigation, but the specifics are uncertain. It's important to distinguish these factors clearly.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yPbL_DdStZtyf33DCMEyNMR-LZ3v8XVoWgn-olrs5WHTsEUi2-YOAh72WvIeIUfjP87TiKGX6PXAsMLEAhnOli0ZxSbHdH5I_HZowY01ztvgv8WS5ooFNQ4RxEO0uocLiPiiR7WFLgeXlwtFqHA8msp2xOo_G96NDdjmupoe7dDVwEpe227FzdjS9BMTAQRgcxlg3XigQ2c6TxwjC9hXDHRxMF7vjOGyYL3qZHeJ-jow3iwftYasKf6qKxLFm_w9BT4JjPlMOGcp8qpWf-9el7w6Jp7zmMq28IpGwBVyG2iVbGWTLwYhuukcVlH7AdnqlkF52JPJIPIFS07rfiwmEtn5E9R2yKmX_7FiIvX4B4PR-Q9fpnWS5HEVKg5WY0R5R5sa5VZvWY_7Gha2tQ6P0RqqOnfea4J1S73Ln80HsvrD5ypY2tavGXOazvnhBTtOqSPwtBzzQNcl8ddCE_6diD-PcwLwjnOLHMhmZi9n3E0YbMhjqvHVOgPNFKQ_ljFb7T2WC5h7tnyIpT61BIwnxmt7IK483nou7gWL2ElARDDFM9aRSWVBo5AS0Pu10PmbszbX7BqgIFw3J3wpar2YGcBkRU3uhwbxksAKLu4z2dcfSy9tD6WZO3PbhzxmRmZIZXX2LoktVU3pZx27ti68NSVl_HAfJG37ju75FBFPy-maFhTdluyg8UoOAwEWi01exVKFXI3EIxy5-e_18wLHuEr3HTFqn8WUzJ_qLkXEuUdwWGW3iB9sJwMmYcKtJN5-EZ8vi3krvm9PA3jZNIDjb1CJCV4jNscM8GiHjA_V8PwzDG3yu1KOUtvBcIXr4-t9tN6U2N9vVzblSqO6AXQEUuDMdsPhQigsIgF-uy6H6JphozwLu8KL9XG-rQA4qoVWzrL-HMjC_pTzVz5IriZSHIlHUIhwMKO1K5xDVq75r-2vDqMm8AfAWV0fpv9b09K0COZUWByb4zAW7Bk_GWoZAvZ-dUCbpAOqGES7A4o3mqebQzYlDcDeW5I7XUktg9xQy4GWM4jJb-rd5FKgcpiJ4SxxD-TRQN7s0LszQjABTf8JlqcM3B6IOc5BodVA8587UtvDmSMYl3eFRdFlssP9TXyNTtjfkXx8fOiYN_lZjSkrfGXcGDLnjqu7SNDhWdk5CnKnyWQyNZvDMC2pS2AF1hAxzNP2HpVvF8bFfPkpiO3gUBwph5YMAMHFz7PXiDZLzFSRtw-wEp5qoMqw3EPoCudhEUQEUzVH-wBi3I5E3gOX6w0MtqeBA9KDCCZW1dmijC0kLTwYIw8eRuy9sWq8O_VHBrAiFI5WPSinW7ugtcg3zTT1RClvgSJFegNEaNXX_zlmGP33PSoyQVc5FEtSEW4V9MQlP7hpJbCCBI8mVogn3IJ54YxyXzW7xKoJPi0lobfVoegznpPDq5VOK1DBZZ9dGD6OVx_9jm6IWxS4G-vbdhzj4wAFaj6F9HflQAAnHTZReEoyLZEht2o6cxSmyJM5LqsjeQyC1SVoS6r6o5SaVLw63dlueuYhTxrHJfWuKGnl7MN5NjTrEY1GpdoCs7YnPk4ht6DgwvO2B0VzczHhQlH_YH5p1diq3BbCkSZvMOfZaHsY7Mn0N78XVTJW3mkZEeZTLW6c2tiXgn27vdXg0QLkI98w087ik-yhl62ZhTJpkwF7ic8K1BJPlmpBam-QA_MofRcPKSTcPECiiiFkGyjxqgYlWdBpD3Kv2mh-jxTtxDJG6W7J-TqyTa7K08AeKBS0n2M5yw7Fo2Jh0LqatuIJe_BRp3g0eWWe1mpnsgnT2hAOoG7AMcBMF5JsMlgYkw7a4TfYficcyp3_O4liD0pg-H1Z1kXv-JL-HIexN_wTJkQmsiTptmmfU_rpIB8GrkxbbCF5GpErAf2Vz8uIlXAmGWF-w7PJpxnWj-xiNDPIMg7nmJjLdtdsMis6VkPSJVescvjY2XLw0D9_VqLebDSxLPpBHnoNDVfkXk8bjQ7aJIFlUq3sRMfLOCxwDjDnTkyfOEx4l8zKxbC2DdWnWBa28udqF9F0wHyQEi2FQ4OdcbsS680wYRFHltUlTLgyCE6Swm-d5WZ_8jZwRKENUraCyCvGzopqacda2271N6YJCGctz5wVolp8IRogK-IuapVOcWR6lGtF4oge-00cXw6R8UbGn1xqaCeyjqYcyILRo4BsxdQtxJ_ce3l4C2tGHExEak83wDWHNYyTVTO62amdr8LTiz7Lal13BKjPJ7BFUbpeMTQFhlBhWQWEwdr-mTROc4MT39ud20sLDxc25ap5G6TN0B3uekM5qqumyq1UZkT997CGC2CK3EI3_a3pCnLnlwOSy5LYD3yCNEQhTWULQ1upqDRrkrTlUIgZyCalKDM6agFNtXl7F75M1iMyvbgMd1Ndatz9IZ3nn6goCaUCH-cEOJUXh1NFSXeJBnzFEWUAikBSTT8aoUDN_aH3oYHcyxnhuHcpSIS3HfG4N_rjVXiejwOy0w_we7wlDoVSq5j1VRwFcPykXPKfZuXsEq-K_vPpqPD-gMoPGGB5JsXmyYHyfgLjnUJGujPuftETYfORUSw8hUJiJ-5dJ-6fJtgzDj22qbLyQn_GkLGK_gSnv5vAJ1-B0VV2l0MZ7MR1fElyErA_TvBwWCQcUF-rwq1DzE0ehwHVjB0xqyJtBwDvYGFcYZOUhW1ixPl7JJy4OcxTnUjnGuFsn7X9zGB_1Pk_4W8gklt8Cbn6UA88NIblO-TOfMNlrF1hTLVDQivVUS2FXxipuADbtbZkP0K9FRnXo1cKg79rNXkb3KcmEjUrjpx5MI6vMicm0HN7jyhXhVUL7CRP_0WDtODnVV26Q==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_071a0657738e375e016ae323d92a8c87d18bca5f40f91ebe62","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":6976,"completion_tokens":175,"total_tokens":7151,"cost":0.000377755,"is_byok":false,"prompt_tokens_details":{"cached_tokens":5058,"cache_write_tokens":1915,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000377755,"upstream_inference_prompt_cost":0.000290255,"upstream_inference_completions_cost":0.0000875},"completion_tokens_details":{"reasoning_tokens":87,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":12037,"output_tokens":215,"total_tokens":12252,"cached_input_tokens":6884,"cache_creation_input_tokens":5147,"reasoning_tokens":87,"cost":{"total":0.0008203150000000001}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":5061,"output_tokens":40,"total_tokens":5101,"cached_input_tokens":1826,"cache_creation_input_tokens":3232,"reasoning_tokens":0,"cost":{"total":0.00044256}},"response_id":"gen-1793270739-iWYWZT3zfPISvzcSetUq","finish_reason":"tool_calls","raw":{"id":"gen-1793270739-iWYWZT3zfPISvzcSetUq","object":"chat.completion","created":1793270739,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":null,"role":"assistant","tool_calls":[{"id":"call_GnzaQw0uhgfs6ZbuFZM7xRZ6","type":"function","function":{"name":"search_world","arguments":"{\"query\":\"Vesper lighthouse blue salt winter stored supply and shipments from Orin, how long reserves last and consequences if imports stop\"}"}}]},"finish_reason":"tool_calls","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":5061,"completion_tokens":40,"total_tokens":5101,"cost":0.00044256,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":3232,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00044256,"upstream_inference_prompt_cost":0.00042256,"upstream_inference_completions_cost":0.00002},"completion_tokens_details":{"reasoning_tokens":0,"image_tokens":0,"audio_tokens":0}}}},{"call_index":1,"usage":{"input_tokens":6976,"output_tokens":175,"total_tokens":7151,"cached_input_tokens":5058,"cache_creation_input_tokens":1915,"reasoning_tokens":87,"cost":{"total":0.000377755}},"response_id":"gen-1793270744-MY9mFuXywNGIuGMf7Ohl","finish_reason":"stop","raw":{"id":"gen-1793270744-MY9mFuXywNGIuGMf7Ohl","object":"chat.completion","created":1793270744,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Hypothetically, the Guild would rely on its stored blue salt through the winter, but we donât know how large its reserves are or how quickly the lighthouse uses them. If the stock ran out before exports resumed, the lenses might have to dim or go dark, disrupting navigation into Vesper; whether thereâs any backup fuel or alternative system is unknown. This doesnât establish an export ban as canon.","role":"assistant","reasoning":"**Explaining fuel reserves**\n\nI need to provide a brief, hypothetical response regarding fuel reserves. The likely duration of reserves is uncertain, especially since imports are active from April to September, but a cessation means current supplies could enable winter use before being depleted. The immediate answer relies on stockpile levels and usage rates. If thereâs insufficient fuel, service may decrease, with potential disruptions to port navigation, but the specifics are uncertain. It's important to distinguish these factors clearly.","reasoning_details":[{"type":"reasoning.summary","summary":"**Explaining fuel reserves**\n\nI need to provide a brief, hypothetical response regarding fuel reserves. The likely duration of reserves is uncertain, especially since imports are active from April to September, but a cessation means current supplies could enable winter use before being depleted. The immediate answer relies on stockpile levels and usage rates. If thereâs insufficient fuel, service may decrease, with potential disruptions to port navigation, but the specifics are uncertain. It's important to distinguish these factors clearly.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yPbL_DdStZtyf33DCMEyNMR-LZ3v8XVoWgn-olrs5WHTsEUi2-YOAh72WvIeIUfjP87TiKGX6PXAsMLEAhnOli0ZxSbHdH5I_HZowY01ztvgv8WS5ooFNQ4RxEO0uocLiPiiR7WFLgeXlwtFqHA8msp2xOo_G96NDdjmupoe7dDVwEpe227FzdjS9BMTAQRgcxlg3XigQ2c6TxwjC9hXDHRxMF7vjOGyYL3qZHeJ-jow3iwftYasKf6qKxLFm_w9BT4JjPlMOGcp8qpWf-9el7w6Jp7zmMq28IpGwBVyG2iVbGWTLwYhuukcVlH7AdnqlkF52JPJIPIFS07rfiwmEtn5E9R2yKmX_7FiIvX4B4PR-Q9fpnWS5HEVKg5WY0R5R5sa5VZvWY_7Gha2tQ6P0RqqOnfea4J1S73Ln80HsvrD5ypY2tavGXOazvnhBTtOqSPwtBzzQNcl8ddCE_6diD-PcwLwjnOLHMhmZi9n3E0YbMhjqvHVOgPNFKQ_ljFb7T2WC5h7tnyIpT61BIwnxmt7IK483nou7gWL2ElARDDFM9aRSWVBo5AS0Pu10PmbszbX7BqgIFw3J3wpar2YGcBkRU3uhwbxksAKLu4z2dcfSy9tD6WZO3PbhzxmRmZIZXX2LoktVU3pZx27ti68NSVl_HAfJG37ju75FBFPy-maFhTdluyg8UoOAwEWi01exVKFXI3EIxy5-e_18wLHuEr3HTFqn8WUzJ_qLkXEuUdwWGW3iB9sJwMmYcKtJN5-EZ8vi3krvm9PA3jZNIDjb1CJCV4jNscM8GiHjA_V8PwzDG3yu1KOUtvBcIXr4-t9tN6U2N9vVzblSqO6AXQEUuDMdsPhQigsIgF-uy6H6JphozwLu8KL9XG-rQA4qoVWzrL-HMjC_pTzVz5IriZSHIlHUIhwMKO1K5xDVq75r-2vDqMm8AfAWV0fpv9b09K0COZUWByb4zAW7Bk_GWoZAvZ-dUCbpAOqGES7A4o3mqebQzYlDcDeW5I7XUktg9xQy4GWM4jJb-rd5FKgcpiJ4SxxD-TRQN7s0LszQjABTf8JlqcM3B6IOc5BodVA8587UtvDmSMYl3eFRdFlssP9TXyNTtjfkXx8fOiYN_lZjSkrfGXcGDLnjqu7SNDhWdk5CnKnyWQyNZvDMC2pS2AF1hAxzNP2HpVvF8bFfPkpiO3gUBwph5YMAMHFz7PXiDZLzFSRtw-wEp5qoMqw3EPoCudhEUQEUzVH-wBi3I5E3gOX6w0MtqeBA9KDCCZW1dmijC0kLTwYIw8eRuy9sWq8O_VHBrAiFI5WPSinW7ugtcg3zTT1RClvgSJFegNEaNXX_zlmGP33PSoyQVc5FEtSEW4V9MQlP7hpJbCCBI8mVogn3IJ54YxyXzW7xKoJPi0lobfVoegznpPDq5VOK1DBZZ9dGD6OVx_9jm6IWxS4G-vbdhzj4wAFaj6F9HflQAAnHTZReEoyLZEht2o6cxSmyJM5LqsjeQyC1SVoS6r6o5SaVLw63dlueuYhTxrHJfWuKGnl7MN5NjTrEY1GpdoCs7YnPk4ht6DgwvO2B0VzczHhQlH_YH5p1diq3BbCkSZvMOfZaHsY7Mn0N78XVTJW3mkZEeZTLW6c2tiXgn27vdXg0QLkI98w087ik-yhl62ZhTJpkwF7ic8K1BJPlmpBam-QA_MofRcPKSTcPECiiiFkGyjxqgYlWdBpD3Kv2mh-jxTtxDJG6W7J-TqyTa7K08AeKBS0n2M5yw7Fo2Jh0LqatuIJe_BRp3g0eWWe1mpnsgnT2hAOoG7AMcBMF5JsMlgYkw7a4TfYficcyp3_O4liD0pg-H1Z1kXv-JL-HIexN_wTJkQmsiTptmmfU_rpIB8GrkxbbCF5GpErAf2Vz8uIlXAmGWF-w7PJpxnWj-xiNDPIMg7nmJjLdtdsMis6VkPSJVescvjY2XLw0D9_VqLebDSxLPpBHnoNDVfkXk8bjQ7aJIFlUq3sRMfLOCxwDjDnTkyfOEx4l8zKxbC2DdWnWBa28udqF9F0wHyQEi2FQ4OdcbsS680wYRFHltUlTLgyCE6Swm-d5WZ_8jZwRKENUraCyCvGzopqacda2271N6YJCGctz5wVolp8IRogK-IuapVOcWR6lGtF4oge-00cXw6R8UbGn1xqaCeyjqYcyILRo4BsxdQtxJ_ce3l4C2tGHExEak83wDWHNYyTVTO62amdr8LTiz7Lal13BKjPJ7BFUbpeMTQFhlBhWQWEwdr-mTROc4MT39ud20sLDxc25ap5G6TN0B3uekM5qqumyq1UZkT997CGC2CK3EI3_a3pCnLnlwOSy5LYD3yCNEQhTWULQ1upqDRrkrTlUIgZyCalKDM6agFNtXl7F75M1iMyvbgMd1Ndatz9IZ3nn6goCaUCH-cEOJUXh1NFSXeJBnzFEWUAikBSTT8aoUDN_aH3oYHcyxnhuHcpSIS3HfG4N_rjVXiejwOy0w_we7wlDoVSq5j1VRwFcPykXPKfZuXsEq-K_vPpqPD-gMoPGGB5JsXmyYHyfgLjnUJGujPuftETYfORUSw8hUJiJ-5dJ-6fJtgzDj22qbLyQn_GkLGK_gSnv5vAJ1-B0VV2l0MZ7MR1fElyErA_TvBwWCQcUF-rwq1DzE0ehwHVjB0xqyJtBwDvYGFcYZOUhW1ixPl7JJy4OcxTnUjnGuFsn7X9zGB_1Pk_4W8gklt8Cbn6UA88NIblO-TOfMNlrF1hTLVDQivVUS2FXxipuADbtbZkP0K9FRnXo1cKg79rNXkb3KcmEjUrjpx5MI6vMicm0HN7jyhXhVUL7CRP_0WDtODnVV26Q==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_071a0657738e375e016ae323d92a8c87d18bca5f40f91ebe62","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":6976,"completion_tokens":175,"total_tokens":7151,"cost":0.000377755,"is_byok":false,"prompt_tokens_details":{"cached_tokens":5058,"cache_write_tokens":1915,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000377755,"upstream_inference_prompt_cost":0.000290255,"upstream_inference_completions_cost":0.0000875},"completion_tokens_details":{"reasoning_tokens":87,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"Hypothetical only: if Orin stopped exporting blue salt for a year, what would happen to Vesper's lighthouse? Don't add this export ban to canon, and say what we don't know."}]},{"role":"assistant","content":[{"type":"toolcall","id":{"provider":"call_GnzaQw0uhgfs6ZbuFZM7xRZ6"},"function":{"name":"search_world","arguments":{"query":"Vesper lighthouse blue salt winter stored supply and shipments from Orin, how long reserves last and consequences if imports stop"}},"native":{"item":{"id":"call_GnzaQw0uhgfs6ZbuFZM7xRZ6","type":"function","function":{"name":"search_world","arguments":"{\"query\":\"Vesper lighthouse blue salt winter stored supply and shipments from Orin, how long reserves last and consequences if imports stop\"}"}},"fingerprint":"e04ef2870d6db93a"}}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793270739-iWYWZT3zfPISvzcSetUq"},"stop":"tool_use"},{"role":"user","content":[{"type":"toolresult","call":{"provider":"call_GnzaQw0uhgfs6ZbuFZM7xRZ6"},"name":"search_world","content":[{"type":"text","text":"Lantern Guild (guild) [ID: 8ada2504-3940-4fa0-9142-7b15d6e2c8fa]: The guild that maintains Vesper's tidal lighthouse and buys blue salt from Orin's miners; it does not own the mines. When the strait freezes in winter, the guild uses stored blue salt.\n  - â MEMBER_OF from Asha Pell (person) [ID: 731a80b4-1cd1-40e2-9fe7-618d14dd3932] [Aliases: Captain Ash]: Born on Orin, Asha Pell moved to Vesper at age six and grew up there. She captains the courier ship Nightjar and belongs to the Lantern Guild; her crew usually calls her Captain Ash. She keeps a small brass key sewn inside her left coat cuff; only her navigator, Iven Marr, knows she has it.\n  - â HONORS_CIVILIAN_CONTRACTS_WITH from Sera Dain (person) [ID: 4e7f03b3-a66c-4627-9e62-3e2ba6943d5c]: Leader of the Deep Bell Union. She refuses to sell salt to the military but continues to honor civilian contracts with the Lantern Guild.\n  - MAINTAINS â Tidal lighthouse of Vesper (lighthouse) [ID: 76dc2022-8211-4657-b177-03c04d118558]: A tidal lighthouse around which Vesper is built. Its lenses run on blue salt.\n  - BUYS_FROM â Orin's miners (worker group) [ID: 92474181-bc9f-4dc2-bf64-51e67969f1ea]: Miners on Orin who mine blue salt; the Lantern Guild buys salt from them. They formed the Deep Bell Union.\n  - USES_STORED â Blue salt (mineral, fuel) [ID: 8f0beecf-61cb-4419-99eb-e2030a4eafb7]: A salt mined on the island of Orin that powers the lenses of Vesper's tidal lighthouse.\n  - OPPOSES â Toll on blue salt shipments (toll, policy) [ID: 2521192a-96cc-4cd6-849e-31b02c7d959e]: A toll on blue salt shipments imposed in 319 by Vesper's governor, Tal Ren. The Lantern Guild opposes it. Bren Vale supports it because the revenue repairs fishing piers.\n\nBlue salt (mineral, fuel) [ID: 8f0beecf-61cb-4419-99eb-e2030a4eafb7]: A salt mined on the island of Orin that powers the lenses of Vesper's tidal lighthouse.\n  - â USES from Tidal lighthouse of Vesper (lighthouse) [ID: 76dc2022-8211-4657-b177-03c04d118558]: A tidal lighthouse around which Vesper is built. Its lenses run on blue salt.\n  - â TRANSPORTS from Nightjar (ship, courier ship) [ID: b0cd3a42-d5b0-44dd-972d-da7d960aab40]: A courier ship captained by Asha Pell. It carries blue salt from Orin to Vesper between April and September; winter ice closes the strait.\n  - â USES_STORED from Lantern Guild (guild) [ID: 8ada2504-3940-4fa0-9142-7b15d6e2c8fa]: The guild that maintains Vesper's tidal lighthouse and buys blue salt from Orin's miners; it does not own the mines. When the strait freezes in winter, the guild uses stored blue salt.\n  - MINED_ON â Orin (island) [ID: 9bac8802-f464-491c-b86e-9c90ec862af2]: An island where blue salt is mined.\n\nNightjar (ship, courier ship) [ID: b0cd3a42-d5b0-44dd-972d-da7d960aab40]: A courier ship captained by Asha Pell. It carries blue salt from Orin to Vesper between April and September; winter ice closes the strait.\n  Properties: source_conversation: 01a1873c-dda9-7bf5-a8c5-094ae62ee4c8\n  - â CAPTAINS from Asha Pell (person) [ID: 731a80b4-1cd1-40e2-9fe7-618d14dd3932] [Aliases: Captain Ash]: Born on Orin, Asha Pell moved to Vesper at age six and grew up there. She captains the courier ship Nightjar and belongs to the Lantern Guild; her crew usually calls her Captain Ash. She keeps a small brass key sewn inside her left coat cuff; only her navigator, Iven Marr, knows she has it.\n  - â NAVIGATES from Iven Marr (person) [ID: 05ff3f16-a6a5-4f4c-833b-8f226a7a345d]: Asha Pell's navigator on the Nightjar; the only person who knows she has the small brass key sewn inside her left coat cuff. He lost his right eye in the winter storm of 312. He navigates using tide charts, not magic.\n  - TRANSPORTS â Blue salt (mineral, fuel) [ID: 8f0beecf-61cb-4419-99eb-e2030a4eafb7]: A salt mined on the island of Orin that powers the lenses of Vesper's tidal lighthouse.\n\nTidal lighthouse of Vesper (lighthouse) [ID: 76dc2022-8211-4657-b177-03c04d118558]: A tidal lighthouse around which Vesper is built. Its lenses run on blue salt.\n  - â BUILT_AROUND from Vesper (city, port) [ID: 8e5eb323-f581-4ce1-8cf4-8bceb6847598]: Brinewake's main port city, built around a tidal lighthouse.\n  - â MAINTAINS from Lantern Guild (guild) [ID: 8ada2504-3940-4fa0-9142-7b15d6e2c8fa]: The guild that maintains Vesper's tidal lighthouse and buys blue salt from Orin's miners; it does not own the mines. When the strait freezes in winter, the guild uses stored blue salt.\n  - â LOCATED_BENEATH from Old lens room beneath Vesper's lighthouse (room, location) [ID: 287f4345-79ad-4e32-9acc-6168a9aafe18]: An old lens room beneath Vesper's tidal lighthouse, opened by Asha Pell's small brass key. A rockfall permanently sealed it in 318. Nobody has reopened it, and it has no other entrance.\n  - USES â Blue salt (mineral, fuel) [ID: 8f0beecf-61cb-4419-99eb-e2030a4eafb7]: A salt mined on the island of Orin that powers the lenses of Vesper's tidal lighthouse.\n\nOrin (island) [ID: 9bac8802-f464-491c-b86e-9c90ec862af2]: An island where blue salt is mined.\n  - â MINED_ON from Blue salt (mineral, fuel) [ID: 8f0beecf-61cb-4419-99eb-e2030a4eafb7]: A salt mined on the island of Orin that powers the lenses of Vesper's tidal lighthouse.\n  - â LOCATED_IN from Orin's miners (worker group) [ID: 92474181-bc9f-4dc2-bf64-51e67969f1ea]: Miners on Orin who mine blue salt; the Lantern Guild buys salt from them. They formed the Deep Bell Union.\n  - â BORN_IN from Asha Pell (person) [ID: 731a80b4-1cd1-40e2-9fe7-618d14dd3932] [Aliases: Captain Ash]: Born on Orin, Asha Pell moved to Vesper at age six and grew up there. She captains the courier ship Nightjar and belongs to the Lantern Guild; her crew usually calls her Captain Ash. She keeps a small brass key sewn inside her left coat cuff; only her navigator, Iven Marr, knows she has it."}]}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Explaining fuel reserves**\n\nI need to provide a brief, hypothetical response regarding fuel reserves. The likely duration of reserves is uncertain, especially since imports are active from April to September, but a cessation means current supplies could enable winter use before being depleted. The immediate answer relies on stockpile levels and usage rates. If thereâs insufficient fuel, service may decrease, with potential disruptions to port navigation, but the specifics are uncertain. It's important to distinguish these factors clearly.","native":{"item":{"reasoning":"**Explaining fuel reserves**\n\nI need to provide a brief, hypothetical response regarding fuel reserves. The likely duration of reserves is uncertain, especially since imports are active from April to September, but a cessation means current supplies could enable winter use before being depleted. The immediate answer relies on stockpile levels and usage rates. If thereâs insufficient fuel, service may decrease, with potential disruptions to port navigation, but the specifics are uncertain. It's important to distinguish these factors clearly.","reasoning_details":[{"type":"reasoning.summary","summary":"**Explaining fuel reserves**\n\nI need to provide a brief, hypothetical response regarding fuel reserves. The likely duration of reserves is uncertain, especially since imports are active from April to September, but a cessation means current supplies could enable winter use before being depleted. The immediate answer relies on stockpile levels and usage rates. If thereâs insufficient fuel, service may decrease, with potential disruptions to port navigation, but the specifics are uncertain. It's important to distinguish these factors clearly.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yPbL_DdStZtyf33DCMEyNMR-LZ3v8XVoWgn-olrs5WHTsEUi2-YOAh72WvIeIUfjP87TiKGX6PXAsMLEAhnOli0ZxSbHdH5I_HZowY01ztvgv8WS5ooFNQ4RxEO0uocLiPiiR7WFLgeXlwtFqHA8msp2xOo_G96NDdjmupoe7dDVwEpe227FzdjS9BMTAQRgcxlg3XigQ2c6TxwjC9hXDHRxMF7vjOGyYL3qZHeJ-jow3iwftYasKf6qKxLFm_w9BT4JjPlMOGcp8qpWf-9el7w6Jp7zmMq28IpGwBVyG2iVbGWTLwYhuukcVlH7AdnqlkF52JPJIPIFS07rfiwmEtn5E9R2yKmX_7FiIvX4B4PR-Q9fpnWS5HEVKg5WY0R5R5sa5VZvWY_7Gha2tQ6P0RqqOnfea4J1S73Ln80HsvrD5ypY2tavGXOazvnhBTtOqSPwtBzzQNcl8ddCE_6diD-PcwLwjnOLHMhmZi9n3E0YbMhjqvHVOgPNFKQ_ljFb7T2WC5h7tnyIpT61BIwnxmt7IK483nou7gWL2ElARDDFM9aRSWVBo5AS0Pu10PmbszbX7BqgIFw3J3wpar2YGcBkRU3uhwbxksAKLu4z2dcfSy9tD6WZO3PbhzxmRmZIZXX2LoktVU3pZx27ti68NSVl_HAfJG37ju75FBFPy-maFhTdluyg8UoOAwEWi01exVKFXI3EIxy5-e_18wLHuEr3HTFqn8WUzJ_qLkXEuUdwWGW3iB9sJwMmYcKtJN5-EZ8vi3krvm9PA3jZNIDjb1CJCV4jNscM8GiHjA_V8PwzDG3yu1KOUtvBcIXr4-t9tN6U2N9vVzblSqO6AXQEUuDMdsPhQigsIgF-uy6H6JphozwLu8KL9XG-rQA4qoVWzrL-HMjC_pTzVz5IriZSHIlHUIhwMKO1K5xDVq75r-2vDqMm8AfAWV0fpv9b09K0COZUWByb4zAW7Bk_GWoZAvZ-dUCbpAOqGES7A4o3mqebQzYlDcDeW5I7XUktg9xQy4GWM4jJb-rd5FKgcpiJ4SxxD-TRQN7s0LszQjABTf8JlqcM3B6IOc5BodVA8587UtvDmSMYl3eFRdFlssP9TXyNTtjfkXx8fOiYN_lZjSkrfGXcGDLnjqu7SNDhWdk5CnKnyWQyNZvDMC2pS2AF1hAxzNP2HpVvF8bFfPkpiO3gUBwph5YMAMHFz7PXiDZLzFSRtw-wEp5qoMqw3EPoCudhEUQEUzVH-wBi3I5E3gOX6w0MtqeBA9KDCCZW1dmijC0kLTwYIw8eRuy9sWq8O_VHBrAiFI5WPSinW7ugtcg3zTT1RClvgSJFegNEaNXX_zlmGP33PSoyQVc5FEtSEW4V9MQlP7hpJbCCBI8mVogn3IJ54YxyXzW7xKoJPi0lobfVoegznpPDq5VOK1DBZZ9dGD6OVx_9jm6IWxS4G-vbdhzj4wAFaj6F9HflQAAnHTZReEoyLZEht2o6cxSmyJM5LqsjeQyC1SVoS6r6o5SaVLw63dlueuYhTxrHJfWuKGnl7MN5NjTrEY1GpdoCs7YnPk4ht6DgwvO2B0VzczHhQlH_YH5p1diq3BbCkSZvMOfZaHsY7Mn0N78XVTJW3mkZEeZTLW6c2tiXgn27vdXg0QLkI98w087ik-yhl62ZhTJpkwF7ic8K1BJPlmpBam-QA_MofRcPKSTcPECiiiFkGyjxqgYlWdBpD3Kv2mh-jxTtxDJG6W7J-TqyTa7K08AeKBS0n2M5yw7Fo2Jh0LqatuIJe_BRp3g0eWWe1mpnsgnT2hAOoG7AMcBMF5JsMlgYkw7a4TfYficcyp3_O4liD0pg-H1Z1kXv-JL-HIexN_wTJkQmsiTptmmfU_rpIB8GrkxbbCF5GpErAf2Vz8uIlXAmGWF-w7PJpxnWj-xiNDPIMg7nmJjLdtdsMis6VkPSJVescvjY2XLw0D9_VqLebDSxLPpBHnoNDVfkXk8bjQ7aJIFlUq3sRMfLOCxwDjDnTkyfOEx4l8zKxbC2DdWnWBa28udqF9F0wHyQEi2FQ4OdcbsS680wYRFHltUlTLgyCE6Swm-d5WZ_8jZwRKENUraCyCvGzopqacda2271N6YJCGctz5wVolp8IRogK-IuapVOcWR6lGtF4oge-00cXw6R8UbGn1xqaCeyjqYcyILRo4BsxdQtxJ_ce3l4C2tGHExEak83wDWHNYyTVTO62amdr8LTiz7Lal13BKjPJ7BFUbpeMTQFhlBhWQWEwdr-mTROc4MT39ud20sLDxc25ap5G6TN0B3uekM5qqumyq1UZkT997CGC2CK3EI3_a3pCnLnlwOSy5LYD3yCNEQhTWULQ1upqDRrkrTlUIgZyCalKDM6agFNtXl7F75M1iMyvbgMd1Ndatz9IZ3nn6goCaUCH-cEOJUXh1NFSXeJBnzFEWUAikBSTT8aoUDN_aH3oYHcyxnhuHcpSIS3HfG4N_rjVXiejwOy0w_we7wlDoVSq5j1VRwFcPykXPKfZuXsEq-K_vPpqPD-gMoPGGB5JsXmyYHyfgLjnUJGujPuftETYfORUSw8hUJiJ-5dJ-6fJtgzDj22qbLyQn_GkLGK_gSnv5vAJ1-B0VV2l0MZ7MR1fElyErA_TvBwWCQcUF-rwq1DzE0ehwHVjB0xqyJtBwDvYGFcYZOUhW1ixPl7JJy4OcxTnUjnGuFsn7X9zGB_1Pk_4W8gklt8Cbn6UA88NIblO-TOfMNlrF1hTLVDQivVUS2FXxipuADbtbZkP0K9FRnXo1cKg79rNXkb3KcmEjUrjpx5MI6vMicm0HN7jyhXhVUL7CRP_0WDtODnVV26Q==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_071a0657738e375e016ae323d92a8c87d18bca5f40f91ebe62","index":1}]},"fingerprint":"bbbddda2fff4dea4"}},{"type":"text","text":"Hypothetically, the Guild would rely on its stored blue salt through the winter, but we donât know how large its reserves are or how quickly the lighthouse uses them. If the stock ran out before exports resumed, the lenses might have to dim or go dark, disrupting navigation into Vesper; whether thereâs any backup fuel or alternative system is unknown. This doesnât establish an export ban as canon."}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793270744-MY9mFuXywNGIuGMf7Ohl"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Explaining fuel reserves**\n\nI need to provide a brief, hypothetical response regarding fuel reserves. The likely duration of reserves is uncertain, especially since imports are active from April to September, but a cessation means current supplies could enable winter use before being depleted. The immediate answer relies on stockpile levels and usage rates. If thereâs insufficient fuel, service may decrease, with potential disruptions to port navigation, but the specifics are uncertain. It's important to distinguish these factors clearly.","native":{"item":{"reasoning":"**Explaining fuel reserves**\n\nI need to provide a brief, hypothetical response regarding fuel reserves. The likely duration of reserves is uncertain, especially since imports are active from April to September, but a cessation means current supplies could enable winter use before being depleted. The immediate answer relies on stockpile levels and usage rates. If thereâs insufficient fuel, service may decrease, with potential disruptions to port navigation, but the specifics are uncertain. It's important to distinguish these factors clearly.","reasoning_details":[{"type":"reasoning.summary","summary":"**Explaining fuel reserves**\n\nI need to provide a brief, hypothetical response regarding fuel reserves. The likely duration of reserves is uncertain, especially since imports are active from April to September, but a cessation means current supplies could enable winter use before being depleted. The immediate answer relies on stockpile levels and usage rates. If thereâs insufficient fuel, service may decrease, with potential disruptions to port navigation, but the specifics are uncertain. It's important to distinguish these factors clearly.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yPbL_DdStZtyf33DCMEyNMR-LZ3v8XVoWgn-olrs5WHTsEUi2-YOAh72WvIeIUfjP87TiKGX6PXAsMLEAhnOli0ZxSbHdH5I_HZowY01ztvgv8WS5ooFNQ4RxEO0uocLiPiiR7WFLgeXlwtFqHA8msp2xOo_G96NDdjmupoe7dDVwEpe227FzdjS9BMTAQRgcxlg3XigQ2c6TxwjC9hXDHRxMF7vjOGyYL3qZHeJ-jow3iwftYasKf6qKxLFm_w9BT4JjPlMOGcp8qpWf-9el7w6Jp7zmMq28IpGwBVyG2iVbGWTLwYhuukcVlH7AdnqlkF52JPJIPIFS07rfiwmEtn5E9R2yKmX_7FiIvX4B4PR-Q9fpnWS5HEVKg5WY0R5R5sa5VZvWY_7Gha2tQ6P0RqqOnfea4J1S73Ln80HsvrD5ypY2tavGXOazvnhBTtOqSPwtBzzQNcl8ddCE_6diD-PcwLwjnOLHMhmZi9n3E0YbMhjqvHVOgPNFKQ_ljFb7T2WC5h7tnyIpT61BIwnxmt7IK483nou7gWL2ElARDDFM9aRSWVBo5AS0Pu10PmbszbX7BqgIFw3J3wpar2YGcBkRU3uhwbxksAKLu4z2dcfSy9tD6WZO3PbhzxmRmZIZXX2LoktVU3pZx27ti68NSVl_HAfJG37ju75FBFPy-maFhTdluyg8UoOAwEWi01exVKFXI3EIxy5-e_18wLHuEr3HTFqn8WUzJ_qLkXEuUdwWGW3iB9sJwMmYcKtJN5-EZ8vi3krvm9PA3jZNIDjb1CJCV4jNscM8GiHjA_V8PwzDG3yu1KOUtvBcIXr4-t9tN6U2N9vVzblSqO6AXQEUuDMdsPhQigsIgF-uy6H6JphozwLu8KL9XG-rQA4qoVWzrL-HMjC_pTzVz5IriZSHIlHUIhwMKO1K5xDVq75r-2vDqMm8AfAWV0fpv9b09K0COZUWByb4zAW7Bk_GWoZAvZ-dUCbpAOqGES7A4o3mqebQzYlDcDeW5I7XUktg9xQy4GWM4jJb-rd5FKgcpiJ4SxxD-TRQN7s0LszQjABTf8JlqcM3B6IOc5BodVA8587UtvDmSMYl3eFRdFlssP9TXyNTtjfkXx8fOiYN_lZjSkrfGXcGDLnjqu7SNDhWdk5CnKnyWQyNZvDMC2pS2AF1hAxzNP2HpVvF8bFfPkpiO3gUBwph5YMAMHFz7PXiDZLzFSRtw-wEp5qoMqw3EPoCudhEUQEUzVH-wBi3I5E3gOX6w0MtqeBA9KDCCZW1dmijC0kLTwYIw8eRuy9sWq8O_VHBrAiFI5WPSinW7ugtcg3zTT1RClvgSJFegNEaNXX_zlmGP33PSoyQVc5FEtSEW4V9MQlP7hpJbCCBI8mVogn3IJ54YxyXzW7xKoJPi0lobfVoegznpPDq5VOK1DBZZ9dGD6OVx_9jm6IWxS4G-vbdhzj4wAFaj6F9HflQAAnHTZReEoyLZEht2o6cxSmyJM5LqsjeQyC1SVoS6r6o5SaVLw63dlueuYhTxrHJfWuKGnl7MN5NjTrEY1GpdoCs7YnPk4ht6DgwvO2B0VzczHhQlH_YH5p1diq3BbCkSZvMOfZaHsY7Mn0N78XVTJW3mkZEeZTLW6c2tiXgn27vdXg0QLkI98w087ik-yhl62ZhTJpkwF7ic8K1BJPlmpBam-QA_MofRcPKSTcPECiiiFkGyjxqgYlWdBpD3Kv2mh-jxTtxDJG6W7J-TqyTa7K08AeKBS0n2M5yw7Fo2Jh0LqatuIJe_BRp3g0eWWe1mpnsgnT2hAOoG7AMcBMF5JsMlgYkw7a4TfYficcyp3_O4liD0pg-H1Z1kXv-JL-HIexN_wTJkQmsiTptmmfU_rpIB8GrkxbbCF5GpErAf2Vz8uIlXAmGWF-w7PJpxnWj-xiNDPIMg7nmJjLdtdsMis6VkPSJVescvjY2XLw0D9_VqLebDSxLPpBHnoNDVfkXk8bjQ7aJIFlUq3sRMfLOCxwDjDnTkyfOEx4l8zKxbC2DdWnWBa28udqF9F0wHyQEi2FQ4OdcbsS680wYRFHltUlTLgyCE6Swm-d5WZ_8jZwRKENUraCyCvGzopqacda2271N6YJCGctz5wVolp8IRogK-IuapVOcWR6lGtF4oge-00cXw6R8UbGn1xqaCeyjqYcyILRo4BsxdQtxJ_ce3l4C2tGHExEak83wDWHNYyTVTO62amdr8LTiz7Lal13BKjPJ7BFUbpeMTQFhlBhWQWEwdr-mTROc4MT39ud20sLDxc25ap5G6TN0B3uekM5qqumyq1UZkT997CGC2CK3EI3_a3pCnLnlwOSy5LYD3yCNEQhTWULQ1upqDRrkrTlUIgZyCalKDM6agFNtXl7F75M1iMyvbgMd1Ndatz9IZ3nn6goCaUCH-cEOJUXh1NFSXeJBnzFEWUAikBSTT8aoUDN_aH3oYHcyxnhuHcpSIS3HfG4N_rjVXiejwOy0w_we7wlDoVSq5j1VRwFcPykXPKfZuXsEq-K_vPpqPD-gMoPGGB5JsXmyYHyfgLjnUJGujPuftETYfORUSw8hUJiJ-5dJ-6fJtgzDj22qbLyQn_GkLGK_gSnv5vAJ1-B0VV2l0MZ7MR1fElyErA_TvBwWCQcUF-rwq1DzE0ehwHVjB0xqyJtBwDvYGFcYZOUhW1ixPl7JJy4OcxTnUjnGuFsn7X9zGB_1Pk_4W8gklt8Cbn6UA88NIblO-TOfMNlrF1hTLVDQivVUS2FXxipuADbtbZkP0K9FRnXo1cKg79rNXkb3KcmEjUrjpx5MI6vMicm0HN7jyhXhVUL7CRP_0WDtODnVV26Q==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_071a0657738e375e016ae323d92a8c87d18bca5f40f91ebe62","index":1}]},"fingerprint":"bbbddda2fff4dea4"}},{"type":"text","text":"Hypothetically, the Guild would rely on its stored blue salt through the winter, but we donât know how large its reserves are or how quickly the lighthouse uses them. If the stock ran out before exports resumed, the lenses might have to dim or go dark, disrupting navigation into Vesper; whether thereâs any backup fuel or alternative system is unknown. This doesnât establish an export ban as canon."}]}
+

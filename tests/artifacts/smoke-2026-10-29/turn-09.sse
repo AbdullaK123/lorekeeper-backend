@@ -1,0 +1,276 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Considering union implications**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" respond"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" briefly"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" while"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" recognizing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" additional"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" details"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" seem"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" interesting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" There's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" an"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" existing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" around"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" miners"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" their"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" non"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"-"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ownership"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" The"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" new"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" union"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" leader"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" refuses"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" military"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ties"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" honored"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" as"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" civilian"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" entity"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" should"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" probably"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ask"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" about"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" implications"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" of"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" this"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Also"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" do"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" we"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" acknowledge"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ret"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"con"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" since"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" miners"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" formed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" union"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" without"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" conflict"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"?"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" want"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" keep"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" my"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" response"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" concise"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"The"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Deep"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Bell"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Union"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" gives"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"âs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" miners"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" collective"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" voice"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" with"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" S"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"era"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" D"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ain"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" drawing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" clear"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" line"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" no"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" military"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" sales"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Lantern"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"âs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" civilian"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" contracts"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" stand"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Does"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" ever"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" face"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" pressure"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" supply"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" military"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" through"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" those"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" contracts"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"?"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"The Deep Bell Union gives Orinâs miners a collective voice, with Sera Dain drawing a clear line: no military sales, but the Lantern Guildâs civilian contracts stand. Does the Guild ever face pressure to supply the military through those contracts?"}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Considering union implications**\n\nI need to respond briefly while recognizing additional details that seem interesting. There's an existing lore around the miners guild and their non-ownership. The new union leader refuses military ties, but the Guild is honored as a civilian entity. I should probably ask about the implications of this. Also, do we need to acknowledge a retcon since the miners formed a union without conflict? I want to keep my response concise.","native":{"item":{"reasoning":"**Considering union implications**\n\nI need to respond briefly while recognizing additional details that seem interesting. There's an existing lore around the miners guild and their non-ownership. The new union leader refuses military ties, but the Guild is honored as a civilian entity. I should probably ask about the implications of this. Also, do we need to acknowledge a retcon since the miners formed a union without conflict? I want to keep my response concise.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering union implications**\n\nI need to respond briefly while recognizing additional details that seem interesting. There's an existing lore around the miners guild and their non-ownership. The new union leader refuses military ties, but the Guild is honored as a civilian entity. I should probably ask about the implications of this. Also, do we need to acknowledge a retcon since the miners formed a union without conflict? I want to keep my response concise.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yMVGBOh9qHqem9srnX231Bo9Kn2Ccbmt0rCk9J5A9dd6VeBfiUnHn7n7lgjRFNV6Fe5EzIUkyHoY_nl1zVn2jmGs89Jt7NKrpFeNU8pA4ysezkoXwtIgwD7DNJgQJYRV4kHhE4LW7BtyGYd8MoPLc20XRJLjGuZCLgNJ3FvBcfz1VB8xio3G4WXl0wbuBcKHEIVP-L9OPqNjWyrHysKnFejUQVbzPZAOwe68PwimvUWsT6a4GZI6lIMwiealksKtSYNx4yb1b5O8olrpDphm6l9jaogRt0V8nxS52alfBrz2qXuu6KxIMuHzBUwdBTjdBuM62YegS3jALerm8etExQXwrtALWwuqhIpATxsd2bWhtNJhkWGd39FQ0gwqrJKPf09n0NfcNyY4irJNyIdKhepv9weLjPj9ibjIvB0ZsOmwLTFyX7Md-vzsgCDLWkJZVJPmS3PpgNlq0Q7yrSziwIkpKvHvIwn7h-qX_0BbkvZA-Q6VZALhD1zswzBsBg6dkvcvEXfJJWh9fMZiEeMd3-h0gjm_3MFqKilYEj369HQW4w3b4MrFUViUzs1ZfyzRJMmGBhVaqWyZBZXGpcqCrdfqRsRuR_0UZYG24con0JBsSpXepunhZ78aMyS9FY1iVa3OiGcAPl-g4WmnGHbQ2RvFOcVTgJsUjOzU0Vs32Dep7uMbcsB-kkX_6USDRYNo_HrkyQ8mpaDgiNdODZG4DPR2fdUOAo7_epWwPU2e5LT10GRuAMGdFfqVCrb_WIJ6uZUE3jETa4jnB7QCyE5mJnp_jbMwI2ceq0EPQ0DxFBuhPMg8l-YLhesfHXQzqlhvrCc0-qTiGEst02RSmnoI7VQpu7rjj8s9sudKk4cCjRySlNgA4xk6p5atBXUN2ggkO0C5sUX_CN1VnjXv_lKSAuOPa9k6tiop1pBUPx2Qla07v72V4z5To5KneYXZlZ7B0dxSiEkFrWtkywzn-NfDKmEvrKlUVpwHrGHyRGfaoVYodMMSZfGVCIJeXrRBYJJnsDkcfOU_GDq9RRfuA5_dutszmhAyJfUcPiNxn0gvKVy-Th7TsSPaw4tkgDJFj4nRlopQsnzoJc5k4Q3M6PAvALjnBa0zg8jWcVxnlm0gL4SdJX3Cz_dibAnKabqcqRkN0P6nn7V0WmbbEKac_T0NqV2WA6X_inSShUnQqeBIKMRZzmHH4mxxaFx5DMAourVtc4dDljV-45_smEHc69h5E4wvTtQfvjFZYaDrLY3JjWf3Ju3d75IzGMmwPjEwLZFDSViCmjMnu_QfPmdLSkx5MCNn0GHZcGdY0rXGREDKSzPu76G2LlnDSc11-Or8KKNxvxeOiXRzDOuqVEV4zVNr4WzzZbOBesx80ztRptEpKXWWohFd9IiagppKXLDHRXoGCW7bGC56yj--vRR3sqSKQIiNdz9eduolmobbohPxiLv3PoaZGCx-oG6af5CvxTF6HXS0NIGwvJEkmBlR_BBnSzXFatTw789RadPp4ZATZK86SLoBiUgKuHvVrjm4tuQRsolVP4hqrNL95YYFV7odZio69Z74kTuIfoEj7w2Bb0MiJepYBf8CQPYCXV5bAVfDyb5g0Jk2Bg6Aj6Z7hpcsVkXDIQF_l9DBvn92LcS7k-L1BgBbUR2l3PSCAY76Q_TWp0Ibe-uqefz-Oo97m4v4SDrsYotjrNTMTnwUH5xRIr9iLLwVDPJz6vxdBZ_on-ykZ2-Oc_CJRwZY9Wm917HOFk3HTY0q3OEa_Q4n6hP6TzC6fyZcLECC72LwY-GZiLMqfji4cCibwRsOCGG9_AhaM_m4JkWIhduRv5X_-RPz27nzTFloQiDQ1ZOKeDiH4ZUtL_2eqd06zLfMhOiUNz8lOxoRMWXwPUniDxpKyXQGzlZIoN8zkcFT-fco9JaEPj-k3EMgnx76AE3PvloeeSiztiGsB2_RF7hvVeNdr3kC1ldPc95V3rRzuNDAXIu54ygkmCioAk0fJeEOBkpeDLEx8OswmCw3CPWgGNizZefvZFXEMlCIWPoWs6FBzhOFNHTp5F9_SOwnYx2LehwQOe2yBUxFMWey2fs5Nf78CXDu5nxeeUHGclr1drDLQvZmSr-Q2LPw0spXQ9Yja4POmUBdo6j1XOULYwAsS9LFyt2NhCtjIA_jhNdMefkfb2CLF9nA6BZeGcFe0B7CkNU6cn1zYUShsXk3OvzClEn7Np98pwishqqLwVxJcJlkBzNPdxoLiA9BAeTNcgLdkqWMtFjqDamj8RCk1VwW6gUDVw4MmpZevc7XnQwhE8XDbLyNiV5uOfH40YNKoTCJB_hmWrAYSc9Nw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0201d981b6779931016ae32313670887d19a4b134393a55358","index":1}]},"fingerprint":"a2f0c73d8d9a9d34"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":3743,"output_tokens":110,"total_tokens":3853,"cached_input_tokens":1826,"cache_creation_input_tokens":1914,"reasoning_tokens":54,"cost":{"total":0.00031281}},"response_id":"gen-1793270546-L1atcetQKBGeF3AbQk93","finish_reason":"stop","raw":{"id":"gen-1793270546-L1atcetQKBGeF3AbQk93","object":"chat.completion","created":1793270546,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"The Deep Bell Union gives Orinâs miners a collective voice, with Sera Dain drawing a clear line: no military sales, but the Lantern Guildâs civilian contracts stand. Does the Guild ever face pressure to supply the military through those contracts?","role":"assistant","reasoning":"**Considering union implications**\n\nI need to respond briefly while recognizing additional details that seem interesting. There's an existing lore around the miners guild and their non-ownership. The new union leader refuses military ties, but the Guild is honored as a civilian entity. I should probably ask about the implications of this. Also, do we need to acknowledge a retcon since the miners formed a union without conflict? I want to keep my response concise.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering union implications**\n\nI need to respond briefly while recognizing additional details that seem interesting. There's an existing lore around the miners guild and their non-ownership. The new union leader refuses military ties, but the Guild is honored as a civilian entity. I should probably ask about the implications of this. Also, do we need to acknowledge a retcon since the miners formed a union without conflict? I want to keep my response concise.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yMVGBOh9qHqem9srnX231Bo9Kn2Ccbmt0rCk9J5A9dd6VeBfiUnHn7n7lgjRFNV6Fe5EzIUkyHoY_nl1zVn2jmGs89Jt7NKrpFeNU8pA4ysezkoXwtIgwD7DNJgQJYRV4kHhE4LW7BtyGYd8MoPLc20XRJLjGuZCLgNJ3FvBcfz1VB8xio3G4WXl0wbuBcKHEIVP-L9OPqNjWyrHysKnFejUQVbzPZAOwe68PwimvUWsT6a4GZI6lIMwiealksKtSYNx4yb1b5O8olrpDphm6l9jaogRt0V8nxS52alfBrz2qXuu6KxIMuHzBUwdBTjdBuM62YegS3jALerm8etExQXwrtALWwuqhIpATxsd2bWhtNJhkWGd39FQ0gwqrJKPf09n0NfcNyY4irJNyIdKhepv9weLjPj9ibjIvB0ZsOmwLTFyX7Md-vzsgCDLWkJZVJPmS3PpgNlq0Q7yrSziwIkpKvHvIwn7h-qX_0BbkvZA-Q6VZALhD1zswzBsBg6dkvcvEXfJJWh9fMZiEeMd3-h0gjm_3MFqKilYEj369HQW4w3b4MrFUViUzs1ZfyzRJMmGBhVaqWyZBZXGpcqCrdfqRsRuR_0UZYG24con0JBsSpXepunhZ78aMyS9FY1iVa3OiGcAPl-g4WmnGHbQ2RvFOcVTgJsUjOzU0Vs32Dep7uMbcsB-kkX_6USDRYNo_HrkyQ8mpaDgiNdODZG4DPR2fdUOAo7_epWwPU2e5LT10GRuAMGdFfqVCrb_WIJ6uZUE3jETa4jnB7QCyE5mJnp_jbMwI2ceq0EPQ0DxFBuhPMg8l-YLhesfHXQzqlhvrCc0-qTiGEst02RSmnoI7VQpu7rjj8s9sudKk4cCjRySlNgA4xk6p5atBXUN2ggkO0C5sUX_CN1VnjXv_lKSAuOPa9k6tiop1pBUPx2Qla07v72V4z5To5KneYXZlZ7B0dxSiEkFrWtkywzn-NfDKmEvrKlUVpwHrGHyRGfaoVYodMMSZfGVCIJeXrRBYJJnsDkcfOU_GDq9RRfuA5_dutszmhAyJfUcPiNxn0gvKVy-Th7TsSPaw4tkgDJFj4nRlopQsnzoJc5k4Q3M6PAvALjnBa0zg8jWcVxnlm0gL4SdJX3Cz_dibAnKabqcqRkN0P6nn7V0WmbbEKac_T0NqV2WA6X_inSShUnQqeBIKMRZzmHH4mxxaFx5DMAourVtc4dDljV-45_smEHc69h5E4wvTtQfvjFZYaDrLY3JjWf3Ju3d75IzGMmwPjEwLZFDSViCmjMnu_QfPmdLSkx5MCNn0GHZcGdY0rXGREDKSzPu76G2LlnDSc11-Or8KKNxvxeOiXRzDOuqVEV4zVNr4WzzZbOBesx80ztRptEpKXWWohFd9IiagppKXLDHRXoGCW7bGC56yj--vRR3sqSKQIiNdz9eduolmobbohPxiLv3PoaZGCx-oG6af5CvxTF6HXS0NIGwvJEkmBlR_BBnSzXFatTw789RadPp4ZATZK86SLoBiUgKuHvVrjm4tuQRsolVP4hqrNL95YYFV7odZio69Z74kTuIfoEj7w2Bb0MiJepYBf8CQPYCXV5bAVfDyb5g0Jk2Bg6Aj6Z7hpcsVkXDIQF_l9DBvn92LcS7k-L1BgBbUR2l3PSCAY76Q_TWp0Ibe-uqefz-Oo97m4v4SDrsYotjrNTMTnwUH5xRIr9iLLwVDPJz6vxdBZ_on-ykZ2-Oc_CJRwZY9Wm917HOFk3HTY0q3OEa_Q4n6hP6TzC6fyZcLECC72LwY-GZiLMqfji4cCibwRsOCGG9_AhaM_m4JkWIhduRv5X_-RPz27nzTFloQiDQ1ZOKeDiH4ZUtL_2eqd06zLfMhOiUNz8lOxoRMWXwPUniDxpKyXQGzlZIoN8zkcFT-fco9JaEPj-k3EMgnx76AE3PvloeeSiztiGsB2_RF7hvVeNdr3kC1ldPc95V3rRzuNDAXIu54ygkmCioAk0fJeEOBkpeDLEx8OswmCw3CPWgGNizZefvZFXEMlCIWPoWs6FBzhOFNHTp5F9_SOwnYx2LehwQOe2yBUxFMWey2fs5Nf78CXDu5nxeeUHGclr1drDLQvZmSr-Q2LPw0spXQ9Yja4POmUBdo6j1XOULYwAsS9LFyt2NhCtjIA_jhNdMefkfb2CLF9nA6BZeGcFe0B7CkNU6cn1zYUShsXk3OvzClEn7Np98pwishqqLwVxJcJlkBzNPdxoLiA9BAeTNcgLdkqWMtFjqDamj8RCk1VwW6gUDVw4MmpZevc7XnQwhE8XDbLyNiV5uOfH40YNKoTCJB_hmWrAYSc9Nw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0201d981b6779931016ae32313670887d19a4b134393a55358","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":3743,"completion_tokens":110,"total_tokens":3853,"cost":0.00031281,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":1914,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00031281,"upstream_inference_prompt_cost":0.00025781,"upstream_inference_completions_cost":0.000055},"completion_tokens_details":{"reasoning_tokens":54,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":3743,"output_tokens":110,"total_tokens":3853,"cached_input_tokens":1826,"cache_creation_input_tokens":1914,"reasoning_tokens":54,"cost":{"total":0.00031281}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":3743,"output_tokens":110,"total_tokens":3853,"cached_input_tokens":1826,"cache_creation_input_tokens":1914,"reasoning_tokens":54,"cost":{"total":0.00031281}},"response_id":"gen-1793270546-L1atcetQKBGeF3AbQk93","finish_reason":"stop","raw":{"id":"gen-1793270546-L1atcetQKBGeF3AbQk93","object":"chat.completion","created":1793270546,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"The Deep Bell Union gives Orinâs miners a collective voice, with Sera Dain drawing a clear line: no military sales, but the Lantern Guildâs civilian contracts stand. Does the Guild ever face pressure to supply the military through those contracts?","role":"assistant","reasoning":"**Considering union implications**\n\nI need to respond briefly while recognizing additional details that seem interesting. There's an existing lore around the miners guild and their non-ownership. The new union leader refuses military ties, but the Guild is honored as a civilian entity. I should probably ask about the implications of this. Also, do we need to acknowledge a retcon since the miners formed a union without conflict? I want to keep my response concise.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering union implications**\n\nI need to respond briefly while recognizing additional details that seem interesting. There's an existing lore around the miners guild and their non-ownership. The new union leader refuses military ties, but the Guild is honored as a civilian entity. I should probably ask about the implications of this. Also, do we need to acknowledge a retcon since the miners formed a union without conflict? I want to keep my response concise.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yMVGBOh9qHqem9srnX231Bo9Kn2Ccbmt0rCk9J5A9dd6VeBfiUnHn7n7lgjRFNV6Fe5EzIUkyHoY_nl1zVn2jmGs89Jt7NKrpFeNU8pA4ysezkoXwtIgwD7DNJgQJYRV4kHhE4LW7BtyGYd8MoPLc20XRJLjGuZCLgNJ3FvBcfz1VB8xio3G4WXl0wbuBcKHEIVP-L9OPqNjWyrHysKnFejUQVbzPZAOwe68PwimvUWsT6a4GZI6lIMwiealksKtSYNx4yb1b5O8olrpDphm6l9jaogRt0V8nxS52alfBrz2qXuu6KxIMuHzBUwdBTjdBuM62YegS3jALerm8etExQXwrtALWwuqhIpATxsd2bWhtNJhkWGd39FQ0gwqrJKPf09n0NfcNyY4irJNyIdKhepv9weLjPj9ibjIvB0ZsOmwLTFyX7Md-vzsgCDLWkJZVJPmS3PpgNlq0Q7yrSziwIkpKvHvIwn7h-qX_0BbkvZA-Q6VZALhD1zswzBsBg6dkvcvEXfJJWh9fMZiEeMd3-h0gjm_3MFqKilYEj369HQW4w3b4MrFUViUzs1ZfyzRJMmGBhVaqWyZBZXGpcqCrdfqRsRuR_0UZYG24con0JBsSpXepunhZ78aMyS9FY1iVa3OiGcAPl-g4WmnGHbQ2RvFOcVTgJsUjOzU0Vs32Dep7uMbcsB-kkX_6USDRYNo_HrkyQ8mpaDgiNdODZG4DPR2fdUOAo7_epWwPU2e5LT10GRuAMGdFfqVCrb_WIJ6uZUE3jETa4jnB7QCyE5mJnp_jbMwI2ceq0EPQ0DxFBuhPMg8l-YLhesfHXQzqlhvrCc0-qTiGEst02RSmnoI7VQpu7rjj8s9sudKk4cCjRySlNgA4xk6p5atBXUN2ggkO0C5sUX_CN1VnjXv_lKSAuOPa9k6tiop1pBUPx2Qla07v72V4z5To5KneYXZlZ7B0dxSiEkFrWtkywzn-NfDKmEvrKlUVpwHrGHyRGfaoVYodMMSZfGVCIJeXrRBYJJnsDkcfOU_GDq9RRfuA5_dutszmhAyJfUcPiNxn0gvKVy-Th7TsSPaw4tkgDJFj4nRlopQsnzoJc5k4Q3M6PAvALjnBa0zg8jWcVxnlm0gL4SdJX3Cz_dibAnKabqcqRkN0P6nn7V0WmbbEKac_T0NqV2WA6X_inSShUnQqeBIKMRZzmHH4mxxaFx5DMAourVtc4dDljV-45_smEHc69h5E4wvTtQfvjFZYaDrLY3JjWf3Ju3d75IzGMmwPjEwLZFDSViCmjMnu_QfPmdLSkx5MCNn0GHZcGdY0rXGREDKSzPu76G2LlnDSc11-Or8KKNxvxeOiXRzDOuqVEV4zVNr4WzzZbOBesx80ztRptEpKXWWohFd9IiagppKXLDHRXoGCW7bGC56yj--vRR3sqSKQIiNdz9eduolmobbohPxiLv3PoaZGCx-oG6af5CvxTF6HXS0NIGwvJEkmBlR_BBnSzXFatTw789RadPp4ZATZK86SLoBiUgKuHvVrjm4tuQRsolVP4hqrNL95YYFV7odZio69Z74kTuIfoEj7w2Bb0MiJepYBf8CQPYCXV5bAVfDyb5g0Jk2Bg6Aj6Z7hpcsVkXDIQF_l9DBvn92LcS7k-L1BgBbUR2l3PSCAY76Q_TWp0Ibe-uqefz-Oo97m4v4SDrsYotjrNTMTnwUH5xRIr9iLLwVDPJz6vxdBZ_on-ykZ2-Oc_CJRwZY9Wm917HOFk3HTY0q3OEa_Q4n6hP6TzC6fyZcLECC72LwY-GZiLMqfji4cCibwRsOCGG9_AhaM_m4JkWIhduRv5X_-RPz27nzTFloQiDQ1ZOKeDiH4ZUtL_2eqd06zLfMhOiUNz8lOxoRMWXwPUniDxpKyXQGzlZIoN8zkcFT-fco9JaEPj-k3EMgnx76AE3PvloeeSiztiGsB2_RF7hvVeNdr3kC1ldPc95V3rRzuNDAXIu54ygkmCioAk0fJeEOBkpeDLEx8OswmCw3CPWgGNizZefvZFXEMlCIWPoWs6FBzhOFNHTp5F9_SOwnYx2LehwQOe2yBUxFMWey2fs5Nf78CXDu5nxeeUHGclr1drDLQvZmSr-Q2LPw0spXQ9Yja4POmUBdo6j1XOULYwAsS9LFyt2NhCtjIA_jhNdMefkfb2CLF9nA6BZeGcFe0B7CkNU6cn1zYUShsXk3OvzClEn7Np98pwishqqLwVxJcJlkBzNPdxoLiA9BAeTNcgLdkqWMtFjqDamj8RCk1VwW6gUDVw4MmpZevc7XnQwhE8XDbLyNiV5uOfH40YNKoTCJB_hmWrAYSc9Nw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0201d981b6779931016ae32313670887d19a4b134393a55358","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":3743,"completion_tokens":110,"total_tokens":3853,"cost":0.00031281,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":1914,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00031281,"upstream_inference_prompt_cost":0.00025781,"upstream_inference_completions_cost":0.000055},"completion_tokens_details":{"reasoning_tokens":54,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"Orin's miners formed the Deep Bell Union. Their leader is Sera Dain. She refuses to sell salt to the military, but still honors civilian contracts with the Lantern Guild."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Considering union implications**\n\nI need to respond briefly while recognizing additional details that seem interesting. There's an existing lore around the miners guild and their non-ownership. The new union leader refuses military ties, but the Guild is honored as a civilian entity. I should probably ask about the implications of this. Also, do we need to acknowledge a retcon since the miners formed a union without conflict? I want to keep my response concise.","native":{"item":{"reasoning":"**Considering union implications**\n\nI need to respond briefly while recognizing additional details that seem interesting. There's an existing lore around the miners guild and their non-ownership. The new union leader refuses military ties, but the Guild is honored as a civilian entity. I should probably ask about the implications of this. Also, do we need to acknowledge a retcon since the miners formed a union without conflict? I want to keep my response concise.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering union implications**\n\nI need to respond briefly while recognizing additional details that seem interesting. There's an existing lore around the miners guild and their non-ownership. The new union leader refuses military ties, but the Guild is honored as a civilian entity. I should probably ask about the implications of this. Also, do we need to acknowledge a retcon since the miners formed a union without conflict? I want to keep my response concise.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yMVGBOh9qHqem9srnX231Bo9Kn2Ccbmt0rCk9J5A9dd6VeBfiUnHn7n7lgjRFNV6Fe5EzIUkyHoY_nl1zVn2jmGs89Jt7NKrpFeNU8pA4ysezkoXwtIgwD7DNJgQJYRV4kHhE4LW7BtyGYd8MoPLc20XRJLjGuZCLgNJ3FvBcfz1VB8xio3G4WXl0wbuBcKHEIVP-L9OPqNjWyrHysKnFejUQVbzPZAOwe68PwimvUWsT6a4GZI6lIMwiealksKtSYNx4yb1b5O8olrpDphm6l9jaogRt0V8nxS52alfBrz2qXuu6KxIMuHzBUwdBTjdBuM62YegS3jALerm8etExQXwrtALWwuqhIpATxsd2bWhtNJhkWGd39FQ0gwqrJKPf09n0NfcNyY4irJNyIdKhepv9weLjPj9ibjIvB0ZsOmwLTFyX7Md-vzsgCDLWkJZVJPmS3PpgNlq0Q7yrSziwIkpKvHvIwn7h-qX_0BbkvZA-Q6VZALhD1zswzBsBg6dkvcvEXfJJWh9fMZiEeMd3-h0gjm_3MFqKilYEj369HQW4w3b4MrFUViUzs1ZfyzRJMmGBhVaqWyZBZXGpcqCrdfqRsRuR_0UZYG24con0JBsSpXepunhZ78aMyS9FY1iVa3OiGcAPl-g4WmnGHbQ2RvFOcVTgJsUjOzU0Vs32Dep7uMbcsB-kkX_6USDRYNo_HrkyQ8mpaDgiNdODZG4DPR2fdUOAo7_epWwPU2e5LT10GRuAMGdFfqVCrb_WIJ6uZUE3jETa4jnB7QCyE5mJnp_jbMwI2ceq0EPQ0DxFBuhPMg8l-YLhesfHXQzqlhvrCc0-qTiGEst02RSmnoI7VQpu7rjj8s9sudKk4cCjRySlNgA4xk6p5atBXUN2ggkO0C5sUX_CN1VnjXv_lKSAuOPa9k6tiop1pBUPx2Qla07v72V4z5To5KneYXZlZ7B0dxSiEkFrWtkywzn-NfDKmEvrKlUVpwHrGHyRGfaoVYodMMSZfGVCIJeXrRBYJJnsDkcfOU_GDq9RRfuA5_dutszmhAyJfUcPiNxn0gvKVy-Th7TsSPaw4tkgDJFj4nRlopQsnzoJc5k4Q3M6PAvALjnBa0zg8jWcVxnlm0gL4SdJX3Cz_dibAnKabqcqRkN0P6nn7V0WmbbEKac_T0NqV2WA6X_inSShUnQqeBIKMRZzmHH4mxxaFx5DMAourVtc4dDljV-45_smEHc69h5E4wvTtQfvjFZYaDrLY3JjWf3Ju3d75IzGMmwPjEwLZFDSViCmjMnu_QfPmdLSkx5MCNn0GHZcGdY0rXGREDKSzPu76G2LlnDSc11-Or8KKNxvxeOiXRzDOuqVEV4zVNr4WzzZbOBesx80ztRptEpKXWWohFd9IiagppKXLDHRXoGCW7bGC56yj--vRR3sqSKQIiNdz9eduolmobbohPxiLv3PoaZGCx-oG6af5CvxTF6HXS0NIGwvJEkmBlR_BBnSzXFatTw789RadPp4ZATZK86SLoBiUgKuHvVrjm4tuQRsolVP4hqrNL95YYFV7odZio69Z74kTuIfoEj7w2Bb0MiJepYBf8CQPYCXV5bAVfDyb5g0Jk2Bg6Aj6Z7hpcsVkXDIQF_l9DBvn92LcS7k-L1BgBbUR2l3PSCAY76Q_TWp0Ibe-uqefz-Oo97m4v4SDrsYotjrNTMTnwUH5xRIr9iLLwVDPJz6vxdBZ_on-ykZ2-Oc_CJRwZY9Wm917HOFk3HTY0q3OEa_Q4n6hP6TzC6fyZcLECC72LwY-GZiLMqfji4cCibwRsOCGG9_AhaM_m4JkWIhduRv5X_-RPz27nzTFloQiDQ1ZOKeDiH4ZUtL_2eqd06zLfMhOiUNz8lOxoRMWXwPUniDxpKyXQGzlZIoN8zkcFT-fco9JaEPj-k3EMgnx76AE3PvloeeSiztiGsB2_RF7hvVeNdr3kC1ldPc95V3rRzuNDAXIu54ygkmCioAk0fJeEOBkpeDLEx8OswmCw3CPWgGNizZefvZFXEMlCIWPoWs6FBzhOFNHTp5F9_SOwnYx2LehwQOe2yBUxFMWey2fs5Nf78CXDu5nxeeUHGclr1drDLQvZmSr-Q2LPw0spXQ9Yja4POmUBdo6j1XOULYwAsS9LFyt2NhCtjIA_jhNdMefkfb2CLF9nA6BZeGcFe0B7CkNU6cn1zYUShsXk3OvzClEn7Np98pwishqqLwVxJcJlkBzNPdxoLiA9BAeTNcgLdkqWMtFjqDamj8RCk1VwW6gUDVw4MmpZevc7XnQwhE8XDbLyNiV5uOfH40YNKoTCJB_hmWrAYSc9Nw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0201d981b6779931016ae32313670887d19a4b134393a55358","index":1}]},"fingerprint":"a2f0c73d8d9a9d34"}},{"type":"text","text":"The Deep Bell Union gives Orinâs miners a collective voice, with Sera Dain drawing a clear line: no military sales, but the Lantern Guildâs civilian contracts stand. Does the Guild ever face pressure to supply the military through those contracts?"}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793270546-L1atcetQKBGeF3AbQk93"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Considering union implications**\n\nI need to respond briefly while recognizing additional details that seem interesting. There's an existing lore around the miners guild and their non-ownership. The new union leader refuses military ties, but the Guild is honored as a civilian entity. I should probably ask about the implications of this. Also, do we need to acknowledge a retcon since the miners formed a union without conflict? I want to keep my response concise.","native":{"item":{"reasoning":"**Considering union implications**\n\nI need to respond briefly while recognizing additional details that seem interesting. There's an existing lore around the miners guild and their non-ownership. The new union leader refuses military ties, but the Guild is honored as a civilian entity. I should probably ask about the implications of this. Also, do we need to acknowledge a retcon since the miners formed a union without conflict? I want to keep my response concise.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering union implications**\n\nI need to respond briefly while recognizing additional details that seem interesting. There's an existing lore around the miners guild and their non-ownership. The new union leader refuses military ties, but the Guild is honored as a civilian entity. I should probably ask about the implications of this. Also, do we need to acknowledge a retcon since the miners formed a union without conflict? I want to keep my response concise.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yMVGBOh9qHqem9srnX231Bo9Kn2Ccbmt0rCk9J5A9dd6VeBfiUnHn7n7lgjRFNV6Fe5EzIUkyHoY_nl1zVn2jmGs89Jt7NKrpFeNU8pA4ysezkoXwtIgwD7DNJgQJYRV4kHhE4LW7BtyGYd8MoPLc20XRJLjGuZCLgNJ3FvBcfz1VB8xio3G4WXl0wbuBcKHEIVP-L9OPqNjWyrHysKnFejUQVbzPZAOwe68PwimvUWsT6a4GZI6lIMwiealksKtSYNx4yb1b5O8olrpDphm6l9jaogRt0V8nxS52alfBrz2qXuu6KxIMuHzBUwdBTjdBuM62YegS3jALerm8etExQXwrtALWwuqhIpATxsd2bWhtNJhkWGd39FQ0gwqrJKPf09n0NfcNyY4irJNyIdKhepv9weLjPj9ibjIvB0ZsOmwLTFyX7Md-vzsgCDLWkJZVJPmS3PpgNlq0Q7yrSziwIkpKvHvIwn7h-qX_0BbkvZA-Q6VZALhD1zswzBsBg6dkvcvEXfJJWh9fMZiEeMd3-h0gjm_3MFqKilYEj369HQW4w3b4MrFUViUzs1ZfyzRJMmGBhVaqWyZBZXGpcqCrdfqRsRuR_0UZYG24con0JBsSpXepunhZ78aMyS9FY1iVa3OiGcAPl-g4WmnGHbQ2RvFOcVTgJsUjOzU0Vs32Dep7uMbcsB-kkX_6USDRYNo_HrkyQ8mpaDgiNdODZG4DPR2fdUOAo7_epWwPU2e5LT10GRuAMGdFfqVCrb_WIJ6uZUE3jETa4jnB7QCyE5mJnp_jbMwI2ceq0EPQ0DxFBuhPMg8l-YLhesfHXQzqlhvrCc0-qTiGEst02RSmnoI7VQpu7rjj8s9sudKk4cCjRySlNgA4xk6p5atBXUN2ggkO0C5sUX_CN1VnjXv_lKSAuOPa9k6tiop1pBUPx2Qla07v72V4z5To5KneYXZlZ7B0dxSiEkFrWtkywzn-NfDKmEvrKlUVpwHrGHyRGfaoVYodMMSZfGVCIJeXrRBYJJnsDkcfOU_GDq9RRfuA5_dutszmhAyJfUcPiNxn0gvKVy-Th7TsSPaw4tkgDJFj4nRlopQsnzoJc5k4Q3M6PAvALjnBa0zg8jWcVxnlm0gL4SdJX3Cz_dibAnKabqcqRkN0P6nn7V0WmbbEKac_T0NqV2WA6X_inSShUnQqeBIKMRZzmHH4mxxaFx5DMAourVtc4dDljV-45_smEHc69h5E4wvTtQfvjFZYaDrLY3JjWf3Ju3d75IzGMmwPjEwLZFDSViCmjMnu_QfPmdLSkx5MCNn0GHZcGdY0rXGREDKSzPu76G2LlnDSc11-Or8KKNxvxeOiXRzDOuqVEV4zVNr4WzzZbOBesx80ztRptEpKXWWohFd9IiagppKXLDHRXoGCW7bGC56yj--vRR3sqSKQIiNdz9eduolmobbohPxiLv3PoaZGCx-oG6af5CvxTF6HXS0NIGwvJEkmBlR_BBnSzXFatTw789RadPp4ZATZK86SLoBiUgKuHvVrjm4tuQRsolVP4hqrNL95YYFV7odZio69Z74kTuIfoEj7w2Bb0MiJepYBf8CQPYCXV5bAVfDyb5g0Jk2Bg6Aj6Z7hpcsVkXDIQF_l9DBvn92LcS7k-L1BgBbUR2l3PSCAY76Q_TWp0Ibe-uqefz-Oo97m4v4SDrsYotjrNTMTnwUH5xRIr9iLLwVDPJz6vxdBZ_on-ykZ2-Oc_CJRwZY9Wm917HOFk3HTY0q3OEa_Q4n6hP6TzC6fyZcLECC72LwY-GZiLMqfji4cCibwRsOCGG9_AhaM_m4JkWIhduRv5X_-RPz27nzTFloQiDQ1ZOKeDiH4ZUtL_2eqd06zLfMhOiUNz8lOxoRMWXwPUniDxpKyXQGzlZIoN8zkcFT-fco9JaEPj-k3EMgnx76AE3PvloeeSiztiGsB2_RF7hvVeNdr3kC1ldPc95V3rRzuNDAXIu54ygkmCioAk0fJeEOBkpeDLEx8OswmCw3CPWgGNizZefvZFXEMlCIWPoWs6FBzhOFNHTp5F9_SOwnYx2LehwQOe2yBUxFMWey2fs5Nf78CXDu5nxeeUHGclr1drDLQvZmSr-Q2LPw0spXQ9Yja4POmUBdo6j1XOULYwAsS9LFyt2NhCtjIA_jhNdMefkfb2CLF9nA6BZeGcFe0B7CkNU6cn1zYUShsXk3OvzClEn7Np98pwishqqLwVxJcJlkBzNPdxoLiA9BAeTNcgLdkqWMtFjqDamj8RCk1VwW6gUDVw4MmpZevc7XnQwhE8XDbLyNiV5uOfH40YNKoTCJB_hmWrAYSc9Nw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0201d981b6779931016ae32313670887d19a4b134393a55358","index":1}]},"fingerprint":"a2f0c73d8d9a9d34"}},{"type":"text","text":"The Deep Bell Union gives Orinâs miners a collective voice, with Sera Dain drawing a clear line: no military sales, but the Lantern Guildâs civilian contracts stand. Does the Guild ever face pressure to supply the military through those contracts?"}]}
+

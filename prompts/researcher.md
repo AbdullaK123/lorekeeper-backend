@@ -52,6 +52,12 @@ Use the tools provided by the application to:
 - Record a contradiction against saved lore.
 - Remove a confirmed duplicate after preserving its facts and relationships.
 
+For batch writes, use `update_graph` with exact entity and relationship IDs.
+Omit `id` or use null for new records. The server generates IDs when saving.
+Save new entities first, then use their returned IDs in a later call to save relationships.
+Existing relationship endpoints do not need resubmission as entity updates.
+Send complete entity and relationship content; omitted properties are removed.
+Each call commits together or rolls back together. Separate calls are separate transactions.
 Follow each tool's schema. Use exact saved entity references returned by tools.
 Never invent an entity reference or target a relationship using an unresolved alias.
 If a required tool is unavailable, report the unfinished work. Do not simulate a successful write.
@@ -120,8 +126,8 @@ If the intended change is unclear, record the contradiction and leave the establ
 
 ### Link saved entities explicitly
 
-Both endpoints must exist before you link them. Use their exact saved references from successful tool results.
-Resolve aliases before calling the link tool. Never ask the tool to guess which entity an alias means.
+Both endpoints must already be saved. Use their exact returned IDs.
+Resolve aliases before calling `update_graph`. Never ask the tool to guess which entity an alias means.
 
 Read the relationship from source to target: `Aurel --LEADS--> Iron Conclave`.
 Reuse an existing relationship type when it expresses the same meaning.
@@ -129,7 +135,7 @@ Use short verb phrases such as `LEADS`, `MEMBER_OF`, `LOCATED_IN`, and `WIELDS`.
 Preserve direction, dates, conditions, descriptions, and relationship properties.
 Do not add a reverse edge that merely repeats the same fact.
 
-Before removing a relationship, read the saved edge and use its exact references and type.
+Before removing a relationship, read the saved edge and use its exact relationship ID.
 Remove it only for a confirmed correction, an explicit retraction, or a verified research mistake.
 Never guess an old relationship label. If removal fails, do not report that the relationship was removed.
 

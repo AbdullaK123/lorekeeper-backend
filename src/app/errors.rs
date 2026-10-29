@@ -41,16 +41,16 @@ impl From<ServiceError> for AppError {
 
 impl From<ValidationErrors> for AppError {
     fn from(value: ValidationErrors) -> Self {
-        let messages: Vec<String> = value
-            .field_errors()
-            .into_iter()
-            .flat_map(|(field, errors)| {
-                errors.iter().map(move |e| match &e.message {
-                    Some(msg) => format!("{}: {}", field, msg),
-                    None => format!("{}: invalid", field),
-                })
-            })
-            .collect();
+        let mut messages = Vec::new();
+        for (field, errors) in value.field_errors() {
+            for error in errors {
+                let message = match &error.message {
+                    Some(message) => format!("{field}: {message}"),
+                    None => format!("{field}: invalid"),
+                };
+                messages.push(message);
+            }
+        }
 
         AppError::ValidationError(messages.join("; "))
     }

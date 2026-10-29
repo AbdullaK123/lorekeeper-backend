@@ -1,6 +1,6 @@
 # Lorekeeper — Project Plan
 
-Updated: 2026-10-27.
+Updated: 2026-10-29.
 
 ## Completion rule
 
@@ -24,14 +24,15 @@ Working foundations remain valuable and should stay in place during changes.
 | Accounts | Signup, login, logout, sessions, current user | Duplicate signup returns an internal error; complete privacy acceptance remains |
 | Worlds | Create, list, read, update, delete; owner checks | Blank names pass validation; deletion can race with background lore writes |
 | Conversations | Create, list, resume, delete; streamed replies | Long histories, interrupted streams, and concurrent turns need defined behavior |
-| Message storage | User and assistant messages save together | Background lore processing lacks durable jobs and visible retry status |
+| Message storage | User and assistant messages save together before background research starts | Background research lacks durable jobs and visible retry status |
 | Lore storage | Entities, relationships, conflicts, search, graph repository methods | Alias collisions, source tracking, and safe updates need work |
 | Retrieval | Text and vector search, combined ranking, neighbor lookup | Answer context drops neighbor properties and relationship details |
 | Cleanup | Transactional deletion jobs, scheduled graph cleanup, retry after failure | Shutdown and competing background writes need further checks |
-| Researcher replacement | [Prompt draft](../prompts/researcher.md) follows the seven-section template | Tools, runtime integration, and behavioral tests remain |
+| Researcher | [Prompt](../prompts/researcher.md), scoped search/read/write/conflict tools, background runtime wiring | Model behavior, durable jobs, and recovery still need acceptance |
 
-The current runtime still uses structured extraction and a separate conflict check.
-The researcher prompt does not change runtime behavior yet.
+The runtime uses a background tool-using researcher after successful chat storage.
+Chat has read-only search access. The old structured extraction pipeline is removed.
+Researcher jobs still run in memory; durable recovery remains unfinished.
 
 ## Test baseline
 
@@ -93,11 +94,11 @@ Follow-up questions use the conversation and saved lore without inventing canon.
 
 **Stories:** US-010, US-011, US-012, US-013, US-014, US-015.
 
-**Built:** Automatic background extraction after saved chat, entity updates, relationship writes, and basic conflict checks.
+**Built:** Background researcher after saved chat, exact-ID batch writes, full reads, and conflict reporting tools.
 
 **Remaining:**
 
-- Replace brittle alias matching with the tool-using researcher described below.
+- Verify contextual identity through the tool-using researcher with behavioral evaluations.
 - Preserve old facts, minor details, relationship conditions, and sources during updates.
 - Resolve identity through context; ask for clarification when evidence remains unclear.
 - Support distinct subjects with the same name without silently merging them.
@@ -308,7 +309,8 @@ Containers, health response, cleanup retries, and partial shutdown handling prov
 
 **Supports:** Epics 3, 4, and 5.
 
-The prompt draft is complete. Keep the current extraction pipeline active during this stage.
+The researcher prompt and initial runtime tools are implemented.
+The old extraction pipeline is removed. Source references and unresolved design decisions still need completion.
 
 1. Define stable entity references and source message references.
 2. Define search and full-read results, including facts, relationships, conditions, conflicts, and sources.
@@ -347,8 +349,8 @@ They also cover qualifiers, explicit corrections, speculation, and unresolved re
 3. Prevent competing jobs from overwriting newer accepted facts.
 4. Coordinate deletion with research so stale work cannot restore deleted lore.
 5. Expose research status and safe retry through the API and client.
-6. Switch from old extraction only after the replacement passes the same behavioral checks.
-7. Remove obsolete extraction and alias logic after the switch.
+6. Complete behavioral acceptance of the researcher now wired into the runtime.
+7. Keep obsolete extraction and alias logic removed; add regression cases against the active tools.
 
 A one-time world existence check does not protect a later graph write from deletion.
 The design must cover that interval and retries after partial writes.
@@ -442,8 +444,8 @@ The earlier code-size estimate excludes this added scope and needs revision.
 
 ## Immediate next piece
 
-Define the researcher's search and full-read tool contracts.
-Specify exact entity references and source references before adding write tools.
-Use the existing prompt examples to check the design.
+Verify the researcher against the existing prompt examples.
+Check saved facts, explicit corrections, unresolved conflicts, and ambiguous identity through the new runtime.
+Complete source references and durable jobs without reintroducing name-based write targets.
 
 This is the next small piece. The full researcher replacement is not one task.

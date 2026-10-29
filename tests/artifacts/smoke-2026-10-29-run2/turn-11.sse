@@ -1,0 +1,308 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"tool_call","name":"search_world"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"{\""}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"query"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"\":\""}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"A"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"sha"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" Pell"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" birthplace"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" where"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" she"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" grew"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" up"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" Lantern"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" Guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":" membership"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"arguments","part":0,"json":"\"}"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"toolcall","id":{"provider":"call_14MUpWj1wq18c46hKmUTfVrq"},"function":{"name":"search_world","arguments":{"query":"Asha Pell birthplace, where she grew up, and Lantern Guild membership"}},"native":{"item":{"id":"call_14MUpWj1wq18c46hKmUTfVrq","type":"function","function":{"name":"search_world","arguments":"{\"query\":\"Asha Pell birthplace, where she grew up, and Lantern Guild membership\"}"}},"fingerprint":"9c22c7a6bc5913d5"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":4527,"output_tokens":31,"total_tokens":4558,"cached_input_tokens":1826,"cache_creation_input_tokens":2698,"reasoning_tokens":0,"cost":{"total":0.00037131}},"response_id":"gen-1793273551-DiQUpVrgOz7oiemZGsAL","finish_reason":"tool_calls","raw":{"id":"gen-1793273551-DiQUpVrgOz7oiemZGsAL","object":"chat.completion","created":1793273551,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":null,"role":"assistant","tool_calls":[{"id":"call_14MUpWj1wq18c46hKmUTfVrq","type":"function","function":{"name":"search_world","arguments":"{\"query\":\"Asha Pell birthplace, where she grew up, and Lantern Guild membership\"}"}}]},"finish_reason":"tool_calls","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4527,"completion_tokens":31,"total_tokens":4558,"cost":0.00037131,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":2698,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00037131,"upstream_inference_prompt_cost":0.00035581,"upstream_inference_completions_cost":0.0000155},"completion_tokens_details":{"reasoning_tokens":0,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"toolCall","tool_call":{"id":{"provider":"call_14MUpWj1wq18c46hKmUTfVrq"},"function":{"name":"search_world","arguments":{"query":"Asha Pell birthplace, where she grew up, and Lantern Guild membership"}},"native":{"item":{"id":"call_14MUpWj1wq18c46hKmUTfVrq","type":"function","function":{"name":"search_world","arguments":"{\"query\":\"Asha Pell birthplace, where she grew up, and Lantern Guild membership\"}"}},"fingerprint":"9c22c7a6bc5913d5"}}}
+
+data: {"type":"toolExecutionCommitted","tool_call":{"id":{"provider":"call_14MUpWj1wq18c46hKmUTfVrq"},"function":{"name":"search_world","arguments":{"query":"Asha Pell birthplace, where she grew up, and Lantern Guild membership"}},"native":{"item":{"id":"call_14MUpWj1wq18c46hKmUTfVrq","type":"function","function":{"name":"search_world","arguments":"{\"query\":\"Asha Pell birthplace, where she grew up, and Lantern Guild membership\"}"}},"fingerprint":"9c22c7a6bc5913d5"}}}
+
+data: {"type":"toolResult","tool_result":{"call":{"provider":"call_14MUpWj1wq18c46hKmUTfVrq"},"name":"search_world","content":[{"type":"text","text":"Asha Pell (person) [ID: 5affd0ca-9c42-4463-bed7-ad12e3c38d62] [Aliases: Captain Ash]: Asha Pell captains the courier ship Nightjar, grew up in Vesper, and belongs to the Lantern Guild. Her crew usually calls her Captain Ash. She has a small brass key sewn inside her left coat cuff; only her navigator, Iven Marr, knows she has it.\n  Properties: source_conversation: 01a18769-1953-7785-bf1a-1d436775cbaf\n  - ← UNRELATED_TO from Bren Vale (person) [ID: 3866be6c-f8eb-4158-8abb-a95e3ddc64b2] [Aliases: Captain]: Bren Vale captains the fishing boat Petrel. People on the dock also call him Captain. He is unrelated to Asha Pell and is not a member of the Lantern Guild. He supports the toll on blue salt shipments imposed in 319 because its revenue will repair fishing piers.\n  - ← NAVIGATOR_FOR from Iven Marr (person) [ID: 1b66c764-9ef7-438c-afa7-22338885a61e]: Asha Pell's navigator and the only person who knows she has a small brass key sewn inside her left coat cuff. He lost his right eye in the winter storm of 312. He navigates the Nightjar using tide charts, not magic.\n  - CAPTAINS → Nightjar (ship, courier ship) [ID: 36eac936-9ce0-4b27-9bf4-f77ae290dfa1]: A courier ship captained by Asha Pell. It carries blue salt from Orin to Vesper only between April and September.\n  - GREW_UP_IN → Vesper (city, port city) [ID: ccb13663-df18-4e63-b89c-006464a6cfb2]: Brinewake's main port city, built around a tidal lighthouse.\n  - MEMBER_OF → Lantern Guild (guild) [ID: a4140448-57b9-47e2-9fad-b44a4a957bdd]: Maintains Vesper's tidal lighthouse and buys blue salt from Orin's miners. It does not own the mines. During winter, when the strait freezes, the guild uses stored salt. The guild opposes the toll on blue salt shipments imposed in 319.\n  - POSSESSES → Small brass key (key, item) [ID: b21607b8-9ea1-4eb5-bfad-67f4d24554c8]: A small brass key sewn inside Asha Pell's left coat cuff. It opens the old lens room beneath Vesper's lighthouse.\n\nIven Marr (person) [ID: 1b66c764-9ef7-438c-afa7-22338885a61e]: Asha Pell's navigator and the only person who knows she has a small brass key sewn inside her left coat cuff. He lost his right eye in the winter storm of 312. He navigates the Nightjar using tide charts, not magic.\n  Properties: source_conversation: 01a18769-1953-7785-bf1a-1d436775cbaf\n  - NAVIGATOR_FOR → Asha Pell (person) [ID: 5affd0ca-9c42-4463-bed7-ad12e3c38d62] [Aliases: Captain Ash]: Asha Pell captains the courier ship Nightjar, grew up in Vesper, and belongs to the Lantern Guild. Her crew usually calls her Captain Ash. She has a small brass key sewn inside her left coat cuff; only her navigator, Iven Marr, knows she has it.\n  - KNOWS_ABOUT → Small brass key (key, item) [ID: b21607b8-9ea1-4eb5-bfad-67f4d24554c8]: A small brass key sewn inside Asha Pell's left coat cuff. It opens the old lens room beneath Vesper's lighthouse.\n  - NAVIGATES → Nightjar (ship, courier ship) [ID: 36eac936-9ce0-4b27-9bf4-f77ae290dfa1]: A courier ship captained by Asha Pell. It carries blue salt from Orin to Vesper only between April and September.\n\nOld lens room (room, location) [ID: 6f9156cc-d754-4aa5-b17d-828367571776]: A room beneath Vesper's lighthouse, opened by Asha Pell's small brass key.\n  Properties: source_conversation: 01a18769-1953-7785-bf1a-1d436775cbaf\n  - ← OPENS from Small brass key (key, item) [ID: b21607b8-9ea1-4eb5-bfad-67f4d24554c8]: A small brass key sewn inside Asha Pell's left coat cuff. It opens the old lens room beneath Vesper's lighthouse.\n  - LOCATED_BENEATH → Vesper lighthouse (lighthouse, landmark) [ID: 18f09cc9-0d1f-4860-a786-04aae26429af]: The tidal lighthouse around which Vesper is built. Its lenses run on blue salt and it is maintained by the Lantern Guild.\n\nBren Vale (person) [ID: 3866be6c-f8eb-4158-8abb-a95e3ddc64b2] [Aliases: Captain]: Bren Vale captains the fishing boat Petrel. People on the dock also call him Captain. He is unrelated to Asha Pell and is not a member of the Lantern Guild. He supports the toll on blue salt shipments imposed in 319 because its revenue will repair fishing piers.\n  Properties: source_conversation: 01a18769-1953-7785-bf1a-1d436775cbaf\n  - CAPTAINS → Petrel (boat, fishing boat) [ID: 3f555d2a-f6ee-476b-93e5-79e9ae67c110]: A fishing boat captained by Bren Vale.\n  - UNRELATED_TO → Asha Pell (person) [ID: 5affd0ca-9c42-4463-bed7-ad12e3c38d62] [Aliases: Captain Ash]: Asha Pell captains the courier ship Nightjar, grew up in Vesper, and belongs to the Lantern Guild. Her crew usually calls her Captain Ash. She has a small brass key sewn inside her left coat cuff; only her navigator, Iven Marr, knows she has it.\n  - NOT_MEMBER_OF → Lantern Guild (guild) [ID: a4140448-57b9-47e2-9fad-b44a4a957bdd]: Maintains Vesper's tidal lighthouse and buys blue salt from Orin's miners. It does not own the mines. During winter, when the strait freezes, the guild uses stored salt. The guild opposes the toll on blue salt shipments imposed in 319.\n  - SUPPORTS → Blue salt shipment toll (toll, policy) [ID: 08e37e67-40fc-4b69-812f-82226ba1d12b]: A toll on blue salt shipments imposed in 319 by Vesper's governor, Tal Ren. Its revenue is intended to repair fishing piers. The Lantern Guild opposes it; Bren Vale supports it because the revenue repairs fishing piers.\n\nSera Dain (person) [ID: 3bc5f9a9-a1a4-4886-8445-bbff1e085eba]: Leader of the Deep Bell Union. She refuses to sell salt to the military but honors civilian contracts with the Lantern Guild.\n  Properties: source_conversation: 01a18769-1953-7785-bf1a-1d436775cbaf\n  - LEADS → Deep Bell Union (union, workers' union) [ID: 0d4726ec-3962-4ce9-951e-f485b1a0aba3]: A union formed by Orin's miners.\n  - HONORS_CIVILIAN_CONTRACTS_WITH → Lantern Guild (guild) [ID: a4140448-57b9-47e2-9fad-b44a4a957bdd]: Maintains Vesper's tidal lighthouse and buys blue salt from Orin's miners. It does not own the mines. During winter, when the strait freezes, the guild uses stored salt. The guild opposes the toll on blue salt shipments imposed in 319."}]}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Acknowledging clarification**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" respond"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" briefly"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" acknowledge"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" correction"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" provided"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" important"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" mention"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" this"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" clarification"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" rather"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" than"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" contradiction"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Earlier"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" said"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" grew"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" up"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" V"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"esper"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" now"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" stating"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" was"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" born"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" moved"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" at"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" age"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" six"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" The"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" user"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" clarified"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" mixed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" up"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" my"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" birthplace"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" with"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" where"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" grew"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" up"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"’ll"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" confirm"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" rest"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" remain"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" unchanged"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" noting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" was"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" born"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" grew"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" up"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" V"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"esper"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Under"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"stood"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" A"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"sha"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" was"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" born"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" on"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" moved"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" V"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"esper"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" at"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" six"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" where"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" she"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" grew"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" up"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Her"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Lantern"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" membership"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" other"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" details"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" stay"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" unchanged"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"Understood: Asha was born on Orin and moved to Vesper at six, where she grew up. Her Lantern Guild membership and other details stay unchanged."}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Acknowledging clarification**\n\nI need to respond briefly and acknowledge the correction provided. It's important to mention that this is a clarification rather than a contradiction. Earlier, I said I grew up in Vesper, now stating I was born in Orin and moved at age six. The user clarified that I mixed up my birthplace with where I grew up. I’ll confirm that the guild and rest remain unchanged, noting I was born in Orin, but grew up in Vesper.","native":{"item":{"reasoning":"**Acknowledging clarification**\n\nI need to respond briefly and acknowledge the correction provided. It's important to mention that this is a clarification rather than a contradiction. Earlier, I said I grew up in Vesper, now stating I was born in Orin and moved at age six. The user clarified that I mixed up my birthplace with where I grew up. I’ll confirm that the guild and rest remain unchanged, noting I was born in Orin, but grew up in Vesper.","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging clarification**\n\nI need to respond briefly and acknowledge the correction provided. It's important to mention that this is a clarification rather than a contradiction. Earlier, I said I grew up in Vesper, now stating I was born in Orin and moved at age six. The user clarified that I mixed up my birthplace with where I grew up. I’ll confirm that the guild and rest remain unchanged, noting I was born in Orin, but grew up in Vesper.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y7X-KmIqBkByBX-VaPemzXAxIlng6Fu16aBsmJPj3TGCXnwimc9bcGcvQ2p2ytfzTmrs25btTIeOLFFKhojJI9RayaqP3oWsjw90cHcsTI8TagCRcGXcgf1bMNCCOA3zxAHiQak69xodm6cz23iSaAdZiyFra-SAOT-Rzkt8JtEVi29EcRH1ZaY4YlFN3N2532SPgEa8kb7Y9XwLVNKLLk1YiNDsncM0KgFS5-vIN6odx72gG-VIVSlZCrOwnao-1NrhFqmK_x6jts1ArQnu7KpecRCb_4S_67_h8SHR_yOYkCbOZxGTZEJ0l0YNQltedF3nRz7mofIgeZbvm0_63tSEwghLKMTOvyC1zcmsXwygITSvuxmtWcZbrM8PrjJ46lDzA1uQrKz85KyRwp0bL6wV0KX8cZo3jKvRqgDDqAVrVM1Nm4Sk80d6bk6F5dkrzXDlJ3TOZI6sXDIEVwK4J9zCMQrGSE3r6x9kzMMkn6nz7BzVFR0nl9MqjBkHE7gv4eTSt14IAgOfVq7xU7N279L3MfkmCyfoQrRBt_CMCz-BS8Dpsh8US_nic6eoAMgoqoskXSS4SfI9QFOz_BTUh9Pbe7ac83yqERQjKeK3rQbcZc4ceHvRh0QLINTcmrBJc80tIDDbJ6g_LEQWmiACf3YdMkJH4a_EEmekjIJDHBKxPCbUM6Tkqck8esVhKeG4MNCV9h_n2jz3Q178W5T6avK4PzTu4mzSFVh0q5NjWKDd7EGg_qtqUhLsZRwxKXsPpOJlQPA1_IRX4_zvW23Bfjx8HH_iba3uDIUjDMXbqduqVuSLNR3rU3h-38gi8jn3IHOhGpGKMlgJF4c83yYi4a5FhfJHzWLNcQx6Wm5HPQHuVhgnthkxHwNWUcQHKmzKlORtj8D-TOh-ur85QsMRWgSnXdmUGSJvfk6YNhreUhOvx65qqmdusvPt1poO8aaQbqjPc5NticMswIQY5Z2uB-G4HAsxdGbPMAkfQAFGogi8RQ1falwfVYLXOWTx1aY1wGqopPi0QmC9pLwPSfofa5BYmgCio5I4BxhN4ljFyi4vTg7Q2ujaq2rXcVKTvZIpWbd6iAbyO7ooBlu0g5mUrnocn-Kr5Fd3RgAxrHD3G7e6kzhgGyqL8g4hCucll3aV5lvFklTL8jNDsvw07GqVpwSGxC-zuw7gKGtNQIW8rdmEC30p9oHo7WQzfZKYrfNl4VqxyO3Fvz6ERcXwKr1loyE3Dx-9lPqULm7f5dMcXFVlLrcWGGQvAlEmBtxmHkAZPUvxXv1jFdCVXWoutq2QfwVUTvxOa5GEhHPWlZVyXaPXI6QimXA0yS4Z_waoDbdbslcY7FQe-jF1qPPvoVRqxcDYYDhvqRYwPSByrsoR7P15j6D-4Ityo-M4XZW7KgmF5ajKEB7u_rA67y7OuAqNUPQwnctruhdzQM9Q1qZaIREnLkfdMXcnoCnEvcOjQvLddVkOOsaoVmYTZbdJOuEXNd4z0Ja6eH8OxVZdvfd9E3Pj3XdDXJ5il4zyEYFUsZ3G_6lSAgAofVjkJDK5Me1Ap6QRtJDNKjhWv-D6yBuflbQj5BrIo2yyBThPjI5maXJLevxG4FlQvpT5YBNR2KlVilJgluDJuyB6ax2JclH13MGd6tQU1i1ezShAxoVyvbq-MekXyIMKMpe97tGYLW5carG9zFzjrX6CrRO2PcHKaVAXMUEDsLMvVaByjoLDaQcDPQ_5btgfld90CDp8AiF8vxtdoBlj2uXz1yF2x5GseuJzWERXrtOZdeCzq9nSFIQozy1R8PoxN4G1wjQdu6yDMBzTfOr2SupkpzM_irs2fgRaR3nIUCwDR7nLUEzlOLwI3P-8cE-_WemgbreSVxgB0G5axjeN4uWgJ5SYmm_fLHDVpNnrVDq80JmoI7HCpjbS-_w4WrMUfg8BKsYih8yKz9aIQdFF-FaVjdImyTvMOzHd1RQ1qAVuTGxft5kMutu578Ua2dAyxCDCAHmo2CezDi9QZCs7C4iyaaGX_ZCiInPwJlRGvpM2o-hHTVlRIQ05VMCxxjZGshAwOG0KpITcJjbQs3ycSpA7Y_8u_JX2mIY9OkJUsQEMfAEK_b5cN94NIjRLPjpUsxlvO4gK53smva60HJ3OGt4LD53okjy7s8vHx0_8gyjysfwYbUTdFEijX4Oi2CAtPkdkshzQ0J2U_ig4l2hr-FCqPfMbb22lHNJqUdg27HkbMlGTx-a3hPzw3Eg3A1cmxC9sshFFmnKewtw0XTMc5i2_EDVyUux-CmlqKdItSL_jaPxa9hXc_rY1kpJO4R9Ppvs67MFBJm1Ya2g_I8Kld1ZWfhvHQUWQJqSf9p_otSXNAjf-PpLjPs_YewOHoE6zKqPyg--dT37iHjcXBqmtLValMFcOvGLXxMp9cGMmD18vSNKW8TvAOUope67hxq9diUfaDQBOp1aKmmk2Rj2Ae1b_h1V5Ab91zO4tb8WsAvHAKpYjdO-gKxzZR8053ohm6DASDbmCERyKdlkoBNP0eCLGYVx6_xBMna2EVucbWClqHD9yir-PVKZN6RDaE90sYCkSDK_C8ZVbGC3bk7RMpoeX-peUndtFCfDiqVdPEmCfnIeatmhXFr3ckUfYMu-ZWvQPQLJCc03j3okzTWGvAmNz4xWtQm6JFwrTWLxtfwMiSEupst0anSEfY-kgN11UddyVhkKGdBItrBKvNbrAb7zc1dWN75ku2d8koNl10NBRiDyXNMqEpaJM5lSqRo3Nh95IW2ajoBvrQo2hqd-NN4PHgsEjlHA6v3ClmA=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_079a85e69b765ae9016ae32ed4e89c87d188be3d9dd0e57011","index":1}]},"fingerprint":"ad411f2ce4c10add"}}}}
+
+data: {"type":"completionCall","call_index":1,"usage":{"input_tokens":6441,"output_tokens":131,"total_tokens":6572,"cached_input_tokens":4524,"cache_creation_input_tokens":1914,"reasoning_tokens":92,"cost":{"total":0.00035029}},"response_id":"gen-1793273555-nokYOtGqrw0nk2EJLcc2","finish_reason":"stop","raw":{"id":"gen-1793273555-nokYOtGqrw0nk2EJLcc2","object":"chat.completion","created":1793273555,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Understood: Asha was born on Orin and moved to Vesper at six, where she grew up. Her Lantern Guild membership and other details stay unchanged.","role":"assistant","reasoning":"**Acknowledging clarification**\n\nI need to respond briefly and acknowledge the correction provided. It's important to mention that this is a clarification rather than a contradiction. Earlier, I said I grew up in Vesper, now stating I was born in Orin and moved at age six. The user clarified that I mixed up my birthplace with where I grew up. I’ll confirm that the guild and rest remain unchanged, noting I was born in Orin, but grew up in Vesper.","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging clarification**\n\nI need to respond briefly and acknowledge the correction provided. It's important to mention that this is a clarification rather than a contradiction. Earlier, I said I grew up in Vesper, now stating I was born in Orin and moved at age six. The user clarified that I mixed up my birthplace with where I grew up. I’ll confirm that the guild and rest remain unchanged, noting I was born in Orin, but grew up in Vesper.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y7X-KmIqBkByBX-VaPemzXAxIlng6Fu16aBsmJPj3TGCXnwimc9bcGcvQ2p2ytfzTmrs25btTIeOLFFKhojJI9RayaqP3oWsjw90cHcsTI8TagCRcGXcgf1bMNCCOA3zxAHiQak69xodm6cz23iSaAdZiyFra-SAOT-Rzkt8JtEVi29EcRH1ZaY4YlFN3N2532SPgEa8kb7Y9XwLVNKLLk1YiNDsncM0KgFS5-vIN6odx72gG-VIVSlZCrOwnao-1NrhFqmK_x6jts1ArQnu7KpecRCb_4S_67_h8SHR_yOYkCbOZxGTZEJ0l0YNQltedF3nRz7mofIgeZbvm0_63tSEwghLKMTOvyC1zcmsXwygITSvuxmtWcZbrM8PrjJ46lDzA1uQrKz85KyRwp0bL6wV0KX8cZo3jKvRqgDDqAVrVM1Nm4Sk80d6bk6F5dkrzXDlJ3TOZI6sXDIEVwK4J9zCMQrGSE3r6x9kzMMkn6nz7BzVFR0nl9MqjBkHE7gv4eTSt14IAgOfVq7xU7N279L3MfkmCyfoQrRBt_CMCz-BS8Dpsh8US_nic6eoAMgoqoskXSS4SfI9QFOz_BTUh9Pbe7ac83yqERQjKeK3rQbcZc4ceHvRh0QLINTcmrBJc80tIDDbJ6g_LEQWmiACf3YdMkJH4a_EEmekjIJDHBKxPCbUM6Tkqck8esVhKeG4MNCV9h_n2jz3Q178W5T6avK4PzTu4mzSFVh0q5NjWKDd7EGg_qtqUhLsZRwxKXsPpOJlQPA1_IRX4_zvW23Bfjx8HH_iba3uDIUjDMXbqduqVuSLNR3rU3h-38gi8jn3IHOhGpGKMlgJF4c83yYi4a5FhfJHzWLNcQx6Wm5HPQHuVhgnthkxHwNWUcQHKmzKlORtj8D-TOh-ur85QsMRWgSnXdmUGSJvfk6YNhreUhOvx65qqmdusvPt1poO8aaQbqjPc5NticMswIQY5Z2uB-G4HAsxdGbPMAkfQAFGogi8RQ1falwfVYLXOWTx1aY1wGqopPi0QmC9pLwPSfofa5BYmgCio5I4BxhN4ljFyi4vTg7Q2ujaq2rXcVKTvZIpWbd6iAbyO7ooBlu0g5mUrnocn-Kr5Fd3RgAxrHD3G7e6kzhgGyqL8g4hCucll3aV5lvFklTL8jNDsvw07GqVpwSGxC-zuw7gKGtNQIW8rdmEC30p9oHo7WQzfZKYrfNl4VqxyO3Fvz6ERcXwKr1loyE3Dx-9lPqULm7f5dMcXFVlLrcWGGQvAlEmBtxmHkAZPUvxXv1jFdCVXWoutq2QfwVUTvxOa5GEhHPWlZVyXaPXI6QimXA0yS4Z_waoDbdbslcY7FQe-jF1qPPvoVRqxcDYYDhvqRYwPSByrsoR7P15j6D-4Ityo-M4XZW7KgmF5ajKEB7u_rA67y7OuAqNUPQwnctruhdzQM9Q1qZaIREnLkfdMXcnoCnEvcOjQvLddVkOOsaoVmYTZbdJOuEXNd4z0Ja6eH8OxVZdvfd9E3Pj3XdDXJ5il4zyEYFUsZ3G_6lSAgAofVjkJDK5Me1Ap6QRtJDNKjhWv-D6yBuflbQj5BrIo2yyBThPjI5maXJLevxG4FlQvpT5YBNR2KlVilJgluDJuyB6ax2JclH13MGd6tQU1i1ezShAxoVyvbq-MekXyIMKMpe97tGYLW5carG9zFzjrX6CrRO2PcHKaVAXMUEDsLMvVaByjoLDaQcDPQ_5btgfld90CDp8AiF8vxtdoBlj2uXz1yF2x5GseuJzWERXrtOZdeCzq9nSFIQozy1R8PoxN4G1wjQdu6yDMBzTfOr2SupkpzM_irs2fgRaR3nIUCwDR7nLUEzlOLwI3P-8cE-_WemgbreSVxgB0G5axjeN4uWgJ5SYmm_fLHDVpNnrVDq80JmoI7HCpjbS-_w4WrMUfg8BKsYih8yKz9aIQdFF-FaVjdImyTvMOzHd1RQ1qAVuTGxft5kMutu578Ua2dAyxCDCAHmo2CezDi9QZCs7C4iyaaGX_ZCiInPwJlRGvpM2o-hHTVlRIQ05VMCxxjZGshAwOG0KpITcJjbQs3ycSpA7Y_8u_JX2mIY9OkJUsQEMfAEK_b5cN94NIjRLPjpUsxlvO4gK53smva60HJ3OGt4LD53okjy7s8vHx0_8gyjysfwYbUTdFEijX4Oi2CAtPkdkshzQ0J2U_ig4l2hr-FCqPfMbb22lHNJqUdg27HkbMlGTx-a3hPzw3Eg3A1cmxC9sshFFmnKewtw0XTMc5i2_EDVyUux-CmlqKdItSL_jaPxa9hXc_rY1kpJO4R9Ppvs67MFBJm1Ya2g_I8Kld1ZWfhvHQUWQJqSf9p_otSXNAjf-PpLjPs_YewOHoE6zKqPyg--dT37iHjcXBqmtLValMFcOvGLXxMp9cGMmD18vSNKW8TvAOUope67hxq9diUfaDQBOp1aKmmk2Rj2Ae1b_h1V5Ab91zO4tb8WsAvHAKpYjdO-gKxzZR8053ohm6DASDbmCERyKdlkoBNP0eCLGYVx6_xBMna2EVucbWClqHD9yir-PVKZN6RDaE90sYCkSDK_C8ZVbGC3bk7RMpoeX-peUndtFCfDiqVdPEmCfnIeatmhXFr3ckUfYMu-ZWvQPQLJCc03j3okzTWGvAmNz4xWtQm6JFwrTWLxtfwMiSEupst0anSEfY-kgN11UddyVhkKGdBItrBKvNbrAb7zc1dWN75ku2d8koNl10NBRiDyXNMqEpaJM5lSqRo3Nh95IW2ajoBvrQo2hqd-NN4PHgsEjlHA6v3ClmA=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_079a85e69b765ae9016ae32ed4e89c87d188be3d9dd0e57011","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":6441,"completion_tokens":131,"total_tokens":6572,"cost":0.00035029,"is_byok":false,"prompt_tokens_details":{"cached_tokens":4524,"cache_write_tokens":1914,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00035029,"upstream_inference_prompt_cost":0.00028479,"upstream_inference_completions_cost":0.0000655},"completion_tokens_details":{"reasoning_tokens":92,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":10968,"output_tokens":162,"total_tokens":11130,"cached_input_tokens":6350,"cache_creation_input_tokens":4612,"reasoning_tokens":92,"cost":{"total":0.0007216}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":4527,"output_tokens":31,"total_tokens":4558,"cached_input_tokens":1826,"cache_creation_input_tokens":2698,"reasoning_tokens":0,"cost":{"total":0.00037131}},"response_id":"gen-1793273551-DiQUpVrgOz7oiemZGsAL","finish_reason":"tool_calls","raw":{"id":"gen-1793273551-DiQUpVrgOz7oiemZGsAL","object":"chat.completion","created":1793273551,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":null,"role":"assistant","tool_calls":[{"id":"call_14MUpWj1wq18c46hKmUTfVrq","type":"function","function":{"name":"search_world","arguments":"{\"query\":\"Asha Pell birthplace, where she grew up, and Lantern Guild membership\"}"}}]},"finish_reason":"tool_calls","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4527,"completion_tokens":31,"total_tokens":4558,"cost":0.00037131,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":2698,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00037131,"upstream_inference_prompt_cost":0.00035581,"upstream_inference_completions_cost":0.0000155},"completion_tokens_details":{"reasoning_tokens":0,"image_tokens":0,"audio_tokens":0}}}},{"call_index":1,"usage":{"input_tokens":6441,"output_tokens":131,"total_tokens":6572,"cached_input_tokens":4524,"cache_creation_input_tokens":1914,"reasoning_tokens":92,"cost":{"total":0.00035029}},"response_id":"gen-1793273555-nokYOtGqrw0nk2EJLcc2","finish_reason":"stop","raw":{"id":"gen-1793273555-nokYOtGqrw0nk2EJLcc2","object":"chat.completion","created":1793273555,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Understood: Asha was born on Orin and moved to Vesper at six, where she grew up. Her Lantern Guild membership and other details stay unchanged.","role":"assistant","reasoning":"**Acknowledging clarification**\n\nI need to respond briefly and acknowledge the correction provided. It's important to mention that this is a clarification rather than a contradiction. Earlier, I said I grew up in Vesper, now stating I was born in Orin and moved at age six. The user clarified that I mixed up my birthplace with where I grew up. I’ll confirm that the guild and rest remain unchanged, noting I was born in Orin, but grew up in Vesper.","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging clarification**\n\nI need to respond briefly and acknowledge the correction provided. It's important to mention that this is a clarification rather than a contradiction. Earlier, I said I grew up in Vesper, now stating I was born in Orin and moved at age six. The user clarified that I mixed up my birthplace with where I grew up. I’ll confirm that the guild and rest remain unchanged, noting I was born in Orin, but grew up in Vesper.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y7X-KmIqBkByBX-VaPemzXAxIlng6Fu16aBsmJPj3TGCXnwimc9bcGcvQ2p2ytfzTmrs25btTIeOLFFKhojJI9RayaqP3oWsjw90cHcsTI8TagCRcGXcgf1bMNCCOA3zxAHiQak69xodm6cz23iSaAdZiyFra-SAOT-Rzkt8JtEVi29EcRH1ZaY4YlFN3N2532SPgEa8kb7Y9XwLVNKLLk1YiNDsncM0KgFS5-vIN6odx72gG-VIVSlZCrOwnao-1NrhFqmK_x6jts1ArQnu7KpecRCb_4S_67_h8SHR_yOYkCbOZxGTZEJ0l0YNQltedF3nRz7mofIgeZbvm0_63tSEwghLKMTOvyC1zcmsXwygITSvuxmtWcZbrM8PrjJ46lDzA1uQrKz85KyRwp0bL6wV0KX8cZo3jKvRqgDDqAVrVM1Nm4Sk80d6bk6F5dkrzXDlJ3TOZI6sXDIEVwK4J9zCMQrGSE3r6x9kzMMkn6nz7BzVFR0nl9MqjBkHE7gv4eTSt14IAgOfVq7xU7N279L3MfkmCyfoQrRBt_CMCz-BS8Dpsh8US_nic6eoAMgoqoskXSS4SfI9QFOz_BTUh9Pbe7ac83yqERQjKeK3rQbcZc4ceHvRh0QLINTcmrBJc80tIDDbJ6g_LEQWmiACf3YdMkJH4a_EEmekjIJDHBKxPCbUM6Tkqck8esVhKeG4MNCV9h_n2jz3Q178W5T6avK4PzTu4mzSFVh0q5NjWKDd7EGg_qtqUhLsZRwxKXsPpOJlQPA1_IRX4_zvW23Bfjx8HH_iba3uDIUjDMXbqduqVuSLNR3rU3h-38gi8jn3IHOhGpGKMlgJF4c83yYi4a5FhfJHzWLNcQx6Wm5HPQHuVhgnthkxHwNWUcQHKmzKlORtj8D-TOh-ur85QsMRWgSnXdmUGSJvfk6YNhreUhOvx65qqmdusvPt1poO8aaQbqjPc5NticMswIQY5Z2uB-G4HAsxdGbPMAkfQAFGogi8RQ1falwfVYLXOWTx1aY1wGqopPi0QmC9pLwPSfofa5BYmgCio5I4BxhN4ljFyi4vTg7Q2ujaq2rXcVKTvZIpWbd6iAbyO7ooBlu0g5mUrnocn-Kr5Fd3RgAxrHD3G7e6kzhgGyqL8g4hCucll3aV5lvFklTL8jNDsvw07GqVpwSGxC-zuw7gKGtNQIW8rdmEC30p9oHo7WQzfZKYrfNl4VqxyO3Fvz6ERcXwKr1loyE3Dx-9lPqULm7f5dMcXFVlLrcWGGQvAlEmBtxmHkAZPUvxXv1jFdCVXWoutq2QfwVUTvxOa5GEhHPWlZVyXaPXI6QimXA0yS4Z_waoDbdbslcY7FQe-jF1qPPvoVRqxcDYYDhvqRYwPSByrsoR7P15j6D-4Ityo-M4XZW7KgmF5ajKEB7u_rA67y7OuAqNUPQwnctruhdzQM9Q1qZaIREnLkfdMXcnoCnEvcOjQvLddVkOOsaoVmYTZbdJOuEXNd4z0Ja6eH8OxVZdvfd9E3Pj3XdDXJ5il4zyEYFUsZ3G_6lSAgAofVjkJDK5Me1Ap6QRtJDNKjhWv-D6yBuflbQj5BrIo2yyBThPjI5maXJLevxG4FlQvpT5YBNR2KlVilJgluDJuyB6ax2JclH13MGd6tQU1i1ezShAxoVyvbq-MekXyIMKMpe97tGYLW5carG9zFzjrX6CrRO2PcHKaVAXMUEDsLMvVaByjoLDaQcDPQ_5btgfld90CDp8AiF8vxtdoBlj2uXz1yF2x5GseuJzWERXrtOZdeCzq9nSFIQozy1R8PoxN4G1wjQdu6yDMBzTfOr2SupkpzM_irs2fgRaR3nIUCwDR7nLUEzlOLwI3P-8cE-_WemgbreSVxgB0G5axjeN4uWgJ5SYmm_fLHDVpNnrVDq80JmoI7HCpjbS-_w4WrMUfg8BKsYih8yKz9aIQdFF-FaVjdImyTvMOzHd1RQ1qAVuTGxft5kMutu578Ua2dAyxCDCAHmo2CezDi9QZCs7C4iyaaGX_ZCiInPwJlRGvpM2o-hHTVlRIQ05VMCxxjZGshAwOG0KpITcJjbQs3ycSpA7Y_8u_JX2mIY9OkJUsQEMfAEK_b5cN94NIjRLPjpUsxlvO4gK53smva60HJ3OGt4LD53okjy7s8vHx0_8gyjysfwYbUTdFEijX4Oi2CAtPkdkshzQ0J2U_ig4l2hr-FCqPfMbb22lHNJqUdg27HkbMlGTx-a3hPzw3Eg3A1cmxC9sshFFmnKewtw0XTMc5i2_EDVyUux-CmlqKdItSL_jaPxa9hXc_rY1kpJO4R9Ppvs67MFBJm1Ya2g_I8Kld1ZWfhvHQUWQJqSf9p_otSXNAjf-PpLjPs_YewOHoE6zKqPyg--dT37iHjcXBqmtLValMFcOvGLXxMp9cGMmD18vSNKW8TvAOUope67hxq9diUfaDQBOp1aKmmk2Rj2Ae1b_h1V5Ab91zO4tb8WsAvHAKpYjdO-gKxzZR8053ohm6DASDbmCERyKdlkoBNP0eCLGYVx6_xBMna2EVucbWClqHD9yir-PVKZN6RDaE90sYCkSDK_C8ZVbGC3bk7RMpoeX-peUndtFCfDiqVdPEmCfnIeatmhXFr3ckUfYMu-ZWvQPQLJCc03j3okzTWGvAmNz4xWtQm6JFwrTWLxtfwMiSEupst0anSEfY-kgN11UddyVhkKGdBItrBKvNbrAb7zc1dWN75ku2d8koNl10NBRiDyXNMqEpaJM5lSqRo3Nh95IW2ajoBvrQo2hqd-NN4PHgsEjlHA6v3ClmA=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_079a85e69b765ae9016ae32ed4e89c87d188be3d9dd0e57011","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":6441,"completion_tokens":131,"total_tokens":6572,"cost":0.00035029,"is_byok":false,"prompt_tokens_details":{"cached_tokens":4524,"cache_write_tokens":1914,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00035029,"upstream_inference_prompt_cost":0.00028479,"upstream_inference_completions_cost":0.0000655},"completion_tokens_details":{"reasoning_tokens":92,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"Actually, correct Asha's birthplace: she was born on Orin, then moved to Vesper at age six. I mixed up being born there with growing up there. Keep her guild membership and the rest unchanged."}]},{"role":"assistant","content":[{"type":"toolcall","id":{"provider":"call_14MUpWj1wq18c46hKmUTfVrq"},"function":{"name":"search_world","arguments":{"query":"Asha Pell birthplace, where she grew up, and Lantern Guild membership"}},"native":{"item":{"id":"call_14MUpWj1wq18c46hKmUTfVrq","type":"function","function":{"name":"search_world","arguments":"{\"query\":\"Asha Pell birthplace, where she grew up, and Lantern Guild membership\"}"}},"fingerprint":"9c22c7a6bc5913d5"}}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793273551-DiQUpVrgOz7oiemZGsAL"},"stop":"tool_use"},{"role":"user","content":[{"type":"toolresult","call":{"provider":"call_14MUpWj1wq18c46hKmUTfVrq"},"name":"search_world","content":[{"type":"text","text":"Asha Pell (person) [ID: 5affd0ca-9c42-4463-bed7-ad12e3c38d62] [Aliases: Captain Ash]: Asha Pell captains the courier ship Nightjar, grew up in Vesper, and belongs to the Lantern Guild. Her crew usually calls her Captain Ash. She has a small brass key sewn inside her left coat cuff; only her navigator, Iven Marr, knows she has it.\n  Properties: source_conversation: 01a18769-1953-7785-bf1a-1d436775cbaf\n  - ← UNRELATED_TO from Bren Vale (person) [ID: 3866be6c-f8eb-4158-8abb-a95e3ddc64b2] [Aliases: Captain]: Bren Vale captains the fishing boat Petrel. People on the dock also call him Captain. He is unrelated to Asha Pell and is not a member of the Lantern Guild. He supports the toll on blue salt shipments imposed in 319 because its revenue will repair fishing piers.\n  - ← NAVIGATOR_FOR from Iven Marr (person) [ID: 1b66c764-9ef7-438c-afa7-22338885a61e]: Asha Pell's navigator and the only person who knows she has a small brass key sewn inside her left coat cuff. He lost his right eye in the winter storm of 312. He navigates the Nightjar using tide charts, not magic.\n  - CAPTAINS → Nightjar (ship, courier ship) [ID: 36eac936-9ce0-4b27-9bf4-f77ae290dfa1]: A courier ship captained by Asha Pell. It carries blue salt from Orin to Vesper only between April and September.\n  - GREW_UP_IN → Vesper (city, port city) [ID: ccb13663-df18-4e63-b89c-006464a6cfb2]: Brinewake's main port city, built around a tidal lighthouse.\n  - MEMBER_OF → Lantern Guild (guild) [ID: a4140448-57b9-47e2-9fad-b44a4a957bdd]: Maintains Vesper's tidal lighthouse and buys blue salt from Orin's miners. It does not own the mines. During winter, when the strait freezes, the guild uses stored salt. The guild opposes the toll on blue salt shipments imposed in 319.\n  - POSSESSES → Small brass key (key, item) [ID: b21607b8-9ea1-4eb5-bfad-67f4d24554c8]: A small brass key sewn inside Asha Pell's left coat cuff. It opens the old lens room beneath Vesper's lighthouse.\n\nIven Marr (person) [ID: 1b66c764-9ef7-438c-afa7-22338885a61e]: Asha Pell's navigator and the only person who knows she has a small brass key sewn inside her left coat cuff. He lost his right eye in the winter storm of 312. He navigates the Nightjar using tide charts, not magic.\n  Properties: source_conversation: 01a18769-1953-7785-bf1a-1d436775cbaf\n  - NAVIGATOR_FOR → Asha Pell (person) [ID: 5affd0ca-9c42-4463-bed7-ad12e3c38d62] [Aliases: Captain Ash]: Asha Pell captains the courier ship Nightjar, grew up in Vesper, and belongs to the Lantern Guild. Her crew usually calls her Captain Ash. She has a small brass key sewn inside her left coat cuff; only her navigator, Iven Marr, knows she has it.\n  - KNOWS_ABOUT → Small brass key (key, item) [ID: b21607b8-9ea1-4eb5-bfad-67f4d24554c8]: A small brass key sewn inside Asha Pell's left coat cuff. It opens the old lens room beneath Vesper's lighthouse.\n  - NAVIGATES → Nightjar (ship, courier ship) [ID: 36eac936-9ce0-4b27-9bf4-f77ae290dfa1]: A courier ship captained by Asha Pell. It carries blue salt from Orin to Vesper only between April and September.\n\nOld lens room (room, location) [ID: 6f9156cc-d754-4aa5-b17d-828367571776]: A room beneath Vesper's lighthouse, opened by Asha Pell's small brass key.\n  Properties: source_conversation: 01a18769-1953-7785-bf1a-1d436775cbaf\n  - ← OPENS from Small brass key (key, item) [ID: b21607b8-9ea1-4eb5-bfad-67f4d24554c8]: A small brass key sewn inside Asha Pell's left coat cuff. It opens the old lens room beneath Vesper's lighthouse.\n  - LOCATED_BENEATH → Vesper lighthouse (lighthouse, landmark) [ID: 18f09cc9-0d1f-4860-a786-04aae26429af]: The tidal lighthouse around which Vesper is built. Its lenses run on blue salt and it is maintained by the Lantern Guild.\n\nBren Vale (person) [ID: 3866be6c-f8eb-4158-8abb-a95e3ddc64b2] [Aliases: Captain]: Bren Vale captains the fishing boat Petrel. People on the dock also call him Captain. He is unrelated to Asha Pell and is not a member of the Lantern Guild. He supports the toll on blue salt shipments imposed in 319 because its revenue will repair fishing piers.\n  Properties: source_conversation: 01a18769-1953-7785-bf1a-1d436775cbaf\n  - CAPTAINS → Petrel (boat, fishing boat) [ID: 3f555d2a-f6ee-476b-93e5-79e9ae67c110]: A fishing boat captained by Bren Vale.\n  - UNRELATED_TO → Asha Pell (person) [ID: 5affd0ca-9c42-4463-bed7-ad12e3c38d62] [Aliases: Captain Ash]: Asha Pell captains the courier ship Nightjar, grew up in Vesper, and belongs to the Lantern Guild. Her crew usually calls her Captain Ash. She has a small brass key sewn inside her left coat cuff; only her navigator, Iven Marr, knows she has it.\n  - NOT_MEMBER_OF → Lantern Guild (guild) [ID: a4140448-57b9-47e2-9fad-b44a4a957bdd]: Maintains Vesper's tidal lighthouse and buys blue salt from Orin's miners. It does not own the mines. During winter, when the strait freezes, the guild uses stored salt. The guild opposes the toll on blue salt shipments imposed in 319.\n  - SUPPORTS → Blue salt shipment toll (toll, policy) [ID: 08e37e67-40fc-4b69-812f-82226ba1d12b]: A toll on blue salt shipments imposed in 319 by Vesper's governor, Tal Ren. Its revenue is intended to repair fishing piers. The Lantern Guild opposes it; Bren Vale supports it because the revenue repairs fishing piers.\n\nSera Dain (person) [ID: 3bc5f9a9-a1a4-4886-8445-bbff1e085eba]: Leader of the Deep Bell Union. She refuses to sell salt to the military but honors civilian contracts with the Lantern Guild.\n  Properties: source_conversation: 01a18769-1953-7785-bf1a-1d436775cbaf\n  - LEADS → Deep Bell Union (union, workers' union) [ID: 0d4726ec-3962-4ce9-951e-f485b1a0aba3]: A union formed by Orin's miners.\n  - HONORS_CIVILIAN_CONTRACTS_WITH → Lantern Guild (guild) [ID: a4140448-57b9-47e2-9fad-b44a4a957bdd]: Maintains Vesper's tidal lighthouse and buys blue salt from Orin's miners. It does not own the mines. During winter, when the strait freezes, the guild uses stored salt. The guild opposes the toll on blue salt shipments imposed in 319."}]}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Acknowledging clarification**\n\nI need to respond briefly and acknowledge the correction provided. It's important to mention that this is a clarification rather than a contradiction. Earlier, I said I grew up in Vesper, now stating I was born in Orin and moved at age six. The user clarified that I mixed up my birthplace with where I grew up. I’ll confirm that the guild and rest remain unchanged, noting I was born in Orin, but grew up in Vesper.","native":{"item":{"reasoning":"**Acknowledging clarification**\n\nI need to respond briefly and acknowledge the correction provided. It's important to mention that this is a clarification rather than a contradiction. Earlier, I said I grew up in Vesper, now stating I was born in Orin and moved at age six. The user clarified that I mixed up my birthplace with where I grew up. I’ll confirm that the guild and rest remain unchanged, noting I was born in Orin, but grew up in Vesper.","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging clarification**\n\nI need to respond briefly and acknowledge the correction provided. It's important to mention that this is a clarification rather than a contradiction. Earlier, I said I grew up in Vesper, now stating I was born in Orin and moved at age six. The user clarified that I mixed up my birthplace with where I grew up. I’ll confirm that the guild and rest remain unchanged, noting I was born in Orin, but grew up in Vesper.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y7X-KmIqBkByBX-VaPemzXAxIlng6Fu16aBsmJPj3TGCXnwimc9bcGcvQ2p2ytfzTmrs25btTIeOLFFKhojJI9RayaqP3oWsjw90cHcsTI8TagCRcGXcgf1bMNCCOA3zxAHiQak69xodm6cz23iSaAdZiyFra-SAOT-Rzkt8JtEVi29EcRH1ZaY4YlFN3N2532SPgEa8kb7Y9XwLVNKLLk1YiNDsncM0KgFS5-vIN6odx72gG-VIVSlZCrOwnao-1NrhFqmK_x6jts1ArQnu7KpecRCb_4S_67_h8SHR_yOYkCbOZxGTZEJ0l0YNQltedF3nRz7mofIgeZbvm0_63tSEwghLKMTOvyC1zcmsXwygITSvuxmtWcZbrM8PrjJ46lDzA1uQrKz85KyRwp0bL6wV0KX8cZo3jKvRqgDDqAVrVM1Nm4Sk80d6bk6F5dkrzXDlJ3TOZI6sXDIEVwK4J9zCMQrGSE3r6x9kzMMkn6nz7BzVFR0nl9MqjBkHE7gv4eTSt14IAgOfVq7xU7N279L3MfkmCyfoQrRBt_CMCz-BS8Dpsh8US_nic6eoAMgoqoskXSS4SfI9QFOz_BTUh9Pbe7ac83yqERQjKeK3rQbcZc4ceHvRh0QLINTcmrBJc80tIDDbJ6g_LEQWmiACf3YdMkJH4a_EEmekjIJDHBKxPCbUM6Tkqck8esVhKeG4MNCV9h_n2jz3Q178W5T6avK4PzTu4mzSFVh0q5NjWKDd7EGg_qtqUhLsZRwxKXsPpOJlQPA1_IRX4_zvW23Bfjx8HH_iba3uDIUjDMXbqduqVuSLNR3rU3h-38gi8jn3IHOhGpGKMlgJF4c83yYi4a5FhfJHzWLNcQx6Wm5HPQHuVhgnthkxHwNWUcQHKmzKlORtj8D-TOh-ur85QsMRWgSnXdmUGSJvfk6YNhreUhOvx65qqmdusvPt1poO8aaQbqjPc5NticMswIQY5Z2uB-G4HAsxdGbPMAkfQAFGogi8RQ1falwfVYLXOWTx1aY1wGqopPi0QmC9pLwPSfofa5BYmgCio5I4BxhN4ljFyi4vTg7Q2ujaq2rXcVKTvZIpWbd6iAbyO7ooBlu0g5mUrnocn-Kr5Fd3RgAxrHD3G7e6kzhgGyqL8g4hCucll3aV5lvFklTL8jNDsvw07GqVpwSGxC-zuw7gKGtNQIW8rdmEC30p9oHo7WQzfZKYrfNl4VqxyO3Fvz6ERcXwKr1loyE3Dx-9lPqULm7f5dMcXFVlLrcWGGQvAlEmBtxmHkAZPUvxXv1jFdCVXWoutq2QfwVUTvxOa5GEhHPWlZVyXaPXI6QimXA0yS4Z_waoDbdbslcY7FQe-jF1qPPvoVRqxcDYYDhvqRYwPSByrsoR7P15j6D-4Ityo-M4XZW7KgmF5ajKEB7u_rA67y7OuAqNUPQwnctruhdzQM9Q1qZaIREnLkfdMXcnoCnEvcOjQvLddVkOOsaoVmYTZbdJOuEXNd4z0Ja6eH8OxVZdvfd9E3Pj3XdDXJ5il4zyEYFUsZ3G_6lSAgAofVjkJDK5Me1Ap6QRtJDNKjhWv-D6yBuflbQj5BrIo2yyBThPjI5maXJLevxG4FlQvpT5YBNR2KlVilJgluDJuyB6ax2JclH13MGd6tQU1i1ezShAxoVyvbq-MekXyIMKMpe97tGYLW5carG9zFzjrX6CrRO2PcHKaVAXMUEDsLMvVaByjoLDaQcDPQ_5btgfld90CDp8AiF8vxtdoBlj2uXz1yF2x5GseuJzWERXrtOZdeCzq9nSFIQozy1R8PoxN4G1wjQdu6yDMBzTfOr2SupkpzM_irs2fgRaR3nIUCwDR7nLUEzlOLwI3P-8cE-_WemgbreSVxgB0G5axjeN4uWgJ5SYmm_fLHDVpNnrVDq80JmoI7HCpjbS-_w4WrMUfg8BKsYih8yKz9aIQdFF-FaVjdImyTvMOzHd1RQ1qAVuTGxft5kMutu578Ua2dAyxCDCAHmo2CezDi9QZCs7C4iyaaGX_ZCiInPwJlRGvpM2o-hHTVlRIQ05VMCxxjZGshAwOG0KpITcJjbQs3ycSpA7Y_8u_JX2mIY9OkJUsQEMfAEK_b5cN94NIjRLPjpUsxlvO4gK53smva60HJ3OGt4LD53okjy7s8vHx0_8gyjysfwYbUTdFEijX4Oi2CAtPkdkshzQ0J2U_ig4l2hr-FCqPfMbb22lHNJqUdg27HkbMlGTx-a3hPzw3Eg3A1cmxC9sshFFmnKewtw0XTMc5i2_EDVyUux-CmlqKdItSL_jaPxa9hXc_rY1kpJO4R9Ppvs67MFBJm1Ya2g_I8Kld1ZWfhvHQUWQJqSf9p_otSXNAjf-PpLjPs_YewOHoE6zKqPyg--dT37iHjcXBqmtLValMFcOvGLXxMp9cGMmD18vSNKW8TvAOUope67hxq9diUfaDQBOp1aKmmk2Rj2Ae1b_h1V5Ab91zO4tb8WsAvHAKpYjdO-gKxzZR8053ohm6DASDbmCERyKdlkoBNP0eCLGYVx6_xBMna2EVucbWClqHD9yir-PVKZN6RDaE90sYCkSDK_C8ZVbGC3bk7RMpoeX-peUndtFCfDiqVdPEmCfnIeatmhXFr3ckUfYMu-ZWvQPQLJCc03j3okzTWGvAmNz4xWtQm6JFwrTWLxtfwMiSEupst0anSEfY-kgN11UddyVhkKGdBItrBKvNbrAb7zc1dWN75ku2d8koNl10NBRiDyXNMqEpaJM5lSqRo3Nh95IW2ajoBvrQo2hqd-NN4PHgsEjlHA6v3ClmA=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_079a85e69b765ae9016ae32ed4e89c87d188be3d9dd0e57011","index":1}]},"fingerprint":"ad411f2ce4c10add"}},{"type":"text","text":"Understood: Asha was born on Orin and moved to Vesper at six, where she grew up. Her Lantern Guild membership and other details stay unchanged."}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793273555-nokYOtGqrw0nk2EJLcc2"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Acknowledging clarification**\n\nI need to respond briefly and acknowledge the correction provided. It's important to mention that this is a clarification rather than a contradiction. Earlier, I said I grew up in Vesper, now stating I was born in Orin and moved at age six. The user clarified that I mixed up my birthplace with where I grew up. I’ll confirm that the guild and rest remain unchanged, noting I was born in Orin, but grew up in Vesper.","native":{"item":{"reasoning":"**Acknowledging clarification**\n\nI need to respond briefly and acknowledge the correction provided. It's important to mention that this is a clarification rather than a contradiction. Earlier, I said I grew up in Vesper, now stating I was born in Orin and moved at age six. The user clarified that I mixed up my birthplace with where I grew up. I’ll confirm that the guild and rest remain unchanged, noting I was born in Orin, but grew up in Vesper.","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging clarification**\n\nI need to respond briefly and acknowledge the correction provided. It's important to mention that this is a clarification rather than a contradiction. Earlier, I said I grew up in Vesper, now stating I was born in Orin and moved at age six. The user clarified that I mixed up my birthplace with where I grew up. I’ll confirm that the guild and rest remain unchanged, noting I was born in Orin, but grew up in Vesper.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y7X-KmIqBkByBX-VaPemzXAxIlng6Fu16aBsmJPj3TGCXnwimc9bcGcvQ2p2ytfzTmrs25btTIeOLFFKhojJI9RayaqP3oWsjw90cHcsTI8TagCRcGXcgf1bMNCCOA3zxAHiQak69xodm6cz23iSaAdZiyFra-SAOT-Rzkt8JtEVi29EcRH1ZaY4YlFN3N2532SPgEa8kb7Y9XwLVNKLLk1YiNDsncM0KgFS5-vIN6odx72gG-VIVSlZCrOwnao-1NrhFqmK_x6jts1ArQnu7KpecRCb_4S_67_h8SHR_yOYkCbOZxGTZEJ0l0YNQltedF3nRz7mofIgeZbvm0_63tSEwghLKMTOvyC1zcmsXwygITSvuxmtWcZbrM8PrjJ46lDzA1uQrKz85KyRwp0bL6wV0KX8cZo3jKvRqgDDqAVrVM1Nm4Sk80d6bk6F5dkrzXDlJ3TOZI6sXDIEVwK4J9zCMQrGSE3r6x9kzMMkn6nz7BzVFR0nl9MqjBkHE7gv4eTSt14IAgOfVq7xU7N279L3MfkmCyfoQrRBt_CMCz-BS8Dpsh8US_nic6eoAMgoqoskXSS4SfI9QFOz_BTUh9Pbe7ac83yqERQjKeK3rQbcZc4ceHvRh0QLINTcmrBJc80tIDDbJ6g_LEQWmiACf3YdMkJH4a_EEmekjIJDHBKxPCbUM6Tkqck8esVhKeG4MNCV9h_n2jz3Q178W5T6avK4PzTu4mzSFVh0q5NjWKDd7EGg_qtqUhLsZRwxKXsPpOJlQPA1_IRX4_zvW23Bfjx8HH_iba3uDIUjDMXbqduqVuSLNR3rU3h-38gi8jn3IHOhGpGKMlgJF4c83yYi4a5FhfJHzWLNcQx6Wm5HPQHuVhgnthkxHwNWUcQHKmzKlORtj8D-TOh-ur85QsMRWgSnXdmUGSJvfk6YNhreUhOvx65qqmdusvPt1poO8aaQbqjPc5NticMswIQY5Z2uB-G4HAsxdGbPMAkfQAFGogi8RQ1falwfVYLXOWTx1aY1wGqopPi0QmC9pLwPSfofa5BYmgCio5I4BxhN4ljFyi4vTg7Q2ujaq2rXcVKTvZIpWbd6iAbyO7ooBlu0g5mUrnocn-Kr5Fd3RgAxrHD3G7e6kzhgGyqL8g4hCucll3aV5lvFklTL8jNDsvw07GqVpwSGxC-zuw7gKGtNQIW8rdmEC30p9oHo7WQzfZKYrfNl4VqxyO3Fvz6ERcXwKr1loyE3Dx-9lPqULm7f5dMcXFVlLrcWGGQvAlEmBtxmHkAZPUvxXv1jFdCVXWoutq2QfwVUTvxOa5GEhHPWlZVyXaPXI6QimXA0yS4Z_waoDbdbslcY7FQe-jF1qPPvoVRqxcDYYDhvqRYwPSByrsoR7P15j6D-4Ityo-M4XZW7KgmF5ajKEB7u_rA67y7OuAqNUPQwnctruhdzQM9Q1qZaIREnLkfdMXcnoCnEvcOjQvLddVkOOsaoVmYTZbdJOuEXNd4z0Ja6eH8OxVZdvfd9E3Pj3XdDXJ5il4zyEYFUsZ3G_6lSAgAofVjkJDK5Me1Ap6QRtJDNKjhWv-D6yBuflbQj5BrIo2yyBThPjI5maXJLevxG4FlQvpT5YBNR2KlVilJgluDJuyB6ax2JclH13MGd6tQU1i1ezShAxoVyvbq-MekXyIMKMpe97tGYLW5carG9zFzjrX6CrRO2PcHKaVAXMUEDsLMvVaByjoLDaQcDPQ_5btgfld90CDp8AiF8vxtdoBlj2uXz1yF2x5GseuJzWERXrtOZdeCzq9nSFIQozy1R8PoxN4G1wjQdu6yDMBzTfOr2SupkpzM_irs2fgRaR3nIUCwDR7nLUEzlOLwI3P-8cE-_WemgbreSVxgB0G5axjeN4uWgJ5SYmm_fLHDVpNnrVDq80JmoI7HCpjbS-_w4WrMUfg8BKsYih8yKz9aIQdFF-FaVjdImyTvMOzHd1RQ1qAVuTGxft5kMutu578Ua2dAyxCDCAHmo2CezDi9QZCs7C4iyaaGX_ZCiInPwJlRGvpM2o-hHTVlRIQ05VMCxxjZGshAwOG0KpITcJjbQs3ycSpA7Y_8u_JX2mIY9OkJUsQEMfAEK_b5cN94NIjRLPjpUsxlvO4gK53smva60HJ3OGt4LD53okjy7s8vHx0_8gyjysfwYbUTdFEijX4Oi2CAtPkdkshzQ0J2U_ig4l2hr-FCqPfMbb22lHNJqUdg27HkbMlGTx-a3hPzw3Eg3A1cmxC9sshFFmnKewtw0XTMc5i2_EDVyUux-CmlqKdItSL_jaPxa9hXc_rY1kpJO4R9Ppvs67MFBJm1Ya2g_I8Kld1ZWfhvHQUWQJqSf9p_otSXNAjf-PpLjPs_YewOHoE6zKqPyg--dT37iHjcXBqmtLValMFcOvGLXxMp9cGMmD18vSNKW8TvAOUope67hxq9diUfaDQBOp1aKmmk2Rj2Ae1b_h1V5Ab91zO4tb8WsAvHAKpYjdO-gKxzZR8053ohm6DASDbmCERyKdlkoBNP0eCLGYVx6_xBMna2EVucbWClqHD9yir-PVKZN6RDaE90sYCkSDK_C8ZVbGC3bk7RMpoeX-peUndtFCfDiqVdPEmCfnIeatmhXFr3ckUfYMu-ZWvQPQLJCc03j3okzTWGvAmNz4xWtQm6JFwrTWLxtfwMiSEupst0anSEfY-kgN11UddyVhkKGdBItrBKvNbrAb7zc1dWN75ku2d8koNl10NBRiDyXNMqEpaJM5lSqRo3Nh95IW2ajoBvrQo2hqd-NN4PHgsEjlHA6v3ClmA=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_079a85e69b765ae9016ae32ed4e89c87d188be3d9dd0e57011","index":1}]},"fingerprint":"ad411f2ce4c10add"}},{"type":"text","text":"Understood: Asha was born on Orin and moved to Vesper at six, where she grew up. Her Lantern Guild membership and other details stay unchanged."}]}
+

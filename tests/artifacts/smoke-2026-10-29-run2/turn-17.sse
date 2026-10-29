@@ -1,0 +1,106 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Nice"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"—"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"N"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"essa"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Bren"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"’s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" older"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" sister"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" *"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Pet"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"rel"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"*"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"’"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" cook"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" not"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" formally"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" paid"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" employee"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":";"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Button"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" black"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" cat"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" keeps"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" her"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" company"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" aboard"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Button"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" welcome"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" around"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" catch"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" menace"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"?"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"Nice—Nessa is Bren’s older sister and the *Petrel*’s cook, not a formally paid employee; Button the black cat keeps her company aboard. Is Button welcome around the catch, or a menace to it?"}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"","native":{"item":{"reasoning_details":[{"type":"reasoning.encrypted","data":"gAAAAABq4y9VB01oucIkE0gmlvEWvxA6Dsy5HsK2kZoIIdhvRKsR6Lkz1N6g8Jc2oT1h5sl3KsGFWqIn9rx0THJ_H32jCPAJ3hOTfLNXsDrUVSJRgHTtvlnckj8d8MXuVG7bR870jwKc0ahz8orVpcM1w4QpdOkMvIjPvZpuCKAtRXztFklgRqv7nzIQbXapWbDM81IeqcHm1c7oc_o4_GU6_6Ly5RLsBMhQzTCR5hEZJzcA4lTA2zFVsIHHu0OoFvUooi9-XxUfvmkai-vg8iho_gGE6SeW3bzAvGIRuyL4ojHbzJROTxD6CTcnOIE05yFPhEsulzI8_XL0IySrEf7goAC2ztttrKB1b9UA0oLtssP7DRfXniFH55CSamGXBfrzZbWppuKJORFqjFMO5FxKQk3qhkrAVPR7Qk5hMx8P5S0pEJd8IKlSzshsOs3TqBe_sqmbYePCv_3Ob5rog9nWR316MV5sr25kS40DiwdvkwS9cAy1hItev7i0cNrBT13HHwdovYuGXelQYmx_-OywtDTpGKBC4rtDb7o2C7rXdXNVpByAzCjt9Ps09H7Kpl1EUZeFbjUlqYkThIrfEu0EHS8v5ndDGFuOGAIBs0ksT13Bi0lbuScF9Cs2JI-OxnR_pJD2sxD7L8MH9352-1x7OhRZSAiCT1UyjYKZlbw4b5uhxvrDwUeRNTCDpzTL38qBz09iZZIL0uLio_Sqgy3EesdzAeJCCS7uN_hBeFlIxdWHSmWxl-9ZyROTLJmLESJsin3xpPPLd0XJ2mu81H56-V0RvcIcwiu_2hw3rvVliS4M3SGKqVTj3FLDSMSXBXTPrq88qeXQIVjg1el07Fio6OdIwgFy54wxpEAruBoed1uABnE29qOjoleb0_pZhQP8tbUIcruuyiTCzvhpE3gNYIuCZKsLNT5BLGFopAqKfK7LgORyp4BhGTnGXYa1LHrsoHYgk340Oi1VTESx1N8TNoAOKx34_HQNJyxz0mcNWgyCQHJ9NZp8gRvfx3Flpoqv9-V5mdAp7OJ64iExGsai1-HMY9AL8JB5CjCiTx59an0TWTFW0zO1gosvKCz2hl88Ld9NsXbZe8NZPaEenVQkSJmWxeiMaWXM6OaeyHE2H7ViVObiqYdRhHBrhOI0jpp0K-lfwKKNopyc4Oelj53rHkrQk6zVF_On3FldFE3LItNf5y7HgTBfQOdDb9fKTMhev7l9Frw6H2BTeOE5_rnBo9RPYD1OWYdemiJtdBUO1isTqkBdCftKMCLOzOZfcxtn6IL1wK0zgMXyj1Lo90gMhvVuewwqt021AaUglYi_SAw_rFNXRV486o28nTzAp4QB2BXgPf0x5b0Af2P-mv8ddwxWYOtRVCCfAjfo_y59V9Egrzp3y5vOudKLbyhWdM33mjiUHHi-CbTtmBIZaG2FZSVX7MVE6XIeoLoxavV4XW_pTD0VYiWrcWP6IwIjhn2ExzCTDW1lDAOkI2Eqysn4-7YjqSTGY3RR_GyjyndpqaeLeKIhwvHkbksky35g5DLRXUA7djaeXqU0e8ccppSk7gI2WNJ_dYSgAmNih94rjC4Xs6Ij-Wy2XoLiesYg-T0ijnrt8KNnKCQ5N-yf-wdTx6gOrKu9U3dtYk07X4YpIPBtN9Bp5BmhA5YPamkajm3vw9rCaH5CGG3sI489wl8pa1dALpv9KHkQdewhQchvQvJJd-j6tFdilHzc-mqYsilJxQec9w6jXFU3UQl0RzQFZO1YXqSANrBwHxTb3t12lxgSfgeFcfh7ATfhC7vvUqpekE4ahYoamdgZnBtiMMrXj5S1lp8_kGwLFpPo9DAaG70PYJzMEga6eQ__bM-GWa-b24ND_cm2SvTJhuZOL4K5OL04_0YMh9Tf8L2CWi0aNaIlMTyZY9VlowfHD9QWe3453oBlNPgYjfvn1tGrgEC0ogOaiIjgJ6EA3ExWPprjCysBfYxL1AAnoDkh_dVn-IC4m_AilNNX.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_083a6020c89cddcb016ae32f5547d887d19819daf016439cae","index":0}]},"fingerprint":"82b6ea64ef91009f"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":5468,"output_tokens":84,"total_tokens":5552,"cached_input_tokens":1826,"cache_creation_input_tokens":3639,"reasoning_tokens":31,"cost":{"total":0.000515435}},"response_id":"gen-1793273684-bqk92LTn77vTEAAbCI0n","finish_reason":"stop","raw":{"id":"gen-1793273684-bqk92LTn77vTEAAbCI0n","object":"chat.completion","created":1793273684,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Nice—Nessa is Bren’s older sister and the *Petrel*’s cook, not a formally paid employee; Button the black cat keeps her company aboard. Is Button welcome around the catch, or a menace to it?","role":"assistant","reasoning":null,"reasoning_details":[{"type":"reasoning.encrypted","data":"gAAAAABq4y9VB01oucIkE0gmlvEWvxA6Dsy5HsK2kZoIIdhvRKsR6Lkz1N6g8Jc2oT1h5sl3KsGFWqIn9rx0THJ_H32jCPAJ3hOTfLNXsDrUVSJRgHTtvlnckj8d8MXuVG7bR870jwKc0ahz8orVpcM1w4QpdOkMvIjPvZpuCKAtRXztFklgRqv7nzIQbXapWbDM81IeqcHm1c7oc_o4_GU6_6Ly5RLsBMhQzTCR5hEZJzcA4lTA2zFVsIHHu0OoFvUooi9-XxUfvmkai-vg8iho_gGE6SeW3bzAvGIRuyL4ojHbzJROTxD6CTcnOIE05yFPhEsulzI8_XL0IySrEf7goAC2ztttrKB1b9UA0oLtssP7DRfXniFH55CSamGXBfrzZbWppuKJORFqjFMO5FxKQk3qhkrAVPR7Qk5hMx8P5S0pEJd8IKlSzshsOs3TqBe_sqmbYePCv_3Ob5rog9nWR316MV5sr25kS40DiwdvkwS9cAy1hItev7i0cNrBT13HHwdovYuGXelQYmx_-OywtDTpGKBC4rtDb7o2C7rXdXNVpByAzCjt9Ps09H7Kpl1EUZeFbjUlqYkThIrfEu0EHS8v5ndDGFuOGAIBs0ksT13Bi0lbuScF9Cs2JI-OxnR_pJD2sxD7L8MH9352-1x7OhRZSAiCT1UyjYKZlbw4b5uhxvrDwUeRNTCDpzTL38qBz09iZZIL0uLio_Sqgy3EesdzAeJCCS7uN_hBeFlIxdWHSmWxl-9ZyROTLJmLESJsin3xpPPLd0XJ2mu81H56-V0RvcIcwiu_2hw3rvVliS4M3SGKqVTj3FLDSMSXBXTPrq88qeXQIVjg1el07Fio6OdIwgFy54wxpEAruBoed1uABnE29qOjoleb0_pZhQP8tbUIcruuyiTCzvhpE3gNYIuCZKsLNT5BLGFopAqKfK7LgORyp4BhGTnGXYa1LHrsoHYgk340Oi1VTESx1N8TNoAOKx34_HQNJyxz0mcNWgyCQHJ9NZp8gRvfx3Flpoqv9-V5mdAp7OJ64iExGsai1-HMY9AL8JB5CjCiTx59an0TWTFW0zO1gosvKCz2hl88Ld9NsXbZe8NZPaEenVQkSJmWxeiMaWXM6OaeyHE2H7ViVObiqYdRhHBrhOI0jpp0K-lfwKKNopyc4Oelj53rHkrQk6zVF_On3FldFE3LItNf5y7HgTBfQOdDb9fKTMhev7l9Frw6H2BTeOE5_rnBo9RPYD1OWYdemiJtdBUO1isTqkBdCftKMCLOzOZfcxtn6IL1wK0zgMXyj1Lo90gMhvVuewwqt021AaUglYi_SAw_rFNXRV486o28nTzAp4QB2BXgPf0x5b0Af2P-mv8ddwxWYOtRVCCfAjfo_y59V9Egrzp3y5vOudKLbyhWdM33mjiUHHi-CbTtmBIZaG2FZSVX7MVE6XIeoLoxavV4XW_pTD0VYiWrcWP6IwIjhn2ExzCTDW1lDAOkI2Eqysn4-7YjqSTGY3RR_GyjyndpqaeLeKIhwvHkbksky35g5DLRXUA7djaeXqU0e8ccppSk7gI2WNJ_dYSgAmNih94rjC4Xs6Ij-Wy2XoLiesYg-T0ijnrt8KNnKCQ5N-yf-wdTx6gOrKu9U3dtYk07X4YpIPBtN9Bp5BmhA5YPamkajm3vw9rCaH5CGG3sI489wl8pa1dALpv9KHkQdewhQchvQvJJd-j6tFdilHzc-mqYsilJxQec9w6jXFU3UQl0RzQFZO1YXqSANrBwHxTb3t12lxgSfgeFcfh7ATfhC7vvUqpekE4ahYoamdgZnBtiMMrXj5S1lp8_kGwLFpPo9DAaG70PYJzMEga6eQ__bM-GWa-b24ND_cm2SvTJhuZOL4K5OL04_0YMh9Tf8L2CWi0aNaIlMTyZY9VlowfHD9QWe3453oBlNPgYjfvn1tGrgEC0ogOaiIjgJ6EA3ExWPprjCysBfYxL1AAnoDkh_dVn-IC4m_AilNNX.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_083a6020c89cddcb016ae32f5547d887d19819daf016439cae","index":0}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":5468,"completion_tokens":84,"total_tokens":5552,"cost":0.000515435,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":3639,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000515435,"upstream_inference_prompt_cost":0.000473435,"upstream_inference_completions_cost":0.000042},"completion_tokens_details":{"reasoning_tokens":31,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":5468,"output_tokens":84,"total_tokens":5552,"cached_input_tokens":1826,"cache_creation_input_tokens":3639,"reasoning_tokens":31,"cost":{"total":0.000515435}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":5468,"output_tokens":84,"total_tokens":5552,"cached_input_tokens":1826,"cache_creation_input_tokens":3639,"reasoning_tokens":31,"cost":{"total":0.000515435}},"response_id":"gen-1793273684-bqk92LTn77vTEAAbCI0n","finish_reason":"stop","raw":{"id":"gen-1793273684-bqk92LTn77vTEAAbCI0n","object":"chat.completion","created":1793273684,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Nice—Nessa is Bren’s older sister and the *Petrel*’s cook, not a formally paid employee; Button the black cat keeps her company aboard. Is Button welcome around the catch, or a menace to it?","role":"assistant","reasoning":null,"reasoning_details":[{"type":"reasoning.encrypted","data":"gAAAAABq4y9VB01oucIkE0gmlvEWvxA6Dsy5HsK2kZoIIdhvRKsR6Lkz1N6g8Jc2oT1h5sl3KsGFWqIn9rx0THJ_H32jCPAJ3hOTfLNXsDrUVSJRgHTtvlnckj8d8MXuVG7bR870jwKc0ahz8orVpcM1w4QpdOkMvIjPvZpuCKAtRXztFklgRqv7nzIQbXapWbDM81IeqcHm1c7oc_o4_GU6_6Ly5RLsBMhQzTCR5hEZJzcA4lTA2zFVsIHHu0OoFvUooi9-XxUfvmkai-vg8iho_gGE6SeW3bzAvGIRuyL4ojHbzJROTxD6CTcnOIE05yFPhEsulzI8_XL0IySrEf7goAC2ztttrKB1b9UA0oLtssP7DRfXniFH55CSamGXBfrzZbWppuKJORFqjFMO5FxKQk3qhkrAVPR7Qk5hMx8P5S0pEJd8IKlSzshsOs3TqBe_sqmbYePCv_3Ob5rog9nWR316MV5sr25kS40DiwdvkwS9cAy1hItev7i0cNrBT13HHwdovYuGXelQYmx_-OywtDTpGKBC4rtDb7o2C7rXdXNVpByAzCjt9Ps09H7Kpl1EUZeFbjUlqYkThIrfEu0EHS8v5ndDGFuOGAIBs0ksT13Bi0lbuScF9Cs2JI-OxnR_pJD2sxD7L8MH9352-1x7OhRZSAiCT1UyjYKZlbw4b5uhxvrDwUeRNTCDpzTL38qBz09iZZIL0uLio_Sqgy3EesdzAeJCCS7uN_hBeFlIxdWHSmWxl-9ZyROTLJmLESJsin3xpPPLd0XJ2mu81H56-V0RvcIcwiu_2hw3rvVliS4M3SGKqVTj3FLDSMSXBXTPrq88qeXQIVjg1el07Fio6OdIwgFy54wxpEAruBoed1uABnE29qOjoleb0_pZhQP8tbUIcruuyiTCzvhpE3gNYIuCZKsLNT5BLGFopAqKfK7LgORyp4BhGTnGXYa1LHrsoHYgk340Oi1VTESx1N8TNoAOKx34_HQNJyxz0mcNWgyCQHJ9NZp8gRvfx3Flpoqv9-V5mdAp7OJ64iExGsai1-HMY9AL8JB5CjCiTx59an0TWTFW0zO1gosvKCz2hl88Ld9NsXbZe8NZPaEenVQkSJmWxeiMaWXM6OaeyHE2H7ViVObiqYdRhHBrhOI0jpp0K-lfwKKNopyc4Oelj53rHkrQk6zVF_On3FldFE3LItNf5y7HgTBfQOdDb9fKTMhev7l9Frw6H2BTeOE5_rnBo9RPYD1OWYdemiJtdBUO1isTqkBdCftKMCLOzOZfcxtn6IL1wK0zgMXyj1Lo90gMhvVuewwqt021AaUglYi_SAw_rFNXRV486o28nTzAp4QB2BXgPf0x5b0Af2P-mv8ddwxWYOtRVCCfAjfo_y59V9Egrzp3y5vOudKLbyhWdM33mjiUHHi-CbTtmBIZaG2FZSVX7MVE6XIeoLoxavV4XW_pTD0VYiWrcWP6IwIjhn2ExzCTDW1lDAOkI2Eqysn4-7YjqSTGY3RR_GyjyndpqaeLeKIhwvHkbksky35g5DLRXUA7djaeXqU0e8ccppSk7gI2WNJ_dYSgAmNih94rjC4Xs6Ij-Wy2XoLiesYg-T0ijnrt8KNnKCQ5N-yf-wdTx6gOrKu9U3dtYk07X4YpIPBtN9Bp5BmhA5YPamkajm3vw9rCaH5CGG3sI489wl8pa1dALpv9KHkQdewhQchvQvJJd-j6tFdilHzc-mqYsilJxQec9w6jXFU3UQl0RzQFZO1YXqSANrBwHxTb3t12lxgSfgeFcfh7ATfhC7vvUqpekE4ahYoamdgZnBtiMMrXj5S1lp8_kGwLFpPo9DAaG70PYJzMEga6eQ__bM-GWa-b24ND_cm2SvTJhuZOL4K5OL04_0YMh9Tf8L2CWi0aNaIlMTyZY9VlowfHD9QWe3453oBlNPgYjfvn1tGrgEC0ogOaiIjgJ6EA3ExWPprjCysBfYxL1AAnoDkh_dVn-IC4m_AilNNX.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_083a6020c89cddcb016ae32f5547d887d19819daf016439cae","index":0}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":5468,"completion_tokens":84,"total_tokens":5552,"cost":0.000515435,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":3639,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000515435,"upstream_inference_prompt_cost":0.000473435,"upstream_inference_completions_cost":0.000042},"completion_tokens_details":{"reasoning_tokens":31,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"One more small fact: the Petrel's cook is Nessa. She keeps a black cat called Button aboard. Nessa is Bren's older sister, not his employee on a formal wage."}]},{"role":"assistant","content":[{"type":"reasoning","text":"","native":{"item":{"reasoning_details":[{"type":"reasoning.encrypted","data":"gAAAAABq4y9VB01oucIkE0gmlvEWvxA6Dsy5HsK2kZoIIdhvRKsR6Lkz1N6g8Jc2oT1h5sl3KsGFWqIn9rx0THJ_H32jCPAJ3hOTfLNXsDrUVSJRgHTtvlnckj8d8MXuVG7bR870jwKc0ahz8orVpcM1w4QpdOkMvIjPvZpuCKAtRXztFklgRqv7nzIQbXapWbDM81IeqcHm1c7oc_o4_GU6_6Ly5RLsBMhQzTCR5hEZJzcA4lTA2zFVsIHHu0OoFvUooi9-XxUfvmkai-vg8iho_gGE6SeW3bzAvGIRuyL4ojHbzJROTxD6CTcnOIE05yFPhEsulzI8_XL0IySrEf7goAC2ztttrKB1b9UA0oLtssP7DRfXniFH55CSamGXBfrzZbWppuKJORFqjFMO5FxKQk3qhkrAVPR7Qk5hMx8P5S0pEJd8IKlSzshsOs3TqBe_sqmbYePCv_3Ob5rog9nWR316MV5sr25kS40DiwdvkwS9cAy1hItev7i0cNrBT13HHwdovYuGXelQYmx_-OywtDTpGKBC4rtDb7o2C7rXdXNVpByAzCjt9Ps09H7Kpl1EUZeFbjUlqYkThIrfEu0EHS8v5ndDGFuOGAIBs0ksT13Bi0lbuScF9Cs2JI-OxnR_pJD2sxD7L8MH9352-1x7OhRZSAiCT1UyjYKZlbw4b5uhxvrDwUeRNTCDpzTL38qBz09iZZIL0uLio_Sqgy3EesdzAeJCCS7uN_hBeFlIxdWHSmWxl-9ZyROTLJmLESJsin3xpPPLd0XJ2mu81H56-V0RvcIcwiu_2hw3rvVliS4M3SGKqVTj3FLDSMSXBXTPrq88qeXQIVjg1el07Fio6OdIwgFy54wxpEAruBoed1uABnE29qOjoleb0_pZhQP8tbUIcruuyiTCzvhpE3gNYIuCZKsLNT5BLGFopAqKfK7LgORyp4BhGTnGXYa1LHrsoHYgk340Oi1VTESx1N8TNoAOKx34_HQNJyxz0mcNWgyCQHJ9NZp8gRvfx3Flpoqv9-V5mdAp7OJ64iExGsai1-HMY9AL8JB5CjCiTx59an0TWTFW0zO1gosvKCz2hl88Ld9NsXbZe8NZPaEenVQkSJmWxeiMaWXM6OaeyHE2H7ViVObiqYdRhHBrhOI0jpp0K-lfwKKNopyc4Oelj53rHkrQk6zVF_On3FldFE3LItNf5y7HgTBfQOdDb9fKTMhev7l9Frw6H2BTeOE5_rnBo9RPYD1OWYdemiJtdBUO1isTqkBdCftKMCLOzOZfcxtn6IL1wK0zgMXyj1Lo90gMhvVuewwqt021AaUglYi_SAw_rFNXRV486o28nTzAp4QB2BXgPf0x5b0Af2P-mv8ddwxWYOtRVCCfAjfo_y59V9Egrzp3y5vOudKLbyhWdM33mjiUHHi-CbTtmBIZaG2FZSVX7MVE6XIeoLoxavV4XW_pTD0VYiWrcWP6IwIjhn2ExzCTDW1lDAOkI2Eqysn4-7YjqSTGY3RR_GyjyndpqaeLeKIhwvHkbksky35g5DLRXUA7djaeXqU0e8ccppSk7gI2WNJ_dYSgAmNih94rjC4Xs6Ij-Wy2XoLiesYg-T0ijnrt8KNnKCQ5N-yf-wdTx6gOrKu9U3dtYk07X4YpIPBtN9Bp5BmhA5YPamkajm3vw9rCaH5CGG3sI489wl8pa1dALpv9KHkQdewhQchvQvJJd-j6tFdilHzc-mqYsilJxQec9w6jXFU3UQl0RzQFZO1YXqSANrBwHxTb3t12lxgSfgeFcfh7ATfhC7vvUqpekE4ahYoamdgZnBtiMMrXj5S1lp8_kGwLFpPo9DAaG70PYJzMEga6eQ__bM-GWa-b24ND_cm2SvTJhuZOL4K5OL04_0YMh9Tf8L2CWi0aNaIlMTyZY9VlowfHD9QWe3453oBlNPgYjfvn1tGrgEC0ogOaiIjgJ6EA3ExWPprjCysBfYxL1AAnoDkh_dVn-IC4m_AilNNX.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_083a6020c89cddcb016ae32f5547d887d19819daf016439cae","index":0}]},"fingerprint":"82b6ea64ef91009f"}},{"type":"text","text":"Nice—Nessa is Bren’s older sister and the *Petrel*’s cook, not a formally paid employee; Button the black cat keeps her company aboard. Is Button welcome around the catch, or a menace to it?"}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793273684-bqk92LTn77vTEAAbCI0n"},"stop":"stop"}],"content":[{"type":"reasoning","text":"","native":{"item":{"reasoning_details":[{"type":"reasoning.encrypted","data":"gAAAAABq4y9VB01oucIkE0gmlvEWvxA6Dsy5HsK2kZoIIdhvRKsR6Lkz1N6g8Jc2oT1h5sl3KsGFWqIn9rx0THJ_H32jCPAJ3hOTfLNXsDrUVSJRgHTtvlnckj8d8MXuVG7bR870jwKc0ahz8orVpcM1w4QpdOkMvIjPvZpuCKAtRXztFklgRqv7nzIQbXapWbDM81IeqcHm1c7oc_o4_GU6_6Ly5RLsBMhQzTCR5hEZJzcA4lTA2zFVsIHHu0OoFvUooi9-XxUfvmkai-vg8iho_gGE6SeW3bzAvGIRuyL4ojHbzJROTxD6CTcnOIE05yFPhEsulzI8_XL0IySrEf7goAC2ztttrKB1b9UA0oLtssP7DRfXniFH55CSamGXBfrzZbWppuKJORFqjFMO5FxKQk3qhkrAVPR7Qk5hMx8P5S0pEJd8IKlSzshsOs3TqBe_sqmbYePCv_3Ob5rog9nWR316MV5sr25kS40DiwdvkwS9cAy1hItev7i0cNrBT13HHwdovYuGXelQYmx_-OywtDTpGKBC4rtDb7o2C7rXdXNVpByAzCjt9Ps09H7Kpl1EUZeFbjUlqYkThIrfEu0EHS8v5ndDGFuOGAIBs0ksT13Bi0lbuScF9Cs2JI-OxnR_pJD2sxD7L8MH9352-1x7OhRZSAiCT1UyjYKZlbw4b5uhxvrDwUeRNTCDpzTL38qBz09iZZIL0uLio_Sqgy3EesdzAeJCCS7uN_hBeFlIxdWHSmWxl-9ZyROTLJmLESJsin3xpPPLd0XJ2mu81H56-V0RvcIcwiu_2hw3rvVliS4M3SGKqVTj3FLDSMSXBXTPrq88qeXQIVjg1el07Fio6OdIwgFy54wxpEAruBoed1uABnE29qOjoleb0_pZhQP8tbUIcruuyiTCzvhpE3gNYIuCZKsLNT5BLGFopAqKfK7LgORyp4BhGTnGXYa1LHrsoHYgk340Oi1VTESx1N8TNoAOKx34_HQNJyxz0mcNWgyCQHJ9NZp8gRvfx3Flpoqv9-V5mdAp7OJ64iExGsai1-HMY9AL8JB5CjCiTx59an0TWTFW0zO1gosvKCz2hl88Ld9NsXbZe8NZPaEenVQkSJmWxeiMaWXM6OaeyHE2H7ViVObiqYdRhHBrhOI0jpp0K-lfwKKNopyc4Oelj53rHkrQk6zVF_On3FldFE3LItNf5y7HgTBfQOdDb9fKTMhev7l9Frw6H2BTeOE5_rnBo9RPYD1OWYdemiJtdBUO1isTqkBdCftKMCLOzOZfcxtn6IL1wK0zgMXyj1Lo90gMhvVuewwqt021AaUglYi_SAw_rFNXRV486o28nTzAp4QB2BXgPf0x5b0Af2P-mv8ddwxWYOtRVCCfAjfo_y59V9Egrzp3y5vOudKLbyhWdM33mjiUHHi-CbTtmBIZaG2FZSVX7MVE6XIeoLoxavV4XW_pTD0VYiWrcWP6IwIjhn2ExzCTDW1lDAOkI2Eqysn4-7YjqSTGY3RR_GyjyndpqaeLeKIhwvHkbksky35g5DLRXUA7djaeXqU0e8ccppSk7gI2WNJ_dYSgAmNih94rjC4Xs6Ij-Wy2XoLiesYg-T0ijnrt8KNnKCQ5N-yf-wdTx6gOrKu9U3dtYk07X4YpIPBtN9Bp5BmhA5YPamkajm3vw9rCaH5CGG3sI489wl8pa1dALpv9KHkQdewhQchvQvJJd-j6tFdilHzc-mqYsilJxQec9w6jXFU3UQl0RzQFZO1YXqSANrBwHxTb3t12lxgSfgeFcfh7ATfhC7vvUqpekE4ahYoamdgZnBtiMMrXj5S1lp8_kGwLFpPo9DAaG70PYJzMEga6eQ__bM-GWa-b24ND_cm2SvTJhuZOL4K5OL04_0YMh9Tf8L2CWi0aNaIlMTyZY9VlowfHD9QWe3453oBlNPgYjfvn1tGrgEC0ogOaiIjgJ6EA3ExWPprjCysBfYxL1AAnoDkh_dVn-IC4m_AilNNX.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_083a6020c89cddcb016ae32f5547d887d19819daf016439cae","index":0}]},"fingerprint":"82b6ea64ef91009f"}},{"type":"text","text":"Nice—Nessa is Bren’s older sister and the *Petrel*’s cook, not a formally paid employee; Button the black cat keeps her company aboard. Is Button welcome around the catch, or a menace to it?"}]}
+

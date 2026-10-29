@@ -23,8 +23,8 @@ It does not complete those stories.
 
 ## Starting point
 
-- The [researcher prompt](../prompts/researcher.md) exists but is not active in the runtime.
-- The current extraction pipeline remains active.
+- The [researcher prompt](../prompts/researcher.md) is active in the background runtime.
+- The old extraction pipeline is removed. Chat remains read-only.
 - Graph search and repository reads provide existing foundations.
 - Stable source references and distinct same-name subjects need design decisions.
 
@@ -104,6 +104,7 @@ Update the stories, design, and plan when requirements change.
 | Date | Change or result | Evidence or next action |
 | --- | --- | --- |
 | 2026-10-27 | Sprint draft created | Define read contracts before write tools |
+| 2026-10-29 | Scope expanded at the writer’s request: researcher runtime and graph tools implemented | Verify behavior; source design and durable jobs remain open |
 
 ## Review outcome
 

@@ -1,0 +1,308 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Clarifying narrative details**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" respond"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" briefly"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" regarding"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" states"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" character"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" was"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" born"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" S"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"able"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"cross"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" acknowledging"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ret"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"con"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" The"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" user"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" pointed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" out"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" this"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" discrepancy"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" important"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" clarify"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ret"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"con"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" explicit"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I'll"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" mention"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" established"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" canon"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" shows"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" aqu"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"educt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" as"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" destroyed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" there's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" an"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" unresolved"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" note"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" about"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" water"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" flow"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" The"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" birthplace"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" correction"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" for"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Mira"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Grey"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"haven"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" she"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" moved"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" there"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" as"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" an"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" adult"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" which"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" remains"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" unchanged"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" don't"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" think"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" question"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" this"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" further"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Under"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"stood"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" aqu"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"educt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" remains"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" destroyed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" established"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" canon"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":";"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" "}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"206"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" water"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"-flow"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" note"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" unresolved"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Mira"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" was"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" born"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" coastal"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Grey"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"haven"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" moved"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" S"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"able"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"cross"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" as"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" an"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" adult"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" while"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" her"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" job"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" compass"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" friendship"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" with"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" O"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ren"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" remain"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" unchanged"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"Understood: the aqueduct remains destroyed in established canon; the 206 water-flow note is unresolved. Mira was born in coastal Greyhaven and moved to Sablecross as an adult, while her job, compass, and friendship with Oren remain unchanged."}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Clarifying narrative details**\n\nI need to respond briefly regarding the lore that states a character was born in Sablecross, acknowledging the retcon. The user pointed out this discrepancy, and it's important to clarify that the retcon is explicit. I'll mention that the established canon shows the aqueduct as destroyed, and there's an unresolved note about water flow. The birthplace correction for Mira is Greyhaven, but she moved there as an adult, which remains unchanged. I don't think I need to question this further.","native":{"item":{"reasoning":"**Clarifying narrative details**\n\nI need to respond briefly regarding the lore that states a character was born in Sablecross, acknowledging the retcon. The user pointed out this discrepancy, and it's important to clarify that the retcon is explicit. I'll mention that the established canon shows the aqueduct as destroyed, and there's an unresolved note about water flow. The birthplace correction for Mira is Greyhaven, but she moved there as an adult, which remains unchanged. I don't think I need to question this further.","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying narrative details**\n\nI need to respond briefly regarding the lore that states a character was born in Sablecross, acknowledging the retcon. The user pointed out this discrepancy, and it's important to clarify that the retcon is explicit. I'll mention that the established canon shows the aqueduct as destroyed, and there's an unresolved note about water flow. The birthplace correction for Mira is Greyhaven, but she moved there as an adult, which remains unchanged. I don't think I need to question this further.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zGtGC8pZw3o7mDdiminPjWbP-nGqOakrwrK1BMuE5Bik2Dsc9OpvL1MRGo8Rmood1b4_am3nCCshCc-2FKnaKYGn4_0wWzCgzOYALZoNo8CgbICO9C7gn_dgeFWVvApvCOLKF-_aRFhaQkLVUzfrRI8V6Ta_leZYt9C84inCAxBLeN72b8mb9LK8GkKZSz2MWffUzeetiNFxNskfq_yEp0kzBTJvIb-kuAv-MhOtcD0Dx9v0pfsvcQLqQvZxb7EclRkrhRXOMhm69KUBOhm4wRRMthmCEAU9WI21riCZMwr7Obb7xenBSlY_HSUMkMggChU6Bm68GdKR95GtT1kTFIpEKeTuTsbfA6ZRHtixW1UzXWqrpDJG-TZyZOhf51Z4Sy_M9wR9RZToo83TgOQ9335E7bd0BzGEo5MDSVV5ZHyfQy_R6jIK4SDr85u0Ao2ym-vVl_FXHgiLi-x2fyRrFIQgnLtbLZZi7NSurBN0524BJmIkO0RdiQa-eUeUZYUy7lMkm7g45-DIR6Jhs-RXTO0dBEXCHuQs9z2aejYDLw4O9VrLt5mQyPV484Glck9qwChwmdC9UVgW6ptUugDcRWAhhN3HP2X-FjsEnZqlzP_BOFLWrlQGEz0FmjP7n34LwL4SMJ6laHz8kpz0wdgKyYjqSBbvGKv3rUSDSzF_1eUfDlhSXwiZH1psPL2StqNS09bU6gBTWkPGBi_NjFXhS5w8e0fy0JmGsEhkiYf-dQE7Oj9hX2Ki9J23h6FDc4BdE4dIrMg0-Ksa3tMj_eu3_peE4oigITH4iJ-CJS4yEDHWMcSm825vCISzUNJfyksTHJNVoq2zeV6Vuxm-jaDuJnEkXqYHjexbBZNF-uvtSgu7WFFF044oTy_P-kdxesmlIja872SjgDY9MrBxA0KYeA6MdnWhHoYMtf0t9SVlEbGW2B-lTIoL9P1J-XRXxPe4hNZnoqMf80b-6gmmgEANkLzQPrreleIgRfvfe2YPhgGPGnFhOXULWsVTOlkvRm-jqwuIPnGToVzZk-zbu87Su3uRCDW8bhlCJEWv1jMfM_kJZwjVyQDL7Bv9QvxW1bq5_PSBK84bn9RsJ2-TBJhGE5XmLdhAdx_2wKncUvQ8jE3rOCRC5tePwSg80B6IQllo6efXQ7FJNBTS7HFlfUECJN8gwFj4MtlTQJu953Ds6owi6labJSF5zC6bApGkebXWO_fF3WQCLGswssgAAM3mmbPzHZHbIVzM2_Sl-5SM-xeaXuxPbrGwiE1Pz8j5EL3L51IfpLhOVJJYVLMmv14SSezXwPVAyKre-Aym_Zfwg-6rt7Z-FshAMXMk6Iq467Annw3eOeh3tZ3fn6rMpxA1Chme7cPObU4S_SF19CgpbQQDWxA4jpQHpYFbCNxotOVIG2o2SnBi767H951TAzNI814Q7YW6DnCIIcqJkP5YKFzAHwIt83ioWPOH1XH5weQCgkNnJRe3oFeSzQeBbxYEXY-OHDppO1ntsH3dHFbvX-uodpg-G6_xys16EsL1IYVQ3roquIZ7fno5yQQLUiLI9hk5j8_sTqlMKwhLpnp1YFojfETr2aUD1YnmHAomnLdffd0FomwuZEL_y9WuUKYsMusVcj9uqJoCtYnF3l69Jwl3srvybCTYb4gUERZusLPrvn0CXRHy1yc33JdsFAWM_sEifdMyBNTYiFImR5UwE0IVFUvmrayvF_lO5T-uaMOLv9ihlJ4qTaYUlucntmEhpgAKgICGjRosXbdTpvlyrRaylA4P5Q8SQPyejC-8Q1CLYhujR-0O-qUvoVspV5Tm4fBSibynQgmPzOvs5hlp48N1OjgjDEyS5rjaFXi3zc_NVq8NHlXT8QYW281iagK3dlj3DtDH7oOSEHPi94jWA1Emi-_U9dB9BDMr9gAhW0U9gg3ozN8w9fAutD2SSaYFdvrhyRdAYyLRillryCUbg4f9VkkRVJb60vQ-zNmZCRCwgD60-7jgD9gPNfQYY8FDqh9f3SUgwYT1jHu6AmLG-HE-xxabmmBXu847fvMaqVDKv1IwXdq9s0kRuYxT5AhfcMP3_DaN3KOLxf6s7G41WztwFHJk-qMhjQ3f_DbFnr1lzw96D4JWI1hls5Hul4kSj_eYjxbVCfQGKS15270uXKgHTgpyhpv5-NomndxSODl0DJOHH52_I4qrcsbsbYWhsSxrX7XZcxZ74OEVgWt4LF_KZIMePF80yx32d2ZVVLkEVEoLap14pBxVWnU07VGMZPCcjD-fqbgHcMHKLNirOvaGppAnrKNMNi63ix-kuTIyLFQ2ryN-HhGTvEknZyI3XmcP-5Ex1SkD-Q4vquvtMV7mIPiZksnhnX8Uq4gX6VsXE6zub5_M0ZgKEkjX63napk-gNJ5_Nh8Yoxf5MKwEaPuPq0R7mzwqyPeM8h93msxFj2A9NP5zCe_931HgFSqI9vBaCdvpNbQDUqQlI7srz-H8NEVRGFzXM8kCkO8uBsmTkVhHxuAA1rFwOhEWQQCkBWD0PTzLc2jiYGV89uIK-skIVuHC2v_dRcFL27pwFSWxr4nWOLTFUnvhsofD1pBlEbD4gWKI-82MwcYJ_AAQPJUst1Xd9z7AKuBIoiQIUdw0k7KorYmnxccZ2Y-zQbjxxT4Oku_b_IVtdIcHVp3bk83WB0=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_07c1def21f43b12d016ae331ab66c487d18213a459be0a419e","index":1}]},"fingerprint":"ed421a3c66041b04"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":4183,"output_tokens":138,"total_tokens":4321,"cached_input_tokens":1826,"cache_creation_input_tokens":2354,"reasoning_tokens":80,"cost":{"total":0.00038181}},"response_id":"gen-1793274282-6bPLHZNNLtbVpCa0c3s9","finish_reason":"stop","raw":{"id":"gen-1793274282-6bPLHZNNLtbVpCa0c3s9","object":"chat.completion","created":1793274282,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Understood: the aqueduct remains destroyed in established canon; the 206 water-flow note is unresolved. Mira was born in coastal Greyhaven and moved to Sablecross as an adult, while her job, compass, and friendship with Oren remain unchanged.","role":"assistant","reasoning":"**Clarifying narrative details**\n\nI need to respond briefly regarding the lore that states a character was born in Sablecross, acknowledging the retcon. The user pointed out this discrepancy, and it's important to clarify that the retcon is explicit. I'll mention that the established canon shows the aqueduct as destroyed, and there's an unresolved note about water flow. The birthplace correction for Mira is Greyhaven, but she moved there as an adult, which remains unchanged. I don't think I need to question this further.","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying narrative details**\n\nI need to respond briefly regarding the lore that states a character was born in Sablecross, acknowledging the retcon. The user pointed out this discrepancy, and it's important to clarify that the retcon is explicit. I'll mention that the established canon shows the aqueduct as destroyed, and there's an unresolved note about water flow. The birthplace correction for Mira is Greyhaven, but she moved there as an adult, which remains unchanged. I don't think I need to question this further.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zGtGC8pZw3o7mDdiminPjWbP-nGqOakrwrK1BMuE5Bik2Dsc9OpvL1MRGo8Rmood1b4_am3nCCshCc-2FKnaKYGn4_0wWzCgzOYALZoNo8CgbICO9C7gn_dgeFWVvApvCOLKF-_aRFhaQkLVUzfrRI8V6Ta_leZYt9C84inCAxBLeN72b8mb9LK8GkKZSz2MWffUzeetiNFxNskfq_yEp0kzBTJvIb-kuAv-MhOtcD0Dx9v0pfsvcQLqQvZxb7EclRkrhRXOMhm69KUBOhm4wRRMthmCEAU9WI21riCZMwr7Obb7xenBSlY_HSUMkMggChU6Bm68GdKR95GtT1kTFIpEKeTuTsbfA6ZRHtixW1UzXWqrpDJG-TZyZOhf51Z4Sy_M9wR9RZToo83TgOQ9335E7bd0BzGEo5MDSVV5ZHyfQy_R6jIK4SDr85u0Ao2ym-vVl_FXHgiLi-x2fyRrFIQgnLtbLZZi7NSurBN0524BJmIkO0RdiQa-eUeUZYUy7lMkm7g45-DIR6Jhs-RXTO0dBEXCHuQs9z2aejYDLw4O9VrLt5mQyPV484Glck9qwChwmdC9UVgW6ptUugDcRWAhhN3HP2X-FjsEnZqlzP_BOFLWrlQGEz0FmjP7n34LwL4SMJ6laHz8kpz0wdgKyYjqSBbvGKv3rUSDSzF_1eUfDlhSXwiZH1psPL2StqNS09bU6gBTWkPGBi_NjFXhS5w8e0fy0JmGsEhkiYf-dQE7Oj9hX2Ki9J23h6FDc4BdE4dIrMg0-Ksa3tMj_eu3_peE4oigITH4iJ-CJS4yEDHWMcSm825vCISzUNJfyksTHJNVoq2zeV6Vuxm-jaDuJnEkXqYHjexbBZNF-uvtSgu7WFFF044oTy_P-kdxesmlIja872SjgDY9MrBxA0KYeA6MdnWhHoYMtf0t9SVlEbGW2B-lTIoL9P1J-XRXxPe4hNZnoqMf80b-6gmmgEANkLzQPrreleIgRfvfe2YPhgGPGnFhOXULWsVTOlkvRm-jqwuIPnGToVzZk-zbu87Su3uRCDW8bhlCJEWv1jMfM_kJZwjVyQDL7Bv9QvxW1bq5_PSBK84bn9RsJ2-TBJhGE5XmLdhAdx_2wKncUvQ8jE3rOCRC5tePwSg80B6IQllo6efXQ7FJNBTS7HFlfUECJN8gwFj4MtlTQJu953Ds6owi6labJSF5zC6bApGkebXWO_fF3WQCLGswssgAAM3mmbPzHZHbIVzM2_Sl-5SM-xeaXuxPbrGwiE1Pz8j5EL3L51IfpLhOVJJYVLMmv14SSezXwPVAyKre-Aym_Zfwg-6rt7Z-FshAMXMk6Iq467Annw3eOeh3tZ3fn6rMpxA1Chme7cPObU4S_SF19CgpbQQDWxA4jpQHpYFbCNxotOVIG2o2SnBi767H951TAzNI814Q7YW6DnCIIcqJkP5YKFzAHwIt83ioWPOH1XH5weQCgkNnJRe3oFeSzQeBbxYEXY-OHDppO1ntsH3dHFbvX-uodpg-G6_xys16EsL1IYVQ3roquIZ7fno5yQQLUiLI9hk5j8_sTqlMKwhLpnp1YFojfETr2aUD1YnmHAomnLdffd0FomwuZEL_y9WuUKYsMusVcj9uqJoCtYnF3l69Jwl3srvybCTYb4gUERZusLPrvn0CXRHy1yc33JdsFAWM_sEifdMyBNTYiFImR5UwE0IVFUvmrayvF_lO5T-uaMOLv9ihlJ4qTaYUlucntmEhpgAKgICGjRosXbdTpvlyrRaylA4P5Q8SQPyejC-8Q1CLYhujR-0O-qUvoVspV5Tm4fBSibynQgmPzOvs5hlp48N1OjgjDEyS5rjaFXi3zc_NVq8NHlXT8QYW281iagK3dlj3DtDH7oOSEHPi94jWA1Emi-_U9dB9BDMr9gAhW0U9gg3ozN8w9fAutD2SSaYFdvrhyRdAYyLRillryCUbg4f9VkkRVJb60vQ-zNmZCRCwgD60-7jgD9gPNfQYY8FDqh9f3SUgwYT1jHu6AmLG-HE-xxabmmBXu847fvMaqVDKv1IwXdq9s0kRuYxT5AhfcMP3_DaN3KOLxf6s7G41WztwFHJk-qMhjQ3f_DbFnr1lzw96D4JWI1hls5Hul4kSj_eYjxbVCfQGKS15270uXKgHTgpyhpv5-NomndxSODl0DJOHH52_I4qrcsbsbYWhsSxrX7XZcxZ74OEVgWt4LF_KZIMePF80yx32d2ZVVLkEVEoLap14pBxVWnU07VGMZPCcjD-fqbgHcMHKLNirOvaGppAnrKNMNi63ix-kuTIyLFQ2ryN-HhGTvEknZyI3XmcP-5Ex1SkD-Q4vquvtMV7mIPiZksnhnX8Uq4gX6VsXE6zub5_M0ZgKEkjX63napk-gNJ5_Nh8Yoxf5MKwEaPuPq0R7mzwqyPeM8h93msxFj2A9NP5zCe_931HgFSqI9vBaCdvpNbQDUqQlI7srz-H8NEVRGFzXM8kCkO8uBsmTkVhHxuAA1rFwOhEWQQCkBWD0PTzLc2jiYGV89uIK-skIVuHC2v_dRcFL27pwFSWxr4nWOLTFUnvhsofD1pBlEbD4gWKI-82MwcYJ_AAQPJUst1Xd9z7AKuBIoiQIUdw0k7KorYmnxccZ2Y-zQbjxxT4Oku_b_IVtdIcHVp3bk83WB0=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_07c1def21f43b12d016ae331ab66c487d18213a459be0a419e","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4183,"completion_tokens":138,"total_tokens":4321,"cost":0.00038181,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":2354,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00038181,"upstream_inference_prompt_cost":0.00031281,"upstream_inference_completions_cost":0.000069},"completion_tokens_details":{"reasoning_tokens":80,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":4183,"output_tokens":138,"total_tokens":4321,"cached_input_tokens":1826,"cache_creation_input_tokens":2354,"reasoning_tokens":80,"cost":{"total":0.00038181}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":4183,"output_tokens":138,"total_tokens":4321,"cached_input_tokens":1826,"cache_creation_input_tokens":2354,"reasoning_tokens":80,"cost":{"total":0.00038181}},"response_id":"gen-1793274282-6bPLHZNNLtbVpCa0c3s9","finish_reason":"stop","raw":{"id":"gen-1793274282-6bPLHZNNLtbVpCa0c3s9","object":"chat.completion","created":1793274282,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Understood: the aqueduct remains destroyed in established canon; the 206 water-flow note is unresolved. Mira was born in coastal Greyhaven and moved to Sablecross as an adult, while her job, compass, and friendship with Oren remain unchanged.","role":"assistant","reasoning":"**Clarifying narrative details**\n\nI need to respond briefly regarding the lore that states a character was born in Sablecross, acknowledging the retcon. The user pointed out this discrepancy, and it's important to clarify that the retcon is explicit. I'll mention that the established canon shows the aqueduct as destroyed, and there's an unresolved note about water flow. The birthplace correction for Mira is Greyhaven, but she moved there as an adult, which remains unchanged. I don't think I need to question this further.","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying narrative details**\n\nI need to respond briefly regarding the lore that states a character was born in Sablecross, acknowledging the retcon. The user pointed out this discrepancy, and it's important to clarify that the retcon is explicit. I'll mention that the established canon shows the aqueduct as destroyed, and there's an unresolved note about water flow. The birthplace correction for Mira is Greyhaven, but she moved there as an adult, which remains unchanged. I don't think I need to question this further.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zGtGC8pZw3o7mDdiminPjWbP-nGqOakrwrK1BMuE5Bik2Dsc9OpvL1MRGo8Rmood1b4_am3nCCshCc-2FKnaKYGn4_0wWzCgzOYALZoNo8CgbICO9C7gn_dgeFWVvApvCOLKF-_aRFhaQkLVUzfrRI8V6Ta_leZYt9C84inCAxBLeN72b8mb9LK8GkKZSz2MWffUzeetiNFxNskfq_yEp0kzBTJvIb-kuAv-MhOtcD0Dx9v0pfsvcQLqQvZxb7EclRkrhRXOMhm69KUBOhm4wRRMthmCEAU9WI21riCZMwr7Obb7xenBSlY_HSUMkMggChU6Bm68GdKR95GtT1kTFIpEKeTuTsbfA6ZRHtixW1UzXWqrpDJG-TZyZOhf51Z4Sy_M9wR9RZToo83TgOQ9335E7bd0BzGEo5MDSVV5ZHyfQy_R6jIK4SDr85u0Ao2ym-vVl_FXHgiLi-x2fyRrFIQgnLtbLZZi7NSurBN0524BJmIkO0RdiQa-eUeUZYUy7lMkm7g45-DIR6Jhs-RXTO0dBEXCHuQs9z2aejYDLw4O9VrLt5mQyPV484Glck9qwChwmdC9UVgW6ptUugDcRWAhhN3HP2X-FjsEnZqlzP_BOFLWrlQGEz0FmjP7n34LwL4SMJ6laHz8kpz0wdgKyYjqSBbvGKv3rUSDSzF_1eUfDlhSXwiZH1psPL2StqNS09bU6gBTWkPGBi_NjFXhS5w8e0fy0JmGsEhkiYf-dQE7Oj9hX2Ki9J23h6FDc4BdE4dIrMg0-Ksa3tMj_eu3_peE4oigITH4iJ-CJS4yEDHWMcSm825vCISzUNJfyksTHJNVoq2zeV6Vuxm-jaDuJnEkXqYHjexbBZNF-uvtSgu7WFFF044oTy_P-kdxesmlIja872SjgDY9MrBxA0KYeA6MdnWhHoYMtf0t9SVlEbGW2B-lTIoL9P1J-XRXxPe4hNZnoqMf80b-6gmmgEANkLzQPrreleIgRfvfe2YPhgGPGnFhOXULWsVTOlkvRm-jqwuIPnGToVzZk-zbu87Su3uRCDW8bhlCJEWv1jMfM_kJZwjVyQDL7Bv9QvxW1bq5_PSBK84bn9RsJ2-TBJhGE5XmLdhAdx_2wKncUvQ8jE3rOCRC5tePwSg80B6IQllo6efXQ7FJNBTS7HFlfUECJN8gwFj4MtlTQJu953Ds6owi6labJSF5zC6bApGkebXWO_fF3WQCLGswssgAAM3mmbPzHZHbIVzM2_Sl-5SM-xeaXuxPbrGwiE1Pz8j5EL3L51IfpLhOVJJYVLMmv14SSezXwPVAyKre-Aym_Zfwg-6rt7Z-FshAMXMk6Iq467Annw3eOeh3tZ3fn6rMpxA1Chme7cPObU4S_SF19CgpbQQDWxA4jpQHpYFbCNxotOVIG2o2SnBi767H951TAzNI814Q7YW6DnCIIcqJkP5YKFzAHwIt83ioWPOH1XH5weQCgkNnJRe3oFeSzQeBbxYEXY-OHDppO1ntsH3dHFbvX-uodpg-G6_xys16EsL1IYVQ3roquIZ7fno5yQQLUiLI9hk5j8_sTqlMKwhLpnp1YFojfETr2aUD1YnmHAomnLdffd0FomwuZEL_y9WuUKYsMusVcj9uqJoCtYnF3l69Jwl3srvybCTYb4gUERZusLPrvn0CXRHy1yc33JdsFAWM_sEifdMyBNTYiFImR5UwE0IVFUvmrayvF_lO5T-uaMOLv9ihlJ4qTaYUlucntmEhpgAKgICGjRosXbdTpvlyrRaylA4P5Q8SQPyejC-8Q1CLYhujR-0O-qUvoVspV5Tm4fBSibynQgmPzOvs5hlp48N1OjgjDEyS5rjaFXi3zc_NVq8NHlXT8QYW281iagK3dlj3DtDH7oOSEHPi94jWA1Emi-_U9dB9BDMr9gAhW0U9gg3ozN8w9fAutD2SSaYFdvrhyRdAYyLRillryCUbg4f9VkkRVJb60vQ-zNmZCRCwgD60-7jgD9gPNfQYY8FDqh9f3SUgwYT1jHu6AmLG-HE-xxabmmBXu847fvMaqVDKv1IwXdq9s0kRuYxT5AhfcMP3_DaN3KOLxf6s7G41WztwFHJk-qMhjQ3f_DbFnr1lzw96D4JWI1hls5Hul4kSj_eYjxbVCfQGKS15270uXKgHTgpyhpv5-NomndxSODl0DJOHH52_I4qrcsbsbYWhsSxrX7XZcxZ74OEVgWt4LF_KZIMePF80yx32d2ZVVLkEVEoLap14pBxVWnU07VGMZPCcjD-fqbgHcMHKLNirOvaGppAnrKNMNi63ix-kuTIyLFQ2ryN-HhGTvEknZyI3XmcP-5Ex1SkD-Q4vquvtMV7mIPiZksnhnX8Uq4gX6VsXE6zub5_M0ZgKEkjX63napk-gNJ5_Nh8Yoxf5MKwEaPuPq0R7mzwqyPeM8h93msxFj2A9NP5zCe_931HgFSqI9vBaCdvpNbQDUqQlI7srz-H8NEVRGFzXM8kCkO8uBsmTkVhHxuAA1rFwOhEWQQCkBWD0PTzLc2jiYGV89uIK-skIVuHC2v_dRcFL27pwFSWxr4nWOLTFUnvhsofD1pBlEbD4gWKI-82MwcYJ_AAQPJUst1Xd9z7AKuBIoiQIUdw0k7KorYmnxccZ2Y-zQbjxxT4Oku_b_IVtdIcHVp3bk83WB0=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_07c1def21f43b12d016ae331ab66c487d18213a459be0a419e","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4183,"completion_tokens":138,"total_tokens":4321,"cost":0.00038181,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":2354,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00038181,"upstream_inference_prompt_cost":0.00031281,"upstream_inference_completions_cost":0.000069},"completion_tokens_details":{"reasoning_tokens":80,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"Clarification: that 206 water-flow note is still unresolved, and the aqueduct remains destroyed in established canon. Separately, correct Mira's birthplace to Greyhaven, a small town on the coast. She moved to Sablecross as an adult. Keep her job, compass, and friendship unchanged."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Clarifying narrative details**\n\nI need to respond briefly regarding the lore that states a character was born in Sablecross, acknowledging the retcon. The user pointed out this discrepancy, and it's important to clarify that the retcon is explicit. I'll mention that the established canon shows the aqueduct as destroyed, and there's an unresolved note about water flow. The birthplace correction for Mira is Greyhaven, but she moved there as an adult, which remains unchanged. I don't think I need to question this further.","native":{"item":{"reasoning":"**Clarifying narrative details**\n\nI need to respond briefly regarding the lore that states a character was born in Sablecross, acknowledging the retcon. The user pointed out this discrepancy, and it's important to clarify that the retcon is explicit. I'll mention that the established canon shows the aqueduct as destroyed, and there's an unresolved note about water flow. The birthplace correction for Mira is Greyhaven, but she moved there as an adult, which remains unchanged. I don't think I need to question this further.","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying narrative details**\n\nI need to respond briefly regarding the lore that states a character was born in Sablecross, acknowledging the retcon. The user pointed out this discrepancy, and it's important to clarify that the retcon is explicit. I'll mention that the established canon shows the aqueduct as destroyed, and there's an unresolved note about water flow. The birthplace correction for Mira is Greyhaven, but she moved there as an adult, which remains unchanged. I don't think I need to question this further.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zGtGC8pZw3o7mDdiminPjWbP-nGqOakrwrK1BMuE5Bik2Dsc9OpvL1MRGo8Rmood1b4_am3nCCshCc-2FKnaKYGn4_0wWzCgzOYALZoNo8CgbICO9C7gn_dgeFWVvApvCOLKF-_aRFhaQkLVUzfrRI8V6Ta_leZYt9C84inCAxBLeN72b8mb9LK8GkKZSz2MWffUzeetiNFxNskfq_yEp0kzBTJvIb-kuAv-MhOtcD0Dx9v0pfsvcQLqQvZxb7EclRkrhRXOMhm69KUBOhm4wRRMthmCEAU9WI21riCZMwr7Obb7xenBSlY_HSUMkMggChU6Bm68GdKR95GtT1kTFIpEKeTuTsbfA6ZRHtixW1UzXWqrpDJG-TZyZOhf51Z4Sy_M9wR9RZToo83TgOQ9335E7bd0BzGEo5MDSVV5ZHyfQy_R6jIK4SDr85u0Ao2ym-vVl_FXHgiLi-x2fyRrFIQgnLtbLZZi7NSurBN0524BJmIkO0RdiQa-eUeUZYUy7lMkm7g45-DIR6Jhs-RXTO0dBEXCHuQs9z2aejYDLw4O9VrLt5mQyPV484Glck9qwChwmdC9UVgW6ptUugDcRWAhhN3HP2X-FjsEnZqlzP_BOFLWrlQGEz0FmjP7n34LwL4SMJ6laHz8kpz0wdgKyYjqSBbvGKv3rUSDSzF_1eUfDlhSXwiZH1psPL2StqNS09bU6gBTWkPGBi_NjFXhS5w8e0fy0JmGsEhkiYf-dQE7Oj9hX2Ki9J23h6FDc4BdE4dIrMg0-Ksa3tMj_eu3_peE4oigITH4iJ-CJS4yEDHWMcSm825vCISzUNJfyksTHJNVoq2zeV6Vuxm-jaDuJnEkXqYHjexbBZNF-uvtSgu7WFFF044oTy_P-kdxesmlIja872SjgDY9MrBxA0KYeA6MdnWhHoYMtf0t9SVlEbGW2B-lTIoL9P1J-XRXxPe4hNZnoqMf80b-6gmmgEANkLzQPrreleIgRfvfe2YPhgGPGnFhOXULWsVTOlkvRm-jqwuIPnGToVzZk-zbu87Su3uRCDW8bhlCJEWv1jMfM_kJZwjVyQDL7Bv9QvxW1bq5_PSBK84bn9RsJ2-TBJhGE5XmLdhAdx_2wKncUvQ8jE3rOCRC5tePwSg80B6IQllo6efXQ7FJNBTS7HFlfUECJN8gwFj4MtlTQJu953Ds6owi6labJSF5zC6bApGkebXWO_fF3WQCLGswssgAAM3mmbPzHZHbIVzM2_Sl-5SM-xeaXuxPbrGwiE1Pz8j5EL3L51IfpLhOVJJYVLMmv14SSezXwPVAyKre-Aym_Zfwg-6rt7Z-FshAMXMk6Iq467Annw3eOeh3tZ3fn6rMpxA1Chme7cPObU4S_SF19CgpbQQDWxA4jpQHpYFbCNxotOVIG2o2SnBi767H951TAzNI814Q7YW6DnCIIcqJkP5YKFzAHwIt83ioWPOH1XH5weQCgkNnJRe3oFeSzQeBbxYEXY-OHDppO1ntsH3dHFbvX-uodpg-G6_xys16EsL1IYVQ3roquIZ7fno5yQQLUiLI9hk5j8_sTqlMKwhLpnp1YFojfETr2aUD1YnmHAomnLdffd0FomwuZEL_y9WuUKYsMusVcj9uqJoCtYnF3l69Jwl3srvybCTYb4gUERZusLPrvn0CXRHy1yc33JdsFAWM_sEifdMyBNTYiFImR5UwE0IVFUvmrayvF_lO5T-uaMOLv9ihlJ4qTaYUlucntmEhpgAKgICGjRosXbdTpvlyrRaylA4P5Q8SQPyejC-8Q1CLYhujR-0O-qUvoVspV5Tm4fBSibynQgmPzOvs5hlp48N1OjgjDEyS5rjaFXi3zc_NVq8NHlXT8QYW281iagK3dlj3DtDH7oOSEHPi94jWA1Emi-_U9dB9BDMr9gAhW0U9gg3ozN8w9fAutD2SSaYFdvrhyRdAYyLRillryCUbg4f9VkkRVJb60vQ-zNmZCRCwgD60-7jgD9gPNfQYY8FDqh9f3SUgwYT1jHu6AmLG-HE-xxabmmBXu847fvMaqVDKv1IwXdq9s0kRuYxT5AhfcMP3_DaN3KOLxf6s7G41WztwFHJk-qMhjQ3f_DbFnr1lzw96D4JWI1hls5Hul4kSj_eYjxbVCfQGKS15270uXKgHTgpyhpv5-NomndxSODl0DJOHH52_I4qrcsbsbYWhsSxrX7XZcxZ74OEVgWt4LF_KZIMePF80yx32d2ZVVLkEVEoLap14pBxVWnU07VGMZPCcjD-fqbgHcMHKLNirOvaGppAnrKNMNi63ix-kuTIyLFQ2ryN-HhGTvEknZyI3XmcP-5Ex1SkD-Q4vquvtMV7mIPiZksnhnX8Uq4gX6VsXE6zub5_M0ZgKEkjX63napk-gNJ5_Nh8Yoxf5MKwEaPuPq0R7mzwqyPeM8h93msxFj2A9NP5zCe_931HgFSqI9vBaCdvpNbQDUqQlI7srz-H8NEVRGFzXM8kCkO8uBsmTkVhHxuAA1rFwOhEWQQCkBWD0PTzLc2jiYGV89uIK-skIVuHC2v_dRcFL27pwFSWxr4nWOLTFUnvhsofD1pBlEbD4gWKI-82MwcYJ_AAQPJUst1Xd9z7AKuBIoiQIUdw0k7KorYmnxccZ2Y-zQbjxxT4Oku_b_IVtdIcHVp3bk83WB0=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_07c1def21f43b12d016ae331ab66c487d18213a459be0a419e","index":1}]},"fingerprint":"ed421a3c66041b04"}},{"type":"text","text":"Understood: the aqueduct remains destroyed in established canon; the 206 water-flow note is unresolved. Mira was born in coastal Greyhaven and moved to Sablecross as an adult, while her job, compass, and friendship with Oren remain unchanged."}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793274282-6bPLHZNNLtbVpCa0c3s9"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Clarifying narrative details**\n\nI need to respond briefly regarding the lore that states a character was born in Sablecross, acknowledging the retcon. The user pointed out this discrepancy, and it's important to clarify that the retcon is explicit. I'll mention that the established canon shows the aqueduct as destroyed, and there's an unresolved note about water flow. The birthplace correction for Mira is Greyhaven, but she moved there as an adult, which remains unchanged. I don't think I need to question this further.","native":{"item":{"reasoning":"**Clarifying narrative details**\n\nI need to respond briefly regarding the lore that states a character was born in Sablecross, acknowledging the retcon. The user pointed out this discrepancy, and it's important to clarify that the retcon is explicit. I'll mention that the established canon shows the aqueduct as destroyed, and there's an unresolved note about water flow. The birthplace correction for Mira is Greyhaven, but she moved there as an adult, which remains unchanged. I don't think I need to question this further.","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying narrative details**\n\nI need to respond briefly regarding the lore that states a character was born in Sablecross, acknowledging the retcon. The user pointed out this discrepancy, and it's important to clarify that the retcon is explicit. I'll mention that the established canon shows the aqueduct as destroyed, and there's an unresolved note about water flow. The birthplace correction for Mira is Greyhaven, but she moved there as an adult, which remains unchanged. I don't think I need to question this further.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zGtGC8pZw3o7mDdiminPjWbP-nGqOakrwrK1BMuE5Bik2Dsc9OpvL1MRGo8Rmood1b4_am3nCCshCc-2FKnaKYGn4_0wWzCgzOYALZoNo8CgbICO9C7gn_dgeFWVvApvCOLKF-_aRFhaQkLVUzfrRI8V6Ta_leZYt9C84inCAxBLeN72b8mb9LK8GkKZSz2MWffUzeetiNFxNskfq_yEp0kzBTJvIb-kuAv-MhOtcD0Dx9v0pfsvcQLqQvZxb7EclRkrhRXOMhm69KUBOhm4wRRMthmCEAU9WI21riCZMwr7Obb7xenBSlY_HSUMkMggChU6Bm68GdKR95GtT1kTFIpEKeTuTsbfA6ZRHtixW1UzXWqrpDJG-TZyZOhf51Z4Sy_M9wR9RZToo83TgOQ9335E7bd0BzGEo5MDSVV5ZHyfQy_R6jIK4SDr85u0Ao2ym-vVl_FXHgiLi-x2fyRrFIQgnLtbLZZi7NSurBN0524BJmIkO0RdiQa-eUeUZYUy7lMkm7g45-DIR6Jhs-RXTO0dBEXCHuQs9z2aejYDLw4O9VrLt5mQyPV484Glck9qwChwmdC9UVgW6ptUugDcRWAhhN3HP2X-FjsEnZqlzP_BOFLWrlQGEz0FmjP7n34LwL4SMJ6laHz8kpz0wdgKyYjqSBbvGKv3rUSDSzF_1eUfDlhSXwiZH1psPL2StqNS09bU6gBTWkPGBi_NjFXhS5w8e0fy0JmGsEhkiYf-dQE7Oj9hX2Ki9J23h6FDc4BdE4dIrMg0-Ksa3tMj_eu3_peE4oigITH4iJ-CJS4yEDHWMcSm825vCISzUNJfyksTHJNVoq2zeV6Vuxm-jaDuJnEkXqYHjexbBZNF-uvtSgu7WFFF044oTy_P-kdxesmlIja872SjgDY9MrBxA0KYeA6MdnWhHoYMtf0t9SVlEbGW2B-lTIoL9P1J-XRXxPe4hNZnoqMf80b-6gmmgEANkLzQPrreleIgRfvfe2YPhgGPGnFhOXULWsVTOlkvRm-jqwuIPnGToVzZk-zbu87Su3uRCDW8bhlCJEWv1jMfM_kJZwjVyQDL7Bv9QvxW1bq5_PSBK84bn9RsJ2-TBJhGE5XmLdhAdx_2wKncUvQ8jE3rOCRC5tePwSg80B6IQllo6efXQ7FJNBTS7HFlfUECJN8gwFj4MtlTQJu953Ds6owi6labJSF5zC6bApGkebXWO_fF3WQCLGswssgAAM3mmbPzHZHbIVzM2_Sl-5SM-xeaXuxPbrGwiE1Pz8j5EL3L51IfpLhOVJJYVLMmv14SSezXwPVAyKre-Aym_Zfwg-6rt7Z-FshAMXMk6Iq467Annw3eOeh3tZ3fn6rMpxA1Chme7cPObU4S_SF19CgpbQQDWxA4jpQHpYFbCNxotOVIG2o2SnBi767H951TAzNI814Q7YW6DnCIIcqJkP5YKFzAHwIt83ioWPOH1XH5weQCgkNnJRe3oFeSzQeBbxYEXY-OHDppO1ntsH3dHFbvX-uodpg-G6_xys16EsL1IYVQ3roquIZ7fno5yQQLUiLI9hk5j8_sTqlMKwhLpnp1YFojfETr2aUD1YnmHAomnLdffd0FomwuZEL_y9WuUKYsMusVcj9uqJoCtYnF3l69Jwl3srvybCTYb4gUERZusLPrvn0CXRHy1yc33JdsFAWM_sEifdMyBNTYiFImR5UwE0IVFUvmrayvF_lO5T-uaMOLv9ihlJ4qTaYUlucntmEhpgAKgICGjRosXbdTpvlyrRaylA4P5Q8SQPyejC-8Q1CLYhujR-0O-qUvoVspV5Tm4fBSibynQgmPzOvs5hlp48N1OjgjDEyS5rjaFXi3zc_NVq8NHlXT8QYW281iagK3dlj3DtDH7oOSEHPi94jWA1Emi-_U9dB9BDMr9gAhW0U9gg3ozN8w9fAutD2SSaYFdvrhyRdAYyLRillryCUbg4f9VkkRVJb60vQ-zNmZCRCwgD60-7jgD9gPNfQYY8FDqh9f3SUgwYT1jHu6AmLG-HE-xxabmmBXu847fvMaqVDKv1IwXdq9s0kRuYxT5AhfcMP3_DaN3KOLxf6s7G41WztwFHJk-qMhjQ3f_DbFnr1lzw96D4JWI1hls5Hul4kSj_eYjxbVCfQGKS15270uXKgHTgpyhpv5-NomndxSODl0DJOHH52_I4qrcsbsbYWhsSxrX7XZcxZ74OEVgWt4LF_KZIMePF80yx32d2ZVVLkEVEoLap14pBxVWnU07VGMZPCcjD-fqbgHcMHKLNirOvaGppAnrKNMNi63ix-kuTIyLFQ2ryN-HhGTvEknZyI3XmcP-5Ex1SkD-Q4vquvtMV7mIPiZksnhnX8Uq4gX6VsXE6zub5_M0ZgKEkjX63napk-gNJ5_Nh8Yoxf5MKwEaPuPq0R7mzwqyPeM8h93msxFj2A9NP5zCe_931HgFSqI9vBaCdvpNbQDUqQlI7srz-H8NEVRGFzXM8kCkO8uBsmTkVhHxuAA1rFwOhEWQQCkBWD0PTzLc2jiYGV89uIK-skIVuHC2v_dRcFL27pwFSWxr4nWOLTFUnvhsofD1pBlEbD4gWKI-82MwcYJ_AAQPJUst1Xd9z7AKuBIoiQIUdw0k7KorYmnxccZ2Y-zQbjxxT4Oku_b_IVtdIcHVp3bk83WB0=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_07c1def21f43b12d016ae331ab66c487d18213a459be0a419e","index":1}]},"fingerprint":"ed421a3c66041b04"}},{"type":"text","text":"Understood: the aqueduct remains destroyed in established canon; the 206 water-flow note is unresolved. Mira was born in coastal Greyhaven and moved to Sablecross as an adult, while her job, compass, and friendship with Oren remain unchanged."}]}
+

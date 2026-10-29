@@ -1,0 +1,302 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Evaluating lore relevance**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" consider"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" if"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" provided"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" matches"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" user's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" message"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" The"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" static"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" document"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" doesn"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ât"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" include"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" information"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" on"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Tal"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Ren"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" toll"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" 319"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" which"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" likely"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" new"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" does"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" mention"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" unrelated"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" aspects"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" like"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Bren"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"'s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" fishing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" boat"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" support"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" New"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" states"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" there"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" are"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" supports"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" should"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" acknowledge"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" tensions"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" connect"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" with"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" blue"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" salt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" supply"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" via"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Night"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"jar"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" season"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" clarify"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" whether"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" toll"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" applies"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" all"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" shipments"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" including"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" civilian"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" contracts"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" just"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" military"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Keeping"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" concise"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" key"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"That"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" puts"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Bren"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" at"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" odds"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" with"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Lantern"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" despite"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" his"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" own"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" fishing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" interests"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" toll"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" could"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" help"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" repair"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" pi"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ers"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" while"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" raising"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"âs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" blue"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"-s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"alt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" costs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Does"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" apply"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" every"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" shipment"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" including"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"âs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" civilian"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" purchases"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"?"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"That puts Bren at odds with the Lantern Guild, despite his own fishing interests: the toll could help repair the piers while raising the Guildâs blue-salt costs. Does it apply to every shipment, including the Guildâs civilian purchases?"}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Evaluating lore relevance**\n\nI need to consider if the lore provided matches the user's message. The static document doesnât include information on the Tal Ren toll or 319, which is likely new. It does mention unrelated aspects like Bren's fishing boat and support. New lore states there are supports. I should acknowledge the tensions and connect the Guild with the blue salt supply via Nightjar season. I need to clarify whether the toll applies to all shipments, including civilian contracts or just military. Keeping it concise is key.","native":{"item":{"reasoning":"**Evaluating lore relevance**\n\nI need to consider if the lore provided matches the user's message. The static document doesnât include information on the Tal Ren toll or 319, which is likely new. It does mention unrelated aspects like Bren's fishing boat and support. New lore states there are supports. I should acknowledge the tensions and connect the Guild with the blue salt supply via Nightjar season. I need to clarify whether the toll applies to all shipments, including civilian contracts or just military. Keeping it concise is key.","reasoning_details":[{"type":"reasoning.summary","summary":"**Evaluating lore relevance**\n\nI need to consider if the lore provided matches the user's message. The static document doesnât include information on the Tal Ren toll or 319, which is likely new. It does mention unrelated aspects like Bren's fishing boat and support. New lore states there are supports. I should acknowledge the tensions and connect the Guild with the blue salt supply via Nightjar season. I need to clarify whether the toll applies to all shipments, including civilian contracts or just military. Keeping it concise is key.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yM9x_jDa5p6O7RSESh24dLPm8CIKE140yqnnaTQwXM6aUNDrmKf9E78kVBYGFQZc5aocjerqGxkdI2a3CjB5jcQZ6eTUOS9rLxXfi16qvFEGlV5VpJbiLWndwc7iWb3VCsKfsXA0CFR24Q0OKKSFsVeLQjA1tM0el4J2AB0L_aJLjVayvLk3UZ8aPBdFOVphAvYN1MjhMeT6H1b8P27OyHG-1KyGeo1DPMHKz3JdYwRPJVV4whan_Z7HsPf2FZ8qjebJMiuIio3x8G0SljnGOROIyPaaFGLddatFCKb_pr5sJYtr86_8kc83WuoVkZ10MgHdMlGF8Gx4qIslD9m7TFYhmICa3QA1A0wktfUudL2x1mi1zUqmwU3np3_unPAkRp8RpJTlM2xtLQgiiCowk-FSKXJzc3AL3MRe3H-ut42hshu1doONzJtjKqNrRfkhOTU6b6eJPC1qbGb5nhUbfHljAwFOAPI7Dt1ApV4PZEZ-0upqmxIVZiaINs41GSIyDeqL_lOD5EIYDjFfu4zQWRASxnYi2C7M6q4Hcu_BYRyw1_k_Z_okjJ_uqyi2pVItA05h7KTV3-UFWGqo-APqOTJBW7azqWwoh6gtSIfdcT80qQX8tq0JU9eg394lc3w7qYUppZid3k3LuAG8WLJTXe3z1fZItrEbbfg7LBG6okfOae-Izf-Qz-tn2wzzE8gGKh_aMyAjRLqqp1KPG0FpzTE9ZyN_OhiFnSlcy8NYVLogwvEawXxF6sTBhIxwEj5B0o0BvERhf58MZ2dF_usrW-hycx-vsmm3EQPF4Bq3jelmo4bOz-g0uDpd2bRkCuCT4FulyfOLvaDpZ_GPHMG8Yq0SypUyBNE1vTAZnF2u37XwSPMbA-Sl34b8DJX8Bd0Xtc1VAU_6zvFGNLJ-OTGxg4ls227oBQCCkMC1tbHPB_Oh7gg9mOVQWru6MWa5p3On2cr7YofyvUrRIMXIkOtlcfZlxneUQkWZjidUzP9cxtNoDGlFfl2w25GOj-Wttu26oRQyYfQ2R14WXcvC5T50AbWPeVKIV20lsJS4HtWAPq2bKOfV3LaL0gFS5QHNANE1jSKeyjAVPkvL7HnptbuoZURMADccVJBINV-DWkyR23vDCkG0QJYU33fQRRIeU6l1bKDFE9bj9v80V5cnjOQ4fdvYRfFo7kz2cP6zwrK70iPGyLSXXMJ5YmFzMA7gRIpLQ-k-YfyAFQEPIG6th8ucBI5yVEo7ucXC_r9j82nX6An0naJKgC0t74hLpRJwCs47MRdtl7nuIbQzum9gfI6pHmgQ3M2104DclCoYoc9nCdcvDPbH3Lqi1_tdZaDqLRcmNe8e9UidM3x8XzdSw5RprS4huaSAvwUtF9hhhyIF-5L7qJ-NN9B3AXtn7P2FI6YSHLNTvfWPRilWn5OxpQVbcwHT17Khq1j3B78QsicfKEqDW07SbhocXiTuAenI_G0jgHsS7_TbnlKBjHT6sOu48HDKETAY-m08JX1KtrOHvYQrflmuvyDr48lAJkx1vIPfQF6bPuq38vxlZtrjqmMGI6qDGPcDbvLn-WtP2P9VB2lBFSK7qT5O5wW5Bjl6WkP0jD7dl6KeXzPeizY1T9YoYjaMSyTxZHOS0-fDOkpcSDSGnWhMPRRJbThZx9a32oddTNEtsiKXVJCuuVh-FzIGgP0iq--BNheGJMHXRYGkQXLwwJbUrNM6R9VgeIqoDtxMAs_VTXDUSbo43UWbAo-aclHA9iwVIxNSRJwgmZDzY96ig85M0XSKvLAt1eKhRxSsGdg50fegVFFJ8aNiwJrYXBmXNxPRNXg6a2Sh-eAEOUTLTwVI4wG1WKKKoRIGX9mhqc0JsWFTYZmctNmV3Wf-Tg2CkelrFWPI1Fhvc8jO8IIPYLZxn44APVlH7yaB_w0KDGz7KXFnufmt_NqtoHXkjClZr86fSbdr7fLmjGs8-8vK6JopZprA-5hsk6gPUeABM1Jv1N7BURMob7nN0HTR7UzQD9mbRnqb7VZL_0kAHoKTqomcNJeQ-UMNy59cvDe5bhR5Ps96C5Fz85OUbGZE3K0N3WjTohWc3OYoCiQrQlU4UgNGhEJwgZVYEUQb8t5iFJlaxD5hRoZU3-8NvB0x7Rn66Lk3kmrXWw3cwX90ls-0ip1-KDVZs98kzJ7SCPq1Ma2iAZGG383Cd6nSX6UkabhHgfwfOKxgN2lK6p3eP4wZBdxY8E6QC7X_MYiXplJJ8FO1ssQ49H322yQY3CCiDT1faNkUxRS2f0i-8bYe5fiB7Epg4Ej88tZvBMtz3QRjrR38F5QMQ_PQjByqhAqcikp3w84skrfm5n7DALl7DShouSEdGsaOwvG1pFhFkbee6iv7-mXK8slqlhwrZVxnXbkr3FR_vQHPRHakgt78RHj9vh90GuqON7BFSPMW16kucC4oAE8-Xc5dXIcoxQGGYwiYHS9Kgj3hyBPnULjNJmA9H3eLyUrA7qnIcnYZFAQ54JjVPLL4R6aSIymjxLjVeUZQr6jjBfjR_VeiFYoyEJYgB9FaZAELr6GpA-hMmddXtIOntSNmtl5qhOkSkvtQEJBq5vy5CzYdLrBhD02IQEXjDm4cFkEk2pZ0vV685BYHl2-LMc7pvaB9rqy3SJc_7q3JwPvxZazYjpg7I8iuLgFbT9eSZCMLSic4dOmufs8qGugt_XSoT5jsNO40ZPrkWzmk7-CC7dH23T9pNNuWoUymga_TMl3KjpOFgTbe_efbEsdHOiOyAepRCIofelPGnncHYm1rcXMXW0qFku-LJKAC4lGXF-tC3c-3hLxysJq9fS4JPebpMoN_JU4R8UEcad2__hk41EQ4QCSO65kfF9bexLRzhPFDWw-5n8haeYN0fy0NAfz-qqnWjDg0ZyGrnrPAKzeB1ZcYhWZD8S1f-TBFEo=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_062313ab7f002855016ae3233a754487d1be3026733afa9441","index":1}]},"fingerprint":"72e8862e348b8696"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":4084,"output_tokens":150,"total_tokens":4234,"cached_input_tokens":1826,"cache_creation_input_tokens":2255,"reasoning_tokens":96,"cost":{"total":0.000375435}},"response_id":"gen-1793270584-77fuTAihHARJ8JRks65y","finish_reason":"stop","raw":{"id":"gen-1793270584-77fuTAihHARJ8JRks65y","object":"chat.completion","created":1793270584,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"That puts Bren at odds with the Lantern Guild, despite his own fishing interests: the toll could help repair the piers while raising the Guildâs blue-salt costs. Does it apply to every shipment, including the Guildâs civilian purchases?","role":"assistant","reasoning":"**Evaluating lore relevance**\n\nI need to consider if the lore provided matches the user's message. The static document doesnât include information on the Tal Ren toll or 319, which is likely new. It does mention unrelated aspects like Bren's fishing boat and support. New lore states there are supports. I should acknowledge the tensions and connect the Guild with the blue salt supply via Nightjar season. I need to clarify whether the toll applies to all shipments, including civilian contracts or just military. Keeping it concise is key.","reasoning_details":[{"type":"reasoning.summary","summary":"**Evaluating lore relevance**\n\nI need to consider if the lore provided matches the user's message. The static document doesnât include information on the Tal Ren toll or 319, which is likely new. It does mention unrelated aspects like Bren's fishing boat and support. New lore states there are supports. I should acknowledge the tensions and connect the Guild with the blue salt supply via Nightjar season. I need to clarify whether the toll applies to all shipments, including civilian contracts or just military. Keeping it concise is key.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yM9x_jDa5p6O7RSESh24dLPm8CIKE140yqnnaTQwXM6aUNDrmKf9E78kVBYGFQZc5aocjerqGxkdI2a3CjB5jcQZ6eTUOS9rLxXfi16qvFEGlV5VpJbiLWndwc7iWb3VCsKfsXA0CFR24Q0OKKSFsVeLQjA1tM0el4J2AB0L_aJLjVayvLk3UZ8aPBdFOVphAvYN1MjhMeT6H1b8P27OyHG-1KyGeo1DPMHKz3JdYwRPJVV4whan_Z7HsPf2FZ8qjebJMiuIio3x8G0SljnGOROIyPaaFGLddatFCKb_pr5sJYtr86_8kc83WuoVkZ10MgHdMlGF8Gx4qIslD9m7TFYhmICa3QA1A0wktfUudL2x1mi1zUqmwU3np3_unPAkRp8RpJTlM2xtLQgiiCowk-FSKXJzc3AL3MRe3H-ut42hshu1doONzJtjKqNrRfkhOTU6b6eJPC1qbGb5nhUbfHljAwFOAPI7Dt1ApV4PZEZ-0upqmxIVZiaINs41GSIyDeqL_lOD5EIYDjFfu4zQWRASxnYi2C7M6q4Hcu_BYRyw1_k_Z_okjJ_uqyi2pVItA05h7KTV3-UFWGqo-APqOTJBW7azqWwoh6gtSIfdcT80qQX8tq0JU9eg394lc3w7qYUppZid3k3LuAG8WLJTXe3z1fZItrEbbfg7LBG6okfOae-Izf-Qz-tn2wzzE8gGKh_aMyAjRLqqp1KPG0FpzTE9ZyN_OhiFnSlcy8NYVLogwvEawXxF6sTBhIxwEj5B0o0BvERhf58MZ2dF_usrW-hycx-vsmm3EQPF4Bq3jelmo4bOz-g0uDpd2bRkCuCT4FulyfOLvaDpZ_GPHMG8Yq0SypUyBNE1vTAZnF2u37XwSPMbA-Sl34b8DJX8Bd0Xtc1VAU_6zvFGNLJ-OTGxg4ls227oBQCCkMC1tbHPB_Oh7gg9mOVQWru6MWa5p3On2cr7YofyvUrRIMXIkOtlcfZlxneUQkWZjidUzP9cxtNoDGlFfl2w25GOj-Wttu26oRQyYfQ2R14WXcvC5T50AbWPeVKIV20lsJS4HtWAPq2bKOfV3LaL0gFS5QHNANE1jSKeyjAVPkvL7HnptbuoZURMADccVJBINV-DWkyR23vDCkG0QJYU33fQRRIeU6l1bKDFE9bj9v80V5cnjOQ4fdvYRfFo7kz2cP6zwrK70iPGyLSXXMJ5YmFzMA7gRIpLQ-k-YfyAFQEPIG6th8ucBI5yVEo7ucXC_r9j82nX6An0naJKgC0t74hLpRJwCs47MRdtl7nuIbQzum9gfI6pHmgQ3M2104DclCoYoc9nCdcvDPbH3Lqi1_tdZaDqLRcmNe8e9UidM3x8XzdSw5RprS4huaSAvwUtF9hhhyIF-5L7qJ-NN9B3AXtn7P2FI6YSHLNTvfWPRilWn5OxpQVbcwHT17Khq1j3B78QsicfKEqDW07SbhocXiTuAenI_G0jgHsS7_TbnlKBjHT6sOu48HDKETAY-m08JX1KtrOHvYQrflmuvyDr48lAJkx1vIPfQF6bPuq38vxlZtrjqmMGI6qDGPcDbvLn-WtP2P9VB2lBFSK7qT5O5wW5Bjl6WkP0jD7dl6KeXzPeizY1T9YoYjaMSyTxZHOS0-fDOkpcSDSGnWhMPRRJbThZx9a32oddTNEtsiKXVJCuuVh-FzIGgP0iq--BNheGJMHXRYGkQXLwwJbUrNM6R9VgeIqoDtxMAs_VTXDUSbo43UWbAo-aclHA9iwVIxNSRJwgmZDzY96ig85M0XSKvLAt1eKhRxSsGdg50fegVFFJ8aNiwJrYXBmXNxPRNXg6a2Sh-eAEOUTLTwVI4wG1WKKKoRIGX9mhqc0JsWFTYZmctNmV3Wf-Tg2CkelrFWPI1Fhvc8jO8IIPYLZxn44APVlH7yaB_w0KDGz7KXFnufmt_NqtoHXkjClZr86fSbdr7fLmjGs8-8vK6JopZprA-5hsk6gPUeABM1Jv1N7BURMob7nN0HTR7UzQD9mbRnqb7VZL_0kAHoKTqomcNJeQ-UMNy59cvDe5bhR5Ps96C5Fz85OUbGZE3K0N3WjTohWc3OYoCiQrQlU4UgNGhEJwgZVYEUQb8t5iFJlaxD5hRoZU3-8NvB0x7Rn66Lk3kmrXWw3cwX90ls-0ip1-KDVZs98kzJ7SCPq1Ma2iAZGG383Cd6nSX6UkabhHgfwfOKxgN2lK6p3eP4wZBdxY8E6QC7X_MYiXplJJ8FO1ssQ49H322yQY3CCiDT1faNkUxRS2f0i-8bYe5fiB7Epg4Ej88tZvBMtz3QRjrR38F5QMQ_PQjByqhAqcikp3w84skrfm5n7DALl7DShouSEdGsaOwvG1pFhFkbee6iv7-mXK8slqlhwrZVxnXbkr3FR_vQHPRHakgt78RHj9vh90GuqON7BFSPMW16kucC4oAE8-Xc5dXIcoxQGGYwiYHS9Kgj3hyBPnULjNJmA9H3eLyUrA7qnIcnYZFAQ54JjVPLL4R6aSIymjxLjVeUZQr6jjBfjR_VeiFYoyEJYgB9FaZAELr6GpA-hMmddXtIOntSNmtl5qhOkSkvtQEJBq5vy5CzYdLrBhD02IQEXjDm4cFkEk2pZ0vV685BYHl2-LMc7pvaB9rqy3SJc_7q3JwPvxZazYjpg7I8iuLgFbT9eSZCMLSic4dOmufs8qGugt_XSoT5jsNO40ZPrkWzmk7-CC7dH23T9pNNuWoUymga_TMl3KjpOFgTbe_efbEsdHOiOyAepRCIofelPGnncHYm1rcXMXW0qFku-LJKAC4lGXF-tC3c-3hLxysJq9fS4JPebpMoN_JU4R8UEcad2__hk41EQ4QCSO65kfF9bexLRzhPFDWw-5n8haeYN0fy0NAfz-qqnWjDg0ZyGrnrPAKzeB1ZcYhWZD8S1f-TBFEo=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_062313ab7f002855016ae3233a754487d1be3026733afa9441","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4084,"completion_tokens":150,"total_tokens":4234,"cost":0.000375435,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":2255,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000375435,"upstream_inference_prompt_cost":0.000300435,"upstream_inference_completions_cost":0.000075},"completion_tokens_details":{"reasoning_tokens":96,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":4084,"output_tokens":150,"total_tokens":4234,"cached_input_tokens":1826,"cache_creation_input_tokens":2255,"reasoning_tokens":96,"cost":{"total":0.000375435}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":4084,"output_tokens":150,"total_tokens":4234,"cached_input_tokens":1826,"cache_creation_input_tokens":2255,"reasoning_tokens":96,"cost":{"total":0.000375435}},"response_id":"gen-1793270584-77fuTAihHARJ8JRks65y","finish_reason":"stop","raw":{"id":"gen-1793270584-77fuTAihHARJ8JRks65y","object":"chat.completion","created":1793270584,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"That puts Bren at odds with the Lantern Guild, despite his own fishing interests: the toll could help repair the piers while raising the Guildâs blue-salt costs. Does it apply to every shipment, including the Guildâs civilian purchases?","role":"assistant","reasoning":"**Evaluating lore relevance**\n\nI need to consider if the lore provided matches the user's message. The static document doesnât include information on the Tal Ren toll or 319, which is likely new. It does mention unrelated aspects like Bren's fishing boat and support. New lore states there are supports. I should acknowledge the tensions and connect the Guild with the blue salt supply via Nightjar season. I need to clarify whether the toll applies to all shipments, including civilian contracts or just military. Keeping it concise is key.","reasoning_details":[{"type":"reasoning.summary","summary":"**Evaluating lore relevance**\n\nI need to consider if the lore provided matches the user's message. The static document doesnât include information on the Tal Ren toll or 319, which is likely new. It does mention unrelated aspects like Bren's fishing boat and support. New lore states there are supports. I should acknowledge the tensions and connect the Guild with the blue salt supply via Nightjar season. I need to clarify whether the toll applies to all shipments, including civilian contracts or just military. Keeping it concise is key.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yM9x_jDa5p6O7RSESh24dLPm8CIKE140yqnnaTQwXM6aUNDrmKf9E78kVBYGFQZc5aocjerqGxkdI2a3CjB5jcQZ6eTUOS9rLxXfi16qvFEGlV5VpJbiLWndwc7iWb3VCsKfsXA0CFR24Q0OKKSFsVeLQjA1tM0el4J2AB0L_aJLjVayvLk3UZ8aPBdFOVphAvYN1MjhMeT6H1b8P27OyHG-1KyGeo1DPMHKz3JdYwRPJVV4whan_Z7HsPf2FZ8qjebJMiuIio3x8G0SljnGOROIyPaaFGLddatFCKb_pr5sJYtr86_8kc83WuoVkZ10MgHdMlGF8Gx4qIslD9m7TFYhmICa3QA1A0wktfUudL2x1mi1zUqmwU3np3_unPAkRp8RpJTlM2xtLQgiiCowk-FSKXJzc3AL3MRe3H-ut42hshu1doONzJtjKqNrRfkhOTU6b6eJPC1qbGb5nhUbfHljAwFOAPI7Dt1ApV4PZEZ-0upqmxIVZiaINs41GSIyDeqL_lOD5EIYDjFfu4zQWRASxnYi2C7M6q4Hcu_BYRyw1_k_Z_okjJ_uqyi2pVItA05h7KTV3-UFWGqo-APqOTJBW7azqWwoh6gtSIfdcT80qQX8tq0JU9eg394lc3w7qYUppZid3k3LuAG8WLJTXe3z1fZItrEbbfg7LBG6okfOae-Izf-Qz-tn2wzzE8gGKh_aMyAjRLqqp1KPG0FpzTE9ZyN_OhiFnSlcy8NYVLogwvEawXxF6sTBhIxwEj5B0o0BvERhf58MZ2dF_usrW-hycx-vsmm3EQPF4Bq3jelmo4bOz-g0uDpd2bRkCuCT4FulyfOLvaDpZ_GPHMG8Yq0SypUyBNE1vTAZnF2u37XwSPMbA-Sl34b8DJX8Bd0Xtc1VAU_6zvFGNLJ-OTGxg4ls227oBQCCkMC1tbHPB_Oh7gg9mOVQWru6MWa5p3On2cr7YofyvUrRIMXIkOtlcfZlxneUQkWZjidUzP9cxtNoDGlFfl2w25GOj-Wttu26oRQyYfQ2R14WXcvC5T50AbWPeVKIV20lsJS4HtWAPq2bKOfV3LaL0gFS5QHNANE1jSKeyjAVPkvL7HnptbuoZURMADccVJBINV-DWkyR23vDCkG0QJYU33fQRRIeU6l1bKDFE9bj9v80V5cnjOQ4fdvYRfFo7kz2cP6zwrK70iPGyLSXXMJ5YmFzMA7gRIpLQ-k-YfyAFQEPIG6th8ucBI5yVEo7ucXC_r9j82nX6An0naJKgC0t74hLpRJwCs47MRdtl7nuIbQzum9gfI6pHmgQ3M2104DclCoYoc9nCdcvDPbH3Lqi1_tdZaDqLRcmNe8e9UidM3x8XzdSw5RprS4huaSAvwUtF9hhhyIF-5L7qJ-NN9B3AXtn7P2FI6YSHLNTvfWPRilWn5OxpQVbcwHT17Khq1j3B78QsicfKEqDW07SbhocXiTuAenI_G0jgHsS7_TbnlKBjHT6sOu48HDKETAY-m08JX1KtrOHvYQrflmuvyDr48lAJkx1vIPfQF6bPuq38vxlZtrjqmMGI6qDGPcDbvLn-WtP2P9VB2lBFSK7qT5O5wW5Bjl6WkP0jD7dl6KeXzPeizY1T9YoYjaMSyTxZHOS0-fDOkpcSDSGnWhMPRRJbThZx9a32oddTNEtsiKXVJCuuVh-FzIGgP0iq--BNheGJMHXRYGkQXLwwJbUrNM6R9VgeIqoDtxMAs_VTXDUSbo43UWbAo-aclHA9iwVIxNSRJwgmZDzY96ig85M0XSKvLAt1eKhRxSsGdg50fegVFFJ8aNiwJrYXBmXNxPRNXg6a2Sh-eAEOUTLTwVI4wG1WKKKoRIGX9mhqc0JsWFTYZmctNmV3Wf-Tg2CkelrFWPI1Fhvc8jO8IIPYLZxn44APVlH7yaB_w0KDGz7KXFnufmt_NqtoHXkjClZr86fSbdr7fLmjGs8-8vK6JopZprA-5hsk6gPUeABM1Jv1N7BURMob7nN0HTR7UzQD9mbRnqb7VZL_0kAHoKTqomcNJeQ-UMNy59cvDe5bhR5Ps96C5Fz85OUbGZE3K0N3WjTohWc3OYoCiQrQlU4UgNGhEJwgZVYEUQb8t5iFJlaxD5hRoZU3-8NvB0x7Rn66Lk3kmrXWw3cwX90ls-0ip1-KDVZs98kzJ7SCPq1Ma2iAZGG383Cd6nSX6UkabhHgfwfOKxgN2lK6p3eP4wZBdxY8E6QC7X_MYiXplJJ8FO1ssQ49H322yQY3CCiDT1faNkUxRS2f0i-8bYe5fiB7Epg4Ej88tZvBMtz3QRjrR38F5QMQ_PQjByqhAqcikp3w84skrfm5n7DALl7DShouSEdGsaOwvG1pFhFkbee6iv7-mXK8slqlhwrZVxnXbkr3FR_vQHPRHakgt78RHj9vh90GuqON7BFSPMW16kucC4oAE8-Xc5dXIcoxQGGYwiYHS9Kgj3hyBPnULjNJmA9H3eLyUrA7qnIcnYZFAQ54JjVPLL4R6aSIymjxLjVeUZQr6jjBfjR_VeiFYoyEJYgB9FaZAELr6GpA-hMmddXtIOntSNmtl5qhOkSkvtQEJBq5vy5CzYdLrBhD02IQEXjDm4cFkEk2pZ0vV685BYHl2-LMc7pvaB9rqy3SJc_7q3JwPvxZazYjpg7I8iuLgFbT9eSZCMLSic4dOmufs8qGugt_XSoT5jsNO40ZPrkWzmk7-CC7dH23T9pNNuWoUymga_TMl3KjpOFgTbe_efbEsdHOiOyAepRCIofelPGnncHYm1rcXMXW0qFku-LJKAC4lGXF-tC3c-3hLxysJq9fS4JPebpMoN_JU4R8UEcad2__hk41EQ4QCSO65kfF9bexLRzhPFDWw-5n8haeYN0fy0NAfz-qqnWjDg0ZyGrnrPAKzeB1ZcYhWZD8S1f-TBFEo=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_062313ab7f002855016ae3233a754487d1be3026733afa9441","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4084,"completion_tokens":150,"total_tokens":4234,"cost":0.000375435,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":2255,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000375435,"upstream_inference_prompt_cost":0.000300435,"upstream_inference_completions_cost":0.000075},"completion_tokens_details":{"reasoning_tokens":96,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"Vesper's governor, Tal Ren, imposed a toll on blue salt shipments in 319. The Lantern Guild opposes the toll. Bren supports it because the revenue repairs fishing piers."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Evaluating lore relevance**\n\nI need to consider if the lore provided matches the user's message. The static document doesnât include information on the Tal Ren toll or 319, which is likely new. It does mention unrelated aspects like Bren's fishing boat and support. New lore states there are supports. I should acknowledge the tensions and connect the Guild with the blue salt supply via Nightjar season. I need to clarify whether the toll applies to all shipments, including civilian contracts or just military. Keeping it concise is key.","native":{"item":{"reasoning":"**Evaluating lore relevance**\n\nI need to consider if the lore provided matches the user's message. The static document doesnât include information on the Tal Ren toll or 319, which is likely new. It does mention unrelated aspects like Bren's fishing boat and support. New lore states there are supports. I should acknowledge the tensions and connect the Guild with the blue salt supply via Nightjar season. I need to clarify whether the toll applies to all shipments, including civilian contracts or just military. Keeping it concise is key.","reasoning_details":[{"type":"reasoning.summary","summary":"**Evaluating lore relevance**\n\nI need to consider if the lore provided matches the user's message. The static document doesnât include information on the Tal Ren toll or 319, which is likely new. It does mention unrelated aspects like Bren's fishing boat and support. New lore states there are supports. I should acknowledge the tensions and connect the Guild with the blue salt supply via Nightjar season. I need to clarify whether the toll applies to all shipments, including civilian contracts or just military. Keeping it concise is key.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yM9x_jDa5p6O7RSESh24dLPm8CIKE140yqnnaTQwXM6aUNDrmKf9E78kVBYGFQZc5aocjerqGxkdI2a3CjB5jcQZ6eTUOS9rLxXfi16qvFEGlV5VpJbiLWndwc7iWb3VCsKfsXA0CFR24Q0OKKSFsVeLQjA1tM0el4J2AB0L_aJLjVayvLk3UZ8aPBdFOVphAvYN1MjhMeT6H1b8P27OyHG-1KyGeo1DPMHKz3JdYwRPJVV4whan_Z7HsPf2FZ8qjebJMiuIio3x8G0SljnGOROIyPaaFGLddatFCKb_pr5sJYtr86_8kc83WuoVkZ10MgHdMlGF8Gx4qIslD9m7TFYhmICa3QA1A0wktfUudL2x1mi1zUqmwU3np3_unPAkRp8RpJTlM2xtLQgiiCowk-FSKXJzc3AL3MRe3H-ut42hshu1doONzJtjKqNrRfkhOTU6b6eJPC1qbGb5nhUbfHljAwFOAPI7Dt1ApV4PZEZ-0upqmxIVZiaINs41GSIyDeqL_lOD5EIYDjFfu4zQWRASxnYi2C7M6q4Hcu_BYRyw1_k_Z_okjJ_uqyi2pVItA05h7KTV3-UFWGqo-APqOTJBW7azqWwoh6gtSIfdcT80qQX8tq0JU9eg394lc3w7qYUppZid3k3LuAG8WLJTXe3z1fZItrEbbfg7LBG6okfOae-Izf-Qz-tn2wzzE8gGKh_aMyAjRLqqp1KPG0FpzTE9ZyN_OhiFnSlcy8NYVLogwvEawXxF6sTBhIxwEj5B0o0BvERhf58MZ2dF_usrW-hycx-vsmm3EQPF4Bq3jelmo4bOz-g0uDpd2bRkCuCT4FulyfOLvaDpZ_GPHMG8Yq0SypUyBNE1vTAZnF2u37XwSPMbA-Sl34b8DJX8Bd0Xtc1VAU_6zvFGNLJ-OTGxg4ls227oBQCCkMC1tbHPB_Oh7gg9mOVQWru6MWa5p3On2cr7YofyvUrRIMXIkOtlcfZlxneUQkWZjidUzP9cxtNoDGlFfl2w25GOj-Wttu26oRQyYfQ2R14WXcvC5T50AbWPeVKIV20lsJS4HtWAPq2bKOfV3LaL0gFS5QHNANE1jSKeyjAVPkvL7HnptbuoZURMADccVJBINV-DWkyR23vDCkG0QJYU33fQRRIeU6l1bKDFE9bj9v80V5cnjOQ4fdvYRfFo7kz2cP6zwrK70iPGyLSXXMJ5YmFzMA7gRIpLQ-k-YfyAFQEPIG6th8ucBI5yVEo7ucXC_r9j82nX6An0naJKgC0t74hLpRJwCs47MRdtl7nuIbQzum9gfI6pHmgQ3M2104DclCoYoc9nCdcvDPbH3Lqi1_tdZaDqLRcmNe8e9UidM3x8XzdSw5RprS4huaSAvwUtF9hhhyIF-5L7qJ-NN9B3AXtn7P2FI6YSHLNTvfWPRilWn5OxpQVbcwHT17Khq1j3B78QsicfKEqDW07SbhocXiTuAenI_G0jgHsS7_TbnlKBjHT6sOu48HDKETAY-m08JX1KtrOHvYQrflmuvyDr48lAJkx1vIPfQF6bPuq38vxlZtrjqmMGI6qDGPcDbvLn-WtP2P9VB2lBFSK7qT5O5wW5Bjl6WkP0jD7dl6KeXzPeizY1T9YoYjaMSyTxZHOS0-fDOkpcSDSGnWhMPRRJbThZx9a32oddTNEtsiKXVJCuuVh-FzIGgP0iq--BNheGJMHXRYGkQXLwwJbUrNM6R9VgeIqoDtxMAs_VTXDUSbo43UWbAo-aclHA9iwVIxNSRJwgmZDzY96ig85M0XSKvLAt1eKhRxSsGdg50fegVFFJ8aNiwJrYXBmXNxPRNXg6a2Sh-eAEOUTLTwVI4wG1WKKKoRIGX9mhqc0JsWFTYZmctNmV3Wf-Tg2CkelrFWPI1Fhvc8jO8IIPYLZxn44APVlH7yaB_w0KDGz7KXFnufmt_NqtoHXkjClZr86fSbdr7fLmjGs8-8vK6JopZprA-5hsk6gPUeABM1Jv1N7BURMob7nN0HTR7UzQD9mbRnqb7VZL_0kAHoKTqomcNJeQ-UMNy59cvDe5bhR5Ps96C5Fz85OUbGZE3K0N3WjTohWc3OYoCiQrQlU4UgNGhEJwgZVYEUQb8t5iFJlaxD5hRoZU3-8NvB0x7Rn66Lk3kmrXWw3cwX90ls-0ip1-KDVZs98kzJ7SCPq1Ma2iAZGG383Cd6nSX6UkabhHgfwfOKxgN2lK6p3eP4wZBdxY8E6QC7X_MYiXplJJ8FO1ssQ49H322yQY3CCiDT1faNkUxRS2f0i-8bYe5fiB7Epg4Ej88tZvBMtz3QRjrR38F5QMQ_PQjByqhAqcikp3w84skrfm5n7DALl7DShouSEdGsaOwvG1pFhFkbee6iv7-mXK8slqlhwrZVxnXbkr3FR_vQHPRHakgt78RHj9vh90GuqON7BFSPMW16kucC4oAE8-Xc5dXIcoxQGGYwiYHS9Kgj3hyBPnULjNJmA9H3eLyUrA7qnIcnYZFAQ54JjVPLL4R6aSIymjxLjVeUZQr6jjBfjR_VeiFYoyEJYgB9FaZAELr6GpA-hMmddXtIOntSNmtl5qhOkSkvtQEJBq5vy5CzYdLrBhD02IQEXjDm4cFkEk2pZ0vV685BYHl2-LMc7pvaB9rqy3SJc_7q3JwPvxZazYjpg7I8iuLgFbT9eSZCMLSic4dOmufs8qGugt_XSoT5jsNO40ZPrkWzmk7-CC7dH23T9pNNuWoUymga_TMl3KjpOFgTbe_efbEsdHOiOyAepRCIofelPGnncHYm1rcXMXW0qFku-LJKAC4lGXF-tC3c-3hLxysJq9fS4JPebpMoN_JU4R8UEcad2__hk41EQ4QCSO65kfF9bexLRzhPFDWw-5n8haeYN0fy0NAfz-qqnWjDg0ZyGrnrPAKzeB1ZcYhWZD8S1f-TBFEo=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_062313ab7f002855016ae3233a754487d1be3026733afa9441","index":1}]},"fingerprint":"72e8862e348b8696"}},{"type":"text","text":"That puts Bren at odds with the Lantern Guild, despite his own fishing interests: the toll could help repair the piers while raising the Guildâs blue-salt costs. Does it apply to every shipment, including the Guildâs civilian purchases?"}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793270584-77fuTAihHARJ8JRks65y"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Evaluating lore relevance**\n\nI need to consider if the lore provided matches the user's message. The static document doesnât include information on the Tal Ren toll or 319, which is likely new. It does mention unrelated aspects like Bren's fishing boat and support. New lore states there are supports. I should acknowledge the tensions and connect the Guild with the blue salt supply via Nightjar season. I need to clarify whether the toll applies to all shipments, including civilian contracts or just military. Keeping it concise is key.","native":{"item":{"reasoning":"**Evaluating lore relevance**\n\nI need to consider if the lore provided matches the user's message. The static document doesnât include information on the Tal Ren toll or 319, which is likely new. It does mention unrelated aspects like Bren's fishing boat and support. New lore states there are supports. I should acknowledge the tensions and connect the Guild with the blue salt supply via Nightjar season. I need to clarify whether the toll applies to all shipments, including civilian contracts or just military. Keeping it concise is key.","reasoning_details":[{"type":"reasoning.summary","summary":"**Evaluating lore relevance**\n\nI need to consider if the lore provided matches the user's message. The static document doesnât include information on the Tal Ren toll or 319, which is likely new. It does mention unrelated aspects like Bren's fishing boat and support. New lore states there are supports. I should acknowledge the tensions and connect the Guild with the blue salt supply via Nightjar season. I need to clarify whether the toll applies to all shipments, including civilian contracts or just military. Keeping it concise is key.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yM9x_jDa5p6O7RSESh24dLPm8CIKE140yqnnaTQwXM6aUNDrmKf9E78kVBYGFQZc5aocjerqGxkdI2a3CjB5jcQZ6eTUOS9rLxXfi16qvFEGlV5VpJbiLWndwc7iWb3VCsKfsXA0CFR24Q0OKKSFsVeLQjA1tM0el4J2AB0L_aJLjVayvLk3UZ8aPBdFOVphAvYN1MjhMeT6H1b8P27OyHG-1KyGeo1DPMHKz3JdYwRPJVV4whan_Z7HsPf2FZ8qjebJMiuIio3x8G0SljnGOROIyPaaFGLddatFCKb_pr5sJYtr86_8kc83WuoVkZ10MgHdMlGF8Gx4qIslD9m7TFYhmICa3QA1A0wktfUudL2x1mi1zUqmwU3np3_unPAkRp8RpJTlM2xtLQgiiCowk-FSKXJzc3AL3MRe3H-ut42hshu1doONzJtjKqNrRfkhOTU6b6eJPC1qbGb5nhUbfHljAwFOAPI7Dt1ApV4PZEZ-0upqmxIVZiaINs41GSIyDeqL_lOD5EIYDjFfu4zQWRASxnYi2C7M6q4Hcu_BYRyw1_k_Z_okjJ_uqyi2pVItA05h7KTV3-UFWGqo-APqOTJBW7azqWwoh6gtSIfdcT80qQX8tq0JU9eg394lc3w7qYUppZid3k3LuAG8WLJTXe3z1fZItrEbbfg7LBG6okfOae-Izf-Qz-tn2wzzE8gGKh_aMyAjRLqqp1KPG0FpzTE9ZyN_OhiFnSlcy8NYVLogwvEawXxF6sTBhIxwEj5B0o0BvERhf58MZ2dF_usrW-hycx-vsmm3EQPF4Bq3jelmo4bOz-g0uDpd2bRkCuCT4FulyfOLvaDpZ_GPHMG8Yq0SypUyBNE1vTAZnF2u37XwSPMbA-Sl34b8DJX8Bd0Xtc1VAU_6zvFGNLJ-OTGxg4ls227oBQCCkMC1tbHPB_Oh7gg9mOVQWru6MWa5p3On2cr7YofyvUrRIMXIkOtlcfZlxneUQkWZjidUzP9cxtNoDGlFfl2w25GOj-Wttu26oRQyYfQ2R14WXcvC5T50AbWPeVKIV20lsJS4HtWAPq2bKOfV3LaL0gFS5QHNANE1jSKeyjAVPkvL7HnptbuoZURMADccVJBINV-DWkyR23vDCkG0QJYU33fQRRIeU6l1bKDFE9bj9v80V5cnjOQ4fdvYRfFo7kz2cP6zwrK70iPGyLSXXMJ5YmFzMA7gRIpLQ-k-YfyAFQEPIG6th8ucBI5yVEo7ucXC_r9j82nX6An0naJKgC0t74hLpRJwCs47MRdtl7nuIbQzum9gfI6pHmgQ3M2104DclCoYoc9nCdcvDPbH3Lqi1_tdZaDqLRcmNe8e9UidM3x8XzdSw5RprS4huaSAvwUtF9hhhyIF-5L7qJ-NN9B3AXtn7P2FI6YSHLNTvfWPRilWn5OxpQVbcwHT17Khq1j3B78QsicfKEqDW07SbhocXiTuAenI_G0jgHsS7_TbnlKBjHT6sOu48HDKETAY-m08JX1KtrOHvYQrflmuvyDr48lAJkx1vIPfQF6bPuq38vxlZtrjqmMGI6qDGPcDbvLn-WtP2P9VB2lBFSK7qT5O5wW5Bjl6WkP0jD7dl6KeXzPeizY1T9YoYjaMSyTxZHOS0-fDOkpcSDSGnWhMPRRJbThZx9a32oddTNEtsiKXVJCuuVh-FzIGgP0iq--BNheGJMHXRYGkQXLwwJbUrNM6R9VgeIqoDtxMAs_VTXDUSbo43UWbAo-aclHA9iwVIxNSRJwgmZDzY96ig85M0XSKvLAt1eKhRxSsGdg50fegVFFJ8aNiwJrYXBmXNxPRNXg6a2Sh-eAEOUTLTwVI4wG1WKKKoRIGX9mhqc0JsWFTYZmctNmV3Wf-Tg2CkelrFWPI1Fhvc8jO8IIPYLZxn44APVlH7yaB_w0KDGz7KXFnufmt_NqtoHXkjClZr86fSbdr7fLmjGs8-8vK6JopZprA-5hsk6gPUeABM1Jv1N7BURMob7nN0HTR7UzQD9mbRnqb7VZL_0kAHoKTqomcNJeQ-UMNy59cvDe5bhR5Ps96C5Fz85OUbGZE3K0N3WjTohWc3OYoCiQrQlU4UgNGhEJwgZVYEUQb8t5iFJlaxD5hRoZU3-8NvB0x7Rn66Lk3kmrXWw3cwX90ls-0ip1-KDVZs98kzJ7SCPq1Ma2iAZGG383Cd6nSX6UkabhHgfwfOKxgN2lK6p3eP4wZBdxY8E6QC7X_MYiXplJJ8FO1ssQ49H322yQY3CCiDT1faNkUxRS2f0i-8bYe5fiB7Epg4Ej88tZvBMtz3QRjrR38F5QMQ_PQjByqhAqcikp3w84skrfm5n7DALl7DShouSEdGsaOwvG1pFhFkbee6iv7-mXK8slqlhwrZVxnXbkr3FR_vQHPRHakgt78RHj9vh90GuqON7BFSPMW16kucC4oAE8-Xc5dXIcoxQGGYwiYHS9Kgj3hyBPnULjNJmA9H3eLyUrA7qnIcnYZFAQ54JjVPLL4R6aSIymjxLjVeUZQr6jjBfjR_VeiFYoyEJYgB9FaZAELr6GpA-hMmddXtIOntSNmtl5qhOkSkvtQEJBq5vy5CzYdLrBhD02IQEXjDm4cFkEk2pZ0vV685BYHl2-LMc7pvaB9rqy3SJc_7q3JwPvxZazYjpg7I8iuLgFbT9eSZCMLSic4dOmufs8qGugt_XSoT5jsNO40ZPrkWzmk7-CC7dH23T9pNNuWoUymga_TMl3KjpOFgTbe_efbEsdHOiOyAepRCIofelPGnncHYm1rcXMXW0qFku-LJKAC4lGXF-tC3c-3hLxysJq9fS4JPebpMoN_JU4R8UEcad2__hk41EQ4QCSO65kfF9bexLRzhPFDWw-5n8haeYN0fy0NAfz-qqnWjDg0ZyGrnrPAKzeB1ZcYhWZD8S1f-TBFEo=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_062313ab7f002855016ae3233a754487d1be3026733afa9441","index":1}]},"fingerprint":"72e8862e348b8696"}},{"type":"text","text":"That puts Bren at odds with the Lantern Guild, despite his own fishing interests: the toll could help repair the piers while raising the Guildâs blue-salt costs. Does it apply to every shipment, including the Guildâs civilian purchases?"}]}
+

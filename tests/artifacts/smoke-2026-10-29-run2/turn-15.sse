@@ -1,0 +1,264 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Considering contradictory notes**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" acknowledge"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" there"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" are"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" contradictions"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" here"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" should"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" avoid"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" making"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" any"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" assumptions"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" creating"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" new"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" conclusions"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" might"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" be"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" best"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" simply"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" say"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"’ll"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" treat"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" this"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" as"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" unresolved"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" for"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" now"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" could"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" respond"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" with"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" something"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" like"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" “"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"Absolutely"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"—we"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"’ll"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" keep"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" both"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" notes"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" as"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" written"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":".”"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" This"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" keeps"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" things"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" concise"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" clear"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" without"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" trying"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" invent"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" something"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" isn't"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" there"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" want"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ensure"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I'm"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" representing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" both"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" sides"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" accurately"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"!"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Absolutely"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" We"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"’ll"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" leave"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" both"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" notes"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" as"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" written"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" room"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" remains"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" sealed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" with"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" no"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" other"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" entrance"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ven"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" S"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"era"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"’s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" "}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"320"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" meeting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" remains"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" unexpl"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ained"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" won"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"’t"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" fill"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" secret"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" entrance"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" excavation"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"Absolutely. We’ll leave both notes as written: the room remains sealed with no other entrance, and Iven and Sera’s 320 meeting remains unexplained. I won’t fill in a secret entrance or excavation."}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Considering contradictory notes**\n\nI need to acknowledge that there are contradictions here, but I should avoid making any assumptions or creating new conclusions. It might be best to simply say that I’ll treat this as unresolved for now. I could respond with something like, “Absolutely—we’ll keep both notes as written.” This keeps things concise and clear without trying to invent something that isn't there. I want to ensure that I'm representing both sides accurately!","native":{"item":{"reasoning":"**Considering contradictory notes**\n\nI need to acknowledge that there are contradictions here, but I should avoid making any assumptions or creating new conclusions. It might be best to simply say that I’ll treat this as unresolved for now. I could respond with something like, “Absolutely—we’ll keep both notes as written.” This keeps things concise and clear without trying to invent something that isn't there. I want to ensure that I'm representing both sides accurately!","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering contradictory notes**\n\nI need to acknowledge that there are contradictions here, but I should avoid making any assumptions or creating new conclusions. It might be best to simply say that I’ll treat this as unresolved for now. I could respond with something like, “Absolutely—we’ll keep both notes as written.” This keeps things concise and clear without trying to invent something that isn't there. I want to ensure that I'm representing both sides accurately!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y84RqjFGZBYqBS0-ucp4rXNGNJJSFOmN7akpWbZa1MNTVWBHoGq6y2jq_DE6Jnqr8VSK-XpNfd4u6BUJLpEQcQx_EbINL9A5qFD5vcKKIoawEjImbKbXnTHZcKJMknXzojiXFWWy99Uv4yaWCF3ZY4Pw7s8O4HiisVJN_ThesDYJqWE8szoLBEMxTAnXOdwafoWQbbRZexdLz28jhMAmRqcALnKXjDx1U6QQvpi1VIOSGDoxcogUIuPD4DlW_awVDphw0NXSiWw1fLPs4IxOJViQuRiEL71tU80eL3WGyuCa8BV-9Gzzp_nNsHMECzbDQ9c8FFLk42e-VE5YLnKI9Nog79nCa7G3SNwmmLh5jZe2z7Xdv5R7GWRtfGBjBAaErHBNjUS7B6oWsxjP4kB-_xchA0-fdTwQuLYxBsPxQke8LNoqfltDrEQ2QyZi8BgnniiIY367kJcpspCJYjSFxNexkh_hVAV-TQJw-YqTKN0Um62wWjxv_VlvfAcpOcGQb334_kNr8Nnqd_0Y_83RXLcLkA9iyDSsxRUBLUYKRwGIGZyfsyVG0BReNYvLoEHSLzkXT7Q12vpd6_WjJNT1hpsim2kjos9U5bBiZBIVbY6p3O2gE05qJsjeQkci8MP5QoyixvSxskg_Stx6OnTW1otX8Fj8Q_TEuuoBCQavmRQb9sGjgh8hDV3Hrkau2sRN_ITZE1U7JkNgfoFCj7swiQfwQ9dtrJoKUAGuQSUaXCL5jYeXsUwql2jicDgorHE-VHhCvVE59CRUe61I1n8aEmg8bvfVhdITDMcFZIT-uoVbfamLAskehvotyOzO2dC6QFBdxfH0OxPLFYu6XiARmLjyy8nxaigMDA8Mp_wKqxgQuraKPJqhyT2WjFTQ3i1AK07nriV2w-ycPjapWex7bUUbaQ1fld3T032a-3cAqr3fgkFGY7shH8KKCs3J7ma40-oFKEcGinbXSSmAqPgH0pkhzTEwaNNwD5BJJo6Z5TAVS5KegVA2nAZySdEo_b1_d23QoPvEUnMS9zKw-z0LOa3cnoCdIWViNWGdS8F_e47yZYcEg6aw9FdyIWCXjz7bY8HXCrla7PvfuMMszxGbJj3sJ4eI0mTN-vSpxCCaoCcZSrRD7UrgFr8Q45MVjr_JlzLwJ2lAl7Jru_ovcrBeJgPaAz1Ctm71RytFnqEfAEr36inEVI-HrTA3o3R4hDSDev5RrZxW97qbfFdzD9to9h3BaSJUNqz32HosFUgjEivkywBJVSNRM-J9wMYY0-B1sqPtzMj5yxN66pPI6vLrMBUAgIc7xe-rx1MbaGrKEfBwDX4gU9AzTIIf2GfI2cPRVTWeK8N6MX7adp_lmRl5Llq928EKdTGTdlUcVoHVddQbl7Q2evza349D4faQZqlitnez99c2SGGOUPAfPLVnYaZGF4su6lsgIU9MKOoFv7PsRAZ-vH-iqxdJ4WJEoevN2gPmH18n1a-W71c6Y89aI1Euq-pDVSi5mah1hBvHZMc2_wacsXzIaZLPzb44fUmUCPyicqtbcGKOB3IPeBH5qNKMZDrOKatgrRTYpuDIKlpdBe8cqHBmcS64jEqk9wmFhEhkWbZMHBwSuxectTBBK_2yfOLOx3qHnzDnfGSNNYrdemHMPnKQmIaoKBkSnHwSl9WoYgixyUvY_YqGoRo_k9G3PgYYTbQoGqbLxbMTZ6BEy3osRrvzJ-e7CwQs36aJjCpOEmHriK9tfeZziBxcUZIVBRgA-w3dcgNtBj8pYNMW4JMh_79otJzkPq6jsYs3yOKtpQY-iDWTZ5OGf7EbBxJ04vwi-krF719GgGXRGGtBRuSRgPrUCPNsSYhQNERCPjS8koGec5WFFo6DcFWwYW-3E7CiI-wE7xXf0W7ZLp9twZhSj9h8apjlxQm4fbK_-g5HOmI9t5QmjSEoUkX3F1BZruJ3hFGCk6AuIBzSFM5DOZqEJAmkyz1lewLhyh1n___jtGMUC7sfILsVAsMUgg8Ta48bMKLoOf9mqerdOUorcWTQosn8oRJOm-RRYuRqdgrp1ifIxiiA11ikL_ia3ZqvhyFeWygaw04A8UMTwRu1cc=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0fa73e8024a2c738016ae32f36e2d487d1a10e95376620f148","index":1}]},"fingerprint":"ec8da0c4574bc73a"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":4624,"output_tokens":89,"total_tokens":4713,"cached_input_tokens":1826,"cache_creation_input_tokens":2795,"reasoning_tokens":39,"cost":{"total":0.000412435}},"response_id":"gen-1793273653-XjfUSIIsFmRamqOOe8GZ","finish_reason":"stop","raw":{"id":"gen-1793273653-XjfUSIIsFmRamqOOe8GZ","object":"chat.completion","created":1793273653,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Absolutely. We’ll leave both notes as written: the room remains sealed with no other entrance, and Iven and Sera’s 320 meeting remains unexplained. I won’t fill in a secret entrance or excavation.","role":"assistant","reasoning":"**Considering contradictory notes**\n\nI need to acknowledge that there are contradictions here, but I should avoid making any assumptions or creating new conclusions. It might be best to simply say that I’ll treat this as unresolved for now. I could respond with something like, “Absolutely—we’ll keep both notes as written.” This keeps things concise and clear without trying to invent something that isn't there. I want to ensure that I'm representing both sides accurately!","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering contradictory notes**\n\nI need to acknowledge that there are contradictions here, but I should avoid making any assumptions or creating new conclusions. It might be best to simply say that I’ll treat this as unresolved for now. I could respond with something like, “Absolutely—we’ll keep both notes as written.” This keeps things concise and clear without trying to invent something that isn't there. I want to ensure that I'm representing both sides accurately!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y84RqjFGZBYqBS0-ucp4rXNGNJJSFOmN7akpWbZa1MNTVWBHoGq6y2jq_DE6Jnqr8VSK-XpNfd4u6BUJLpEQcQx_EbINL9A5qFD5vcKKIoawEjImbKbXnTHZcKJMknXzojiXFWWy99Uv4yaWCF3ZY4Pw7s8O4HiisVJN_ThesDYJqWE8szoLBEMxTAnXOdwafoWQbbRZexdLz28jhMAmRqcALnKXjDx1U6QQvpi1VIOSGDoxcogUIuPD4DlW_awVDphw0NXSiWw1fLPs4IxOJViQuRiEL71tU80eL3WGyuCa8BV-9Gzzp_nNsHMECzbDQ9c8FFLk42e-VE5YLnKI9Nog79nCa7G3SNwmmLh5jZe2z7Xdv5R7GWRtfGBjBAaErHBNjUS7B6oWsxjP4kB-_xchA0-fdTwQuLYxBsPxQke8LNoqfltDrEQ2QyZi8BgnniiIY367kJcpspCJYjSFxNexkh_hVAV-TQJw-YqTKN0Um62wWjxv_VlvfAcpOcGQb334_kNr8Nnqd_0Y_83RXLcLkA9iyDSsxRUBLUYKRwGIGZyfsyVG0BReNYvLoEHSLzkXT7Q12vpd6_WjJNT1hpsim2kjos9U5bBiZBIVbY6p3O2gE05qJsjeQkci8MP5QoyixvSxskg_Stx6OnTW1otX8Fj8Q_TEuuoBCQavmRQb9sGjgh8hDV3Hrkau2sRN_ITZE1U7JkNgfoFCj7swiQfwQ9dtrJoKUAGuQSUaXCL5jYeXsUwql2jicDgorHE-VHhCvVE59CRUe61I1n8aEmg8bvfVhdITDMcFZIT-uoVbfamLAskehvotyOzO2dC6QFBdxfH0OxPLFYu6XiARmLjyy8nxaigMDA8Mp_wKqxgQuraKPJqhyT2WjFTQ3i1AK07nriV2w-ycPjapWex7bUUbaQ1fld3T032a-3cAqr3fgkFGY7shH8KKCs3J7ma40-oFKEcGinbXSSmAqPgH0pkhzTEwaNNwD5BJJo6Z5TAVS5KegVA2nAZySdEo_b1_d23QoPvEUnMS9zKw-z0LOa3cnoCdIWViNWGdS8F_e47yZYcEg6aw9FdyIWCXjz7bY8HXCrla7PvfuMMszxGbJj3sJ4eI0mTN-vSpxCCaoCcZSrRD7UrgFr8Q45MVjr_JlzLwJ2lAl7Jru_ovcrBeJgPaAz1Ctm71RytFnqEfAEr36inEVI-HrTA3o3R4hDSDev5RrZxW97qbfFdzD9to9h3BaSJUNqz32HosFUgjEivkywBJVSNRM-J9wMYY0-B1sqPtzMj5yxN66pPI6vLrMBUAgIc7xe-rx1MbaGrKEfBwDX4gU9AzTIIf2GfI2cPRVTWeK8N6MX7adp_lmRl5Llq928EKdTGTdlUcVoHVddQbl7Q2evza349D4faQZqlitnez99c2SGGOUPAfPLVnYaZGF4su6lsgIU9MKOoFv7PsRAZ-vH-iqxdJ4WJEoevN2gPmH18n1a-W71c6Y89aI1Euq-pDVSi5mah1hBvHZMc2_wacsXzIaZLPzb44fUmUCPyicqtbcGKOB3IPeBH5qNKMZDrOKatgrRTYpuDIKlpdBe8cqHBmcS64jEqk9wmFhEhkWbZMHBwSuxectTBBK_2yfOLOx3qHnzDnfGSNNYrdemHMPnKQmIaoKBkSnHwSl9WoYgixyUvY_YqGoRo_k9G3PgYYTbQoGqbLxbMTZ6BEy3osRrvzJ-e7CwQs36aJjCpOEmHriK9tfeZziBxcUZIVBRgA-w3dcgNtBj8pYNMW4JMh_79otJzkPq6jsYs3yOKtpQY-iDWTZ5OGf7EbBxJ04vwi-krF719GgGXRGGtBRuSRgPrUCPNsSYhQNERCPjS8koGec5WFFo6DcFWwYW-3E7CiI-wE7xXf0W7ZLp9twZhSj9h8apjlxQm4fbK_-g5HOmI9t5QmjSEoUkX3F1BZruJ3hFGCk6AuIBzSFM5DOZqEJAmkyz1lewLhyh1n___jtGMUC7sfILsVAsMUgg8Ta48bMKLoOf9mqerdOUorcWTQosn8oRJOm-RRYuRqdgrp1ifIxiiA11ikL_ia3ZqvhyFeWygaw04A8UMTwRu1cc=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0fa73e8024a2c738016ae32f36e2d487d1a10e95376620f148","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4624,"completion_tokens":89,"total_tokens":4713,"cost":0.000412435,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":2795,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000412435,"upstream_inference_prompt_cost":0.000367935,"upstream_inference_completions_cost":0.0000445},"completion_tokens_details":{"reasoning_tokens":39,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":4624,"output_tokens":89,"total_tokens":4713,"cached_input_tokens":1826,"cache_creation_input_tokens":2795,"reasoning_tokens":39,"cost":{"total":0.000412435}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":4624,"output_tokens":89,"total_tokens":4713,"cached_input_tokens":1826,"cache_creation_input_tokens":2795,"reasoning_tokens":39,"cost":{"total":0.000412435}},"response_id":"gen-1793273653-XjfUSIIsFmRamqOOe8GZ","finish_reason":"stop","raw":{"id":"gen-1793273653-XjfUSIIsFmRamqOOe8GZ","object":"chat.completion","created":1793273653,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Absolutely. We’ll leave both notes as written: the room remains sealed with no other entrance, and Iven and Sera’s 320 meeting remains unexplained. I won’t fill in a secret entrance or excavation.","role":"assistant","reasoning":"**Considering contradictory notes**\n\nI need to acknowledge that there are contradictions here, but I should avoid making any assumptions or creating new conclusions. It might be best to simply say that I’ll treat this as unresolved for now. I could respond with something like, “Absolutely—we’ll keep both notes as written.” This keeps things concise and clear without trying to invent something that isn't there. I want to ensure that I'm representing both sides accurately!","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering contradictory notes**\n\nI need to acknowledge that there are contradictions here, but I should avoid making any assumptions or creating new conclusions. It might be best to simply say that I’ll treat this as unresolved for now. I could respond with something like, “Absolutely—we’ll keep both notes as written.” This keeps things concise and clear without trying to invent something that isn't there. I want to ensure that I'm representing both sides accurately!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y84RqjFGZBYqBS0-ucp4rXNGNJJSFOmN7akpWbZa1MNTVWBHoGq6y2jq_DE6Jnqr8VSK-XpNfd4u6BUJLpEQcQx_EbINL9A5qFD5vcKKIoawEjImbKbXnTHZcKJMknXzojiXFWWy99Uv4yaWCF3ZY4Pw7s8O4HiisVJN_ThesDYJqWE8szoLBEMxTAnXOdwafoWQbbRZexdLz28jhMAmRqcALnKXjDx1U6QQvpi1VIOSGDoxcogUIuPD4DlW_awVDphw0NXSiWw1fLPs4IxOJViQuRiEL71tU80eL3WGyuCa8BV-9Gzzp_nNsHMECzbDQ9c8FFLk42e-VE5YLnKI9Nog79nCa7G3SNwmmLh5jZe2z7Xdv5R7GWRtfGBjBAaErHBNjUS7B6oWsxjP4kB-_xchA0-fdTwQuLYxBsPxQke8LNoqfltDrEQ2QyZi8BgnniiIY367kJcpspCJYjSFxNexkh_hVAV-TQJw-YqTKN0Um62wWjxv_VlvfAcpOcGQb334_kNr8Nnqd_0Y_83RXLcLkA9iyDSsxRUBLUYKRwGIGZyfsyVG0BReNYvLoEHSLzkXT7Q12vpd6_WjJNT1hpsim2kjos9U5bBiZBIVbY6p3O2gE05qJsjeQkci8MP5QoyixvSxskg_Stx6OnTW1otX8Fj8Q_TEuuoBCQavmRQb9sGjgh8hDV3Hrkau2sRN_ITZE1U7JkNgfoFCj7swiQfwQ9dtrJoKUAGuQSUaXCL5jYeXsUwql2jicDgorHE-VHhCvVE59CRUe61I1n8aEmg8bvfVhdITDMcFZIT-uoVbfamLAskehvotyOzO2dC6QFBdxfH0OxPLFYu6XiARmLjyy8nxaigMDA8Mp_wKqxgQuraKPJqhyT2WjFTQ3i1AK07nriV2w-ycPjapWex7bUUbaQ1fld3T032a-3cAqr3fgkFGY7shH8KKCs3J7ma40-oFKEcGinbXSSmAqPgH0pkhzTEwaNNwD5BJJo6Z5TAVS5KegVA2nAZySdEo_b1_d23QoPvEUnMS9zKw-z0LOa3cnoCdIWViNWGdS8F_e47yZYcEg6aw9FdyIWCXjz7bY8HXCrla7PvfuMMszxGbJj3sJ4eI0mTN-vSpxCCaoCcZSrRD7UrgFr8Q45MVjr_JlzLwJ2lAl7Jru_ovcrBeJgPaAz1Ctm71RytFnqEfAEr36inEVI-HrTA3o3R4hDSDev5RrZxW97qbfFdzD9to9h3BaSJUNqz32HosFUgjEivkywBJVSNRM-J9wMYY0-B1sqPtzMj5yxN66pPI6vLrMBUAgIc7xe-rx1MbaGrKEfBwDX4gU9AzTIIf2GfI2cPRVTWeK8N6MX7adp_lmRl5Llq928EKdTGTdlUcVoHVddQbl7Q2evza349D4faQZqlitnez99c2SGGOUPAfPLVnYaZGF4su6lsgIU9MKOoFv7PsRAZ-vH-iqxdJ4WJEoevN2gPmH18n1a-W71c6Y89aI1Euq-pDVSi5mah1hBvHZMc2_wacsXzIaZLPzb44fUmUCPyicqtbcGKOB3IPeBH5qNKMZDrOKatgrRTYpuDIKlpdBe8cqHBmcS64jEqk9wmFhEhkWbZMHBwSuxectTBBK_2yfOLOx3qHnzDnfGSNNYrdemHMPnKQmIaoKBkSnHwSl9WoYgixyUvY_YqGoRo_k9G3PgYYTbQoGqbLxbMTZ6BEy3osRrvzJ-e7CwQs36aJjCpOEmHriK9tfeZziBxcUZIVBRgA-w3dcgNtBj8pYNMW4JMh_79otJzkPq6jsYs3yOKtpQY-iDWTZ5OGf7EbBxJ04vwi-krF719GgGXRGGtBRuSRgPrUCPNsSYhQNERCPjS8koGec5WFFo6DcFWwYW-3E7CiI-wE7xXf0W7ZLp9twZhSj9h8apjlxQm4fbK_-g5HOmI9t5QmjSEoUkX3F1BZruJ3hFGCk6AuIBzSFM5DOZqEJAmkyz1lewLhyh1n___jtGMUC7sfILsVAsMUgg8Ta48bMKLoOf9mqerdOUorcWTQosn8oRJOm-RRYuRqdgrp1ifIxiiA11ikL_ia3ZqvhyFeWygaw04A8UMTwRu1cc=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0fa73e8024a2c738016ae32f36e2d487d1a10e95376620f148","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4624,"completion_tokens":89,"total_tokens":4713,"cost":0.000412435,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":2795,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000412435,"upstream_inference_prompt_cost":0.000367935,"upstream_inference_completions_cost":0.0000445},"completion_tokens_details":{"reasoning_tokens":39,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"Let's leave that contradiction unresolved for now. Don't invent a secret entrance or an excavation to make the meeting work."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Considering contradictory notes**\n\nI need to acknowledge that there are contradictions here, but I should avoid making any assumptions or creating new conclusions. It might be best to simply say that I’ll treat this as unresolved for now. I could respond with something like, “Absolutely—we’ll keep both notes as written.” This keeps things concise and clear without trying to invent something that isn't there. I want to ensure that I'm representing both sides accurately!","native":{"item":{"reasoning":"**Considering contradictory notes**\n\nI need to acknowledge that there are contradictions here, but I should avoid making any assumptions or creating new conclusions. It might be best to simply say that I’ll treat this as unresolved for now. I could respond with something like, “Absolutely—we’ll keep both notes as written.” This keeps things concise and clear without trying to invent something that isn't there. I want to ensure that I'm representing both sides accurately!","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering contradictory notes**\n\nI need to acknowledge that there are contradictions here, but I should avoid making any assumptions or creating new conclusions. It might be best to simply say that I’ll treat this as unresolved for now. I could respond with something like, “Absolutely—we’ll keep both notes as written.” This keeps things concise and clear without trying to invent something that isn't there. I want to ensure that I'm representing both sides accurately!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y84RqjFGZBYqBS0-ucp4rXNGNJJSFOmN7akpWbZa1MNTVWBHoGq6y2jq_DE6Jnqr8VSK-XpNfd4u6BUJLpEQcQx_EbINL9A5qFD5vcKKIoawEjImbKbXnTHZcKJMknXzojiXFWWy99Uv4yaWCF3ZY4Pw7s8O4HiisVJN_ThesDYJqWE8szoLBEMxTAnXOdwafoWQbbRZexdLz28jhMAmRqcALnKXjDx1U6QQvpi1VIOSGDoxcogUIuPD4DlW_awVDphw0NXSiWw1fLPs4IxOJViQuRiEL71tU80eL3WGyuCa8BV-9Gzzp_nNsHMECzbDQ9c8FFLk42e-VE5YLnKI9Nog79nCa7G3SNwmmLh5jZe2z7Xdv5R7GWRtfGBjBAaErHBNjUS7B6oWsxjP4kB-_xchA0-fdTwQuLYxBsPxQke8LNoqfltDrEQ2QyZi8BgnniiIY367kJcpspCJYjSFxNexkh_hVAV-TQJw-YqTKN0Um62wWjxv_VlvfAcpOcGQb334_kNr8Nnqd_0Y_83RXLcLkA9iyDSsxRUBLUYKRwGIGZyfsyVG0BReNYvLoEHSLzkXT7Q12vpd6_WjJNT1hpsim2kjos9U5bBiZBIVbY6p3O2gE05qJsjeQkci8MP5QoyixvSxskg_Stx6OnTW1otX8Fj8Q_TEuuoBCQavmRQb9sGjgh8hDV3Hrkau2sRN_ITZE1U7JkNgfoFCj7swiQfwQ9dtrJoKUAGuQSUaXCL5jYeXsUwql2jicDgorHE-VHhCvVE59CRUe61I1n8aEmg8bvfVhdITDMcFZIT-uoVbfamLAskehvotyOzO2dC6QFBdxfH0OxPLFYu6XiARmLjyy8nxaigMDA8Mp_wKqxgQuraKPJqhyT2WjFTQ3i1AK07nriV2w-ycPjapWex7bUUbaQ1fld3T032a-3cAqr3fgkFGY7shH8KKCs3J7ma40-oFKEcGinbXSSmAqPgH0pkhzTEwaNNwD5BJJo6Z5TAVS5KegVA2nAZySdEo_b1_d23QoPvEUnMS9zKw-z0LOa3cnoCdIWViNWGdS8F_e47yZYcEg6aw9FdyIWCXjz7bY8HXCrla7PvfuMMszxGbJj3sJ4eI0mTN-vSpxCCaoCcZSrRD7UrgFr8Q45MVjr_JlzLwJ2lAl7Jru_ovcrBeJgPaAz1Ctm71RytFnqEfAEr36inEVI-HrTA3o3R4hDSDev5RrZxW97qbfFdzD9to9h3BaSJUNqz32HosFUgjEivkywBJVSNRM-J9wMYY0-B1sqPtzMj5yxN66pPI6vLrMBUAgIc7xe-rx1MbaGrKEfBwDX4gU9AzTIIf2GfI2cPRVTWeK8N6MX7adp_lmRl5Llq928EKdTGTdlUcVoHVddQbl7Q2evza349D4faQZqlitnez99c2SGGOUPAfPLVnYaZGF4su6lsgIU9MKOoFv7PsRAZ-vH-iqxdJ4WJEoevN2gPmH18n1a-W71c6Y89aI1Euq-pDVSi5mah1hBvHZMc2_wacsXzIaZLPzb44fUmUCPyicqtbcGKOB3IPeBH5qNKMZDrOKatgrRTYpuDIKlpdBe8cqHBmcS64jEqk9wmFhEhkWbZMHBwSuxectTBBK_2yfOLOx3qHnzDnfGSNNYrdemHMPnKQmIaoKBkSnHwSl9WoYgixyUvY_YqGoRo_k9G3PgYYTbQoGqbLxbMTZ6BEy3osRrvzJ-e7CwQs36aJjCpOEmHriK9tfeZziBxcUZIVBRgA-w3dcgNtBj8pYNMW4JMh_79otJzkPq6jsYs3yOKtpQY-iDWTZ5OGf7EbBxJ04vwi-krF719GgGXRGGtBRuSRgPrUCPNsSYhQNERCPjS8koGec5WFFo6DcFWwYW-3E7CiI-wE7xXf0W7ZLp9twZhSj9h8apjlxQm4fbK_-g5HOmI9t5QmjSEoUkX3F1BZruJ3hFGCk6AuIBzSFM5DOZqEJAmkyz1lewLhyh1n___jtGMUC7sfILsVAsMUgg8Ta48bMKLoOf9mqerdOUorcWTQosn8oRJOm-RRYuRqdgrp1ifIxiiA11ikL_ia3ZqvhyFeWygaw04A8UMTwRu1cc=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0fa73e8024a2c738016ae32f36e2d487d1a10e95376620f148","index":1}]},"fingerprint":"ec8da0c4574bc73a"}},{"type":"text","text":"Absolutely. We’ll leave both notes as written: the room remains sealed with no other entrance, and Iven and Sera’s 320 meeting remains unexplained. I won’t fill in a secret entrance or excavation."}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793273653-XjfUSIIsFmRamqOOe8GZ"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Considering contradictory notes**\n\nI need to acknowledge that there are contradictions here, but I should avoid making any assumptions or creating new conclusions. It might be best to simply say that I’ll treat this as unresolved for now. I could respond with something like, “Absolutely—we’ll keep both notes as written.” This keeps things concise and clear without trying to invent something that isn't there. I want to ensure that I'm representing both sides accurately!","native":{"item":{"reasoning":"**Considering contradictory notes**\n\nI need to acknowledge that there are contradictions here, but I should avoid making any assumptions or creating new conclusions. It might be best to simply say that I’ll treat this as unresolved for now. I could respond with something like, “Absolutely—we’ll keep both notes as written.” This keeps things concise and clear without trying to invent something that isn't there. I want to ensure that I'm representing both sides accurately!","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering contradictory notes**\n\nI need to acknowledge that there are contradictions here, but I should avoid making any assumptions or creating new conclusions. It might be best to simply say that I’ll treat this as unresolved for now. I could respond with something like, “Absolutely—we’ll keep both notes as written.” This keeps things concise and clear without trying to invent something that isn't there. I want to ensure that I'm representing both sides accurately!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y84RqjFGZBYqBS0-ucp4rXNGNJJSFOmN7akpWbZa1MNTVWBHoGq6y2jq_DE6Jnqr8VSK-XpNfd4u6BUJLpEQcQx_EbINL9A5qFD5vcKKIoawEjImbKbXnTHZcKJMknXzojiXFWWy99Uv4yaWCF3ZY4Pw7s8O4HiisVJN_ThesDYJqWE8szoLBEMxTAnXOdwafoWQbbRZexdLz28jhMAmRqcALnKXjDx1U6QQvpi1VIOSGDoxcogUIuPD4DlW_awVDphw0NXSiWw1fLPs4IxOJViQuRiEL71tU80eL3WGyuCa8BV-9Gzzp_nNsHMECzbDQ9c8FFLk42e-VE5YLnKI9Nog79nCa7G3SNwmmLh5jZe2z7Xdv5R7GWRtfGBjBAaErHBNjUS7B6oWsxjP4kB-_xchA0-fdTwQuLYxBsPxQke8LNoqfltDrEQ2QyZi8BgnniiIY367kJcpspCJYjSFxNexkh_hVAV-TQJw-YqTKN0Um62wWjxv_VlvfAcpOcGQb334_kNr8Nnqd_0Y_83RXLcLkA9iyDSsxRUBLUYKRwGIGZyfsyVG0BReNYvLoEHSLzkXT7Q12vpd6_WjJNT1hpsim2kjos9U5bBiZBIVbY6p3O2gE05qJsjeQkci8MP5QoyixvSxskg_Stx6OnTW1otX8Fj8Q_TEuuoBCQavmRQb9sGjgh8hDV3Hrkau2sRN_ITZE1U7JkNgfoFCj7swiQfwQ9dtrJoKUAGuQSUaXCL5jYeXsUwql2jicDgorHE-VHhCvVE59CRUe61I1n8aEmg8bvfVhdITDMcFZIT-uoVbfamLAskehvotyOzO2dC6QFBdxfH0OxPLFYu6XiARmLjyy8nxaigMDA8Mp_wKqxgQuraKPJqhyT2WjFTQ3i1AK07nriV2w-ycPjapWex7bUUbaQ1fld3T032a-3cAqr3fgkFGY7shH8KKCs3J7ma40-oFKEcGinbXSSmAqPgH0pkhzTEwaNNwD5BJJo6Z5TAVS5KegVA2nAZySdEo_b1_d23QoPvEUnMS9zKw-z0LOa3cnoCdIWViNWGdS8F_e47yZYcEg6aw9FdyIWCXjz7bY8HXCrla7PvfuMMszxGbJj3sJ4eI0mTN-vSpxCCaoCcZSrRD7UrgFr8Q45MVjr_JlzLwJ2lAl7Jru_ovcrBeJgPaAz1Ctm71RytFnqEfAEr36inEVI-HrTA3o3R4hDSDev5RrZxW97qbfFdzD9to9h3BaSJUNqz32HosFUgjEivkywBJVSNRM-J9wMYY0-B1sqPtzMj5yxN66pPI6vLrMBUAgIc7xe-rx1MbaGrKEfBwDX4gU9AzTIIf2GfI2cPRVTWeK8N6MX7adp_lmRl5Llq928EKdTGTdlUcVoHVddQbl7Q2evza349D4faQZqlitnez99c2SGGOUPAfPLVnYaZGF4su6lsgIU9MKOoFv7PsRAZ-vH-iqxdJ4WJEoevN2gPmH18n1a-W71c6Y89aI1Euq-pDVSi5mah1hBvHZMc2_wacsXzIaZLPzb44fUmUCPyicqtbcGKOB3IPeBH5qNKMZDrOKatgrRTYpuDIKlpdBe8cqHBmcS64jEqk9wmFhEhkWbZMHBwSuxectTBBK_2yfOLOx3qHnzDnfGSNNYrdemHMPnKQmIaoKBkSnHwSl9WoYgixyUvY_YqGoRo_k9G3PgYYTbQoGqbLxbMTZ6BEy3osRrvzJ-e7CwQs36aJjCpOEmHriK9tfeZziBxcUZIVBRgA-w3dcgNtBj8pYNMW4JMh_79otJzkPq6jsYs3yOKtpQY-iDWTZ5OGf7EbBxJ04vwi-krF719GgGXRGGtBRuSRgPrUCPNsSYhQNERCPjS8koGec5WFFo6DcFWwYW-3E7CiI-wE7xXf0W7ZLp9twZhSj9h8apjlxQm4fbK_-g5HOmI9t5QmjSEoUkX3F1BZruJ3hFGCk6AuIBzSFM5DOZqEJAmkyz1lewLhyh1n___jtGMUC7sfILsVAsMUgg8Ta48bMKLoOf9mqerdOUorcWTQosn8oRJOm-RRYuRqdgrp1ifIxiiA11ikL_ia3ZqvhyFeWygaw04A8UMTwRu1cc=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0fa73e8024a2c738016ae32f36e2d487d1a10e95376620f148","index":1}]},"fingerprint":"ec8da0c4574bc73a"}},{"type":"text","text":"Absolutely. We’ll leave both notes as written: the room remains sealed with no other entrance, and Iven and Sera’s 320 meeting remains unexplained. I won’t fill in a secret entrance or excavation."}]}
+

@@ -1,0 +1,256 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Crafting a response**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" keep"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" my"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" response"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" brief"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" while"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" establishing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" connection"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" The"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I'm"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" provided"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" focuses"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" on"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" aqu"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"educt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" new"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" character"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" so"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" don't"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" conduct"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" any"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" searches"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" important"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" clarify"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" distinction"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" between"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ownership"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" maintenance"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" there's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" secret"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" item"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" involved"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" too"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Maybe"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" can"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ask"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" question"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" like"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" \""}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"What"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" does"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" compass"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" point"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" toward"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"?\""}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" engage"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" further"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" while"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" remaining"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" concise"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"M"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ira"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" maintains"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" aqu"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"educt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" council"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" owns"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"—a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" useful"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" line"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" between"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" her"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" responsibility"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" her"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" authority"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" And"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" O"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ren"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" only"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" one"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" who"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" knows"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" about"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" compass"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" her"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" boot"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Does"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" cracked"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" compass"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" still"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" work"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"?"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"Mira maintains the aqueduct, but the council owns it—a useful line between her responsibility and her authority. And Oren is the only one who knows about the compass in her boot. Does the cracked compass still work?"}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Crafting a response**\n\nI need to keep my response brief while establishing a connection. The lore I'm provided focuses on the aqueduct and a new character, so I don't need to conduct any searches. It's important to clarify the distinction between ownership and maintenance, and there's a secret item involved too. Maybe I can ask a question like, \"What does the compass point toward?\" to engage further while remaining concise.","native":{"item":{"reasoning":"**Crafting a response**\n\nI need to keep my response brief while establishing a connection. The lore I'm provided focuses on the aqueduct and a new character, so I don't need to conduct any searches. It's important to clarify the distinction between ownership and maintenance, and there's a secret item involved too. Maybe I can ask a question like, \"What does the compass point toward?\" to engage further while remaining concise.","reasoning_details":[{"type":"reasoning.summary","summary":"**Crafting a response**\n\nI need to keep my response brief while establishing a connection. The lore I'm provided focuses on the aqueduct and a new character, so I don't need to conduct any searches. It's important to clarify the distinction between ownership and maintenance, and there's a secret item involved too. Maybe I can ask a question like, \"What does the compass point toward?\" to engage further while remaining concise.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zEp_w_SjReklMQ1xI9h-ymqv7UrVqpaQd6c0PIhvAJX_IIAH9LY8kPGbMS-RQc0dLPyzkWo3X_1FX-kmvxsrap9eEySySEIAp2b9-FaaLyYBcsx9yHp6wMkKvwQlfU9JhsWhCgStAsEtDlENqYdh36K5qVoeprCr2_izuniyWSgxBSvaKvibx2hY3LbmtRAOSyknpZLsslmS8vt1qQk-sMr69_oHdxB1K2neC8GnSz_EQXcAVaZ7vbbb3QI9G0IwUQCSjNH98NrRSyz5x748Dn76ricrS1kSkSb7ef1fpBEG0fvQGXLDv1bZE967vpMoy4nX15ykUbiJqL8cerRKH1mvOEbbfaEY0kqwnslznikJqeHsEPMcM5i4NiBYgEg3PVh_7jbwgdFSA-qaFoysz6uLN4nTggRLwbrEORZClZq0xLUHv5301j5NWA4fSve4b4gUfY9ASqi-p0AMrxpdD--q8bbTyAxPqx67Qh3zzyJRetncM-pa2CZzJmADf7fZOn_ptn63E4LlCFvz-9WjcZ9P7coFuvETzZbPQSkw78Focyk_z9kcgEoluV9byPHiR7DQoWkTyU9G_IQaV8cQ8LtX650zQyBaiKr-hBt1ekIzJPtHp9W_RmLjtIxBMXmKTBliW5c-MCqQHyfOcwjKCsgw29SIkPah02LTKJ_R2odWnnLH2ZauFp6QmvHySaNWk4AXI_5xFtbV27NAQd4cQIUjAX1MXtLF3mnpn2RJ2KqcbO2BwVHBLXe6zUzaIHx6DWwf5ydLjFtOgInbt6vtvSdBeq1KNVnRdbyFzwkv07kROTEJuZH02qhgqEVK5ijKs_Tm4XVw-JeXDSYY_fpletoafFczSEvb1u-Wtz3ySn7teZvHFD95OTM_cZAOr9CnKAsj5jdSeygKEvUVg5-BUzgSBK8w-nyoXkei_MFKrNRgAP5YzlJdoxlC7SoMvaFwPvZnP8tPg0HIqJwFj1WtR6Z9nsPOkdegPUaz-W-LZb5x4X1d1Abd-Imrh-HQqu71_2--6YyajyxmpVD32vHlkcmTYY7ul-Ng57Sz5ztBZVU55N2sv9dGU6AyOesPiMi_YPby1b0JVB_p0K7WJ3WvJXpLmXbDVAvpXj6pbjQ4o9d2CuXt30PmvjTBjglvHS2shdILtOEX6afXb1RTe8yU91c0wXvQPK8GC71-FbXeSTDMc4vScGw13nnI-UqYmD-x_jvR5lf6RiTfcZmc7FCNrEPoFmz1-r6j8Hhbzc7KgDYe0IM_O9-oIoIXtGpr7AYQLdpZP_FGXLreLlGfDxlO8M5LwFZivER3VqcxaGNy_S4MEf_06iAcbckJV-Ung8vcRtbeWYHdorTfcnOjOqPcytW0uSQw0HXUQBpltltfFTNxxZoI6ho3dPVvJWdtbfKmMB-SIyp6M5NY7sK4Mc8CETX7C8oNdv3PC_RKmOSMN5TkOiTKTAM7RVNZowsMDU_nyPJh8yknFFHVF5yu51Luci___JaQP0fF3TtrQQTC3eE4Mr1ic6-kIiN8xoLAWFQc769OHIIhMWsBRLCgL9_qcudukriOK8b3xycNbqMK6FfghRg5rsApN0KvzEsilHMalNa4xOgHlkl3u3L0_Uxi9UHrmhjdrv7W_lcB2-q8mt-nZfXq2duCam2Gtlejdjpk4cm0ocl8j5ZgZJ1CG5mMJFf4NOkqfUmzO2gVy0C5oSfXV_IyuJPkT-AamWINREIas_OmVjWOyDchFJLzjwdi4FIABAOsLVJLzIfSmdeY3VY5ba35E_HUr5vC7229-ooWJeVaHfgzxPpyMUns-vKkIlG1rgulKIwzatAyHF_7BNE-Kzikx4aZ9y8vMKchDK0SMp5pxpEtrKoprNYZ4DorlZLypvYsXxAj6FU8_YhomAFI0DMjY_HoGkun7uzn4p12-5kU6pyn4DzUTCemP6_Ers1h1HtlRMQf2NDz0s4SJ-h2ZIE1Irkcj7zC6XgxpC_ZvA9S3xVSpPRVYBtFuIv7KzeFArjrnrOJ4VhU707l_LksnUi8lK-8P4Bhgjy72XPRuL3UeACoOEcScG3PMhedkW2v8mk_8C9q4yzYGwJtcZjbjYKtnTPYsUHDs5QFdaIa6l6xZ9L3TqeWyTT0fFUZAI_nIoW83VHhjhqiqJMGsEZBxZGhQiqJ2t1shxjsQR_PXMls9eo-4u_XD-QZg-F3RQr7UqiwLcGoIyTm6uhAhP6ioqfDMhhC3utHP6pnCIDF7jG.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0a9b3f87488949df016ae33127b60c87d1807f31105bd51a95","index":1}]},"fingerprint":"edb6d8a1ecd9aebb"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":2800,"output_tokens":100,"total_tokens":2900,"cached_input_tokens":1826,"cache_creation_input_tokens":971,"reasoning_tokens":49,"cost":{"total":0.000189935}},"response_id":"gen-1793274150-gM6ozr7WwhWUtYfzfB6o","finish_reason":"stop","raw":{"id":"gen-1793274150-gM6ozr7WwhWUtYfzfB6o","object":"chat.completion","created":1793274150,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Mira maintains the aqueduct, but the council owns it—a useful line between her responsibility and her authority. And Oren is the only one who knows about the compass in her boot. Does the cracked compass still work?","role":"assistant","reasoning":"**Crafting a response**\n\nI need to keep my response brief while establishing a connection. The lore I'm provided focuses on the aqueduct and a new character, so I don't need to conduct any searches. It's important to clarify the distinction between ownership and maintenance, and there's a secret item involved too. Maybe I can ask a question like, \"What does the compass point toward?\" to engage further while remaining concise.","reasoning_details":[{"type":"reasoning.summary","summary":"**Crafting a response**\n\nI need to keep my response brief while establishing a connection. The lore I'm provided focuses on the aqueduct and a new character, so I don't need to conduct any searches. It's important to clarify the distinction between ownership and maintenance, and there's a secret item involved too. Maybe I can ask a question like, \"What does the compass point toward?\" to engage further while remaining concise.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zEp_w_SjReklMQ1xI9h-ymqv7UrVqpaQd6c0PIhvAJX_IIAH9LY8kPGbMS-RQc0dLPyzkWo3X_1FX-kmvxsrap9eEySySEIAp2b9-FaaLyYBcsx9yHp6wMkKvwQlfU9JhsWhCgStAsEtDlENqYdh36K5qVoeprCr2_izuniyWSgxBSvaKvibx2hY3LbmtRAOSyknpZLsslmS8vt1qQk-sMr69_oHdxB1K2neC8GnSz_EQXcAVaZ7vbbb3QI9G0IwUQCSjNH98NrRSyz5x748Dn76ricrS1kSkSb7ef1fpBEG0fvQGXLDv1bZE967vpMoy4nX15ykUbiJqL8cerRKH1mvOEbbfaEY0kqwnslznikJqeHsEPMcM5i4NiBYgEg3PVh_7jbwgdFSA-qaFoysz6uLN4nTggRLwbrEORZClZq0xLUHv5301j5NWA4fSve4b4gUfY9ASqi-p0AMrxpdD--q8bbTyAxPqx67Qh3zzyJRetncM-pa2CZzJmADf7fZOn_ptn63E4LlCFvz-9WjcZ9P7coFuvETzZbPQSkw78Focyk_z9kcgEoluV9byPHiR7DQoWkTyU9G_IQaV8cQ8LtX650zQyBaiKr-hBt1ekIzJPtHp9W_RmLjtIxBMXmKTBliW5c-MCqQHyfOcwjKCsgw29SIkPah02LTKJ_R2odWnnLH2ZauFp6QmvHySaNWk4AXI_5xFtbV27NAQd4cQIUjAX1MXtLF3mnpn2RJ2KqcbO2BwVHBLXe6zUzaIHx6DWwf5ydLjFtOgInbt6vtvSdBeq1KNVnRdbyFzwkv07kROTEJuZH02qhgqEVK5ijKs_Tm4XVw-JeXDSYY_fpletoafFczSEvb1u-Wtz3ySn7teZvHFD95OTM_cZAOr9CnKAsj5jdSeygKEvUVg5-BUzgSBK8w-nyoXkei_MFKrNRgAP5YzlJdoxlC7SoMvaFwPvZnP8tPg0HIqJwFj1WtR6Z9nsPOkdegPUaz-W-LZb5x4X1d1Abd-Imrh-HQqu71_2--6YyajyxmpVD32vHlkcmTYY7ul-Ng57Sz5ztBZVU55N2sv9dGU6AyOesPiMi_YPby1b0JVB_p0K7WJ3WvJXpLmXbDVAvpXj6pbjQ4o9d2CuXt30PmvjTBjglvHS2shdILtOEX6afXb1RTe8yU91c0wXvQPK8GC71-FbXeSTDMc4vScGw13nnI-UqYmD-x_jvR5lf6RiTfcZmc7FCNrEPoFmz1-r6j8Hhbzc7KgDYe0IM_O9-oIoIXtGpr7AYQLdpZP_FGXLreLlGfDxlO8M5LwFZivER3VqcxaGNy_S4MEf_06iAcbckJV-Ung8vcRtbeWYHdorTfcnOjOqPcytW0uSQw0HXUQBpltltfFTNxxZoI6ho3dPVvJWdtbfKmMB-SIyp6M5NY7sK4Mc8CETX7C8oNdv3PC_RKmOSMN5TkOiTKTAM7RVNZowsMDU_nyPJh8yknFFHVF5yu51Luci___JaQP0fF3TtrQQTC3eE4Mr1ic6-kIiN8xoLAWFQc769OHIIhMWsBRLCgL9_qcudukriOK8b3xycNbqMK6FfghRg5rsApN0KvzEsilHMalNa4xOgHlkl3u3L0_Uxi9UHrmhjdrv7W_lcB2-q8mt-nZfXq2duCam2Gtlejdjpk4cm0ocl8j5ZgZJ1CG5mMJFf4NOkqfUmzO2gVy0C5oSfXV_IyuJPkT-AamWINREIas_OmVjWOyDchFJLzjwdi4FIABAOsLVJLzIfSmdeY3VY5ba35E_HUr5vC7229-ooWJeVaHfgzxPpyMUns-vKkIlG1rgulKIwzatAyHF_7BNE-Kzikx4aZ9y8vMKchDK0SMp5pxpEtrKoprNYZ4DorlZLypvYsXxAj6FU8_YhomAFI0DMjY_HoGkun7uzn4p12-5kU6pyn4DzUTCemP6_Ers1h1HtlRMQf2NDz0s4SJ-h2ZIE1Irkcj7zC6XgxpC_ZvA9S3xVSpPRVYBtFuIv7KzeFArjrnrOJ4VhU707l_LksnUi8lK-8P4Bhgjy72XPRuL3UeACoOEcScG3PMhedkW2v8mk_8C9q4yzYGwJtcZjbjYKtnTPYsUHDs5QFdaIa6l6xZ9L3TqeWyTT0fFUZAI_nIoW83VHhjhqiqJMGsEZBxZGhQiqJ2t1shxjsQR_PXMls9eo-4u_XD-QZg-F3RQr7UqiwLcGoIyTm6uhAhP6ioqfDMhhC3utHP6pnCIDF7jG.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0a9b3f87488949df016ae33127b60c87d1807f31105bd51a95","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":2800,"completion_tokens":100,"total_tokens":2900,"cost":0.000189935,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":971,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000189935,"upstream_inference_prompt_cost":0.000139935,"upstream_inference_completions_cost":0.00005},"completion_tokens_details":{"reasoning_tokens":49,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":2800,"output_tokens":100,"total_tokens":2900,"cached_input_tokens":1826,"cache_creation_input_tokens":971,"reasoning_tokens":49,"cost":{"total":0.000189935}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":2800,"output_tokens":100,"total_tokens":2900,"cached_input_tokens":1826,"cache_creation_input_tokens":971,"reasoning_tokens":49,"cost":{"total":0.000189935}},"response_id":"gen-1793274150-gM6ozr7WwhWUtYfzfB6o","finish_reason":"stop","raw":{"id":"gen-1793274150-gM6ozr7WwhWUtYfzfB6o","object":"chat.completion","created":1793274150,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Mira maintains the aqueduct, but the council owns it—a useful line between her responsibility and her authority. And Oren is the only one who knows about the compass in her boot. Does the cracked compass still work?","role":"assistant","reasoning":"**Crafting a response**\n\nI need to keep my response brief while establishing a connection. The lore I'm provided focuses on the aqueduct and a new character, so I don't need to conduct any searches. It's important to clarify the distinction between ownership and maintenance, and there's a secret item involved too. Maybe I can ask a question like, \"What does the compass point toward?\" to engage further while remaining concise.","reasoning_details":[{"type":"reasoning.summary","summary":"**Crafting a response**\n\nI need to keep my response brief while establishing a connection. The lore I'm provided focuses on the aqueduct and a new character, so I don't need to conduct any searches. It's important to clarify the distinction between ownership and maintenance, and there's a secret item involved too. Maybe I can ask a question like, \"What does the compass point toward?\" to engage further while remaining concise.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zEp_w_SjReklMQ1xI9h-ymqv7UrVqpaQd6c0PIhvAJX_IIAH9LY8kPGbMS-RQc0dLPyzkWo3X_1FX-kmvxsrap9eEySySEIAp2b9-FaaLyYBcsx9yHp6wMkKvwQlfU9JhsWhCgStAsEtDlENqYdh36K5qVoeprCr2_izuniyWSgxBSvaKvibx2hY3LbmtRAOSyknpZLsslmS8vt1qQk-sMr69_oHdxB1K2neC8GnSz_EQXcAVaZ7vbbb3QI9G0IwUQCSjNH98NrRSyz5x748Dn76ricrS1kSkSb7ef1fpBEG0fvQGXLDv1bZE967vpMoy4nX15ykUbiJqL8cerRKH1mvOEbbfaEY0kqwnslznikJqeHsEPMcM5i4NiBYgEg3PVh_7jbwgdFSA-qaFoysz6uLN4nTggRLwbrEORZClZq0xLUHv5301j5NWA4fSve4b4gUfY9ASqi-p0AMrxpdD--q8bbTyAxPqx67Qh3zzyJRetncM-pa2CZzJmADf7fZOn_ptn63E4LlCFvz-9WjcZ9P7coFuvETzZbPQSkw78Focyk_z9kcgEoluV9byPHiR7DQoWkTyU9G_IQaV8cQ8LtX650zQyBaiKr-hBt1ekIzJPtHp9W_RmLjtIxBMXmKTBliW5c-MCqQHyfOcwjKCsgw29SIkPah02LTKJ_R2odWnnLH2ZauFp6QmvHySaNWk4AXI_5xFtbV27NAQd4cQIUjAX1MXtLF3mnpn2RJ2KqcbO2BwVHBLXe6zUzaIHx6DWwf5ydLjFtOgInbt6vtvSdBeq1KNVnRdbyFzwkv07kROTEJuZH02qhgqEVK5ijKs_Tm4XVw-JeXDSYY_fpletoafFczSEvb1u-Wtz3ySn7teZvHFD95OTM_cZAOr9CnKAsj5jdSeygKEvUVg5-BUzgSBK8w-nyoXkei_MFKrNRgAP5YzlJdoxlC7SoMvaFwPvZnP8tPg0HIqJwFj1WtR6Z9nsPOkdegPUaz-W-LZb5x4X1d1Abd-Imrh-HQqu71_2--6YyajyxmpVD32vHlkcmTYY7ul-Ng57Sz5ztBZVU55N2sv9dGU6AyOesPiMi_YPby1b0JVB_p0K7WJ3WvJXpLmXbDVAvpXj6pbjQ4o9d2CuXt30PmvjTBjglvHS2shdILtOEX6afXb1RTe8yU91c0wXvQPK8GC71-FbXeSTDMc4vScGw13nnI-UqYmD-x_jvR5lf6RiTfcZmc7FCNrEPoFmz1-r6j8Hhbzc7KgDYe0IM_O9-oIoIXtGpr7AYQLdpZP_FGXLreLlGfDxlO8M5LwFZivER3VqcxaGNy_S4MEf_06iAcbckJV-Ung8vcRtbeWYHdorTfcnOjOqPcytW0uSQw0HXUQBpltltfFTNxxZoI6ho3dPVvJWdtbfKmMB-SIyp6M5NY7sK4Mc8CETX7C8oNdv3PC_RKmOSMN5TkOiTKTAM7RVNZowsMDU_nyPJh8yknFFHVF5yu51Luci___JaQP0fF3TtrQQTC3eE4Mr1ic6-kIiN8xoLAWFQc769OHIIhMWsBRLCgL9_qcudukriOK8b3xycNbqMK6FfghRg5rsApN0KvzEsilHMalNa4xOgHlkl3u3L0_Uxi9UHrmhjdrv7W_lcB2-q8mt-nZfXq2duCam2Gtlejdjpk4cm0ocl8j5ZgZJ1CG5mMJFf4NOkqfUmzO2gVy0C5oSfXV_IyuJPkT-AamWINREIas_OmVjWOyDchFJLzjwdi4FIABAOsLVJLzIfSmdeY3VY5ba35E_HUr5vC7229-ooWJeVaHfgzxPpyMUns-vKkIlG1rgulKIwzatAyHF_7BNE-Kzikx4aZ9y8vMKchDK0SMp5pxpEtrKoprNYZ4DorlZLypvYsXxAj6FU8_YhomAFI0DMjY_HoGkun7uzn4p12-5kU6pyn4DzUTCemP6_Ers1h1HtlRMQf2NDz0s4SJ-h2ZIE1Irkcj7zC6XgxpC_ZvA9S3xVSpPRVYBtFuIv7KzeFArjrnrOJ4VhU707l_LksnUi8lK-8P4Bhgjy72XPRuL3UeACoOEcScG3PMhedkW2v8mk_8C9q4yzYGwJtcZjbjYKtnTPYsUHDs5QFdaIa6l6xZ9L3TqeWyTT0fFUZAI_nIoW83VHhjhqiqJMGsEZBxZGhQiqJ2t1shxjsQR_PXMls9eo-4u_XD-QZg-F3RQr7UqiwLcGoIyTm6uhAhP6ioqfDMhhC3utHP6pnCIDF7jG.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0a9b3f87488949df016ae33127b60c87d1807f31105bd51a95","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":2800,"completion_tokens":100,"total_tokens":2900,"cost":0.000189935,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":971,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000189935,"upstream_inference_prompt_cost":0.000139935,"upstream_inference_completions_cost":0.00005},"completion_tokens_details":{"reasoning_tokens":49,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"Mira Venn is the engineer who maintains the Glass Aqueduct. The Sablecross council owns it; Mira doesn't. Mira was born in Sablecross. She keeps a cracked jade compass inside her right boot, and only her friend Oren Dask knows about it."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Crafting a response**\n\nI need to keep my response brief while establishing a connection. The lore I'm provided focuses on the aqueduct and a new character, so I don't need to conduct any searches. It's important to clarify the distinction between ownership and maintenance, and there's a secret item involved too. Maybe I can ask a question like, \"What does the compass point toward?\" to engage further while remaining concise.","native":{"item":{"reasoning":"**Crafting a response**\n\nI need to keep my response brief while establishing a connection. The lore I'm provided focuses on the aqueduct and a new character, so I don't need to conduct any searches. It's important to clarify the distinction between ownership and maintenance, and there's a secret item involved too. Maybe I can ask a question like, \"What does the compass point toward?\" to engage further while remaining concise.","reasoning_details":[{"type":"reasoning.summary","summary":"**Crafting a response**\n\nI need to keep my response brief while establishing a connection. The lore I'm provided focuses on the aqueduct and a new character, so I don't need to conduct any searches. It's important to clarify the distinction between ownership and maintenance, and there's a secret item involved too. Maybe I can ask a question like, \"What does the compass point toward?\" to engage further while remaining concise.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zEp_w_SjReklMQ1xI9h-ymqv7UrVqpaQd6c0PIhvAJX_IIAH9LY8kPGbMS-RQc0dLPyzkWo3X_1FX-kmvxsrap9eEySySEIAp2b9-FaaLyYBcsx9yHp6wMkKvwQlfU9JhsWhCgStAsEtDlENqYdh36K5qVoeprCr2_izuniyWSgxBSvaKvibx2hY3LbmtRAOSyknpZLsslmS8vt1qQk-sMr69_oHdxB1K2neC8GnSz_EQXcAVaZ7vbbb3QI9G0IwUQCSjNH98NrRSyz5x748Dn76ricrS1kSkSb7ef1fpBEG0fvQGXLDv1bZE967vpMoy4nX15ykUbiJqL8cerRKH1mvOEbbfaEY0kqwnslznikJqeHsEPMcM5i4NiBYgEg3PVh_7jbwgdFSA-qaFoysz6uLN4nTggRLwbrEORZClZq0xLUHv5301j5NWA4fSve4b4gUfY9ASqi-p0AMrxpdD--q8bbTyAxPqx67Qh3zzyJRetncM-pa2CZzJmADf7fZOn_ptn63E4LlCFvz-9WjcZ9P7coFuvETzZbPQSkw78Focyk_z9kcgEoluV9byPHiR7DQoWkTyU9G_IQaV8cQ8LtX650zQyBaiKr-hBt1ekIzJPtHp9W_RmLjtIxBMXmKTBliW5c-MCqQHyfOcwjKCsgw29SIkPah02LTKJ_R2odWnnLH2ZauFp6QmvHySaNWk4AXI_5xFtbV27NAQd4cQIUjAX1MXtLF3mnpn2RJ2KqcbO2BwVHBLXe6zUzaIHx6DWwf5ydLjFtOgInbt6vtvSdBeq1KNVnRdbyFzwkv07kROTEJuZH02qhgqEVK5ijKs_Tm4XVw-JeXDSYY_fpletoafFczSEvb1u-Wtz3ySn7teZvHFD95OTM_cZAOr9CnKAsj5jdSeygKEvUVg5-BUzgSBK8w-nyoXkei_MFKrNRgAP5YzlJdoxlC7SoMvaFwPvZnP8tPg0HIqJwFj1WtR6Z9nsPOkdegPUaz-W-LZb5x4X1d1Abd-Imrh-HQqu71_2--6YyajyxmpVD32vHlkcmTYY7ul-Ng57Sz5ztBZVU55N2sv9dGU6AyOesPiMi_YPby1b0JVB_p0K7WJ3WvJXpLmXbDVAvpXj6pbjQ4o9d2CuXt30PmvjTBjglvHS2shdILtOEX6afXb1RTe8yU91c0wXvQPK8GC71-FbXeSTDMc4vScGw13nnI-UqYmD-x_jvR5lf6RiTfcZmc7FCNrEPoFmz1-r6j8Hhbzc7KgDYe0IM_O9-oIoIXtGpr7AYQLdpZP_FGXLreLlGfDxlO8M5LwFZivER3VqcxaGNy_S4MEf_06iAcbckJV-Ung8vcRtbeWYHdorTfcnOjOqPcytW0uSQw0HXUQBpltltfFTNxxZoI6ho3dPVvJWdtbfKmMB-SIyp6M5NY7sK4Mc8CETX7C8oNdv3PC_RKmOSMN5TkOiTKTAM7RVNZowsMDU_nyPJh8yknFFHVF5yu51Luci___JaQP0fF3TtrQQTC3eE4Mr1ic6-kIiN8xoLAWFQc769OHIIhMWsBRLCgL9_qcudukriOK8b3xycNbqMK6FfghRg5rsApN0KvzEsilHMalNa4xOgHlkl3u3L0_Uxi9UHrmhjdrv7W_lcB2-q8mt-nZfXq2duCam2Gtlejdjpk4cm0ocl8j5ZgZJ1CG5mMJFf4NOkqfUmzO2gVy0C5oSfXV_IyuJPkT-AamWINREIas_OmVjWOyDchFJLzjwdi4FIABAOsLVJLzIfSmdeY3VY5ba35E_HUr5vC7229-ooWJeVaHfgzxPpyMUns-vKkIlG1rgulKIwzatAyHF_7BNE-Kzikx4aZ9y8vMKchDK0SMp5pxpEtrKoprNYZ4DorlZLypvYsXxAj6FU8_YhomAFI0DMjY_HoGkun7uzn4p12-5kU6pyn4DzUTCemP6_Ers1h1HtlRMQf2NDz0s4SJ-h2ZIE1Irkcj7zC6XgxpC_ZvA9S3xVSpPRVYBtFuIv7KzeFArjrnrOJ4VhU707l_LksnUi8lK-8P4Bhgjy72XPRuL3UeACoOEcScG3PMhedkW2v8mk_8C9q4yzYGwJtcZjbjYKtnTPYsUHDs5QFdaIa6l6xZ9L3TqeWyTT0fFUZAI_nIoW83VHhjhqiqJMGsEZBxZGhQiqJ2t1shxjsQR_PXMls9eo-4u_XD-QZg-F3RQr7UqiwLcGoIyTm6uhAhP6ioqfDMhhC3utHP6pnCIDF7jG.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0a9b3f87488949df016ae33127b60c87d1807f31105bd51a95","index":1}]},"fingerprint":"edb6d8a1ecd9aebb"}},{"type":"text","text":"Mira maintains the aqueduct, but the council owns it—a useful line between her responsibility and her authority. And Oren is the only one who knows about the compass in her boot. Does the cracked compass still work?"}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793274150-gM6ozr7WwhWUtYfzfB6o"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Crafting a response**\n\nI need to keep my response brief while establishing a connection. The lore I'm provided focuses on the aqueduct and a new character, so I don't need to conduct any searches. It's important to clarify the distinction between ownership and maintenance, and there's a secret item involved too. Maybe I can ask a question like, \"What does the compass point toward?\" to engage further while remaining concise.","native":{"item":{"reasoning":"**Crafting a response**\n\nI need to keep my response brief while establishing a connection. The lore I'm provided focuses on the aqueduct and a new character, so I don't need to conduct any searches. It's important to clarify the distinction between ownership and maintenance, and there's a secret item involved too. Maybe I can ask a question like, \"What does the compass point toward?\" to engage further while remaining concise.","reasoning_details":[{"type":"reasoning.summary","summary":"**Crafting a response**\n\nI need to keep my response brief while establishing a connection. The lore I'm provided focuses on the aqueduct and a new character, so I don't need to conduct any searches. It's important to clarify the distinction between ownership and maintenance, and there's a secret item involved too. Maybe I can ask a question like, \"What does the compass point toward?\" to engage further while remaining concise.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zEp_w_SjReklMQ1xI9h-ymqv7UrVqpaQd6c0PIhvAJX_IIAH9LY8kPGbMS-RQc0dLPyzkWo3X_1FX-kmvxsrap9eEySySEIAp2b9-FaaLyYBcsx9yHp6wMkKvwQlfU9JhsWhCgStAsEtDlENqYdh36K5qVoeprCr2_izuniyWSgxBSvaKvibx2hY3LbmtRAOSyknpZLsslmS8vt1qQk-sMr69_oHdxB1K2neC8GnSz_EQXcAVaZ7vbbb3QI9G0IwUQCSjNH98NrRSyz5x748Dn76ricrS1kSkSb7ef1fpBEG0fvQGXLDv1bZE967vpMoy4nX15ykUbiJqL8cerRKH1mvOEbbfaEY0kqwnslznikJqeHsEPMcM5i4NiBYgEg3PVh_7jbwgdFSA-qaFoysz6uLN4nTggRLwbrEORZClZq0xLUHv5301j5NWA4fSve4b4gUfY9ASqi-p0AMrxpdD--q8bbTyAxPqx67Qh3zzyJRetncM-pa2CZzJmADf7fZOn_ptn63E4LlCFvz-9WjcZ9P7coFuvETzZbPQSkw78Focyk_z9kcgEoluV9byPHiR7DQoWkTyU9G_IQaV8cQ8LtX650zQyBaiKr-hBt1ekIzJPtHp9W_RmLjtIxBMXmKTBliW5c-MCqQHyfOcwjKCsgw29SIkPah02LTKJ_R2odWnnLH2ZauFp6QmvHySaNWk4AXI_5xFtbV27NAQd4cQIUjAX1MXtLF3mnpn2RJ2KqcbO2BwVHBLXe6zUzaIHx6DWwf5ydLjFtOgInbt6vtvSdBeq1KNVnRdbyFzwkv07kROTEJuZH02qhgqEVK5ijKs_Tm4XVw-JeXDSYY_fpletoafFczSEvb1u-Wtz3ySn7teZvHFD95OTM_cZAOr9CnKAsj5jdSeygKEvUVg5-BUzgSBK8w-nyoXkei_MFKrNRgAP5YzlJdoxlC7SoMvaFwPvZnP8tPg0HIqJwFj1WtR6Z9nsPOkdegPUaz-W-LZb5x4X1d1Abd-Imrh-HQqu71_2--6YyajyxmpVD32vHlkcmTYY7ul-Ng57Sz5ztBZVU55N2sv9dGU6AyOesPiMi_YPby1b0JVB_p0K7WJ3WvJXpLmXbDVAvpXj6pbjQ4o9d2CuXt30PmvjTBjglvHS2shdILtOEX6afXb1RTe8yU91c0wXvQPK8GC71-FbXeSTDMc4vScGw13nnI-UqYmD-x_jvR5lf6RiTfcZmc7FCNrEPoFmz1-r6j8Hhbzc7KgDYe0IM_O9-oIoIXtGpr7AYQLdpZP_FGXLreLlGfDxlO8M5LwFZivER3VqcxaGNy_S4MEf_06iAcbckJV-Ung8vcRtbeWYHdorTfcnOjOqPcytW0uSQw0HXUQBpltltfFTNxxZoI6ho3dPVvJWdtbfKmMB-SIyp6M5NY7sK4Mc8CETX7C8oNdv3PC_RKmOSMN5TkOiTKTAM7RVNZowsMDU_nyPJh8yknFFHVF5yu51Luci___JaQP0fF3TtrQQTC3eE4Mr1ic6-kIiN8xoLAWFQc769OHIIhMWsBRLCgL9_qcudukriOK8b3xycNbqMK6FfghRg5rsApN0KvzEsilHMalNa4xOgHlkl3u3L0_Uxi9UHrmhjdrv7W_lcB2-q8mt-nZfXq2duCam2Gtlejdjpk4cm0ocl8j5ZgZJ1CG5mMJFf4NOkqfUmzO2gVy0C5oSfXV_IyuJPkT-AamWINREIas_OmVjWOyDchFJLzjwdi4FIABAOsLVJLzIfSmdeY3VY5ba35E_HUr5vC7229-ooWJeVaHfgzxPpyMUns-vKkIlG1rgulKIwzatAyHF_7BNE-Kzikx4aZ9y8vMKchDK0SMp5pxpEtrKoprNYZ4DorlZLypvYsXxAj6FU8_YhomAFI0DMjY_HoGkun7uzn4p12-5kU6pyn4DzUTCemP6_Ers1h1HtlRMQf2NDz0s4SJ-h2ZIE1Irkcj7zC6XgxpC_ZvA9S3xVSpPRVYBtFuIv7KzeFArjrnrOJ4VhU707l_LksnUi8lK-8P4Bhgjy72XPRuL3UeACoOEcScG3PMhedkW2v8mk_8C9q4yzYGwJtcZjbjYKtnTPYsUHDs5QFdaIa6l6xZ9L3TqeWyTT0fFUZAI_nIoW83VHhjhqiqJMGsEZBxZGhQiqJ2t1shxjsQR_PXMls9eo-4u_XD-QZg-F3RQr7UqiwLcGoIyTm6uhAhP6ioqfDMhhC3utHP6pnCIDF7jG.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0a9b3f87488949df016ae33127b60c87d1807f31105bd51a95","index":1}]},"fingerprint":"edb6d8a1ecd9aebb"}},{"type":"text","text":"Mira maintains the aqueduct, but the council owns it—a useful line between her responsibility and her authority. And Oren is the only one who knows about the compass in her boot. Does the cracked compass still work?"}]}
+

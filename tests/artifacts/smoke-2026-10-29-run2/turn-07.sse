@@ -1,0 +1,270 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Considering response structure**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" think"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" respond"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" briefly"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" noticing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" potential"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" link"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ages"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" such"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" as"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" temporal"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" shipping"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" stored"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" supply"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"—"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"maybe"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" they"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" won"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"’t"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" conflict"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" with"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" each"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" other"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" might"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" be"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" good"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" idea"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ask"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" an"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" interesting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" question"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" engage"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" further"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" should"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" consider"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" whether"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" any"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" existing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" background"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" information"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" needs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" be"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" provided"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ensure"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" clarity"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" context"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" my"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" response"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" This"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" could"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" definitely"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" help"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" with"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" overall"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" understanding"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"!"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"That"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" gives"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" clear"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" seasonal"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" supply"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" rhythm"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Night"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"jar"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" brings"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" blue"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" salt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" from"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" fair"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"er"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" months"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" stored"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" reserves"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" carry"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" V"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"esper"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" through"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" frozen"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" str"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ait"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Does"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" ration"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" salt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" winter"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" do"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" its"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" stores"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" usually"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" last"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" until"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" spring"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"?"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"That gives the Guild a clear seasonal supply rhythm: Nightjar brings blue salt from Orin in fairer months, and stored reserves carry Vesper through the frozen strait. Does the Guild ration salt in winter, or do its stores usually last until spring?"}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Considering response structure**\n\nI think I need to respond briefly, noticing potential linkages, such as temporal shipping and stored supply—maybe they won’t conflict with each other. It might be a good idea to ask an interesting question to engage further. I should consider whether any existing lore or background information needs to be provided to ensure clarity or context in my response. This could definitely help with the overall understanding!","native":{"item":{"reasoning":"**Considering response structure**\n\nI think I need to respond briefly, noticing potential linkages, such as temporal shipping and stored supply—maybe they won’t conflict with each other. It might be a good idea to ask an interesting question to engage further. I should consider whether any existing lore or background information needs to be provided to ensure clarity or context in my response. This could definitely help with the overall understanding!","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering response structure**\n\nI think I need to respond briefly, noticing potential linkages, such as temporal shipping and stored supply—maybe they won’t conflict with each other. It might be a good idea to ask an interesting question to engage further. I should consider whether any existing lore or background information needs to be provided to ensure clarity or context in my response. This could definitely help with the overall understanding!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y43_t7Htw6hXIf_R-Ekp8g0KUodygW8az1ujBO5kB003SVw6DWPc6ULCAnqQZ2GEoPHPJOy3jGccNCHB2ldNJGVLSAfp9AVas68UksnCdMbANOpCaMBRFXNCkizQSIGXg9-rX2VjE526V4EO9O7A4XLGQ9C5Zow-3rBLjbzodPsPVvFCvPzepmgrZu2Kw7fgo1P3S3SXlBOAQ5I1kW_88Fp9cBWumhvv4hRbOzVT1FHomH2E8YqG0vB6sezyjlXcgZDiOz6N7CGAq2FKdlFphKEk1UV06xZqvjYDHd3yVGZgNKHBORIvsnMctbedVD_QMUTC6BX3oaHfw0mBO0FoISR782bOfFOInUDkm3UxlhOBC11vHpBOd8bo6_3dkRSHbGHjs8KQggD_wM1RX8UXRLNMwg6KRnUdMczUEmKg6P6uSHA8G6uPoRH50iUQEeyYyYWwML_GkQXK5sISTBMYlM6afzjh7sWBzfKSG1zAD-sFPhWYQayPbJB0sz-2z5AQM2IByu1Jc_vz3TSShV2ptHPW8SPVdcKQ-LQEK0AlimCv8qmE4dxEeUeAcadFf-qfCWwRUe_d50_cTf6svDrmaUZxSw1yy341__a-Tgq4e5af0NzLPoCahw8-kpygkmq9F4QzUVc0N1ygrtWY7F9TfYsK84nCDjMpeyP9dkHszsLkcZMX2Z_cuaFyAmgKxCpkf2ACMX2vDO-pN4VN10bDltSmp-j9JwdVdH_2deNMTuMHOZAQWTG2eOSrC6SUXu0rc0rCsGUdbueOf-lDgXXOj5thyH1Mg3fo0RRAlCXRN-zI4L6K1c9IC4A1fb5e7RNr2HoA-dkxGpzXuqu-H_UwPxPBNS7aafvpohf-waOtPUGeWU6_x-mEpeGASVYdLx7uz9Msr_xpTkf1a5sn2rTKfpLCIBon-wgL8SznkCSdIy43QWbvxdduMqQ8sQPjh8IdMlFhr9_EAFOt5Y86y715L-QobSWpTfjWfl4jj-saX_T9dMJrRaNCivX7Lwn3mEtp0puTMxnZY8LmNPXk2ZK17nJsEzgKzhAd1DpUYlUTomdoDkwa9A3FyxXF6fGTHPKo6AJscpdl_-6oSOpRgbpda1x3bcKh9VSzL_W2-EuKWTIyviQtBKKd1cnOldwgIL9ZMY957nc8ckgRlZxJQg7xhYjBCZk3TVNGk6XoJxVZ2gFgwRi_uCYHsrI5YQzGRc5fyjAISaYJQN4i5pWMa8n0pMUp63tzPJt79c4qUsEteYO1tIHKhnmxwZ1wh3teTvAL8FExtBQTEtOUuxvtSgPzOH1DXYbhsrthoPiansAcuRzOmXHKdXU40erWmy1kdTzazU6At9uMnkn0wj33U-V0qvLS2OxYaFppnddN2Kln6XxVlXPvh2rORttTu2gHhvjqr7miO62USEqfg2uALlDexuXFyLkw0djUtP2Uv__0HakoQh5RR3YH1w5Q-J7UO-z3K0PkPWIhnAmBQlSK7pmaaj2sfbY8imbnV0apzeT2miErSRWTj1xu-EYfmx9IdFhsiJMrV1PJLLWiKjf5mzUh1-q1x43L8O28Se9WFjtd_VhuYeIwr-BhrgZWB9D-NxCsglHf24pOLRDClqPHvMjv9Yi2dvwoZ2LdsPS9ksCeFe68-TSoyDxxzVqBRYfsYI4Q9GOrDSTZMTkcz9GCvjnjJKWFNwp94EbPL9F37usUiM3ybcOLMIRFtMbJL5wX0aim75KNeeOje9gR3Mu6UB3Oiu7uS-5vfWp6J8CvEWTpTiIjDSAEQUlUSWLjvUXoq_11OYYN_575BdKJkl2odr72_UO80l5Fc8iEEVbzvU2f1zSy8iwprhQcfm4qEgLu0JK6peRFzdzsNK1JB31OmZIOdOJsKc2l4Zhiblnu2YOzvlLpJqkMrK77OPbE14NzphxV_imJcvzglJUbhmDtgK2wcLRs7_BkcoF5J1EDVtRU_CGSaUL4sz9d_IMgyau8y2HL2PD0ZrFf3dAmg5QtkisFU7XKnIQEIxg35qqXwVCZUdzcQ-j4J-AGKUVgMTqfmuFLFHbqaBdM3-b-1NrC5rZOTRnMQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_05f55a5efed55124016ae32e36478087d1831e93c28f451bf8","index":1}]},"fingerprint":"1518df9483a8adc6"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":3741,"output_tokens":93,"total_tokens":3834,"cached_input_tokens":1826,"cache_creation_input_tokens":1912,"reasoning_tokens":35,"cost":{"total":0.00030406}},"response_id":"gen-1793273397-lU54c7YEqXDrzJMyPtGe","finish_reason":"stop","raw":{"id":"gen-1793273397-lU54c7YEqXDrzJMyPtGe","object":"chat.completion","created":1793273397,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"That gives the Guild a clear seasonal supply rhythm: Nightjar brings blue salt from Orin in fairer months, and stored reserves carry Vesper through the frozen strait. Does the Guild ration salt in winter, or do its stores usually last until spring?","role":"assistant","reasoning":"**Considering response structure**\n\nI think I need to respond briefly, noticing potential linkages, such as temporal shipping and stored supply—maybe they won’t conflict with each other. It might be a good idea to ask an interesting question to engage further. I should consider whether any existing lore or background information needs to be provided to ensure clarity or context in my response. This could definitely help with the overall understanding!","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering response structure**\n\nI think I need to respond briefly, noticing potential linkages, such as temporal shipping and stored supply—maybe they won’t conflict with each other. It might be a good idea to ask an interesting question to engage further. I should consider whether any existing lore or background information needs to be provided to ensure clarity or context in my response. This could definitely help with the overall understanding!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y43_t7Htw6hXIf_R-Ekp8g0KUodygW8az1ujBO5kB003SVw6DWPc6ULCAnqQZ2GEoPHPJOy3jGccNCHB2ldNJGVLSAfp9AVas68UksnCdMbANOpCaMBRFXNCkizQSIGXg9-rX2VjE526V4EO9O7A4XLGQ9C5Zow-3rBLjbzodPsPVvFCvPzepmgrZu2Kw7fgo1P3S3SXlBOAQ5I1kW_88Fp9cBWumhvv4hRbOzVT1FHomH2E8YqG0vB6sezyjlXcgZDiOz6N7CGAq2FKdlFphKEk1UV06xZqvjYDHd3yVGZgNKHBORIvsnMctbedVD_QMUTC6BX3oaHfw0mBO0FoISR782bOfFOInUDkm3UxlhOBC11vHpBOd8bo6_3dkRSHbGHjs8KQggD_wM1RX8UXRLNMwg6KRnUdMczUEmKg6P6uSHA8G6uPoRH50iUQEeyYyYWwML_GkQXK5sISTBMYlM6afzjh7sWBzfKSG1zAD-sFPhWYQayPbJB0sz-2z5AQM2IByu1Jc_vz3TSShV2ptHPW8SPVdcKQ-LQEK0AlimCv8qmE4dxEeUeAcadFf-qfCWwRUe_d50_cTf6svDrmaUZxSw1yy341__a-Tgq4e5af0NzLPoCahw8-kpygkmq9F4QzUVc0N1ygrtWY7F9TfYsK84nCDjMpeyP9dkHszsLkcZMX2Z_cuaFyAmgKxCpkf2ACMX2vDO-pN4VN10bDltSmp-j9JwdVdH_2deNMTuMHOZAQWTG2eOSrC6SUXu0rc0rCsGUdbueOf-lDgXXOj5thyH1Mg3fo0RRAlCXRN-zI4L6K1c9IC4A1fb5e7RNr2HoA-dkxGpzXuqu-H_UwPxPBNS7aafvpohf-waOtPUGeWU6_x-mEpeGASVYdLx7uz9Msr_xpTkf1a5sn2rTKfpLCIBon-wgL8SznkCSdIy43QWbvxdduMqQ8sQPjh8IdMlFhr9_EAFOt5Y86y715L-QobSWpTfjWfl4jj-saX_T9dMJrRaNCivX7Lwn3mEtp0puTMxnZY8LmNPXk2ZK17nJsEzgKzhAd1DpUYlUTomdoDkwa9A3FyxXF6fGTHPKo6AJscpdl_-6oSOpRgbpda1x3bcKh9VSzL_W2-EuKWTIyviQtBKKd1cnOldwgIL9ZMY957nc8ckgRlZxJQg7xhYjBCZk3TVNGk6XoJxVZ2gFgwRi_uCYHsrI5YQzGRc5fyjAISaYJQN4i5pWMa8n0pMUp63tzPJt79c4qUsEteYO1tIHKhnmxwZ1wh3teTvAL8FExtBQTEtOUuxvtSgPzOH1DXYbhsrthoPiansAcuRzOmXHKdXU40erWmy1kdTzazU6At9uMnkn0wj33U-V0qvLS2OxYaFppnddN2Kln6XxVlXPvh2rORttTu2gHhvjqr7miO62USEqfg2uALlDexuXFyLkw0djUtP2Uv__0HakoQh5RR3YH1w5Q-J7UO-z3K0PkPWIhnAmBQlSK7pmaaj2sfbY8imbnV0apzeT2miErSRWTj1xu-EYfmx9IdFhsiJMrV1PJLLWiKjf5mzUh1-q1x43L8O28Se9WFjtd_VhuYeIwr-BhrgZWB9D-NxCsglHf24pOLRDClqPHvMjv9Yi2dvwoZ2LdsPS9ksCeFe68-TSoyDxxzVqBRYfsYI4Q9GOrDSTZMTkcz9GCvjnjJKWFNwp94EbPL9F37usUiM3ybcOLMIRFtMbJL5wX0aim75KNeeOje9gR3Mu6UB3Oiu7uS-5vfWp6J8CvEWTpTiIjDSAEQUlUSWLjvUXoq_11OYYN_575BdKJkl2odr72_UO80l5Fc8iEEVbzvU2f1zSy8iwprhQcfm4qEgLu0JK6peRFzdzsNK1JB31OmZIOdOJsKc2l4Zhiblnu2YOzvlLpJqkMrK77OPbE14NzphxV_imJcvzglJUbhmDtgK2wcLRs7_BkcoF5J1EDVtRU_CGSaUL4sz9d_IMgyau8y2HL2PD0ZrFf3dAmg5QtkisFU7XKnIQEIxg35qqXwVCZUdzcQ-j4J-AGKUVgMTqfmuFLFHbqaBdM3-b-1NrC5rZOTRnMQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_05f55a5efed55124016ae32e36478087d1831e93c28f451bf8","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":3741,"completion_tokens":93,"total_tokens":3834,"cost":0.00030406,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":1912,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00030406,"upstream_inference_prompt_cost":0.00025756,"upstream_inference_completions_cost":0.0000465},"completion_tokens_details":{"reasoning_tokens":35,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":3741,"output_tokens":93,"total_tokens":3834,"cached_input_tokens":1826,"cache_creation_input_tokens":1912,"reasoning_tokens":35,"cost":{"total":0.00030406}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":3741,"output_tokens":93,"total_tokens":3834,"cached_input_tokens":1826,"cache_creation_input_tokens":1912,"reasoning_tokens":35,"cost":{"total":0.00030406}},"response_id":"gen-1793273397-lU54c7YEqXDrzJMyPtGe","finish_reason":"stop","raw":{"id":"gen-1793273397-lU54c7YEqXDrzJMyPtGe","object":"chat.completion","created":1793273397,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"That gives the Guild a clear seasonal supply rhythm: Nightjar brings blue salt from Orin in fairer months, and stored reserves carry Vesper through the frozen strait. Does the Guild ration salt in winter, or do its stores usually last until spring?","role":"assistant","reasoning":"**Considering response structure**\n\nI think I need to respond briefly, noticing potential linkages, such as temporal shipping and stored supply—maybe they won’t conflict with each other. It might be a good idea to ask an interesting question to engage further. I should consider whether any existing lore or background information needs to be provided to ensure clarity or context in my response. This could definitely help with the overall understanding!","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering response structure**\n\nI think I need to respond briefly, noticing potential linkages, such as temporal shipping and stored supply—maybe they won’t conflict with each other. It might be a good idea to ask an interesting question to engage further. I should consider whether any existing lore or background information needs to be provided to ensure clarity or context in my response. This could definitely help with the overall understanding!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y43_t7Htw6hXIf_R-Ekp8g0KUodygW8az1ujBO5kB003SVw6DWPc6ULCAnqQZ2GEoPHPJOy3jGccNCHB2ldNJGVLSAfp9AVas68UksnCdMbANOpCaMBRFXNCkizQSIGXg9-rX2VjE526V4EO9O7A4XLGQ9C5Zow-3rBLjbzodPsPVvFCvPzepmgrZu2Kw7fgo1P3S3SXlBOAQ5I1kW_88Fp9cBWumhvv4hRbOzVT1FHomH2E8YqG0vB6sezyjlXcgZDiOz6N7CGAq2FKdlFphKEk1UV06xZqvjYDHd3yVGZgNKHBORIvsnMctbedVD_QMUTC6BX3oaHfw0mBO0FoISR782bOfFOInUDkm3UxlhOBC11vHpBOd8bo6_3dkRSHbGHjs8KQggD_wM1RX8UXRLNMwg6KRnUdMczUEmKg6P6uSHA8G6uPoRH50iUQEeyYyYWwML_GkQXK5sISTBMYlM6afzjh7sWBzfKSG1zAD-sFPhWYQayPbJB0sz-2z5AQM2IByu1Jc_vz3TSShV2ptHPW8SPVdcKQ-LQEK0AlimCv8qmE4dxEeUeAcadFf-qfCWwRUe_d50_cTf6svDrmaUZxSw1yy341__a-Tgq4e5af0NzLPoCahw8-kpygkmq9F4QzUVc0N1ygrtWY7F9TfYsK84nCDjMpeyP9dkHszsLkcZMX2Z_cuaFyAmgKxCpkf2ACMX2vDO-pN4VN10bDltSmp-j9JwdVdH_2deNMTuMHOZAQWTG2eOSrC6SUXu0rc0rCsGUdbueOf-lDgXXOj5thyH1Mg3fo0RRAlCXRN-zI4L6K1c9IC4A1fb5e7RNr2HoA-dkxGpzXuqu-H_UwPxPBNS7aafvpohf-waOtPUGeWU6_x-mEpeGASVYdLx7uz9Msr_xpTkf1a5sn2rTKfpLCIBon-wgL8SznkCSdIy43QWbvxdduMqQ8sQPjh8IdMlFhr9_EAFOt5Y86y715L-QobSWpTfjWfl4jj-saX_T9dMJrRaNCivX7Lwn3mEtp0puTMxnZY8LmNPXk2ZK17nJsEzgKzhAd1DpUYlUTomdoDkwa9A3FyxXF6fGTHPKo6AJscpdl_-6oSOpRgbpda1x3bcKh9VSzL_W2-EuKWTIyviQtBKKd1cnOldwgIL9ZMY957nc8ckgRlZxJQg7xhYjBCZk3TVNGk6XoJxVZ2gFgwRi_uCYHsrI5YQzGRc5fyjAISaYJQN4i5pWMa8n0pMUp63tzPJt79c4qUsEteYO1tIHKhnmxwZ1wh3teTvAL8FExtBQTEtOUuxvtSgPzOH1DXYbhsrthoPiansAcuRzOmXHKdXU40erWmy1kdTzazU6At9uMnkn0wj33U-V0qvLS2OxYaFppnddN2Kln6XxVlXPvh2rORttTu2gHhvjqr7miO62USEqfg2uALlDexuXFyLkw0djUtP2Uv__0HakoQh5RR3YH1w5Q-J7UO-z3K0PkPWIhnAmBQlSK7pmaaj2sfbY8imbnV0apzeT2miErSRWTj1xu-EYfmx9IdFhsiJMrV1PJLLWiKjf5mzUh1-q1x43L8O28Se9WFjtd_VhuYeIwr-BhrgZWB9D-NxCsglHf24pOLRDClqPHvMjv9Yi2dvwoZ2LdsPS9ksCeFe68-TSoyDxxzVqBRYfsYI4Q9GOrDSTZMTkcz9GCvjnjJKWFNwp94EbPL9F37usUiM3ybcOLMIRFtMbJL5wX0aim75KNeeOje9gR3Mu6UB3Oiu7uS-5vfWp6J8CvEWTpTiIjDSAEQUlUSWLjvUXoq_11OYYN_575BdKJkl2odr72_UO80l5Fc8iEEVbzvU2f1zSy8iwprhQcfm4qEgLu0JK6peRFzdzsNK1JB31OmZIOdOJsKc2l4Zhiblnu2YOzvlLpJqkMrK77OPbE14NzphxV_imJcvzglJUbhmDtgK2wcLRs7_BkcoF5J1EDVtRU_CGSaUL4sz9d_IMgyau8y2HL2PD0ZrFf3dAmg5QtkisFU7XKnIQEIxg35qqXwVCZUdzcQ-j4J-AGKUVgMTqfmuFLFHbqaBdM3-b-1NrC5rZOTRnMQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_05f55a5efed55124016ae32e36478087d1831e93c28f451bf8","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":3741,"completion_tokens":93,"total_tokens":3834,"cost":0.00030406,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":1912,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00030406,"upstream_inference_prompt_cost":0.00025756,"upstream_inference_completions_cost":0.0000465},"completion_tokens_details":{"reasoning_tokens":35,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"The Nightjar carries blue salt from Orin to Vesper only between April and September. During winter the strait freezes and the guild uses stored salt."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Considering response structure**\n\nI think I need to respond briefly, noticing potential linkages, such as temporal shipping and stored supply—maybe they won’t conflict with each other. It might be a good idea to ask an interesting question to engage further. I should consider whether any existing lore or background information needs to be provided to ensure clarity or context in my response. This could definitely help with the overall understanding!","native":{"item":{"reasoning":"**Considering response structure**\n\nI think I need to respond briefly, noticing potential linkages, such as temporal shipping and stored supply—maybe they won’t conflict with each other. It might be a good idea to ask an interesting question to engage further. I should consider whether any existing lore or background information needs to be provided to ensure clarity or context in my response. This could definitely help with the overall understanding!","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering response structure**\n\nI think I need to respond briefly, noticing potential linkages, such as temporal shipping and stored supply—maybe they won’t conflict with each other. It might be a good idea to ask an interesting question to engage further. I should consider whether any existing lore or background information needs to be provided to ensure clarity or context in my response. This could definitely help with the overall understanding!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y43_t7Htw6hXIf_R-Ekp8g0KUodygW8az1ujBO5kB003SVw6DWPc6ULCAnqQZ2GEoPHPJOy3jGccNCHB2ldNJGVLSAfp9AVas68UksnCdMbANOpCaMBRFXNCkizQSIGXg9-rX2VjE526V4EO9O7A4XLGQ9C5Zow-3rBLjbzodPsPVvFCvPzepmgrZu2Kw7fgo1P3S3SXlBOAQ5I1kW_88Fp9cBWumhvv4hRbOzVT1FHomH2E8YqG0vB6sezyjlXcgZDiOz6N7CGAq2FKdlFphKEk1UV06xZqvjYDHd3yVGZgNKHBORIvsnMctbedVD_QMUTC6BX3oaHfw0mBO0FoISR782bOfFOInUDkm3UxlhOBC11vHpBOd8bo6_3dkRSHbGHjs8KQggD_wM1RX8UXRLNMwg6KRnUdMczUEmKg6P6uSHA8G6uPoRH50iUQEeyYyYWwML_GkQXK5sISTBMYlM6afzjh7sWBzfKSG1zAD-sFPhWYQayPbJB0sz-2z5AQM2IByu1Jc_vz3TSShV2ptHPW8SPVdcKQ-LQEK0AlimCv8qmE4dxEeUeAcadFf-qfCWwRUe_d50_cTf6svDrmaUZxSw1yy341__a-Tgq4e5af0NzLPoCahw8-kpygkmq9F4QzUVc0N1ygrtWY7F9TfYsK84nCDjMpeyP9dkHszsLkcZMX2Z_cuaFyAmgKxCpkf2ACMX2vDO-pN4VN10bDltSmp-j9JwdVdH_2deNMTuMHOZAQWTG2eOSrC6SUXu0rc0rCsGUdbueOf-lDgXXOj5thyH1Mg3fo0RRAlCXRN-zI4L6K1c9IC4A1fb5e7RNr2HoA-dkxGpzXuqu-H_UwPxPBNS7aafvpohf-waOtPUGeWU6_x-mEpeGASVYdLx7uz9Msr_xpTkf1a5sn2rTKfpLCIBon-wgL8SznkCSdIy43QWbvxdduMqQ8sQPjh8IdMlFhr9_EAFOt5Y86y715L-QobSWpTfjWfl4jj-saX_T9dMJrRaNCivX7Lwn3mEtp0puTMxnZY8LmNPXk2ZK17nJsEzgKzhAd1DpUYlUTomdoDkwa9A3FyxXF6fGTHPKo6AJscpdl_-6oSOpRgbpda1x3bcKh9VSzL_W2-EuKWTIyviQtBKKd1cnOldwgIL9ZMY957nc8ckgRlZxJQg7xhYjBCZk3TVNGk6XoJxVZ2gFgwRi_uCYHsrI5YQzGRc5fyjAISaYJQN4i5pWMa8n0pMUp63tzPJt79c4qUsEteYO1tIHKhnmxwZ1wh3teTvAL8FExtBQTEtOUuxvtSgPzOH1DXYbhsrthoPiansAcuRzOmXHKdXU40erWmy1kdTzazU6At9uMnkn0wj33U-V0qvLS2OxYaFppnddN2Kln6XxVlXPvh2rORttTu2gHhvjqr7miO62USEqfg2uALlDexuXFyLkw0djUtP2Uv__0HakoQh5RR3YH1w5Q-J7UO-z3K0PkPWIhnAmBQlSK7pmaaj2sfbY8imbnV0apzeT2miErSRWTj1xu-EYfmx9IdFhsiJMrV1PJLLWiKjf5mzUh1-q1x43L8O28Se9WFjtd_VhuYeIwr-BhrgZWB9D-NxCsglHf24pOLRDClqPHvMjv9Yi2dvwoZ2LdsPS9ksCeFe68-TSoyDxxzVqBRYfsYI4Q9GOrDSTZMTkcz9GCvjnjJKWFNwp94EbPL9F37usUiM3ybcOLMIRFtMbJL5wX0aim75KNeeOje9gR3Mu6UB3Oiu7uS-5vfWp6J8CvEWTpTiIjDSAEQUlUSWLjvUXoq_11OYYN_575BdKJkl2odr72_UO80l5Fc8iEEVbzvU2f1zSy8iwprhQcfm4qEgLu0JK6peRFzdzsNK1JB31OmZIOdOJsKc2l4Zhiblnu2YOzvlLpJqkMrK77OPbE14NzphxV_imJcvzglJUbhmDtgK2wcLRs7_BkcoF5J1EDVtRU_CGSaUL4sz9d_IMgyau8y2HL2PD0ZrFf3dAmg5QtkisFU7XKnIQEIxg35qqXwVCZUdzcQ-j4J-AGKUVgMTqfmuFLFHbqaBdM3-b-1NrC5rZOTRnMQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_05f55a5efed55124016ae32e36478087d1831e93c28f451bf8","index":1}]},"fingerprint":"1518df9483a8adc6"}},{"type":"text","text":"That gives the Guild a clear seasonal supply rhythm: Nightjar brings blue salt from Orin in fairer months, and stored reserves carry Vesper through the frozen strait. Does the Guild ration salt in winter, or do its stores usually last until spring?"}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793273397-lU54c7YEqXDrzJMyPtGe"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Considering response structure**\n\nI think I need to respond briefly, noticing potential linkages, such as temporal shipping and stored supply—maybe they won’t conflict with each other. It might be a good idea to ask an interesting question to engage further. I should consider whether any existing lore or background information needs to be provided to ensure clarity or context in my response. This could definitely help with the overall understanding!","native":{"item":{"reasoning":"**Considering response structure**\n\nI think I need to respond briefly, noticing potential linkages, such as temporal shipping and stored supply—maybe they won’t conflict with each other. It might be a good idea to ask an interesting question to engage further. I should consider whether any existing lore or background information needs to be provided to ensure clarity or context in my response. This could definitely help with the overall understanding!","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering response structure**\n\nI think I need to respond briefly, noticing potential linkages, such as temporal shipping and stored supply—maybe they won’t conflict with each other. It might be a good idea to ask an interesting question to engage further. I should consider whether any existing lore or background information needs to be provided to ensure clarity or context in my response. This could definitely help with the overall understanding!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y43_t7Htw6hXIf_R-Ekp8g0KUodygW8az1ujBO5kB003SVw6DWPc6ULCAnqQZ2GEoPHPJOy3jGccNCHB2ldNJGVLSAfp9AVas68UksnCdMbANOpCaMBRFXNCkizQSIGXg9-rX2VjE526V4EO9O7A4XLGQ9C5Zow-3rBLjbzodPsPVvFCvPzepmgrZu2Kw7fgo1P3S3SXlBOAQ5I1kW_88Fp9cBWumhvv4hRbOzVT1FHomH2E8YqG0vB6sezyjlXcgZDiOz6N7CGAq2FKdlFphKEk1UV06xZqvjYDHd3yVGZgNKHBORIvsnMctbedVD_QMUTC6BX3oaHfw0mBO0FoISR782bOfFOInUDkm3UxlhOBC11vHpBOd8bo6_3dkRSHbGHjs8KQggD_wM1RX8UXRLNMwg6KRnUdMczUEmKg6P6uSHA8G6uPoRH50iUQEeyYyYWwML_GkQXK5sISTBMYlM6afzjh7sWBzfKSG1zAD-sFPhWYQayPbJB0sz-2z5AQM2IByu1Jc_vz3TSShV2ptHPW8SPVdcKQ-LQEK0AlimCv8qmE4dxEeUeAcadFf-qfCWwRUe_d50_cTf6svDrmaUZxSw1yy341__a-Tgq4e5af0NzLPoCahw8-kpygkmq9F4QzUVc0N1ygrtWY7F9TfYsK84nCDjMpeyP9dkHszsLkcZMX2Z_cuaFyAmgKxCpkf2ACMX2vDO-pN4VN10bDltSmp-j9JwdVdH_2deNMTuMHOZAQWTG2eOSrC6SUXu0rc0rCsGUdbueOf-lDgXXOj5thyH1Mg3fo0RRAlCXRN-zI4L6K1c9IC4A1fb5e7RNr2HoA-dkxGpzXuqu-H_UwPxPBNS7aafvpohf-waOtPUGeWU6_x-mEpeGASVYdLx7uz9Msr_xpTkf1a5sn2rTKfpLCIBon-wgL8SznkCSdIy43QWbvxdduMqQ8sQPjh8IdMlFhr9_EAFOt5Y86y715L-QobSWpTfjWfl4jj-saX_T9dMJrRaNCivX7Lwn3mEtp0puTMxnZY8LmNPXk2ZK17nJsEzgKzhAd1DpUYlUTomdoDkwa9A3FyxXF6fGTHPKo6AJscpdl_-6oSOpRgbpda1x3bcKh9VSzL_W2-EuKWTIyviQtBKKd1cnOldwgIL9ZMY957nc8ckgRlZxJQg7xhYjBCZk3TVNGk6XoJxVZ2gFgwRi_uCYHsrI5YQzGRc5fyjAISaYJQN4i5pWMa8n0pMUp63tzPJt79c4qUsEteYO1tIHKhnmxwZ1wh3teTvAL8FExtBQTEtOUuxvtSgPzOH1DXYbhsrthoPiansAcuRzOmXHKdXU40erWmy1kdTzazU6At9uMnkn0wj33U-V0qvLS2OxYaFppnddN2Kln6XxVlXPvh2rORttTu2gHhvjqr7miO62USEqfg2uALlDexuXFyLkw0djUtP2Uv__0HakoQh5RR3YH1w5Q-J7UO-z3K0PkPWIhnAmBQlSK7pmaaj2sfbY8imbnV0apzeT2miErSRWTj1xu-EYfmx9IdFhsiJMrV1PJLLWiKjf5mzUh1-q1x43L8O28Se9WFjtd_VhuYeIwr-BhrgZWB9D-NxCsglHf24pOLRDClqPHvMjv9Yi2dvwoZ2LdsPS9ksCeFe68-TSoyDxxzVqBRYfsYI4Q9GOrDSTZMTkcz9GCvjnjJKWFNwp94EbPL9F37usUiM3ybcOLMIRFtMbJL5wX0aim75KNeeOje9gR3Mu6UB3Oiu7uS-5vfWp6J8CvEWTpTiIjDSAEQUlUSWLjvUXoq_11OYYN_575BdKJkl2odr72_UO80l5Fc8iEEVbzvU2f1zSy8iwprhQcfm4qEgLu0JK6peRFzdzsNK1JB31OmZIOdOJsKc2l4Zhiblnu2YOzvlLpJqkMrK77OPbE14NzphxV_imJcvzglJUbhmDtgK2wcLRs7_BkcoF5J1EDVtRU_CGSaUL4sz9d_IMgyau8y2HL2PD0ZrFf3dAmg5QtkisFU7XKnIQEIxg35qqXwVCZUdzcQ-j4J-AGKUVgMTqfmuFLFHbqaBdM3-b-1NrC5rZOTRnMQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_05f55a5efed55124016ae32e36478087d1831e93c28f451bf8","index":1}]},"fingerprint":"1518df9483a8adc6"}},{"type":"text","text":"That gives the Guild a clear seasonal supply rhythm: Nightjar brings blue salt from Orin in fairer months, and stored reserves carry Vesper through the frozen strait. Does the Guild ration salt in winter, or do its stores usually last until spring?"}]}
+

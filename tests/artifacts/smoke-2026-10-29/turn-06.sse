@@ -1,0 +1,274 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Considering navigational context**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" respond"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" briefly"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" by"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" acknowledging"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" there's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" existing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" context"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" for"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ven"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" who"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" knows"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" key"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" details"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I'll"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" explore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" implications"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" of"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" also"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" consider"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" asking"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" question"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" There"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"âs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" no"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" contradiction"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" noted"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" also"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" have"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" emphasize"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" while"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" A"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"sha"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" trusts"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" routes"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" there"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" are"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" no"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" contracts"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" involved"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"âs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" important"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" distinguish"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" trust"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" operations"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" versus"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" trust"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" commercial"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" terms"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" So"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" should"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" think"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" of"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" one"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" useful"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" question"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ask"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"!"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ven"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"âs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" authority"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" sharply"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" defined"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" A"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"sha"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" trusts"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" his"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" navigation"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"âeven"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" after"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" storm"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" cost"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" him"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" an"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" eye"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"âbut"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" keeps"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" him"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" out"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" of"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" contract"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" talks"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Does"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" he"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" accept"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" boundary"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" source"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" of"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" tension"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" between"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" them"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"?"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"Ivenâs authority is sharply defined: Asha trusts his navigationâeven after the storm cost him an eyeâbut keeps him out of contract talks. Does he accept that boundary, or is it a source of tension between them?"}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Considering navigational context**\n\nI need to respond briefly by acknowledging that there's existing context for Iven, who knows the key details. I'll explore the implications of that but also consider asking a question. Thereâs no contradiction noted, but I also have to emphasize that while Asha trusts the routes, there are no contracts involved. Itâs important to distinguish trust in operations versus trust in commercial terms. So, I should think of one useful question to ask!","native":{"item":{"reasoning":"**Considering navigational context**\n\nI need to respond briefly by acknowledging that there's existing context for Iven, who knows the key details. I'll explore the implications of that but also consider asking a question. Thereâs no contradiction noted, but I also have to emphasize that while Asha trusts the routes, there are no contracts involved. Itâs important to distinguish trust in operations versus trust in commercial terms. So, I should think of one useful question to ask!","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering navigational context**\n\nI need to respond briefly by acknowledging that there's existing context for Iven, who knows the key details. I'll explore the implications of that but also consider asking a question. Thereâs no contradiction noted, but I also have to emphasize that while Asha trusts the routes, there are no contracts involved. Itâs important to distinguish trust in operations versus trust in commercial terms. So, I should think of one useful question to ask!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yLIEB3IjVMPhA_0HZdG56D1LLtX777H-ASr0xT3J3PnRxH_Q3D69Dj_eWarqCoKPwfwX3jII6XttHUdGhaLJh9lQx9r3RdDsqg77LevsH8FVUC3hyHgDa3pCkEWKChr_wYtK5IP8Pdr25lishREUEctUXtP-qWPSmidVx0c2WPpMJe_Rl3tzx2ageafzQ_8hzUAa9cGrCrEYg_ywI5tZfbi1Y14L3Oyl3kCk0TvE9z9dUJmWmD1EobKJGYJmWG9aoLNPZSlM879cqYGPDXOZGXl6ziH8gL4NPyhIZw2NYMD0R3kjMtFwfSMSI9BXad0iYg3GIa_QOZsm6Gn8Yq8swmciTvWybkSIbY-76dtE-LvB2oQP2xgEV7zUaVwcuFq6AvFFwOPm9BfkzZJr63Gbu_5Ccz7LN6kxvtF7xGSOLanyDQDALv8IvjlKn5q79dik5YSg7_g5OPT4ENM4fiqZ1hP96gpAesZnpuIfeUuEiiPA5NbId8OhHZo1Enz6rQfT7G3-AJLdPNTOpFK-gPIeA-rGF-LuyYSKYCbG_omkqD6Bm4LQb2AdiJ4EDKfrq_vsNc5M0yj9rw4VBUWWLaaDIERFeDbzT3-UVeQQfDxlfdUe_40OiSsPZaQl8JrmDSwnIqD3XJVYKOh1K5MZdThgM1MS1iqVErJbmiPN3VFen7LAjHbQhjCX5A-TCcMr8csSl_oSqnA5XlqBJmzctH8yaZDb7_QI2FqBu6y7y_IYZ1KeSVRpdf1FePCRe5HazSBVWBkaNF5o-HcVZuNujYbH_aPLiii7XGVTq1w7NesGJFXpeALP8FKhXqBcx3QJ8tMnio0u6-04EOknzg2GnCE55LdWzM36MsqTPMsWZB_u-NaErocndsDAzdhTpI3BDrN5k1SRcaWcX_g1koWrJRc3A4fDonZwuput3SQKCdbiTilNKYnAJypr3BXkB0o8fSsEXv_ikAEUqHXC82eqzaRAjJaYCIcphCgDcp8bwnkKxSgfFv36nFjuoEBhckI5qQxjlkOJvl08K8Oh22k9bsKzFTN6AxpQ0QkSaqptRpIVxnPPAH6kBqdZPtk7qK0CXwpqZKpSg3Oiou9Kyy-zUKrKvEkYVokMWzzRMwBmiLVko0EUgrs6fQBVhs96L6jcFoP3jm5UMC-yG8i3Z8jyyKAb6-wWWuLAp9ENWRVSU_dMFub9ENCsPy0RrbWUZmFPvpFeICjXpVTcX23wuQ1PxuBGHARJdcBL8sVIWEHM6Hr7uREMjlehhm9u038kJImYGPsW7QvrXJ4nrL53dmlLvl15Am0P-uB_qkreYO08dhjhYzkGvVviLqT6V9cbCRAuOrqB1ICRFsVKFWN-8FOInO-Gd2yiXlUnI7wHFkpW_al32KO4zUntL_foZCynqhkVZ-FoVTStg_-ZaZhIMtqfTXzCvM7IoeWNUfd2sJ9NYJr9ihrZFfRvL7EGpPXRINE1Vq-7R24s5I1GWKI-a-IYx_bnn4Co7tl1vz7Q6LZDLIZv_qxekHLusLfzi-4hTKYyVY2mnfJvq2NFaKyiaQqyKuOYn_xeHieIqjtkFrEUPjgwhWbwhJu0D1ygxzEOBAO_Tu7_jcfUBPstWqMQ0dqL2YRY0oU5kJK_8nzs7jIi3wUkH63ceFSfhn6zWqkhMaSz34wxp_GGyp5104SFEGSosprYlnXiRT09XoZYK1SALOry6SPN_hYbaBePjOBABEei6_nCZOFb2oC5I4e87mJvJRHmH3uzR2RFWeuapS_f5XvoIslrAIDByle_2sBG_3H686J7snd_nDSHxSGzyMXzEtFZJA-s4yH9rrpwLQsbCGa_OfXgJjrPSESMxt5lYQQFHBqAI8zoAem3Ehvos2NzEbDQ6AEqaVNhDX05hL5GKc9M2_hMQNiBS_fcLpG3daE1q_3WBpNoKyW_rtCs0MEd9myIxewRSUjgneNJFeNDwnHzeIW8tgzFbfd3zeodYp2uCLBiAtzV7MgyaMkTezHIHDw7_vuovFst-ZdA_hqjMqEy1VvCuj8UVF-b9Q_yLcQ_HTebGS4IJ-kY0C2KCno-4fd8TZ49JEKouRdSteXoEDYHFewG6cofpex38-bbX_k7nt6tl7DCBFcggsf2oF0TS29sYAEAVsFmVsZinBlJQn639aSxnP67eB2wOS22Tu3KLoi6vO3eEh0uvZ-508e5aNiyqnEVqF7_Kc-6v_ehLhDPEd82kj4-L5Q_jfi9XUKDJTX1hoVDQltCIAPylP63-7vJrfNCJCYx4F2eyY3EKF6GmSci_4HQACBTFfBWzF8rgG3v-VBfhmFpJNC0hsI4QUsqCW4MrcYLx5ejoVNDqbERKEwxC0xOXEP9eEGdOgLVrKr-njq8FaoQeiT8EEALdrCVBqeoLc4-opsJ7QjHYQtLGeX3C2POiNWsryVEaKJEyemy93zt4KH7W27yVkZtzv2QtzGiKgSkHlS1Ia7GVbIT9usBGo=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0c73da82bc5fbcda016ae322c6d48887d180fdc42824ef6c4a","index":1}]},"fingerprint":"eaf6ef1da87d7a99"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":3722,"output_tokens":116,"total_tokens":3838,"cached_input_tokens":1826,"cache_creation_input_tokens":1893,"reasoning_tokens":65,"cost":{"total":0.000313185}},"response_id":"gen-1793270470-YkKgjMsYFlW3GCEy5eE0","finish_reason":"stop","raw":{"id":"gen-1793270470-YkKgjMsYFlW3GCEy5eE0","object":"chat.completion","created":1793270470,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Ivenâs authority is sharply defined: Asha trusts his navigationâeven after the storm cost him an eyeâbut keeps him out of contract talks. Does he accept that boundary, or is it a source of tension between them?","role":"assistant","reasoning":"**Considering navigational context**\n\nI need to respond briefly by acknowledging that there's existing context for Iven, who knows the key details. I'll explore the implications of that but also consider asking a question. Thereâs no contradiction noted, but I also have to emphasize that while Asha trusts the routes, there are no contracts involved. Itâs important to distinguish trust in operations versus trust in commercial terms. So, I should think of one useful question to ask!","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering navigational context**\n\nI need to respond briefly by acknowledging that there's existing context for Iven, who knows the key details. I'll explore the implications of that but also consider asking a question. Thereâs no contradiction noted, but I also have to emphasize that while Asha trusts the routes, there are no contracts involved. Itâs important to distinguish trust in operations versus trust in commercial terms. So, I should think of one useful question to ask!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yLIEB3IjVMPhA_0HZdG56D1LLtX777H-ASr0xT3J3PnRxH_Q3D69Dj_eWarqCoKPwfwX3jII6XttHUdGhaLJh9lQx9r3RdDsqg77LevsH8FVUC3hyHgDa3pCkEWKChr_wYtK5IP8Pdr25lishREUEctUXtP-qWPSmidVx0c2WPpMJe_Rl3tzx2ageafzQ_8hzUAa9cGrCrEYg_ywI5tZfbi1Y14L3Oyl3kCk0TvE9z9dUJmWmD1EobKJGYJmWG9aoLNPZSlM879cqYGPDXOZGXl6ziH8gL4NPyhIZw2NYMD0R3kjMtFwfSMSI9BXad0iYg3GIa_QOZsm6Gn8Yq8swmciTvWybkSIbY-76dtE-LvB2oQP2xgEV7zUaVwcuFq6AvFFwOPm9BfkzZJr63Gbu_5Ccz7LN6kxvtF7xGSOLanyDQDALv8IvjlKn5q79dik5YSg7_g5OPT4ENM4fiqZ1hP96gpAesZnpuIfeUuEiiPA5NbId8OhHZo1Enz6rQfT7G3-AJLdPNTOpFK-gPIeA-rGF-LuyYSKYCbG_omkqD6Bm4LQb2AdiJ4EDKfrq_vsNc5M0yj9rw4VBUWWLaaDIERFeDbzT3-UVeQQfDxlfdUe_40OiSsPZaQl8JrmDSwnIqD3XJVYKOh1K5MZdThgM1MS1iqVErJbmiPN3VFen7LAjHbQhjCX5A-TCcMr8csSl_oSqnA5XlqBJmzctH8yaZDb7_QI2FqBu6y7y_IYZ1KeSVRpdf1FePCRe5HazSBVWBkaNF5o-HcVZuNujYbH_aPLiii7XGVTq1w7NesGJFXpeALP8FKhXqBcx3QJ8tMnio0u6-04EOknzg2GnCE55LdWzM36MsqTPMsWZB_u-NaErocndsDAzdhTpI3BDrN5k1SRcaWcX_g1koWrJRc3A4fDonZwuput3SQKCdbiTilNKYnAJypr3BXkB0o8fSsEXv_ikAEUqHXC82eqzaRAjJaYCIcphCgDcp8bwnkKxSgfFv36nFjuoEBhckI5qQxjlkOJvl08K8Oh22k9bsKzFTN6AxpQ0QkSaqptRpIVxnPPAH6kBqdZPtk7qK0CXwpqZKpSg3Oiou9Kyy-zUKrKvEkYVokMWzzRMwBmiLVko0EUgrs6fQBVhs96L6jcFoP3jm5UMC-yG8i3Z8jyyKAb6-wWWuLAp9ENWRVSU_dMFub9ENCsPy0RrbWUZmFPvpFeICjXpVTcX23wuQ1PxuBGHARJdcBL8sVIWEHM6Hr7uREMjlehhm9u038kJImYGPsW7QvrXJ4nrL53dmlLvl15Am0P-uB_qkreYO08dhjhYzkGvVviLqT6V9cbCRAuOrqB1ICRFsVKFWN-8FOInO-Gd2yiXlUnI7wHFkpW_al32KO4zUntL_foZCynqhkVZ-FoVTStg_-ZaZhIMtqfTXzCvM7IoeWNUfd2sJ9NYJr9ihrZFfRvL7EGpPXRINE1Vq-7R24s5I1GWKI-a-IYx_bnn4Co7tl1vz7Q6LZDLIZv_qxekHLusLfzi-4hTKYyVY2mnfJvq2NFaKyiaQqyKuOYn_xeHieIqjtkFrEUPjgwhWbwhJu0D1ygxzEOBAO_Tu7_jcfUBPstWqMQ0dqL2YRY0oU5kJK_8nzs7jIi3wUkH63ceFSfhn6zWqkhMaSz34wxp_GGyp5104SFEGSosprYlnXiRT09XoZYK1SALOry6SPN_hYbaBePjOBABEei6_nCZOFb2oC5I4e87mJvJRHmH3uzR2RFWeuapS_f5XvoIslrAIDByle_2sBG_3H686J7snd_nDSHxSGzyMXzEtFZJA-s4yH9rrpwLQsbCGa_OfXgJjrPSESMxt5lYQQFHBqAI8zoAem3Ehvos2NzEbDQ6AEqaVNhDX05hL5GKc9M2_hMQNiBS_fcLpG3daE1q_3WBpNoKyW_rtCs0MEd9myIxewRSUjgneNJFeNDwnHzeIW8tgzFbfd3zeodYp2uCLBiAtzV7MgyaMkTezHIHDw7_vuovFst-ZdA_hqjMqEy1VvCuj8UVF-b9Q_yLcQ_HTebGS4IJ-kY0C2KCno-4fd8TZ49JEKouRdSteXoEDYHFewG6cofpex38-bbX_k7nt6tl7DCBFcggsf2oF0TS29sYAEAVsFmVsZinBlJQn639aSxnP67eB2wOS22Tu3KLoi6vO3eEh0uvZ-508e5aNiyqnEVqF7_Kc-6v_ehLhDPEd82kj4-L5Q_jfi9XUKDJTX1hoVDQltCIAPylP63-7vJrfNCJCYx4F2eyY3EKF6GmSci_4HQACBTFfBWzF8rgG3v-VBfhmFpJNC0hsI4QUsqCW4MrcYLx5ejoVNDqbERKEwxC0xOXEP9eEGdOgLVrKr-njq8FaoQeiT8EEALdrCVBqeoLc4-opsJ7QjHYQtLGeX3C2POiNWsryVEaKJEyemy93zt4KH7W27yVkZtzv2QtzGiKgSkHlS1Ia7GVbIT9usBGo=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0c73da82bc5fbcda016ae322c6d48887d180fdc42824ef6c4a","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":3722,"completion_tokens":116,"total_tokens":3838,"cost":0.000313185,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":1893,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000313185,"upstream_inference_prompt_cost":0.000255185,"upstream_inference_completions_cost":0.000058},"completion_tokens_details":{"reasoning_tokens":65,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":3722,"output_tokens":116,"total_tokens":3838,"cached_input_tokens":1826,"cache_creation_input_tokens":1893,"reasoning_tokens":65,"cost":{"total":0.000313185}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":3722,"output_tokens":116,"total_tokens":3838,"cached_input_tokens":1826,"cache_creation_input_tokens":1893,"reasoning_tokens":65,"cost":{"total":0.000313185}},"response_id":"gen-1793270470-YkKgjMsYFlW3GCEy5eE0","finish_reason":"stop","raw":{"id":"gen-1793270470-YkKgjMsYFlW3GCEy5eE0","object":"chat.completion","created":1793270470,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Ivenâs authority is sharply defined: Asha trusts his navigationâeven after the storm cost him an eyeâbut keeps him out of contract talks. Does he accept that boundary, or is it a source of tension between them?","role":"assistant","reasoning":"**Considering navigational context**\n\nI need to respond briefly by acknowledging that there's existing context for Iven, who knows the key details. I'll explore the implications of that but also consider asking a question. Thereâs no contradiction noted, but I also have to emphasize that while Asha trusts the routes, there are no contracts involved. Itâs important to distinguish trust in operations versus trust in commercial terms. So, I should think of one useful question to ask!","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering navigational context**\n\nI need to respond briefly by acknowledging that there's existing context for Iven, who knows the key details. I'll explore the implications of that but also consider asking a question. Thereâs no contradiction noted, but I also have to emphasize that while Asha trusts the routes, there are no contracts involved. Itâs important to distinguish trust in operations versus trust in commercial terms. So, I should think of one useful question to ask!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yLIEB3IjVMPhA_0HZdG56D1LLtX777H-ASr0xT3J3PnRxH_Q3D69Dj_eWarqCoKPwfwX3jII6XttHUdGhaLJh9lQx9r3RdDsqg77LevsH8FVUC3hyHgDa3pCkEWKChr_wYtK5IP8Pdr25lishREUEctUXtP-qWPSmidVx0c2WPpMJe_Rl3tzx2ageafzQ_8hzUAa9cGrCrEYg_ywI5tZfbi1Y14L3Oyl3kCk0TvE9z9dUJmWmD1EobKJGYJmWG9aoLNPZSlM879cqYGPDXOZGXl6ziH8gL4NPyhIZw2NYMD0R3kjMtFwfSMSI9BXad0iYg3GIa_QOZsm6Gn8Yq8swmciTvWybkSIbY-76dtE-LvB2oQP2xgEV7zUaVwcuFq6AvFFwOPm9BfkzZJr63Gbu_5Ccz7LN6kxvtF7xGSOLanyDQDALv8IvjlKn5q79dik5YSg7_g5OPT4ENM4fiqZ1hP96gpAesZnpuIfeUuEiiPA5NbId8OhHZo1Enz6rQfT7G3-AJLdPNTOpFK-gPIeA-rGF-LuyYSKYCbG_omkqD6Bm4LQb2AdiJ4EDKfrq_vsNc5M0yj9rw4VBUWWLaaDIERFeDbzT3-UVeQQfDxlfdUe_40OiSsPZaQl8JrmDSwnIqD3XJVYKOh1K5MZdThgM1MS1iqVErJbmiPN3VFen7LAjHbQhjCX5A-TCcMr8csSl_oSqnA5XlqBJmzctH8yaZDb7_QI2FqBu6y7y_IYZ1KeSVRpdf1FePCRe5HazSBVWBkaNF5o-HcVZuNujYbH_aPLiii7XGVTq1w7NesGJFXpeALP8FKhXqBcx3QJ8tMnio0u6-04EOknzg2GnCE55LdWzM36MsqTPMsWZB_u-NaErocndsDAzdhTpI3BDrN5k1SRcaWcX_g1koWrJRc3A4fDonZwuput3SQKCdbiTilNKYnAJypr3BXkB0o8fSsEXv_ikAEUqHXC82eqzaRAjJaYCIcphCgDcp8bwnkKxSgfFv36nFjuoEBhckI5qQxjlkOJvl08K8Oh22k9bsKzFTN6AxpQ0QkSaqptRpIVxnPPAH6kBqdZPtk7qK0CXwpqZKpSg3Oiou9Kyy-zUKrKvEkYVokMWzzRMwBmiLVko0EUgrs6fQBVhs96L6jcFoP3jm5UMC-yG8i3Z8jyyKAb6-wWWuLAp9ENWRVSU_dMFub9ENCsPy0RrbWUZmFPvpFeICjXpVTcX23wuQ1PxuBGHARJdcBL8sVIWEHM6Hr7uREMjlehhm9u038kJImYGPsW7QvrXJ4nrL53dmlLvl15Am0P-uB_qkreYO08dhjhYzkGvVviLqT6V9cbCRAuOrqB1ICRFsVKFWN-8FOInO-Gd2yiXlUnI7wHFkpW_al32KO4zUntL_foZCynqhkVZ-FoVTStg_-ZaZhIMtqfTXzCvM7IoeWNUfd2sJ9NYJr9ihrZFfRvL7EGpPXRINE1Vq-7R24s5I1GWKI-a-IYx_bnn4Co7tl1vz7Q6LZDLIZv_qxekHLusLfzi-4hTKYyVY2mnfJvq2NFaKyiaQqyKuOYn_xeHieIqjtkFrEUPjgwhWbwhJu0D1ygxzEOBAO_Tu7_jcfUBPstWqMQ0dqL2YRY0oU5kJK_8nzs7jIi3wUkH63ceFSfhn6zWqkhMaSz34wxp_GGyp5104SFEGSosprYlnXiRT09XoZYK1SALOry6SPN_hYbaBePjOBABEei6_nCZOFb2oC5I4e87mJvJRHmH3uzR2RFWeuapS_f5XvoIslrAIDByle_2sBG_3H686J7snd_nDSHxSGzyMXzEtFZJA-s4yH9rrpwLQsbCGa_OfXgJjrPSESMxt5lYQQFHBqAI8zoAem3Ehvos2NzEbDQ6AEqaVNhDX05hL5GKc9M2_hMQNiBS_fcLpG3daE1q_3WBpNoKyW_rtCs0MEd9myIxewRSUjgneNJFeNDwnHzeIW8tgzFbfd3zeodYp2uCLBiAtzV7MgyaMkTezHIHDw7_vuovFst-ZdA_hqjMqEy1VvCuj8UVF-b9Q_yLcQ_HTebGS4IJ-kY0C2KCno-4fd8TZ49JEKouRdSteXoEDYHFewG6cofpex38-bbX_k7nt6tl7DCBFcggsf2oF0TS29sYAEAVsFmVsZinBlJQn639aSxnP67eB2wOS22Tu3KLoi6vO3eEh0uvZ-508e5aNiyqnEVqF7_Kc-6v_ehLhDPEd82kj4-L5Q_jfi9XUKDJTX1hoVDQltCIAPylP63-7vJrfNCJCYx4F2eyY3EKF6GmSci_4HQACBTFfBWzF8rgG3v-VBfhmFpJNC0hsI4QUsqCW4MrcYLx5ejoVNDqbERKEwxC0xOXEP9eEGdOgLVrKr-njq8FaoQeiT8EEALdrCVBqeoLc4-opsJ7QjHYQtLGeX3C2POiNWsryVEaKJEyemy93zt4KH7W27yVkZtzv2QtzGiKgSkHlS1Ia7GVbIT9usBGo=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0c73da82bc5fbcda016ae322c6d48887d180fdc42824ef6c4a","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":3722,"completion_tokens":116,"total_tokens":3838,"cost":0.000313185,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":1893,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000313185,"upstream_inference_prompt_cost":0.000255185,"upstream_inference_completions_cost":0.000058},"completion_tokens_details":{"reasoning_tokens":65,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"Iven lost his right eye in the winter storm of 312. He navigates the Nightjar using tide charts, not magic. Asha trusts him with routes but doesn't let him negotiate contracts."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Considering navigational context**\n\nI need to respond briefly by acknowledging that there's existing context for Iven, who knows the key details. I'll explore the implications of that but also consider asking a question. Thereâs no contradiction noted, but I also have to emphasize that while Asha trusts the routes, there are no contracts involved. Itâs important to distinguish trust in operations versus trust in commercial terms. So, I should think of one useful question to ask!","native":{"item":{"reasoning":"**Considering navigational context**\n\nI need to respond briefly by acknowledging that there's existing context for Iven, who knows the key details. I'll explore the implications of that but also consider asking a question. Thereâs no contradiction noted, but I also have to emphasize that while Asha trusts the routes, there are no contracts involved. Itâs important to distinguish trust in operations versus trust in commercial terms. So, I should think of one useful question to ask!","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering navigational context**\n\nI need to respond briefly by acknowledging that there's existing context for Iven, who knows the key details. I'll explore the implications of that but also consider asking a question. Thereâs no contradiction noted, but I also have to emphasize that while Asha trusts the routes, there are no contracts involved. Itâs important to distinguish trust in operations versus trust in commercial terms. So, I should think of one useful question to ask!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yLIEB3IjVMPhA_0HZdG56D1LLtX777H-ASr0xT3J3PnRxH_Q3D69Dj_eWarqCoKPwfwX3jII6XttHUdGhaLJh9lQx9r3RdDsqg77LevsH8FVUC3hyHgDa3pCkEWKChr_wYtK5IP8Pdr25lishREUEctUXtP-qWPSmidVx0c2WPpMJe_Rl3tzx2ageafzQ_8hzUAa9cGrCrEYg_ywI5tZfbi1Y14L3Oyl3kCk0TvE9z9dUJmWmD1EobKJGYJmWG9aoLNPZSlM879cqYGPDXOZGXl6ziH8gL4NPyhIZw2NYMD0R3kjMtFwfSMSI9BXad0iYg3GIa_QOZsm6Gn8Yq8swmciTvWybkSIbY-76dtE-LvB2oQP2xgEV7zUaVwcuFq6AvFFwOPm9BfkzZJr63Gbu_5Ccz7LN6kxvtF7xGSOLanyDQDALv8IvjlKn5q79dik5YSg7_g5OPT4ENM4fiqZ1hP96gpAesZnpuIfeUuEiiPA5NbId8OhHZo1Enz6rQfT7G3-AJLdPNTOpFK-gPIeA-rGF-LuyYSKYCbG_omkqD6Bm4LQb2AdiJ4EDKfrq_vsNc5M0yj9rw4VBUWWLaaDIERFeDbzT3-UVeQQfDxlfdUe_40OiSsPZaQl8JrmDSwnIqD3XJVYKOh1K5MZdThgM1MS1iqVErJbmiPN3VFen7LAjHbQhjCX5A-TCcMr8csSl_oSqnA5XlqBJmzctH8yaZDb7_QI2FqBu6y7y_IYZ1KeSVRpdf1FePCRe5HazSBVWBkaNF5o-HcVZuNujYbH_aPLiii7XGVTq1w7NesGJFXpeALP8FKhXqBcx3QJ8tMnio0u6-04EOknzg2GnCE55LdWzM36MsqTPMsWZB_u-NaErocndsDAzdhTpI3BDrN5k1SRcaWcX_g1koWrJRc3A4fDonZwuput3SQKCdbiTilNKYnAJypr3BXkB0o8fSsEXv_ikAEUqHXC82eqzaRAjJaYCIcphCgDcp8bwnkKxSgfFv36nFjuoEBhckI5qQxjlkOJvl08K8Oh22k9bsKzFTN6AxpQ0QkSaqptRpIVxnPPAH6kBqdZPtk7qK0CXwpqZKpSg3Oiou9Kyy-zUKrKvEkYVokMWzzRMwBmiLVko0EUgrs6fQBVhs96L6jcFoP3jm5UMC-yG8i3Z8jyyKAb6-wWWuLAp9ENWRVSU_dMFub9ENCsPy0RrbWUZmFPvpFeICjXpVTcX23wuQ1PxuBGHARJdcBL8sVIWEHM6Hr7uREMjlehhm9u038kJImYGPsW7QvrXJ4nrL53dmlLvl15Am0P-uB_qkreYO08dhjhYzkGvVviLqT6V9cbCRAuOrqB1ICRFsVKFWN-8FOInO-Gd2yiXlUnI7wHFkpW_al32KO4zUntL_foZCynqhkVZ-FoVTStg_-ZaZhIMtqfTXzCvM7IoeWNUfd2sJ9NYJr9ihrZFfRvL7EGpPXRINE1Vq-7R24s5I1GWKI-a-IYx_bnn4Co7tl1vz7Q6LZDLIZv_qxekHLusLfzi-4hTKYyVY2mnfJvq2NFaKyiaQqyKuOYn_xeHieIqjtkFrEUPjgwhWbwhJu0D1ygxzEOBAO_Tu7_jcfUBPstWqMQ0dqL2YRY0oU5kJK_8nzs7jIi3wUkH63ceFSfhn6zWqkhMaSz34wxp_GGyp5104SFEGSosprYlnXiRT09XoZYK1SALOry6SPN_hYbaBePjOBABEei6_nCZOFb2oC5I4e87mJvJRHmH3uzR2RFWeuapS_f5XvoIslrAIDByle_2sBG_3H686J7snd_nDSHxSGzyMXzEtFZJA-s4yH9rrpwLQsbCGa_OfXgJjrPSESMxt5lYQQFHBqAI8zoAem3Ehvos2NzEbDQ6AEqaVNhDX05hL5GKc9M2_hMQNiBS_fcLpG3daE1q_3WBpNoKyW_rtCs0MEd9myIxewRSUjgneNJFeNDwnHzeIW8tgzFbfd3zeodYp2uCLBiAtzV7MgyaMkTezHIHDw7_vuovFst-ZdA_hqjMqEy1VvCuj8UVF-b9Q_yLcQ_HTebGS4IJ-kY0C2KCno-4fd8TZ49JEKouRdSteXoEDYHFewG6cofpex38-bbX_k7nt6tl7DCBFcggsf2oF0TS29sYAEAVsFmVsZinBlJQn639aSxnP67eB2wOS22Tu3KLoi6vO3eEh0uvZ-508e5aNiyqnEVqF7_Kc-6v_ehLhDPEd82kj4-L5Q_jfi9XUKDJTX1hoVDQltCIAPylP63-7vJrfNCJCYx4F2eyY3EKF6GmSci_4HQACBTFfBWzF8rgG3v-VBfhmFpJNC0hsI4QUsqCW4MrcYLx5ejoVNDqbERKEwxC0xOXEP9eEGdOgLVrKr-njq8FaoQeiT8EEALdrCVBqeoLc4-opsJ7QjHYQtLGeX3C2POiNWsryVEaKJEyemy93zt4KH7W27yVkZtzv2QtzGiKgSkHlS1Ia7GVbIT9usBGo=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0c73da82bc5fbcda016ae322c6d48887d180fdc42824ef6c4a","index":1}]},"fingerprint":"eaf6ef1da87d7a99"}},{"type":"text","text":"Ivenâs authority is sharply defined: Asha trusts his navigationâeven after the storm cost him an eyeâbut keeps him out of contract talks. Does he accept that boundary, or is it a source of tension between them?"}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793270470-YkKgjMsYFlW3GCEy5eE0"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Considering navigational context**\n\nI need to respond briefly by acknowledging that there's existing context for Iven, who knows the key details. I'll explore the implications of that but also consider asking a question. Thereâs no contradiction noted, but I also have to emphasize that while Asha trusts the routes, there are no contracts involved. Itâs important to distinguish trust in operations versus trust in commercial terms. So, I should think of one useful question to ask!","native":{"item":{"reasoning":"**Considering navigational context**\n\nI need to respond briefly by acknowledging that there's existing context for Iven, who knows the key details. I'll explore the implications of that but also consider asking a question. Thereâs no contradiction noted, but I also have to emphasize that while Asha trusts the routes, there are no contracts involved. Itâs important to distinguish trust in operations versus trust in commercial terms. So, I should think of one useful question to ask!","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering navigational context**\n\nI need to respond briefly by acknowledging that there's existing context for Iven, who knows the key details. I'll explore the implications of that but also consider asking a question. Thereâs no contradiction noted, but I also have to emphasize that while Asha trusts the routes, there are no contracts involved. Itâs important to distinguish trust in operations versus trust in commercial terms. So, I should think of one useful question to ask!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yLIEB3IjVMPhA_0HZdG56D1LLtX777H-ASr0xT3J3PnRxH_Q3D69Dj_eWarqCoKPwfwX3jII6XttHUdGhaLJh9lQx9r3RdDsqg77LevsH8FVUC3hyHgDa3pCkEWKChr_wYtK5IP8Pdr25lishREUEctUXtP-qWPSmidVx0c2WPpMJe_Rl3tzx2ageafzQ_8hzUAa9cGrCrEYg_ywI5tZfbi1Y14L3Oyl3kCk0TvE9z9dUJmWmD1EobKJGYJmWG9aoLNPZSlM879cqYGPDXOZGXl6ziH8gL4NPyhIZw2NYMD0R3kjMtFwfSMSI9BXad0iYg3GIa_QOZsm6Gn8Yq8swmciTvWybkSIbY-76dtE-LvB2oQP2xgEV7zUaVwcuFq6AvFFwOPm9BfkzZJr63Gbu_5Ccz7LN6kxvtF7xGSOLanyDQDALv8IvjlKn5q79dik5YSg7_g5OPT4ENM4fiqZ1hP96gpAesZnpuIfeUuEiiPA5NbId8OhHZo1Enz6rQfT7G3-AJLdPNTOpFK-gPIeA-rGF-LuyYSKYCbG_omkqD6Bm4LQb2AdiJ4EDKfrq_vsNc5M0yj9rw4VBUWWLaaDIERFeDbzT3-UVeQQfDxlfdUe_40OiSsPZaQl8JrmDSwnIqD3XJVYKOh1K5MZdThgM1MS1iqVErJbmiPN3VFen7LAjHbQhjCX5A-TCcMr8csSl_oSqnA5XlqBJmzctH8yaZDb7_QI2FqBu6y7y_IYZ1KeSVRpdf1FePCRe5HazSBVWBkaNF5o-HcVZuNujYbH_aPLiii7XGVTq1w7NesGJFXpeALP8FKhXqBcx3QJ8tMnio0u6-04EOknzg2GnCE55LdWzM36MsqTPMsWZB_u-NaErocndsDAzdhTpI3BDrN5k1SRcaWcX_g1koWrJRc3A4fDonZwuput3SQKCdbiTilNKYnAJypr3BXkB0o8fSsEXv_ikAEUqHXC82eqzaRAjJaYCIcphCgDcp8bwnkKxSgfFv36nFjuoEBhckI5qQxjlkOJvl08K8Oh22k9bsKzFTN6AxpQ0QkSaqptRpIVxnPPAH6kBqdZPtk7qK0CXwpqZKpSg3Oiou9Kyy-zUKrKvEkYVokMWzzRMwBmiLVko0EUgrs6fQBVhs96L6jcFoP3jm5UMC-yG8i3Z8jyyKAb6-wWWuLAp9ENWRVSU_dMFub9ENCsPy0RrbWUZmFPvpFeICjXpVTcX23wuQ1PxuBGHARJdcBL8sVIWEHM6Hr7uREMjlehhm9u038kJImYGPsW7QvrXJ4nrL53dmlLvl15Am0P-uB_qkreYO08dhjhYzkGvVviLqT6V9cbCRAuOrqB1ICRFsVKFWN-8FOInO-Gd2yiXlUnI7wHFkpW_al32KO4zUntL_foZCynqhkVZ-FoVTStg_-ZaZhIMtqfTXzCvM7IoeWNUfd2sJ9NYJr9ihrZFfRvL7EGpPXRINE1Vq-7R24s5I1GWKI-a-IYx_bnn4Co7tl1vz7Q6LZDLIZv_qxekHLusLfzi-4hTKYyVY2mnfJvq2NFaKyiaQqyKuOYn_xeHieIqjtkFrEUPjgwhWbwhJu0D1ygxzEOBAO_Tu7_jcfUBPstWqMQ0dqL2YRY0oU5kJK_8nzs7jIi3wUkH63ceFSfhn6zWqkhMaSz34wxp_GGyp5104SFEGSosprYlnXiRT09XoZYK1SALOry6SPN_hYbaBePjOBABEei6_nCZOFb2oC5I4e87mJvJRHmH3uzR2RFWeuapS_f5XvoIslrAIDByle_2sBG_3H686J7snd_nDSHxSGzyMXzEtFZJA-s4yH9rrpwLQsbCGa_OfXgJjrPSESMxt5lYQQFHBqAI8zoAem3Ehvos2NzEbDQ6AEqaVNhDX05hL5GKc9M2_hMQNiBS_fcLpG3daE1q_3WBpNoKyW_rtCs0MEd9myIxewRSUjgneNJFeNDwnHzeIW8tgzFbfd3zeodYp2uCLBiAtzV7MgyaMkTezHIHDw7_vuovFst-ZdA_hqjMqEy1VvCuj8UVF-b9Q_yLcQ_HTebGS4IJ-kY0C2KCno-4fd8TZ49JEKouRdSteXoEDYHFewG6cofpex38-bbX_k7nt6tl7DCBFcggsf2oF0TS29sYAEAVsFmVsZinBlJQn639aSxnP67eB2wOS22Tu3KLoi6vO3eEh0uvZ-508e5aNiyqnEVqF7_Kc-6v_ehLhDPEd82kj4-L5Q_jfi9XUKDJTX1hoVDQltCIAPylP63-7vJrfNCJCYx4F2eyY3EKF6GmSci_4HQACBTFfBWzF8rgG3v-VBfhmFpJNC0hsI4QUsqCW4MrcYLx5ejoVNDqbERKEwxC0xOXEP9eEGdOgLVrKr-njq8FaoQeiT8EEALdrCVBqeoLc4-opsJ7QjHYQtLGeX3C2POiNWsryVEaKJEyemy93zt4KH7W27yVkZtzv2QtzGiKgSkHlS1Ia7GVbIT9usBGo=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0c73da82bc5fbcda016ae322c6d48887d180fdc42824ef6c4a","index":1}]},"fingerprint":"eaf6ef1da87d7a99"}},{"type":"text","text":"Ivenâs authority is sharply defined: Asha trusts his navigationâeven after the storm cost him an eyeâbut keeps him out of contract talks. Does he accept that boundary, or is it a source of tension between them?"}]}
+

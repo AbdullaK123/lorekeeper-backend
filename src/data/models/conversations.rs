@@ -18,12 +18,14 @@ pub struct ToolCall {
 pub enum Message {
     #[serde(rename = "user")]
     User {
+        id: Uuid,
         content: String,
         created_at: DateTime<Utc>,
     },
 
     #[serde(rename = "assistant")]
     Assistant {
+        id: Uuid,
         content: Option<String>,
         tool_calls: Option<Vec<ToolCall>>,
         created_at: DateTime<Utc>,
@@ -31,6 +33,7 @@ pub enum Message {
 
     #[serde(rename = "tool")]
     Tool {
+        id: Uuid,
         tool_call_id: String,
         content: String,
         created_at: DateTime<Utc>,
@@ -38,6 +41,12 @@ pub enum Message {
 }
 
 impl Message {
+    pub fn id(&self) -> Uuid {
+        match self {
+            Self::User { id, .. } | Self::Assistant { id, .. } | Self::Tool { id, .. } => *id,
+        }
+    }
+
     pub fn to_rig(&self) -> Option<RigMessage> {
         match self {
             Message::User { content, .. } => Some(RigMessage::user(content.clone())),
@@ -74,6 +83,12 @@ pub struct ConversationResponse {
     pub title: String,
     pub messages: Json<Vec<Message>>,
     pub updated_at: DateTime<Utc>,
+}
+
+impl ConversationResponse {
+    pub fn rig_history(&self) -> Vec<RigMessage> {
+        self.messages.iter().filter_map(Message::to_rig).collect()
+    }
 }
 
 impl From<ConversationRow> for ConversationResponse {
@@ -113,4 +128,12 @@ impl From<ConversationRow> for ConversationItem {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ConversationItemsResponse {
     pub conversations: Vec<ConversationItem>,
+}
+
+impl From<Vec<ConversationRow>> for ConversationItemsResponse {
+    fn from(rows: Vec<ConversationRow>) -> Self {
+        Self {
+            conversations: rows.into_iter().map(ConversationItem::from).collect(),
+        }
+    }
 }

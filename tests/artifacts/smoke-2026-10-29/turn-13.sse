@@ -1,0 +1,250 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Considering key implications**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" respond"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" briefly"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" note"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" potential"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" contradiction"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" regarding"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" key"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" opens"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" sealed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" room"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"âs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" important"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" acknowledge"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" this"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" contradiction"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" while"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" also"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" remembering"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" provided"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" may"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" indicate"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" key"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" necessary"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" despite"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" seeming"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" useless"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" now"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" due"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" rock"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"fall"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" blocking"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" access"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" wonder"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" if"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" should"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" emphasize"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" key"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" isn't"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" exactly"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" contradiction"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" rather"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" complic"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ates"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" our"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" understanding"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" of"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" situation"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Keeping"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" concise"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" essential"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" here"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"So"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" key"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" still"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" fits"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" room"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" rock"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"fall"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" sealed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" "}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"318"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" there"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"âs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" no"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" other"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" way"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Does"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" A"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"sha"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" know"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" room"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" now"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" unreachable"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"?"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"So the key still fits the room, but the rockfall sealed it in 318, and thereâs no other way in. Does Asha know the room is now unreachable?"}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Considering key implications**\n\nI need to respond briefly and note the potential contradiction regarding the key that opens a sealed room. Itâs important to acknowledge this contradiction while also remembering that the lore provided may indicate that the key is necessary despite it seeming useless now due to a rockfall blocking access. I wonder if I should emphasize that the key isn't exactly a contradiction but rather complicates our understanding of the situation. Keeping it concise is essential here.","native":{"item":{"reasoning":"**Considering key implications**\n\nI need to respond briefly and note the potential contradiction regarding the key that opens a sealed room. Itâs important to acknowledge this contradiction while also remembering that the lore provided may indicate that the key is necessary despite it seeming useless now due to a rockfall blocking access. I wonder if I should emphasize that the key isn't exactly a contradiction but rather complicates our understanding of the situation. Keeping it concise is essential here.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering key implications**\n\nI need to respond briefly and note the potential contradiction regarding the key that opens a sealed room. Itâs important to acknowledge this contradiction while also remembering that the lore provided may indicate that the key is necessary despite it seeming useless now due to a rockfall blocking access. I wonder if I should emphasize that the key isn't exactly a contradiction but rather complicates our understanding of the situation. Keeping it concise is essential here.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yOJLvd1ogNuNzOV9PQMvtaa-O8uo0SYeo7cmxN4R81dtLQpdMPCNgahNQ9KOZywPskro2-5O35cP9CThd5vFWKa0KRLJqKoTmfCKzUv9YhYI8hE-_1wzzgGW6swZ4mQyX1kHdiau98nACnMtMkqe2tbLA71LFm0A50QHFWC7gccEqFgPiIJUTwB0Xe1amFB8_8YnVgwnAYJd9yd4h4lOhHH5B2h9jYmm6h48q8Mn2wQ-hKTMNT2SzjuHGg4MerNHK5pywrot8COdIYkNMDBzZgfA_H9-RHszH69eLkgn4pK1w7VPV56NAyV0AIi7iMJnZJjBs1YgDXZXdLfaCJjjp5rcCRF_G4LJiCcxdtVgTkDLlFg9ujw5v5zFwbhOxQCaOGagXM003eXKHbTceP0TawaZGdOVzjBkuNtvdxavmuWlOJM6sp9wXXWfYp-VtkTXzam502ONSjiMvybq4VjYuCDIbSG179zBvPAoxy3_qw6pXHmb6CCOUpIiM8tgj4fZZLA2A3NIVSwioZ8xSiYTUph_8ua7x4JfHkbgNpT_iNLm7VungWkhhX9XsQCBaTMENU-2WNwWwvAsEKUrORTRwsncvxxNPsLB4Y8-T7oBLQHs0jgvUgh8V6DjCl4sQVNjqRZvkKenA0g1uCaqMDbJDfBrdw-bW2YuL7bjh4uZRneRfJThR7TPexi19Rs2GWlWZgUKs5z2YIhVzJt7OQyZIrOSY984iIftnD_hVoaRRicc-B8RIvf1wRs8Ni5YOvxd9yaA0jCgL7K3627MJBKmFSjh0kznPKmM06lmjhJ6JG3-WUuhFNRKj6cINqogNVXANhb0CGlQ2itQaoT4DeIfKjqaPBu1bd_TNxsUPpb1UB3bOJ5FqsPOtnmAP8NTNr1rOo3Bfh5jzjrGcUfX8fxrNRlXXLHdS6MBobuZ41H1XyQZaguZFfXEPYDuRUV0j8g2zyn_FNLhbp_9LrYX1Z1HZsGSIPMspUmAWb4JAXuKQHcrugOHTGm-iR_jW5i-0pvvBFUciblg5uy3QO05_KfjL7PRjsbBVsdCiWE7y5Z-mRpOfIuw7CMBXA6MowdEUFVEBShGf8IcksmSU1HGEOoGcHFtd1iM1OyLjyvqbqwzRN4L8wg2vFWTkAbTNuVaZI9-7bYeUQNui4A4Q8iEnsAGdXHBRIhVVw4Qe9WPJCr_cQuerK537JNiSnqa91_4DxFQChQtMg4rBty9deEfLvne1z4YGOfN66S8pu0LpUYa3wuLahZofbDdBgqynepdKO9Viwginx_qi3lh2E2asfwzPvJcDmj-w1KMEPNZOQfZpbOl1poEyoiv1FvNLhVNZqvCDQ316cRQfqO5jvlzJPlIXpamjG983A4p3hhPCRFhKDN3b4ZzcYCO51WKP8kRfYgtmHiQ7yflaTtjlG68jskrumZt1IBa-V4IEhL-cmiIxFzJqcPA2ufo9Zqw35wcvozPf_pn6jhTbeXmbn3IHP0o99HKm5KVuQV1R9c9vPMGL9p2fGhFED5x_b5k7i-OhReGaSvoiEDOw7HGNRF7KrwzUUUNu1v9RTH9HFKGw6Z-vsGsKdITRO7yv-FdRp3p6rgvM3zC7s-4e6dt0sBiDPjar2THP_iyIq_Hty_iMVaN6n8cexNNEHSZ5uBMb3FDKVsBhPQkssGsaKct-xCL2xQUrBBUVLg2iC3VkRpLTABqcuI3MTsD493AQ9OZv6T_P7periQjdOtBO9POTyFo7n2Ya4GPugJ_NBJ5tktOdp_rV-ye_vjgZ9cwZXP_KIRe-kfuTPmc2WSVBq5ZHLpIdNB9ZsTd-WScWo5e8hI592fXEHApGR5KsvlaujRzcmbrjmcHgnq5sPzpo0PoWFABTAvS-xn21ZwPz1G9-E2i0kFb0qtSXIImdu8t-FKz1cy2Pdkl009InGET1fk35MJDlH9aMqUEMxPCH6SrdujIAvSjoo-fn6jzPeOgQ3tGFTNyc8rlZD5kJJwolLrSB5G5NXt8I0v_Hh3W4f6dU1xj3eRZGr_GgVvflZTK8paxHukjxRiExCMlWfvkdOdyakCySH1mmBqrVTu-40A9LmxbbIOgFwBgRMHcGgyL4X4vgEVpSNitLLXx2aLHls6qn6Qw4V1Jrgov7OiSRx89Dhg57PTJVQfAa7dGuyjKMexg1F_Ow7u3HNUs_XjsPrEP3oEjuPWgxeZp_f6eMLS9u0De1e40vKWXYH3MnHrN_g0uyQAb2hiVpA83--rE_QVuuv79efQzNaYMJnlfIt7sJK06CG5qriziZ0dqY6pXQc9RqbHdAlpQXa6UI8681FnlLSqOqBZIv_JTrsg2v_5w-xbmSzcpGMF_Hx59tw9IXURiquG_3eZ1eQ3t5jpIob5EXBD-mI3aSNlXsqtRK_MrLZ1z5LZrtyIAtEwARlwkuuMGfduWbICK18BFAlzn4-0PGJoDvZXTULxVw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0792d66930f0c158016ae32386ad0487d1be18091bf3379840","index":1}]},"fingerprint":"68fa0c3df25cac7a"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":4745,"output_tokens":106,"total_tokens":4851,"cached_input_tokens":1826,"cache_creation_input_tokens":2916,"reasoning_tokens":64,"cost":{"total":0.00043606}},"response_id":"gen-1793270661-bwpU5UirnOVS9WNYknRn","finish_reason":"stop","raw":{"id":"gen-1793270661-bwpU5UirnOVS9WNYknRn","object":"chat.completion","created":1793270661,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"So the key still fits the room, but the rockfall sealed it in 318, and thereâs no other way in. Does Asha know the room is now unreachable?","role":"assistant","reasoning":"**Considering key implications**\n\nI need to respond briefly and note the potential contradiction regarding the key that opens a sealed room. Itâs important to acknowledge this contradiction while also remembering that the lore provided may indicate that the key is necessary despite it seeming useless now due to a rockfall blocking access. I wonder if I should emphasize that the key isn't exactly a contradiction but rather complicates our understanding of the situation. Keeping it concise is essential here.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering key implications**\n\nI need to respond briefly and note the potential contradiction regarding the key that opens a sealed room. Itâs important to acknowledge this contradiction while also remembering that the lore provided may indicate that the key is necessary despite it seeming useless now due to a rockfall blocking access. I wonder if I should emphasize that the key isn't exactly a contradiction but rather complicates our understanding of the situation. Keeping it concise is essential here.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yOJLvd1ogNuNzOV9PQMvtaa-O8uo0SYeo7cmxN4R81dtLQpdMPCNgahNQ9KOZywPskro2-5O35cP9CThd5vFWKa0KRLJqKoTmfCKzUv9YhYI8hE-_1wzzgGW6swZ4mQyX1kHdiau98nACnMtMkqe2tbLA71LFm0A50QHFWC7gccEqFgPiIJUTwB0Xe1amFB8_8YnVgwnAYJd9yd4h4lOhHH5B2h9jYmm6h48q8Mn2wQ-hKTMNT2SzjuHGg4MerNHK5pywrot8COdIYkNMDBzZgfA_H9-RHszH69eLkgn4pK1w7VPV56NAyV0AIi7iMJnZJjBs1YgDXZXdLfaCJjjp5rcCRF_G4LJiCcxdtVgTkDLlFg9ujw5v5zFwbhOxQCaOGagXM003eXKHbTceP0TawaZGdOVzjBkuNtvdxavmuWlOJM6sp9wXXWfYp-VtkTXzam502ONSjiMvybq4VjYuCDIbSG179zBvPAoxy3_qw6pXHmb6CCOUpIiM8tgj4fZZLA2A3NIVSwioZ8xSiYTUph_8ua7x4JfHkbgNpT_iNLm7VungWkhhX9XsQCBaTMENU-2WNwWwvAsEKUrORTRwsncvxxNPsLB4Y8-T7oBLQHs0jgvUgh8V6DjCl4sQVNjqRZvkKenA0g1uCaqMDbJDfBrdw-bW2YuL7bjh4uZRneRfJThR7TPexi19Rs2GWlWZgUKs5z2YIhVzJt7OQyZIrOSY984iIftnD_hVoaRRicc-B8RIvf1wRs8Ni5YOvxd9yaA0jCgL7K3627MJBKmFSjh0kznPKmM06lmjhJ6JG3-WUuhFNRKj6cINqogNVXANhb0CGlQ2itQaoT4DeIfKjqaPBu1bd_TNxsUPpb1UB3bOJ5FqsPOtnmAP8NTNr1rOo3Bfh5jzjrGcUfX8fxrNRlXXLHdS6MBobuZ41H1XyQZaguZFfXEPYDuRUV0j8g2zyn_FNLhbp_9LrYX1Z1HZsGSIPMspUmAWb4JAXuKQHcrugOHTGm-iR_jW5i-0pvvBFUciblg5uy3QO05_KfjL7PRjsbBVsdCiWE7y5Z-mRpOfIuw7CMBXA6MowdEUFVEBShGf8IcksmSU1HGEOoGcHFtd1iM1OyLjyvqbqwzRN4L8wg2vFWTkAbTNuVaZI9-7bYeUQNui4A4Q8iEnsAGdXHBRIhVVw4Qe9WPJCr_cQuerK537JNiSnqa91_4DxFQChQtMg4rBty9deEfLvne1z4YGOfN66S8pu0LpUYa3wuLahZofbDdBgqynepdKO9Viwginx_qi3lh2E2asfwzPvJcDmj-w1KMEPNZOQfZpbOl1poEyoiv1FvNLhVNZqvCDQ316cRQfqO5jvlzJPlIXpamjG983A4p3hhPCRFhKDN3b4ZzcYCO51WKP8kRfYgtmHiQ7yflaTtjlG68jskrumZt1IBa-V4IEhL-cmiIxFzJqcPA2ufo9Zqw35wcvozPf_pn6jhTbeXmbn3IHP0o99HKm5KVuQV1R9c9vPMGL9p2fGhFED5x_b5k7i-OhReGaSvoiEDOw7HGNRF7KrwzUUUNu1v9RTH9HFKGw6Z-vsGsKdITRO7yv-FdRp3p6rgvM3zC7s-4e6dt0sBiDPjar2THP_iyIq_Hty_iMVaN6n8cexNNEHSZ5uBMb3FDKVsBhPQkssGsaKct-xCL2xQUrBBUVLg2iC3VkRpLTABqcuI3MTsD493AQ9OZv6T_P7periQjdOtBO9POTyFo7n2Ya4GPugJ_NBJ5tktOdp_rV-ye_vjgZ9cwZXP_KIRe-kfuTPmc2WSVBq5ZHLpIdNB9ZsTd-WScWo5e8hI592fXEHApGR5KsvlaujRzcmbrjmcHgnq5sPzpo0PoWFABTAvS-xn21ZwPz1G9-E2i0kFb0qtSXIImdu8t-FKz1cy2Pdkl009InGET1fk35MJDlH9aMqUEMxPCH6SrdujIAvSjoo-fn6jzPeOgQ3tGFTNyc8rlZD5kJJwolLrSB5G5NXt8I0v_Hh3W4f6dU1xj3eRZGr_GgVvflZTK8paxHukjxRiExCMlWfvkdOdyakCySH1mmBqrVTu-40A9LmxbbIOgFwBgRMHcGgyL4X4vgEVpSNitLLXx2aLHls6qn6Qw4V1Jrgov7OiSRx89Dhg57PTJVQfAa7dGuyjKMexg1F_Ow7u3HNUs_XjsPrEP3oEjuPWgxeZp_f6eMLS9u0De1e40vKWXYH3MnHrN_g0uyQAb2hiVpA83--rE_QVuuv79efQzNaYMJnlfIt7sJK06CG5qriziZ0dqY6pXQc9RqbHdAlpQXa6UI8681FnlLSqOqBZIv_JTrsg2v_5w-xbmSzcpGMF_Hx59tw9IXURiquG_3eZ1eQ3t5jpIob5EXBD-mI3aSNlXsqtRK_MrLZ1z5LZrtyIAtEwARlwkuuMGfduWbICK18BFAlzn4-0PGJoDvZXTULxVw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0792d66930f0c158016ae32386ad0487d1be18091bf3379840","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4745,"completion_tokens":106,"total_tokens":4851,"cost":0.00043606,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":2916,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00043606,"upstream_inference_prompt_cost":0.00038306,"upstream_inference_completions_cost":0.000053},"completion_tokens_details":{"reasoning_tokens":64,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":4745,"output_tokens":106,"total_tokens":4851,"cached_input_tokens":1826,"cache_creation_input_tokens":2916,"reasoning_tokens":64,"cost":{"total":0.00043606}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":4745,"output_tokens":106,"total_tokens":4851,"cached_input_tokens":1826,"cache_creation_input_tokens":2916,"reasoning_tokens":64,"cost":{"total":0.00043606}},"response_id":"gen-1793270661-bwpU5UirnOVS9WNYknRn","finish_reason":"stop","raw":{"id":"gen-1793270661-bwpU5UirnOVS9WNYknRn","object":"chat.completion","created":1793270661,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"So the key still fits the room, but the rockfall sealed it in 318, and thereâs no other way in. Does Asha know the room is now unreachable?","role":"assistant","reasoning":"**Considering key implications**\n\nI need to respond briefly and note the potential contradiction regarding the key that opens a sealed room. Itâs important to acknowledge this contradiction while also remembering that the lore provided may indicate that the key is necessary despite it seeming useless now due to a rockfall blocking access. I wonder if I should emphasize that the key isn't exactly a contradiction but rather complicates our understanding of the situation. Keeping it concise is essential here.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering key implications**\n\nI need to respond briefly and note the potential contradiction regarding the key that opens a sealed room. Itâs important to acknowledge this contradiction while also remembering that the lore provided may indicate that the key is necessary despite it seeming useless now due to a rockfall blocking access. I wonder if I should emphasize that the key isn't exactly a contradiction but rather complicates our understanding of the situation. Keeping it concise is essential here.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yOJLvd1ogNuNzOV9PQMvtaa-O8uo0SYeo7cmxN4R81dtLQpdMPCNgahNQ9KOZywPskro2-5O35cP9CThd5vFWKa0KRLJqKoTmfCKzUv9YhYI8hE-_1wzzgGW6swZ4mQyX1kHdiau98nACnMtMkqe2tbLA71LFm0A50QHFWC7gccEqFgPiIJUTwB0Xe1amFB8_8YnVgwnAYJd9yd4h4lOhHH5B2h9jYmm6h48q8Mn2wQ-hKTMNT2SzjuHGg4MerNHK5pywrot8COdIYkNMDBzZgfA_H9-RHszH69eLkgn4pK1w7VPV56NAyV0AIi7iMJnZJjBs1YgDXZXdLfaCJjjp5rcCRF_G4LJiCcxdtVgTkDLlFg9ujw5v5zFwbhOxQCaOGagXM003eXKHbTceP0TawaZGdOVzjBkuNtvdxavmuWlOJM6sp9wXXWfYp-VtkTXzam502ONSjiMvybq4VjYuCDIbSG179zBvPAoxy3_qw6pXHmb6CCOUpIiM8tgj4fZZLA2A3NIVSwioZ8xSiYTUph_8ua7x4JfHkbgNpT_iNLm7VungWkhhX9XsQCBaTMENU-2WNwWwvAsEKUrORTRwsncvxxNPsLB4Y8-T7oBLQHs0jgvUgh8V6DjCl4sQVNjqRZvkKenA0g1uCaqMDbJDfBrdw-bW2YuL7bjh4uZRneRfJThR7TPexi19Rs2GWlWZgUKs5z2YIhVzJt7OQyZIrOSY984iIftnD_hVoaRRicc-B8RIvf1wRs8Ni5YOvxd9yaA0jCgL7K3627MJBKmFSjh0kznPKmM06lmjhJ6JG3-WUuhFNRKj6cINqogNVXANhb0CGlQ2itQaoT4DeIfKjqaPBu1bd_TNxsUPpb1UB3bOJ5FqsPOtnmAP8NTNr1rOo3Bfh5jzjrGcUfX8fxrNRlXXLHdS6MBobuZ41H1XyQZaguZFfXEPYDuRUV0j8g2zyn_FNLhbp_9LrYX1Z1HZsGSIPMspUmAWb4JAXuKQHcrugOHTGm-iR_jW5i-0pvvBFUciblg5uy3QO05_KfjL7PRjsbBVsdCiWE7y5Z-mRpOfIuw7CMBXA6MowdEUFVEBShGf8IcksmSU1HGEOoGcHFtd1iM1OyLjyvqbqwzRN4L8wg2vFWTkAbTNuVaZI9-7bYeUQNui4A4Q8iEnsAGdXHBRIhVVw4Qe9WPJCr_cQuerK537JNiSnqa91_4DxFQChQtMg4rBty9deEfLvne1z4YGOfN66S8pu0LpUYa3wuLahZofbDdBgqynepdKO9Viwginx_qi3lh2E2asfwzPvJcDmj-w1KMEPNZOQfZpbOl1poEyoiv1FvNLhVNZqvCDQ316cRQfqO5jvlzJPlIXpamjG983A4p3hhPCRFhKDN3b4ZzcYCO51WKP8kRfYgtmHiQ7yflaTtjlG68jskrumZt1IBa-V4IEhL-cmiIxFzJqcPA2ufo9Zqw35wcvozPf_pn6jhTbeXmbn3IHP0o99HKm5KVuQV1R9c9vPMGL9p2fGhFED5x_b5k7i-OhReGaSvoiEDOw7HGNRF7KrwzUUUNu1v9RTH9HFKGw6Z-vsGsKdITRO7yv-FdRp3p6rgvM3zC7s-4e6dt0sBiDPjar2THP_iyIq_Hty_iMVaN6n8cexNNEHSZ5uBMb3FDKVsBhPQkssGsaKct-xCL2xQUrBBUVLg2iC3VkRpLTABqcuI3MTsD493AQ9OZv6T_P7periQjdOtBO9POTyFo7n2Ya4GPugJ_NBJ5tktOdp_rV-ye_vjgZ9cwZXP_KIRe-kfuTPmc2WSVBq5ZHLpIdNB9ZsTd-WScWo5e8hI592fXEHApGR5KsvlaujRzcmbrjmcHgnq5sPzpo0PoWFABTAvS-xn21ZwPz1G9-E2i0kFb0qtSXIImdu8t-FKz1cy2Pdkl009InGET1fk35MJDlH9aMqUEMxPCH6SrdujIAvSjoo-fn6jzPeOgQ3tGFTNyc8rlZD5kJJwolLrSB5G5NXt8I0v_Hh3W4f6dU1xj3eRZGr_GgVvflZTK8paxHukjxRiExCMlWfvkdOdyakCySH1mmBqrVTu-40A9LmxbbIOgFwBgRMHcGgyL4X4vgEVpSNitLLXx2aLHls6qn6Qw4V1Jrgov7OiSRx89Dhg57PTJVQfAa7dGuyjKMexg1F_Ow7u3HNUs_XjsPrEP3oEjuPWgxeZp_f6eMLS9u0De1e40vKWXYH3MnHrN_g0uyQAb2hiVpA83--rE_QVuuv79efQzNaYMJnlfIt7sJK06CG5qriziZ0dqY6pXQc9RqbHdAlpQXa6UI8681FnlLSqOqBZIv_JTrsg2v_5w-xbmSzcpGMF_Hx59tw9IXURiquG_3eZ1eQ3t5jpIob5EXBD-mI3aSNlXsqtRK_MrLZ1z5LZrtyIAtEwARlwkuuMGfduWbICK18BFAlzn4-0PGJoDvZXTULxVw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0792d66930f0c158016ae32386ad0487d1be18091bf3379840","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4745,"completion_tokens":106,"total_tokens":4851,"cost":0.00043606,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":2916,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00043606,"upstream_inference_prompt_cost":0.00038306,"upstream_inference_completions_cost":0.000053},"completion_tokens_details":{"reasoning_tokens":64,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"The old lens room was permanently sealed by a rockfall in 318. Nobody has reopened it, and there is no other entrance."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Considering key implications**\n\nI need to respond briefly and note the potential contradiction regarding the key that opens a sealed room. Itâs important to acknowledge this contradiction while also remembering that the lore provided may indicate that the key is necessary despite it seeming useless now due to a rockfall blocking access. I wonder if I should emphasize that the key isn't exactly a contradiction but rather complicates our understanding of the situation. Keeping it concise is essential here.","native":{"item":{"reasoning":"**Considering key implications**\n\nI need to respond briefly and note the potential contradiction regarding the key that opens a sealed room. Itâs important to acknowledge this contradiction while also remembering that the lore provided may indicate that the key is necessary despite it seeming useless now due to a rockfall blocking access. I wonder if I should emphasize that the key isn't exactly a contradiction but rather complicates our understanding of the situation. Keeping it concise is essential here.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering key implications**\n\nI need to respond briefly and note the potential contradiction regarding the key that opens a sealed room. Itâs important to acknowledge this contradiction while also remembering that the lore provided may indicate that the key is necessary despite it seeming useless now due to a rockfall blocking access. I wonder if I should emphasize that the key isn't exactly a contradiction but rather complicates our understanding of the situation. Keeping it concise is essential here.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yOJLvd1ogNuNzOV9PQMvtaa-O8uo0SYeo7cmxN4R81dtLQpdMPCNgahNQ9KOZywPskro2-5O35cP9CThd5vFWKa0KRLJqKoTmfCKzUv9YhYI8hE-_1wzzgGW6swZ4mQyX1kHdiau98nACnMtMkqe2tbLA71LFm0A50QHFWC7gccEqFgPiIJUTwB0Xe1amFB8_8YnVgwnAYJd9yd4h4lOhHH5B2h9jYmm6h48q8Mn2wQ-hKTMNT2SzjuHGg4MerNHK5pywrot8COdIYkNMDBzZgfA_H9-RHszH69eLkgn4pK1w7VPV56NAyV0AIi7iMJnZJjBs1YgDXZXdLfaCJjjp5rcCRF_G4LJiCcxdtVgTkDLlFg9ujw5v5zFwbhOxQCaOGagXM003eXKHbTceP0TawaZGdOVzjBkuNtvdxavmuWlOJM6sp9wXXWfYp-VtkTXzam502ONSjiMvybq4VjYuCDIbSG179zBvPAoxy3_qw6pXHmb6CCOUpIiM8tgj4fZZLA2A3NIVSwioZ8xSiYTUph_8ua7x4JfHkbgNpT_iNLm7VungWkhhX9XsQCBaTMENU-2WNwWwvAsEKUrORTRwsncvxxNPsLB4Y8-T7oBLQHs0jgvUgh8V6DjCl4sQVNjqRZvkKenA0g1uCaqMDbJDfBrdw-bW2YuL7bjh4uZRneRfJThR7TPexi19Rs2GWlWZgUKs5z2YIhVzJt7OQyZIrOSY984iIftnD_hVoaRRicc-B8RIvf1wRs8Ni5YOvxd9yaA0jCgL7K3627MJBKmFSjh0kznPKmM06lmjhJ6JG3-WUuhFNRKj6cINqogNVXANhb0CGlQ2itQaoT4DeIfKjqaPBu1bd_TNxsUPpb1UB3bOJ5FqsPOtnmAP8NTNr1rOo3Bfh5jzjrGcUfX8fxrNRlXXLHdS6MBobuZ41H1XyQZaguZFfXEPYDuRUV0j8g2zyn_FNLhbp_9LrYX1Z1HZsGSIPMspUmAWb4JAXuKQHcrugOHTGm-iR_jW5i-0pvvBFUciblg5uy3QO05_KfjL7PRjsbBVsdCiWE7y5Z-mRpOfIuw7CMBXA6MowdEUFVEBShGf8IcksmSU1HGEOoGcHFtd1iM1OyLjyvqbqwzRN4L8wg2vFWTkAbTNuVaZI9-7bYeUQNui4A4Q8iEnsAGdXHBRIhVVw4Qe9WPJCr_cQuerK537JNiSnqa91_4DxFQChQtMg4rBty9deEfLvne1z4YGOfN66S8pu0LpUYa3wuLahZofbDdBgqynepdKO9Viwginx_qi3lh2E2asfwzPvJcDmj-w1KMEPNZOQfZpbOl1poEyoiv1FvNLhVNZqvCDQ316cRQfqO5jvlzJPlIXpamjG983A4p3hhPCRFhKDN3b4ZzcYCO51WKP8kRfYgtmHiQ7yflaTtjlG68jskrumZt1IBa-V4IEhL-cmiIxFzJqcPA2ufo9Zqw35wcvozPf_pn6jhTbeXmbn3IHP0o99HKm5KVuQV1R9c9vPMGL9p2fGhFED5x_b5k7i-OhReGaSvoiEDOw7HGNRF7KrwzUUUNu1v9RTH9HFKGw6Z-vsGsKdITRO7yv-FdRp3p6rgvM3zC7s-4e6dt0sBiDPjar2THP_iyIq_Hty_iMVaN6n8cexNNEHSZ5uBMb3FDKVsBhPQkssGsaKct-xCL2xQUrBBUVLg2iC3VkRpLTABqcuI3MTsD493AQ9OZv6T_P7periQjdOtBO9POTyFo7n2Ya4GPugJ_NBJ5tktOdp_rV-ye_vjgZ9cwZXP_KIRe-kfuTPmc2WSVBq5ZHLpIdNB9ZsTd-WScWo5e8hI592fXEHApGR5KsvlaujRzcmbrjmcHgnq5sPzpo0PoWFABTAvS-xn21ZwPz1G9-E2i0kFb0qtSXIImdu8t-FKz1cy2Pdkl009InGET1fk35MJDlH9aMqUEMxPCH6SrdujIAvSjoo-fn6jzPeOgQ3tGFTNyc8rlZD5kJJwolLrSB5G5NXt8I0v_Hh3W4f6dU1xj3eRZGr_GgVvflZTK8paxHukjxRiExCMlWfvkdOdyakCySH1mmBqrVTu-40A9LmxbbIOgFwBgRMHcGgyL4X4vgEVpSNitLLXx2aLHls6qn6Qw4V1Jrgov7OiSRx89Dhg57PTJVQfAa7dGuyjKMexg1F_Ow7u3HNUs_XjsPrEP3oEjuPWgxeZp_f6eMLS9u0De1e40vKWXYH3MnHrN_g0uyQAb2hiVpA83--rE_QVuuv79efQzNaYMJnlfIt7sJK06CG5qriziZ0dqY6pXQc9RqbHdAlpQXa6UI8681FnlLSqOqBZIv_JTrsg2v_5w-xbmSzcpGMF_Hx59tw9IXURiquG_3eZ1eQ3t5jpIob5EXBD-mI3aSNlXsqtRK_MrLZ1z5LZrtyIAtEwARlwkuuMGfduWbICK18BFAlzn4-0PGJoDvZXTULxVw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0792d66930f0c158016ae32386ad0487d1be18091bf3379840","index":1}]},"fingerprint":"68fa0c3df25cac7a"}},{"type":"text","text":"So the key still fits the room, but the rockfall sealed it in 318, and thereâs no other way in. Does Asha know the room is now unreachable?"}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793270661-bwpU5UirnOVS9WNYknRn"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Considering key implications**\n\nI need to respond briefly and note the potential contradiction regarding the key that opens a sealed room. Itâs important to acknowledge this contradiction while also remembering that the lore provided may indicate that the key is necessary despite it seeming useless now due to a rockfall blocking access. I wonder if I should emphasize that the key isn't exactly a contradiction but rather complicates our understanding of the situation. Keeping it concise is essential here.","native":{"item":{"reasoning":"**Considering key implications**\n\nI need to respond briefly and note the potential contradiction regarding the key that opens a sealed room. Itâs important to acknowledge this contradiction while also remembering that the lore provided may indicate that the key is necessary despite it seeming useless now due to a rockfall blocking access. I wonder if I should emphasize that the key isn't exactly a contradiction but rather complicates our understanding of the situation. Keeping it concise is essential here.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering key implications**\n\nI need to respond briefly and note the potential contradiction regarding the key that opens a sealed room. Itâs important to acknowledge this contradiction while also remembering that the lore provided may indicate that the key is necessary despite it seeming useless now due to a rockfall blocking access. I wonder if I should emphasize that the key isn't exactly a contradiction but rather complicates our understanding of the situation. Keeping it concise is essential here.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yOJLvd1ogNuNzOV9PQMvtaa-O8uo0SYeo7cmxN4R81dtLQpdMPCNgahNQ9KOZywPskro2-5O35cP9CThd5vFWKa0KRLJqKoTmfCKzUv9YhYI8hE-_1wzzgGW6swZ4mQyX1kHdiau98nACnMtMkqe2tbLA71LFm0A50QHFWC7gccEqFgPiIJUTwB0Xe1amFB8_8YnVgwnAYJd9yd4h4lOhHH5B2h9jYmm6h48q8Mn2wQ-hKTMNT2SzjuHGg4MerNHK5pywrot8COdIYkNMDBzZgfA_H9-RHszH69eLkgn4pK1w7VPV56NAyV0AIi7iMJnZJjBs1YgDXZXdLfaCJjjp5rcCRF_G4LJiCcxdtVgTkDLlFg9ujw5v5zFwbhOxQCaOGagXM003eXKHbTceP0TawaZGdOVzjBkuNtvdxavmuWlOJM6sp9wXXWfYp-VtkTXzam502ONSjiMvybq4VjYuCDIbSG179zBvPAoxy3_qw6pXHmb6CCOUpIiM8tgj4fZZLA2A3NIVSwioZ8xSiYTUph_8ua7x4JfHkbgNpT_iNLm7VungWkhhX9XsQCBaTMENU-2WNwWwvAsEKUrORTRwsncvxxNPsLB4Y8-T7oBLQHs0jgvUgh8V6DjCl4sQVNjqRZvkKenA0g1uCaqMDbJDfBrdw-bW2YuL7bjh4uZRneRfJThR7TPexi19Rs2GWlWZgUKs5z2YIhVzJt7OQyZIrOSY984iIftnD_hVoaRRicc-B8RIvf1wRs8Ni5YOvxd9yaA0jCgL7K3627MJBKmFSjh0kznPKmM06lmjhJ6JG3-WUuhFNRKj6cINqogNVXANhb0CGlQ2itQaoT4DeIfKjqaPBu1bd_TNxsUPpb1UB3bOJ5FqsPOtnmAP8NTNr1rOo3Bfh5jzjrGcUfX8fxrNRlXXLHdS6MBobuZ41H1XyQZaguZFfXEPYDuRUV0j8g2zyn_FNLhbp_9LrYX1Z1HZsGSIPMspUmAWb4JAXuKQHcrugOHTGm-iR_jW5i-0pvvBFUciblg5uy3QO05_KfjL7PRjsbBVsdCiWE7y5Z-mRpOfIuw7CMBXA6MowdEUFVEBShGf8IcksmSU1HGEOoGcHFtd1iM1OyLjyvqbqwzRN4L8wg2vFWTkAbTNuVaZI9-7bYeUQNui4A4Q8iEnsAGdXHBRIhVVw4Qe9WPJCr_cQuerK537JNiSnqa91_4DxFQChQtMg4rBty9deEfLvne1z4YGOfN66S8pu0LpUYa3wuLahZofbDdBgqynepdKO9Viwginx_qi3lh2E2asfwzPvJcDmj-w1KMEPNZOQfZpbOl1poEyoiv1FvNLhVNZqvCDQ316cRQfqO5jvlzJPlIXpamjG983A4p3hhPCRFhKDN3b4ZzcYCO51WKP8kRfYgtmHiQ7yflaTtjlG68jskrumZt1IBa-V4IEhL-cmiIxFzJqcPA2ufo9Zqw35wcvozPf_pn6jhTbeXmbn3IHP0o99HKm5KVuQV1R9c9vPMGL9p2fGhFED5x_b5k7i-OhReGaSvoiEDOw7HGNRF7KrwzUUUNu1v9RTH9HFKGw6Z-vsGsKdITRO7yv-FdRp3p6rgvM3zC7s-4e6dt0sBiDPjar2THP_iyIq_Hty_iMVaN6n8cexNNEHSZ5uBMb3FDKVsBhPQkssGsaKct-xCL2xQUrBBUVLg2iC3VkRpLTABqcuI3MTsD493AQ9OZv6T_P7periQjdOtBO9POTyFo7n2Ya4GPugJ_NBJ5tktOdp_rV-ye_vjgZ9cwZXP_KIRe-kfuTPmc2WSVBq5ZHLpIdNB9ZsTd-WScWo5e8hI592fXEHApGR5KsvlaujRzcmbrjmcHgnq5sPzpo0PoWFABTAvS-xn21ZwPz1G9-E2i0kFb0qtSXIImdu8t-FKz1cy2Pdkl009InGET1fk35MJDlH9aMqUEMxPCH6SrdujIAvSjoo-fn6jzPeOgQ3tGFTNyc8rlZD5kJJwolLrSB5G5NXt8I0v_Hh3W4f6dU1xj3eRZGr_GgVvflZTK8paxHukjxRiExCMlWfvkdOdyakCySH1mmBqrVTu-40A9LmxbbIOgFwBgRMHcGgyL4X4vgEVpSNitLLXx2aLHls6qn6Qw4V1Jrgov7OiSRx89Dhg57PTJVQfAa7dGuyjKMexg1F_Ow7u3HNUs_XjsPrEP3oEjuPWgxeZp_f6eMLS9u0De1e40vKWXYH3MnHrN_g0uyQAb2hiVpA83--rE_QVuuv79efQzNaYMJnlfIt7sJK06CG5qriziZ0dqY6pXQc9RqbHdAlpQXa6UI8681FnlLSqOqBZIv_JTrsg2v_5w-xbmSzcpGMF_Hx59tw9IXURiquG_3eZ1eQ3t5jpIob5EXBD-mI3aSNlXsqtRK_MrLZ1z5LZrtyIAtEwARlwkuuMGfduWbICK18BFAlzn4-0PGJoDvZXTULxVw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0792d66930f0c158016ae32386ad0487d1be18091bf3379840","index":1}]},"fingerprint":"68fa0c3df25cac7a"}},{"type":"text","text":"So the key still fits the room, but the rockfall sealed it in 318, and thereâs no other way in. Does Asha know the room is now unreachable?"}]}
+

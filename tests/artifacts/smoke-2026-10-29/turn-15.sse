@@ -1,0 +1,228 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Considering response limitations**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" respond"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" briefly"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" while"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" respecting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" there's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" no"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" new"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" information"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" invent"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" important"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" acknowledge"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" any"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" unresolved"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" contradictions"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" without"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" proposing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" specific"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" solutions"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" could"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" say"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" something"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" like"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" \""}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"Under"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"stood"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":":"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" keep"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" 320"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" meeting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" notes"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" despite"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" sealed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" room"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ven"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" not"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" being"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" negoti"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ator"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":",\""}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" while"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" not"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" needing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" explain"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" what's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" been"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" established"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" should"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" also"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" mention"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" there"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"âs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" no"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" secret"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" entrance"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" excavation"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" involved"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" this"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" situation"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Under"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"stood"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" The"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" "}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"320"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" meeting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" remains"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" your"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" notes"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" with"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" contradiction"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" unresolved"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" No"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" secret"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" entrance"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" excavation"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" established"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"Understood. The 320 meeting remains in your notes, with the contradiction unresolved. No secret entrance or excavation is established."}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Considering response limitations**\n\nI need to respond briefly while respecting that there's no new information to invent. It's important to acknowledge any unresolved contradictions without proposing specific solutions. I could say something like, \"Understood: keep the 320 meeting in notes, despite the sealed room and Iven not being a negotiator,\" while not needing to explain what's been established. I should also mention that thereâs no secret entrance or excavation involved in this situation.","native":{"item":{"reasoning":"**Considering response limitations**\n\nI need to respond briefly while respecting that there's no new information to invent. It's important to acknowledge any unresolved contradictions without proposing specific solutions. I could say something like, \"Understood: keep the 320 meeting in notes, despite the sealed room and Iven not being a negotiator,\" while not needing to explain what's been established. I should also mention that thereâs no secret entrance or excavation involved in this situation.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering response limitations**\n\nI need to respond briefly while respecting that there's no new information to invent. It's important to acknowledge any unresolved contradictions without proposing specific solutions. I could say something like, \"Understood: keep the 320 meeting in notes, despite the sealed room and Iven not being a negotiator,\" while not needing to explain what's been established. I should also mention that thereâs no secret entrance or excavation involved in this situation.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yPCyDSgliby2LcCxoI1btQkSdQO9SgHL1Fu3_Bv01f6BU_cYcSPrqQ_qSIbdVe3LX7X2ey4wvf0Eu24q0eFGDdOaHFx-2toxlLrIQw8ii6VJA_e6KgYKkrz_YgOORBTXtj9c4AfoGhGR5bcLvTJS9H5DfWxI4oYQuLE523jEZxqFa8aPZaIEZBXPHfg3aLKi2YduL-9U7zkPitU47Yp-sUBZa_YHK1-C8G4_H-kQzxg-fjYhLaLyM0_bZvagdLD8NCY7n_QDQhpTnZWpFg4M_oXOqDxW_hVM5R_JQXYLkeG3Rlkd9_wDjMeqb9iUnwjNzxJEng3koAGhEx1kgcEyysCXben_UFpfGFC4rxkmL-KA4km2bn7j7uUTWQ_teFDIOzv9-WUJ2DgvpXDIYgTy5FXJYC75ikD6OUC9T54f-OZBJSDnJOnprtRC9wZ8432-yuDqyE2103nzpztn-IoXeijgPTD6oeqz93fa1b4JDPC4h6HkwVN9XNpR739FWLSliAF3nw5a7_ajTlVNCZ5exzXSxwuhN00wBPe1Z82z0sZCORftT4TpWGWbsE2RQ8miLmXF0Imz-rgk_zakORk0griSh5F8WmfZw-0MBuRevY3Ctzjrc_tF-ROnzsL4gCK72mauRfez41MGpYT15RhrQR5Kz4S571D6MS0ZuXV4mTzO_hBLt70n3EkgH7Fy6oQvItVNVitKVn34mQLsA5WoU-ESjNrldOgkV4Tk8NhVGuQ4n5Ps7fUwPDwYgJdDKenyUSlsl8hCR65N7sja3eHV08ROJkeNQnQrlgh-Klj8NI_XphFel9H3A0DDQvKI1ZWx3D3hJV1ErxyhJYobhi48-TJ_cdvKUqP_5h-UPdW0wFSnmULY2KVFLg_Md45PNk8CYWiZlQ647sW1mXmaDFE8sEt0fzxUcc5ryfviKyQfVprOslTeTWzivT4ij6eoAoPnhV9kiITUfqIYNgimf6rm9rK12AVm0lpyqbGj_WppQf7guDm0RWBW90Tyr-F9tYAjnt2DtqDBpmkcBtG1AKWak28GERlsBCFA2JB23iZeZbyrT2CIvPFtSpJUBwABzZ9_SUqgqw6g6WdgITWYmIEmITWILn05K1akW264KhFrxlDzWk_VhCwvUTI7PgKeFgR4T_W5yXfvLb3ppjfEcJAZTqHT8bYRmk6HluIOBTFGTIUR1o1_KcRre_vssrw0pAqWkSnLTydoHmsOQj1SxutfDzntwRh6Y96058C4ostH1pAfCKRWTzSe51DBX3EyWXy0bjcTpWN9ZCF6QplrIwQO-YD6jyeH9DfMwD2KWe3Tr3JzJLE8OYcFmfpa8IN9pwn1LEsK9c_clvIOV4qhDxEd2LkdSEjTBAYAElt29Jd-RtbAyORV82NfgsBfrSXFKq7fvaZtds05DXxsC4hSo-UdgpGLJCP6-2Yle0l-8ZAxWAn-BDEdVpGMbQ3T3TBahfSxjxiabxSgrXyGOxsuVFBjYBPoYid25z4iLcYh4q_4YYsF0LYPe-0wlrNw82hcCeE-v38B00xVR4AbVSRqljYqMjpreSh7HhaRQILsmAk3jKr4KXx5N6eS1r31eLPdhjMOcnkcYaOGQwZnVzzn9QF4nZwT0Ww_h-tIPfIgXZyB18iZiPaprC8XLlVirS4Q_SMvVG2AiOjAzdLzNGL6ksgJttZwOJ9UAcJWpcRMD6y3wbLvLIO7OvtKPwbnfBTy0W_h3I-s4l9XKl6l1c8Cmiid0J785eeSiFdRMx3tpSXMp6_07CtVuzU2yMB1htEvJAt9ZD01kUZyY0ijYgjPpGZyfcnG_EzysTvqioAqIjlisHPPz5VwLu14Q6P540FzM_0abB6KGq33g5zToG8kha8XNxzY-BHLzdYZp-XM142HGMmXGo8XupWaw4Y3lf6JZ4x2uUJTR-hzL26Di_4yOU-cMths8xKG8FjqoQN_XFDdNf1f7fCtn0HDqOKZq9O__NT6FGE1oBjEji-gVPSt5QnPKZuQszYNMniz0lIuFOKPs-y5ad9jaQ5fI_RWx7QMFiP8LTSczg2TNXiyFtRF4U-V7rJ3IP616TLLpTU24ZZnghtjLidliIKFfXcnL8eFKe_F5iOuvoThu-FBjmChtHLCjcJBYTYq8J4HjU2CJ3mAO267z6qqrY3Z4sNIGM8aIe1qcnuCbOlPovOIYyhopFSMEgrEJxb6WrOT3BsgqLtM12iDDY4PLYT_FdSmnMDnmeoEKH7xv-k0-pAFljAb4WGRD2ckJXEUXngLYK_XuaJqHzTS6iK0PgZjkMkwv37aP9pZvuFBRaoZBu2tAIzhVafemLG3H55NsAuyS0yd64LVV7nHUf8910n65SrVvgnGGxm36hHHhMNLVVXEQ4R4zK8rvAHDs8Atc47lPj6eZA9pdeFxu7M_uJbpDTJykE-BO9kCrc6IvpVMYLMiDsI73Rbxthx5t_RmlR7uucGxcSGBDq2EdQ=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_051e8476803eb96b016ae323c08ea087d1a6980b3192ab1111","index":1}]},"fingerprint":"f9c5dbbe6983ed4f"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":4823,"output_tokens":97,"total_tokens":4920,"cached_input_tokens":1826,"cache_creation_input_tokens":2994,"reasoning_tokens":66,"cost":{"total":0.00044131}},"response_id":"gen-1793270719-GXx9cGGRgB3Y3FZZvzIZ","finish_reason":"stop","raw":{"id":"gen-1793270719-GXx9cGGRgB3Y3FZZvzIZ","object":"chat.completion","created":1793270719,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Understood. The 320 meeting remains in your notes, with the contradiction unresolved. No secret entrance or excavation is established.","role":"assistant","reasoning":"**Considering response limitations**\n\nI need to respond briefly while respecting that there's no new information to invent. It's important to acknowledge any unresolved contradictions without proposing specific solutions. I could say something like, \"Understood: keep the 320 meeting in notes, despite the sealed room and Iven not being a negotiator,\" while not needing to explain what's been established. I should also mention that thereâs no secret entrance or excavation involved in this situation.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering response limitations**\n\nI need to respond briefly while respecting that there's no new information to invent. It's important to acknowledge any unresolved contradictions without proposing specific solutions. I could say something like, \"Understood: keep the 320 meeting in notes, despite the sealed room and Iven not being a negotiator,\" while not needing to explain what's been established. I should also mention that thereâs no secret entrance or excavation involved in this situation.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yPCyDSgliby2LcCxoI1btQkSdQO9SgHL1Fu3_Bv01f6BU_cYcSPrqQ_qSIbdVe3LX7X2ey4wvf0Eu24q0eFGDdOaHFx-2toxlLrIQw8ii6VJA_e6KgYKkrz_YgOORBTXtj9c4AfoGhGR5bcLvTJS9H5DfWxI4oYQuLE523jEZxqFa8aPZaIEZBXPHfg3aLKi2YduL-9U7zkPitU47Yp-sUBZa_YHK1-C8G4_H-kQzxg-fjYhLaLyM0_bZvagdLD8NCY7n_QDQhpTnZWpFg4M_oXOqDxW_hVM5R_JQXYLkeG3Rlkd9_wDjMeqb9iUnwjNzxJEng3koAGhEx1kgcEyysCXben_UFpfGFC4rxkmL-KA4km2bn7j7uUTWQ_teFDIOzv9-WUJ2DgvpXDIYgTy5FXJYC75ikD6OUC9T54f-OZBJSDnJOnprtRC9wZ8432-yuDqyE2103nzpztn-IoXeijgPTD6oeqz93fa1b4JDPC4h6HkwVN9XNpR739FWLSliAF3nw5a7_ajTlVNCZ5exzXSxwuhN00wBPe1Z82z0sZCORftT4TpWGWbsE2RQ8miLmXF0Imz-rgk_zakORk0griSh5F8WmfZw-0MBuRevY3Ctzjrc_tF-ROnzsL4gCK72mauRfez41MGpYT15RhrQR5Kz4S571D6MS0ZuXV4mTzO_hBLt70n3EkgH7Fy6oQvItVNVitKVn34mQLsA5WoU-ESjNrldOgkV4Tk8NhVGuQ4n5Ps7fUwPDwYgJdDKenyUSlsl8hCR65N7sja3eHV08ROJkeNQnQrlgh-Klj8NI_XphFel9H3A0DDQvKI1ZWx3D3hJV1ErxyhJYobhi48-TJ_cdvKUqP_5h-UPdW0wFSnmULY2KVFLg_Md45PNk8CYWiZlQ647sW1mXmaDFE8sEt0fzxUcc5ryfviKyQfVprOslTeTWzivT4ij6eoAoPnhV9kiITUfqIYNgimf6rm9rK12AVm0lpyqbGj_WppQf7guDm0RWBW90Tyr-F9tYAjnt2DtqDBpmkcBtG1AKWak28GERlsBCFA2JB23iZeZbyrT2CIvPFtSpJUBwABzZ9_SUqgqw6g6WdgITWYmIEmITWILn05K1akW264KhFrxlDzWk_VhCwvUTI7PgKeFgR4T_W5yXfvLb3ppjfEcJAZTqHT8bYRmk6HluIOBTFGTIUR1o1_KcRre_vssrw0pAqWkSnLTydoHmsOQj1SxutfDzntwRh6Y96058C4ostH1pAfCKRWTzSe51DBX3EyWXy0bjcTpWN9ZCF6QplrIwQO-YD6jyeH9DfMwD2KWe3Tr3JzJLE8OYcFmfpa8IN9pwn1LEsK9c_clvIOV4qhDxEd2LkdSEjTBAYAElt29Jd-RtbAyORV82NfgsBfrSXFKq7fvaZtds05DXxsC4hSo-UdgpGLJCP6-2Yle0l-8ZAxWAn-BDEdVpGMbQ3T3TBahfSxjxiabxSgrXyGOxsuVFBjYBPoYid25z4iLcYh4q_4YYsF0LYPe-0wlrNw82hcCeE-v38B00xVR4AbVSRqljYqMjpreSh7HhaRQILsmAk3jKr4KXx5N6eS1r31eLPdhjMOcnkcYaOGQwZnVzzn9QF4nZwT0Ww_h-tIPfIgXZyB18iZiPaprC8XLlVirS4Q_SMvVG2AiOjAzdLzNGL6ksgJttZwOJ9UAcJWpcRMD6y3wbLvLIO7OvtKPwbnfBTy0W_h3I-s4l9XKl6l1c8Cmiid0J785eeSiFdRMx3tpSXMp6_07CtVuzU2yMB1htEvJAt9ZD01kUZyY0ijYgjPpGZyfcnG_EzysTvqioAqIjlisHPPz5VwLu14Q6P540FzM_0abB6KGq33g5zToG8kha8XNxzY-BHLzdYZp-XM142HGMmXGo8XupWaw4Y3lf6JZ4x2uUJTR-hzL26Di_4yOU-cMths8xKG8FjqoQN_XFDdNf1f7fCtn0HDqOKZq9O__NT6FGE1oBjEji-gVPSt5QnPKZuQszYNMniz0lIuFOKPs-y5ad9jaQ5fI_RWx7QMFiP8LTSczg2TNXiyFtRF4U-V7rJ3IP616TLLpTU24ZZnghtjLidliIKFfXcnL8eFKe_F5iOuvoThu-FBjmChtHLCjcJBYTYq8J4HjU2CJ3mAO267z6qqrY3Z4sNIGM8aIe1qcnuCbOlPovOIYyhopFSMEgrEJxb6WrOT3BsgqLtM12iDDY4PLYT_FdSmnMDnmeoEKH7xv-k0-pAFljAb4WGRD2ckJXEUXngLYK_XuaJqHzTS6iK0PgZjkMkwv37aP9pZvuFBRaoZBu2tAIzhVafemLG3H55NsAuyS0yd64LVV7nHUf8910n65SrVvgnGGxm36hHHhMNLVVXEQ4R4zK8rvAHDs8Atc47lPj6eZA9pdeFxu7M_uJbpDTJykE-BO9kCrc6IvpVMYLMiDsI73Rbxthx5t_RmlR7uucGxcSGBDq2EdQ=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_051e8476803eb96b016ae323c08ea087d1a6980b3192ab1111","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4823,"completion_tokens":97,"total_tokens":4920,"cost":0.00044131,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":2994,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00044131,"upstream_inference_prompt_cost":0.00039281,"upstream_inference_completions_cost":0.0000485},"completion_tokens_details":{"reasoning_tokens":66,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":4823,"output_tokens":97,"total_tokens":4920,"cached_input_tokens":1826,"cache_creation_input_tokens":2994,"reasoning_tokens":66,"cost":{"total":0.00044131}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":4823,"output_tokens":97,"total_tokens":4920,"cached_input_tokens":1826,"cache_creation_input_tokens":2994,"reasoning_tokens":66,"cost":{"total":0.00044131}},"response_id":"gen-1793270719-GXx9cGGRgB3Y3FZZvzIZ","finish_reason":"stop","raw":{"id":"gen-1793270719-GXx9cGGRgB3Y3FZZvzIZ","object":"chat.completion","created":1793270719,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Understood. The 320 meeting remains in your notes, with the contradiction unresolved. No secret entrance or excavation is established.","role":"assistant","reasoning":"**Considering response limitations**\n\nI need to respond briefly while respecting that there's no new information to invent. It's important to acknowledge any unresolved contradictions without proposing specific solutions. I could say something like, \"Understood: keep the 320 meeting in notes, despite the sealed room and Iven not being a negotiator,\" while not needing to explain what's been established. I should also mention that thereâs no secret entrance or excavation involved in this situation.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering response limitations**\n\nI need to respond briefly while respecting that there's no new information to invent. It's important to acknowledge any unresolved contradictions without proposing specific solutions. I could say something like, \"Understood: keep the 320 meeting in notes, despite the sealed room and Iven not being a negotiator,\" while not needing to explain what's been established. I should also mention that thereâs no secret entrance or excavation involved in this situation.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yPCyDSgliby2LcCxoI1btQkSdQO9SgHL1Fu3_Bv01f6BU_cYcSPrqQ_qSIbdVe3LX7X2ey4wvf0Eu24q0eFGDdOaHFx-2toxlLrIQw8ii6VJA_e6KgYKkrz_YgOORBTXtj9c4AfoGhGR5bcLvTJS9H5DfWxI4oYQuLE523jEZxqFa8aPZaIEZBXPHfg3aLKi2YduL-9U7zkPitU47Yp-sUBZa_YHK1-C8G4_H-kQzxg-fjYhLaLyM0_bZvagdLD8NCY7n_QDQhpTnZWpFg4M_oXOqDxW_hVM5R_JQXYLkeG3Rlkd9_wDjMeqb9iUnwjNzxJEng3koAGhEx1kgcEyysCXben_UFpfGFC4rxkmL-KA4km2bn7j7uUTWQ_teFDIOzv9-WUJ2DgvpXDIYgTy5FXJYC75ikD6OUC9T54f-OZBJSDnJOnprtRC9wZ8432-yuDqyE2103nzpztn-IoXeijgPTD6oeqz93fa1b4JDPC4h6HkwVN9XNpR739FWLSliAF3nw5a7_ajTlVNCZ5exzXSxwuhN00wBPe1Z82z0sZCORftT4TpWGWbsE2RQ8miLmXF0Imz-rgk_zakORk0griSh5F8WmfZw-0MBuRevY3Ctzjrc_tF-ROnzsL4gCK72mauRfez41MGpYT15RhrQR5Kz4S571D6MS0ZuXV4mTzO_hBLt70n3EkgH7Fy6oQvItVNVitKVn34mQLsA5WoU-ESjNrldOgkV4Tk8NhVGuQ4n5Ps7fUwPDwYgJdDKenyUSlsl8hCR65N7sja3eHV08ROJkeNQnQrlgh-Klj8NI_XphFel9H3A0DDQvKI1ZWx3D3hJV1ErxyhJYobhi48-TJ_cdvKUqP_5h-UPdW0wFSnmULY2KVFLg_Md45PNk8CYWiZlQ647sW1mXmaDFE8sEt0fzxUcc5ryfviKyQfVprOslTeTWzivT4ij6eoAoPnhV9kiITUfqIYNgimf6rm9rK12AVm0lpyqbGj_WppQf7guDm0RWBW90Tyr-F9tYAjnt2DtqDBpmkcBtG1AKWak28GERlsBCFA2JB23iZeZbyrT2CIvPFtSpJUBwABzZ9_SUqgqw6g6WdgITWYmIEmITWILn05K1akW264KhFrxlDzWk_VhCwvUTI7PgKeFgR4T_W5yXfvLb3ppjfEcJAZTqHT8bYRmk6HluIOBTFGTIUR1o1_KcRre_vssrw0pAqWkSnLTydoHmsOQj1SxutfDzntwRh6Y96058C4ostH1pAfCKRWTzSe51DBX3EyWXy0bjcTpWN9ZCF6QplrIwQO-YD6jyeH9DfMwD2KWe3Tr3JzJLE8OYcFmfpa8IN9pwn1LEsK9c_clvIOV4qhDxEd2LkdSEjTBAYAElt29Jd-RtbAyORV82NfgsBfrSXFKq7fvaZtds05DXxsC4hSo-UdgpGLJCP6-2Yle0l-8ZAxWAn-BDEdVpGMbQ3T3TBahfSxjxiabxSgrXyGOxsuVFBjYBPoYid25z4iLcYh4q_4YYsF0LYPe-0wlrNw82hcCeE-v38B00xVR4AbVSRqljYqMjpreSh7HhaRQILsmAk3jKr4KXx5N6eS1r31eLPdhjMOcnkcYaOGQwZnVzzn9QF4nZwT0Ww_h-tIPfIgXZyB18iZiPaprC8XLlVirS4Q_SMvVG2AiOjAzdLzNGL6ksgJttZwOJ9UAcJWpcRMD6y3wbLvLIO7OvtKPwbnfBTy0W_h3I-s4l9XKl6l1c8Cmiid0J785eeSiFdRMx3tpSXMp6_07CtVuzU2yMB1htEvJAt9ZD01kUZyY0ijYgjPpGZyfcnG_EzysTvqioAqIjlisHPPz5VwLu14Q6P540FzM_0abB6KGq33g5zToG8kha8XNxzY-BHLzdYZp-XM142HGMmXGo8XupWaw4Y3lf6JZ4x2uUJTR-hzL26Di_4yOU-cMths8xKG8FjqoQN_XFDdNf1f7fCtn0HDqOKZq9O__NT6FGE1oBjEji-gVPSt5QnPKZuQszYNMniz0lIuFOKPs-y5ad9jaQ5fI_RWx7QMFiP8LTSczg2TNXiyFtRF4U-V7rJ3IP616TLLpTU24ZZnghtjLidliIKFfXcnL8eFKe_F5iOuvoThu-FBjmChtHLCjcJBYTYq8J4HjU2CJ3mAO267z6qqrY3Z4sNIGM8aIe1qcnuCbOlPovOIYyhopFSMEgrEJxb6WrOT3BsgqLtM12iDDY4PLYT_FdSmnMDnmeoEKH7xv-k0-pAFljAb4WGRD2ckJXEUXngLYK_XuaJqHzTS6iK0PgZjkMkwv37aP9pZvuFBRaoZBu2tAIzhVafemLG3H55NsAuyS0yd64LVV7nHUf8910n65SrVvgnGGxm36hHHhMNLVVXEQ4R4zK8rvAHDs8Atc47lPj6eZA9pdeFxu7M_uJbpDTJykE-BO9kCrc6IvpVMYLMiDsI73Rbxthx5t_RmlR7uucGxcSGBDq2EdQ=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_051e8476803eb96b016ae323c08ea087d1a6980b3192ab1111","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4823,"completion_tokens":97,"total_tokens":4920,"cost":0.00044131,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":2994,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00044131,"upstream_inference_prompt_cost":0.00039281,"upstream_inference_completions_cost":0.0000485},"completion_tokens_details":{"reasoning_tokens":66,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"Let's leave that contradiction unresolved for now. Don't invent a secret entrance or an excavation to make the meeting work."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Considering response limitations**\n\nI need to respond briefly while respecting that there's no new information to invent. It's important to acknowledge any unresolved contradictions without proposing specific solutions. I could say something like, \"Understood: keep the 320 meeting in notes, despite the sealed room and Iven not being a negotiator,\" while not needing to explain what's been established. I should also mention that thereâs no secret entrance or excavation involved in this situation.","native":{"item":{"reasoning":"**Considering response limitations**\n\nI need to respond briefly while respecting that there's no new information to invent. It's important to acknowledge any unresolved contradictions without proposing specific solutions. I could say something like, \"Understood: keep the 320 meeting in notes, despite the sealed room and Iven not being a negotiator,\" while not needing to explain what's been established. I should also mention that thereâs no secret entrance or excavation involved in this situation.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering response limitations**\n\nI need to respond briefly while respecting that there's no new information to invent. It's important to acknowledge any unresolved contradictions without proposing specific solutions. I could say something like, \"Understood: keep the 320 meeting in notes, despite the sealed room and Iven not being a negotiator,\" while not needing to explain what's been established. I should also mention that thereâs no secret entrance or excavation involved in this situation.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yPCyDSgliby2LcCxoI1btQkSdQO9SgHL1Fu3_Bv01f6BU_cYcSPrqQ_qSIbdVe3LX7X2ey4wvf0Eu24q0eFGDdOaHFx-2toxlLrIQw8ii6VJA_e6KgYKkrz_YgOORBTXtj9c4AfoGhGR5bcLvTJS9H5DfWxI4oYQuLE523jEZxqFa8aPZaIEZBXPHfg3aLKi2YduL-9U7zkPitU47Yp-sUBZa_YHK1-C8G4_H-kQzxg-fjYhLaLyM0_bZvagdLD8NCY7n_QDQhpTnZWpFg4M_oXOqDxW_hVM5R_JQXYLkeG3Rlkd9_wDjMeqb9iUnwjNzxJEng3koAGhEx1kgcEyysCXben_UFpfGFC4rxkmL-KA4km2bn7j7uUTWQ_teFDIOzv9-WUJ2DgvpXDIYgTy5FXJYC75ikD6OUC9T54f-OZBJSDnJOnprtRC9wZ8432-yuDqyE2103nzpztn-IoXeijgPTD6oeqz93fa1b4JDPC4h6HkwVN9XNpR739FWLSliAF3nw5a7_ajTlVNCZ5exzXSxwuhN00wBPe1Z82z0sZCORftT4TpWGWbsE2RQ8miLmXF0Imz-rgk_zakORk0griSh5F8WmfZw-0MBuRevY3Ctzjrc_tF-ROnzsL4gCK72mauRfez41MGpYT15RhrQR5Kz4S571D6MS0ZuXV4mTzO_hBLt70n3EkgH7Fy6oQvItVNVitKVn34mQLsA5WoU-ESjNrldOgkV4Tk8NhVGuQ4n5Ps7fUwPDwYgJdDKenyUSlsl8hCR65N7sja3eHV08ROJkeNQnQrlgh-Klj8NI_XphFel9H3A0DDQvKI1ZWx3D3hJV1ErxyhJYobhi48-TJ_cdvKUqP_5h-UPdW0wFSnmULY2KVFLg_Md45PNk8CYWiZlQ647sW1mXmaDFE8sEt0fzxUcc5ryfviKyQfVprOslTeTWzivT4ij6eoAoPnhV9kiITUfqIYNgimf6rm9rK12AVm0lpyqbGj_WppQf7guDm0RWBW90Tyr-F9tYAjnt2DtqDBpmkcBtG1AKWak28GERlsBCFA2JB23iZeZbyrT2CIvPFtSpJUBwABzZ9_SUqgqw6g6WdgITWYmIEmITWILn05K1akW264KhFrxlDzWk_VhCwvUTI7PgKeFgR4T_W5yXfvLb3ppjfEcJAZTqHT8bYRmk6HluIOBTFGTIUR1o1_KcRre_vssrw0pAqWkSnLTydoHmsOQj1SxutfDzntwRh6Y96058C4ostH1pAfCKRWTzSe51DBX3EyWXy0bjcTpWN9ZCF6QplrIwQO-YD6jyeH9DfMwD2KWe3Tr3JzJLE8OYcFmfpa8IN9pwn1LEsK9c_clvIOV4qhDxEd2LkdSEjTBAYAElt29Jd-RtbAyORV82NfgsBfrSXFKq7fvaZtds05DXxsC4hSo-UdgpGLJCP6-2Yle0l-8ZAxWAn-BDEdVpGMbQ3T3TBahfSxjxiabxSgrXyGOxsuVFBjYBPoYid25z4iLcYh4q_4YYsF0LYPe-0wlrNw82hcCeE-v38B00xVR4AbVSRqljYqMjpreSh7HhaRQILsmAk3jKr4KXx5N6eS1r31eLPdhjMOcnkcYaOGQwZnVzzn9QF4nZwT0Ww_h-tIPfIgXZyB18iZiPaprC8XLlVirS4Q_SMvVG2AiOjAzdLzNGL6ksgJttZwOJ9UAcJWpcRMD6y3wbLvLIO7OvtKPwbnfBTy0W_h3I-s4l9XKl6l1c8Cmiid0J785eeSiFdRMx3tpSXMp6_07CtVuzU2yMB1htEvJAt9ZD01kUZyY0ijYgjPpGZyfcnG_EzysTvqioAqIjlisHPPz5VwLu14Q6P540FzM_0abB6KGq33g5zToG8kha8XNxzY-BHLzdYZp-XM142HGMmXGo8XupWaw4Y3lf6JZ4x2uUJTR-hzL26Di_4yOU-cMths8xKG8FjqoQN_XFDdNf1f7fCtn0HDqOKZq9O__NT6FGE1oBjEji-gVPSt5QnPKZuQszYNMniz0lIuFOKPs-y5ad9jaQ5fI_RWx7QMFiP8LTSczg2TNXiyFtRF4U-V7rJ3IP616TLLpTU24ZZnghtjLidliIKFfXcnL8eFKe_F5iOuvoThu-FBjmChtHLCjcJBYTYq8J4HjU2CJ3mAO267z6qqrY3Z4sNIGM8aIe1qcnuCbOlPovOIYyhopFSMEgrEJxb6WrOT3BsgqLtM12iDDY4PLYT_FdSmnMDnmeoEKH7xv-k0-pAFljAb4WGRD2ckJXEUXngLYK_XuaJqHzTS6iK0PgZjkMkwv37aP9pZvuFBRaoZBu2tAIzhVafemLG3H55NsAuyS0yd64LVV7nHUf8910n65SrVvgnGGxm36hHHhMNLVVXEQ4R4zK8rvAHDs8Atc47lPj6eZA9pdeFxu7M_uJbpDTJykE-BO9kCrc6IvpVMYLMiDsI73Rbxthx5t_RmlR7uucGxcSGBDq2EdQ=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_051e8476803eb96b016ae323c08ea087d1a6980b3192ab1111","index":1}]},"fingerprint":"f9c5dbbe6983ed4f"}},{"type":"text","text":"Understood. The 320 meeting remains in your notes, with the contradiction unresolved. No secret entrance or excavation is established."}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793270719-GXx9cGGRgB3Y3FZZvzIZ"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Considering response limitations**\n\nI need to respond briefly while respecting that there's no new information to invent. It's important to acknowledge any unresolved contradictions without proposing specific solutions. I could say something like, \"Understood: keep the 320 meeting in notes, despite the sealed room and Iven not being a negotiator,\" while not needing to explain what's been established. I should also mention that thereâs no secret entrance or excavation involved in this situation.","native":{"item":{"reasoning":"**Considering response limitations**\n\nI need to respond briefly while respecting that there's no new information to invent. It's important to acknowledge any unresolved contradictions without proposing specific solutions. I could say something like, \"Understood: keep the 320 meeting in notes, despite the sealed room and Iven not being a negotiator,\" while not needing to explain what's been established. I should also mention that thereâs no secret entrance or excavation involved in this situation.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering response limitations**\n\nI need to respond briefly while respecting that there's no new information to invent. It's important to acknowledge any unresolved contradictions without proposing specific solutions. I could say something like, \"Understood: keep the 320 meeting in notes, despite the sealed room and Iven not being a negotiator,\" while not needing to explain what's been established. I should also mention that thereâs no secret entrance or excavation involved in this situation.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yPCyDSgliby2LcCxoI1btQkSdQO9SgHL1Fu3_Bv01f6BU_cYcSPrqQ_qSIbdVe3LX7X2ey4wvf0Eu24q0eFGDdOaHFx-2toxlLrIQw8ii6VJA_e6KgYKkrz_YgOORBTXtj9c4AfoGhGR5bcLvTJS9H5DfWxI4oYQuLE523jEZxqFa8aPZaIEZBXPHfg3aLKi2YduL-9U7zkPitU47Yp-sUBZa_YHK1-C8G4_H-kQzxg-fjYhLaLyM0_bZvagdLD8NCY7n_QDQhpTnZWpFg4M_oXOqDxW_hVM5R_JQXYLkeG3Rlkd9_wDjMeqb9iUnwjNzxJEng3koAGhEx1kgcEyysCXben_UFpfGFC4rxkmL-KA4km2bn7j7uUTWQ_teFDIOzv9-WUJ2DgvpXDIYgTy5FXJYC75ikD6OUC9T54f-OZBJSDnJOnprtRC9wZ8432-yuDqyE2103nzpztn-IoXeijgPTD6oeqz93fa1b4JDPC4h6HkwVN9XNpR739FWLSliAF3nw5a7_ajTlVNCZ5exzXSxwuhN00wBPe1Z82z0sZCORftT4TpWGWbsE2RQ8miLmXF0Imz-rgk_zakORk0griSh5F8WmfZw-0MBuRevY3Ctzjrc_tF-ROnzsL4gCK72mauRfez41MGpYT15RhrQR5Kz4S571D6MS0ZuXV4mTzO_hBLt70n3EkgH7Fy6oQvItVNVitKVn34mQLsA5WoU-ESjNrldOgkV4Tk8NhVGuQ4n5Ps7fUwPDwYgJdDKenyUSlsl8hCR65N7sja3eHV08ROJkeNQnQrlgh-Klj8NI_XphFel9H3A0DDQvKI1ZWx3D3hJV1ErxyhJYobhi48-TJ_cdvKUqP_5h-UPdW0wFSnmULY2KVFLg_Md45PNk8CYWiZlQ647sW1mXmaDFE8sEt0fzxUcc5ryfviKyQfVprOslTeTWzivT4ij6eoAoPnhV9kiITUfqIYNgimf6rm9rK12AVm0lpyqbGj_WppQf7guDm0RWBW90Tyr-F9tYAjnt2DtqDBpmkcBtG1AKWak28GERlsBCFA2JB23iZeZbyrT2CIvPFtSpJUBwABzZ9_SUqgqw6g6WdgITWYmIEmITWILn05K1akW264KhFrxlDzWk_VhCwvUTI7PgKeFgR4T_W5yXfvLb3ppjfEcJAZTqHT8bYRmk6HluIOBTFGTIUR1o1_KcRre_vssrw0pAqWkSnLTydoHmsOQj1SxutfDzntwRh6Y96058C4ostH1pAfCKRWTzSe51DBX3EyWXy0bjcTpWN9ZCF6QplrIwQO-YD6jyeH9DfMwD2KWe3Tr3JzJLE8OYcFmfpa8IN9pwn1LEsK9c_clvIOV4qhDxEd2LkdSEjTBAYAElt29Jd-RtbAyORV82NfgsBfrSXFKq7fvaZtds05DXxsC4hSo-UdgpGLJCP6-2Yle0l-8ZAxWAn-BDEdVpGMbQ3T3TBahfSxjxiabxSgrXyGOxsuVFBjYBPoYid25z4iLcYh4q_4YYsF0LYPe-0wlrNw82hcCeE-v38B00xVR4AbVSRqljYqMjpreSh7HhaRQILsmAk3jKr4KXx5N6eS1r31eLPdhjMOcnkcYaOGQwZnVzzn9QF4nZwT0Ww_h-tIPfIgXZyB18iZiPaprC8XLlVirS4Q_SMvVG2AiOjAzdLzNGL6ksgJttZwOJ9UAcJWpcRMD6y3wbLvLIO7OvtKPwbnfBTy0W_h3I-s4l9XKl6l1c8Cmiid0J785eeSiFdRMx3tpSXMp6_07CtVuzU2yMB1htEvJAt9ZD01kUZyY0ijYgjPpGZyfcnG_EzysTvqioAqIjlisHPPz5VwLu14Q6P540FzM_0abB6KGq33g5zToG8kha8XNxzY-BHLzdYZp-XM142HGMmXGo8XupWaw4Y3lf6JZ4x2uUJTR-hzL26Di_4yOU-cMths8xKG8FjqoQN_XFDdNf1f7fCtn0HDqOKZq9O__NT6FGE1oBjEji-gVPSt5QnPKZuQszYNMniz0lIuFOKPs-y5ad9jaQ5fI_RWx7QMFiP8LTSczg2TNXiyFtRF4U-V7rJ3IP616TLLpTU24ZZnghtjLidliIKFfXcnL8eFKe_F5iOuvoThu-FBjmChtHLCjcJBYTYq8J4HjU2CJ3mAO267z6qqrY3Z4sNIGM8aIe1qcnuCbOlPovOIYyhopFSMEgrEJxb6WrOT3BsgqLtM12iDDY4PLYT_FdSmnMDnmeoEKH7xv-k0-pAFljAb4WGRD2ckJXEUXngLYK_XuaJqHzTS6iK0PgZjkMkwv37aP9pZvuFBRaoZBu2tAIzhVafemLG3H55NsAuyS0yd64LVV7nHUf8910n65SrVvgnGGxm36hHHhMNLVVXEQ4R4zK8rvAHDs8Atc47lPj6eZA9pdeFxu7M_uJbpDTJykE-BO9kCrc6IvpVMYLMiDsI73Rbxthx5t_RmlR7uucGxcSGBDq2EdQ=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_051e8476803eb96b016ae323c08ea087d1a6980b3192ab1111","index":1}]},"fingerprint":"f9c5dbbe6983ed4f"}},{"type":"text","text":"Understood. The 320 meeting remains in your notes, with the contradiction unresolved. No secret entrance or excavation is established."}]}
+

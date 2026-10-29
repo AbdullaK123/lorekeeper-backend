@@ -1,0 +1,250 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Acknowledging user lore**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" acknowledge"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" user's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" input"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" briefly"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" possibly"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" by"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" inf"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"erring"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" question"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" seems"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" they"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" might"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" not"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" be"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" looking"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" for"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" follow"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"-up"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I'll"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" aim"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" engage"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" concise"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" manner"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" focus"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" on"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" new"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" they"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"’re"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" establishing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"’s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" interesting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" think"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" about"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" how"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" they"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"’re"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" shaping"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" this"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" narrative"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" without"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" needing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" additional"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" searches"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"!"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" want"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" make"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" sure"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"’m"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" responding"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" appropriately"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" respecting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" their"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" intentions"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" seems"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" straightforward"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" enough"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"!"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Got"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Ar"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"dent"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Reach"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" desert"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" region"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" S"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"able"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"cross"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" depends"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" on"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Glass"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Aqu"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"educt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" from"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Bas"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"alt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Hills"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" for"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" its"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" reservoir"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"’ll"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" keep"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" replies"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" brief"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"Got it: Ardent Reach is a desert region, and Sablecross depends on the Glass Aqueduct from the Basalt Hills for its reservoir. I’ll keep replies brief."}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Acknowledging user lore**\n\nI need to acknowledge the user's input briefly, possibly by inferring a question, but it seems they might not be looking for a follow-up. I'll aim to engage in a concise manner and focus on the new lore they’re establishing. It’s interesting to think about how they’re shaping this narrative without needing additional searches! I want to make sure I’m responding appropriately and respecting their intentions. It seems straightforward enough!","native":{"item":{"reasoning":"**Acknowledging user lore**\n\nI need to acknowledge the user's input briefly, possibly by inferring a question, but it seems they might not be looking for a follow-up. I'll aim to engage in a concise manner and focus on the new lore they’re establishing. It’s interesting to think about how they’re shaping this narrative without needing additional searches! I want to make sure I’m responding appropriately and respecting their intentions. It seems straightforward enough!","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging user lore**\n\nI need to acknowledge the user's input briefly, possibly by inferring a question, but it seems they might not be looking for a follow-up. I'll aim to engage in a concise manner and focus on the new lore they’re establishing. It’s interesting to think about how they’re shaping this narrative without needing additional searches! I want to make sure I’m responding appropriately and respecting their intentions. It seems straightforward enough!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zEJrde5xs0b6PjOuLceG2GWaiqQ8bcVuH3Zu-auBaCYzpr9blKPTJCP3PfSyRVIEzWT7Ka91ONXRlGZDyxKjmSOCgRGtU2eOLK43t3H1UvK3ASpnUKx_rF0ZN3c84g1QTNfCFSAv4EgwvIpWjADgDYS7-P-OxE_JbPINRqFAjNhKbu365x6lkVXCWr3o-OzXBrGtxc30q9pwSO5HiQB2wJFjroqb7n4zRwkFgPNLsO3Z0swRc9pDRYQIEXFj9hWR4RNHgX-k9okQO8ICfS0RSn19YrcvQF6JTfsAkMHPDLRwBrIbSyOnVqqXYQSs2VFOa8dun3XHXdiVsQnJeVcavIhl6_KZi9ho4F6yIK28qCIeAlxEQnxg8Nodebhu1-hUvFRQKo4tc_KKBnxCewome8AmmJFMV5R6RlQVwWGjcoGtxwo8KEVRhf0ZG9t3oquuajdLNG-4QBGv1eftPJfNLM665h2IVpbIc0ju429GEYzMMtOT8f31laVeE_8mc_H-9RzW0dzkB0h8kZCwm8uGnubD2VVVgPGRckcs4xIfFt2rkKGNgqAyD5w7vgj4m2pYeJb46U9x7z31KHSKGGY9edOwqza2njQlu8hF2nJJJN3v2_aLfA0Xy04kAx9bx_aXCPlSoDeG_4QVi8RVyDVSrisUbYKRevj0xnwodixO4ejy-wcNUklXZHAuxnTo9dtMQ-b-6L1s2nv9sr-ygZo4NUdPNa32ue8WKZukt-RAUW1wes9_5TqY0zL2yMzDGsNMEijXgZAin2G139qLoPxqiGqbsE35i0K0DfHWDMP5eZNBuIGFb4aqovSwzSsoziJuZuSXDeNpnwONbNbPYG12ggRGvbWVjhT_MwYWmWVRaKbdFimD1S0rPrQrACZr0avnwVjZoZ9CVJD7uQirNN3B8cOvy4CUmwn8n8DHB6Wkw_X_j3DDPX7HtHAgxjmtXAGyL4guiUC3ixD5tHSxHQJc8yoznJRUA4kEZJeWYeBSOfRCeEXEvKCC7KaP10T9H_H3HTs3SnRXnMpzCOlPrImUGJWP2tjivlOmFpYn2EH_0ooXgh7jb9PzIvFiRRdP6wm5ZzAcq72FZ5OAZHOIPkO8-xGhPG1KaJU51S4QEHY405Gb7LEfNiAsYnts_OqxzoaFxIhTR7orIouLxuL3_wRHJercqbcA5S61I_CzHyLxILtURcSe0IPyw0By_PHCwSd4yN17iWRWYdkBvy-jrWl-UeIBw0pYdhLytziR5sh_Po2PjAFfB1SWoNJ01tOrFqShL9gnncu-mSoHDIwCG8Q43BH2kzULJPRKy-4Ztw0DA-0i6XMIIETXHhw0fi1E2lr8hI3ZCGhwdOtmzjnMMxau-Lxe5d4Q6EeyQYACXyJ8KPWKYU7IkFWa-D6NIbTna_7u2hNJGPOhC50gP5JccaHmbsAcV2tnVjNc2rdLpe2PIFBzqk3l8b6hAT1OBqRhsVGF0iEMZoGEjrzEvkRuO4ByA9x6UkM5YLRlVMxT7KKtoCKSX6KaxFztvpjLSgzObaR7UHb2PcXbiT2gEfl8LONg9i5mLjjcw4Zo8jEwY_j_g1FHnFhJp8xFLd7oG5O8D4Z74u7BrslQMUXGoNgQmONWU0zk8hO9gsMJkPbFTpDMnRQTGJNwf9kLzcyHX3i23cupzRAoUxZoPg5MvCYf_EKnZQytlW3G-3GVp27QBpQMcjFPtRvbltDsr2dAVXiwAY0sYrOXSewXhj7BG8zKYx_uOMFE_LN-SiBjZE3LQ-9zrTuX_Kmvlr-mnAd410EZvBjsMhxaCdHkC-Ycok7BhhUsEixBJbsrw8OwNT0S5Q2HdE7mOosDZEPUTMfdXiMsRHqfliNgPGhRdHZ9PZYrdVHMbgMyBaac6vcQaTn0lJZxMGJh9k6qh4g77BQZRZwQoAo8VpaiuByDpx9XTu6ybZfOCTytC8dGOZynfAMkg8ficvipqimrcag__rSePkqtutKjj9s-_ACbNAFiA2KFJZqn4NZjA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0426f9a328265bb0016ae33107e4bc87d19d94ab3468c973a5","index":1}]},"fingerprint":"6eec3881fd7fae7f"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":1901,"output_tokens":74,"total_tokens":1975,"cached_input_tokens":1826,"cache_creation_input_tokens":72,"reasoning_tokens":32,"cost":{"total":0.00006456}},"response_id":"gen-1793274118-sZTDcpgLSUjAjZIj6EUb","finish_reason":"stop","raw":{"id":"gen-1793274118-sZTDcpgLSUjAjZIj6EUb","object":"chat.completion","created":1793274118,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Got it: Ardent Reach is a desert region, and Sablecross depends on the Glass Aqueduct from the Basalt Hills for its reservoir. I’ll keep replies brief.","role":"assistant","reasoning":"**Acknowledging user lore**\n\nI need to acknowledge the user's input briefly, possibly by inferring a question, but it seems they might not be looking for a follow-up. I'll aim to engage in a concise manner and focus on the new lore they’re establishing. It’s interesting to think about how they’re shaping this narrative without needing additional searches! I want to make sure I’m responding appropriately and respecting their intentions. It seems straightforward enough!","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging user lore**\n\nI need to acknowledge the user's input briefly, possibly by inferring a question, but it seems they might not be looking for a follow-up. I'll aim to engage in a concise manner and focus on the new lore they’re establishing. It’s interesting to think about how they’re shaping this narrative without needing additional searches! I want to make sure I’m responding appropriately and respecting their intentions. It seems straightforward enough!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zEJrde5xs0b6PjOuLceG2GWaiqQ8bcVuH3Zu-auBaCYzpr9blKPTJCP3PfSyRVIEzWT7Ka91ONXRlGZDyxKjmSOCgRGtU2eOLK43t3H1UvK3ASpnUKx_rF0ZN3c84g1QTNfCFSAv4EgwvIpWjADgDYS7-P-OxE_JbPINRqFAjNhKbu365x6lkVXCWr3o-OzXBrGtxc30q9pwSO5HiQB2wJFjroqb7n4zRwkFgPNLsO3Z0swRc9pDRYQIEXFj9hWR4RNHgX-k9okQO8ICfS0RSn19YrcvQF6JTfsAkMHPDLRwBrIbSyOnVqqXYQSs2VFOa8dun3XHXdiVsQnJeVcavIhl6_KZi9ho4F6yIK28qCIeAlxEQnxg8Nodebhu1-hUvFRQKo4tc_KKBnxCewome8AmmJFMV5R6RlQVwWGjcoGtxwo8KEVRhf0ZG9t3oquuajdLNG-4QBGv1eftPJfNLM665h2IVpbIc0ju429GEYzMMtOT8f31laVeE_8mc_H-9RzW0dzkB0h8kZCwm8uGnubD2VVVgPGRckcs4xIfFt2rkKGNgqAyD5w7vgj4m2pYeJb46U9x7z31KHSKGGY9edOwqza2njQlu8hF2nJJJN3v2_aLfA0Xy04kAx9bx_aXCPlSoDeG_4QVi8RVyDVSrisUbYKRevj0xnwodixO4ejy-wcNUklXZHAuxnTo9dtMQ-b-6L1s2nv9sr-ygZo4NUdPNa32ue8WKZukt-RAUW1wes9_5TqY0zL2yMzDGsNMEijXgZAin2G139qLoPxqiGqbsE35i0K0DfHWDMP5eZNBuIGFb4aqovSwzSsoziJuZuSXDeNpnwONbNbPYG12ggRGvbWVjhT_MwYWmWVRaKbdFimD1S0rPrQrACZr0avnwVjZoZ9CVJD7uQirNN3B8cOvy4CUmwn8n8DHB6Wkw_X_j3DDPX7HtHAgxjmtXAGyL4guiUC3ixD5tHSxHQJc8yoznJRUA4kEZJeWYeBSOfRCeEXEvKCC7KaP10T9H_H3HTs3SnRXnMpzCOlPrImUGJWP2tjivlOmFpYn2EH_0ooXgh7jb9PzIvFiRRdP6wm5ZzAcq72FZ5OAZHOIPkO8-xGhPG1KaJU51S4QEHY405Gb7LEfNiAsYnts_OqxzoaFxIhTR7orIouLxuL3_wRHJercqbcA5S61I_CzHyLxILtURcSe0IPyw0By_PHCwSd4yN17iWRWYdkBvy-jrWl-UeIBw0pYdhLytziR5sh_Po2PjAFfB1SWoNJ01tOrFqShL9gnncu-mSoHDIwCG8Q43BH2kzULJPRKy-4Ztw0DA-0i6XMIIETXHhw0fi1E2lr8hI3ZCGhwdOtmzjnMMxau-Lxe5d4Q6EeyQYACXyJ8KPWKYU7IkFWa-D6NIbTna_7u2hNJGPOhC50gP5JccaHmbsAcV2tnVjNc2rdLpe2PIFBzqk3l8b6hAT1OBqRhsVGF0iEMZoGEjrzEvkRuO4ByA9x6UkM5YLRlVMxT7KKtoCKSX6KaxFztvpjLSgzObaR7UHb2PcXbiT2gEfl8LONg9i5mLjjcw4Zo8jEwY_j_g1FHnFhJp8xFLd7oG5O8D4Z74u7BrslQMUXGoNgQmONWU0zk8hO9gsMJkPbFTpDMnRQTGJNwf9kLzcyHX3i23cupzRAoUxZoPg5MvCYf_EKnZQytlW3G-3GVp27QBpQMcjFPtRvbltDsr2dAVXiwAY0sYrOXSewXhj7BG8zKYx_uOMFE_LN-SiBjZE3LQ-9zrTuX_Kmvlr-mnAd410EZvBjsMhxaCdHkC-Ycok7BhhUsEixBJbsrw8OwNT0S5Q2HdE7mOosDZEPUTMfdXiMsRHqfliNgPGhRdHZ9PZYrdVHMbgMyBaac6vcQaTn0lJZxMGJh9k6qh4g77BQZRZwQoAo8VpaiuByDpx9XTu6ybZfOCTytC8dGOZynfAMkg8ficvipqimrcag__rSePkqtutKjj9s-_ACbNAFiA2KFJZqn4NZjA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0426f9a328265bb0016ae33107e4bc87d19d94ab3468c973a5","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":1901,"completion_tokens":74,"total_tokens":1975,"cost":0.00006456,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":72,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00006456,"upstream_inference_prompt_cost":0.00002756,"upstream_inference_completions_cost":0.000037},"completion_tokens_details":{"reasoning_tokens":32,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":1901,"output_tokens":74,"total_tokens":1975,"cached_input_tokens":1826,"cache_creation_input_tokens":72,"reasoning_tokens":32,"cost":{"total":0.00006456}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":1901,"output_tokens":74,"total_tokens":1975,"cached_input_tokens":1826,"cache_creation_input_tokens":72,"reasoning_tokens":32,"cost":{"total":0.00006456}},"response_id":"gen-1793274118-sZTDcpgLSUjAjZIj6EUb","finish_reason":"stop","raw":{"id":"gen-1793274118-sZTDcpgLSUjAjZIj6EUb","object":"chat.completion","created":1793274118,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Got it: Ardent Reach is a desert region, and Sablecross depends on the Glass Aqueduct from the Basalt Hills for its reservoir. I’ll keep replies brief.","role":"assistant","reasoning":"**Acknowledging user lore**\n\nI need to acknowledge the user's input briefly, possibly by inferring a question, but it seems they might not be looking for a follow-up. I'll aim to engage in a concise manner and focus on the new lore they’re establishing. It’s interesting to think about how they’re shaping this narrative without needing additional searches! I want to make sure I’m responding appropriately and respecting their intentions. It seems straightforward enough!","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging user lore**\n\nI need to acknowledge the user's input briefly, possibly by inferring a question, but it seems they might not be looking for a follow-up. I'll aim to engage in a concise manner and focus on the new lore they’re establishing. It’s interesting to think about how they’re shaping this narrative without needing additional searches! I want to make sure I’m responding appropriately and respecting their intentions. It seems straightforward enough!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zEJrde5xs0b6PjOuLceG2GWaiqQ8bcVuH3Zu-auBaCYzpr9blKPTJCP3PfSyRVIEzWT7Ka91ONXRlGZDyxKjmSOCgRGtU2eOLK43t3H1UvK3ASpnUKx_rF0ZN3c84g1QTNfCFSAv4EgwvIpWjADgDYS7-P-OxE_JbPINRqFAjNhKbu365x6lkVXCWr3o-OzXBrGtxc30q9pwSO5HiQB2wJFjroqb7n4zRwkFgPNLsO3Z0swRc9pDRYQIEXFj9hWR4RNHgX-k9okQO8ICfS0RSn19YrcvQF6JTfsAkMHPDLRwBrIbSyOnVqqXYQSs2VFOa8dun3XHXdiVsQnJeVcavIhl6_KZi9ho4F6yIK28qCIeAlxEQnxg8Nodebhu1-hUvFRQKo4tc_KKBnxCewome8AmmJFMV5R6RlQVwWGjcoGtxwo8KEVRhf0ZG9t3oquuajdLNG-4QBGv1eftPJfNLM665h2IVpbIc0ju429GEYzMMtOT8f31laVeE_8mc_H-9RzW0dzkB0h8kZCwm8uGnubD2VVVgPGRckcs4xIfFt2rkKGNgqAyD5w7vgj4m2pYeJb46U9x7z31KHSKGGY9edOwqza2njQlu8hF2nJJJN3v2_aLfA0Xy04kAx9bx_aXCPlSoDeG_4QVi8RVyDVSrisUbYKRevj0xnwodixO4ejy-wcNUklXZHAuxnTo9dtMQ-b-6L1s2nv9sr-ygZo4NUdPNa32ue8WKZukt-RAUW1wes9_5TqY0zL2yMzDGsNMEijXgZAin2G139qLoPxqiGqbsE35i0K0DfHWDMP5eZNBuIGFb4aqovSwzSsoziJuZuSXDeNpnwONbNbPYG12ggRGvbWVjhT_MwYWmWVRaKbdFimD1S0rPrQrACZr0avnwVjZoZ9CVJD7uQirNN3B8cOvy4CUmwn8n8DHB6Wkw_X_j3DDPX7HtHAgxjmtXAGyL4guiUC3ixD5tHSxHQJc8yoznJRUA4kEZJeWYeBSOfRCeEXEvKCC7KaP10T9H_H3HTs3SnRXnMpzCOlPrImUGJWP2tjivlOmFpYn2EH_0ooXgh7jb9PzIvFiRRdP6wm5ZzAcq72FZ5OAZHOIPkO8-xGhPG1KaJU51S4QEHY405Gb7LEfNiAsYnts_OqxzoaFxIhTR7orIouLxuL3_wRHJercqbcA5S61I_CzHyLxILtURcSe0IPyw0By_PHCwSd4yN17iWRWYdkBvy-jrWl-UeIBw0pYdhLytziR5sh_Po2PjAFfB1SWoNJ01tOrFqShL9gnncu-mSoHDIwCG8Q43BH2kzULJPRKy-4Ztw0DA-0i6XMIIETXHhw0fi1E2lr8hI3ZCGhwdOtmzjnMMxau-Lxe5d4Q6EeyQYACXyJ8KPWKYU7IkFWa-D6NIbTna_7u2hNJGPOhC50gP5JccaHmbsAcV2tnVjNc2rdLpe2PIFBzqk3l8b6hAT1OBqRhsVGF0iEMZoGEjrzEvkRuO4ByA9x6UkM5YLRlVMxT7KKtoCKSX6KaxFztvpjLSgzObaR7UHb2PcXbiT2gEfl8LONg9i5mLjjcw4Zo8jEwY_j_g1FHnFhJp8xFLd7oG5O8D4Z74u7BrslQMUXGoNgQmONWU0zk8hO9gsMJkPbFTpDMnRQTGJNwf9kLzcyHX3i23cupzRAoUxZoPg5MvCYf_EKnZQytlW3G-3GVp27QBpQMcjFPtRvbltDsr2dAVXiwAY0sYrOXSewXhj7BG8zKYx_uOMFE_LN-SiBjZE3LQ-9zrTuX_Kmvlr-mnAd410EZvBjsMhxaCdHkC-Ycok7BhhUsEixBJbsrw8OwNT0S5Q2HdE7mOosDZEPUTMfdXiMsRHqfliNgPGhRdHZ9PZYrdVHMbgMyBaac6vcQaTn0lJZxMGJh9k6qh4g77BQZRZwQoAo8VpaiuByDpx9XTu6ybZfOCTytC8dGOZynfAMkg8ficvipqimrcag__rSePkqtutKjj9s-_ACbNAFiA2KFJZqn4NZjA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0426f9a328265bb0016ae33107e4bc87d19d94ab3468c973a5","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":1901,"completion_tokens":74,"total_tokens":1975,"cost":0.00006456,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":72,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00006456,"upstream_inference_prompt_cost":0.00002756,"upstream_inference_completions_cost":0.000037},"completion_tokens_details":{"reasoning_tokens":32,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"I'm building Ardent Reach, a desert region. Its city Sablecross has a reservoir fed by the Glass Aqueduct from the Basalt Hills. Keep your replies brief while I establish the lore."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Acknowledging user lore**\n\nI need to acknowledge the user's input briefly, possibly by inferring a question, but it seems they might not be looking for a follow-up. I'll aim to engage in a concise manner and focus on the new lore they’re establishing. It’s interesting to think about how they’re shaping this narrative without needing additional searches! I want to make sure I’m responding appropriately and respecting their intentions. It seems straightforward enough!","native":{"item":{"reasoning":"**Acknowledging user lore**\n\nI need to acknowledge the user's input briefly, possibly by inferring a question, but it seems they might not be looking for a follow-up. I'll aim to engage in a concise manner and focus on the new lore they’re establishing. It’s interesting to think about how they’re shaping this narrative without needing additional searches! I want to make sure I’m responding appropriately and respecting their intentions. It seems straightforward enough!","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging user lore**\n\nI need to acknowledge the user's input briefly, possibly by inferring a question, but it seems they might not be looking for a follow-up. I'll aim to engage in a concise manner and focus on the new lore they’re establishing. It’s interesting to think about how they’re shaping this narrative without needing additional searches! I want to make sure I’m responding appropriately and respecting their intentions. It seems straightforward enough!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zEJrde5xs0b6PjOuLceG2GWaiqQ8bcVuH3Zu-auBaCYzpr9blKPTJCP3PfSyRVIEzWT7Ka91ONXRlGZDyxKjmSOCgRGtU2eOLK43t3H1UvK3ASpnUKx_rF0ZN3c84g1QTNfCFSAv4EgwvIpWjADgDYS7-P-OxE_JbPINRqFAjNhKbu365x6lkVXCWr3o-OzXBrGtxc30q9pwSO5HiQB2wJFjroqb7n4zRwkFgPNLsO3Z0swRc9pDRYQIEXFj9hWR4RNHgX-k9okQO8ICfS0RSn19YrcvQF6JTfsAkMHPDLRwBrIbSyOnVqqXYQSs2VFOa8dun3XHXdiVsQnJeVcavIhl6_KZi9ho4F6yIK28qCIeAlxEQnxg8Nodebhu1-hUvFRQKo4tc_KKBnxCewome8AmmJFMV5R6RlQVwWGjcoGtxwo8KEVRhf0ZG9t3oquuajdLNG-4QBGv1eftPJfNLM665h2IVpbIc0ju429GEYzMMtOT8f31laVeE_8mc_H-9RzW0dzkB0h8kZCwm8uGnubD2VVVgPGRckcs4xIfFt2rkKGNgqAyD5w7vgj4m2pYeJb46U9x7z31KHSKGGY9edOwqza2njQlu8hF2nJJJN3v2_aLfA0Xy04kAx9bx_aXCPlSoDeG_4QVi8RVyDVSrisUbYKRevj0xnwodixO4ejy-wcNUklXZHAuxnTo9dtMQ-b-6L1s2nv9sr-ygZo4NUdPNa32ue8WKZukt-RAUW1wes9_5TqY0zL2yMzDGsNMEijXgZAin2G139qLoPxqiGqbsE35i0K0DfHWDMP5eZNBuIGFb4aqovSwzSsoziJuZuSXDeNpnwONbNbPYG12ggRGvbWVjhT_MwYWmWVRaKbdFimD1S0rPrQrACZr0avnwVjZoZ9CVJD7uQirNN3B8cOvy4CUmwn8n8DHB6Wkw_X_j3DDPX7HtHAgxjmtXAGyL4guiUC3ixD5tHSxHQJc8yoznJRUA4kEZJeWYeBSOfRCeEXEvKCC7KaP10T9H_H3HTs3SnRXnMpzCOlPrImUGJWP2tjivlOmFpYn2EH_0ooXgh7jb9PzIvFiRRdP6wm5ZzAcq72FZ5OAZHOIPkO8-xGhPG1KaJU51S4QEHY405Gb7LEfNiAsYnts_OqxzoaFxIhTR7orIouLxuL3_wRHJercqbcA5S61I_CzHyLxILtURcSe0IPyw0By_PHCwSd4yN17iWRWYdkBvy-jrWl-UeIBw0pYdhLytziR5sh_Po2PjAFfB1SWoNJ01tOrFqShL9gnncu-mSoHDIwCG8Q43BH2kzULJPRKy-4Ztw0DA-0i6XMIIETXHhw0fi1E2lr8hI3ZCGhwdOtmzjnMMxau-Lxe5d4Q6EeyQYACXyJ8KPWKYU7IkFWa-D6NIbTna_7u2hNJGPOhC50gP5JccaHmbsAcV2tnVjNc2rdLpe2PIFBzqk3l8b6hAT1OBqRhsVGF0iEMZoGEjrzEvkRuO4ByA9x6UkM5YLRlVMxT7KKtoCKSX6KaxFztvpjLSgzObaR7UHb2PcXbiT2gEfl8LONg9i5mLjjcw4Zo8jEwY_j_g1FHnFhJp8xFLd7oG5O8D4Z74u7BrslQMUXGoNgQmONWU0zk8hO9gsMJkPbFTpDMnRQTGJNwf9kLzcyHX3i23cupzRAoUxZoPg5MvCYf_EKnZQytlW3G-3GVp27QBpQMcjFPtRvbltDsr2dAVXiwAY0sYrOXSewXhj7BG8zKYx_uOMFE_LN-SiBjZE3LQ-9zrTuX_Kmvlr-mnAd410EZvBjsMhxaCdHkC-Ycok7BhhUsEixBJbsrw8OwNT0S5Q2HdE7mOosDZEPUTMfdXiMsRHqfliNgPGhRdHZ9PZYrdVHMbgMyBaac6vcQaTn0lJZxMGJh9k6qh4g77BQZRZwQoAo8VpaiuByDpx9XTu6ybZfOCTytC8dGOZynfAMkg8ficvipqimrcag__rSePkqtutKjj9s-_ACbNAFiA2KFJZqn4NZjA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0426f9a328265bb0016ae33107e4bc87d19d94ab3468c973a5","index":1}]},"fingerprint":"6eec3881fd7fae7f"}},{"type":"text","text":"Got it: Ardent Reach is a desert region, and Sablecross depends on the Glass Aqueduct from the Basalt Hills for its reservoir. I’ll keep replies brief."}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793274118-sZTDcpgLSUjAjZIj6EUb"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Acknowledging user lore**\n\nI need to acknowledge the user's input briefly, possibly by inferring a question, but it seems they might not be looking for a follow-up. I'll aim to engage in a concise manner and focus on the new lore they’re establishing. It’s interesting to think about how they’re shaping this narrative without needing additional searches! I want to make sure I’m responding appropriately and respecting their intentions. It seems straightforward enough!","native":{"item":{"reasoning":"**Acknowledging user lore**\n\nI need to acknowledge the user's input briefly, possibly by inferring a question, but it seems they might not be looking for a follow-up. I'll aim to engage in a concise manner and focus on the new lore they’re establishing. It’s interesting to think about how they’re shaping this narrative without needing additional searches! I want to make sure I’m responding appropriately and respecting their intentions. It seems straightforward enough!","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging user lore**\n\nI need to acknowledge the user's input briefly, possibly by inferring a question, but it seems they might not be looking for a follow-up. I'll aim to engage in a concise manner and focus on the new lore they’re establishing. It’s interesting to think about how they’re shaping this narrative without needing additional searches! I want to make sure I’m responding appropriately and respecting their intentions. It seems straightforward enough!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4zEJrde5xs0b6PjOuLceG2GWaiqQ8bcVuH3Zu-auBaCYzpr9blKPTJCP3PfSyRVIEzWT7Ka91ONXRlGZDyxKjmSOCgRGtU2eOLK43t3H1UvK3ASpnUKx_rF0ZN3c84g1QTNfCFSAv4EgwvIpWjADgDYS7-P-OxE_JbPINRqFAjNhKbu365x6lkVXCWr3o-OzXBrGtxc30q9pwSO5HiQB2wJFjroqb7n4zRwkFgPNLsO3Z0swRc9pDRYQIEXFj9hWR4RNHgX-k9okQO8ICfS0RSn19YrcvQF6JTfsAkMHPDLRwBrIbSyOnVqqXYQSs2VFOa8dun3XHXdiVsQnJeVcavIhl6_KZi9ho4F6yIK28qCIeAlxEQnxg8Nodebhu1-hUvFRQKo4tc_KKBnxCewome8AmmJFMV5R6RlQVwWGjcoGtxwo8KEVRhf0ZG9t3oquuajdLNG-4QBGv1eftPJfNLM665h2IVpbIc0ju429GEYzMMtOT8f31laVeE_8mc_H-9RzW0dzkB0h8kZCwm8uGnubD2VVVgPGRckcs4xIfFt2rkKGNgqAyD5w7vgj4m2pYeJb46U9x7z31KHSKGGY9edOwqza2njQlu8hF2nJJJN3v2_aLfA0Xy04kAx9bx_aXCPlSoDeG_4QVi8RVyDVSrisUbYKRevj0xnwodixO4ejy-wcNUklXZHAuxnTo9dtMQ-b-6L1s2nv9sr-ygZo4NUdPNa32ue8WKZukt-RAUW1wes9_5TqY0zL2yMzDGsNMEijXgZAin2G139qLoPxqiGqbsE35i0K0DfHWDMP5eZNBuIGFb4aqovSwzSsoziJuZuSXDeNpnwONbNbPYG12ggRGvbWVjhT_MwYWmWVRaKbdFimD1S0rPrQrACZr0avnwVjZoZ9CVJD7uQirNN3B8cOvy4CUmwn8n8DHB6Wkw_X_j3DDPX7HtHAgxjmtXAGyL4guiUC3ixD5tHSxHQJc8yoznJRUA4kEZJeWYeBSOfRCeEXEvKCC7KaP10T9H_H3HTs3SnRXnMpzCOlPrImUGJWP2tjivlOmFpYn2EH_0ooXgh7jb9PzIvFiRRdP6wm5ZzAcq72FZ5OAZHOIPkO8-xGhPG1KaJU51S4QEHY405Gb7LEfNiAsYnts_OqxzoaFxIhTR7orIouLxuL3_wRHJercqbcA5S61I_CzHyLxILtURcSe0IPyw0By_PHCwSd4yN17iWRWYdkBvy-jrWl-UeIBw0pYdhLytziR5sh_Po2PjAFfB1SWoNJ01tOrFqShL9gnncu-mSoHDIwCG8Q43BH2kzULJPRKy-4Ztw0DA-0i6XMIIETXHhw0fi1E2lr8hI3ZCGhwdOtmzjnMMxau-Lxe5d4Q6EeyQYACXyJ8KPWKYU7IkFWa-D6NIbTna_7u2hNJGPOhC50gP5JccaHmbsAcV2tnVjNc2rdLpe2PIFBzqk3l8b6hAT1OBqRhsVGF0iEMZoGEjrzEvkRuO4ByA9x6UkM5YLRlVMxT7KKtoCKSX6KaxFztvpjLSgzObaR7UHb2PcXbiT2gEfl8LONg9i5mLjjcw4Zo8jEwY_j_g1FHnFhJp8xFLd7oG5O8D4Z74u7BrslQMUXGoNgQmONWU0zk8hO9gsMJkPbFTpDMnRQTGJNwf9kLzcyHX3i23cupzRAoUxZoPg5MvCYf_EKnZQytlW3G-3GVp27QBpQMcjFPtRvbltDsr2dAVXiwAY0sYrOXSewXhj7BG8zKYx_uOMFE_LN-SiBjZE3LQ-9zrTuX_Kmvlr-mnAd410EZvBjsMhxaCdHkC-Ycok7BhhUsEixBJbsrw8OwNT0S5Q2HdE7mOosDZEPUTMfdXiMsRHqfliNgPGhRdHZ9PZYrdVHMbgMyBaac6vcQaTn0lJZxMGJh9k6qh4g77BQZRZwQoAo8VpaiuByDpx9XTu6ybZfOCTytC8dGOZynfAMkg8ficvipqimrcag__rSePkqtutKjj9s-_ACbNAFiA2KFJZqn4NZjA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0426f9a328265bb0016ae33107e4bc87d19d94ab3468c973a5","index":1}]},"fingerprint":"6eec3881fd7fae7f"}},{"type":"text","text":"Got it: Ardent Reach is a desert region, and Sablecross depends on the Glass Aqueduct from the Basalt Hills for its reservoir. I’ll keep replies brief."}]}
+

@@ -1,0 +1,262 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Clarifying lore details**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" check"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" regarding"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" character"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"'s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" back"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"story"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" The"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" static"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" indicates"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" she"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" grew"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" up"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" V"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"esper"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" doesn"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ât"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" explicitly"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" state"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" her"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" birthplace"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" The"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" user"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" clar"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ifies"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" she"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" was"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" born"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" moved"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" V"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"esper"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" at"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" six"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" should"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" revise"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" birthplace"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" without"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" suggesting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" any"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" contradictions"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" as"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" still"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" maintains"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" she"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" grew"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" up"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" V"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"esper"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" important"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" respond"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" conc"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ely"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" acknowledge"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" this"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" clarification"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" perhaps"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" while"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" noting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" distinction"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" exists"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" naturally"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Got"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" A"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"sha"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" was"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" born"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" on"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" moved"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" V"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"esper"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" at"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" six"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" grew"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" up"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" there"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Her"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Lantern"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" membership"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" other"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" details"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" stay"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" unchanged"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"Got it: Asha was born on Orin, moved to Vesper at six, and grew up there. Her Lantern Guild membership and other details stay unchanged."}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Clarifying lore details**\n\nI need to check the lore regarding the character's backstory. The static lore indicates she grew up in Vesper but doesnât explicitly state her birthplace. The user clarifies that she was born in Orin and moved to Vesper at six. I should revise the birthplace without suggesting any contradictions, as it still maintains she grew up in Vesper. It's important to respond concisely and acknowledge this clarification, perhaps while noting that the distinction exists naturally.","native":{"item":{"reasoning":"**Clarifying lore details**\n\nI need to check the lore regarding the character's backstory. The static lore indicates she grew up in Vesper but doesnât explicitly state her birthplace. The user clarifies that she was born in Orin and moved to Vesper at six. I should revise the birthplace without suggesting any contradictions, as it still maintains she grew up in Vesper. It's important to respond concisely and acknowledge this clarification, perhaps while noting that the distinction exists naturally.","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying lore details**\n\nI need to check the lore regarding the character's backstory. The static lore indicates she grew up in Vesper but doesnât explicitly state her birthplace. The user clarifies that she was born in Orin and moved to Vesper at six. I should revise the birthplace without suggesting any contradictions, as it still maintains she grew up in Vesper. It's important to respond concisely and acknowledge this clarification, perhaps while noting that the distinction exists naturally.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yNndVkwXpugKOEhstBAlYACa5EAUdMqaU1zbjoNE5VBv1BC9_iLR_2Ybu8WXcA2cwfJABYB-EZ-XVoAzVmP_-AvHEGr-XxBScPl0n-ATIJHCaTt8979f2MxTeDdKQZOSIzU1hKubk8XxWycz42HypRrcZ-bn9iXVxADdM-iETtbe_WXi2KJAkD1TTkC-U44jsaiSPKbVvIejkt4x_magOtcgnF6Z4zeYy7GOb16JiTWz_mpnaIuzNhf0fwZxlXCGiK9Y6XCewYOKiq9DHEBkZJnumI70IcWeli_J9g43VW09B2Npq7evKbTInlhWm_ONJUyiH5JLZZTWP-vVg6qkCNEHpqaqYtlRlwjQI1dEtNtWWayaX2_to2ZkKpu1spMh6hZYnP4RTowFPRnmF37IUh1jAFKsOqVOIuCIMFCeGeulX0RlWwnzVKhTpcQaHVW83mmWCshfD6DytY-cQgRDRqh2w8_NnOGygNnBEKcGdoeJWF5LG0iZQpMhk8bwzFu-Q6hV6zMIhSKb0WTJXYaBw_KziBZx2hUiVyIU1T0-yH2sWP64x5JsyzIqPA4lL2Dyt3NwuAxOJxB7hFQGcQdvnvLJmo34xxLoOBGeNoFSWCtRbd9xLnc6_nbwLrvtBk_AfxBfKEYj3qWPxXOuUKM52hv_gf1KMfBwjcfLHzxqiPGhFR8gxa7er5AHPyMDvpnQPxYdu_uBKP7OgN4VN-jkSJKDxbsgB-y0iuHX1AK1etQgLZ98ykaVcA_whfy6r2AGbyg7WwQ7BfRT2ZvMMW14PrnE_C9PyQEueVdRjHrTQyBPba1mbeCCg0Dc5FskkaS8mDIz8ws67qK8LkRj1rC_8SUGY3h4xEyT988eLUOnBS9xXb_0AiwOr9hELGp_68lbIkxuKZWElr1kfOdRfvkOUUkqnWTJjcB3hEIhETNTw2h0nBsIzdUQm5WOn2Vvia_ZMJZUdCNEZvUUvxmrIweeljHTgx8OEsfCD5M7U6ytfm41cbQjgXcfhDKXDu2LwrjhL67Qaz7NLLhlw9bjuZMk6RyGpzgOPvIlDc8DyQQQ52pu0hHUI1l8MDWk8eakY2c15zpGkGd4WcZQBXnpVzfcTxX0o-uYvNfQhHyBqP7Ven8MFFgImEQX1G3uQUNB0PohdidYfcWl2QYPIZNxLHk3BygcR2dgG7PX7Frq5K_3RmxnEdwE1Om8oDQR37bHR2f5531kCDLkX6fhDBErFAx2dZYgrwCZ7tgk4cTr9ja8cvo8i0u6988QfyHxW6ToLmXNefO5_x-Qe9ciZcyS91uXuqqUZJW4UJ9Sxg55JxSObza6eA2SToFNIPPtUiq2jmm-Rb59yATFxqAXlKuqM5sukT6gzuixzJ4gVLq2fJfy_PZi9vUg2a8rwoBVp75bbuRpxvBy9jL9hZwucNSlr5Xspgwb4zjkGx4lhkAGONqxwjevzQLgQh3ujfqHQbl33ee7ig4z6FC4ykDyP2ZWZkUxG0mXxeyGD6ueAVnO6DvSW9HsB-X7FLVa5pCW16DNmuYyv6Apn6TNGpqMNu6D4D9L3zcL3wcc22X5nr4LJR1GiSuTAjpyITWbkNZ58JuBoQ2S-Bpm2hwK9h32FlnOGZhgw61Gv-xpew8jaq-VVfpa1L4-aG4A-7BeVs8YvSBHbRxXPBDPvhm5cbFTmVsEqzhuoH0Tng239YsJLiSjhSChqcv8TZ_AdWix27t_xBtFIScpeDCb1VWjldYwRSGzpQ5ph8oyPSws_eNBjbVXTeel4QW6_FtyUDubJlGok-Pp7y9v6g-nwhXE0qkfq2luVopAUWlh4fQPc15T8pkkRwA4jpMMIP0rDeGlET5jjmZHHMprfk31ztmP9EVS1ei6tGi6L8mQRkeALnvW4SVlenI7ixhnS2Kg7XksnHsu9l9-XIMcSsjU-awTS1nh0yKSKwZSL27GrEuMR9L9jJKcTJ2bbSvQgRw2eMieXNR070DGNnlm5L6JKsuH7LYdf_D6y-lqaIjaWHiORG_2vdHo8rUY8eKRVq588-wp62_BQRqEDPBJ89rZmdNfYDcVPaj5vcWgaHk7MXekTytBE1bkPCc1QOY05IVKXmHFsfFLd9LOQXa6zwqvHTwn6Xcx5VW84RAFws4GZXNSNXZ1ZVhcBtmodmyr78-lmi30jqONtsS4yNAAF7N004oE5DBUQ2TzuXcKFKVLXMHYTI4OvJOopwjC9uOPMDHgMBDTQcB2POVXEnl0h7vPeIBLnev8C74kJvjcX4zu4BvebDG_hcQJsx-GQ5SrXIOTVBHuyEsrU41RGsEgEHujiTsPEa8rXoHMlJe3rKNvxAuKqnJBAAnAUAhAoBMspWaHO-VhLUkBbjQBoctS6sEMBmqzSMk7Kycr3hzIXToR29M94tQf5nDpVwH7avc9iWJThNV0eNWB4gmTfi2kCn9Yx-G3Yb4sWGpfszflFaAD2ReW4bUl-nB-CGOWbGihn7q43gU5M1E9PZ1gJ1TTYe9ej-15NWPrq3bak0AsIsM4USL-ShmbRdehj-k25IIC7px_OJ0TjaxlcUPxJLmNwvINJXXCbicK37wgW4osla7cwA_Luyds3hsnUPz-0LMCnOhWbsldR9EQWIgDHXe76hujnTr7sZLurwxasJW8VodgvrmER4jllqkHPc5s6GLF2mgFQkPPuXL1l0sqvWrURWZfecfpLcnexjfugx6lPeZI8XxeCt8wnnf4kScqq2jdLtStEd358XnHWlxDpkwphXBEBui8vsHd04m4fcP96qvtxkwjx3b2TTjQKpYZyrTEaKjAU4zjICLvGMWqDcgNJXMlAKPNzQ4bQ6fafhL75aUUmwFkhJ066Po2iMFpnVKPdmqPiCgYjZO0nqs6Q0F1bPNH8NV9IyPKVUY141BldtrsnPzMY6Ga4eZwWlEPoZmW2PE07KTPf8NuDsSbB60RPCPxHGd0MDhZJykjR3Il_dIYKtRFK24IpfWe_PYOrS5Qdq4lhLAD53kqmc0t3qNGJ5TbBc0paTWnzLNSem9-0s4Bfu6mLxqo0p2kxLxbnvZqv-uTgEA6FyiQBqL28qwcqAQsufiUB4P2vM7WurKFNkJ9Rr2Yk_lDGHJR2QeJXeXTuPuEaqC1oxv0AagTRIQQCsH5iZWlDhBi4oiF6oHZF9M-BU1iBwUbPtyuCnVsJCooD3oJdFx3oHZNfCx06IRY2EI_eZAoAgH6CdqPd-e63VARwOMDItsJ3-xBmkzAuZM4pFT8lriKdPZJFtRMfBQGWUEB_W0z35CCSi_UnEP_d9tg2UviIR6un8a9v3iOCTJwTQ5DjZH9WQV3IRkSBKGzqmZNR1qhkQLwNtgMeQfP2B3AGy19fYoN4rWA8gdswjpqnUqtezzCYadqHlXnwXSZg-XRxfxCzi8_qk901xJ4h6LlkkO2jM37wBZUcnKrUf9CBlFboH3Yd_WshjWvP1FR8eoIu9mliNTZq_altEROJtxNuG0RnYpmMydGM9GXN4QefstPG8oAE84BMe7SY3RTziHc4EJAyCCXQD8ULtt1f4KkndT1ZzU7kCpL2RtckMmnKU=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0659fa90bceee1fc016ae32364775487d1a97b2d92893bbaa2","index":1}]},"fingerprint":"fca2070d0253d2bd"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":5008,"output_tokens":193,"total_tokens":5201,"cached_input_tokens":1826,"cache_creation_input_tokens":3179,"reasoning_tokens":154,"cost":{"total":0.000512435}},"response_id":"gen-1793270627-C2xTceEtWkkSSbQBgfU1","finish_reason":"stop","raw":{"id":"gen-1793270627-C2xTceEtWkkSSbQBgfU1","object":"chat.completion","created":1793270627,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Got it: Asha was born on Orin, moved to Vesper at six, and grew up there. Her Lantern Guild membership and other details stay unchanged.","role":"assistant","reasoning":"**Clarifying lore details**\n\nI need to check the lore regarding the character's backstory. The static lore indicates she grew up in Vesper but doesnât explicitly state her birthplace. The user clarifies that she was born in Orin and moved to Vesper at six. I should revise the birthplace without suggesting any contradictions, as it still maintains she grew up in Vesper. It's important to respond concisely and acknowledge this clarification, perhaps while noting that the distinction exists naturally.","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying lore details**\n\nI need to check the lore regarding the character's backstory. The static lore indicates she grew up in Vesper but doesnât explicitly state her birthplace. The user clarifies that she was born in Orin and moved to Vesper at six. I should revise the birthplace without suggesting any contradictions, as it still maintains she grew up in Vesper. It's important to respond concisely and acknowledge this clarification, perhaps while noting that the distinction exists naturally.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yNndVkwXpugKOEhstBAlYACa5EAUdMqaU1zbjoNE5VBv1BC9_iLR_2Ybu8WXcA2cwfJABYB-EZ-XVoAzVmP_-AvHEGr-XxBScPl0n-ATIJHCaTt8979f2MxTeDdKQZOSIzU1hKubk8XxWycz42HypRrcZ-bn9iXVxADdM-iETtbe_WXi2KJAkD1TTkC-U44jsaiSPKbVvIejkt4x_magOtcgnF6Z4zeYy7GOb16JiTWz_mpnaIuzNhf0fwZxlXCGiK9Y6XCewYOKiq9DHEBkZJnumI70IcWeli_J9g43VW09B2Npq7evKbTInlhWm_ONJUyiH5JLZZTWP-vVg6qkCNEHpqaqYtlRlwjQI1dEtNtWWayaX2_to2ZkKpu1spMh6hZYnP4RTowFPRnmF37IUh1jAFKsOqVOIuCIMFCeGeulX0RlWwnzVKhTpcQaHVW83mmWCshfD6DytY-cQgRDRqh2w8_NnOGygNnBEKcGdoeJWF5LG0iZQpMhk8bwzFu-Q6hV6zMIhSKb0WTJXYaBw_KziBZx2hUiVyIU1T0-yH2sWP64x5JsyzIqPA4lL2Dyt3NwuAxOJxB7hFQGcQdvnvLJmo34xxLoOBGeNoFSWCtRbd9xLnc6_nbwLrvtBk_AfxBfKEYj3qWPxXOuUKM52hv_gf1KMfBwjcfLHzxqiPGhFR8gxa7er5AHPyMDvpnQPxYdu_uBKP7OgN4VN-jkSJKDxbsgB-y0iuHX1AK1etQgLZ98ykaVcA_whfy6r2AGbyg7WwQ7BfRT2ZvMMW14PrnE_C9PyQEueVdRjHrTQyBPba1mbeCCg0Dc5FskkaS8mDIz8ws67qK8LkRj1rC_8SUGY3h4xEyT988eLUOnBS9xXb_0AiwOr9hELGp_68lbIkxuKZWElr1kfOdRfvkOUUkqnWTJjcB3hEIhETNTw2h0nBsIzdUQm5WOn2Vvia_ZMJZUdCNEZvUUvxmrIweeljHTgx8OEsfCD5M7U6ytfm41cbQjgXcfhDKXDu2LwrjhL67Qaz7NLLhlw9bjuZMk6RyGpzgOPvIlDc8DyQQQ52pu0hHUI1l8MDWk8eakY2c15zpGkGd4WcZQBXnpVzfcTxX0o-uYvNfQhHyBqP7Ven8MFFgImEQX1G3uQUNB0PohdidYfcWl2QYPIZNxLHk3BygcR2dgG7PX7Frq5K_3RmxnEdwE1Om8oDQR37bHR2f5531kCDLkX6fhDBErFAx2dZYgrwCZ7tgk4cTr9ja8cvo8i0u6988QfyHxW6ToLmXNefO5_x-Qe9ciZcyS91uXuqqUZJW4UJ9Sxg55JxSObza6eA2SToFNIPPtUiq2jmm-Rb59yATFxqAXlKuqM5sukT6gzuixzJ4gVLq2fJfy_PZi9vUg2a8rwoBVp75bbuRpxvBy9jL9hZwucNSlr5Xspgwb4zjkGx4lhkAGONqxwjevzQLgQh3ujfqHQbl33ee7ig4z6FC4ykDyP2ZWZkUxG0mXxeyGD6ueAVnO6DvSW9HsB-X7FLVa5pCW16DNmuYyv6Apn6TNGpqMNu6D4D9L3zcL3wcc22X5nr4LJR1GiSuTAjpyITWbkNZ58JuBoQ2S-Bpm2hwK9h32FlnOGZhgw61Gv-xpew8jaq-VVfpa1L4-aG4A-7BeVs8YvSBHbRxXPBDPvhm5cbFTmVsEqzhuoH0Tng239YsJLiSjhSChqcv8TZ_AdWix27t_xBtFIScpeDCb1VWjldYwRSGzpQ5ph8oyPSws_eNBjbVXTeel4QW6_FtyUDubJlGok-Pp7y9v6g-nwhXE0qkfq2luVopAUWlh4fQPc15T8pkkRwA4jpMMIP0rDeGlET5jjmZHHMprfk31ztmP9EVS1ei6tGi6L8mQRkeALnvW4SVlenI7ixhnS2Kg7XksnHsu9l9-XIMcSsjU-awTS1nh0yKSKwZSL27GrEuMR9L9jJKcTJ2bbSvQgRw2eMieXNR070DGNnlm5L6JKsuH7LYdf_D6y-lqaIjaWHiORG_2vdHo8rUY8eKRVq588-wp62_BQRqEDPBJ89rZmdNfYDcVPaj5vcWgaHk7MXekTytBE1bkPCc1QOY05IVKXmHFsfFLd9LOQXa6zwqvHTwn6Xcx5VW84RAFws4GZXNSNXZ1ZVhcBtmodmyr78-lmi30jqONtsS4yNAAF7N004oE5DBUQ2TzuXcKFKVLXMHYTI4OvJOopwjC9uOPMDHgMBDTQcB2POVXEnl0h7vPeIBLnev8C74kJvjcX4zu4BvebDG_hcQJsx-GQ5SrXIOTVBHuyEsrU41RGsEgEHujiTsPEa8rXoHMlJe3rKNvxAuKqnJBAAnAUAhAoBMspWaHO-VhLUkBbjQBoctS6sEMBmqzSMk7Kycr3hzIXToR29M94tQf5nDpVwH7avc9iWJThNV0eNWB4gmTfi2kCn9Yx-G3Yb4sWGpfszflFaAD2ReW4bUl-nB-CGOWbGihn7q43gU5M1E9PZ1gJ1TTYe9ej-15NWPrq3bak0AsIsM4USL-ShmbRdehj-k25IIC7px_OJ0TjaxlcUPxJLmNwvINJXXCbicK37wgW4osla7cwA_Luyds3hsnUPz-0LMCnOhWbsldR9EQWIgDHXe76hujnTr7sZLurwxasJW8VodgvrmER4jllqkHPc5s6GLF2mgFQkPPuXL1l0sqvWrURWZfecfpLcnexjfugx6lPeZI8XxeCt8wnnf4kScqq2jdLtStEd358XnHWlxDpkwphXBEBui8vsHd04m4fcP96qvtxkwjx3b2TTjQKpYZyrTEaKjAU4zjICLvGMWqDcgNJXMlAKPNzQ4bQ6fafhL75aUUmwFkhJ066Po2iMFpnVKPdmqPiCgYjZO0nqs6Q0F1bPNH8NV9IyPKVUY141BldtrsnPzMY6Ga4eZwWlEPoZmW2PE07KTPf8NuDsSbB60RPCPxHGd0MDhZJykjR3Il_dIYKtRFK24IpfWe_PYOrS5Qdq4lhLAD53kqmc0t3qNGJ5TbBc0paTWnzLNSem9-0s4Bfu6mLxqo0p2kxLxbnvZqv-uTgEA6FyiQBqL28qwcqAQsufiUB4P2vM7WurKFNkJ9Rr2Yk_lDGHJR2QeJXeXTuPuEaqC1oxv0AagTRIQQCsH5iZWlDhBi4oiF6oHZF9M-BU1iBwUbPtyuCnVsJCooD3oJdFx3oHZNfCx06IRY2EI_eZAoAgH6CdqPd-e63VARwOMDItsJ3-xBmkzAuZM4pFT8lriKdPZJFtRMfBQGWUEB_W0z35CCSi_UnEP_d9tg2UviIR6un8a9v3iOCTJwTQ5DjZH9WQV3IRkSBKGzqmZNR1qhkQLwNtgMeQfP2B3AGy19fYoN4rWA8gdswjpqnUqtezzCYadqHlXnwXSZg-XRxfxCzi8_qk901xJ4h6LlkkO2jM37wBZUcnKrUf9CBlFboH3Yd_WshjWvP1FR8eoIu9mliNTZq_altEROJtxNuG0RnYpmMydGM9GXN4QefstPG8oAE84BMe7SY3RTziHc4EJAyCCXQD8ULtt1f4KkndT1ZzU7kCpL2RtckMmnKU=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0659fa90bceee1fc016ae32364775487d1a97b2d92893bbaa2","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":5008,"completion_tokens":193,"total_tokens":5201,"cost":0.000512435,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":3179,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000512435,"upstream_inference_prompt_cost":0.000415935,"upstream_inference_completions_cost":0.0000965},"completion_tokens_details":{"reasoning_tokens":154,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":5008,"output_tokens":193,"total_tokens":5201,"cached_input_tokens":1826,"cache_creation_input_tokens":3179,"reasoning_tokens":154,"cost":{"total":0.000512435}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":5008,"output_tokens":193,"total_tokens":5201,"cached_input_tokens":1826,"cache_creation_input_tokens":3179,"reasoning_tokens":154,"cost":{"total":0.000512435}},"response_id":"gen-1793270627-C2xTceEtWkkSSbQBgfU1","finish_reason":"stop","raw":{"id":"gen-1793270627-C2xTceEtWkkSSbQBgfU1","object":"chat.completion","created":1793270627,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Got it: Asha was born on Orin, moved to Vesper at six, and grew up there. Her Lantern Guild membership and other details stay unchanged.","role":"assistant","reasoning":"**Clarifying lore details**\n\nI need to check the lore regarding the character's backstory. The static lore indicates she grew up in Vesper but doesnât explicitly state her birthplace. The user clarifies that she was born in Orin and moved to Vesper at six. I should revise the birthplace without suggesting any contradictions, as it still maintains she grew up in Vesper. It's important to respond concisely and acknowledge this clarification, perhaps while noting that the distinction exists naturally.","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying lore details**\n\nI need to check the lore regarding the character's backstory. The static lore indicates she grew up in Vesper but doesnât explicitly state her birthplace. The user clarifies that she was born in Orin and moved to Vesper at six. I should revise the birthplace without suggesting any contradictions, as it still maintains she grew up in Vesper. It's important to respond concisely and acknowledge this clarification, perhaps while noting that the distinction exists naturally.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yNndVkwXpugKOEhstBAlYACa5EAUdMqaU1zbjoNE5VBv1BC9_iLR_2Ybu8WXcA2cwfJABYB-EZ-XVoAzVmP_-AvHEGr-XxBScPl0n-ATIJHCaTt8979f2MxTeDdKQZOSIzU1hKubk8XxWycz42HypRrcZ-bn9iXVxADdM-iETtbe_WXi2KJAkD1TTkC-U44jsaiSPKbVvIejkt4x_magOtcgnF6Z4zeYy7GOb16JiTWz_mpnaIuzNhf0fwZxlXCGiK9Y6XCewYOKiq9DHEBkZJnumI70IcWeli_J9g43VW09B2Npq7evKbTInlhWm_ONJUyiH5JLZZTWP-vVg6qkCNEHpqaqYtlRlwjQI1dEtNtWWayaX2_to2ZkKpu1spMh6hZYnP4RTowFPRnmF37IUh1jAFKsOqVOIuCIMFCeGeulX0RlWwnzVKhTpcQaHVW83mmWCshfD6DytY-cQgRDRqh2w8_NnOGygNnBEKcGdoeJWF5LG0iZQpMhk8bwzFu-Q6hV6zMIhSKb0WTJXYaBw_KziBZx2hUiVyIU1T0-yH2sWP64x5JsyzIqPA4lL2Dyt3NwuAxOJxB7hFQGcQdvnvLJmo34xxLoOBGeNoFSWCtRbd9xLnc6_nbwLrvtBk_AfxBfKEYj3qWPxXOuUKM52hv_gf1KMfBwjcfLHzxqiPGhFR8gxa7er5AHPyMDvpnQPxYdu_uBKP7OgN4VN-jkSJKDxbsgB-y0iuHX1AK1etQgLZ98ykaVcA_whfy6r2AGbyg7WwQ7BfRT2ZvMMW14PrnE_C9PyQEueVdRjHrTQyBPba1mbeCCg0Dc5FskkaS8mDIz8ws67qK8LkRj1rC_8SUGY3h4xEyT988eLUOnBS9xXb_0AiwOr9hELGp_68lbIkxuKZWElr1kfOdRfvkOUUkqnWTJjcB3hEIhETNTw2h0nBsIzdUQm5WOn2Vvia_ZMJZUdCNEZvUUvxmrIweeljHTgx8OEsfCD5M7U6ytfm41cbQjgXcfhDKXDu2LwrjhL67Qaz7NLLhlw9bjuZMk6RyGpzgOPvIlDc8DyQQQ52pu0hHUI1l8MDWk8eakY2c15zpGkGd4WcZQBXnpVzfcTxX0o-uYvNfQhHyBqP7Ven8MFFgImEQX1G3uQUNB0PohdidYfcWl2QYPIZNxLHk3BygcR2dgG7PX7Frq5K_3RmxnEdwE1Om8oDQR37bHR2f5531kCDLkX6fhDBErFAx2dZYgrwCZ7tgk4cTr9ja8cvo8i0u6988QfyHxW6ToLmXNefO5_x-Qe9ciZcyS91uXuqqUZJW4UJ9Sxg55JxSObza6eA2SToFNIPPtUiq2jmm-Rb59yATFxqAXlKuqM5sukT6gzuixzJ4gVLq2fJfy_PZi9vUg2a8rwoBVp75bbuRpxvBy9jL9hZwucNSlr5Xspgwb4zjkGx4lhkAGONqxwjevzQLgQh3ujfqHQbl33ee7ig4z6FC4ykDyP2ZWZkUxG0mXxeyGD6ueAVnO6DvSW9HsB-X7FLVa5pCW16DNmuYyv6Apn6TNGpqMNu6D4D9L3zcL3wcc22X5nr4LJR1GiSuTAjpyITWbkNZ58JuBoQ2S-Bpm2hwK9h32FlnOGZhgw61Gv-xpew8jaq-VVfpa1L4-aG4A-7BeVs8YvSBHbRxXPBDPvhm5cbFTmVsEqzhuoH0Tng239YsJLiSjhSChqcv8TZ_AdWix27t_xBtFIScpeDCb1VWjldYwRSGzpQ5ph8oyPSws_eNBjbVXTeel4QW6_FtyUDubJlGok-Pp7y9v6g-nwhXE0qkfq2luVopAUWlh4fQPc15T8pkkRwA4jpMMIP0rDeGlET5jjmZHHMprfk31ztmP9EVS1ei6tGi6L8mQRkeALnvW4SVlenI7ixhnS2Kg7XksnHsu9l9-XIMcSsjU-awTS1nh0yKSKwZSL27GrEuMR9L9jJKcTJ2bbSvQgRw2eMieXNR070DGNnlm5L6JKsuH7LYdf_D6y-lqaIjaWHiORG_2vdHo8rUY8eKRVq588-wp62_BQRqEDPBJ89rZmdNfYDcVPaj5vcWgaHk7MXekTytBE1bkPCc1QOY05IVKXmHFsfFLd9LOQXa6zwqvHTwn6Xcx5VW84RAFws4GZXNSNXZ1ZVhcBtmodmyr78-lmi30jqONtsS4yNAAF7N004oE5DBUQ2TzuXcKFKVLXMHYTI4OvJOopwjC9uOPMDHgMBDTQcB2POVXEnl0h7vPeIBLnev8C74kJvjcX4zu4BvebDG_hcQJsx-GQ5SrXIOTVBHuyEsrU41RGsEgEHujiTsPEa8rXoHMlJe3rKNvxAuKqnJBAAnAUAhAoBMspWaHO-VhLUkBbjQBoctS6sEMBmqzSMk7Kycr3hzIXToR29M94tQf5nDpVwH7avc9iWJThNV0eNWB4gmTfi2kCn9Yx-G3Yb4sWGpfszflFaAD2ReW4bUl-nB-CGOWbGihn7q43gU5M1E9PZ1gJ1TTYe9ej-15NWPrq3bak0AsIsM4USL-ShmbRdehj-k25IIC7px_OJ0TjaxlcUPxJLmNwvINJXXCbicK37wgW4osla7cwA_Luyds3hsnUPz-0LMCnOhWbsldR9EQWIgDHXe76hujnTr7sZLurwxasJW8VodgvrmER4jllqkHPc5s6GLF2mgFQkPPuXL1l0sqvWrURWZfecfpLcnexjfugx6lPeZI8XxeCt8wnnf4kScqq2jdLtStEd358XnHWlxDpkwphXBEBui8vsHd04m4fcP96qvtxkwjx3b2TTjQKpYZyrTEaKjAU4zjICLvGMWqDcgNJXMlAKPNzQ4bQ6fafhL75aUUmwFkhJ066Po2iMFpnVKPdmqPiCgYjZO0nqs6Q0F1bPNH8NV9IyPKVUY141BldtrsnPzMY6Ga4eZwWlEPoZmW2PE07KTPf8NuDsSbB60RPCPxHGd0MDhZJykjR3Il_dIYKtRFK24IpfWe_PYOrS5Qdq4lhLAD53kqmc0t3qNGJ5TbBc0paTWnzLNSem9-0s4Bfu6mLxqo0p2kxLxbnvZqv-uTgEA6FyiQBqL28qwcqAQsufiUB4P2vM7WurKFNkJ9Rr2Yk_lDGHJR2QeJXeXTuPuEaqC1oxv0AagTRIQQCsH5iZWlDhBi4oiF6oHZF9M-BU1iBwUbPtyuCnVsJCooD3oJdFx3oHZNfCx06IRY2EI_eZAoAgH6CdqPd-e63VARwOMDItsJ3-xBmkzAuZM4pFT8lriKdPZJFtRMfBQGWUEB_W0z35CCSi_UnEP_d9tg2UviIR6un8a9v3iOCTJwTQ5DjZH9WQV3IRkSBKGzqmZNR1qhkQLwNtgMeQfP2B3AGy19fYoN4rWA8gdswjpqnUqtezzCYadqHlXnwXSZg-XRxfxCzi8_qk901xJ4h6LlkkO2jM37wBZUcnKrUf9CBlFboH3Yd_WshjWvP1FR8eoIu9mliNTZq_altEROJtxNuG0RnYpmMydGM9GXN4QefstPG8oAE84BMe7SY3RTziHc4EJAyCCXQD8ULtt1f4KkndT1ZzU7kCpL2RtckMmnKU=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0659fa90bceee1fc016ae32364775487d1a97b2d92893bbaa2","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":5008,"completion_tokens":193,"total_tokens":5201,"cost":0.000512435,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":3179,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000512435,"upstream_inference_prompt_cost":0.000415935,"upstream_inference_completions_cost":0.0000965},"completion_tokens_details":{"reasoning_tokens":154,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"Actually, correct Asha's birthplace: she was born on Orin, then moved to Vesper at age six. I mixed up being born there with growing up there. Keep her guild membership and the rest unchanged."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Clarifying lore details**\n\nI need to check the lore regarding the character's backstory. The static lore indicates she grew up in Vesper but doesnât explicitly state her birthplace. The user clarifies that she was born in Orin and moved to Vesper at six. I should revise the birthplace without suggesting any contradictions, as it still maintains she grew up in Vesper. It's important to respond concisely and acknowledge this clarification, perhaps while noting that the distinction exists naturally.","native":{"item":{"reasoning":"**Clarifying lore details**\n\nI need to check the lore regarding the character's backstory. The static lore indicates she grew up in Vesper but doesnât explicitly state her birthplace. The user clarifies that she was born in Orin and moved to Vesper at six. I should revise the birthplace without suggesting any contradictions, as it still maintains she grew up in Vesper. It's important to respond concisely and acknowledge this clarification, perhaps while noting that the distinction exists naturally.","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying lore details**\n\nI need to check the lore regarding the character's backstory. The static lore indicates she grew up in Vesper but doesnât explicitly state her birthplace. The user clarifies that she was born in Orin and moved to Vesper at six. I should revise the birthplace without suggesting any contradictions, as it still maintains she grew up in Vesper. It's important to respond concisely and acknowledge this clarification, perhaps while noting that the distinction exists naturally.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yNndVkwXpugKOEhstBAlYACa5EAUdMqaU1zbjoNE5VBv1BC9_iLR_2Ybu8WXcA2cwfJABYB-EZ-XVoAzVmP_-AvHEGr-XxBScPl0n-ATIJHCaTt8979f2MxTeDdKQZOSIzU1hKubk8XxWycz42HypRrcZ-bn9iXVxADdM-iETtbe_WXi2KJAkD1TTkC-U44jsaiSPKbVvIejkt4x_magOtcgnF6Z4zeYy7GOb16JiTWz_mpnaIuzNhf0fwZxlXCGiK9Y6XCewYOKiq9DHEBkZJnumI70IcWeli_J9g43VW09B2Npq7evKbTInlhWm_ONJUyiH5JLZZTWP-vVg6qkCNEHpqaqYtlRlwjQI1dEtNtWWayaX2_to2ZkKpu1spMh6hZYnP4RTowFPRnmF37IUh1jAFKsOqVOIuCIMFCeGeulX0RlWwnzVKhTpcQaHVW83mmWCshfD6DytY-cQgRDRqh2w8_NnOGygNnBEKcGdoeJWF5LG0iZQpMhk8bwzFu-Q6hV6zMIhSKb0WTJXYaBw_KziBZx2hUiVyIU1T0-yH2sWP64x5JsyzIqPA4lL2Dyt3NwuAxOJxB7hFQGcQdvnvLJmo34xxLoOBGeNoFSWCtRbd9xLnc6_nbwLrvtBk_AfxBfKEYj3qWPxXOuUKM52hv_gf1KMfBwjcfLHzxqiPGhFR8gxa7er5AHPyMDvpnQPxYdu_uBKP7OgN4VN-jkSJKDxbsgB-y0iuHX1AK1etQgLZ98ykaVcA_whfy6r2AGbyg7WwQ7BfRT2ZvMMW14PrnE_C9PyQEueVdRjHrTQyBPba1mbeCCg0Dc5FskkaS8mDIz8ws67qK8LkRj1rC_8SUGY3h4xEyT988eLUOnBS9xXb_0AiwOr9hELGp_68lbIkxuKZWElr1kfOdRfvkOUUkqnWTJjcB3hEIhETNTw2h0nBsIzdUQm5WOn2Vvia_ZMJZUdCNEZvUUvxmrIweeljHTgx8OEsfCD5M7U6ytfm41cbQjgXcfhDKXDu2LwrjhL67Qaz7NLLhlw9bjuZMk6RyGpzgOPvIlDc8DyQQQ52pu0hHUI1l8MDWk8eakY2c15zpGkGd4WcZQBXnpVzfcTxX0o-uYvNfQhHyBqP7Ven8MFFgImEQX1G3uQUNB0PohdidYfcWl2QYPIZNxLHk3BygcR2dgG7PX7Frq5K_3RmxnEdwE1Om8oDQR37bHR2f5531kCDLkX6fhDBErFAx2dZYgrwCZ7tgk4cTr9ja8cvo8i0u6988QfyHxW6ToLmXNefO5_x-Qe9ciZcyS91uXuqqUZJW4UJ9Sxg55JxSObza6eA2SToFNIPPtUiq2jmm-Rb59yATFxqAXlKuqM5sukT6gzuixzJ4gVLq2fJfy_PZi9vUg2a8rwoBVp75bbuRpxvBy9jL9hZwucNSlr5Xspgwb4zjkGx4lhkAGONqxwjevzQLgQh3ujfqHQbl33ee7ig4z6FC4ykDyP2ZWZkUxG0mXxeyGD6ueAVnO6DvSW9HsB-X7FLVa5pCW16DNmuYyv6Apn6TNGpqMNu6D4D9L3zcL3wcc22X5nr4LJR1GiSuTAjpyITWbkNZ58JuBoQ2S-Bpm2hwK9h32FlnOGZhgw61Gv-xpew8jaq-VVfpa1L4-aG4A-7BeVs8YvSBHbRxXPBDPvhm5cbFTmVsEqzhuoH0Tng239YsJLiSjhSChqcv8TZ_AdWix27t_xBtFIScpeDCb1VWjldYwRSGzpQ5ph8oyPSws_eNBjbVXTeel4QW6_FtyUDubJlGok-Pp7y9v6g-nwhXE0qkfq2luVopAUWlh4fQPc15T8pkkRwA4jpMMIP0rDeGlET5jjmZHHMprfk31ztmP9EVS1ei6tGi6L8mQRkeALnvW4SVlenI7ixhnS2Kg7XksnHsu9l9-XIMcSsjU-awTS1nh0yKSKwZSL27GrEuMR9L9jJKcTJ2bbSvQgRw2eMieXNR070DGNnlm5L6JKsuH7LYdf_D6y-lqaIjaWHiORG_2vdHo8rUY8eKRVq588-wp62_BQRqEDPBJ89rZmdNfYDcVPaj5vcWgaHk7MXekTytBE1bkPCc1QOY05IVKXmHFsfFLd9LOQXa6zwqvHTwn6Xcx5VW84RAFws4GZXNSNXZ1ZVhcBtmodmyr78-lmi30jqONtsS4yNAAF7N004oE5DBUQ2TzuXcKFKVLXMHYTI4OvJOopwjC9uOPMDHgMBDTQcB2POVXEnl0h7vPeIBLnev8C74kJvjcX4zu4BvebDG_hcQJsx-GQ5SrXIOTVBHuyEsrU41RGsEgEHujiTsPEa8rXoHMlJe3rKNvxAuKqnJBAAnAUAhAoBMspWaHO-VhLUkBbjQBoctS6sEMBmqzSMk7Kycr3hzIXToR29M94tQf5nDpVwH7avc9iWJThNV0eNWB4gmTfi2kCn9Yx-G3Yb4sWGpfszflFaAD2ReW4bUl-nB-CGOWbGihn7q43gU5M1E9PZ1gJ1TTYe9ej-15NWPrq3bak0AsIsM4USL-ShmbRdehj-k25IIC7px_OJ0TjaxlcUPxJLmNwvINJXXCbicK37wgW4osla7cwA_Luyds3hsnUPz-0LMCnOhWbsldR9EQWIgDHXe76hujnTr7sZLurwxasJW8VodgvrmER4jllqkHPc5s6GLF2mgFQkPPuXL1l0sqvWrURWZfecfpLcnexjfugx6lPeZI8XxeCt8wnnf4kScqq2jdLtStEd358XnHWlxDpkwphXBEBui8vsHd04m4fcP96qvtxkwjx3b2TTjQKpYZyrTEaKjAU4zjICLvGMWqDcgNJXMlAKPNzQ4bQ6fafhL75aUUmwFkhJ066Po2iMFpnVKPdmqPiCgYjZO0nqs6Q0F1bPNH8NV9IyPKVUY141BldtrsnPzMY6Ga4eZwWlEPoZmW2PE07KTPf8NuDsSbB60RPCPxHGd0MDhZJykjR3Il_dIYKtRFK24IpfWe_PYOrS5Qdq4lhLAD53kqmc0t3qNGJ5TbBc0paTWnzLNSem9-0s4Bfu6mLxqo0p2kxLxbnvZqv-uTgEA6FyiQBqL28qwcqAQsufiUB4P2vM7WurKFNkJ9Rr2Yk_lDGHJR2QeJXeXTuPuEaqC1oxv0AagTRIQQCsH5iZWlDhBi4oiF6oHZF9M-BU1iBwUbPtyuCnVsJCooD3oJdFx3oHZNfCx06IRY2EI_eZAoAgH6CdqPd-e63VARwOMDItsJ3-xBmkzAuZM4pFT8lriKdPZJFtRMfBQGWUEB_W0z35CCSi_UnEP_d9tg2UviIR6un8a9v3iOCTJwTQ5DjZH9WQV3IRkSBKGzqmZNR1qhkQLwNtgMeQfP2B3AGy19fYoN4rWA8gdswjpqnUqtezzCYadqHlXnwXSZg-XRxfxCzi8_qk901xJ4h6LlkkO2jM37wBZUcnKrUf9CBlFboH3Yd_WshjWvP1FR8eoIu9mliNTZq_altEROJtxNuG0RnYpmMydGM9GXN4QefstPG8oAE84BMe7SY3RTziHc4EJAyCCXQD8ULtt1f4KkndT1ZzU7kCpL2RtckMmnKU=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0659fa90bceee1fc016ae32364775487d1a97b2d92893bbaa2","index":1}]},"fingerprint":"fca2070d0253d2bd"}},{"type":"text","text":"Got it: Asha was born on Orin, moved to Vesper at six, and grew up there. Her Lantern Guild membership and other details stay unchanged."}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793270627-C2xTceEtWkkSSbQBgfU1"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Clarifying lore details**\n\nI need to check the lore regarding the character's backstory. The static lore indicates she grew up in Vesper but doesnât explicitly state her birthplace. The user clarifies that she was born in Orin and moved to Vesper at six. I should revise the birthplace without suggesting any contradictions, as it still maintains she grew up in Vesper. It's important to respond concisely and acknowledge this clarification, perhaps while noting that the distinction exists naturally.","native":{"item":{"reasoning":"**Clarifying lore details**\n\nI need to check the lore regarding the character's backstory. The static lore indicates she grew up in Vesper but doesnât explicitly state her birthplace. The user clarifies that she was born in Orin and moved to Vesper at six. I should revise the birthplace without suggesting any contradictions, as it still maintains she grew up in Vesper. It's important to respond concisely and acknowledge this clarification, perhaps while noting that the distinction exists naturally.","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying lore details**\n\nI need to check the lore regarding the character's backstory. The static lore indicates she grew up in Vesper but doesnât explicitly state her birthplace. The user clarifies that she was born in Orin and moved to Vesper at six. I should revise the birthplace without suggesting any contradictions, as it still maintains she grew up in Vesper. It's important to respond concisely and acknowledge this clarification, perhaps while noting that the distinction exists naturally.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yNndVkwXpugKOEhstBAlYACa5EAUdMqaU1zbjoNE5VBv1BC9_iLR_2Ybu8WXcA2cwfJABYB-EZ-XVoAzVmP_-AvHEGr-XxBScPl0n-ATIJHCaTt8979f2MxTeDdKQZOSIzU1hKubk8XxWycz42HypRrcZ-bn9iXVxADdM-iETtbe_WXi2KJAkD1TTkC-U44jsaiSPKbVvIejkt4x_magOtcgnF6Z4zeYy7GOb16JiTWz_mpnaIuzNhf0fwZxlXCGiK9Y6XCewYOKiq9DHEBkZJnumI70IcWeli_J9g43VW09B2Npq7evKbTInlhWm_ONJUyiH5JLZZTWP-vVg6qkCNEHpqaqYtlRlwjQI1dEtNtWWayaX2_to2ZkKpu1spMh6hZYnP4RTowFPRnmF37IUh1jAFKsOqVOIuCIMFCeGeulX0RlWwnzVKhTpcQaHVW83mmWCshfD6DytY-cQgRDRqh2w8_NnOGygNnBEKcGdoeJWF5LG0iZQpMhk8bwzFu-Q6hV6zMIhSKb0WTJXYaBw_KziBZx2hUiVyIU1T0-yH2sWP64x5JsyzIqPA4lL2Dyt3NwuAxOJxB7hFQGcQdvnvLJmo34xxLoOBGeNoFSWCtRbd9xLnc6_nbwLrvtBk_AfxBfKEYj3qWPxXOuUKM52hv_gf1KMfBwjcfLHzxqiPGhFR8gxa7er5AHPyMDvpnQPxYdu_uBKP7OgN4VN-jkSJKDxbsgB-y0iuHX1AK1etQgLZ98ykaVcA_whfy6r2AGbyg7WwQ7BfRT2ZvMMW14PrnE_C9PyQEueVdRjHrTQyBPba1mbeCCg0Dc5FskkaS8mDIz8ws67qK8LkRj1rC_8SUGY3h4xEyT988eLUOnBS9xXb_0AiwOr9hELGp_68lbIkxuKZWElr1kfOdRfvkOUUkqnWTJjcB3hEIhETNTw2h0nBsIzdUQm5WOn2Vvia_ZMJZUdCNEZvUUvxmrIweeljHTgx8OEsfCD5M7U6ytfm41cbQjgXcfhDKXDu2LwrjhL67Qaz7NLLhlw9bjuZMk6RyGpzgOPvIlDc8DyQQQ52pu0hHUI1l8MDWk8eakY2c15zpGkGd4WcZQBXnpVzfcTxX0o-uYvNfQhHyBqP7Ven8MFFgImEQX1G3uQUNB0PohdidYfcWl2QYPIZNxLHk3BygcR2dgG7PX7Frq5K_3RmxnEdwE1Om8oDQR37bHR2f5531kCDLkX6fhDBErFAx2dZYgrwCZ7tgk4cTr9ja8cvo8i0u6988QfyHxW6ToLmXNefO5_x-Qe9ciZcyS91uXuqqUZJW4UJ9Sxg55JxSObza6eA2SToFNIPPtUiq2jmm-Rb59yATFxqAXlKuqM5sukT6gzuixzJ4gVLq2fJfy_PZi9vUg2a8rwoBVp75bbuRpxvBy9jL9hZwucNSlr5Xspgwb4zjkGx4lhkAGONqxwjevzQLgQh3ujfqHQbl33ee7ig4z6FC4ykDyP2ZWZkUxG0mXxeyGD6ueAVnO6DvSW9HsB-X7FLVa5pCW16DNmuYyv6Apn6TNGpqMNu6D4D9L3zcL3wcc22X5nr4LJR1GiSuTAjpyITWbkNZ58JuBoQ2S-Bpm2hwK9h32FlnOGZhgw61Gv-xpew8jaq-VVfpa1L4-aG4A-7BeVs8YvSBHbRxXPBDPvhm5cbFTmVsEqzhuoH0Tng239YsJLiSjhSChqcv8TZ_AdWix27t_xBtFIScpeDCb1VWjldYwRSGzpQ5ph8oyPSws_eNBjbVXTeel4QW6_FtyUDubJlGok-Pp7y9v6g-nwhXE0qkfq2luVopAUWlh4fQPc15T8pkkRwA4jpMMIP0rDeGlET5jjmZHHMprfk31ztmP9EVS1ei6tGi6L8mQRkeALnvW4SVlenI7ixhnS2Kg7XksnHsu9l9-XIMcSsjU-awTS1nh0yKSKwZSL27GrEuMR9L9jJKcTJ2bbSvQgRw2eMieXNR070DGNnlm5L6JKsuH7LYdf_D6y-lqaIjaWHiORG_2vdHo8rUY8eKRVq588-wp62_BQRqEDPBJ89rZmdNfYDcVPaj5vcWgaHk7MXekTytBE1bkPCc1QOY05IVKXmHFsfFLd9LOQXa6zwqvHTwn6Xcx5VW84RAFws4GZXNSNXZ1ZVhcBtmodmyr78-lmi30jqONtsS4yNAAF7N004oE5DBUQ2TzuXcKFKVLXMHYTI4OvJOopwjC9uOPMDHgMBDTQcB2POVXEnl0h7vPeIBLnev8C74kJvjcX4zu4BvebDG_hcQJsx-GQ5SrXIOTVBHuyEsrU41RGsEgEHujiTsPEa8rXoHMlJe3rKNvxAuKqnJBAAnAUAhAoBMspWaHO-VhLUkBbjQBoctS6sEMBmqzSMk7Kycr3hzIXToR29M94tQf5nDpVwH7avc9iWJThNV0eNWB4gmTfi2kCn9Yx-G3Yb4sWGpfszflFaAD2ReW4bUl-nB-CGOWbGihn7q43gU5M1E9PZ1gJ1TTYe9ej-15NWPrq3bak0AsIsM4USL-ShmbRdehj-k25IIC7px_OJ0TjaxlcUPxJLmNwvINJXXCbicK37wgW4osla7cwA_Luyds3hsnUPz-0LMCnOhWbsldR9EQWIgDHXe76hujnTr7sZLurwxasJW8VodgvrmER4jllqkHPc5s6GLF2mgFQkPPuXL1l0sqvWrURWZfecfpLcnexjfugx6lPeZI8XxeCt8wnnf4kScqq2jdLtStEd358XnHWlxDpkwphXBEBui8vsHd04m4fcP96qvtxkwjx3b2TTjQKpYZyrTEaKjAU4zjICLvGMWqDcgNJXMlAKPNzQ4bQ6fafhL75aUUmwFkhJ066Po2iMFpnVKPdmqPiCgYjZO0nqs6Q0F1bPNH8NV9IyPKVUY141BldtrsnPzMY6Ga4eZwWlEPoZmW2PE07KTPf8NuDsSbB60RPCPxHGd0MDhZJykjR3Il_dIYKtRFK24IpfWe_PYOrS5Qdq4lhLAD53kqmc0t3qNGJ5TbBc0paTWnzLNSem9-0s4Bfu6mLxqo0p2kxLxbnvZqv-uTgEA6FyiQBqL28qwcqAQsufiUB4P2vM7WurKFNkJ9Rr2Yk_lDGHJR2QeJXeXTuPuEaqC1oxv0AagTRIQQCsH5iZWlDhBi4oiF6oHZF9M-BU1iBwUbPtyuCnVsJCooD3oJdFx3oHZNfCx06IRY2EI_eZAoAgH6CdqPd-e63VARwOMDItsJ3-xBmkzAuZM4pFT8lriKdPZJFtRMfBQGWUEB_W0z35CCSi_UnEP_d9tg2UviIR6un8a9v3iOCTJwTQ5DjZH9WQV3IRkSBKGzqmZNR1qhkQLwNtgMeQfP2B3AGy19fYoN4rWA8gdswjpqnUqtezzCYadqHlXnwXSZg-XRxfxCzi8_qk901xJ4h6LlkkO2jM37wBZUcnKrUf9CBlFboH3Yd_WshjWvP1FR8eoIu9mliNTZq_altEROJtxNuG0RnYpmMydGM9GXN4QefstPG8oAE84BMe7SY3RTziHc4EJAyCCXQD8ULtt1f4KkndT1ZzU7kCpL2RtckMmnKU=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0659fa90bceee1fc016ae32364775487d1a97b2d92893bbaa2","index":1}]},"fingerprint":"fca2070d0253d2bd"}},{"type":"text","text":"Got it: Asha was born on Orin, moved to Vesper at six, and grew up there. Her Lantern Guild membership and other details stay unchanged."}]}
+

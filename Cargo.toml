@@ -30,6 +30,5 @@ rig = { version="0.44.0" }
 schemars="1"
 async-stream = "0.3.6"
 futures = "0.3"
-itertools = "0.15.0"
 tokio-cron-scheduler = "0.15.1"
 

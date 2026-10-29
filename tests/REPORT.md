@@ -148,3 +148,69 @@ A failed batch save yields an error and stops before extraction or `finalRespons
 Two targeted live checks pass: injected save failure and normal chat persistence.
 The failure check verifies empty history, no success event, and an explicit stream error event.
 The isolated test database is removed after verification.
+
+
+## Background researcher wiring — 2026-10-29
+
+Chat exposes only `search_world`. Background research starts after successful turn storage.
+The researcher loads `researcher.md` and exposes search, full entity reads, conflict reporting, and exact-ID batch writes.
+The old extractor, its types, prompts, merge/alias implementation tests, and legacy write methods are removed.
+Storage retry tests now exercise exact saved IDs through the active batch writer.
+Removing old implementation tests does not establish researcher identity accuracy.
+
+Verification:
+
+- 13 local graph and agent-tool tests pass without model calls.
+- These cover tool permissions, full-read details, world isolation, rollback, retries, and relationship identity.
+- Pure Rust tests: nine pass, three existing retrieval failures remain.
+- Remaining failures: omitted neighbor properties, omitted relationship qualifiers, and duplicate-row ranking inflation.
+- Paid model behavior, conversation save-failure integration, durable retries, and deletion races are not re-evaluated here.
+
+The researcher still uses an in-memory spawned task. Restart recovery remains unfinished.
+
+
+## Realistic 20-turn researcher smoke — 2026-10-29
+
+Completed 20 chat turns and 20 background research runs against real OpenRouter models and local databases.
+The retained synthetic world contains 21 entities, two unresolved conflicts, and 36 relationships including conflict links.
+No stream errors or reported research failures occurred.
+Route retractions, contextual identity, minor facts, unresolved conflicts, and hypothetical isolation behaved correctly in this run.
+Conversation-level sources remain inconsistent; message-level citations are not implemented.
+This sequential smoke does not test concurrent writes, restart recovery, or recall from a fresh conversation.
+
+See [the detailed result and transcript](artifacts/smoke-2026-10-29/summary.md).
+
+
+## Stable message IDs — 2026-10-29
+
+User, assistant, and tool messages now store UUIDs. New chat messages receive IDs before storage.
+The additive migration assigns missing IDs to existing messages without changing order, content, or existing IDs.
+The migration is applied to both local development and QA databases.
+
+Three real Postgres tests pass: migration preservation and repeatability, stable IDs across repeated reads, and concurrent message appends.
+No model calls run for this change.
+
+
+## Second 20-turn smoke with message sources — 2026-10-29
+
+All 20 chat turns and 20 researcher runs complete in a fresh world.
+The graph has 23 entities, two unresolved conflicts, and 38 relationships including conflict links.
+Every entity and lore relationship has valid user-message sources without duplicates.
+Retained records preserve earlier sources across updates. Hypothetical and read-only turns change neither facts nor sources.
+Conflict message sources remain outside this change.
+
+See [the result, transcript, and source audit](artifacts/smoke-2026-10-29-run2/summary.md).
+
+
+## Conflict sources and new 10-turn smoke — 2026-10-29
+
+Conflicts now store trusted reporting-message IDs, append them without duplicates, and preserve legacy reads.
+The focused Memgraph test covers source accumulation, retry deduplication, and missing historical source fields.
+
+A fresh Ardent Reach world completes ten chat turns and ten researcher runs without reported errors.
+It contains 13 entities, two unresolved conflicts, and 16 lore relationships plus two conflict links.
+The conflicts reference the exact user messages from turns 5 and 10.
+All entity, conflict, and lore relationship source audits pass.
+Hypothetical and recall turns leave the graph unchanged.
+
+See [the result, transcript, and graph](artifacts/smoke-2026-10-29-10turns/summary.md).

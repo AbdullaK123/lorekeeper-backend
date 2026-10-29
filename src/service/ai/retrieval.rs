@@ -10,14 +10,35 @@ pub struct SearchHit {
     pub neighbors: Vec<(Entity, Relationship)>,
 }
 
-/// "Kael (character): A warrior from the Ashlands."
+/// Includes exact saved identity for both matches and their neighbors.
 fn describe(entity: &Entity) -> String {
-    let mut line = format!("{} ({})", entity.name, entity.kind.join(", "));
+    let mut line = format!(
+        "{} ({}) [ID: {}]",
+        entity.name,
+        entity.kind.join(", "),
+        entity.id
+    );
+    if !entity.aliases.is_empty() {
+        line.push_str(&format!(" [Aliases: {}]", entity.aliases.join(", ")));
+    }
     if !entity.description.is_empty() {
         line.push_str(": ");
         line.push_str(&entity.description);
     }
     line
+}
+
+fn format_properties(properties: &HashMap<String, serde_json::Value>) -> String {
+    let mut descriptions = Vec::new();
+    for (key, value) in properties {
+        let description = match value {
+            serde_json::Value::String(text) => format!("{key}: {text}"),
+            other => format!("{key}: {other}"),
+        };
+        descriptions.push(description);
+    }
+    descriptions.sort();
+    descriptions.join("; ")
 }
 
 /// Renders search hits as the plain-text lore block the chat agent reads.
@@ -32,17 +53,10 @@ pub fn format_hits(hits: &[SearchHit]) -> String {
         let mut lines = vec![describe(&hit.entity)];
 
         if !hit.entity.properties.is_empty() {
-            let mut props: Vec<String> = hit
-                .entity
-                .properties
-                .iter()
-                .map(|(key, value)| match value {
-                    serde_json::Value::String(s) => format!("{key}: {s}"),
-                    other => format!("{key}: {other}"),
-                })
-                .collect();
-            props.sort();
-            lines.push(format!("  Properties: {}", props.join("; ")));
+            lines.push(format!(
+                "  Properties: {}",
+                format_properties(&hit.entity.properties)
+            ));
         }
 
         for (neighbor, rel) in &hit.neighbors {

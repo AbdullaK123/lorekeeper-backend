@@ -1,0 +1,260 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Acknowledging lighthouses**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" think"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" keep"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" my"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" response"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" brief"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" while"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" also"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" engaging"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" user"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" with"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" question"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Since"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" this"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" new"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" topic"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" won't"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" do"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" any"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" look"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ups"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" want"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" mention"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" fascinating"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" aspects"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" of"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" l"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ighth"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ouses"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" like"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" how"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" they"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" signal"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" tides"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" storms"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" can"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ask"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" how"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lighthouse"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" functions"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" maybe"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" whether"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" considered"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" practical"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" more"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" of"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" symbolic"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" magical"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" presence"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"âbut"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" should"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" avoid"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" getting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" too"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" creative"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" making"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" assumptions"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Br"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ine"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"wake"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"âs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" storm"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"y"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" islands"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" port"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" built"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" around"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" tidal"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" lighthouse"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" make"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" vivid"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" pairing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Does"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" lighthouse"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" guide"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" ships"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" by"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" its"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" changing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" light"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" its"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" tidal"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" rhythm"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" important"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" for"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" another"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" reason"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"?"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"Brinewakeâs stormy islands and a port built around a tidal lighthouse make a vivid pairing. Does the lighthouse guide ships by its changing light, or is its tidal rhythm important for another reason?"}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Acknowledging lighthouses**\n\nI think I need to keep my response brief while also engaging the user with a question. Since this is a new topic, I won't do any lookups. I want to mention the fascinating aspects of lighthouses, like how they signal tides and storms. I can ask how a lighthouse functions or maybe whether it's considered practical or more of a symbolic or magical presenceâbut I should avoid getting too creative or making assumptions.","native":{"item":{"reasoning":"**Acknowledging lighthouses**\n\nI think I need to keep my response brief while also engaging the user with a question. Since this is a new topic, I won't do any lookups. I want to mention the fascinating aspects of lighthouses, like how they signal tides and storms. I can ask how a lighthouse functions or maybe whether it's considered practical or more of a symbolic or magical presenceâbut I should avoid getting too creative or making assumptions.","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging lighthouses**\n\nI think I need to keep my response brief while also engaging the user with a question. Since this is a new topic, I won't do any lookups. I want to mention the fascinating aspects of lighthouses, like how they signal tides and storms. I can ask how a lighthouse functions or maybe whether it's considered practical or more of a symbolic or magical presenceâbut I should avoid getting too creative or making assumptions.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yIJnlWNVp8dw-C5Toz0piSKgCaqQYRq4W9WrG1aANxc6S-p9RKpVWp8ARLa1vASRyxecNpFAMhdgf2EgtZCk-uUzsKkb7ziJ8WyVWadqy7ygV2j2PPC8zBg-s9CFpoSCVMMBaFwT9dM79pdWibfIFQkm11sWWK2LFhrWJhtRayPJ4q9MBIl4u_mo7wP0KuxDFznAXfuXsAvV7yi7tk4YIyii5kedSEaQ5VOczl5gUqJFWW1btYtbZCEXbopuXeatL6vI1G8WiL5BIjQMiG-PTJlpkGeI8LnZgwHoPdGtA9jVeCogl_MiccKipNU0PVGrlR8Nnh5u_0YqAjwl9wzoREwdRFVasO19OwglYAmBy3OqhN1aZ5mxL7uJDYcx7W4-wp_Tiyc5vo_a4JekuTaUO4xv7ttpoabAddV35DQf_kCBBaQx5EIX3UxFMRXVun5uhNDgiTK95bitj0ket-ikFOiu-xasam3-zD_xWzSq1c-cMQ2NKV0IyktZXevOHFdSMzS934I85tOQuQP6gRkJwdwxVDJUMuDX4aK09IRAf5f3LqH9mDy81srXYNJtE8Kbj2sme-MUD7YL2nqNLUeJt0EjzJiikQyoMYXPv4ZD_z7VMApq87QfBtCBb4AsrASENTrbgtnuRFGTkXdzGP6pjDGZMDI22wja5elnSIptBoCK2dgsk_NzxPJs6iLMZjGkThxpfMPP5Ys66rojLxC4JVK15dFDrb4m6kpfhuSmD8LDzObWdY9m6bZBNKBvpLnW6coBFs4zIbJfTSOkQwbGa12Zz9uCckTZCJYIvvQ0nYg1HbnH1YjoCd98Cu9H-_hAMdhdPyTE261LdJsW4lFbeDUcNwJfjDdWiGSFCCgAMf7gklW3JXAAt6vPxooltbM2LBAFfARV_Ce45YGYuRmO0Q26wkhAP2GGxi1ZXO9l1eXcZLqtItdrTmZOvMBh-E13yaVxIAwWONq1OYuUscI669-ZQtsFufVs87TqobWxS2-61TQx5GoZatyhYeZacvnGj6tMheIZhtnU8QNLI9vPc6hg_vX93w58_O3BJcuRlm-SrieVt0M1DavkslvdHEiPM6P_hVZrejGI85MgkD7GJidbHoFkZKa61BuduTGx34yv1mFk5RGndEQM5-1-vz8nkRIkJktA6NYpgpuA0resCO7Ggc5kAt887oEjqODngOlHgTbKGwubuRrpa6VjGj9DTLAk4lstDwhjuY5AIgAVdTolJe0qiXGQlMl5weBcnUpN0zEoVBGtXa-SW0R398WoLA4aFonneTM7_CN_b2INdZdSl8Hw6zRY9Uvsej-Xw9KFLWSURbEXC9KYwICv7kUDlTBrbLQ4xehuLs56ezyJT7_wxF1GhCERvdhMV998pMlWG6RKzgxPzkBebscmuPotcZU21yShxgUJt6_2x4oYXJEqvz8PALdSOH7zJ0n_4C8_SOqRvWvRTYUYpLFPpgOQ4WauwBDpYL1v3mxWayEeVBX3rVjVTXVM0O_AbXdQVUNcODE4NwOo3ub8EgZKGt8DKAPKKyACGVfIpRD9bNJhudC_Z8fcpDJIHJVUZQPLwP1dUK2hSnKkcUx99UaN0cMqxoi_m8Yfa5zxIgoMd6V-9KBDVycu5NxnTn7x1jQ5KwxaZy0PC3DOvRu2ajf24JY3yZ_xOsv5yHp51-W-Vrry7d0TgQ8CWKRShQwXhzuX5NigAAZHH3jTtwxPJc57qdM-G3xeYLw-L8kRZknbtmTrlPklRY_DKi9SSj2XzNq823-59BtkuRcWd2zSPHDHu8GPLJ8blHKpFfhpSnNxIt5pR6zapQj97_R115bg8Cy2GIctAk63VECK6PK69A18u5dCh2upYf5qI-2_gyZE_Yf1xzfmzZJzEXvWWKGrTKYpKi18y8owoswwr36-Wwqr8XXoPSeE2dReEfmnVeoPIHAw0au0eDkTd81LWDA6nBzChkPQ83geImYYnmJYGsN2SgoWBkz7T4oVBizPyeOKAO2bWAo8PiKnS8ju5OvT6B_puF71KeUlobGDx4UQB3iaYqdZB790VtBIVb69kisKWMth-SyKeKdKbopbL8k4EXM8TSujcuz36By2V6yv0KKcMNrskdOoSQNXXYgF0XJWpSabPAQnQXkx8IXjq3hdPVGY3Ul7v-Fis0QCZqC65eqYfRKMLW6SoBQVpV1uNdDIRhrwc3K663Be97q3d4_Yt4cd89b3sGRUKoOKOrHvep16FsVKqeeCFfzsUUdsjsbn6nlrUV3GQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_034180a093f6b779016ae3220781a087d18b82adbe4c759b9a","index":1}]},"fingerprint":"5be20fe689bb921a"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":1898,"output_tokens":95,"total_tokens":1993,"cached_input_tokens":0,"cache_creation_input_tokens":1895,"reasoning_tokens":49,"cost":{"total":0.000284675}},"response_id":"gen-1793270278-OmONyezqAclgtSSWl5Es","finish_reason":"stop","raw":{"id":"gen-1793270278-OmONyezqAclgtSSWl5Es","object":"chat.completion","created":1793270278,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Brinewakeâs stormy islands and a port built around a tidal lighthouse make a vivid pairing. Does the lighthouse guide ships by its changing light, or is its tidal rhythm important for another reason?","role":"assistant","reasoning":"**Acknowledging lighthouses**\n\nI think I need to keep my response brief while also engaging the user with a question. Since this is a new topic, I won't do any lookups. I want to mention the fascinating aspects of lighthouses, like how they signal tides and storms. I can ask how a lighthouse functions or maybe whether it's considered practical or more of a symbolic or magical presenceâbut I should avoid getting too creative or making assumptions.","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging lighthouses**\n\nI think I need to keep my response brief while also engaging the user with a question. Since this is a new topic, I won't do any lookups. I want to mention the fascinating aspects of lighthouses, like how they signal tides and storms. I can ask how a lighthouse functions or maybe whether it's considered practical or more of a symbolic or magical presenceâbut I should avoid getting too creative or making assumptions.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yIJnlWNVp8dw-C5Toz0piSKgCaqQYRq4W9WrG1aANxc6S-p9RKpVWp8ARLa1vASRyxecNpFAMhdgf2EgtZCk-uUzsKkb7ziJ8WyVWadqy7ygV2j2PPC8zBg-s9CFpoSCVMMBaFwT9dM79pdWibfIFQkm11sWWK2LFhrWJhtRayPJ4q9MBIl4u_mo7wP0KuxDFznAXfuXsAvV7yi7tk4YIyii5kedSEaQ5VOczl5gUqJFWW1btYtbZCEXbopuXeatL6vI1G8WiL5BIjQMiG-PTJlpkGeI8LnZgwHoPdGtA9jVeCogl_MiccKipNU0PVGrlR8Nnh5u_0YqAjwl9wzoREwdRFVasO19OwglYAmBy3OqhN1aZ5mxL7uJDYcx7W4-wp_Tiyc5vo_a4JekuTaUO4xv7ttpoabAddV35DQf_kCBBaQx5EIX3UxFMRXVun5uhNDgiTK95bitj0ket-ikFOiu-xasam3-zD_xWzSq1c-cMQ2NKV0IyktZXevOHFdSMzS934I85tOQuQP6gRkJwdwxVDJUMuDX4aK09IRAf5f3LqH9mDy81srXYNJtE8Kbj2sme-MUD7YL2nqNLUeJt0EjzJiikQyoMYXPv4ZD_z7VMApq87QfBtCBb4AsrASENTrbgtnuRFGTkXdzGP6pjDGZMDI22wja5elnSIptBoCK2dgsk_NzxPJs6iLMZjGkThxpfMPP5Ys66rojLxC4JVK15dFDrb4m6kpfhuSmD8LDzObWdY9m6bZBNKBvpLnW6coBFs4zIbJfTSOkQwbGa12Zz9uCckTZCJYIvvQ0nYg1HbnH1YjoCd98Cu9H-_hAMdhdPyTE261LdJsW4lFbeDUcNwJfjDdWiGSFCCgAMf7gklW3JXAAt6vPxooltbM2LBAFfARV_Ce45YGYuRmO0Q26wkhAP2GGxi1ZXO9l1eXcZLqtItdrTmZOvMBh-E13yaVxIAwWONq1OYuUscI669-ZQtsFufVs87TqobWxS2-61TQx5GoZatyhYeZacvnGj6tMheIZhtnU8QNLI9vPc6hg_vX93w58_O3BJcuRlm-SrieVt0M1DavkslvdHEiPM6P_hVZrejGI85MgkD7GJidbHoFkZKa61BuduTGx34yv1mFk5RGndEQM5-1-vz8nkRIkJktA6NYpgpuA0resCO7Ggc5kAt887oEjqODngOlHgTbKGwubuRrpa6VjGj9DTLAk4lstDwhjuY5AIgAVdTolJe0qiXGQlMl5weBcnUpN0zEoVBGtXa-SW0R398WoLA4aFonneTM7_CN_b2INdZdSl8Hw6zRY9Uvsej-Xw9KFLWSURbEXC9KYwICv7kUDlTBrbLQ4xehuLs56ezyJT7_wxF1GhCERvdhMV998pMlWG6RKzgxPzkBebscmuPotcZU21yShxgUJt6_2x4oYXJEqvz8PALdSOH7zJ0n_4C8_SOqRvWvRTYUYpLFPpgOQ4WauwBDpYL1v3mxWayEeVBX3rVjVTXVM0O_AbXdQVUNcODE4NwOo3ub8EgZKGt8DKAPKKyACGVfIpRD9bNJhudC_Z8fcpDJIHJVUZQPLwP1dUK2hSnKkcUx99UaN0cMqxoi_m8Yfa5zxIgoMd6V-9KBDVycu5NxnTn7x1jQ5KwxaZy0PC3DOvRu2ajf24JY3yZ_xOsv5yHp51-W-Vrry7d0TgQ8CWKRShQwXhzuX5NigAAZHH3jTtwxPJc57qdM-G3xeYLw-L8kRZknbtmTrlPklRY_DKi9SSj2XzNq823-59BtkuRcWd2zSPHDHu8GPLJ8blHKpFfhpSnNxIt5pR6zapQj97_R115bg8Cy2GIctAk63VECK6PK69A18u5dCh2upYf5qI-2_gyZE_Yf1xzfmzZJzEXvWWKGrTKYpKi18y8owoswwr36-Wwqr8XXoPSeE2dReEfmnVeoPIHAw0au0eDkTd81LWDA6nBzChkPQ83geImYYnmJYGsN2SgoWBkz7T4oVBizPyeOKAO2bWAo8PiKnS8ju5OvT6B_puF71KeUlobGDx4UQB3iaYqdZB790VtBIVb69kisKWMth-SyKeKdKbopbL8k4EXM8TSujcuz36By2V6yv0KKcMNrskdOoSQNXXYgF0XJWpSabPAQnQXkx8IXjq3hdPVGY3Ul7v-Fis0QCZqC65eqYfRKMLW6SoBQVpV1uNdDIRhrwc3K663Be97q3d4_Yt4cd89b3sGRUKoOKOrHvep16FsVKqeeCFfzsUUdsjsbn6nlrUV3GQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_034180a093f6b779016ae3220781a087d18b82adbe4c759b9a","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":1898,"completion_tokens":95,"total_tokens":1993,"cost":0.000284675,"is_byok":false,"prompt_tokens_details":{"cached_tokens":0,"cache_write_tokens":1895,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000284675,"upstream_inference_prompt_cost":0.000237175,"upstream_inference_completions_cost":0.0000475},"completion_tokens_details":{"reasoning_tokens":49,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":1898,"output_tokens":95,"total_tokens":1993,"cached_input_tokens":0,"cache_creation_input_tokens":1895,"reasoning_tokens":49,"cost":{"total":0.000284675}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":1898,"output_tokens":95,"total_tokens":1993,"cached_input_tokens":0,"cache_creation_input_tokens":1895,"reasoning_tokens":49,"cost":{"total":0.000284675}},"response_id":"gen-1793270278-OmONyezqAclgtSSWl5Es","finish_reason":"stop","raw":{"id":"gen-1793270278-OmONyezqAclgtSSWl5Es","object":"chat.completion","created":1793270278,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Brinewakeâs stormy islands and a port built around a tidal lighthouse make a vivid pairing. Does the lighthouse guide ships by its changing light, or is its tidal rhythm important for another reason?","role":"assistant","reasoning":"**Acknowledging lighthouses**\n\nI think I need to keep my response brief while also engaging the user with a question. Since this is a new topic, I won't do any lookups. I want to mention the fascinating aspects of lighthouses, like how they signal tides and storms. I can ask how a lighthouse functions or maybe whether it's considered practical or more of a symbolic or magical presenceâbut I should avoid getting too creative or making assumptions.","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging lighthouses**\n\nI think I need to keep my response brief while also engaging the user with a question. Since this is a new topic, I won't do any lookups. I want to mention the fascinating aspects of lighthouses, like how they signal tides and storms. I can ask how a lighthouse functions or maybe whether it's considered practical or more of a symbolic or magical presenceâbut I should avoid getting too creative or making assumptions.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yIJnlWNVp8dw-C5Toz0piSKgCaqQYRq4W9WrG1aANxc6S-p9RKpVWp8ARLa1vASRyxecNpFAMhdgf2EgtZCk-uUzsKkb7ziJ8WyVWadqy7ygV2j2PPC8zBg-s9CFpoSCVMMBaFwT9dM79pdWibfIFQkm11sWWK2LFhrWJhtRayPJ4q9MBIl4u_mo7wP0KuxDFznAXfuXsAvV7yi7tk4YIyii5kedSEaQ5VOczl5gUqJFWW1btYtbZCEXbopuXeatL6vI1G8WiL5BIjQMiG-PTJlpkGeI8LnZgwHoPdGtA9jVeCogl_MiccKipNU0PVGrlR8Nnh5u_0YqAjwl9wzoREwdRFVasO19OwglYAmBy3OqhN1aZ5mxL7uJDYcx7W4-wp_Tiyc5vo_a4JekuTaUO4xv7ttpoabAddV35DQf_kCBBaQx5EIX3UxFMRXVun5uhNDgiTK95bitj0ket-ikFOiu-xasam3-zD_xWzSq1c-cMQ2NKV0IyktZXevOHFdSMzS934I85tOQuQP6gRkJwdwxVDJUMuDX4aK09IRAf5f3LqH9mDy81srXYNJtE8Kbj2sme-MUD7YL2nqNLUeJt0EjzJiikQyoMYXPv4ZD_z7VMApq87QfBtCBb4AsrASENTrbgtnuRFGTkXdzGP6pjDGZMDI22wja5elnSIptBoCK2dgsk_NzxPJs6iLMZjGkThxpfMPP5Ys66rojLxC4JVK15dFDrb4m6kpfhuSmD8LDzObWdY9m6bZBNKBvpLnW6coBFs4zIbJfTSOkQwbGa12Zz9uCckTZCJYIvvQ0nYg1HbnH1YjoCd98Cu9H-_hAMdhdPyTE261LdJsW4lFbeDUcNwJfjDdWiGSFCCgAMf7gklW3JXAAt6vPxooltbM2LBAFfARV_Ce45YGYuRmO0Q26wkhAP2GGxi1ZXO9l1eXcZLqtItdrTmZOvMBh-E13yaVxIAwWONq1OYuUscI669-ZQtsFufVs87TqobWxS2-61TQx5GoZatyhYeZacvnGj6tMheIZhtnU8QNLI9vPc6hg_vX93w58_O3BJcuRlm-SrieVt0M1DavkslvdHEiPM6P_hVZrejGI85MgkD7GJidbHoFkZKa61BuduTGx34yv1mFk5RGndEQM5-1-vz8nkRIkJktA6NYpgpuA0resCO7Ggc5kAt887oEjqODngOlHgTbKGwubuRrpa6VjGj9DTLAk4lstDwhjuY5AIgAVdTolJe0qiXGQlMl5weBcnUpN0zEoVBGtXa-SW0R398WoLA4aFonneTM7_CN_b2INdZdSl8Hw6zRY9Uvsej-Xw9KFLWSURbEXC9KYwICv7kUDlTBrbLQ4xehuLs56ezyJT7_wxF1GhCERvdhMV998pMlWG6RKzgxPzkBebscmuPotcZU21yShxgUJt6_2x4oYXJEqvz8PALdSOH7zJ0n_4C8_SOqRvWvRTYUYpLFPpgOQ4WauwBDpYL1v3mxWayEeVBX3rVjVTXVM0O_AbXdQVUNcODE4NwOo3ub8EgZKGt8DKAPKKyACGVfIpRD9bNJhudC_Z8fcpDJIHJVUZQPLwP1dUK2hSnKkcUx99UaN0cMqxoi_m8Yfa5zxIgoMd6V-9KBDVycu5NxnTn7x1jQ5KwxaZy0PC3DOvRu2ajf24JY3yZ_xOsv5yHp51-W-Vrry7d0TgQ8CWKRShQwXhzuX5NigAAZHH3jTtwxPJc57qdM-G3xeYLw-L8kRZknbtmTrlPklRY_DKi9SSj2XzNq823-59BtkuRcWd2zSPHDHu8GPLJ8blHKpFfhpSnNxIt5pR6zapQj97_R115bg8Cy2GIctAk63VECK6PK69A18u5dCh2upYf5qI-2_gyZE_Yf1xzfmzZJzEXvWWKGrTKYpKi18y8owoswwr36-Wwqr8XXoPSeE2dReEfmnVeoPIHAw0au0eDkTd81LWDA6nBzChkPQ83geImYYnmJYGsN2SgoWBkz7T4oVBizPyeOKAO2bWAo8PiKnS8ju5OvT6B_puF71KeUlobGDx4UQB3iaYqdZB790VtBIVb69kisKWMth-SyKeKdKbopbL8k4EXM8TSujcuz36By2V6yv0KKcMNrskdOoSQNXXYgF0XJWpSabPAQnQXkx8IXjq3hdPVGY3Ul7v-Fis0QCZqC65eqYfRKMLW6SoBQVpV1uNdDIRhrwc3K663Be97q3d4_Yt4cd89b3sGRUKoOKOrHvep16FsVKqeeCFfzsUUdsjsbn6nlrUV3GQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_034180a093f6b779016ae3220781a087d18b82adbe4c759b9a","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":1898,"completion_tokens":95,"total_tokens":1993,"cost":0.000284675,"is_byok":false,"prompt_tokens_details":{"cached_tokens":0,"cache_write_tokens":1895,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000284675,"upstream_inference_prompt_cost":0.000237175,"upstream_inference_completions_cost":0.0000475},"completion_tokens_details":{"reasoning_tokens":49,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"I'm building Brinewake, a stormy island chain. Vesper is its main port city, built around a tidal lighthouse. Keep your replies brief while I work through the details."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Acknowledging lighthouses**\n\nI think I need to keep my response brief while also engaging the user with a question. Since this is a new topic, I won't do any lookups. I want to mention the fascinating aspects of lighthouses, like how they signal tides and storms. I can ask how a lighthouse functions or maybe whether it's considered practical or more of a symbolic or magical presenceâbut I should avoid getting too creative or making assumptions.","native":{"item":{"reasoning":"**Acknowledging lighthouses**\n\nI think I need to keep my response brief while also engaging the user with a question. Since this is a new topic, I won't do any lookups. I want to mention the fascinating aspects of lighthouses, like how they signal tides and storms. I can ask how a lighthouse functions or maybe whether it's considered practical or more of a symbolic or magical presenceâbut I should avoid getting too creative or making assumptions.","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging lighthouses**\n\nI think I need to keep my response brief while also engaging the user with a question. Since this is a new topic, I won't do any lookups. I want to mention the fascinating aspects of lighthouses, like how they signal tides and storms. I can ask how a lighthouse functions or maybe whether it's considered practical or more of a symbolic or magical presenceâbut I should avoid getting too creative or making assumptions.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yIJnlWNVp8dw-C5Toz0piSKgCaqQYRq4W9WrG1aANxc6S-p9RKpVWp8ARLa1vASRyxecNpFAMhdgf2EgtZCk-uUzsKkb7ziJ8WyVWadqy7ygV2j2PPC8zBg-s9CFpoSCVMMBaFwT9dM79pdWibfIFQkm11sWWK2LFhrWJhtRayPJ4q9MBIl4u_mo7wP0KuxDFznAXfuXsAvV7yi7tk4YIyii5kedSEaQ5VOczl5gUqJFWW1btYtbZCEXbopuXeatL6vI1G8WiL5BIjQMiG-PTJlpkGeI8LnZgwHoPdGtA9jVeCogl_MiccKipNU0PVGrlR8Nnh5u_0YqAjwl9wzoREwdRFVasO19OwglYAmBy3OqhN1aZ5mxL7uJDYcx7W4-wp_Tiyc5vo_a4JekuTaUO4xv7ttpoabAddV35DQf_kCBBaQx5EIX3UxFMRXVun5uhNDgiTK95bitj0ket-ikFOiu-xasam3-zD_xWzSq1c-cMQ2NKV0IyktZXevOHFdSMzS934I85tOQuQP6gRkJwdwxVDJUMuDX4aK09IRAf5f3LqH9mDy81srXYNJtE8Kbj2sme-MUD7YL2nqNLUeJt0EjzJiikQyoMYXPv4ZD_z7VMApq87QfBtCBb4AsrASENTrbgtnuRFGTkXdzGP6pjDGZMDI22wja5elnSIptBoCK2dgsk_NzxPJs6iLMZjGkThxpfMPP5Ys66rojLxC4JVK15dFDrb4m6kpfhuSmD8LDzObWdY9m6bZBNKBvpLnW6coBFs4zIbJfTSOkQwbGa12Zz9uCckTZCJYIvvQ0nYg1HbnH1YjoCd98Cu9H-_hAMdhdPyTE261LdJsW4lFbeDUcNwJfjDdWiGSFCCgAMf7gklW3JXAAt6vPxooltbM2LBAFfARV_Ce45YGYuRmO0Q26wkhAP2GGxi1ZXO9l1eXcZLqtItdrTmZOvMBh-E13yaVxIAwWONq1OYuUscI669-ZQtsFufVs87TqobWxS2-61TQx5GoZatyhYeZacvnGj6tMheIZhtnU8QNLI9vPc6hg_vX93w58_O3BJcuRlm-SrieVt0M1DavkslvdHEiPM6P_hVZrejGI85MgkD7GJidbHoFkZKa61BuduTGx34yv1mFk5RGndEQM5-1-vz8nkRIkJktA6NYpgpuA0resCO7Ggc5kAt887oEjqODngOlHgTbKGwubuRrpa6VjGj9DTLAk4lstDwhjuY5AIgAVdTolJe0qiXGQlMl5weBcnUpN0zEoVBGtXa-SW0R398WoLA4aFonneTM7_CN_b2INdZdSl8Hw6zRY9Uvsej-Xw9KFLWSURbEXC9KYwICv7kUDlTBrbLQ4xehuLs56ezyJT7_wxF1GhCERvdhMV998pMlWG6RKzgxPzkBebscmuPotcZU21yShxgUJt6_2x4oYXJEqvz8PALdSOH7zJ0n_4C8_SOqRvWvRTYUYpLFPpgOQ4WauwBDpYL1v3mxWayEeVBX3rVjVTXVM0O_AbXdQVUNcODE4NwOo3ub8EgZKGt8DKAPKKyACGVfIpRD9bNJhudC_Z8fcpDJIHJVUZQPLwP1dUK2hSnKkcUx99UaN0cMqxoi_m8Yfa5zxIgoMd6V-9KBDVycu5NxnTn7x1jQ5KwxaZy0PC3DOvRu2ajf24JY3yZ_xOsv5yHp51-W-Vrry7d0TgQ8CWKRShQwXhzuX5NigAAZHH3jTtwxPJc57qdM-G3xeYLw-L8kRZknbtmTrlPklRY_DKi9SSj2XzNq823-59BtkuRcWd2zSPHDHu8GPLJ8blHKpFfhpSnNxIt5pR6zapQj97_R115bg8Cy2GIctAk63VECK6PK69A18u5dCh2upYf5qI-2_gyZE_Yf1xzfmzZJzEXvWWKGrTKYpKi18y8owoswwr36-Wwqr8XXoPSeE2dReEfmnVeoPIHAw0au0eDkTd81LWDA6nBzChkPQ83geImYYnmJYGsN2SgoWBkz7T4oVBizPyeOKAO2bWAo8PiKnS8ju5OvT6B_puF71KeUlobGDx4UQB3iaYqdZB790VtBIVb69kisKWMth-SyKeKdKbopbL8k4EXM8TSujcuz36By2V6yv0KKcMNrskdOoSQNXXYgF0XJWpSabPAQnQXkx8IXjq3hdPVGY3Ul7v-Fis0QCZqC65eqYfRKMLW6SoBQVpV1uNdDIRhrwc3K663Be97q3d4_Yt4cd89b3sGRUKoOKOrHvep16FsVKqeeCFfzsUUdsjsbn6nlrUV3GQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_034180a093f6b779016ae3220781a087d18b82adbe4c759b9a","index":1}]},"fingerprint":"5be20fe689bb921a"}},{"type":"text","text":"Brinewakeâs stormy islands and a port built around a tidal lighthouse make a vivid pairing. Does the lighthouse guide ships by its changing light, or is its tidal rhythm important for another reason?"}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793270278-OmONyezqAclgtSSWl5Es"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Acknowledging lighthouses**\n\nI think I need to keep my response brief while also engaging the user with a question. Since this is a new topic, I won't do any lookups. I want to mention the fascinating aspects of lighthouses, like how they signal tides and storms. I can ask how a lighthouse functions or maybe whether it's considered practical or more of a symbolic or magical presenceâbut I should avoid getting too creative or making assumptions.","native":{"item":{"reasoning":"**Acknowledging lighthouses**\n\nI think I need to keep my response brief while also engaging the user with a question. Since this is a new topic, I won't do any lookups. I want to mention the fascinating aspects of lighthouses, like how they signal tides and storms. I can ask how a lighthouse functions or maybe whether it's considered practical or more of a symbolic or magical presenceâbut I should avoid getting too creative or making assumptions.","reasoning_details":[{"type":"reasoning.summary","summary":"**Acknowledging lighthouses**\n\nI think I need to keep my response brief while also engaging the user with a question. Since this is a new topic, I won't do any lookups. I want to mention the fascinating aspects of lighthouses, like how they signal tides and storms. I can ask how a lighthouse functions or maybe whether it's considered practical or more of a symbolic or magical presenceâbut I should avoid getting too creative or making assumptions.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yIJnlWNVp8dw-C5Toz0piSKgCaqQYRq4W9WrG1aANxc6S-p9RKpVWp8ARLa1vASRyxecNpFAMhdgf2EgtZCk-uUzsKkb7ziJ8WyVWadqy7ygV2j2PPC8zBg-s9CFpoSCVMMBaFwT9dM79pdWibfIFQkm11sWWK2LFhrWJhtRayPJ4q9MBIl4u_mo7wP0KuxDFznAXfuXsAvV7yi7tk4YIyii5kedSEaQ5VOczl5gUqJFWW1btYtbZCEXbopuXeatL6vI1G8WiL5BIjQMiG-PTJlpkGeI8LnZgwHoPdGtA9jVeCogl_MiccKipNU0PVGrlR8Nnh5u_0YqAjwl9wzoREwdRFVasO19OwglYAmBy3OqhN1aZ5mxL7uJDYcx7W4-wp_Tiyc5vo_a4JekuTaUO4xv7ttpoabAddV35DQf_kCBBaQx5EIX3UxFMRXVun5uhNDgiTK95bitj0ket-ikFOiu-xasam3-zD_xWzSq1c-cMQ2NKV0IyktZXevOHFdSMzS934I85tOQuQP6gRkJwdwxVDJUMuDX4aK09IRAf5f3LqH9mDy81srXYNJtE8Kbj2sme-MUD7YL2nqNLUeJt0EjzJiikQyoMYXPv4ZD_z7VMApq87QfBtCBb4AsrASENTrbgtnuRFGTkXdzGP6pjDGZMDI22wja5elnSIptBoCK2dgsk_NzxPJs6iLMZjGkThxpfMPP5Ys66rojLxC4JVK15dFDrb4m6kpfhuSmD8LDzObWdY9m6bZBNKBvpLnW6coBFs4zIbJfTSOkQwbGa12Zz9uCckTZCJYIvvQ0nYg1HbnH1YjoCd98Cu9H-_hAMdhdPyTE261LdJsW4lFbeDUcNwJfjDdWiGSFCCgAMf7gklW3JXAAt6vPxooltbM2LBAFfARV_Ce45YGYuRmO0Q26wkhAP2GGxi1ZXO9l1eXcZLqtItdrTmZOvMBh-E13yaVxIAwWONq1OYuUscI669-ZQtsFufVs87TqobWxS2-61TQx5GoZatyhYeZacvnGj6tMheIZhtnU8QNLI9vPc6hg_vX93w58_O3BJcuRlm-SrieVt0M1DavkslvdHEiPM6P_hVZrejGI85MgkD7GJidbHoFkZKa61BuduTGx34yv1mFk5RGndEQM5-1-vz8nkRIkJktA6NYpgpuA0resCO7Ggc5kAt887oEjqODngOlHgTbKGwubuRrpa6VjGj9DTLAk4lstDwhjuY5AIgAVdTolJe0qiXGQlMl5weBcnUpN0zEoVBGtXa-SW0R398WoLA4aFonneTM7_CN_b2INdZdSl8Hw6zRY9Uvsej-Xw9KFLWSURbEXC9KYwICv7kUDlTBrbLQ4xehuLs56ezyJT7_wxF1GhCERvdhMV998pMlWG6RKzgxPzkBebscmuPotcZU21yShxgUJt6_2x4oYXJEqvz8PALdSOH7zJ0n_4C8_SOqRvWvRTYUYpLFPpgOQ4WauwBDpYL1v3mxWayEeVBX3rVjVTXVM0O_AbXdQVUNcODE4NwOo3ub8EgZKGt8DKAPKKyACGVfIpRD9bNJhudC_Z8fcpDJIHJVUZQPLwP1dUK2hSnKkcUx99UaN0cMqxoi_m8Yfa5zxIgoMd6V-9KBDVycu5NxnTn7x1jQ5KwxaZy0PC3DOvRu2ajf24JY3yZ_xOsv5yHp51-W-Vrry7d0TgQ8CWKRShQwXhzuX5NigAAZHH3jTtwxPJc57qdM-G3xeYLw-L8kRZknbtmTrlPklRY_DKi9SSj2XzNq823-59BtkuRcWd2zSPHDHu8GPLJ8blHKpFfhpSnNxIt5pR6zapQj97_R115bg8Cy2GIctAk63VECK6PK69A18u5dCh2upYf5qI-2_gyZE_Yf1xzfmzZJzEXvWWKGrTKYpKi18y8owoswwr36-Wwqr8XXoPSeE2dReEfmnVeoPIHAw0au0eDkTd81LWDA6nBzChkPQ83geImYYnmJYGsN2SgoWBkz7T4oVBizPyeOKAO2bWAo8PiKnS8ju5OvT6B_puF71KeUlobGDx4UQB3iaYqdZB790VtBIVb69kisKWMth-SyKeKdKbopbL8k4EXM8TSujcuz36By2V6yv0KKcMNrskdOoSQNXXYgF0XJWpSabPAQnQXkx8IXjq3hdPVGY3Ul7v-Fis0QCZqC65eqYfRKMLW6SoBQVpV1uNdDIRhrwc3K663Be97q3d4_Yt4cd89b3sGRUKoOKOrHvep16FsVKqeeCFfzsUUdsjsbn6nlrUV3GQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_034180a093f6b779016ae3220781a087d18b82adbe4c759b9a","index":1}]},"fingerprint":"5be20fe689bb921a"}},{"type":"text","text":"Brinewakeâs stormy islands and a port built around a tidal lighthouse make a vivid pairing. Does the lighthouse guide ships by its changing light, or is its tidal rhythm important for another reason?"}]}
+

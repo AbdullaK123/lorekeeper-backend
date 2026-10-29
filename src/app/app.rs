@@ -1,19 +1,15 @@
 use crate::app::{create_auth_controller, create_conversation_controller, create_world_controller};
 use crate::cron_worker::start_scheduler;
-use crate::data::{
-    ConflictExtraction, ConversationRepository, GraphExtraction, GraphRepository, UserRepository,
-    WorldRepository,
-};
+use crate::data::{ConversationRepository, GraphRepository, UserRepository, WorldRepository};
 use crate::infrastructure::{create_graph, create_pool, load_config, load_prompt, load_settings};
 use crate::service::{
-    AuthService, ChatAgentFactory, ConversationService, ExtractionService, RetrievalService,
+    AuthService, ChatAgentFactory, ConversationService, ResearcherService, RetrievalService,
     WorldService,
 };
 use axum::Router;
 use axum::routing::get;
 use neo4rs::Graph;
 use rig::DynModel;
-use rig::extractor::ExtractorBuilder;
 use rig::operation::Embedding;
 use rig::providers::openrouter;
 use sqlx::postgres::PgPool;
@@ -52,23 +48,6 @@ pub async fn create_app() -> (Router, JobScheduler) {
         .embedding("openai/text-embedding-3-small", None)
         .into();
 
-    let entity_extractor = ExtractorBuilder::<GraphExtraction>::new(model.clone())
-        .append_preamble(&load_prompt("extraction").expect("Prompt not found!"))
-        .retries(3)
-        .build();
-
-    let conflict_extractor = ExtractorBuilder::<ConflictExtraction>::new(model.clone())
-        .append_preamble(&load_prompt("conflict").expect("Prompt not found!"))
-        .retries(3)
-        .build();
-
-    let extraction_service = ExtractionService::new(
-        graph_repo.clone(),
-        entity_extractor,
-        conflict_extractor,
-        embedding_model.clone(),
-    );
-
     let retrieval_service = RetrievalService::new(graph_repo.clone(), embedding_model.clone());
 
     let agent_factory = ChatAgentFactory::new(
@@ -76,11 +55,18 @@ pub async fn create_app() -> (Router, JobScheduler) {
         load_prompt("agents").expect("Agent prompt not found"),
         retrieval_service.clone(),
     );
+    let researcher_service = ResearcherService::new(
+        model.into(),
+        load_prompt("researcher").expect("Researcher prompt not found"),
+        graph_repo.clone(),
+        retrieval_service.clone(),
+        embedding_model,
+    );
 
     let conversation_service = ConversationService::new(
         conversation_repo,
         world_repo,
-        extraction_service,
+        researcher_service,
         retrieval_service,
         agent_factory,
     );

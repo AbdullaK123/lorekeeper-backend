@@ -1,0 +1,244 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Considering response strategy**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" respond"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" briefly"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" notice"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" context"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" doesn't"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" include"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" A"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"sha"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" which"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" might"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" be"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" new"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" information"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" could"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" be"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" interesting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" engage"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" with"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" connections"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" between"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lighthouse"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" perhaps"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" using"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" question"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" create"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" discussion"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Maybe"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" could"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" draw"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" relation"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" between"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" courier"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ship"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"?"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" could"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ask"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" if"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Night"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"jar"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" carries"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" blue"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" salt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" messages"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"âll"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" keep"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" all"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" concise"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" stay"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" clear"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Captain"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Ash"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" gives"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Lantern"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" presence"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" beyond"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" lighthouse"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Does"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Night"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"jar"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" carry"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" business"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" between"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" V"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"esper"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" her"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" courier"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" work"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" separate"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"?"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"Captain Ash gives the Lantern Guild a presence beyond the lighthouse. Does the Nightjar carry guild business between Vesper and Orin, or is her courier work separate?"}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Considering response strategy**\n\nI need to respond briefly, but I notice the context doesn't include Asha, which might be new information. It could be interesting to engage with connections between the guild and the lighthouse, perhaps using a question to create a discussion. Maybe I could draw a relation between the courier ship and the guild? I could ask if Nightjar carries blue salt or messages, but Iâll keep it all concise to stay clear.","native":{"item":{"reasoning":"**Considering response strategy**\n\nI need to respond briefly, but I notice the context doesn't include Asha, which might be new information. It could be interesting to engage with connections between the guild and the lighthouse, perhaps using a question to create a discussion. Maybe I could draw a relation between the courier ship and the guild? I could ask if Nightjar carries blue salt or messages, but Iâll keep it all concise to stay clear.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering response strategy**\n\nI need to respond briefly, but I notice the context doesn't include Asha, which might be new information. It could be interesting to engage with connections between the guild and the lighthouse, perhaps using a question to create a discussion. Maybe I could draw a relation between the courier ship and the guild? I could ask if Nightjar carries blue salt or messages, but Iâll keep it all concise to stay clear.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yJQW_NshucUoZX2DlYpa5fF77zb9dtevQ6Jreg7JisO_giztdOlKRNuF5M4PVAQsT7nRXBk62q_xqJ9bis1H85FG8rx_UDIkuum-XlDqlhFtOIC4golcrv8OJpDYVwhdy19HbE5pOdllcKu38-g4_zUzXg0QoHNPB1L2P8nVixBzt1vfihyw6A8rHuZ2xqZSl25wodFnfWFvlp7TgkA5E64unFbRv85tRCZZMZ81V1tFo6XHpBVLWIDp-svD0cTKEdbtJh_lXWDI9OshrNJHMnaokUXze69OhqdmzNgSEkpFv3jfmtnhTHesBk7aunKUgd2eUx0z1RNKM3JuKMaeRuuhIEsIlyqjhHhRS64Fz3fT4-zogTCmNhNBmuUi80DPfplt8qis8ybxIvcYQ5QMnOGyFAB8BwTb5psWwTKo2gvxJ7hw4TcZwJvxy2JlOc_S66FxyT4QUrUoOx-Mu1uzumeAG_CyyQssVm9qHv0rpTos4d2m_-JF7i-S-GokIEuFwqREZbR1NrDpp0JJxD3UjtXex-1GE_4oI2pbt3-OR4DTdN7doYP6W6IOTHVH-BZ81l74h3-pwk3_CFqaZ8YZNLkqCA3U13bQY3ORuI1GaeIZKRpM1dtCJ9Sg6wVl5e6MMDQ29QUfNrT86jBuS-vfQATBHKr-p6pEg5H9ywpPHoImmzMhXPDuqFOiCDZ0YMPQinzW9EhBzhgk5wtzjOFWr11zVCFc9RyNlsSjKBDIeI4rhPeq6pLn73wOjlVWmrK3kCd_rDz1L8uTUH0xAyQQXf3Y0a5eiFndft4Xc7_yg_kIV6WycW6dZRFxWJSee8lnl5f93mm3kdbBWwd7F2JOUJQ28zxB9Af2Va0KZfzPOSuzeAwove1V7LE1X0ES0N9rp3929uzuLk5OmASbjy4y8wd9eFtMeumvLDAn5SwpQ0AResQGtKdXfmFl8yDxR-pbyAhsmeBbF-Akl6GgOFzvjDMKNfcRCMp1VkI9ZVT4kBAB_dtT-0DGHyZPVb8BbEsbH7Im2Q5qKRu8gSMadp42kI-xrJdlfrF8nd24gQr5LlW8r12zsar0fnJSctDeAhDFCBtGoVnNRgeyIFPAzSARlgsxDPN2sDbfINDjrl_mQJO6QEqcACV3JPIdvQQyGIXAmfINOxK575FgOhRAHR9Jw6uEENpdT6iw6y1E3yZmMBgvWYHD8jF0Jn5kfwS0N0hdUJ0VFz73CmYGU2thwy3Y6gQVKu9dpq7W8m6O4YfGgWXkMPKJag0Eyn8UnubomRdSXWa5fMKnrZRReAk2qYc2uyvRLii82Un0ohdsNlIiCnX7fZ5ivsfVfJib-pQU5NC0_RXye5OmHkh9gBaxBaRE6xXjgsvRZXbPyT7vFpW1N_Fd5MbNXsZaNjCdXQOhJuaYqp1blf5nY5LTLIwr1eBaISZbdc5nzuxT6YkZ689FDmXUVdPsEJ8bl019j7jZQZdclfR7w1GfrT0-QwFcM5IoyyA5CAdNxL0P4ok43CcFH2M7J_wl0XCczl6VFNfPodaz8EWeMv9_Rt0QDuRfG0erfA-2K8RouG19SWM58BWyP37NpSuA9u_qU_Z-FD-xPSP5i1M1JuJ7W9lik_rGepQsJ9Gr1FoBY2ZZfq3PQsaz2fo6yMR6wsQckroQT1e2n4uupO_0Z0wSm8kV14119tswVbTBVBRqpuyn8AMAxiUBkh_Rb06518VaT6F2LM9D6dMYSASt_ZhbgxU6d_vvq5_ueNh7S7_H2As-rp6JxXxwC--OxvOuXXKbof7dqRqe_E2Wn91S3KOAOCCX_-I1qhM_bHVWce7bDNqvAay0Xx5RAEGtJyiXkyV40KDBU-zm9lr4nt0DiUiY15T7d5t_FZV68iQwUKuFscfBSeWaJhSRndNWhy8TDppXqXflc8bqIvH03sN19fZ991Erfahv_yqnAHKKu8EL9-z1JgUhnwSc27LzJxvglY23GrTAB_Dd_9e6HWJp7YxA6B-QhKnn93v4SmDrcZa0l021fZysmYwq_wHIgKJTw7teIipnJ5PIljzFEisOf-9UwK0P0vwUCoU5JLyg65LGKk-WIHNi5KWuyllNgRCK3DW4GJ8s4S7CAll3icjqM-dHzkoK8jwfSqS7R9nB0ASIZiyYuSnu_oifJvyf3inXVoasRHMrtHVEWRmRhLHsZqBaTx84WUU4pEwtIfIytHUvcAf6AGKK12hgMKTwSGEZ8iym2fsdKpkKs9rgN6n_oVf6JHvWqLtCZf_y3VJZo46lAVBrWHNRxSvzKCnq7t3xeGaM3Z5q3ujBmAm76m_JceapJwEmdFBRLAP2QSKbOB-4oSL6bw9Wb4MA8gUiarxCiCwSOqt6e1KjpMWk12wnMgYnPM9s8pdF6T0UHv3ui5iQdK5J5N8gICbNXGfl3srg9B5xDrkF8lYKpl4fMncV-t86vbCwsii3gNpZQiq9OLWV-yiSPhvDdsqR7IRlH8LOVU-VZnPL4NHiX0FG4mtyiBH2mpfrXhbBsO3driRIimYgU4YKkabj7T2Tuv1CSk=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_086f5d6dcf5855a2016ae3224e5c7087d18d531ed790146b5a","index":1}]},"fingerprint":"059ca49a547f3ff1"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":2961,"output_tokens":108,"total_tokens":3069,"cached_input_tokens":1826,"cache_creation_input_tokens":1132,"reasoning_tokens":69,"cost":{"total":0.00021406}},"response_id":"gen-1793270349-iw1W0BMQHiDEfCNqCuke","finish_reason":"stop","raw":{"id":"gen-1793270349-iw1W0BMQHiDEfCNqCuke","object":"chat.completion","created":1793270349,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Captain Ash gives the Lantern Guild a presence beyond the lighthouse. Does the Nightjar carry guild business between Vesper and Orin, or is her courier work separate?","role":"assistant","reasoning":"**Considering response strategy**\n\nI need to respond briefly, but I notice the context doesn't include Asha, which might be new information. It could be interesting to engage with connections between the guild and the lighthouse, perhaps using a question to create a discussion. Maybe I could draw a relation between the courier ship and the guild? I could ask if Nightjar carries blue salt or messages, but Iâll keep it all concise to stay clear.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering response strategy**\n\nI need to respond briefly, but I notice the context doesn't include Asha, which might be new information. It could be interesting to engage with connections between the guild and the lighthouse, perhaps using a question to create a discussion. Maybe I could draw a relation between the courier ship and the guild? I could ask if Nightjar carries blue salt or messages, but Iâll keep it all concise to stay clear.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yJQW_NshucUoZX2DlYpa5fF77zb9dtevQ6Jreg7JisO_giztdOlKRNuF5M4PVAQsT7nRXBk62q_xqJ9bis1H85FG8rx_UDIkuum-XlDqlhFtOIC4golcrv8OJpDYVwhdy19HbE5pOdllcKu38-g4_zUzXg0QoHNPB1L2P8nVixBzt1vfihyw6A8rHuZ2xqZSl25wodFnfWFvlp7TgkA5E64unFbRv85tRCZZMZ81V1tFo6XHpBVLWIDp-svD0cTKEdbtJh_lXWDI9OshrNJHMnaokUXze69OhqdmzNgSEkpFv3jfmtnhTHesBk7aunKUgd2eUx0z1RNKM3JuKMaeRuuhIEsIlyqjhHhRS64Fz3fT4-zogTCmNhNBmuUi80DPfplt8qis8ybxIvcYQ5QMnOGyFAB8BwTb5psWwTKo2gvxJ7hw4TcZwJvxy2JlOc_S66FxyT4QUrUoOx-Mu1uzumeAG_CyyQssVm9qHv0rpTos4d2m_-JF7i-S-GokIEuFwqREZbR1NrDpp0JJxD3UjtXex-1GE_4oI2pbt3-OR4DTdN7doYP6W6IOTHVH-BZ81l74h3-pwk3_CFqaZ8YZNLkqCA3U13bQY3ORuI1GaeIZKRpM1dtCJ9Sg6wVl5e6MMDQ29QUfNrT86jBuS-vfQATBHKr-p6pEg5H9ywpPHoImmzMhXPDuqFOiCDZ0YMPQinzW9EhBzhgk5wtzjOFWr11zVCFc9RyNlsSjKBDIeI4rhPeq6pLn73wOjlVWmrK3kCd_rDz1L8uTUH0xAyQQXf3Y0a5eiFndft4Xc7_yg_kIV6WycW6dZRFxWJSee8lnl5f93mm3kdbBWwd7F2JOUJQ28zxB9Af2Va0KZfzPOSuzeAwove1V7LE1X0ES0N9rp3929uzuLk5OmASbjy4y8wd9eFtMeumvLDAn5SwpQ0AResQGtKdXfmFl8yDxR-pbyAhsmeBbF-Akl6GgOFzvjDMKNfcRCMp1VkI9ZVT4kBAB_dtT-0DGHyZPVb8BbEsbH7Im2Q5qKRu8gSMadp42kI-xrJdlfrF8nd24gQr5LlW8r12zsar0fnJSctDeAhDFCBtGoVnNRgeyIFPAzSARlgsxDPN2sDbfINDjrl_mQJO6QEqcACV3JPIdvQQyGIXAmfINOxK575FgOhRAHR9Jw6uEENpdT6iw6y1E3yZmMBgvWYHD8jF0Jn5kfwS0N0hdUJ0VFz73CmYGU2thwy3Y6gQVKu9dpq7W8m6O4YfGgWXkMPKJag0Eyn8UnubomRdSXWa5fMKnrZRReAk2qYc2uyvRLii82Un0ohdsNlIiCnX7fZ5ivsfVfJib-pQU5NC0_RXye5OmHkh9gBaxBaRE6xXjgsvRZXbPyT7vFpW1N_Fd5MbNXsZaNjCdXQOhJuaYqp1blf5nY5LTLIwr1eBaISZbdc5nzuxT6YkZ689FDmXUVdPsEJ8bl019j7jZQZdclfR7w1GfrT0-QwFcM5IoyyA5CAdNxL0P4ok43CcFH2M7J_wl0XCczl6VFNfPodaz8EWeMv9_Rt0QDuRfG0erfA-2K8RouG19SWM58BWyP37NpSuA9u_qU_Z-FD-xPSP5i1M1JuJ7W9lik_rGepQsJ9Gr1FoBY2ZZfq3PQsaz2fo6yMR6wsQckroQT1e2n4uupO_0Z0wSm8kV14119tswVbTBVBRqpuyn8AMAxiUBkh_Rb06518VaT6F2LM9D6dMYSASt_ZhbgxU6d_vvq5_ueNh7S7_H2As-rp6JxXxwC--OxvOuXXKbof7dqRqe_E2Wn91S3KOAOCCX_-I1qhM_bHVWce7bDNqvAay0Xx5RAEGtJyiXkyV40KDBU-zm9lr4nt0DiUiY15T7d5t_FZV68iQwUKuFscfBSeWaJhSRndNWhy8TDppXqXflc8bqIvH03sN19fZ991Erfahv_yqnAHKKu8EL9-z1JgUhnwSc27LzJxvglY23GrTAB_Dd_9e6HWJp7YxA6B-QhKnn93v4SmDrcZa0l021fZysmYwq_wHIgKJTw7teIipnJ5PIljzFEisOf-9UwK0P0vwUCoU5JLyg65LGKk-WIHNi5KWuyllNgRCK3DW4GJ8s4S7CAll3icjqM-dHzkoK8jwfSqS7R9nB0ASIZiyYuSnu_oifJvyf3inXVoasRHMrtHVEWRmRhLHsZqBaTx84WUU4pEwtIfIytHUvcAf6AGKK12hgMKTwSGEZ8iym2fsdKpkKs9rgN6n_oVf6JHvWqLtCZf_y3VJZo46lAVBrWHNRxSvzKCnq7t3xeGaM3Z5q3ujBmAm76m_JceapJwEmdFBRLAP2QSKbOB-4oSL6bw9Wb4MA8gUiarxCiCwSOqt6e1KjpMWk12wnMgYnPM9s8pdF6T0UHv3ui5iQdK5J5N8gICbNXGfl3srg9B5xDrkF8lYKpl4fMncV-t86vbCwsii3gNpZQiq9OLWV-yiSPhvDdsqR7IRlH8LOVU-VZnPL4NHiX0FG4mtyiBH2mpfrXhbBsO3driRIimYgU4YKkabj7T2Tuv1CSk=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_086f5d6dcf5855a2016ae3224e5c7087d18d531ed790146b5a","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":2961,"completion_tokens":108,"total_tokens":3069,"cost":0.00021406,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":1132,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00021406,"upstream_inference_prompt_cost":0.00016006,"upstream_inference_completions_cost":0.000054},"completion_tokens_details":{"reasoning_tokens":69,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":2961,"output_tokens":108,"total_tokens":3069,"cached_input_tokens":1826,"cache_creation_input_tokens":1132,"reasoning_tokens":69,"cost":{"total":0.00021406}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":2961,"output_tokens":108,"total_tokens":3069,"cached_input_tokens":1826,"cache_creation_input_tokens":1132,"reasoning_tokens":69,"cost":{"total":0.00021406}},"response_id":"gen-1793270349-iw1W0BMQHiDEfCNqCuke","finish_reason":"stop","raw":{"id":"gen-1793270349-iw1W0BMQHiDEfCNqCuke","object":"chat.completion","created":1793270349,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Captain Ash gives the Lantern Guild a presence beyond the lighthouse. Does the Nightjar carry guild business between Vesper and Orin, or is her courier work separate?","role":"assistant","reasoning":"**Considering response strategy**\n\nI need to respond briefly, but I notice the context doesn't include Asha, which might be new information. It could be interesting to engage with connections between the guild and the lighthouse, perhaps using a question to create a discussion. Maybe I could draw a relation between the courier ship and the guild? I could ask if Nightjar carries blue salt or messages, but Iâll keep it all concise to stay clear.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering response strategy**\n\nI need to respond briefly, but I notice the context doesn't include Asha, which might be new information. It could be interesting to engage with connections between the guild and the lighthouse, perhaps using a question to create a discussion. Maybe I could draw a relation between the courier ship and the guild? I could ask if Nightjar carries blue salt or messages, but Iâll keep it all concise to stay clear.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yJQW_NshucUoZX2DlYpa5fF77zb9dtevQ6Jreg7JisO_giztdOlKRNuF5M4PVAQsT7nRXBk62q_xqJ9bis1H85FG8rx_UDIkuum-XlDqlhFtOIC4golcrv8OJpDYVwhdy19HbE5pOdllcKu38-g4_zUzXg0QoHNPB1L2P8nVixBzt1vfihyw6A8rHuZ2xqZSl25wodFnfWFvlp7TgkA5E64unFbRv85tRCZZMZ81V1tFo6XHpBVLWIDp-svD0cTKEdbtJh_lXWDI9OshrNJHMnaokUXze69OhqdmzNgSEkpFv3jfmtnhTHesBk7aunKUgd2eUx0z1RNKM3JuKMaeRuuhIEsIlyqjhHhRS64Fz3fT4-zogTCmNhNBmuUi80DPfplt8qis8ybxIvcYQ5QMnOGyFAB8BwTb5psWwTKo2gvxJ7hw4TcZwJvxy2JlOc_S66FxyT4QUrUoOx-Mu1uzumeAG_CyyQssVm9qHv0rpTos4d2m_-JF7i-S-GokIEuFwqREZbR1NrDpp0JJxD3UjtXex-1GE_4oI2pbt3-OR4DTdN7doYP6W6IOTHVH-BZ81l74h3-pwk3_CFqaZ8YZNLkqCA3U13bQY3ORuI1GaeIZKRpM1dtCJ9Sg6wVl5e6MMDQ29QUfNrT86jBuS-vfQATBHKr-p6pEg5H9ywpPHoImmzMhXPDuqFOiCDZ0YMPQinzW9EhBzhgk5wtzjOFWr11zVCFc9RyNlsSjKBDIeI4rhPeq6pLn73wOjlVWmrK3kCd_rDz1L8uTUH0xAyQQXf3Y0a5eiFndft4Xc7_yg_kIV6WycW6dZRFxWJSee8lnl5f93mm3kdbBWwd7F2JOUJQ28zxB9Af2Va0KZfzPOSuzeAwove1V7LE1X0ES0N9rp3929uzuLk5OmASbjy4y8wd9eFtMeumvLDAn5SwpQ0AResQGtKdXfmFl8yDxR-pbyAhsmeBbF-Akl6GgOFzvjDMKNfcRCMp1VkI9ZVT4kBAB_dtT-0DGHyZPVb8BbEsbH7Im2Q5qKRu8gSMadp42kI-xrJdlfrF8nd24gQr5LlW8r12zsar0fnJSctDeAhDFCBtGoVnNRgeyIFPAzSARlgsxDPN2sDbfINDjrl_mQJO6QEqcACV3JPIdvQQyGIXAmfINOxK575FgOhRAHR9Jw6uEENpdT6iw6y1E3yZmMBgvWYHD8jF0Jn5kfwS0N0hdUJ0VFz73CmYGU2thwy3Y6gQVKu9dpq7W8m6O4YfGgWXkMPKJag0Eyn8UnubomRdSXWa5fMKnrZRReAk2qYc2uyvRLii82Un0ohdsNlIiCnX7fZ5ivsfVfJib-pQU5NC0_RXye5OmHkh9gBaxBaRE6xXjgsvRZXbPyT7vFpW1N_Fd5MbNXsZaNjCdXQOhJuaYqp1blf5nY5LTLIwr1eBaISZbdc5nzuxT6YkZ689FDmXUVdPsEJ8bl019j7jZQZdclfR7w1GfrT0-QwFcM5IoyyA5CAdNxL0P4ok43CcFH2M7J_wl0XCczl6VFNfPodaz8EWeMv9_Rt0QDuRfG0erfA-2K8RouG19SWM58BWyP37NpSuA9u_qU_Z-FD-xPSP5i1M1JuJ7W9lik_rGepQsJ9Gr1FoBY2ZZfq3PQsaz2fo6yMR6wsQckroQT1e2n4uupO_0Z0wSm8kV14119tswVbTBVBRqpuyn8AMAxiUBkh_Rb06518VaT6F2LM9D6dMYSASt_ZhbgxU6d_vvq5_ueNh7S7_H2As-rp6JxXxwC--OxvOuXXKbof7dqRqe_E2Wn91S3KOAOCCX_-I1qhM_bHVWce7bDNqvAay0Xx5RAEGtJyiXkyV40KDBU-zm9lr4nt0DiUiY15T7d5t_FZV68iQwUKuFscfBSeWaJhSRndNWhy8TDppXqXflc8bqIvH03sN19fZ991Erfahv_yqnAHKKu8EL9-z1JgUhnwSc27LzJxvglY23GrTAB_Dd_9e6HWJp7YxA6B-QhKnn93v4SmDrcZa0l021fZysmYwq_wHIgKJTw7teIipnJ5PIljzFEisOf-9UwK0P0vwUCoU5JLyg65LGKk-WIHNi5KWuyllNgRCK3DW4GJ8s4S7CAll3icjqM-dHzkoK8jwfSqS7R9nB0ASIZiyYuSnu_oifJvyf3inXVoasRHMrtHVEWRmRhLHsZqBaTx84WUU4pEwtIfIytHUvcAf6AGKK12hgMKTwSGEZ8iym2fsdKpkKs9rgN6n_oVf6JHvWqLtCZf_y3VJZo46lAVBrWHNRxSvzKCnq7t3xeGaM3Z5q3ujBmAm76m_JceapJwEmdFBRLAP2QSKbOB-4oSL6bw9Wb4MA8gUiarxCiCwSOqt6e1KjpMWk12wnMgYnPM9s8pdF6T0UHv3ui5iQdK5J5N8gICbNXGfl3srg9B5xDrkF8lYKpl4fMncV-t86vbCwsii3gNpZQiq9OLWV-yiSPhvDdsqR7IRlH8LOVU-VZnPL4NHiX0FG4mtyiBH2mpfrXhbBsO3driRIimYgU4YKkabj7T2Tuv1CSk=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_086f5d6dcf5855a2016ae3224e5c7087d18d531ed790146b5a","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":2961,"completion_tokens":108,"total_tokens":3069,"cost":0.00021406,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":1132,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00021406,"upstream_inference_prompt_cost":0.00016006,"upstream_inference_completions_cost":0.000054},"completion_tokens_details":{"reasoning_tokens":69,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"Asha Pell captains the courier ship Nightjar. She grew up in Vesper and belongs to the Lantern Guild. Her crew usually calls her Captain Ash."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Considering response strategy**\n\nI need to respond briefly, but I notice the context doesn't include Asha, which might be new information. It could be interesting to engage with connections between the guild and the lighthouse, perhaps using a question to create a discussion. Maybe I could draw a relation between the courier ship and the guild? I could ask if Nightjar carries blue salt or messages, but Iâll keep it all concise to stay clear.","native":{"item":{"reasoning":"**Considering response strategy**\n\nI need to respond briefly, but I notice the context doesn't include Asha, which might be new information. It could be interesting to engage with connections between the guild and the lighthouse, perhaps using a question to create a discussion. Maybe I could draw a relation between the courier ship and the guild? I could ask if Nightjar carries blue salt or messages, but Iâll keep it all concise to stay clear.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering response strategy**\n\nI need to respond briefly, but I notice the context doesn't include Asha, which might be new information. It could be interesting to engage with connections between the guild and the lighthouse, perhaps using a question to create a discussion. Maybe I could draw a relation between the courier ship and the guild? I could ask if Nightjar carries blue salt or messages, but Iâll keep it all concise to stay clear.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yJQW_NshucUoZX2DlYpa5fF77zb9dtevQ6Jreg7JisO_giztdOlKRNuF5M4PVAQsT7nRXBk62q_xqJ9bis1H85FG8rx_UDIkuum-XlDqlhFtOIC4golcrv8OJpDYVwhdy19HbE5pOdllcKu38-g4_zUzXg0QoHNPB1L2P8nVixBzt1vfihyw6A8rHuZ2xqZSl25wodFnfWFvlp7TgkA5E64unFbRv85tRCZZMZ81V1tFo6XHpBVLWIDp-svD0cTKEdbtJh_lXWDI9OshrNJHMnaokUXze69OhqdmzNgSEkpFv3jfmtnhTHesBk7aunKUgd2eUx0z1RNKM3JuKMaeRuuhIEsIlyqjhHhRS64Fz3fT4-zogTCmNhNBmuUi80DPfplt8qis8ybxIvcYQ5QMnOGyFAB8BwTb5psWwTKo2gvxJ7hw4TcZwJvxy2JlOc_S66FxyT4QUrUoOx-Mu1uzumeAG_CyyQssVm9qHv0rpTos4d2m_-JF7i-S-GokIEuFwqREZbR1NrDpp0JJxD3UjtXex-1GE_4oI2pbt3-OR4DTdN7doYP6W6IOTHVH-BZ81l74h3-pwk3_CFqaZ8YZNLkqCA3U13bQY3ORuI1GaeIZKRpM1dtCJ9Sg6wVl5e6MMDQ29QUfNrT86jBuS-vfQATBHKr-p6pEg5H9ywpPHoImmzMhXPDuqFOiCDZ0YMPQinzW9EhBzhgk5wtzjOFWr11zVCFc9RyNlsSjKBDIeI4rhPeq6pLn73wOjlVWmrK3kCd_rDz1L8uTUH0xAyQQXf3Y0a5eiFndft4Xc7_yg_kIV6WycW6dZRFxWJSee8lnl5f93mm3kdbBWwd7F2JOUJQ28zxB9Af2Va0KZfzPOSuzeAwove1V7LE1X0ES0N9rp3929uzuLk5OmASbjy4y8wd9eFtMeumvLDAn5SwpQ0AResQGtKdXfmFl8yDxR-pbyAhsmeBbF-Akl6GgOFzvjDMKNfcRCMp1VkI9ZVT4kBAB_dtT-0DGHyZPVb8BbEsbH7Im2Q5qKRu8gSMadp42kI-xrJdlfrF8nd24gQr5LlW8r12zsar0fnJSctDeAhDFCBtGoVnNRgeyIFPAzSARlgsxDPN2sDbfINDjrl_mQJO6QEqcACV3JPIdvQQyGIXAmfINOxK575FgOhRAHR9Jw6uEENpdT6iw6y1E3yZmMBgvWYHD8jF0Jn5kfwS0N0hdUJ0VFz73CmYGU2thwy3Y6gQVKu9dpq7W8m6O4YfGgWXkMPKJag0Eyn8UnubomRdSXWa5fMKnrZRReAk2qYc2uyvRLii82Un0ohdsNlIiCnX7fZ5ivsfVfJib-pQU5NC0_RXye5OmHkh9gBaxBaRE6xXjgsvRZXbPyT7vFpW1N_Fd5MbNXsZaNjCdXQOhJuaYqp1blf5nY5LTLIwr1eBaISZbdc5nzuxT6YkZ689FDmXUVdPsEJ8bl019j7jZQZdclfR7w1GfrT0-QwFcM5IoyyA5CAdNxL0P4ok43CcFH2M7J_wl0XCczl6VFNfPodaz8EWeMv9_Rt0QDuRfG0erfA-2K8RouG19SWM58BWyP37NpSuA9u_qU_Z-FD-xPSP5i1M1JuJ7W9lik_rGepQsJ9Gr1FoBY2ZZfq3PQsaz2fo6yMR6wsQckroQT1e2n4uupO_0Z0wSm8kV14119tswVbTBVBRqpuyn8AMAxiUBkh_Rb06518VaT6F2LM9D6dMYSASt_ZhbgxU6d_vvq5_ueNh7S7_H2As-rp6JxXxwC--OxvOuXXKbof7dqRqe_E2Wn91S3KOAOCCX_-I1qhM_bHVWce7bDNqvAay0Xx5RAEGtJyiXkyV40KDBU-zm9lr4nt0DiUiY15T7d5t_FZV68iQwUKuFscfBSeWaJhSRndNWhy8TDppXqXflc8bqIvH03sN19fZ991Erfahv_yqnAHKKu8EL9-z1JgUhnwSc27LzJxvglY23GrTAB_Dd_9e6HWJp7YxA6B-QhKnn93v4SmDrcZa0l021fZysmYwq_wHIgKJTw7teIipnJ5PIljzFEisOf-9UwK0P0vwUCoU5JLyg65LGKk-WIHNi5KWuyllNgRCK3DW4GJ8s4S7CAll3icjqM-dHzkoK8jwfSqS7R9nB0ASIZiyYuSnu_oifJvyf3inXVoasRHMrtHVEWRmRhLHsZqBaTx84WUU4pEwtIfIytHUvcAf6AGKK12hgMKTwSGEZ8iym2fsdKpkKs9rgN6n_oVf6JHvWqLtCZf_y3VJZo46lAVBrWHNRxSvzKCnq7t3xeGaM3Z5q3ujBmAm76m_JceapJwEmdFBRLAP2QSKbOB-4oSL6bw9Wb4MA8gUiarxCiCwSOqt6e1KjpMWk12wnMgYnPM9s8pdF6T0UHv3ui5iQdK5J5N8gICbNXGfl3srg9B5xDrkF8lYKpl4fMncV-t86vbCwsii3gNpZQiq9OLWV-yiSPhvDdsqR7IRlH8LOVU-VZnPL4NHiX0FG4mtyiBH2mpfrXhbBsO3driRIimYgU4YKkabj7T2Tuv1CSk=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_086f5d6dcf5855a2016ae3224e5c7087d18d531ed790146b5a","index":1}]},"fingerprint":"059ca49a547f3ff1"}},{"type":"text","text":"Captain Ash gives the Lantern Guild a presence beyond the lighthouse. Does the Nightjar carry guild business between Vesper and Orin, or is her courier work separate?"}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793270349-iw1W0BMQHiDEfCNqCuke"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Considering response strategy**\n\nI need to respond briefly, but I notice the context doesn't include Asha, which might be new information. It could be interesting to engage with connections between the guild and the lighthouse, perhaps using a question to create a discussion. Maybe I could draw a relation between the courier ship and the guild? I could ask if Nightjar carries blue salt or messages, but Iâll keep it all concise to stay clear.","native":{"item":{"reasoning":"**Considering response strategy**\n\nI need to respond briefly, but I notice the context doesn't include Asha, which might be new information. It could be interesting to engage with connections between the guild and the lighthouse, perhaps using a question to create a discussion. Maybe I could draw a relation between the courier ship and the guild? I could ask if Nightjar carries blue salt or messages, but Iâll keep it all concise to stay clear.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering response strategy**\n\nI need to respond briefly, but I notice the context doesn't include Asha, which might be new information. It could be interesting to engage with connections between the guild and the lighthouse, perhaps using a question to create a discussion. Maybe I could draw a relation between the courier ship and the guild? I could ask if Nightjar carries blue salt or messages, but Iâll keep it all concise to stay clear.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yJQW_NshucUoZX2DlYpa5fF77zb9dtevQ6Jreg7JisO_giztdOlKRNuF5M4PVAQsT7nRXBk62q_xqJ9bis1H85FG8rx_UDIkuum-XlDqlhFtOIC4golcrv8OJpDYVwhdy19HbE5pOdllcKu38-g4_zUzXg0QoHNPB1L2P8nVixBzt1vfihyw6A8rHuZ2xqZSl25wodFnfWFvlp7TgkA5E64unFbRv85tRCZZMZ81V1tFo6XHpBVLWIDp-svD0cTKEdbtJh_lXWDI9OshrNJHMnaokUXze69OhqdmzNgSEkpFv3jfmtnhTHesBk7aunKUgd2eUx0z1RNKM3JuKMaeRuuhIEsIlyqjhHhRS64Fz3fT4-zogTCmNhNBmuUi80DPfplt8qis8ybxIvcYQ5QMnOGyFAB8BwTb5psWwTKo2gvxJ7hw4TcZwJvxy2JlOc_S66FxyT4QUrUoOx-Mu1uzumeAG_CyyQssVm9qHv0rpTos4d2m_-JF7i-S-GokIEuFwqREZbR1NrDpp0JJxD3UjtXex-1GE_4oI2pbt3-OR4DTdN7doYP6W6IOTHVH-BZ81l74h3-pwk3_CFqaZ8YZNLkqCA3U13bQY3ORuI1GaeIZKRpM1dtCJ9Sg6wVl5e6MMDQ29QUfNrT86jBuS-vfQATBHKr-p6pEg5H9ywpPHoImmzMhXPDuqFOiCDZ0YMPQinzW9EhBzhgk5wtzjOFWr11zVCFc9RyNlsSjKBDIeI4rhPeq6pLn73wOjlVWmrK3kCd_rDz1L8uTUH0xAyQQXf3Y0a5eiFndft4Xc7_yg_kIV6WycW6dZRFxWJSee8lnl5f93mm3kdbBWwd7F2JOUJQ28zxB9Af2Va0KZfzPOSuzeAwove1V7LE1X0ES0N9rp3929uzuLk5OmASbjy4y8wd9eFtMeumvLDAn5SwpQ0AResQGtKdXfmFl8yDxR-pbyAhsmeBbF-Akl6GgOFzvjDMKNfcRCMp1VkI9ZVT4kBAB_dtT-0DGHyZPVb8BbEsbH7Im2Q5qKRu8gSMadp42kI-xrJdlfrF8nd24gQr5LlW8r12zsar0fnJSctDeAhDFCBtGoVnNRgeyIFPAzSARlgsxDPN2sDbfINDjrl_mQJO6QEqcACV3JPIdvQQyGIXAmfINOxK575FgOhRAHR9Jw6uEENpdT6iw6y1E3yZmMBgvWYHD8jF0Jn5kfwS0N0hdUJ0VFz73CmYGU2thwy3Y6gQVKu9dpq7W8m6O4YfGgWXkMPKJag0Eyn8UnubomRdSXWa5fMKnrZRReAk2qYc2uyvRLii82Un0ohdsNlIiCnX7fZ5ivsfVfJib-pQU5NC0_RXye5OmHkh9gBaxBaRE6xXjgsvRZXbPyT7vFpW1N_Fd5MbNXsZaNjCdXQOhJuaYqp1blf5nY5LTLIwr1eBaISZbdc5nzuxT6YkZ689FDmXUVdPsEJ8bl019j7jZQZdclfR7w1GfrT0-QwFcM5IoyyA5CAdNxL0P4ok43CcFH2M7J_wl0XCczl6VFNfPodaz8EWeMv9_Rt0QDuRfG0erfA-2K8RouG19SWM58BWyP37NpSuA9u_qU_Z-FD-xPSP5i1M1JuJ7W9lik_rGepQsJ9Gr1FoBY2ZZfq3PQsaz2fo6yMR6wsQckroQT1e2n4uupO_0Z0wSm8kV14119tswVbTBVBRqpuyn8AMAxiUBkh_Rb06518VaT6F2LM9D6dMYSASt_ZhbgxU6d_vvq5_ueNh7S7_H2As-rp6JxXxwC--OxvOuXXKbof7dqRqe_E2Wn91S3KOAOCCX_-I1qhM_bHVWce7bDNqvAay0Xx5RAEGtJyiXkyV40KDBU-zm9lr4nt0DiUiY15T7d5t_FZV68iQwUKuFscfBSeWaJhSRndNWhy8TDppXqXflc8bqIvH03sN19fZ991Erfahv_yqnAHKKu8EL9-z1JgUhnwSc27LzJxvglY23GrTAB_Dd_9e6HWJp7YxA6B-QhKnn93v4SmDrcZa0l021fZysmYwq_wHIgKJTw7teIipnJ5PIljzFEisOf-9UwK0P0vwUCoU5JLyg65LGKk-WIHNi5KWuyllNgRCK3DW4GJ8s4S7CAll3icjqM-dHzkoK8jwfSqS7R9nB0ASIZiyYuSnu_oifJvyf3inXVoasRHMrtHVEWRmRhLHsZqBaTx84WUU4pEwtIfIytHUvcAf6AGKK12hgMKTwSGEZ8iym2fsdKpkKs9rgN6n_oVf6JHvWqLtCZf_y3VJZo46lAVBrWHNRxSvzKCnq7t3xeGaM3Z5q3ujBmAm76m_JceapJwEmdFBRLAP2QSKbOB-4oSL6bw9Wb4MA8gUiarxCiCwSOqt6e1KjpMWk12wnMgYnPM9s8pdF6T0UHv3ui5iQdK5J5N8gICbNXGfl3srg9B5xDrkF8lYKpl4fMncV-t86vbCwsii3gNpZQiq9OLWV-yiSPhvDdsqR7IRlH8LOVU-VZnPL4NHiX0FG4mtyiBH2mpfrXhbBsO3driRIimYgU4YKkabj7T2Tuv1CSk=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_086f5d6dcf5855a2016ae3224e5c7087d18d531ed790146b5a","index":1}]},"fingerprint":"059ca49a547f3ff1"}},{"type":"text","text":"Captain Ash gives the Lantern Guild a presence beyond the lighthouse. Does the Nightjar carry guild business between Vesper and Orin, or is her courier work separate?"}]}
+

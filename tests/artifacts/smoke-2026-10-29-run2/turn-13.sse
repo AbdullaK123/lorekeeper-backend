@@ -1,0 +1,286 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Clarifying door access**\n\nI'm"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" considering"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" conflict"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" about"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" an"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" access"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" point"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" was"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" supposed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" be"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" opened"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" by"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" key"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" The"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" new"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" details"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" say"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"’s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" sealed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" by"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" rock"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"fall"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" which"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" means"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" can't"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" be"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" accessed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" now"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" respond"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" briefly"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" perhaps"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" engaging"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" with"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" implication"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" maybe"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" key"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" can't"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" open"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" anymore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" should"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" acknowledge"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" key"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" historically"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" opens"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" door"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" since"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"’s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" sealed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" can"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ask"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" if"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" key"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" still"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" unlock"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" behind"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" rubble"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"?"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"So"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" key"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" still"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" fits"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" old"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" lens"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" room"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"’s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" lock"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" "}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"318"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" rock"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"fall"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" makes"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" room"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" unreachable"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"—"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"there"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"’s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" no"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" other"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" way"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" nobody"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" has"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" reopened"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" key"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"’s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" purpose"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" now"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" purely"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" secret"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" from"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" before"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" collapse"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"?"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"So the key still fits the old lens room’s lock, but the 318 rockfall makes the room unreachable—there’s no other way in and nobody has reopened it. Is the key’s purpose now purely a secret from before the collapse?"}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Clarifying door access**\n\nI'm considering the conflict about an access point that was supposed to be opened by a key. The new details say it’s sealed by rockfall, which means it can't be accessed now. I need to respond briefly, perhaps engaging with the implication that maybe the key can't open it anymore. I should acknowledge that the key historically opens the door, but since it’s sealed, can I ask if the key still unlocks it behind the rubble?","native":{"item":{"reasoning":"**Clarifying door access**\n\nI'm considering the conflict about an access point that was supposed to be opened by a key. The new details say it’s sealed by rockfall, which means it can't be accessed now. I need to respond briefly, perhaps engaging with the implication that maybe the key can't open it anymore. I should acknowledge that the key historically opens the door, but since it’s sealed, can I ask if the key still unlocks it behind the rubble?","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying door access**\n\nI'm considering the conflict about an access point that was supposed to be opened by a key. The new details say it’s sealed by rockfall, which means it can't be accessed now. I need to respond briefly, perhaps engaging with the implication that maybe the key can't open it anymore. I should acknowledge that the key historically opens the door, but since it’s sealed, can I ask if the key still unlocks it behind the rubble?","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y8NdmTvWlQx0_tTgej3u4aDBuFNfJDCpcIP_QbDTj6t_z8VK2bqopSxcMgt9TMOOM6ZgQ4JTFuNUCJsHrRGRRUJdG3Z8AMc_1qT25MN9UB38DLsmbkwT6sB3_ccBaNMhakgmCQfOYemTgAfinv2DFptMQKjq5Ey9EbTFdBKbR4XeqGTdu3pvm7sXwrX_uODpILApR4O1BuDA8UnN8APFwO0gUgFQUhEJ_hpCpFMnT6zFea7e1n-NGTlEOxorGIN0MrA0TV9EXMizc4xSUVpvAsdIx4oggkFYSSyK5A0A4smIhbsETLUV0aufbY_99ewU83c2sIML5giAGYmP3V95uSae0alj4p9pEmxntPqeHiLRt5_2x3-KWwTpWoNprOU4Zqyq2fDt22MmPe9Lx928R4nlEyDXoDvl7qcJfVF8h-iIAWitb9rKADxLKzbI8je17xNEODL8H9URboEMyf9XcCgSY4cDt37MO8Fg7qBOB0DyZ1XQUgSfm6E9DCE6iJ57QO1e0BGSOHmtU0Y2qk2SmKTtCKzc9S3BBmFqP5kYRBLab_eQDCBd03wM06nV39U6Xx3FfkoQ18LUcrLnU0Gra_4KdN3gnLFeJsOY0_u2tzYiQbVJbFt4avi9suORdIdPGP6g_iq5SMJxguWk648Tec9nhjGX6baSGuMHzYEFpx_g1dFcSrltaX7wAGox2n5mDl05fwSezCQtcOKcg5L--5c3tNCTPqpF0fxD_5NrOUAkU-9Z4B9jLd8IrW8tMfG1D7EtCGuNYg_tWX0WRNmsD9VxpvnYAnzlMQmfKYNg80f93Jf1WAlGWnhyVATcBQL9RuaiRoJffLgeDLP2xzyv_Pyx9-wrQTfkOwIywu0YHGv4lxfL6s8jVAl19l_lGnOdqC4LI50abj1aYlEvTutDIRHW8EwZM5sqYw051wAIBmvvPxTX0-TuQaleNULnHy6fl3mPCbXsrzK0ygj0I6QLGuqn6O-ZO3bxvQhgZ31_e1ORu3qfrqdW3ZZ_sHZiDAegkvQegOV_vin7D9N6qoDWSugk4uNoUKM_bJPHw9vbsUJACkhDVBYQx-DQhpRlmxxzggEnFucTpDPEqHJQf7Lo21md4MdYjiYP4bBfg3qpQs1XSofxPThR9WudHGFy99R7K8M21C_ZghrtP9g66P9lzZwo92loXnsYjiATlHLXztp4w8LyADP0ezw81v9x0UcAqnsdJAS6fJJkX84RA_mOQQBejBDCTCSgp4L6kxGBSlshW4hydxpdrkHPzpQRK0gMKFCahJQ_ax-07qbx9ZPBexERnlxieVO9wJiAsnAViCfpoGRlnVXkgQwXUzDMN8hphATbnp2uxctDq_W536j3YqjOGlYR0EZUSSvpzkE3zlVbD1p85qhicZZ2DtC5qnMhumzuUuJrw-B4Jo01OhjgYmkD4NO6G9hxyhEng4KrsMJJCR2h1WJbWVTlwR0tO7gn_oEJlArP6RtLOZxD5wuJ4ZvUZsy1A1ccrwvPZLajeIJ2f3N4O9mGXwzADDQ-2dDZU59qIOUCDIbEJ9SMdaFKT9YbJiw8AYI4KYskoZ1ujsLMgweh8NilCKn2t1BXQ5J8uuuKqar_dC8KrIHD67KARLkULEbnlm7miUevQId4hv38D6ybHbMZv0PtqlyabLIQjwOGUDa8f55tS3R7Wpg84X6o_64jF4EAuB-TmCeE4GB7NvkHLRJyu-vhWMcIHBHrlsIj7MVaGnSz7Ap6V7eEnaBKvkb7uckL_uA_CfLPppfKt7iCMkzP2Nr6KfOjxba6Jd7J9dbYl59kkIo_ALt34lvTjFOX4VquO2xDVBJHhWXVVdcgpfyWnXYY-XW8N6n21m7ud4g_laTvht_IsPg8Xt_sZ2MKEhRSqNGv3eRgA2T3toCVr13QZ1LsIXQgeNcQEI675-iGPRsQV8i3cVSLWqYjBzRLbDrsjaMVMJIEnMo-Q7aRNXqQSKd_k99mx5V3DliUmOFKF3g4Stdojqt5_Za9OEfnue9jZ7ntqTjWLlNxXb8S8F3fHoqT4jj0R5OWR_SIsuPEpME9QWyCzL8RzC5qCwwy66gZKr5DCqXyANlXBmRNlk0lyRmlMwGnHuiaAtW8cjwhyUqvmLqva1OgA1K4Vix25tq-tPMnxWFG54PzY81isEXuBeGyoj_wQm0kml-hBC4vX9N3ncuOofSwREu177yIWaB2IQREgxwKalnhcf69ypGAZPDGpVH3KKYLf9WPBIjRI7nIFcBe3UdRB_w69i-886-MCBpTQrb12WtKfshdLOAuaKlRsYm_QU-Q-NST4GclgYrkXToSdch0B4e4Hb96HPz49j3hgfgXgNaUY3VRoJ41-7sD4NCQIZ-r7G6a41R_USfoFL6teXggaphp0PVEMmG1rQ7AuxR_P9e3rB2S_pokcVhQdmOxtZj3-mHMkaKJ7HZBx4KMNE96Ky-Ehmqr8oyRLi09X3M_zVHXlHacqqJSqa-xMbJx7Rdr0YZni1snmhtNa4ChphftGbcPhRqo13nF1C3CNFxzVnyD6BDx7944cqZLdXpTvZ5H8KSx9ACWntFelnIHh7CquPFFAn2-jGauWN2rc8RGTNfRhqVSwNoynpFDlsSjry6qpQ9ewmxmlEkl7JZo5ovuX_XeIkI7LcTggvqGY1Z2kk20MKowTBII-oiCauI1hy-loZsIbmOV6FL0Qim5iOmgrC7XeaeBb4OBgqFmO3SvGA7MfAOgogabl4XA0VFVYeWDKgV7jHjwB9y-OWQ_ZK-ekAUtWr8h1IM0zAqMe6ZVBVZh7U3N78t2saknkXQv5AQBTY5NXMTMv3rEfwXcsYZKIEwIHOhuoEa6FcOydNAQeyftJ9znw1g0xmGFoD9ZRIfCR2uru0b7JtZ-a656voEimNbW6SEd2bWHYSkqW650P4ZzMWT5XKx3rhajI7XwLZY3A89EvOsMotU7yiaviEJEws1qi78BFK3e01AUTI_JJIoSmTr0SvEcHQQCUp4ZcgpsQRbxEahBfKzyxCi0KNADj1mrqs9io42NT7_3dv9qex13Vipw3OaGeav5EamaTCOxaClSn9GcgkQrtvrjwnAWk4LkAZMq9cTX1LqtS9KJQTn-qr48udodedzyIgfa151DGk_WJI07jttiHqLc80SvjoLfIpkmfNcnEx3Jwn-ATaJJ7QPORhdSx00xA7oHrLOcp8w1ZXsRn9a-n-xYqlvkwtGDFPncau8Im8ROLrV9ORhTE-Qab5bNI3hN-VBr74o4ipp.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_01b4aab332454a91016ae32f0ad9f887d1a53a1a7560d40a8a","index":1}]},"fingerprint":"ef462a537fd387b8"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":4717,"output_tokens":181,"total_tokens":4898,"cached_input_tokens":1826,"cache_creation_input_tokens":2888,"reasoning_tokens":126,"cost":{"total":0.00047006}},"response_id":"gen-1793273610-S3jeGXy151Q3rSlmy0yY","finish_reason":"stop","raw":{"id":"gen-1793273610-S3jeGXy151Q3rSlmy0yY","object":"chat.completion","created":1793273610,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"So the key still fits the old lens room’s lock, but the 318 rockfall makes the room unreachable—there’s no other way in and nobody has reopened it. Is the key’s purpose now purely a secret from before the collapse?","role":"assistant","reasoning":"**Clarifying door access**\n\nI'm considering the conflict about an access point that was supposed to be opened by a key. The new details say it’s sealed by rockfall, which means it can't be accessed now. I need to respond briefly, perhaps engaging with the implication that maybe the key can't open it anymore. I should acknowledge that the key historically opens the door, but since it’s sealed, can I ask if the key still unlocks it behind the rubble?","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying door access**\n\nI'm considering the conflict about an access point that was supposed to be opened by a key. The new details say it’s sealed by rockfall, which means it can't be accessed now. I need to respond briefly, perhaps engaging with the implication that maybe the key can't open it anymore. I should acknowledge that the key historically opens the door, but since it’s sealed, can I ask if the key still unlocks it behind the rubble?","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y8NdmTvWlQx0_tTgej3u4aDBuFNfJDCpcIP_QbDTj6t_z8VK2bqopSxcMgt9TMOOM6ZgQ4JTFuNUCJsHrRGRRUJdG3Z8AMc_1qT25MN9UB38DLsmbkwT6sB3_ccBaNMhakgmCQfOYemTgAfinv2DFptMQKjq5Ey9EbTFdBKbR4XeqGTdu3pvm7sXwrX_uODpILApR4O1BuDA8UnN8APFwO0gUgFQUhEJ_hpCpFMnT6zFea7e1n-NGTlEOxorGIN0MrA0TV9EXMizc4xSUVpvAsdIx4oggkFYSSyK5A0A4smIhbsETLUV0aufbY_99ewU83c2sIML5giAGYmP3V95uSae0alj4p9pEmxntPqeHiLRt5_2x3-KWwTpWoNprOU4Zqyq2fDt22MmPe9Lx928R4nlEyDXoDvl7qcJfVF8h-iIAWitb9rKADxLKzbI8je17xNEODL8H9URboEMyf9XcCgSY4cDt37MO8Fg7qBOB0DyZ1XQUgSfm6E9DCE6iJ57QO1e0BGSOHmtU0Y2qk2SmKTtCKzc9S3BBmFqP5kYRBLab_eQDCBd03wM06nV39U6Xx3FfkoQ18LUcrLnU0Gra_4KdN3gnLFeJsOY0_u2tzYiQbVJbFt4avi9suORdIdPGP6g_iq5SMJxguWk648Tec9nhjGX6baSGuMHzYEFpx_g1dFcSrltaX7wAGox2n5mDl05fwSezCQtcOKcg5L--5c3tNCTPqpF0fxD_5NrOUAkU-9Z4B9jLd8IrW8tMfG1D7EtCGuNYg_tWX0WRNmsD9VxpvnYAnzlMQmfKYNg80f93Jf1WAlGWnhyVATcBQL9RuaiRoJffLgeDLP2xzyv_Pyx9-wrQTfkOwIywu0YHGv4lxfL6s8jVAl19l_lGnOdqC4LI50abj1aYlEvTutDIRHW8EwZM5sqYw051wAIBmvvPxTX0-TuQaleNULnHy6fl3mPCbXsrzK0ygj0I6QLGuqn6O-ZO3bxvQhgZ31_e1ORu3qfrqdW3ZZ_sHZiDAegkvQegOV_vin7D9N6qoDWSugk4uNoUKM_bJPHw9vbsUJACkhDVBYQx-DQhpRlmxxzggEnFucTpDPEqHJQf7Lo21md4MdYjiYP4bBfg3qpQs1XSofxPThR9WudHGFy99R7K8M21C_ZghrtP9g66P9lzZwo92loXnsYjiATlHLXztp4w8LyADP0ezw81v9x0UcAqnsdJAS6fJJkX84RA_mOQQBejBDCTCSgp4L6kxGBSlshW4hydxpdrkHPzpQRK0gMKFCahJQ_ax-07qbx9ZPBexERnlxieVO9wJiAsnAViCfpoGRlnVXkgQwXUzDMN8hphATbnp2uxctDq_W536j3YqjOGlYR0EZUSSvpzkE3zlVbD1p85qhicZZ2DtC5qnMhumzuUuJrw-B4Jo01OhjgYmkD4NO6G9hxyhEng4KrsMJJCR2h1WJbWVTlwR0tO7gn_oEJlArP6RtLOZxD5wuJ4ZvUZsy1A1ccrwvPZLajeIJ2f3N4O9mGXwzADDQ-2dDZU59qIOUCDIbEJ9SMdaFKT9YbJiw8AYI4KYskoZ1ujsLMgweh8NilCKn2t1BXQ5J8uuuKqar_dC8KrIHD67KARLkULEbnlm7miUevQId4hv38D6ybHbMZv0PtqlyabLIQjwOGUDa8f55tS3R7Wpg84X6o_64jF4EAuB-TmCeE4GB7NvkHLRJyu-vhWMcIHBHrlsIj7MVaGnSz7Ap6V7eEnaBKvkb7uckL_uA_CfLPppfKt7iCMkzP2Nr6KfOjxba6Jd7J9dbYl59kkIo_ALt34lvTjFOX4VquO2xDVBJHhWXVVdcgpfyWnXYY-XW8N6n21m7ud4g_laTvht_IsPg8Xt_sZ2MKEhRSqNGv3eRgA2T3toCVr13QZ1LsIXQgeNcQEI675-iGPRsQV8i3cVSLWqYjBzRLbDrsjaMVMJIEnMo-Q7aRNXqQSKd_k99mx5V3DliUmOFKF3g4Stdojqt5_Za9OEfnue9jZ7ntqTjWLlNxXb8S8F3fHoqT4jj0R5OWR_SIsuPEpME9QWyCzL8RzC5qCwwy66gZKr5DCqXyANlXBmRNlk0lyRmlMwGnHuiaAtW8cjwhyUqvmLqva1OgA1K4Vix25tq-tPMnxWFG54PzY81isEXuBeGyoj_wQm0kml-hBC4vX9N3ncuOofSwREu177yIWaB2IQREgxwKalnhcf69ypGAZPDGpVH3KKYLf9WPBIjRI7nIFcBe3UdRB_w69i-886-MCBpTQrb12WtKfshdLOAuaKlRsYm_QU-Q-NST4GclgYrkXToSdch0B4e4Hb96HPz49j3hgfgXgNaUY3VRoJ41-7sD4NCQIZ-r7G6a41R_USfoFL6teXggaphp0PVEMmG1rQ7AuxR_P9e3rB2S_pokcVhQdmOxtZj3-mHMkaKJ7HZBx4KMNE96Ky-Ehmqr8oyRLi09X3M_zVHXlHacqqJSqa-xMbJx7Rdr0YZni1snmhtNa4ChphftGbcPhRqo13nF1C3CNFxzVnyD6BDx7944cqZLdXpTvZ5H8KSx9ACWntFelnIHh7CquPFFAn2-jGauWN2rc8RGTNfRhqVSwNoynpFDlsSjry6qpQ9ewmxmlEkl7JZo5ovuX_XeIkI7LcTggvqGY1Z2kk20MKowTBII-oiCauI1hy-loZsIbmOV6FL0Qim5iOmgrC7XeaeBb4OBgqFmO3SvGA7MfAOgogabl4XA0VFVYeWDKgV7jHjwB9y-OWQ_ZK-ekAUtWr8h1IM0zAqMe6ZVBVZh7U3N78t2saknkXQv5AQBTY5NXMTMv3rEfwXcsYZKIEwIHOhuoEa6FcOydNAQeyftJ9znw1g0xmGFoD9ZRIfCR2uru0b7JtZ-a656voEimNbW6SEd2bWHYSkqW650P4ZzMWT5XKx3rhajI7XwLZY3A89EvOsMotU7yiaviEJEws1qi78BFK3e01AUTI_JJIoSmTr0SvEcHQQCUp4ZcgpsQRbxEahBfKzyxCi0KNADj1mrqs9io42NT7_3dv9qex13Vipw3OaGeav5EamaTCOxaClSn9GcgkQrtvrjwnAWk4LkAZMq9cTX1LqtS9KJQTn-qr48udodedzyIgfa151DGk_WJI07jttiHqLc80SvjoLfIpkmfNcnEx3Jwn-ATaJJ7QPORhdSx00xA7oHrLOcp8w1ZXsRn9a-n-xYqlvkwtGDFPncau8Im8ROLrV9ORhTE-Qab5bNI3hN-VBr74o4ipp.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_01b4aab332454a91016ae32f0ad9f887d1a53a1a7560d40a8a","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4717,"completion_tokens":181,"total_tokens":4898,"cost":0.00047006,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":2888,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00047006,"upstream_inference_prompt_cost":0.00037956,"upstream_inference_completions_cost":0.0000905},"completion_tokens_details":{"reasoning_tokens":126,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":4717,"output_tokens":181,"total_tokens":4898,"cached_input_tokens":1826,"cache_creation_input_tokens":2888,"reasoning_tokens":126,"cost":{"total":0.00047006}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":4717,"output_tokens":181,"total_tokens":4898,"cached_input_tokens":1826,"cache_creation_input_tokens":2888,"reasoning_tokens":126,"cost":{"total":0.00047006}},"response_id":"gen-1793273610-S3jeGXy151Q3rSlmy0yY","finish_reason":"stop","raw":{"id":"gen-1793273610-S3jeGXy151Q3rSlmy0yY","object":"chat.completion","created":1793273610,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"So the key still fits the old lens room’s lock, but the 318 rockfall makes the room unreachable—there’s no other way in and nobody has reopened it. Is the key’s purpose now purely a secret from before the collapse?","role":"assistant","reasoning":"**Clarifying door access**\n\nI'm considering the conflict about an access point that was supposed to be opened by a key. The new details say it’s sealed by rockfall, which means it can't be accessed now. I need to respond briefly, perhaps engaging with the implication that maybe the key can't open it anymore. I should acknowledge that the key historically opens the door, but since it’s sealed, can I ask if the key still unlocks it behind the rubble?","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying door access**\n\nI'm considering the conflict about an access point that was supposed to be opened by a key. The new details say it’s sealed by rockfall, which means it can't be accessed now. I need to respond briefly, perhaps engaging with the implication that maybe the key can't open it anymore. I should acknowledge that the key historically opens the door, but since it’s sealed, can I ask if the key still unlocks it behind the rubble?","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y8NdmTvWlQx0_tTgej3u4aDBuFNfJDCpcIP_QbDTj6t_z8VK2bqopSxcMgt9TMOOM6ZgQ4JTFuNUCJsHrRGRRUJdG3Z8AMc_1qT25MN9UB38DLsmbkwT6sB3_ccBaNMhakgmCQfOYemTgAfinv2DFptMQKjq5Ey9EbTFdBKbR4XeqGTdu3pvm7sXwrX_uODpILApR4O1BuDA8UnN8APFwO0gUgFQUhEJ_hpCpFMnT6zFea7e1n-NGTlEOxorGIN0MrA0TV9EXMizc4xSUVpvAsdIx4oggkFYSSyK5A0A4smIhbsETLUV0aufbY_99ewU83c2sIML5giAGYmP3V95uSae0alj4p9pEmxntPqeHiLRt5_2x3-KWwTpWoNprOU4Zqyq2fDt22MmPe9Lx928R4nlEyDXoDvl7qcJfVF8h-iIAWitb9rKADxLKzbI8je17xNEODL8H9URboEMyf9XcCgSY4cDt37MO8Fg7qBOB0DyZ1XQUgSfm6E9DCE6iJ57QO1e0BGSOHmtU0Y2qk2SmKTtCKzc9S3BBmFqP5kYRBLab_eQDCBd03wM06nV39U6Xx3FfkoQ18LUcrLnU0Gra_4KdN3gnLFeJsOY0_u2tzYiQbVJbFt4avi9suORdIdPGP6g_iq5SMJxguWk648Tec9nhjGX6baSGuMHzYEFpx_g1dFcSrltaX7wAGox2n5mDl05fwSezCQtcOKcg5L--5c3tNCTPqpF0fxD_5NrOUAkU-9Z4B9jLd8IrW8tMfG1D7EtCGuNYg_tWX0WRNmsD9VxpvnYAnzlMQmfKYNg80f93Jf1WAlGWnhyVATcBQL9RuaiRoJffLgeDLP2xzyv_Pyx9-wrQTfkOwIywu0YHGv4lxfL6s8jVAl19l_lGnOdqC4LI50abj1aYlEvTutDIRHW8EwZM5sqYw051wAIBmvvPxTX0-TuQaleNULnHy6fl3mPCbXsrzK0ygj0I6QLGuqn6O-ZO3bxvQhgZ31_e1ORu3qfrqdW3ZZ_sHZiDAegkvQegOV_vin7D9N6qoDWSugk4uNoUKM_bJPHw9vbsUJACkhDVBYQx-DQhpRlmxxzggEnFucTpDPEqHJQf7Lo21md4MdYjiYP4bBfg3qpQs1XSofxPThR9WudHGFy99R7K8M21C_ZghrtP9g66P9lzZwo92loXnsYjiATlHLXztp4w8LyADP0ezw81v9x0UcAqnsdJAS6fJJkX84RA_mOQQBejBDCTCSgp4L6kxGBSlshW4hydxpdrkHPzpQRK0gMKFCahJQ_ax-07qbx9ZPBexERnlxieVO9wJiAsnAViCfpoGRlnVXkgQwXUzDMN8hphATbnp2uxctDq_W536j3YqjOGlYR0EZUSSvpzkE3zlVbD1p85qhicZZ2DtC5qnMhumzuUuJrw-B4Jo01OhjgYmkD4NO6G9hxyhEng4KrsMJJCR2h1WJbWVTlwR0tO7gn_oEJlArP6RtLOZxD5wuJ4ZvUZsy1A1ccrwvPZLajeIJ2f3N4O9mGXwzADDQ-2dDZU59qIOUCDIbEJ9SMdaFKT9YbJiw8AYI4KYskoZ1ujsLMgweh8NilCKn2t1BXQ5J8uuuKqar_dC8KrIHD67KARLkULEbnlm7miUevQId4hv38D6ybHbMZv0PtqlyabLIQjwOGUDa8f55tS3R7Wpg84X6o_64jF4EAuB-TmCeE4GB7NvkHLRJyu-vhWMcIHBHrlsIj7MVaGnSz7Ap6V7eEnaBKvkb7uckL_uA_CfLPppfKt7iCMkzP2Nr6KfOjxba6Jd7J9dbYl59kkIo_ALt34lvTjFOX4VquO2xDVBJHhWXVVdcgpfyWnXYY-XW8N6n21m7ud4g_laTvht_IsPg8Xt_sZ2MKEhRSqNGv3eRgA2T3toCVr13QZ1LsIXQgeNcQEI675-iGPRsQV8i3cVSLWqYjBzRLbDrsjaMVMJIEnMo-Q7aRNXqQSKd_k99mx5V3DliUmOFKF3g4Stdojqt5_Za9OEfnue9jZ7ntqTjWLlNxXb8S8F3fHoqT4jj0R5OWR_SIsuPEpME9QWyCzL8RzC5qCwwy66gZKr5DCqXyANlXBmRNlk0lyRmlMwGnHuiaAtW8cjwhyUqvmLqva1OgA1K4Vix25tq-tPMnxWFG54PzY81isEXuBeGyoj_wQm0kml-hBC4vX9N3ncuOofSwREu177yIWaB2IQREgxwKalnhcf69ypGAZPDGpVH3KKYLf9WPBIjRI7nIFcBe3UdRB_w69i-886-MCBpTQrb12WtKfshdLOAuaKlRsYm_QU-Q-NST4GclgYrkXToSdch0B4e4Hb96HPz49j3hgfgXgNaUY3VRoJ41-7sD4NCQIZ-r7G6a41R_USfoFL6teXggaphp0PVEMmG1rQ7AuxR_P9e3rB2S_pokcVhQdmOxtZj3-mHMkaKJ7HZBx4KMNE96Ky-Ehmqr8oyRLi09X3M_zVHXlHacqqJSqa-xMbJx7Rdr0YZni1snmhtNa4ChphftGbcPhRqo13nF1C3CNFxzVnyD6BDx7944cqZLdXpTvZ5H8KSx9ACWntFelnIHh7CquPFFAn2-jGauWN2rc8RGTNfRhqVSwNoynpFDlsSjry6qpQ9ewmxmlEkl7JZo5ovuX_XeIkI7LcTggvqGY1Z2kk20MKowTBII-oiCauI1hy-loZsIbmOV6FL0Qim5iOmgrC7XeaeBb4OBgqFmO3SvGA7MfAOgogabl4XA0VFVYeWDKgV7jHjwB9y-OWQ_ZK-ekAUtWr8h1IM0zAqMe6ZVBVZh7U3N78t2saknkXQv5AQBTY5NXMTMv3rEfwXcsYZKIEwIHOhuoEa6FcOydNAQeyftJ9znw1g0xmGFoD9ZRIfCR2uru0b7JtZ-a656voEimNbW6SEd2bWHYSkqW650P4ZzMWT5XKx3rhajI7XwLZY3A89EvOsMotU7yiaviEJEws1qi78BFK3e01AUTI_JJIoSmTr0SvEcHQQCUp4ZcgpsQRbxEahBfKzyxCi0KNADj1mrqs9io42NT7_3dv9qex13Vipw3OaGeav5EamaTCOxaClSn9GcgkQrtvrjwnAWk4LkAZMq9cTX1LqtS9KJQTn-qr48udodedzyIgfa151DGk_WJI07jttiHqLc80SvjoLfIpkmfNcnEx3Jwn-ATaJJ7QPORhdSx00xA7oHrLOcp8w1ZXsRn9a-n-xYqlvkwtGDFPncau8Im8ROLrV9ORhTE-Qab5bNI3hN-VBr74o4ipp.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_01b4aab332454a91016ae32f0ad9f887d1a53a1a7560d40a8a","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4717,"completion_tokens":181,"total_tokens":4898,"cost":0.00047006,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":2888,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00047006,"upstream_inference_prompt_cost":0.00037956,"upstream_inference_completions_cost":0.0000905},"completion_tokens_details":{"reasoning_tokens":126,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"The old lens room was permanently sealed by a rockfall in 318. Nobody has reopened it, and there is no other entrance."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Clarifying door access**\n\nI'm considering the conflict about an access point that was supposed to be opened by a key. The new details say it’s sealed by rockfall, which means it can't be accessed now. I need to respond briefly, perhaps engaging with the implication that maybe the key can't open it anymore. I should acknowledge that the key historically opens the door, but since it’s sealed, can I ask if the key still unlocks it behind the rubble?","native":{"item":{"reasoning":"**Clarifying door access**\n\nI'm considering the conflict about an access point that was supposed to be opened by a key. The new details say it’s sealed by rockfall, which means it can't be accessed now. I need to respond briefly, perhaps engaging with the implication that maybe the key can't open it anymore. I should acknowledge that the key historically opens the door, but since it’s sealed, can I ask if the key still unlocks it behind the rubble?","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying door access**\n\nI'm considering the conflict about an access point that was supposed to be opened by a key. The new details say it’s sealed by rockfall, which means it can't be accessed now. I need to respond briefly, perhaps engaging with the implication that maybe the key can't open it anymore. I should acknowledge that the key historically opens the door, but since it’s sealed, can I ask if the key still unlocks it behind the rubble?","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y8NdmTvWlQx0_tTgej3u4aDBuFNfJDCpcIP_QbDTj6t_z8VK2bqopSxcMgt9TMOOM6ZgQ4JTFuNUCJsHrRGRRUJdG3Z8AMc_1qT25MN9UB38DLsmbkwT6sB3_ccBaNMhakgmCQfOYemTgAfinv2DFptMQKjq5Ey9EbTFdBKbR4XeqGTdu3pvm7sXwrX_uODpILApR4O1BuDA8UnN8APFwO0gUgFQUhEJ_hpCpFMnT6zFea7e1n-NGTlEOxorGIN0MrA0TV9EXMizc4xSUVpvAsdIx4oggkFYSSyK5A0A4smIhbsETLUV0aufbY_99ewU83c2sIML5giAGYmP3V95uSae0alj4p9pEmxntPqeHiLRt5_2x3-KWwTpWoNprOU4Zqyq2fDt22MmPe9Lx928R4nlEyDXoDvl7qcJfVF8h-iIAWitb9rKADxLKzbI8je17xNEODL8H9URboEMyf9XcCgSY4cDt37MO8Fg7qBOB0DyZ1XQUgSfm6E9DCE6iJ57QO1e0BGSOHmtU0Y2qk2SmKTtCKzc9S3BBmFqP5kYRBLab_eQDCBd03wM06nV39U6Xx3FfkoQ18LUcrLnU0Gra_4KdN3gnLFeJsOY0_u2tzYiQbVJbFt4avi9suORdIdPGP6g_iq5SMJxguWk648Tec9nhjGX6baSGuMHzYEFpx_g1dFcSrltaX7wAGox2n5mDl05fwSezCQtcOKcg5L--5c3tNCTPqpF0fxD_5NrOUAkU-9Z4B9jLd8IrW8tMfG1D7EtCGuNYg_tWX0WRNmsD9VxpvnYAnzlMQmfKYNg80f93Jf1WAlGWnhyVATcBQL9RuaiRoJffLgeDLP2xzyv_Pyx9-wrQTfkOwIywu0YHGv4lxfL6s8jVAl19l_lGnOdqC4LI50abj1aYlEvTutDIRHW8EwZM5sqYw051wAIBmvvPxTX0-TuQaleNULnHy6fl3mPCbXsrzK0ygj0I6QLGuqn6O-ZO3bxvQhgZ31_e1ORu3qfrqdW3ZZ_sHZiDAegkvQegOV_vin7D9N6qoDWSugk4uNoUKM_bJPHw9vbsUJACkhDVBYQx-DQhpRlmxxzggEnFucTpDPEqHJQf7Lo21md4MdYjiYP4bBfg3qpQs1XSofxPThR9WudHGFy99R7K8M21C_ZghrtP9g66P9lzZwo92loXnsYjiATlHLXztp4w8LyADP0ezw81v9x0UcAqnsdJAS6fJJkX84RA_mOQQBejBDCTCSgp4L6kxGBSlshW4hydxpdrkHPzpQRK0gMKFCahJQ_ax-07qbx9ZPBexERnlxieVO9wJiAsnAViCfpoGRlnVXkgQwXUzDMN8hphATbnp2uxctDq_W536j3YqjOGlYR0EZUSSvpzkE3zlVbD1p85qhicZZ2DtC5qnMhumzuUuJrw-B4Jo01OhjgYmkD4NO6G9hxyhEng4KrsMJJCR2h1WJbWVTlwR0tO7gn_oEJlArP6RtLOZxD5wuJ4ZvUZsy1A1ccrwvPZLajeIJ2f3N4O9mGXwzADDQ-2dDZU59qIOUCDIbEJ9SMdaFKT9YbJiw8AYI4KYskoZ1ujsLMgweh8NilCKn2t1BXQ5J8uuuKqar_dC8KrIHD67KARLkULEbnlm7miUevQId4hv38D6ybHbMZv0PtqlyabLIQjwOGUDa8f55tS3R7Wpg84X6o_64jF4EAuB-TmCeE4GB7NvkHLRJyu-vhWMcIHBHrlsIj7MVaGnSz7Ap6V7eEnaBKvkb7uckL_uA_CfLPppfKt7iCMkzP2Nr6KfOjxba6Jd7J9dbYl59kkIo_ALt34lvTjFOX4VquO2xDVBJHhWXVVdcgpfyWnXYY-XW8N6n21m7ud4g_laTvht_IsPg8Xt_sZ2MKEhRSqNGv3eRgA2T3toCVr13QZ1LsIXQgeNcQEI675-iGPRsQV8i3cVSLWqYjBzRLbDrsjaMVMJIEnMo-Q7aRNXqQSKd_k99mx5V3DliUmOFKF3g4Stdojqt5_Za9OEfnue9jZ7ntqTjWLlNxXb8S8F3fHoqT4jj0R5OWR_SIsuPEpME9QWyCzL8RzC5qCwwy66gZKr5DCqXyANlXBmRNlk0lyRmlMwGnHuiaAtW8cjwhyUqvmLqva1OgA1K4Vix25tq-tPMnxWFG54PzY81isEXuBeGyoj_wQm0kml-hBC4vX9N3ncuOofSwREu177yIWaB2IQREgxwKalnhcf69ypGAZPDGpVH3KKYLf9WPBIjRI7nIFcBe3UdRB_w69i-886-MCBpTQrb12WtKfshdLOAuaKlRsYm_QU-Q-NST4GclgYrkXToSdch0B4e4Hb96HPz49j3hgfgXgNaUY3VRoJ41-7sD4NCQIZ-r7G6a41R_USfoFL6teXggaphp0PVEMmG1rQ7AuxR_P9e3rB2S_pokcVhQdmOxtZj3-mHMkaKJ7HZBx4KMNE96Ky-Ehmqr8oyRLi09X3M_zVHXlHacqqJSqa-xMbJx7Rdr0YZni1snmhtNa4ChphftGbcPhRqo13nF1C3CNFxzVnyD6BDx7944cqZLdXpTvZ5H8KSx9ACWntFelnIHh7CquPFFAn2-jGauWN2rc8RGTNfRhqVSwNoynpFDlsSjry6qpQ9ewmxmlEkl7JZo5ovuX_XeIkI7LcTggvqGY1Z2kk20MKowTBII-oiCauI1hy-loZsIbmOV6FL0Qim5iOmgrC7XeaeBb4OBgqFmO3SvGA7MfAOgogabl4XA0VFVYeWDKgV7jHjwB9y-OWQ_ZK-ekAUtWr8h1IM0zAqMe6ZVBVZh7U3N78t2saknkXQv5AQBTY5NXMTMv3rEfwXcsYZKIEwIHOhuoEa6FcOydNAQeyftJ9znw1g0xmGFoD9ZRIfCR2uru0b7JtZ-a656voEimNbW6SEd2bWHYSkqW650P4ZzMWT5XKx3rhajI7XwLZY3A89EvOsMotU7yiaviEJEws1qi78BFK3e01AUTI_JJIoSmTr0SvEcHQQCUp4ZcgpsQRbxEahBfKzyxCi0KNADj1mrqs9io42NT7_3dv9qex13Vipw3OaGeav5EamaTCOxaClSn9GcgkQrtvrjwnAWk4LkAZMq9cTX1LqtS9KJQTn-qr48udodedzyIgfa151DGk_WJI07jttiHqLc80SvjoLfIpkmfNcnEx3Jwn-ATaJJ7QPORhdSx00xA7oHrLOcp8w1ZXsRn9a-n-xYqlvkwtGDFPncau8Im8ROLrV9ORhTE-Qab5bNI3hN-VBr74o4ipp.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_01b4aab332454a91016ae32f0ad9f887d1a53a1a7560d40a8a","index":1}]},"fingerprint":"ef462a537fd387b8"}},{"type":"text","text":"So the key still fits the old lens room’s lock, but the 318 rockfall makes the room unreachable—there’s no other way in and nobody has reopened it. Is the key’s purpose now purely a secret from before the collapse?"}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793273610-S3jeGXy151Q3rSlmy0yY"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Clarifying door access**\n\nI'm considering the conflict about an access point that was supposed to be opened by a key. The new details say it’s sealed by rockfall, which means it can't be accessed now. I need to respond briefly, perhaps engaging with the implication that maybe the key can't open it anymore. I should acknowledge that the key historically opens the door, but since it’s sealed, can I ask if the key still unlocks it behind the rubble?","native":{"item":{"reasoning":"**Clarifying door access**\n\nI'm considering the conflict about an access point that was supposed to be opened by a key. The new details say it’s sealed by rockfall, which means it can't be accessed now. I need to respond briefly, perhaps engaging with the implication that maybe the key can't open it anymore. I should acknowledge that the key historically opens the door, but since it’s sealed, can I ask if the key still unlocks it behind the rubble?","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying door access**\n\nI'm considering the conflict about an access point that was supposed to be opened by a key. The new details say it’s sealed by rockfall, which means it can't be accessed now. I need to respond briefly, perhaps engaging with the implication that maybe the key can't open it anymore. I should acknowledge that the key historically opens the door, but since it’s sealed, can I ask if the key still unlocks it behind the rubble?","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4y8NdmTvWlQx0_tTgej3u4aDBuFNfJDCpcIP_QbDTj6t_z8VK2bqopSxcMgt9TMOOM6ZgQ4JTFuNUCJsHrRGRRUJdG3Z8AMc_1qT25MN9UB38DLsmbkwT6sB3_ccBaNMhakgmCQfOYemTgAfinv2DFptMQKjq5Ey9EbTFdBKbR4XeqGTdu3pvm7sXwrX_uODpILApR4O1BuDA8UnN8APFwO0gUgFQUhEJ_hpCpFMnT6zFea7e1n-NGTlEOxorGIN0MrA0TV9EXMizc4xSUVpvAsdIx4oggkFYSSyK5A0A4smIhbsETLUV0aufbY_99ewU83c2sIML5giAGYmP3V95uSae0alj4p9pEmxntPqeHiLRt5_2x3-KWwTpWoNprOU4Zqyq2fDt22MmPe9Lx928R4nlEyDXoDvl7qcJfVF8h-iIAWitb9rKADxLKzbI8je17xNEODL8H9URboEMyf9XcCgSY4cDt37MO8Fg7qBOB0DyZ1XQUgSfm6E9DCE6iJ57QO1e0BGSOHmtU0Y2qk2SmKTtCKzc9S3BBmFqP5kYRBLab_eQDCBd03wM06nV39U6Xx3FfkoQ18LUcrLnU0Gra_4KdN3gnLFeJsOY0_u2tzYiQbVJbFt4avi9suORdIdPGP6g_iq5SMJxguWk648Tec9nhjGX6baSGuMHzYEFpx_g1dFcSrltaX7wAGox2n5mDl05fwSezCQtcOKcg5L--5c3tNCTPqpF0fxD_5NrOUAkU-9Z4B9jLd8IrW8tMfG1D7EtCGuNYg_tWX0WRNmsD9VxpvnYAnzlMQmfKYNg80f93Jf1WAlGWnhyVATcBQL9RuaiRoJffLgeDLP2xzyv_Pyx9-wrQTfkOwIywu0YHGv4lxfL6s8jVAl19l_lGnOdqC4LI50abj1aYlEvTutDIRHW8EwZM5sqYw051wAIBmvvPxTX0-TuQaleNULnHy6fl3mPCbXsrzK0ygj0I6QLGuqn6O-ZO3bxvQhgZ31_e1ORu3qfrqdW3ZZ_sHZiDAegkvQegOV_vin7D9N6qoDWSugk4uNoUKM_bJPHw9vbsUJACkhDVBYQx-DQhpRlmxxzggEnFucTpDPEqHJQf7Lo21md4MdYjiYP4bBfg3qpQs1XSofxPThR9WudHGFy99R7K8M21C_ZghrtP9g66P9lzZwo92loXnsYjiATlHLXztp4w8LyADP0ezw81v9x0UcAqnsdJAS6fJJkX84RA_mOQQBejBDCTCSgp4L6kxGBSlshW4hydxpdrkHPzpQRK0gMKFCahJQ_ax-07qbx9ZPBexERnlxieVO9wJiAsnAViCfpoGRlnVXkgQwXUzDMN8hphATbnp2uxctDq_W536j3YqjOGlYR0EZUSSvpzkE3zlVbD1p85qhicZZ2DtC5qnMhumzuUuJrw-B4Jo01OhjgYmkD4NO6G9hxyhEng4KrsMJJCR2h1WJbWVTlwR0tO7gn_oEJlArP6RtLOZxD5wuJ4ZvUZsy1A1ccrwvPZLajeIJ2f3N4O9mGXwzADDQ-2dDZU59qIOUCDIbEJ9SMdaFKT9YbJiw8AYI4KYskoZ1ujsLMgweh8NilCKn2t1BXQ5J8uuuKqar_dC8KrIHD67KARLkULEbnlm7miUevQId4hv38D6ybHbMZv0PtqlyabLIQjwOGUDa8f55tS3R7Wpg84X6o_64jF4EAuB-TmCeE4GB7NvkHLRJyu-vhWMcIHBHrlsIj7MVaGnSz7Ap6V7eEnaBKvkb7uckL_uA_CfLPppfKt7iCMkzP2Nr6KfOjxba6Jd7J9dbYl59kkIo_ALt34lvTjFOX4VquO2xDVBJHhWXVVdcgpfyWnXYY-XW8N6n21m7ud4g_laTvht_IsPg8Xt_sZ2MKEhRSqNGv3eRgA2T3toCVr13QZ1LsIXQgeNcQEI675-iGPRsQV8i3cVSLWqYjBzRLbDrsjaMVMJIEnMo-Q7aRNXqQSKd_k99mx5V3DliUmOFKF3g4Stdojqt5_Za9OEfnue9jZ7ntqTjWLlNxXb8S8F3fHoqT4jj0R5OWR_SIsuPEpME9QWyCzL8RzC5qCwwy66gZKr5DCqXyANlXBmRNlk0lyRmlMwGnHuiaAtW8cjwhyUqvmLqva1OgA1K4Vix25tq-tPMnxWFG54PzY81isEXuBeGyoj_wQm0kml-hBC4vX9N3ncuOofSwREu177yIWaB2IQREgxwKalnhcf69ypGAZPDGpVH3KKYLf9WPBIjRI7nIFcBe3UdRB_w69i-886-MCBpTQrb12WtKfshdLOAuaKlRsYm_QU-Q-NST4GclgYrkXToSdch0B4e4Hb96HPz49j3hgfgXgNaUY3VRoJ41-7sD4NCQIZ-r7G6a41R_USfoFL6teXggaphp0PVEMmG1rQ7AuxR_P9e3rB2S_pokcVhQdmOxtZj3-mHMkaKJ7HZBx4KMNE96Ky-Ehmqr8oyRLi09X3M_zVHXlHacqqJSqa-xMbJx7Rdr0YZni1snmhtNa4ChphftGbcPhRqo13nF1C3CNFxzVnyD6BDx7944cqZLdXpTvZ5H8KSx9ACWntFelnIHh7CquPFFAn2-jGauWN2rc8RGTNfRhqVSwNoynpFDlsSjry6qpQ9ewmxmlEkl7JZo5ovuX_XeIkI7LcTggvqGY1Z2kk20MKowTBII-oiCauI1hy-loZsIbmOV6FL0Qim5iOmgrC7XeaeBb4OBgqFmO3SvGA7MfAOgogabl4XA0VFVYeWDKgV7jHjwB9y-OWQ_ZK-ekAUtWr8h1IM0zAqMe6ZVBVZh7U3N78t2saknkXQv5AQBTY5NXMTMv3rEfwXcsYZKIEwIHOhuoEa6FcOydNAQeyftJ9znw1g0xmGFoD9ZRIfCR2uru0b7JtZ-a656voEimNbW6SEd2bWHYSkqW650P4ZzMWT5XKx3rhajI7XwLZY3A89EvOsMotU7yiaviEJEws1qi78BFK3e01AUTI_JJIoSmTr0SvEcHQQCUp4ZcgpsQRbxEahBfKzyxCi0KNADj1mrqs9io42NT7_3dv9qex13Vipw3OaGeav5EamaTCOxaClSn9GcgkQrtvrjwnAWk4LkAZMq9cTX1LqtS9KJQTn-qr48udodedzyIgfa151DGk_WJI07jttiHqLc80SvjoLfIpkmfNcnEx3Jwn-ATaJJ7QPORhdSx00xA7oHrLOcp8w1ZXsRn9a-n-xYqlvkwtGDFPncau8Im8ROLrV9ORhTE-Qab5bNI3hN-VBr74o4ipp.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_01b4aab332454a91016ae32f0ad9f887d1a53a1a7560d40a8a","index":1}]},"fingerprint":"ef462a537fd387b8"}},{"type":"text","text":"So the key still fits the old lens room’s lock, but the 318 rockfall makes the room unreachable—there’s no other way in and nobody has reopened it. Is the key’s purpose now purely a secret from before the collapse?"}]}
+

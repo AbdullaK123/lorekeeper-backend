@@ -58,3 +58,25 @@ The duplicate-row ranking test checks defensive behavior. Current graph queries 
 Blank-name rejection is a proposed API contract. Confirm that rule before fixing its test.
 
 The suite does not prove restart recovery, client disconnect handling, or concurrent chat ordering.
+
+
+## Paid conversation smoke tests
+
+The smoke runner accepts a scenario file and retains its synthetic world and evidence.
+It waits for each background research run before sending the next turn.
+This makes paid chat, research, and embedding calls. Run only with explicit authorization.
+
+After the isolated database setup above, choose a new output directory and log file:
+
+```bash
+export QA_SMOKE_PAID=1
+export QA_SMOKE_SCENARIO="$PWD/tests/scenarios/ardent_reach_10.json"
+export QA_SMOKE_OUTPUT="$PWD/tests/artifacts/my-smoke-run"
+export QA_SMOKE_LOG=/tmp/lorekeeper-my-smoke-run.log
+export RUST_LOG=info
+cargo test --offline --test adversarial_live researcher_smoke_conversation -- --ignored --nocapture --test-threads=1 > "$QA_SMOKE_LOG" 2>&1
+```
+
+Without a scenario file, the runner uses the original 20-turn Brinewake scenario.
+Use a fresh output directory to preserve earlier evidence.
+System-created conflict links have no separate source list; their conflict nodes carry the reporting-message sources.

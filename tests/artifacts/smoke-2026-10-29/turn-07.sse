@@ -1,0 +1,254 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Considering seasonal implications**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" respond"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" briefly"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" engaging"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ly"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" while"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" noting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" new"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"âs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" interesting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" think"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" about"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" implications"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" of"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" seasonal"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" supply"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" storage"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" tide"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" charts"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" during"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" winter"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" storms"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" wonder"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" about"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" shipping"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" schedule"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" between"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" April"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" September"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" especially"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" since"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" str"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ait"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" might"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" freeze"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" winter"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"â"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"are"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" there"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" enough"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" reserves"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" of"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" salt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" get"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" through"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" long"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" winter"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"?"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" could"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" imply"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lighthouse"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"'s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" critical"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" role"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" don't"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" even"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" search"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":";"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" provided"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" sufficient"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"That"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" makes"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" lighthouse"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"âs"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" winter"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" reserve"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" essential"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" no"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" blue"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" salt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" can"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" cross"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" frozen"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" str"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ait"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" until"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" spring"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Does"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" ever"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" risk"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" running"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" low"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" before"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" April"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"?"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"That makes the lighthouseâs winter reserve essential: no blue salt can cross the frozen strait until spring. Does the Guild ever risk running low before April?"}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Considering seasonal implications**\n\nI need to respond briefly and engagingly while noting new lore. Itâs interesting to think about the implications of seasonal supply, storage, and tide charts during winter storms. I wonder about the shipping schedule between April and September, especially since the strait might freeze in winterâare there enough reserves of salt to get through a long winter? It could imply the lighthouse's critical role. I don't even need to search; the lore provided is sufficient.","native":{"item":{"reasoning":"**Considering seasonal implications**\n\nI need to respond briefly and engagingly while noting new lore. Itâs interesting to think about the implications of seasonal supply, storage, and tide charts during winter storms. I wonder about the shipping schedule between April and September, especially since the strait might freeze in winterâare there enough reserves of salt to get through a long winter? It could imply the lighthouse's critical role. I don't even need to search; the lore provided is sufficient.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering seasonal implications**\n\nI need to respond briefly and engagingly while noting new lore. Itâs interesting to think about the implications of seasonal supply, storage, and tide charts during winter storms. I wonder about the shipping schedule between April and September, especially since the strait might freeze in winterâare there enough reserves of salt to get through a long winter? It could imply the lighthouse's critical role. I don't even need to search; the lore provided is sufficient.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yLqeJn_IYzOgTs5Ybhjm2-qOTCI1UsWMw2UCEPdD1Rgf1uPoJ6f6IoiCVXfK0ydaR76jtCjdjdKTGxpiGDuurdH7zyKv0OZWBxaiVHmxY3OPYvMuLYBXmuu50rS_W-65VURWXmHcfhSK6ynvvBgFqmIDBynfyM0vCE7K1nBUrmvZzpfNZzVGukI1M7pvoRm86iYGtA5VNNTXaDL68iG8Pd_A7V3mWBK6VV7H-kl1uI5l2fZXaTzEvgXstEgdO_MPdFiuzfsv0VFom4_2mQD2RbMqdOFmHaMhwYRDq1bML5a8xy4Z2a0XTeEh9JtXD2hbuEqocRGKaqyOvteI2VtGp5FJc0FXlIeBrqnCZe79hlpT6BkGP_2Uwn2tjpk5Aiv-mAalpaCpMWz1z1__M1vsUFxUicn1nlN2yY-yHutSOS56DboZifwslXDSRbu6-rhausGkvsIgzc_6RCGLHRkjT4oVmToZrd734tsvWeVwQ6WiAioj0xRLJPDa_03a4C2JqnTdO5t2A--2KlemzvoqZ8qX1SJQM1sCf7RLb7DOKsN6LFjC1Ej_WyYOm6Ic7zlYs32XMD5fMPgQxIyOSDyRo6o2BnAHXMCiMEgnVzjSTS-FwBe0Jc1F25seB5_7SY0uMCrL4UEB8JAE4uOY9zv2F1ONeRGdR3bzHIomWBkmSZTBQcwWB1rhCnaGxH3u0ukjmhVSC1Z6FB-jjnFzhXAdJpaWCCxlRwuXBLcakfu-8ZvaNNzNJ_MWqqOSarbREa_Ie4_U6TaQxsimdDZD-nfdnvBSFuUY4zG53-WwGY5F8aQi8eTS7kzC68c-p10KXstbuQQlQOq7raplhigP-uBM_R4QBctofLJi2yLcXgAXSC7eRSila6KQSxMOyl5aM8bhsETFI2nTvZdaOuXijQ0lNYPD2yvxK6oAQUV8Zzp_J2hbkHr3VU3UgJYwn4T46J1ivT1Qu6Fk-yN1KOwFTv6sWdRLyjdIX0SFNLx83C3MWjJ2SmvXj0pXaAbMpXYiVX2h4xg-nl6C2dOXtckFl75YH2MmAeQvJtxgVyRVM5K78vcR4LQ3gO5HDKmTDLdaNW6Cq27WDFbhhxcsnMwcIes4mQIbALAwrl7H_dWoV5AmpofRdFja_tpEvpjlwiJFE-rQnL2nUGETOL4hjgA-Q4PUyoCJfZjnW0LnZilOMH3Rt8qJsElSjM2l--QZBw0f4hT4yU_EMArIxGqK-nzP6w_GK2vSGooYEsqsNm6Yg52tLxzHE6lpQLluXQ0RoxjMrrMth3px1R0cBcjOX-ybtSvaUDidVrz6aoTSjbm1GrxA90eHl8rsPJwiyAlVF_GNWTC2bmd6L6MCictSks2uvCL5h2Kbeofy-Ld8k9RX2lNctxqMmevnh9ZjSWyzXXn_cH4kA160FZxULleA0hSkriEA2cBJv-cH2pcy0-hDMk-1OkyD2TKSA-hjP1UPnl1MtmJDGy3zBmLmm5yL5BBQz-pWK4w7H1D7K_VxD-IfMkG1WM4ZPKFHpBaDxb0eqG1gtADQkJus13NLG8auyaE9dESWTGdeSdY14IgX5xDRdS6m0utjf2PUmleY25EUJuhjnaI9ve9pIfOY_GKNAanhxsrvvB6sEeyMASWdBbReIkVzz8wnhpNuqNlnXjJVPL16LZlcMdomL2dgM6IFYQXz3prlUbDSFFDd6WHDJmkydaxYhlsjPdiUKDWd6Q50oVKQDgyQoLxeMSxDQKRDKewOZ0pSTvnsnIZUhkWnwUqc_nZAfiffy9q-pNuuBLx96A63iA2-9hhkGwWz44jT9zQm8bj2jn6VmkFAarwKsuU3vq1XAafx5-P2N7sBOCPo9eGEnZ_PAO9NoVvhjg4qR8jOj7ASiJh-o1k-qRSrz48C5terbK9ZFd_Xv0IKg5tCSQPMqwNxg5j1VmzkEqlI6P1sB-QukiZRQp_3M_W1jFJQC3AspcQ94nL6BW3BTY2AbAlHVTS9IQAKZT3na852JaHv6jYXXye-rwiSjU96coLxMne8_wNKx8DlUIWWwBe8qfintSZSy4pBPe4azAfDQoAMljr0f8ZWFSTd4c9_vCiMGexujUWAbk-hEgkcQle_7Np6wvnzLk-s1_K4WAmDaGnHZD2NosyWeulK8Hzd-q5Tiix316ov7VQJFC-Abx4YRCbCX9KSHX8c0CSFCn_yk77_vx1lzOdMYYJMWM4an1aafGWyLI5aCqMwIbsjI4EMDaQGKDelBSoUBvpDmMBTrFGJmaY9mS4FEq2dM3_vphUo9er70aRzaw93a5ANJ1bDi0tvT8gqjSeIiUTm-pQnKRCO71mHa0J3ZhNGn-sDq5p6pjannFyW0bBxwBx0jqWw-Okev9PyyZG8gpKtM52HzxASQjVErdvd5SZPYw-WUr5MeFFqdBt95V0UPg4mYKYeCiwA2NTwVzJE0qE30xHueKN-9-Md6RPDGUmatyvmhbUKypr4JQ8eiRsVOna6pZEarvRNzEvYYP90hkkNPiuNfSeAW3nN2IHpFfo7YBgXIsuhRV_dSQPrckiGhlnDSisNJbj8-7ZXUz0irm6oev3XZR17t7miqxTCedSJvrrZjagY2Z10F-M8NU=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0391f3aaf9669d35016ae322e7d8d887d1b891315e30b9e867","index":1}]},"fingerprint":"3e26d96ad81acb1a"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":3476,"output_tokens":112,"total_tokens":3588,"cached_input_tokens":1826,"cache_creation_input_tokens":1647,"reasoning_tokens":75,"cost":{"total":0.000280435}},"response_id":"gen-1793270501-o1WISpTzZi1WgJF2LW0E","finish_reason":"stop","raw":{"id":"gen-1793270501-o1WISpTzZi1WgJF2LW0E","object":"chat.completion","created":1793270501,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"That makes the lighthouseâs winter reserve essential: no blue salt can cross the frozen strait until spring. Does the Guild ever risk running low before April?","role":"assistant","reasoning":"**Considering seasonal implications**\n\nI need to respond briefly and engagingly while noting new lore. Itâs interesting to think about the implications of seasonal supply, storage, and tide charts during winter storms. I wonder about the shipping schedule between April and September, especially since the strait might freeze in winterâare there enough reserves of salt to get through a long winter? It could imply the lighthouse's critical role. I don't even need to search; the lore provided is sufficient.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering seasonal implications**\n\nI need to respond briefly and engagingly while noting new lore. Itâs interesting to think about the implications of seasonal supply, storage, and tide charts during winter storms. I wonder about the shipping schedule between April and September, especially since the strait might freeze in winterâare there enough reserves of salt to get through a long winter? It could imply the lighthouse's critical role. I don't even need to search; the lore provided is sufficient.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yLqeJn_IYzOgTs5Ybhjm2-qOTCI1UsWMw2UCEPdD1Rgf1uPoJ6f6IoiCVXfK0ydaR76jtCjdjdKTGxpiGDuurdH7zyKv0OZWBxaiVHmxY3OPYvMuLYBXmuu50rS_W-65VURWXmHcfhSK6ynvvBgFqmIDBynfyM0vCE7K1nBUrmvZzpfNZzVGukI1M7pvoRm86iYGtA5VNNTXaDL68iG8Pd_A7V3mWBK6VV7H-kl1uI5l2fZXaTzEvgXstEgdO_MPdFiuzfsv0VFom4_2mQD2RbMqdOFmHaMhwYRDq1bML5a8xy4Z2a0XTeEh9JtXD2hbuEqocRGKaqyOvteI2VtGp5FJc0FXlIeBrqnCZe79hlpT6BkGP_2Uwn2tjpk5Aiv-mAalpaCpMWz1z1__M1vsUFxUicn1nlN2yY-yHutSOS56DboZifwslXDSRbu6-rhausGkvsIgzc_6RCGLHRkjT4oVmToZrd734tsvWeVwQ6WiAioj0xRLJPDa_03a4C2JqnTdO5t2A--2KlemzvoqZ8qX1SJQM1sCf7RLb7DOKsN6LFjC1Ej_WyYOm6Ic7zlYs32XMD5fMPgQxIyOSDyRo6o2BnAHXMCiMEgnVzjSTS-FwBe0Jc1F25seB5_7SY0uMCrL4UEB8JAE4uOY9zv2F1ONeRGdR3bzHIomWBkmSZTBQcwWB1rhCnaGxH3u0ukjmhVSC1Z6FB-jjnFzhXAdJpaWCCxlRwuXBLcakfu-8ZvaNNzNJ_MWqqOSarbREa_Ie4_U6TaQxsimdDZD-nfdnvBSFuUY4zG53-WwGY5F8aQi8eTS7kzC68c-p10KXstbuQQlQOq7raplhigP-uBM_R4QBctofLJi2yLcXgAXSC7eRSila6KQSxMOyl5aM8bhsETFI2nTvZdaOuXijQ0lNYPD2yvxK6oAQUV8Zzp_J2hbkHr3VU3UgJYwn4T46J1ivT1Qu6Fk-yN1KOwFTv6sWdRLyjdIX0SFNLx83C3MWjJ2SmvXj0pXaAbMpXYiVX2h4xg-nl6C2dOXtckFl75YH2MmAeQvJtxgVyRVM5K78vcR4LQ3gO5HDKmTDLdaNW6Cq27WDFbhhxcsnMwcIes4mQIbALAwrl7H_dWoV5AmpofRdFja_tpEvpjlwiJFE-rQnL2nUGETOL4hjgA-Q4PUyoCJfZjnW0LnZilOMH3Rt8qJsElSjM2l--QZBw0f4hT4yU_EMArIxGqK-nzP6w_GK2vSGooYEsqsNm6Yg52tLxzHE6lpQLluXQ0RoxjMrrMth3px1R0cBcjOX-ybtSvaUDidVrz6aoTSjbm1GrxA90eHl8rsPJwiyAlVF_GNWTC2bmd6L6MCictSks2uvCL5h2Kbeofy-Ld8k9RX2lNctxqMmevnh9ZjSWyzXXn_cH4kA160FZxULleA0hSkriEA2cBJv-cH2pcy0-hDMk-1OkyD2TKSA-hjP1UPnl1MtmJDGy3zBmLmm5yL5BBQz-pWK4w7H1D7K_VxD-IfMkG1WM4ZPKFHpBaDxb0eqG1gtADQkJus13NLG8auyaE9dESWTGdeSdY14IgX5xDRdS6m0utjf2PUmleY25EUJuhjnaI9ve9pIfOY_GKNAanhxsrvvB6sEeyMASWdBbReIkVzz8wnhpNuqNlnXjJVPL16LZlcMdomL2dgM6IFYQXz3prlUbDSFFDd6WHDJmkydaxYhlsjPdiUKDWd6Q50oVKQDgyQoLxeMSxDQKRDKewOZ0pSTvnsnIZUhkWnwUqc_nZAfiffy9q-pNuuBLx96A63iA2-9hhkGwWz44jT9zQm8bj2jn6VmkFAarwKsuU3vq1XAafx5-P2N7sBOCPo9eGEnZ_PAO9NoVvhjg4qR8jOj7ASiJh-o1k-qRSrz48C5terbK9ZFd_Xv0IKg5tCSQPMqwNxg5j1VmzkEqlI6P1sB-QukiZRQp_3M_W1jFJQC3AspcQ94nL6BW3BTY2AbAlHVTS9IQAKZT3na852JaHv6jYXXye-rwiSjU96coLxMne8_wNKx8DlUIWWwBe8qfintSZSy4pBPe4azAfDQoAMljr0f8ZWFSTd4c9_vCiMGexujUWAbk-hEgkcQle_7Np6wvnzLk-s1_K4WAmDaGnHZD2NosyWeulK8Hzd-q5Tiix316ov7VQJFC-Abx4YRCbCX9KSHX8c0CSFCn_yk77_vx1lzOdMYYJMWM4an1aafGWyLI5aCqMwIbsjI4EMDaQGKDelBSoUBvpDmMBTrFGJmaY9mS4FEq2dM3_vphUo9er70aRzaw93a5ANJ1bDi0tvT8gqjSeIiUTm-pQnKRCO71mHa0J3ZhNGn-sDq5p6pjannFyW0bBxwBx0jqWw-Okev9PyyZG8gpKtM52HzxASQjVErdvd5SZPYw-WUr5MeFFqdBt95V0UPg4mYKYeCiwA2NTwVzJE0qE30xHueKN-9-Md6RPDGUmatyvmhbUKypr4JQ8eiRsVOna6pZEarvRNzEvYYP90hkkNPiuNfSeAW3nN2IHpFfo7YBgXIsuhRV_dSQPrckiGhlnDSisNJbj8-7ZXUz0irm6oev3XZR17t7miqxTCedSJvrrZjagY2Z10F-M8NU=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0391f3aaf9669d35016ae322e7d8d887d1b891315e30b9e867","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":3476,"completion_tokens":112,"total_tokens":3588,"cost":0.000280435,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":1647,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000280435,"upstream_inference_prompt_cost":0.000224435,"upstream_inference_completions_cost":0.000056},"completion_tokens_details":{"reasoning_tokens":75,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":3476,"output_tokens":112,"total_tokens":3588,"cached_input_tokens":1826,"cache_creation_input_tokens":1647,"reasoning_tokens":75,"cost":{"total":0.000280435}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":3476,"output_tokens":112,"total_tokens":3588,"cached_input_tokens":1826,"cache_creation_input_tokens":1647,"reasoning_tokens":75,"cost":{"total":0.000280435}},"response_id":"gen-1793270501-o1WISpTzZi1WgJF2LW0E","finish_reason":"stop","raw":{"id":"gen-1793270501-o1WISpTzZi1WgJF2LW0E","object":"chat.completion","created":1793270501,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"That makes the lighthouseâs winter reserve essential: no blue salt can cross the frozen strait until spring. Does the Guild ever risk running low before April?","role":"assistant","reasoning":"**Considering seasonal implications**\n\nI need to respond briefly and engagingly while noting new lore. Itâs interesting to think about the implications of seasonal supply, storage, and tide charts during winter storms. I wonder about the shipping schedule between April and September, especially since the strait might freeze in winterâare there enough reserves of salt to get through a long winter? It could imply the lighthouse's critical role. I don't even need to search; the lore provided is sufficient.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering seasonal implications**\n\nI need to respond briefly and engagingly while noting new lore. Itâs interesting to think about the implications of seasonal supply, storage, and tide charts during winter storms. I wonder about the shipping schedule between April and September, especially since the strait might freeze in winterâare there enough reserves of salt to get through a long winter? It could imply the lighthouse's critical role. I don't even need to search; the lore provided is sufficient.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yLqeJn_IYzOgTs5Ybhjm2-qOTCI1UsWMw2UCEPdD1Rgf1uPoJ6f6IoiCVXfK0ydaR76jtCjdjdKTGxpiGDuurdH7zyKv0OZWBxaiVHmxY3OPYvMuLYBXmuu50rS_W-65VURWXmHcfhSK6ynvvBgFqmIDBynfyM0vCE7K1nBUrmvZzpfNZzVGukI1M7pvoRm86iYGtA5VNNTXaDL68iG8Pd_A7V3mWBK6VV7H-kl1uI5l2fZXaTzEvgXstEgdO_MPdFiuzfsv0VFom4_2mQD2RbMqdOFmHaMhwYRDq1bML5a8xy4Z2a0XTeEh9JtXD2hbuEqocRGKaqyOvteI2VtGp5FJc0FXlIeBrqnCZe79hlpT6BkGP_2Uwn2tjpk5Aiv-mAalpaCpMWz1z1__M1vsUFxUicn1nlN2yY-yHutSOS56DboZifwslXDSRbu6-rhausGkvsIgzc_6RCGLHRkjT4oVmToZrd734tsvWeVwQ6WiAioj0xRLJPDa_03a4C2JqnTdO5t2A--2KlemzvoqZ8qX1SJQM1sCf7RLb7DOKsN6LFjC1Ej_WyYOm6Ic7zlYs32XMD5fMPgQxIyOSDyRo6o2BnAHXMCiMEgnVzjSTS-FwBe0Jc1F25seB5_7SY0uMCrL4UEB8JAE4uOY9zv2F1ONeRGdR3bzHIomWBkmSZTBQcwWB1rhCnaGxH3u0ukjmhVSC1Z6FB-jjnFzhXAdJpaWCCxlRwuXBLcakfu-8ZvaNNzNJ_MWqqOSarbREa_Ie4_U6TaQxsimdDZD-nfdnvBSFuUY4zG53-WwGY5F8aQi8eTS7kzC68c-p10KXstbuQQlQOq7raplhigP-uBM_R4QBctofLJi2yLcXgAXSC7eRSila6KQSxMOyl5aM8bhsETFI2nTvZdaOuXijQ0lNYPD2yvxK6oAQUV8Zzp_J2hbkHr3VU3UgJYwn4T46J1ivT1Qu6Fk-yN1KOwFTv6sWdRLyjdIX0SFNLx83C3MWjJ2SmvXj0pXaAbMpXYiVX2h4xg-nl6C2dOXtckFl75YH2MmAeQvJtxgVyRVM5K78vcR4LQ3gO5HDKmTDLdaNW6Cq27WDFbhhxcsnMwcIes4mQIbALAwrl7H_dWoV5AmpofRdFja_tpEvpjlwiJFE-rQnL2nUGETOL4hjgA-Q4PUyoCJfZjnW0LnZilOMH3Rt8qJsElSjM2l--QZBw0f4hT4yU_EMArIxGqK-nzP6w_GK2vSGooYEsqsNm6Yg52tLxzHE6lpQLluXQ0RoxjMrrMth3px1R0cBcjOX-ybtSvaUDidVrz6aoTSjbm1GrxA90eHl8rsPJwiyAlVF_GNWTC2bmd6L6MCictSks2uvCL5h2Kbeofy-Ld8k9RX2lNctxqMmevnh9ZjSWyzXXn_cH4kA160FZxULleA0hSkriEA2cBJv-cH2pcy0-hDMk-1OkyD2TKSA-hjP1UPnl1MtmJDGy3zBmLmm5yL5BBQz-pWK4w7H1D7K_VxD-IfMkG1WM4ZPKFHpBaDxb0eqG1gtADQkJus13NLG8auyaE9dESWTGdeSdY14IgX5xDRdS6m0utjf2PUmleY25EUJuhjnaI9ve9pIfOY_GKNAanhxsrvvB6sEeyMASWdBbReIkVzz8wnhpNuqNlnXjJVPL16LZlcMdomL2dgM6IFYQXz3prlUbDSFFDd6WHDJmkydaxYhlsjPdiUKDWd6Q50oVKQDgyQoLxeMSxDQKRDKewOZ0pSTvnsnIZUhkWnwUqc_nZAfiffy9q-pNuuBLx96A63iA2-9hhkGwWz44jT9zQm8bj2jn6VmkFAarwKsuU3vq1XAafx5-P2N7sBOCPo9eGEnZ_PAO9NoVvhjg4qR8jOj7ASiJh-o1k-qRSrz48C5terbK9ZFd_Xv0IKg5tCSQPMqwNxg5j1VmzkEqlI6P1sB-QukiZRQp_3M_W1jFJQC3AspcQ94nL6BW3BTY2AbAlHVTS9IQAKZT3na852JaHv6jYXXye-rwiSjU96coLxMne8_wNKx8DlUIWWwBe8qfintSZSy4pBPe4azAfDQoAMljr0f8ZWFSTd4c9_vCiMGexujUWAbk-hEgkcQle_7Np6wvnzLk-s1_K4WAmDaGnHZD2NosyWeulK8Hzd-q5Tiix316ov7VQJFC-Abx4YRCbCX9KSHX8c0CSFCn_yk77_vx1lzOdMYYJMWM4an1aafGWyLI5aCqMwIbsjI4EMDaQGKDelBSoUBvpDmMBTrFGJmaY9mS4FEq2dM3_vphUo9er70aRzaw93a5ANJ1bDi0tvT8gqjSeIiUTm-pQnKRCO71mHa0J3ZhNGn-sDq5p6pjannFyW0bBxwBx0jqWw-Okev9PyyZG8gpKtM52HzxASQjVErdvd5SZPYw-WUr5MeFFqdBt95V0UPg4mYKYeCiwA2NTwVzJE0qE30xHueKN-9-Md6RPDGUmatyvmhbUKypr4JQ8eiRsVOna6pZEarvRNzEvYYP90hkkNPiuNfSeAW3nN2IHpFfo7YBgXIsuhRV_dSQPrckiGhlnDSisNJbj8-7ZXUz0irm6oev3XZR17t7miqxTCedSJvrrZjagY2Z10F-M8NU=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0391f3aaf9669d35016ae322e7d8d887d1b891315e30b9e867","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":3476,"completion_tokens":112,"total_tokens":3588,"cost":0.000280435,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":1647,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000280435,"upstream_inference_prompt_cost":0.000224435,"upstream_inference_completions_cost":0.000056},"completion_tokens_details":{"reasoning_tokens":75,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"The Nightjar carries blue salt from Orin to Vesper only between April and September. During winter the strait freezes and the guild uses stored salt."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Considering seasonal implications**\n\nI need to respond briefly and engagingly while noting new lore. Itâs interesting to think about the implications of seasonal supply, storage, and tide charts during winter storms. I wonder about the shipping schedule between April and September, especially since the strait might freeze in winterâare there enough reserves of salt to get through a long winter? It could imply the lighthouse's critical role. I don't even need to search; the lore provided is sufficient.","native":{"item":{"reasoning":"**Considering seasonal implications**\n\nI need to respond briefly and engagingly while noting new lore. Itâs interesting to think about the implications of seasonal supply, storage, and tide charts during winter storms. I wonder about the shipping schedule between April and September, especially since the strait might freeze in winterâare there enough reserves of salt to get through a long winter? It could imply the lighthouse's critical role. I don't even need to search; the lore provided is sufficient.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering seasonal implications**\n\nI need to respond briefly and engagingly while noting new lore. Itâs interesting to think about the implications of seasonal supply, storage, and tide charts during winter storms. I wonder about the shipping schedule between April and September, especially since the strait might freeze in winterâare there enough reserves of salt to get through a long winter? It could imply the lighthouse's critical role. I don't even need to search; the lore provided is sufficient.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yLqeJn_IYzOgTs5Ybhjm2-qOTCI1UsWMw2UCEPdD1Rgf1uPoJ6f6IoiCVXfK0ydaR76jtCjdjdKTGxpiGDuurdH7zyKv0OZWBxaiVHmxY3OPYvMuLYBXmuu50rS_W-65VURWXmHcfhSK6ynvvBgFqmIDBynfyM0vCE7K1nBUrmvZzpfNZzVGukI1M7pvoRm86iYGtA5VNNTXaDL68iG8Pd_A7V3mWBK6VV7H-kl1uI5l2fZXaTzEvgXstEgdO_MPdFiuzfsv0VFom4_2mQD2RbMqdOFmHaMhwYRDq1bML5a8xy4Z2a0XTeEh9JtXD2hbuEqocRGKaqyOvteI2VtGp5FJc0FXlIeBrqnCZe79hlpT6BkGP_2Uwn2tjpk5Aiv-mAalpaCpMWz1z1__M1vsUFxUicn1nlN2yY-yHutSOS56DboZifwslXDSRbu6-rhausGkvsIgzc_6RCGLHRkjT4oVmToZrd734tsvWeVwQ6WiAioj0xRLJPDa_03a4C2JqnTdO5t2A--2KlemzvoqZ8qX1SJQM1sCf7RLb7DOKsN6LFjC1Ej_WyYOm6Ic7zlYs32XMD5fMPgQxIyOSDyRo6o2BnAHXMCiMEgnVzjSTS-FwBe0Jc1F25seB5_7SY0uMCrL4UEB8JAE4uOY9zv2F1ONeRGdR3bzHIomWBkmSZTBQcwWB1rhCnaGxH3u0ukjmhVSC1Z6FB-jjnFzhXAdJpaWCCxlRwuXBLcakfu-8ZvaNNzNJ_MWqqOSarbREa_Ie4_U6TaQxsimdDZD-nfdnvBSFuUY4zG53-WwGY5F8aQi8eTS7kzC68c-p10KXstbuQQlQOq7raplhigP-uBM_R4QBctofLJi2yLcXgAXSC7eRSila6KQSxMOyl5aM8bhsETFI2nTvZdaOuXijQ0lNYPD2yvxK6oAQUV8Zzp_J2hbkHr3VU3UgJYwn4T46J1ivT1Qu6Fk-yN1KOwFTv6sWdRLyjdIX0SFNLx83C3MWjJ2SmvXj0pXaAbMpXYiVX2h4xg-nl6C2dOXtckFl75YH2MmAeQvJtxgVyRVM5K78vcR4LQ3gO5HDKmTDLdaNW6Cq27WDFbhhxcsnMwcIes4mQIbALAwrl7H_dWoV5AmpofRdFja_tpEvpjlwiJFE-rQnL2nUGETOL4hjgA-Q4PUyoCJfZjnW0LnZilOMH3Rt8qJsElSjM2l--QZBw0f4hT4yU_EMArIxGqK-nzP6w_GK2vSGooYEsqsNm6Yg52tLxzHE6lpQLluXQ0RoxjMrrMth3px1R0cBcjOX-ybtSvaUDidVrz6aoTSjbm1GrxA90eHl8rsPJwiyAlVF_GNWTC2bmd6L6MCictSks2uvCL5h2Kbeofy-Ld8k9RX2lNctxqMmevnh9ZjSWyzXXn_cH4kA160FZxULleA0hSkriEA2cBJv-cH2pcy0-hDMk-1OkyD2TKSA-hjP1UPnl1MtmJDGy3zBmLmm5yL5BBQz-pWK4w7H1D7K_VxD-IfMkG1WM4ZPKFHpBaDxb0eqG1gtADQkJus13NLG8auyaE9dESWTGdeSdY14IgX5xDRdS6m0utjf2PUmleY25EUJuhjnaI9ve9pIfOY_GKNAanhxsrvvB6sEeyMASWdBbReIkVzz8wnhpNuqNlnXjJVPL16LZlcMdomL2dgM6IFYQXz3prlUbDSFFDd6WHDJmkydaxYhlsjPdiUKDWd6Q50oVKQDgyQoLxeMSxDQKRDKewOZ0pSTvnsnIZUhkWnwUqc_nZAfiffy9q-pNuuBLx96A63iA2-9hhkGwWz44jT9zQm8bj2jn6VmkFAarwKsuU3vq1XAafx5-P2N7sBOCPo9eGEnZ_PAO9NoVvhjg4qR8jOj7ASiJh-o1k-qRSrz48C5terbK9ZFd_Xv0IKg5tCSQPMqwNxg5j1VmzkEqlI6P1sB-QukiZRQp_3M_W1jFJQC3AspcQ94nL6BW3BTY2AbAlHVTS9IQAKZT3na852JaHv6jYXXye-rwiSjU96coLxMne8_wNKx8DlUIWWwBe8qfintSZSy4pBPe4azAfDQoAMljr0f8ZWFSTd4c9_vCiMGexujUWAbk-hEgkcQle_7Np6wvnzLk-s1_K4WAmDaGnHZD2NosyWeulK8Hzd-q5Tiix316ov7VQJFC-Abx4YRCbCX9KSHX8c0CSFCn_yk77_vx1lzOdMYYJMWM4an1aafGWyLI5aCqMwIbsjI4EMDaQGKDelBSoUBvpDmMBTrFGJmaY9mS4FEq2dM3_vphUo9er70aRzaw93a5ANJ1bDi0tvT8gqjSeIiUTm-pQnKRCO71mHa0J3ZhNGn-sDq5p6pjannFyW0bBxwBx0jqWw-Okev9PyyZG8gpKtM52HzxASQjVErdvd5SZPYw-WUr5MeFFqdBt95V0UPg4mYKYeCiwA2NTwVzJE0qE30xHueKN-9-Md6RPDGUmatyvmhbUKypr4JQ8eiRsVOna6pZEarvRNzEvYYP90hkkNPiuNfSeAW3nN2IHpFfo7YBgXIsuhRV_dSQPrckiGhlnDSisNJbj8-7ZXUz0irm6oev3XZR17t7miqxTCedSJvrrZjagY2Z10F-M8NU=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0391f3aaf9669d35016ae322e7d8d887d1b891315e30b9e867","index":1}]},"fingerprint":"3e26d96ad81acb1a"}},{"type":"text","text":"That makes the lighthouseâs winter reserve essential: no blue salt can cross the frozen strait until spring. Does the Guild ever risk running low before April?"}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793270501-o1WISpTzZi1WgJF2LW0E"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Considering seasonal implications**\n\nI need to respond briefly and engagingly while noting new lore. Itâs interesting to think about the implications of seasonal supply, storage, and tide charts during winter storms. I wonder about the shipping schedule between April and September, especially since the strait might freeze in winterâare there enough reserves of salt to get through a long winter? It could imply the lighthouse's critical role. I don't even need to search; the lore provided is sufficient.","native":{"item":{"reasoning":"**Considering seasonal implications**\n\nI need to respond briefly and engagingly while noting new lore. Itâs interesting to think about the implications of seasonal supply, storage, and tide charts during winter storms. I wonder about the shipping schedule between April and September, especially since the strait might freeze in winterâare there enough reserves of salt to get through a long winter? It could imply the lighthouse's critical role. I don't even need to search; the lore provided is sufficient.","reasoning_details":[{"type":"reasoning.summary","summary":"**Considering seasonal implications**\n\nI need to respond briefly and engagingly while noting new lore. Itâs interesting to think about the implications of seasonal supply, storage, and tide charts during winter storms. I wonder about the shipping schedule between April and September, especially since the strait might freeze in winterâare there enough reserves of salt to get through a long winter? It could imply the lighthouse's critical role. I don't even need to search; the lore provided is sufficient.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq4yLqeJn_IYzOgTs5Ybhjm2-qOTCI1UsWMw2UCEPdD1Rgf1uPoJ6f6IoiCVXfK0ydaR76jtCjdjdKTGxpiGDuurdH7zyKv0OZWBxaiVHmxY3OPYvMuLYBXmuu50rS_W-65VURWXmHcfhSK6ynvvBgFqmIDBynfyM0vCE7K1nBUrmvZzpfNZzVGukI1M7pvoRm86iYGtA5VNNTXaDL68iG8Pd_A7V3mWBK6VV7H-kl1uI5l2fZXaTzEvgXstEgdO_MPdFiuzfsv0VFom4_2mQD2RbMqdOFmHaMhwYRDq1bML5a8xy4Z2a0XTeEh9JtXD2hbuEqocRGKaqyOvteI2VtGp5FJc0FXlIeBrqnCZe79hlpT6BkGP_2Uwn2tjpk5Aiv-mAalpaCpMWz1z1__M1vsUFxUicn1nlN2yY-yHutSOS56DboZifwslXDSRbu6-rhausGkvsIgzc_6RCGLHRkjT4oVmToZrd734tsvWeVwQ6WiAioj0xRLJPDa_03a4C2JqnTdO5t2A--2KlemzvoqZ8qX1SJQM1sCf7RLb7DOKsN6LFjC1Ej_WyYOm6Ic7zlYs32XMD5fMPgQxIyOSDyRo6o2BnAHXMCiMEgnVzjSTS-FwBe0Jc1F25seB5_7SY0uMCrL4UEB8JAE4uOY9zv2F1ONeRGdR3bzHIomWBkmSZTBQcwWB1rhCnaGxH3u0ukjmhVSC1Z6FB-jjnFzhXAdJpaWCCxlRwuXBLcakfu-8ZvaNNzNJ_MWqqOSarbREa_Ie4_U6TaQxsimdDZD-nfdnvBSFuUY4zG53-WwGY5F8aQi8eTS7kzC68c-p10KXstbuQQlQOq7raplhigP-uBM_R4QBctofLJi2yLcXgAXSC7eRSila6KQSxMOyl5aM8bhsETFI2nTvZdaOuXijQ0lNYPD2yvxK6oAQUV8Zzp_J2hbkHr3VU3UgJYwn4T46J1ivT1Qu6Fk-yN1KOwFTv6sWdRLyjdIX0SFNLx83C3MWjJ2SmvXj0pXaAbMpXYiVX2h4xg-nl6C2dOXtckFl75YH2MmAeQvJtxgVyRVM5K78vcR4LQ3gO5HDKmTDLdaNW6Cq27WDFbhhxcsnMwcIes4mQIbALAwrl7H_dWoV5AmpofRdFja_tpEvpjlwiJFE-rQnL2nUGETOL4hjgA-Q4PUyoCJfZjnW0LnZilOMH3Rt8qJsElSjM2l--QZBw0f4hT4yU_EMArIxGqK-nzP6w_GK2vSGooYEsqsNm6Yg52tLxzHE6lpQLluXQ0RoxjMrrMth3px1R0cBcjOX-ybtSvaUDidVrz6aoTSjbm1GrxA90eHl8rsPJwiyAlVF_GNWTC2bmd6L6MCictSks2uvCL5h2Kbeofy-Ld8k9RX2lNctxqMmevnh9ZjSWyzXXn_cH4kA160FZxULleA0hSkriEA2cBJv-cH2pcy0-hDMk-1OkyD2TKSA-hjP1UPnl1MtmJDGy3zBmLmm5yL5BBQz-pWK4w7H1D7K_VxD-IfMkG1WM4ZPKFHpBaDxb0eqG1gtADQkJus13NLG8auyaE9dESWTGdeSdY14IgX5xDRdS6m0utjf2PUmleY25EUJuhjnaI9ve9pIfOY_GKNAanhxsrvvB6sEeyMASWdBbReIkVzz8wnhpNuqNlnXjJVPL16LZlcMdomL2dgM6IFYQXz3prlUbDSFFDd6WHDJmkydaxYhlsjPdiUKDWd6Q50oVKQDgyQoLxeMSxDQKRDKewOZ0pSTvnsnIZUhkWnwUqc_nZAfiffy9q-pNuuBLx96A63iA2-9hhkGwWz44jT9zQm8bj2jn6VmkFAarwKsuU3vq1XAafx5-P2N7sBOCPo9eGEnZ_PAO9NoVvhjg4qR8jOj7ASiJh-o1k-qRSrz48C5terbK9ZFd_Xv0IKg5tCSQPMqwNxg5j1VmzkEqlI6P1sB-QukiZRQp_3M_W1jFJQC3AspcQ94nL6BW3BTY2AbAlHVTS9IQAKZT3na852JaHv6jYXXye-rwiSjU96coLxMne8_wNKx8DlUIWWwBe8qfintSZSy4pBPe4azAfDQoAMljr0f8ZWFSTd4c9_vCiMGexujUWAbk-hEgkcQle_7Np6wvnzLk-s1_K4WAmDaGnHZD2NosyWeulK8Hzd-q5Tiix316ov7VQJFC-Abx4YRCbCX9KSHX8c0CSFCn_yk77_vx1lzOdMYYJMWM4an1aafGWyLI5aCqMwIbsjI4EMDaQGKDelBSoUBvpDmMBTrFGJmaY9mS4FEq2dM3_vphUo9er70aRzaw93a5ANJ1bDi0tvT8gqjSeIiUTm-pQnKRCO71mHa0J3ZhNGn-sDq5p6pjannFyW0bBxwBx0jqWw-Okev9PyyZG8gpKtM52HzxASQjVErdvd5SZPYw-WUr5MeFFqdBt95V0UPg4mYKYeCiwA2NTwVzJE0qE30xHueKN-9-Md6RPDGUmatyvmhbUKypr4JQ8eiRsVOna6pZEarvRNzEvYYP90hkkNPiuNfSeAW3nN2IHpFfo7YBgXIsuhRV_dSQPrckiGhlnDSisNJbj8-7ZXUz0irm6oev3XZR17t7miqxTCedSJvrrZjagY2Z10F-M8NU=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0391f3aaf9669d35016ae322e7d8d887d1b891315e30b9e867","index":1}]},"fingerprint":"3e26d96ad81acb1a"}},{"type":"text","text":"That makes the lighthouseâs winter reserve essential: no blue salt can cross the frozen strait until spring. Does the Guild ever risk running low before April?"}]}
+

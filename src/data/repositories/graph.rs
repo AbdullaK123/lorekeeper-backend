@@ -51,6 +51,11 @@ impl GraphRepository {
     pub async fn ensure_constraints(&self) -> Result<(), InfrastructureError> {
         self.graph
             .run(query(
+                "CREATE CONSTRAINT ON (e:Entity) ASSERT e.world_id, e.id IS UNIQUE",
+            ))
+            .await?;
+        self.graph
+            .run(query(
                 "CREATE CONSTRAINT ON (e:Entity) ASSERT e.world_id, e.name_key IS UNIQUE",
             ))
             .await?;
@@ -449,96 +454,137 @@ impl GraphRepository {
         .await
     }
 
-    pub async fn upsert_entity(
+    /// Exact-ID writes. Any failed validation or write rolls back the entire batch.
+    pub async fn update_graph_batch(
         &self,
-        entity: &Entity,
-        embedding: Vec<f64>,
-    ) -> Result<Entity, InfrastructureError> {
-        self.fetch_one::<Entity>(
-            query(
-                "
-                MERGE (e:Entity {world_id: $world_id, name_key: $name_key})
-                ON CREATE SET
-                    e.id          = $id,
-                    e.name        = $name,
-                    e.aliases     = $aliases,
-                    e.kind        = $kind,
-                    e.description = $description,
-                    e.properties  = $properties,
-                    e.embedding   = $embedding
-                ON MATCH SET
-                    e.aliases     = $aliases,
-                    e.kind        = $kind,
-                    e.description = $description,
-                    e.properties  = $properties,
-                    e.embedding   = $embedding
-                RETURN e
-                ",
-            )
-            .param("id", entity.id.clone())
-            .param("world_id", entity.world_id.clone())
-            .param("name_key", entity.name_key.clone())
-            .param("name", entity.name.clone())
-            .param("aliases", entity.aliases.clone())
-            .param("kind", entity.kind.clone())
-            .param("embedding", embedding.clone())
-            .param("description", entity.description.clone())
-            .param(
-                "properties",
-                serde_json::to_string(&entity.properties).unwrap_or_default(),
-            ),
-            "e",
-        )
-        .await?
-        .ok_or_else(|| InfrastructureError::InternalError("MERGE returned no row".into()))
-    }
-
-    // Returns None when either endpoint entity doesn't exist in this world.
-    pub async fn upsert_relationship(
-        &self,
-        relationship: &Relationship,
-    ) -> Result<Option<Relationship>, InfrastructureError> {
-        Self::validate_cypher_identifier(&relationship.rel_type)?;
-
-        let cypher = format!(
-            "
-            MATCH (a:Entity {{id: $from_id, world_id: $world_id}}),
-                  (b:Entity {{id: $to_id, world_id: $world_id}})
-            MERGE (a)-[r:{}]->(b)
-            ON CREATE SET
-                r.id                  = $id,
-                r.world_id            = $world_id,
-                r.from_id             = $from_id,
-                r.to_id               = $to_id,
-                r.description         = $description,
-                r.properties          = $properties,
-                r.source_conversation = $source_conversation
-            ON MATCH SET
-                r.description         = $description,
-                r.properties          = $properties
-            RETURN r
-            ",
-            relationship.rel_type
-        );
-
-        self.fetch_one::<Relationship>(
-            query(&cypher)
-                .param("id", relationship.id.clone())
-                .param("world_id", relationship.world_id.clone())
-                .param("from_id", relationship.from_id.clone())
-                .param("to_id", relationship.to_id.clone())
-                .param("description", relationship.description.clone())
-                .param(
-                    "properties",
-                    serde_json::to_string(&relationship.properties).unwrap_or_default(),
+        world_id: &str,
+        entities: &[(Entity, Vec<f64>)],
+        relationships: &[Relationship],
+        retracted_ids: &[String],
+        source_message_id: &str,
+    ) -> Result<(), InfrastructureError> {
+        for (e, _) in entities {
+            if e.world_id != world_id {
+                return Err(InfrastructureError::InternalError(
+                    "Entity is outside this world".into(),
+                ));
+            }
+        }
+        for r in relationships {
+            Self::validate_cypher_identifier(&r.rel_type)?;
+            if r.world_id != world_id || retracted_ids.contains(&r.id) {
+                return Err(InfrastructureError::InternalError(
+                    "Invalid relationship batch".into(),
+                ));
+            }
+        }
+        let mut txn = self.graph.start_txn().await?;
+        let result: Result<(), InfrastructureError> = async {
+            for (e, embedding) in entities {
+                txn.run(
+                    query(
+                        "MERGE (e:Entity {world_id: $world_id, id: $id})
+                     SET e.name = $name, e.name_key = $name_key, e.aliases = $aliases,
+                         e.kind = $kind, e.description = $description,
+                         e.properties = $properties, e.embedding = $embedding,
+                         e.source_message_ids =
+                            CASE
+                                WHEN $source_message_id IN coalesce(e.source_message_ids, [])
+                                THEN e.source_message_ids
+                                ELSE coalesce(e.source_message_ids, []) + [$source_message_id]
+                            END
+                         ",
+                    )
+                    .param("world_id", world_id)
+                    .param("id", e.id.clone())
+                    .param("name", e.name.clone())
+                    .param("name_key", name_key(&e.name))
+                    .param("aliases", e.aliases.clone())
+                    .param("kind", e.kind.clone())
+                    .param("description", e.description.clone())
+                    .param("properties", serde_json::to_string(&e.properties).unwrap())
+                    .param("embedding", embedding.clone())
+                    .param("source_message_id", source_message_id),
                 )
-                .param(
-                    "source_conversation",
-                    relationship.source_conversation.clone(),
-                ),
-            "r",
-        )
-        .await
+                .await?;
+            }
+            for r in relationships {
+                // An existing ID must still describe the same directed connection.
+                let mut existing = txn
+                    .execute(
+                        query(
+                            "MATCH (a)-[r]->(b) WHERE r.world_id = $world_id AND r.id = $id
+                     RETURN a.id AS from_id, b.id AS to_id, type(r) AS rel_type",
+                        )
+                        .param("world_id", world_id)
+                        .param("id", r.id.clone()),
+                    )
+                    .await?;
+                while let Some(row) = existing.next(&mut txn).await? {
+                    if row.get::<String>("from_id")? != r.from_id
+                        || row.get::<String>("to_id")? != r.to_id
+                        || row.get::<String>("rel_type")? != r.rel_type
+                    {
+                        return Err(InfrastructureError::InternalError(
+                            "Relationship ID already belongs to a different connection".into(),
+                        ));
+                    }
+                }
+                let mut saved = txn
+                    .execute(
+                        query(&format!(
+                            "MATCH (a:Entity {{world_id: $world_id, id: $from_id}}),
+                                (b:Entity {{world_id: $world_id, id: $to_id}})
+                            MERGE (a)-[r:{} {{world_id: $world_id, id: $id}}]->(b)
+                            ON CREATE SET r.source_conversation = $source
+                            SET r.from_id = $from_id, r.to_id = $to_id,
+                                r.description = $description, r.properties = $properties,
+                                r.source_message_ids =
+                                    CASE
+                                        WHEN $source_message_id IN coalesce(r.source_message_ids, [])
+                                        THEN r.source_message_ids
+                                        ELSE coalesce(r.source_message_ids, []) + [$source_message_id]
+                                    END
+                            RETURN r.id AS id",
+                            r.rel_type
+                        ))
+                        .param("world_id", world_id)
+                        .param("id", r.id.clone())
+                        .param("from_id", r.from_id.clone())
+                        .param("to_id", r.to_id.clone())
+                        .param("description", r.description.clone())
+                        .param("properties", serde_json::to_string(&r.properties).unwrap())
+                        .param("source", r.source_conversation.clone())
+                        .param("source_message_id", source_message_id),
+                    )
+                    .await?;
+                if saved.next(&mut txn).await?.is_none() {
+                    return Err(InfrastructureError::InternalError(
+                        "Relationship endpoint not found in this world; batch rolled back".into(),
+                    ));
+                }
+            }
+            for id in retracted_ids {
+                txn.run(
+                    query("MATCH ()-[r]->() WHERE r.world_id = $world_id AND r.id = $id DELETE r")
+                        .param("world_id", world_id)
+                        .param("id", id.clone()),
+                )
+                .await?;
+            }
+            Ok(())
+        }
+        .await;
+        match result {
+            Ok(()) => {
+                txn.commit().await?;
+                Ok(())
+            }
+            Err(error) => {
+                txn.rollback().await?;
+                Err(error)
+            }
+        }
     }
 
     // One open conflict per entity field: a retry, or a later message contradicting
@@ -547,6 +593,7 @@ impl GraphRepository {
     pub async fn upsert_conflict(
         &self,
         conflict: &Conflict,
+        source_message_id: &str,
     ) -> Result<Option<Conflict>, InfrastructureError> {
         self.fetch_one::<Conflict>(
             query(
@@ -570,9 +617,15 @@ impl GraphRepository {
                     c.severity            = $severity,
                     c.explanation         = $explanation,
                     c.source_conversation = $source_conversation
+                SET c.source_message_ids = CASE
+                    WHEN $source_message_id IN coalesce(c.source_message_ids, [])
+                    THEN c.source_message_ids
+                    ELSE coalesce(c.source_message_ids, []) + [$source_message_id]
+                END
                 RETURN c
                 ",
             )
+            .param("source_message_id", source_message_id)
             .param("id", conflict.id.clone())
             .param("world_id", conflict.world_id.clone())
             .param("entity_id", conflict.entity_id.clone())
@@ -664,9 +717,9 @@ impl GraphRepository {
 
         let cypher = format!(
             r#"
-                MATCH (a: Entity) -[r{}]-> (b: Entity) 
-                WHERE a.id = $from_id 
-                    AND b.id = $to_id 
+                MATCH (a: Entity) -[r{}]-> (b: Entity)
+                WHERE a.id = $from_id
+                    AND b.id = $to_id
                     AND a.world_id = $world_id
                     AND b.world_id = $world_id
                 DELETE r

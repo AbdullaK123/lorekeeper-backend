@@ -12,6 +12,7 @@ fn entity(id: &str, name: &str, kind: &str, description: &str) -> Entity {
         kind: vec![kind.into()],
         description: description.into(),
         properties: HashMap::new(),
+        source_message_ids: vec![],
     }
 }
 
@@ -24,6 +25,7 @@ fn rel(from: &str, to: &str, rel_type: &str) -> Relationship {
         rel_type: rel_type.into(),
         description: String::new(),
         properties: HashMap::new(),
+        source_message_ids: vec![],
         source_conversation: "c".into(),
     }
 }
@@ -95,9 +97,9 @@ fn format_hits_draws_outgoing_and_incoming_arrows() {
 
     assert_eq!(
         format_hits(&[hit]),
-        "Kael (character): A warrior from the Ashlands.\n\
-         \x20 - MEMBER_OF → Iron Conclave (faction): A militant order.\n\
-         \x20 - ← MENTORED from Old Mags (character)"
+        "Kael (character) [ID: k]: A warrior from the Ashlands.\n\
+         \x20 - MEMBER_OF → Iron Conclave (faction) [ID: c]: A militant order.\n\
+         \x20 - ← MENTORED from Old Mags (character) [ID: m]"
     );
 }
 
@@ -117,7 +119,7 @@ fn format_hits_separates_hits_with_a_blank_line() {
     let a = SearchHit { entity: entity("a", "A", "x", ""), neighbors: vec![] };
     let b = SearchHit { entity: entity("b", "B", "x", ""), neighbors: vec![] };
 
-    assert_eq!(format_hits(&[a, b]), "A (x)\n\nB (x)");
+    assert_eq!(format_hits(&[a, b]), "A (x) [ID: a]\n\nB (x) [ID: b]");
 }
 
 #[test]

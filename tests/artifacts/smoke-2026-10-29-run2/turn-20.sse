@@ -1,0 +1,536 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"###"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Canon"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"\n"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"-"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" **"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"A"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"sha"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Pell"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":**"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Born"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" on"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":";"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" moved"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" V"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"esper"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" at"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" age"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" six"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" She"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" keeps"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" small"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" brass"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" key"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" sewn"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" inside"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" her"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" left"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" coat"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" cuff"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" opens"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" old"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" lens"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" room"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" beneath"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" V"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"esper"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"’s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" lighthouse"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":";"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" only"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ven"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" knows"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" she"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" has"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":".\n"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"-"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" **"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ven"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Marr"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":**"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Lost"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" his"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" right"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" eye"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" winter"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" storm"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" of"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" "}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"312"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" He"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" navig"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ates"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" *"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Night"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"jar"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"*"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" using"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" tide"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" charts"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" not"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" magic"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":".\n"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"-"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" **"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"B"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ren"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Vale"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":**"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Ref"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"uses"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" join"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Lantern"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Guild"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" because"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" he"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" distrust"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Tal"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Ren"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"’s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" friends"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" His"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" older"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" sister"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" N"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"essa"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" cooks"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" aboard"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" *"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Pet"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"rel"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"*"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":";"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" she"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" not"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" his"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" employee"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" on"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" formal"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" wage"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" N"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"essa"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" keeps"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Button"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" black"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" cat"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" aboard"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":".\n"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"-"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" **"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"The"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" *"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Night"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"jar"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"*"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":**"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Its"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" current"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" route"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" carries"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" letters"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" from"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" V"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"esper"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" K"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"est"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" southern"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" island"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Its"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" former"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" April"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"–"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"September"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" blue"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"-s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"alt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" route"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" retired"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":".\n"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"-"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" **"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Lens"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" room"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":**"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Perman"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ently"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" sealed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" by"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" rock"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"fall"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" "}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"318"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":";"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" nobody"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" has"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" reopened"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" has"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" no"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" other"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" entrance"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":".\n\n"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"###"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Un"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"resolved"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" contradiction"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"\n"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"A"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" note"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" says"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ven"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" meets"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" S"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"era"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" inside"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" room"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" "}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"320"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" negotiate"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" salt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" contract"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" That"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" conflicts"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" with"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" room"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" being"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" sealed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" inaccessible"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" since"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" "}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"318"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" with"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" A"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"sha"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" not"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" letting"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ven"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" negotiate"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" contracts"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" No"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" reconciliation"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" established"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"### Canon\n- **Asha Pell:** Born on Orin; moved to Vesper at age six. She keeps a small brass key sewn inside her left coat cuff. It opens the old lens room beneath Vesper’s lighthouse; only Iven knows she has it.\n- **Iven Marr:** Lost his right eye in the winter storm of 312. He navigates the *Nightjar* using tide charts, not magic.\n- **Bren Vale:** Refuses to join the Lantern Guild because he distrusts Tal Ren’s friends. His older sister Nessa cooks aboard the *Petrel*; she is not his employee on a formal wage. Nessa keeps Button, a black cat, aboard.\n- **The *Nightjar*:** Its current route carries letters from Vesper to Kest, a southern island. Its former April–September blue-salt route is retired.\n- **Lens room:** Permanently sealed by a rockfall in 318; nobody has reopened it, and it has no other entrance.\n\n### Unresolved contradiction\nA note says Iven meets Sera inside the room in 320 to negotiate a salt contract. That conflicts with the room being sealed and inaccessible since 318, and with Asha not letting Iven negotiate contracts. No reconciliation is established."}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"","native":{"item":{"reasoning_details":[{"type":"reasoning.encrypted","data":"gAAAAABq4y_D6sJbqCH_94gONQPc4q-VdtY0i3akusg8KCDi15Od1LnIjSWhohJ2thYQzkIpHNg9Q3Vln0QuA6-ZXmymMv9VzF1CwMeKi66MMtiV2LYi6Fpw4Ek1Fo21uheng6Gz0suF9y0eOV_qkiKCK9bGiqelwvTcCjyhHH6rOlvFAOBXo6VubQlhKmtMwDE1PHeeJbkC82BB9vFGJxDJuGcVHhRVlIRl0pyYfHqVReMbH0h_VOTw25zsK1cJNkAg_ekBOQzPmgzqs2Zmy8Rpia3FwJseSHnUM5sqVz_OCMr7F_EVHe3bB6UDvmQSBnNkzYLMXJRsiVoGrjmB8aHNbMafPAK00F1ywlV0v2ZAL9t0O7e15WuZc0C5Q2qZzXWxi1ay9DnKqFVE3tiLeNpHwNPfh4idg9zKsieFY--x6iMF0LP1leXKjBS8xZDE7OAqIS7ArinSODFxSe70TosHMbDJY8Gec9SVIwjRgSPIW9CNtnhxHeaVHmi8ZHjbnUdF1swNnsrmhlmURnf0d_VY9n4ugD6FeRyK7cDaD2v1cQ1N86uIYAfF66Vz8a-qw5krCypEAeKnn08abfkGYFiCtNN-x58aw5VfGNXqTCX-kN9HHCWksS951cHGDC375DSrBCWsusNAbGayEK0-BV7EanqgegEJRWqCZru1drqf7kSSrOGFcWa0dNKq_Xl9yutWBasa9DdTMViO_Qjv297O1SPfknZLoiSgaguQzYQzE_IS1EvDieGFYmJ3SGZaf-hG048_JeDdACIchmRg2pP6ahEDpAV3Cow7H0avvQMUntoyApVmqsltgpvpwBMfM4iQG7wTdLE-sI0L0G_tEMkXaIEDixynCnJiNfu3UYVUwtzYJ-kV7R7nbnZq_wgdV9-zLB9hLI9p_2R6BH7MsAFhje1wDL_X2dg6uzTM_YwtmkvHSm_POfzGlBs3ZprUJUuwc2FS_xLKMKPJHzlCYolifD1L-j5ZlQarIe8SfUaUUzbeD1VHCg32MhwdU_G-NWhRo7wF64BAyVw90nwJLoEd7bX_Ogxe3nIyhn-qd2eNHGKFH4qIswl3Pitj-jd2kBZjdhsNHl-mMK15E4_YhPjTRWSw4ByBdbBf-QdO09QnRcJ3PmfF595vqkYjj_wtVADEyTHE0vTjWbmqb7jafcLmtPmyzl0-OU7mMI1-DOWsX3FkAxHLgPPR1hvKWEgyIrhmUUBndYODKb6hX1UlcN8Na2Ug0XLpLTjmkI8U3MVpae2d09e7YUEikfNjSkVxOZLWC0O-vWWlbES2g7i3_Tldh4H7RqWY53Dw1K4LMcelyWtCRDWRplxGTmYXMRgcAS82uXNqXAeCa40i5InaSJ4ZPbTb7xOLG2I61xzK_Sxp9f1dQbm3nqK1AMY3SOYCYuA4bB-Jyra34JyA-npuBprEJDWI1F6JIgxm5-bRmIIAB7eSZAfYDQxwT7X4-k9tpLwNuBU_-R9FEkRFLoxCj78n9oCiKx78p-ocbntU_gdsyVOyVQTwGqK36oE02wcQFO2oTlq8n69zCfmJSgg0j6qfc6ms-wEdG7Bjei0k56pouK7DT5rRHLAVHxPeSy6nOaYmkHgCnEXvc-zzw2v-_0SrKDs5lUITau41ukNWlSECMChaQRaOzGP4gBkUhsnYB-QyOLAiBzwFfVeiyQPmDJqpJqlqookLHilQaVDxDiB2TCi-ra21FcCiPGhUCQuiQ1QmpihQduzSWrdsP4wLM8TUti226oTpCrkIajFo7GoFl0Repei-MlDFZCrannCR5zpRcqCPydpj6rp9N-w1so_10dtUZwwShzrs0J7Ak3pjIl_Ymb44mC3jqQ78VarlTaazaOQlZyzijpyDfj_OI4zMpXqvE_u-pALZNMF_faz2RSDaVbkffUsNqDop1VUPVbY9QUwvxF0IhyW1Gefu2T-xUPx7AiBvRE9iFtpcDQnH4G_nf4C6MKE2KGeuJwX-47dLSpf3hC6hMlNQ42PNTaCJaZT4CrZWYpxrZVCSqWwwgIrUq_JPocWG6_V1FZgf3obaq3PLXtPUMvCTddb6ukmfCu7jrZO8nG7XyxvzR7MxUDF4zF7If37nMcpfCFGE1ZUYFp0gJ2AxHMo6--SZXWVJ66A_Ca5jqLlwcREx5bZNgSvGDZw_Ako8QDvUH5osQqhpNOKznox4XEB4SFXZSdaLjCC-L7J_N42ThpoR94KeSEgYRTR4SJWEFwEz0uZCLKOGInR2LBBENzmX73FNrRJRQRnw86VyLVUDLI8mb2YH8E3J_eNzwVGYO7E5V9-Ua6IupcPy03QuLCB--hoAyJCLqSL6zfj6HScmmeg2ImY1mAMH0ZiMGzJj-4y1udZ4tFBdwuyksZPrwYtygi942cYtE8u3hQFz1369ktJH7ZDbxMAQZufcc65aLy0HaTNA7YRciIl22neQYbj8waa0c1V2GjKK8xSOJZoJHhlDRSDau_ya3NWhOwDrfwbwvUTS1GuF4PDl8ojNzZmsAoIHZsWtaYoPru0o-duxwYTU2amKykne5MXZ9TgSkHR0XrOW5nrLxWQ8MQ4yFvisFbC0itK_bAEsb0k9WeLfY0MM6v6DG9k4UGCP9pZrTNlYLHDUG389RW8IYhBu1tWCabVN2mJIcETn8aNkpz3l1GLpqhWPBPvULofkC4EiXD1jVu8-vgda0QUkko_vlexH1Ii3bAJ5ZBStr80IKKZohtUuv1Qsw3vbI-yti5h74DZZkXg-2YeMwsPZ88VvmRgUCrcSsfo0IsoHIbd4-Zit5-wSHCC1ujpRZvAe4K_Y8KF1li-7v_YxfVG9eUG5wsz8O9DWBhxhXv0swcinUCOwSrdei6J6YLxuBJATDBl0gurR5ZL1uZXdkK_a2Glty7NEZrmjVbx2NWtJENQIPaTEAmsDadjPJgDjkjrJkf2CPGlhAODPyJrQe7akYnU_39rF7KYSiYpBO7HiISebY90zBbOzZm6C8EtAlj0mTunLa0ZBEBWgOFcLHo1tUg-0ogX_k8IUIdUF2sTNkCLIhsVl1OAU63KRJfJf-7lyUrrakLnhll6dAePHqtvO-q5ywKS98hoMyISB_mrka_3fiXwZPHYpWR0EpALJWiMdNXttOU3h6dDcvWzSzrt0xvrbtLsMSloMRO8hCJ1nm84BRKwg2bowMpGaI0MTaDEEu9YFo86GYCYmL_Q9UEsFM1T6VFvfY8iZ9H3Iy9fES4kTv4pgA1f50MGogRSRG9yedyfD7xyp_TSvqpKEBxp1629A07e55zzSURtKB3R9IQqFI2tnJ-5BjAuoAA9xOVSJF8cAFdHqeHuiuYoyUmfBbiim5uyC4VWY3KDKvuCZ-jV91c27_sE1pvSDYlrc3E_oaRKc86ujy0KmjHwh2049sXqd695iN4rl_f4n7lkvfMt33mrEgSCs2F6lVI8TQmzA-INc2Q9-GY6ks4WyamDBxL_jzsz7mbaGFxtG3IMZK5IGlfJI93ZfBwB4HPP2FrrKKKQlpO7o1_Ti87Z90DydepQmfFS7bxdP-vRpJpv5qD3iN840qzrqhjI55oWWsoRaV5pk0uZJcbWib2ir10MmJHRnUXxnKP_M0dyiPMT_ZCvcgar9viWulj6v7qRePiXDbG49zlW2KE_HxRe7PPjRuaWXopJdHmVCOOP1mu-BZxWgbJ12OYWpcgkhNklMnaHF5X1KsUQi8KybSi4I7KdO7W9I-baSkyVv9MHoZkXzz8elnyKbhuHNp6GPHhSvrMopw1VR4LLkS_Rg-l0Bx7sm1Xszfyy8kl_RkJ3kID2NAqZaxjM4zkqnSSQyCMVmvdri4vv4xl4P5A5G60OnBl23LYKzXaRubZ6xgRLtLcvkypgoqiTtK8o4GG-l1DN1I_djvTa24wphyar9S66DoyZZXnZJUsMfff6d0GGFHJz_X3KnSVyK_iZMElvt5hMKFlewHsa5asEqMf-8zvgFaHB4nxDUXSd0S0LkVfQ_uivwrMId4jxJ3t7YbEtiOsmy_p5RsJMs32zCycHONYg4tcloVmziMu0dFvdtVRu7jFJ44QYa4ZfKUCdSVPkaQrrANwjdREoFrxARdp7Zn1EH-VfugbCvE83UTliArr5-aBTnsIWG5uWmmlF3k2x11KtLejwVBZgkbyb5fGAsCnF6cA_t6FexGVlFO5Jp810wRTO081ui_n1fIi117jFuGa1eVaQoheLyBZvCGYO1QB5D97UkNWdqtRnDv7j63DBFGSbOdmeooVloqCIx8DnGVJQSWEoJWnskegCQSwfKi4cxijxuiKcBk4-dWGzas7veRt_MGM-77qHimkU0sl67RnGB3O6Ad4huNQf4BIgqoz9GryuasG4RkVibA7PwLllDnxPMQ8zSKMFzqW9U2niStOeFzl355d7NooFi3ghYhda446xfWNCWJ1DdjdP2PEPCne0XWkJK7qdTpMtxlMC-zwNNIZ-iTHCu_aLKDmzO1F6tIxSfvOWpot-BP49llDTB7fwik2wtqHvj5BL37PTmc537CuM9FbuaU3HGT789-cqCK25hWk-4jhpo-DkEv234qrkCfVT4g8xXt2dZN02LeuQhTw6M-Ahe4NTXdKOD5vXWrpqpuV431BF0hcvi3_AiBAFnKHm1KfWCz2BvkE0Y6suWkYAtZ4527U-cFmNq5nuJCHQ8Kc0M7QIsv-foQsU5ASgPjlAx_c88dfuWWfD41YTZ5ZhPYbznG8CVK2Myav4D0aIZy2a8253dZryRrZa3Br5PAdr8B3Q8atWuVehlQMtDKxHRoIdBUTA_bAtx3TKOonKCihhqLB2KUI4kSw1U55W5G6wR84LlEQ8f-8w0vtAV0fHnzdTJrdLvJPGPdJwZDJXX0Tnh1ITzVWb3hsJuVywXyw0PYNa1z8rDLaNcihqX2hK4INXUgxk8FBWNQn2iUdbTg119iRTGQ6Pt7CzfHiE0G98CZz9GiIkTp3RWSvki_eL9_P2SP4FA7qaCIP1zVHwsaFtfjA6lxHP4KqWK8TFImUobwA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_03082e88cc804a90016ae32fc058f487d188b16e99af916ae9","index":0}]},"fingerprint":"82b6ea64ef91009f"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":5667,"output_tokens":529,"total_tokens":6196,"cached_input_tokens":1826,"cache_creation_input_tokens":3838,"reasoning_tokens":261,"cost":{"total":0.00076281}},"response_id":"gen-1793273791-q4kKjAG8tfScBEEkMpgs","finish_reason":"stop","raw":{"id":"gen-1793273791-q4kKjAG8tfScBEEkMpgs","object":"chat.completion","created":1793273791,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"### Canon\n- **Asha Pell:** Born on Orin; moved to Vesper at age six. She keeps a small brass key sewn inside her left coat cuff. It opens the old lens room beneath Vesper’s lighthouse; only Iven knows she has it.\n- **Iven Marr:** Lost his right eye in the winter storm of 312. He navigates the *Nightjar* using tide charts, not magic.\n- **Bren Vale:** Refuses to join the Lantern Guild because he distrusts Tal Ren’s friends. His older sister Nessa cooks aboard the *Petrel*; she is not his employee on a formal wage. Nessa keeps Button, a black cat, aboard.\n- **The *Nightjar*:** Its current route carries letters from Vesper to Kest, a southern island. Its former April–September blue-salt route is retired.\n- **Lens room:** Permanently sealed by a rockfall in 318; nobody has reopened it, and it has no other entrance.\n\n### Unresolved contradiction\nA note says Iven meets Sera inside the room in 320 to negotiate a salt contract. That conflicts with the room being sealed and inaccessible since 318, and with Asha not letting Iven negotiate contracts. No reconciliation is established.","role":"assistant","reasoning":null,"reasoning_details":[{"type":"reasoning.encrypted","data":"gAAAAABq4y_D6sJbqCH_94gONQPc4q-VdtY0i3akusg8KCDi15Od1LnIjSWhohJ2thYQzkIpHNg9Q3Vln0QuA6-ZXmymMv9VzF1CwMeKi66MMtiV2LYi6Fpw4Ek1Fo21uheng6Gz0suF9y0eOV_qkiKCK9bGiqelwvTcCjyhHH6rOlvFAOBXo6VubQlhKmtMwDE1PHeeJbkC82BB9vFGJxDJuGcVHhRVlIRl0pyYfHqVReMbH0h_VOTw25zsK1cJNkAg_ekBOQzPmgzqs2Zmy8Rpia3FwJseSHnUM5sqVz_OCMr7F_EVHe3bB6UDvmQSBnNkzYLMXJRsiVoGrjmB8aHNbMafPAK00F1ywlV0v2ZAL9t0O7e15WuZc0C5Q2qZzXWxi1ay9DnKqFVE3tiLeNpHwNPfh4idg9zKsieFY--x6iMF0LP1leXKjBS8xZDE7OAqIS7ArinSODFxSe70TosHMbDJY8Gec9SVIwjRgSPIW9CNtnhxHeaVHmi8ZHjbnUdF1swNnsrmhlmURnf0d_VY9n4ugD6FeRyK7cDaD2v1cQ1N86uIYAfF66Vz8a-qw5krCypEAeKnn08abfkGYFiCtNN-x58aw5VfGNXqTCX-kN9HHCWksS951cHGDC375DSrBCWsusNAbGayEK0-BV7EanqgegEJRWqCZru1drqf7kSSrOGFcWa0dNKq_Xl9yutWBasa9DdTMViO_Qjv297O1SPfknZLoiSgaguQzYQzE_IS1EvDieGFYmJ3SGZaf-hG048_JeDdACIchmRg2pP6ahEDpAV3Cow7H0avvQMUntoyApVmqsltgpvpwBMfM4iQG7wTdLE-sI0L0G_tEMkXaIEDixynCnJiNfu3UYVUwtzYJ-kV7R7nbnZq_wgdV9-zLB9hLI9p_2R6BH7MsAFhje1wDL_X2dg6uzTM_YwtmkvHSm_POfzGlBs3ZprUJUuwc2FS_xLKMKPJHzlCYolifD1L-j5ZlQarIe8SfUaUUzbeD1VHCg32MhwdU_G-NWhRo7wF64BAyVw90nwJLoEd7bX_Ogxe3nIyhn-qd2eNHGKFH4qIswl3Pitj-jd2kBZjdhsNHl-mMK15E4_YhPjTRWSw4ByBdbBf-QdO09QnRcJ3PmfF595vqkYjj_wtVADEyTHE0vTjWbmqb7jafcLmtPmyzl0-OU7mMI1-DOWsX3FkAxHLgPPR1hvKWEgyIrhmUUBndYODKb6hX1UlcN8Na2Ug0XLpLTjmkI8U3MVpae2d09e7YUEikfNjSkVxOZLWC0O-vWWlbES2g7i3_Tldh4H7RqWY53Dw1K4LMcelyWtCRDWRplxGTmYXMRgcAS82uXNqXAeCa40i5InaSJ4ZPbTb7xOLG2I61xzK_Sxp9f1dQbm3nqK1AMY3SOYCYuA4bB-Jyra34JyA-npuBprEJDWI1F6JIgxm5-bRmIIAB7eSZAfYDQxwT7X4-k9tpLwNuBU_-R9FEkRFLoxCj78n9oCiKx78p-ocbntU_gdsyVOyVQTwGqK36oE02wcQFO2oTlq8n69zCfmJSgg0j6qfc6ms-wEdG7Bjei0k56pouK7DT5rRHLAVHxPeSy6nOaYmkHgCnEXvc-zzw2v-_0SrKDs5lUITau41ukNWlSECMChaQRaOzGP4gBkUhsnYB-QyOLAiBzwFfVeiyQPmDJqpJqlqookLHilQaVDxDiB2TCi-ra21FcCiPGhUCQuiQ1QmpihQduzSWrdsP4wLM8TUti226oTpCrkIajFo7GoFl0Repei-MlDFZCrannCR5zpRcqCPydpj6rp9N-w1so_10dtUZwwShzrs0J7Ak3pjIl_Ymb44mC3jqQ78VarlTaazaOQlZyzijpyDfj_OI4zMpXqvE_u-pALZNMF_faz2RSDaVbkffUsNqDop1VUPVbY9QUwvxF0IhyW1Gefu2T-xUPx7AiBvRE9iFtpcDQnH4G_nf4C6MKE2KGeuJwX-47dLSpf3hC6hMlNQ42PNTaCJaZT4CrZWYpxrZVCSqWwwgIrUq_JPocWG6_V1FZgf3obaq3PLXtPUMvCTddb6ukmfCu7jrZO8nG7XyxvzR7MxUDF4zF7If37nMcpfCFGE1ZUYFp0gJ2AxHMo6--SZXWVJ66A_Ca5jqLlwcREx5bZNgSvGDZw_Ako8QDvUH5osQqhpNOKznox4XEB4SFXZSdaLjCC-L7J_N42ThpoR94KeSEgYRTR4SJWEFwEz0uZCLKOGInR2LBBENzmX73FNrRJRQRnw86VyLVUDLI8mb2YH8E3J_eNzwVGYO7E5V9-Ua6IupcPy03QuLCB--hoAyJCLqSL6zfj6HScmmeg2ImY1mAMH0ZiMGzJj-4y1udZ4tFBdwuyksZPrwYtygi942cYtE8u3hQFz1369ktJH7ZDbxMAQZufcc65aLy0HaTNA7YRciIl22neQYbj8waa0c1V2GjKK8xSOJZoJHhlDRSDau_ya3NWhOwDrfwbwvUTS1GuF4PDl8ojNzZmsAoIHZsWtaYoPru0o-duxwYTU2amKykne5MXZ9TgSkHR0XrOW5nrLxWQ8MQ4yFvisFbC0itK_bAEsb0k9WeLfY0MM6v6DG9k4UGCP9pZrTNlYLHDUG389RW8IYhBu1tWCabVN2mJIcETn8aNkpz3l1GLpqhWPBPvULofkC4EiXD1jVu8-vgda0QUkko_vlexH1Ii3bAJ5ZBStr80IKKZohtUuv1Qsw3vbI-yti5h74DZZkXg-2YeMwsPZ88VvmRgUCrcSsfo0IsoHIbd4-Zit5-wSHCC1ujpRZvAe4K_Y8KF1li-7v_YxfVG9eUG5wsz8O9DWBhxhXv0swcinUCOwSrdei6J6YLxuBJATDBl0gurR5ZL1uZXdkK_a2Glty7NEZrmjVbx2NWtJENQIPaTEAmsDadjPJgDjkjrJkf2CPGlhAODPyJrQe7akYnU_39rF7KYSiYpBO7HiISebY90zBbOzZm6C8EtAlj0mTunLa0ZBEBWgOFcLHo1tUg-0ogX_k8IUIdUF2sTNkCLIhsVl1OAU63KRJfJf-7lyUrrakLnhll6dAePHqtvO-q5ywKS98hoMyISB_mrka_3fiXwZPHYpWR0EpALJWiMdNXttOU3h6dDcvWzSzrt0xvrbtLsMSloMRO8hCJ1nm84BRKwg2bowMpGaI0MTaDEEu9YFo86GYCYmL_Q9UEsFM1T6VFvfY8iZ9H3Iy9fES4kTv4pgA1f50MGogRSRG9yedyfD7xyp_TSvqpKEBxp1629A07e55zzSURtKB3R9IQqFI2tnJ-5BjAuoAA9xOVSJF8cAFdHqeHuiuYoyUmfBbiim5uyC4VWY3KDKvuCZ-jV91c27_sE1pvSDYlrc3E_oaRKc86ujy0KmjHwh2049sXqd695iN4rl_f4n7lkvfMt33mrEgSCs2F6lVI8TQmzA-INc2Q9-GY6ks4WyamDBxL_jzsz7mbaGFxtG3IMZK5IGlfJI93ZfBwB4HPP2FrrKKKQlpO7o1_Ti87Z90DydepQmfFS7bxdP-vRpJpv5qD3iN840qzrqhjI55oWWsoRaV5pk0uZJcbWib2ir10MmJHRnUXxnKP_M0dyiPMT_ZCvcgar9viWulj6v7qRePiXDbG49zlW2KE_HxRe7PPjRuaWXopJdHmVCOOP1mu-BZxWgbJ12OYWpcgkhNklMnaHF5X1KsUQi8KybSi4I7KdO7W9I-baSkyVv9MHoZkXzz8elnyKbhuHNp6GPHhSvrMopw1VR4LLkS_Rg-l0Bx7sm1Xszfyy8kl_RkJ3kID2NAqZaxjM4zkqnSSQyCMVmvdri4vv4xl4P5A5G60OnBl23LYKzXaRubZ6xgRLtLcvkypgoqiTtK8o4GG-l1DN1I_djvTa24wphyar9S66DoyZZXnZJUsMfff6d0GGFHJz_X3KnSVyK_iZMElvt5hMKFlewHsa5asEqMf-8zvgFaHB4nxDUXSd0S0LkVfQ_uivwrMId4jxJ3t7YbEtiOsmy_p5RsJMs32zCycHONYg4tcloVmziMu0dFvdtVRu7jFJ44QYa4ZfKUCdSVPkaQrrANwjdREoFrxARdp7Zn1EH-VfugbCvE83UTliArr5-aBTnsIWG5uWmmlF3k2x11KtLejwVBZgkbyb5fGAsCnF6cA_t6FexGVlFO5Jp810wRTO081ui_n1fIi117jFuGa1eVaQoheLyBZvCGYO1QB5D97UkNWdqtRnDv7j63DBFGSbOdmeooVloqCIx8DnGVJQSWEoJWnskegCQSwfKi4cxijxuiKcBk4-dWGzas7veRt_MGM-77qHimkU0sl67RnGB3O6Ad4huNQf4BIgqoz9GryuasG4RkVibA7PwLllDnxPMQ8zSKMFzqW9U2niStOeFzl355d7NooFi3ghYhda446xfWNCWJ1DdjdP2PEPCne0XWkJK7qdTpMtxlMC-zwNNIZ-iTHCu_aLKDmzO1F6tIxSfvOWpot-BP49llDTB7fwik2wtqHvj5BL37PTmc537CuM9FbuaU3HGT789-cqCK25hWk-4jhpo-DkEv234qrkCfVT4g8xXt2dZN02LeuQhTw6M-Ahe4NTXdKOD5vXWrpqpuV431BF0hcvi3_AiBAFnKHm1KfWCz2BvkE0Y6suWkYAtZ4527U-cFmNq5nuJCHQ8Kc0M7QIsv-foQsU5ASgPjlAx_c88dfuWWfD41YTZ5ZhPYbznG8CVK2Myav4D0aIZy2a8253dZryRrZa3Br5PAdr8B3Q8atWuVehlQMtDKxHRoIdBUTA_bAtx3TKOonKCihhqLB2KUI4kSw1U55W5G6wR84LlEQ8f-8w0vtAV0fHnzdTJrdLvJPGPdJwZDJXX0Tnh1ITzVWb3hsJuVywXyw0PYNa1z8rDLaNcihqX2hK4INXUgxk8FBWNQn2iUdbTg119iRTGQ6Pt7CzfHiE0G98CZz9GiIkTp3RWSvki_eL9_P2SP4FA7qaCIP1zVHwsaFtfjA6lxHP4KqWK8TFImUobwA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_03082e88cc804a90016ae32fc058f487d188b16e99af916ae9","index":0}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":5667,"completion_tokens":529,"total_tokens":6196,"cost":0.00076281,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":3838,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00076281,"upstream_inference_prompt_cost":0.00049831,"upstream_inference_completions_cost":0.0002645},"completion_tokens_details":{"reasoning_tokens":261,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":5667,"output_tokens":529,"total_tokens":6196,"cached_input_tokens":1826,"cache_creation_input_tokens":3838,"reasoning_tokens":261,"cost":{"total":0.00076281}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":5667,"output_tokens":529,"total_tokens":6196,"cached_input_tokens":1826,"cache_creation_input_tokens":3838,"reasoning_tokens":261,"cost":{"total":0.00076281}},"response_id":"gen-1793273791-q4kKjAG8tfScBEEkMpgs","finish_reason":"stop","raw":{"id":"gen-1793273791-q4kKjAG8tfScBEEkMpgs","object":"chat.completion","created":1793273791,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"### Canon\n- **Asha Pell:** Born on Orin; moved to Vesper at age six. She keeps a small brass key sewn inside her left coat cuff. It opens the old lens room beneath Vesper’s lighthouse; only Iven knows she has it.\n- **Iven Marr:** Lost his right eye in the winter storm of 312. He navigates the *Nightjar* using tide charts, not magic.\n- **Bren Vale:** Refuses to join the Lantern Guild because he distrusts Tal Ren’s friends. His older sister Nessa cooks aboard the *Petrel*; she is not his employee on a formal wage. Nessa keeps Button, a black cat, aboard.\n- **The *Nightjar*:** Its current route carries letters from Vesper to Kest, a southern island. Its former April–September blue-salt route is retired.\n- **Lens room:** Permanently sealed by a rockfall in 318; nobody has reopened it, and it has no other entrance.\n\n### Unresolved contradiction\nA note says Iven meets Sera inside the room in 320 to negotiate a salt contract. That conflicts with the room being sealed and inaccessible since 318, and with Asha not letting Iven negotiate contracts. No reconciliation is established.","role":"assistant","reasoning":null,"reasoning_details":[{"type":"reasoning.encrypted","data":"gAAAAABq4y_D6sJbqCH_94gONQPc4q-VdtY0i3akusg8KCDi15Od1LnIjSWhohJ2thYQzkIpHNg9Q3Vln0QuA6-ZXmymMv9VzF1CwMeKi66MMtiV2LYi6Fpw4Ek1Fo21uheng6Gz0suF9y0eOV_qkiKCK9bGiqelwvTcCjyhHH6rOlvFAOBXo6VubQlhKmtMwDE1PHeeJbkC82BB9vFGJxDJuGcVHhRVlIRl0pyYfHqVReMbH0h_VOTw25zsK1cJNkAg_ekBOQzPmgzqs2Zmy8Rpia3FwJseSHnUM5sqVz_OCMr7F_EVHe3bB6UDvmQSBnNkzYLMXJRsiVoGrjmB8aHNbMafPAK00F1ywlV0v2ZAL9t0O7e15WuZc0C5Q2qZzXWxi1ay9DnKqFVE3tiLeNpHwNPfh4idg9zKsieFY--x6iMF0LP1leXKjBS8xZDE7OAqIS7ArinSODFxSe70TosHMbDJY8Gec9SVIwjRgSPIW9CNtnhxHeaVHmi8ZHjbnUdF1swNnsrmhlmURnf0d_VY9n4ugD6FeRyK7cDaD2v1cQ1N86uIYAfF66Vz8a-qw5krCypEAeKnn08abfkGYFiCtNN-x58aw5VfGNXqTCX-kN9HHCWksS951cHGDC375DSrBCWsusNAbGayEK0-BV7EanqgegEJRWqCZru1drqf7kSSrOGFcWa0dNKq_Xl9yutWBasa9DdTMViO_Qjv297O1SPfknZLoiSgaguQzYQzE_IS1EvDieGFYmJ3SGZaf-hG048_JeDdACIchmRg2pP6ahEDpAV3Cow7H0avvQMUntoyApVmqsltgpvpwBMfM4iQG7wTdLE-sI0L0G_tEMkXaIEDixynCnJiNfu3UYVUwtzYJ-kV7R7nbnZq_wgdV9-zLB9hLI9p_2R6BH7MsAFhje1wDL_X2dg6uzTM_YwtmkvHSm_POfzGlBs3ZprUJUuwc2FS_xLKMKPJHzlCYolifD1L-j5ZlQarIe8SfUaUUzbeD1VHCg32MhwdU_G-NWhRo7wF64BAyVw90nwJLoEd7bX_Ogxe3nIyhn-qd2eNHGKFH4qIswl3Pitj-jd2kBZjdhsNHl-mMK15E4_YhPjTRWSw4ByBdbBf-QdO09QnRcJ3PmfF595vqkYjj_wtVADEyTHE0vTjWbmqb7jafcLmtPmyzl0-OU7mMI1-DOWsX3FkAxHLgPPR1hvKWEgyIrhmUUBndYODKb6hX1UlcN8Na2Ug0XLpLTjmkI8U3MVpae2d09e7YUEikfNjSkVxOZLWC0O-vWWlbES2g7i3_Tldh4H7RqWY53Dw1K4LMcelyWtCRDWRplxGTmYXMRgcAS82uXNqXAeCa40i5InaSJ4ZPbTb7xOLG2I61xzK_Sxp9f1dQbm3nqK1AMY3SOYCYuA4bB-Jyra34JyA-npuBprEJDWI1F6JIgxm5-bRmIIAB7eSZAfYDQxwT7X4-k9tpLwNuBU_-R9FEkRFLoxCj78n9oCiKx78p-ocbntU_gdsyVOyVQTwGqK36oE02wcQFO2oTlq8n69zCfmJSgg0j6qfc6ms-wEdG7Bjei0k56pouK7DT5rRHLAVHxPeSy6nOaYmkHgCnEXvc-zzw2v-_0SrKDs5lUITau41ukNWlSECMChaQRaOzGP4gBkUhsnYB-QyOLAiBzwFfVeiyQPmDJqpJqlqookLHilQaVDxDiB2TCi-ra21FcCiPGhUCQuiQ1QmpihQduzSWrdsP4wLM8TUti226oTpCrkIajFo7GoFl0Repei-MlDFZCrannCR5zpRcqCPydpj6rp9N-w1so_10dtUZwwShzrs0J7Ak3pjIl_Ymb44mC3jqQ78VarlTaazaOQlZyzijpyDfj_OI4zMpXqvE_u-pALZNMF_faz2RSDaVbkffUsNqDop1VUPVbY9QUwvxF0IhyW1Gefu2T-xUPx7AiBvRE9iFtpcDQnH4G_nf4C6MKE2KGeuJwX-47dLSpf3hC6hMlNQ42PNTaCJaZT4CrZWYpxrZVCSqWwwgIrUq_JPocWG6_V1FZgf3obaq3PLXtPUMvCTddb6ukmfCu7jrZO8nG7XyxvzR7MxUDF4zF7If37nMcpfCFGE1ZUYFp0gJ2AxHMo6--SZXWVJ66A_Ca5jqLlwcREx5bZNgSvGDZw_Ako8QDvUH5osQqhpNOKznox4XEB4SFXZSdaLjCC-L7J_N42ThpoR94KeSEgYRTR4SJWEFwEz0uZCLKOGInR2LBBENzmX73FNrRJRQRnw86VyLVUDLI8mb2YH8E3J_eNzwVGYO7E5V9-Ua6IupcPy03QuLCB--hoAyJCLqSL6zfj6HScmmeg2ImY1mAMH0ZiMGzJj-4y1udZ4tFBdwuyksZPrwYtygi942cYtE8u3hQFz1369ktJH7ZDbxMAQZufcc65aLy0HaTNA7YRciIl22neQYbj8waa0c1V2GjKK8xSOJZoJHhlDRSDau_ya3NWhOwDrfwbwvUTS1GuF4PDl8ojNzZmsAoIHZsWtaYoPru0o-duxwYTU2amKykne5MXZ9TgSkHR0XrOW5nrLxWQ8MQ4yFvisFbC0itK_bAEsb0k9WeLfY0MM6v6DG9k4UGCP9pZrTNlYLHDUG389RW8IYhBu1tWCabVN2mJIcETn8aNkpz3l1GLpqhWPBPvULofkC4EiXD1jVu8-vgda0QUkko_vlexH1Ii3bAJ5ZBStr80IKKZohtUuv1Qsw3vbI-yti5h74DZZkXg-2YeMwsPZ88VvmRgUCrcSsfo0IsoHIbd4-Zit5-wSHCC1ujpRZvAe4K_Y8KF1li-7v_YxfVG9eUG5wsz8O9DWBhxhXv0swcinUCOwSrdei6J6YLxuBJATDBl0gurR5ZL1uZXdkK_a2Glty7NEZrmjVbx2NWtJENQIPaTEAmsDadjPJgDjkjrJkf2CPGlhAODPyJrQe7akYnU_39rF7KYSiYpBO7HiISebY90zBbOzZm6C8EtAlj0mTunLa0ZBEBWgOFcLHo1tUg-0ogX_k8IUIdUF2sTNkCLIhsVl1OAU63KRJfJf-7lyUrrakLnhll6dAePHqtvO-q5ywKS98hoMyISB_mrka_3fiXwZPHYpWR0EpALJWiMdNXttOU3h6dDcvWzSzrt0xvrbtLsMSloMRO8hCJ1nm84BRKwg2bowMpGaI0MTaDEEu9YFo86GYCYmL_Q9UEsFM1T6VFvfY8iZ9H3Iy9fES4kTv4pgA1f50MGogRSRG9yedyfD7xyp_TSvqpKEBxp1629A07e55zzSURtKB3R9IQqFI2tnJ-5BjAuoAA9xOVSJF8cAFdHqeHuiuYoyUmfBbiim5uyC4VWY3KDKvuCZ-jV91c27_sE1pvSDYlrc3E_oaRKc86ujy0KmjHwh2049sXqd695iN4rl_f4n7lkvfMt33mrEgSCs2F6lVI8TQmzA-INc2Q9-GY6ks4WyamDBxL_jzsz7mbaGFxtG3IMZK5IGlfJI93ZfBwB4HPP2FrrKKKQlpO7o1_Ti87Z90DydepQmfFS7bxdP-vRpJpv5qD3iN840qzrqhjI55oWWsoRaV5pk0uZJcbWib2ir10MmJHRnUXxnKP_M0dyiPMT_ZCvcgar9viWulj6v7qRePiXDbG49zlW2KE_HxRe7PPjRuaWXopJdHmVCOOP1mu-BZxWgbJ12OYWpcgkhNklMnaHF5X1KsUQi8KybSi4I7KdO7W9I-baSkyVv9MHoZkXzz8elnyKbhuHNp6GPHhSvrMopw1VR4LLkS_Rg-l0Bx7sm1Xszfyy8kl_RkJ3kID2NAqZaxjM4zkqnSSQyCMVmvdri4vv4xl4P5A5G60OnBl23LYKzXaRubZ6xgRLtLcvkypgoqiTtK8o4GG-l1DN1I_djvTa24wphyar9S66DoyZZXnZJUsMfff6d0GGFHJz_X3KnSVyK_iZMElvt5hMKFlewHsa5asEqMf-8zvgFaHB4nxDUXSd0S0LkVfQ_uivwrMId4jxJ3t7YbEtiOsmy_p5RsJMs32zCycHONYg4tcloVmziMu0dFvdtVRu7jFJ44QYa4ZfKUCdSVPkaQrrANwjdREoFrxARdp7Zn1EH-VfugbCvE83UTliArr5-aBTnsIWG5uWmmlF3k2x11KtLejwVBZgkbyb5fGAsCnF6cA_t6FexGVlFO5Jp810wRTO081ui_n1fIi117jFuGa1eVaQoheLyBZvCGYO1QB5D97UkNWdqtRnDv7j63DBFGSbOdmeooVloqCIx8DnGVJQSWEoJWnskegCQSwfKi4cxijxuiKcBk4-dWGzas7veRt_MGM-77qHimkU0sl67RnGB3O6Ad4huNQf4BIgqoz9GryuasG4RkVibA7PwLllDnxPMQ8zSKMFzqW9U2niStOeFzl355d7NooFi3ghYhda446xfWNCWJ1DdjdP2PEPCne0XWkJK7qdTpMtxlMC-zwNNIZ-iTHCu_aLKDmzO1F6tIxSfvOWpot-BP49llDTB7fwik2wtqHvj5BL37PTmc537CuM9FbuaU3HGT789-cqCK25hWk-4jhpo-DkEv234qrkCfVT4g8xXt2dZN02LeuQhTw6M-Ahe4NTXdKOD5vXWrpqpuV431BF0hcvi3_AiBAFnKHm1KfWCz2BvkE0Y6suWkYAtZ4527U-cFmNq5nuJCHQ8Kc0M7QIsv-foQsU5ASgPjlAx_c88dfuWWfD41YTZ5ZhPYbznG8CVK2Myav4D0aIZy2a8253dZryRrZa3Br5PAdr8B3Q8atWuVehlQMtDKxHRoIdBUTA_bAtx3TKOonKCihhqLB2KUI4kSw1U55W5G6wR84LlEQ8f-8w0vtAV0fHnzdTJrdLvJPGPdJwZDJXX0Tnh1ITzVWb3hsJuVywXyw0PYNa1z8rDLaNcihqX2hK4INXUgxk8FBWNQn2iUdbTg119iRTGQ6Pt7CzfHiE0G98CZz9GiIkTp3RWSvki_eL9_P2SP4FA7qaCIP1zVHwsaFtfjA6lxHP4KqWK8TFImUobwA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_03082e88cc804a90016ae32fc058f487d188b16e99af916ae9","index":0}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":5667,"completion_tokens":529,"total_tokens":6196,"cost":0.00076281,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1826,"cache_write_tokens":3838,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00076281,"upstream_inference_prompt_cost":0.00049831,"upstream_inference_completions_cost":0.0002645},"completion_tokens_details":{"reasoning_tokens":261,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"Give me a short factual handoff: Asha's birthplace and secret, Iven's injury and role, Bren's guild stance and family aboard Petrel, the Nightjar's current route, and the unresolved lens-room issue. Separate unknowns and contradictions from canon."}]},{"role":"assistant","content":[{"type":"reasoning","text":"","native":{"item":{"reasoning_details":[{"type":"reasoning.encrypted","data":"gAAAAABq4y_D6sJbqCH_94gONQPc4q-VdtY0i3akusg8KCDi15Od1LnIjSWhohJ2thYQzkIpHNg9Q3Vln0QuA6-ZXmymMv9VzF1CwMeKi66MMtiV2LYi6Fpw4Ek1Fo21uheng6Gz0suF9y0eOV_qkiKCK9bGiqelwvTcCjyhHH6rOlvFAOBXo6VubQlhKmtMwDE1PHeeJbkC82BB9vFGJxDJuGcVHhRVlIRl0pyYfHqVReMbH0h_VOTw25zsK1cJNkAg_ekBOQzPmgzqs2Zmy8Rpia3FwJseSHnUM5sqVz_OCMr7F_EVHe3bB6UDvmQSBnNkzYLMXJRsiVoGrjmB8aHNbMafPAK00F1ywlV0v2ZAL9t0O7e15WuZc0C5Q2qZzXWxi1ay9DnKqFVE3tiLeNpHwNPfh4idg9zKsieFY--x6iMF0LP1leXKjBS8xZDE7OAqIS7ArinSODFxSe70TosHMbDJY8Gec9SVIwjRgSPIW9CNtnhxHeaVHmi8ZHjbnUdF1swNnsrmhlmURnf0d_VY9n4ugD6FeRyK7cDaD2v1cQ1N86uIYAfF66Vz8a-qw5krCypEAeKnn08abfkGYFiCtNN-x58aw5VfGNXqTCX-kN9HHCWksS951cHGDC375DSrBCWsusNAbGayEK0-BV7EanqgegEJRWqCZru1drqf7kSSrOGFcWa0dNKq_Xl9yutWBasa9DdTMViO_Qjv297O1SPfknZLoiSgaguQzYQzE_IS1EvDieGFYmJ3SGZaf-hG048_JeDdACIchmRg2pP6ahEDpAV3Cow7H0avvQMUntoyApVmqsltgpvpwBMfM4iQG7wTdLE-sI0L0G_tEMkXaIEDixynCnJiNfu3UYVUwtzYJ-kV7R7nbnZq_wgdV9-zLB9hLI9p_2R6BH7MsAFhje1wDL_X2dg6uzTM_YwtmkvHSm_POfzGlBs3ZprUJUuwc2FS_xLKMKPJHzlCYolifD1L-j5ZlQarIe8SfUaUUzbeD1VHCg32MhwdU_G-NWhRo7wF64BAyVw90nwJLoEd7bX_Ogxe3nIyhn-qd2eNHGKFH4qIswl3Pitj-jd2kBZjdhsNHl-mMK15E4_YhPjTRWSw4ByBdbBf-QdO09QnRcJ3PmfF595vqkYjj_wtVADEyTHE0vTjWbmqb7jafcLmtPmyzl0-OU7mMI1-DOWsX3FkAxHLgPPR1hvKWEgyIrhmUUBndYODKb6hX1UlcN8Na2Ug0XLpLTjmkI8U3MVpae2d09e7YUEikfNjSkVxOZLWC0O-vWWlbES2g7i3_Tldh4H7RqWY53Dw1K4LMcelyWtCRDWRplxGTmYXMRgcAS82uXNqXAeCa40i5InaSJ4ZPbTb7xOLG2I61xzK_Sxp9f1dQbm3nqK1AMY3SOYCYuA4bB-Jyra34JyA-npuBprEJDWI1F6JIgxm5-bRmIIAB7eSZAfYDQxwT7X4-k9tpLwNuBU_-R9FEkRFLoxCj78n9oCiKx78p-ocbntU_gdsyVOyVQTwGqK36oE02wcQFO2oTlq8n69zCfmJSgg0j6qfc6ms-wEdG7Bjei0k56pouK7DT5rRHLAVHxPeSy6nOaYmkHgCnEXvc-zzw2v-_0SrKDs5lUITau41ukNWlSECMChaQRaOzGP4gBkUhsnYB-QyOLAiBzwFfVeiyQPmDJqpJqlqookLHilQaVDxDiB2TCi-ra21FcCiPGhUCQuiQ1QmpihQduzSWrdsP4wLM8TUti226oTpCrkIajFo7GoFl0Repei-MlDFZCrannCR5zpRcqCPydpj6rp9N-w1so_10dtUZwwShzrs0J7Ak3pjIl_Ymb44mC3jqQ78VarlTaazaOQlZyzijpyDfj_OI4zMpXqvE_u-pALZNMF_faz2RSDaVbkffUsNqDop1VUPVbY9QUwvxF0IhyW1Gefu2T-xUPx7AiBvRE9iFtpcDQnH4G_nf4C6MKE2KGeuJwX-47dLSpf3hC6hMlNQ42PNTaCJaZT4CrZWYpxrZVCSqWwwgIrUq_JPocWG6_V1FZgf3obaq3PLXtPUMvCTddb6ukmfCu7jrZO8nG7XyxvzR7MxUDF4zF7If37nMcpfCFGE1ZUYFp0gJ2AxHMo6--SZXWVJ66A_Ca5jqLlwcREx5bZNgSvGDZw_Ako8QDvUH5osQqhpNOKznox4XEB4SFXZSdaLjCC-L7J_N42ThpoR94KeSEgYRTR4SJWEFwEz0uZCLKOGInR2LBBENzmX73FNrRJRQRnw86VyLVUDLI8mb2YH8E3J_eNzwVGYO7E5V9-Ua6IupcPy03QuLCB--hoAyJCLqSL6zfj6HScmmeg2ImY1mAMH0ZiMGzJj-4y1udZ4tFBdwuyksZPrwYtygi942cYtE8u3hQFz1369ktJH7ZDbxMAQZufcc65aLy0HaTNA7YRciIl22neQYbj8waa0c1V2GjKK8xSOJZoJHhlDRSDau_ya3NWhOwDrfwbwvUTS1GuF4PDl8ojNzZmsAoIHZsWtaYoPru0o-duxwYTU2amKykne5MXZ9TgSkHR0XrOW5nrLxWQ8MQ4yFvisFbC0itK_bAEsb0k9WeLfY0MM6v6DG9k4UGCP9pZrTNlYLHDUG389RW8IYhBu1tWCabVN2mJIcETn8aNkpz3l1GLpqhWPBPvULofkC4EiXD1jVu8-vgda0QUkko_vlexH1Ii3bAJ5ZBStr80IKKZohtUuv1Qsw3vbI-yti5h74DZZkXg-2YeMwsPZ88VvmRgUCrcSsfo0IsoHIbd4-Zit5-wSHCC1ujpRZvAe4K_Y8KF1li-7v_YxfVG9eUG5wsz8O9DWBhxhXv0swcinUCOwSrdei6J6YLxuBJATDBl0gurR5ZL1uZXdkK_a2Glty7NEZrmjVbx2NWtJENQIPaTEAmsDadjPJgDjkjrJkf2CPGlhAODPyJrQe7akYnU_39rF7KYSiYpBO7HiISebY90zBbOzZm6C8EtAlj0mTunLa0ZBEBWgOFcLHo1tUg-0ogX_k8IUIdUF2sTNkCLIhsVl1OAU63KRJfJf-7lyUrrakLnhll6dAePHqtvO-q5ywKS98hoMyISB_mrka_3fiXwZPHYpWR0EpALJWiMdNXttOU3h6dDcvWzSzrt0xvrbtLsMSloMRO8hCJ1nm84BRKwg2bowMpGaI0MTaDEEu9YFo86GYCYmL_Q9UEsFM1T6VFvfY8iZ9H3Iy9fES4kTv4pgA1f50MGogRSRG9yedyfD7xyp_TSvqpKEBxp1629A07e55zzSURtKB3R9IQqFI2tnJ-5BjAuoAA9xOVSJF8cAFdHqeHuiuYoyUmfBbiim5uyC4VWY3KDKvuCZ-jV91c27_sE1pvSDYlrc3E_oaRKc86ujy0KmjHwh2049sXqd695iN4rl_f4n7lkvfMt33mrEgSCs2F6lVI8TQmzA-INc2Q9-GY6ks4WyamDBxL_jzsz7mbaGFxtG3IMZK5IGlfJI93ZfBwB4HPP2FrrKKKQlpO7o1_Ti87Z90DydepQmfFS7bxdP-vRpJpv5qD3iN840qzrqhjI55oWWsoRaV5pk0uZJcbWib2ir10MmJHRnUXxnKP_M0dyiPMT_ZCvcgar9viWulj6v7qRePiXDbG49zlW2KE_HxRe7PPjRuaWXopJdHmVCOOP1mu-BZxWgbJ12OYWpcgkhNklMnaHF5X1KsUQi8KybSi4I7KdO7W9I-baSkyVv9MHoZkXzz8elnyKbhuHNp6GPHhSvrMopw1VR4LLkS_Rg-l0Bx7sm1Xszfyy8kl_RkJ3kID2NAqZaxjM4zkqnSSQyCMVmvdri4vv4xl4P5A5G60OnBl23LYKzXaRubZ6xgRLtLcvkypgoqiTtK8o4GG-l1DN1I_djvTa24wphyar9S66DoyZZXnZJUsMfff6d0GGFHJz_X3KnSVyK_iZMElvt5hMKFlewHsa5asEqMf-8zvgFaHB4nxDUXSd0S0LkVfQ_uivwrMId4jxJ3t7YbEtiOsmy_p5RsJMs32zCycHONYg4tcloVmziMu0dFvdtVRu7jFJ44QYa4ZfKUCdSVPkaQrrANwjdREoFrxARdp7Zn1EH-VfugbCvE83UTliArr5-aBTnsIWG5uWmmlF3k2x11KtLejwVBZgkbyb5fGAsCnF6cA_t6FexGVlFO5Jp810wRTO081ui_n1fIi117jFuGa1eVaQoheLyBZvCGYO1QB5D97UkNWdqtRnDv7j63DBFGSbOdmeooVloqCIx8DnGVJQSWEoJWnskegCQSwfKi4cxijxuiKcBk4-dWGzas7veRt_MGM-77qHimkU0sl67RnGB3O6Ad4huNQf4BIgqoz9GryuasG4RkVibA7PwLllDnxPMQ8zSKMFzqW9U2niStOeFzl355d7NooFi3ghYhda446xfWNCWJ1DdjdP2PEPCne0XWkJK7qdTpMtxlMC-zwNNIZ-iTHCu_aLKDmzO1F6tIxSfvOWpot-BP49llDTB7fwik2wtqHvj5BL37PTmc537CuM9FbuaU3HGT789-cqCK25hWk-4jhpo-DkEv234qrkCfVT4g8xXt2dZN02LeuQhTw6M-Ahe4NTXdKOD5vXWrpqpuV431BF0hcvi3_AiBAFnKHm1KfWCz2BvkE0Y6suWkYAtZ4527U-cFmNq5nuJCHQ8Kc0M7QIsv-foQsU5ASgPjlAx_c88dfuWWfD41YTZ5ZhPYbznG8CVK2Myav4D0aIZy2a8253dZryRrZa3Br5PAdr8B3Q8atWuVehlQMtDKxHRoIdBUTA_bAtx3TKOonKCihhqLB2KUI4kSw1U55W5G6wR84LlEQ8f-8w0vtAV0fHnzdTJrdLvJPGPdJwZDJXX0Tnh1ITzVWb3hsJuVywXyw0PYNa1z8rDLaNcihqX2hK4INXUgxk8FBWNQn2iUdbTg119iRTGQ6Pt7CzfHiE0G98CZz9GiIkTp3RWSvki_eL9_P2SP4FA7qaCIP1zVHwsaFtfjA6lxHP4KqWK8TFImUobwA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_03082e88cc804a90016ae32fc058f487d188b16e99af916ae9","index":0}]},"fingerprint":"82b6ea64ef91009f"}},{"type":"text","text":"### Canon\n- **Asha Pell:** Born on Orin; moved to Vesper at age six. She keeps a small brass key sewn inside her left coat cuff. It opens the old lens room beneath Vesper’s lighthouse; only Iven knows she has it.\n- **Iven Marr:** Lost his right eye in the winter storm of 312. He navigates the *Nightjar* using tide charts, not magic.\n- **Bren Vale:** Refuses to join the Lantern Guild because he distrusts Tal Ren’s friends. His older sister Nessa cooks aboard the *Petrel*; she is not his employee on a formal wage. Nessa keeps Button, a black cat, aboard.\n- **The *Nightjar*:** Its current route carries letters from Vesper to Kest, a southern island. Its former April–September blue-salt route is retired.\n- **Lens room:** Permanently sealed by a rockfall in 318; nobody has reopened it, and it has no other entrance.\n\n### Unresolved contradiction\nA note says Iven meets Sera inside the room in 320 to negotiate a salt contract. That conflicts with the room being sealed and inaccessible since 318, and with Asha not letting Iven negotiate contracts. No reconciliation is established."}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793273791-q4kKjAG8tfScBEEkMpgs"},"stop":"stop"}],"content":[{"type":"reasoning","text":"","native":{"item":{"reasoning_details":[{"type":"reasoning.encrypted","data":"gAAAAABq4y_D6sJbqCH_94gONQPc4q-VdtY0i3akusg8KCDi15Od1LnIjSWhohJ2thYQzkIpHNg9Q3Vln0QuA6-ZXmymMv9VzF1CwMeKi66MMtiV2LYi6Fpw4Ek1Fo21uheng6Gz0suF9y0eOV_qkiKCK9bGiqelwvTcCjyhHH6rOlvFAOBXo6VubQlhKmtMwDE1PHeeJbkC82BB9vFGJxDJuGcVHhRVlIRl0pyYfHqVReMbH0h_VOTw25zsK1cJNkAg_ekBOQzPmgzqs2Zmy8Rpia3FwJseSHnUM5sqVz_OCMr7F_EVHe3bB6UDvmQSBnNkzYLMXJRsiVoGrjmB8aHNbMafPAK00F1ywlV0v2ZAL9t0O7e15WuZc0C5Q2qZzXWxi1ay9DnKqFVE3tiLeNpHwNPfh4idg9zKsieFY--x6iMF0LP1leXKjBS8xZDE7OAqIS7ArinSODFxSe70TosHMbDJY8Gec9SVIwjRgSPIW9CNtnhxHeaVHmi8ZHjbnUdF1swNnsrmhlmURnf0d_VY9n4ugD6FeRyK7cDaD2v1cQ1N86uIYAfF66Vz8a-qw5krCypEAeKnn08abfkGYFiCtNN-x58aw5VfGNXqTCX-kN9HHCWksS951cHGDC375DSrBCWsusNAbGayEK0-BV7EanqgegEJRWqCZru1drqf7kSSrOGFcWa0dNKq_Xl9yutWBasa9DdTMViO_Qjv297O1SPfknZLoiSgaguQzYQzE_IS1EvDieGFYmJ3SGZaf-hG048_JeDdACIchmRg2pP6ahEDpAV3Cow7H0avvQMUntoyApVmqsltgpvpwBMfM4iQG7wTdLE-sI0L0G_tEMkXaIEDixynCnJiNfu3UYVUwtzYJ-kV7R7nbnZq_wgdV9-zLB9hLI9p_2R6BH7MsAFhje1wDL_X2dg6uzTM_YwtmkvHSm_POfzGlBs3ZprUJUuwc2FS_xLKMKPJHzlCYolifD1L-j5ZlQarIe8SfUaUUzbeD1VHCg32MhwdU_G-NWhRo7wF64BAyVw90nwJLoEd7bX_Ogxe3nIyhn-qd2eNHGKFH4qIswl3Pitj-jd2kBZjdhsNHl-mMK15E4_YhPjTRWSw4ByBdbBf-QdO09QnRcJ3PmfF595vqkYjj_wtVADEyTHE0vTjWbmqb7jafcLmtPmyzl0-OU7mMI1-DOWsX3FkAxHLgPPR1hvKWEgyIrhmUUBndYODKb6hX1UlcN8Na2Ug0XLpLTjmkI8U3MVpae2d09e7YUEikfNjSkVxOZLWC0O-vWWlbES2g7i3_Tldh4H7RqWY53Dw1K4LMcelyWtCRDWRplxGTmYXMRgcAS82uXNqXAeCa40i5InaSJ4ZPbTb7xOLG2I61xzK_Sxp9f1dQbm3nqK1AMY3SOYCYuA4bB-Jyra34JyA-npuBprEJDWI1F6JIgxm5-bRmIIAB7eSZAfYDQxwT7X4-k9tpLwNuBU_-R9FEkRFLoxCj78n9oCiKx78p-ocbntU_gdsyVOyVQTwGqK36oE02wcQFO2oTlq8n69zCfmJSgg0j6qfc6ms-wEdG7Bjei0k56pouK7DT5rRHLAVHxPeSy6nOaYmkHgCnEXvc-zzw2v-_0SrKDs5lUITau41ukNWlSECMChaQRaOzGP4gBkUhsnYB-QyOLAiBzwFfVeiyQPmDJqpJqlqookLHilQaVDxDiB2TCi-ra21FcCiPGhUCQuiQ1QmpihQduzSWrdsP4wLM8TUti226oTpCrkIajFo7GoFl0Repei-MlDFZCrannCR5zpRcqCPydpj6rp9N-w1so_10dtUZwwShzrs0J7Ak3pjIl_Ymb44mC3jqQ78VarlTaazaOQlZyzijpyDfj_OI4zMpXqvE_u-pALZNMF_faz2RSDaVbkffUsNqDop1VUPVbY9QUwvxF0IhyW1Gefu2T-xUPx7AiBvRE9iFtpcDQnH4G_nf4C6MKE2KGeuJwX-47dLSpf3hC6hMlNQ42PNTaCJaZT4CrZWYpxrZVCSqWwwgIrUq_JPocWG6_V1FZgf3obaq3PLXtPUMvCTddb6ukmfCu7jrZO8nG7XyxvzR7MxUDF4zF7If37nMcpfCFGE1ZUYFp0gJ2AxHMo6--SZXWVJ66A_Ca5jqLlwcREx5bZNgSvGDZw_Ako8QDvUH5osQqhpNOKznox4XEB4SFXZSdaLjCC-L7J_N42ThpoR94KeSEgYRTR4SJWEFwEz0uZCLKOGInR2LBBENzmX73FNrRJRQRnw86VyLVUDLI8mb2YH8E3J_eNzwVGYO7E5V9-Ua6IupcPy03QuLCB--hoAyJCLqSL6zfj6HScmmeg2ImY1mAMH0ZiMGzJj-4y1udZ4tFBdwuyksZPrwYtygi942cYtE8u3hQFz1369ktJH7ZDbxMAQZufcc65aLy0HaTNA7YRciIl22neQYbj8waa0c1V2GjKK8xSOJZoJHhlDRSDau_ya3NWhOwDrfwbwvUTS1GuF4PDl8ojNzZmsAoIHZsWtaYoPru0o-duxwYTU2amKykne5MXZ9TgSkHR0XrOW5nrLxWQ8MQ4yFvisFbC0itK_bAEsb0k9WeLfY0MM6v6DG9k4UGCP9pZrTNlYLHDUG389RW8IYhBu1tWCabVN2mJIcETn8aNkpz3l1GLpqhWPBPvULofkC4EiXD1jVu8-vgda0QUkko_vlexH1Ii3bAJ5ZBStr80IKKZohtUuv1Qsw3vbI-yti5h74DZZkXg-2YeMwsPZ88VvmRgUCrcSsfo0IsoHIbd4-Zit5-wSHCC1ujpRZvAe4K_Y8KF1li-7v_YxfVG9eUG5wsz8O9DWBhxhXv0swcinUCOwSrdei6J6YLxuBJATDBl0gurR5ZL1uZXdkK_a2Glty7NEZrmjVbx2NWtJENQIPaTEAmsDadjPJgDjkjrJkf2CPGlhAODPyJrQe7akYnU_39rF7KYSiYpBO7HiISebY90zBbOzZm6C8EtAlj0mTunLa0ZBEBWgOFcLHo1tUg-0ogX_k8IUIdUF2sTNkCLIhsVl1OAU63KRJfJf-7lyUrrakLnhll6dAePHqtvO-q5ywKS98hoMyISB_mrka_3fiXwZPHYpWR0EpALJWiMdNXttOU3h6dDcvWzSzrt0xvrbtLsMSloMRO8hCJ1nm84BRKwg2bowMpGaI0MTaDEEu9YFo86GYCYmL_Q9UEsFM1T6VFvfY8iZ9H3Iy9fES4kTv4pgA1f50MGogRSRG9yedyfD7xyp_TSvqpKEBxp1629A07e55zzSURtKB3R9IQqFI2tnJ-5BjAuoAA9xOVSJF8cAFdHqeHuiuYoyUmfBbiim5uyC4VWY3KDKvuCZ-jV91c27_sE1pvSDYlrc3E_oaRKc86ujy0KmjHwh2049sXqd695iN4rl_f4n7lkvfMt33mrEgSCs2F6lVI8TQmzA-INc2Q9-GY6ks4WyamDBxL_jzsz7mbaGFxtG3IMZK5IGlfJI93ZfBwB4HPP2FrrKKKQlpO7o1_Ti87Z90DydepQmfFS7bxdP-vRpJpv5qD3iN840qzrqhjI55oWWsoRaV5pk0uZJcbWib2ir10MmJHRnUXxnKP_M0dyiPMT_ZCvcgar9viWulj6v7qRePiXDbG49zlW2KE_HxRe7PPjRuaWXopJdHmVCOOP1mu-BZxWgbJ12OYWpcgkhNklMnaHF5X1KsUQi8KybSi4I7KdO7W9I-baSkyVv9MHoZkXzz8elnyKbhuHNp6GPHhSvrMopw1VR4LLkS_Rg-l0Bx7sm1Xszfyy8kl_RkJ3kID2NAqZaxjM4zkqnSSQyCMVmvdri4vv4xl4P5A5G60OnBl23LYKzXaRubZ6xgRLtLcvkypgoqiTtK8o4GG-l1DN1I_djvTa24wphyar9S66DoyZZXnZJUsMfff6d0GGFHJz_X3KnSVyK_iZMElvt5hMKFlewHsa5asEqMf-8zvgFaHB4nxDUXSd0S0LkVfQ_uivwrMId4jxJ3t7YbEtiOsmy_p5RsJMs32zCycHONYg4tcloVmziMu0dFvdtVRu7jFJ44QYa4ZfKUCdSVPkaQrrANwjdREoFrxARdp7Zn1EH-VfugbCvE83UTliArr5-aBTnsIWG5uWmmlF3k2x11KtLejwVBZgkbyb5fGAsCnF6cA_t6FexGVlFO5Jp810wRTO081ui_n1fIi117jFuGa1eVaQoheLyBZvCGYO1QB5D97UkNWdqtRnDv7j63DBFGSbOdmeooVloqCIx8DnGVJQSWEoJWnskegCQSwfKi4cxijxuiKcBk4-dWGzas7veRt_MGM-77qHimkU0sl67RnGB3O6Ad4huNQf4BIgqoz9GryuasG4RkVibA7PwLllDnxPMQ8zSKMFzqW9U2niStOeFzl355d7NooFi3ghYhda446xfWNCWJ1DdjdP2PEPCne0XWkJK7qdTpMtxlMC-zwNNIZ-iTHCu_aLKDmzO1F6tIxSfvOWpot-BP49llDTB7fwik2wtqHvj5BL37PTmc537CuM9FbuaU3HGT789-cqCK25hWk-4jhpo-DkEv234qrkCfVT4g8xXt2dZN02LeuQhTw6M-Ahe4NTXdKOD5vXWrpqpuV431BF0hcvi3_AiBAFnKHm1KfWCz2BvkE0Y6suWkYAtZ4527U-cFmNq5nuJCHQ8Kc0M7QIsv-foQsU5ASgPjlAx_c88dfuWWfD41YTZ5ZhPYbznG8CVK2Myav4D0aIZy2a8253dZryRrZa3Br5PAdr8B3Q8atWuVehlQMtDKxHRoIdBUTA_bAtx3TKOonKCihhqLB2KUI4kSw1U55W5G6wR84LlEQ8f-8w0vtAV0fHnzdTJrdLvJPGPdJwZDJXX0Tnh1ITzVWb3hsJuVywXyw0PYNa1z8rDLaNcihqX2hK4INXUgxk8FBWNQn2iUdbTg119iRTGQ6Pt7CzfHiE0G98CZz9GiIkTp3RWSvki_eL9_P2SP4FA7qaCIP1zVHwsaFtfjA6lxHP4KqWK8TFImUobwA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_03082e88cc804a90016ae32fc058f487d188b16e99af916ae9","index":0}]},"fingerprint":"82b6ea64ef91009f"}},{"type":"text","text":"### Canon\n- **Asha Pell:** Born on Orin; moved to Vesper at age six. She keeps a small brass key sewn inside her left coat cuff. It opens the old lens room beneath Vesper’s lighthouse; only Iven knows she has it.\n- **Iven Marr:** Lost his right eye in the winter storm of 312. He navigates the *Nightjar* using tide charts, not magic.\n- **Bren Vale:** Refuses to join the Lantern Guild because he distrusts Tal Ren’s friends. His older sister Nessa cooks aboard the *Petrel*; she is not his employee on a formal wage. Nessa keeps Button, a black cat, aboard.\n- **The *Nightjar*:** Its current route carries letters from Vesper to Kest, a southern island. Its former April–September blue-salt route is retired.\n- **Lens room:** Permanently sealed by a rockfall in 318; nobody has reopened it, and it has no other entrance.\n\n### Unresolved contradiction\nA note says Iven meets Sera inside the room in 320 to negotiate a salt contract. That conflicts with the room being sealed and inaccessible since 318, and with Asha not letting Iven negotiate contracts. No reconciliation is established."}]}
+
