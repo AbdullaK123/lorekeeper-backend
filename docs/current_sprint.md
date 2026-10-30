@@ -99,16 +99,14 @@ See the [test report](../tests/REPORT.md) for verification details.
 
 ## Fresh-conversation verification
 
-Five questions run in separate empty conversations against the saved Ardent Reach world.
-Four pass: minor details and corrections, relationship conditions, shared titles, and unknown facts.
-One fails: chat reports no unresolved contradictions despite two saved unresolved conflicts.
-The graph remains unchanged throughout the checks.
+Five questions run again in separate empty conversations against the saved synthetic Ardent Reach world.
+All five reviewed answers pass on 2026-10-30.
+Chat calls `get_conflicts` and presents both saved contradictions without resolving them.
+The other checks retain minor facts, relationship conditions, shared titles, and unknown facts.
+The graph remains unchanged. All five background research runs complete.
 
-Search returns entities and neighboring entities, excluding conflict nodes.
-The chat agent has no other path to read saved conflicts.
-This is a demonstrated defect and the next retrieval task.
-
-See the [answers and code trace](../tests/artifacts/fresh-retrieval-2026-10-29/summary.md).
+See the [rerun evidence](../tests/artifacts/fresh-retrieval-2026-10-30/summary.md).
+The [previous failure](../tests/artifacts/fresh-retrieval-2026-10-29/summary.md) remains recorded for comparison.
 
 ## Sprint log
 
@@ -123,6 +121,23 @@ See the [answers and code trace](../tests/artifacts/fresh-retrieval-2026-10-29/s
 | 2026-10-29 | Follow-up formatting fixes preserve neighbor and relationship details; 11 pure tests pass, one synthetic ranking test fails |
 | 2026-10-29 | Repository AGENTS.md requires a sprint update after completed work |
 | 2026-10-29 | Fresh-conversation checks: four pass; saved conflicts fail to reach chat; graph remains unchanged |
+| 2026-10-30 | Reviewed GetConflicts draft: world scope is present; output, description, object arguments, unresolved filtering, and chat wiring remain unfinished |
+| 2026-10-30 | Updated chat-tool tests; 25 native live checks pass; all five fresh-conversation answers pass, including both conflicts |
+
+## Follow-up: conflict lookup verification
+
+On 2026-10-30, completed the `get_conflicts` tool description.
+It explains when to query conflicts, how to present disputed claims, and what an empty result means.
+The draft now returns typed conflicts and filters unresolved records within the world.
+Chat wiring is reviewed on 2026-10-30: app supplies the repository, and chat registers the scoped read-only tool.
+The chat-tool test now verifies both read-only tools and the current factory signature.
+Two new live tests verify unresolved filtering, world scope, sources, and empty object arguments.
+All 25 native live database and worker checks pass.
+The API suite reports 17 passes, two failed methods, and five skipped paid tests.
+Duplicate signup returned 500 in that run; the fix below now passes its regression test.
+Blank-name rejection remains an unconfirmed product rule.
+Pure Rust tests report 11 passes and the same synthetic ranking failure.
+The separate five-case paid smoke rerun passes all reviewed answer checks.
 
 ## Work selection rule
 
@@ -135,7 +150,123 @@ Label defensive tests separately from demonstrated runtime defects.
 **Goal result:** Accepted. Researcher extraction is complete for this sprint.
 **Evidence:** Linked smoke transcripts, graph snapshots, source audits, and database tests.
 **Carried work:** None automatically. Remaining work stays in the project plan.
-**Next sprint candidate:** Expose saved unresolved conflicts to read-only chat retrieval, then repeat the failing fresh-conversation check.
+**Next sprint candidate:** Choose the next observed defect or product story. Conflict retrieval now passes its regression check.
 
 Choose the next sprint scope before replacing this document.
 Project completion still requires all 15 epics and 69 stories.
+
+### Duplicate signup trace — 2026-10-30
+
+Reviewed the error path without changing runtime code.
+The user insert passes the database error through `?`.
+The infrastructure-to-service conversion treats every error as internal.
+The HTTP mapping therefore returns 500 for an existing email.
+A duplicate-account error mapped to 409 remains unfinished. No tests run for this trace.
+
+### Duplicate signup fix — 2026-10-30
+
+Signup now maps the users_email_key unique violation to a conflict error.
+Infrastructure, service, and HTTP conversions preserve that error. The response is 409 with a clear message.
+Other database errors keep their existing mapping. The database constraint remains in place.
+The real duplicate-signup and login privacy regression tests both pass against the isolated QA database.
+No model calls run. The full suite is not repeated for this change.
+Blank-name rules and the synthetic ranking check remain separate work.
+
+### Shared text validation reference — 2026-10-30
+
+Reviewed Nexus Writer's `src/shared/text_types.py` and text-boundary tests.
+Its rules cover length, NUL rejection, Unicode normalization, controls, whitespace, and field-specific text policies.
+It separates single-line labels, multiline prose, and unchanged credentials.
+It does not detect malicious intent or replace query parameters and output escaping.
+Proposed starting scope: a validated single-line type for world names, with a 255-character limit.
+No SafeText implementation or field changes exist yet. Reference tests are inspected, not executed.
+
+### Shared text types — 2026-10-30
+
+Added `src/shared/text.rs` with private String wrappers and fallible parsers.
+Types: Username, WorldName, ConversationTitle, EntityName, SearchQuery, Description, ChatContent, and PasswordInput.
+Names normalize Unicode and whitespace and reject direction controls, NUL, and blank values.
+Prose preserves line breaks and language joiners. Descriptions allow empty text.
+Passwords retain exact input and omit Debug and Display. Password strength remains separate.
+All types enforce raw character limits; JSON decoding calls the same parser.
+Added unicode-normalization using the cached locked version.
+Seven focused tests pass, including JSON validation, Unicode, limits, and exact password preservation.
+Existing request fields still use String. Wiring and HTTP regression tests remain unfinished.
+These types do not detect malicious intent, sanitize HTML, or replace query parameters.
+
+### Request-model text validation — 2026-10-30
+
+World create/update requests now use WorldName and Description.
+Signup uses Username and PasswordInput; login uses PasswordInput.
+Conversation creation uses ConversationTitle; chat requests use ChatContent.
+JSON parsing validates and normalizes these values before service calls.
+Existing database rows and response fields remain Strings. Services unwrap validated input at storage boundaries.
+Email validation and signup password-strength checks remain in place.
+Login accepts bounded nonempty passwords without applying the signup strength policy.
+Password Debug output is redacted so request Debug cannot expose credentials.
+EntityName and SearchQuery are wired into AI tool arguments in the follow-up below.
+
+Verification: all 19 existing non-AI API checks pass; five paid checks are skipped.
+Four added HTTP checks pass: normalized storage, rejected updates, blank titles, and blank chat.
+All eight focused text tests pass. No model calls run.
+Blank world names now return 422, resolving the earlier validation failure.
+The defensive ranking test remains outside this change; the full native suite is not repeated.
+
+### AI tool text validation — 2026-10-30
+
+SearchWorldArgs now uses SearchQuery.
+Graph entity names and aliases use EntityName; entity and relationship descriptions use Description.
+JSON tool arguments validate before embedding, retrieval, or graph writes.
+Shared text schemas publish string types and minimum/maximum character counts.
+Existing graph-ID checks and trusted world/source context remain unchanged.
+Graph conversions unwrap normalized values and derive name keys from the normalized name.
+Properties, relationship kinds, and IDs retain their existing validation rules.
+Four focused tests cover malformed arguments, normalized conversion, and schema bounds.
+Verification: four tool-argument tests, eight text tests, and 13 live graph/wiring checks pass.
+No model calls run. The full API suite is not repeated for this change.
+
+### Research job timing audit — 2026-10-30
+
+Read retained log timestamps for all 50 research runs from the three worldbuilding smoke tests.
+Researcher-call median: 23.3 seconds; mean: 24.6 seconds; range: 3.0–59.6 seconds.
+Timing excludes preceding chat and job setup. Existing report seconds include chat plus research.
+No new tests or model calls run. Queue delay and concurrent load remain unmeasured.
+See [timing evidence](../tests/artifacts/research-timings-2026-10-29.md).
+
+### Durable queue crate survey — 2026-10-30
+
+Checked primary documentation for Apalis, Underway, and Fang.
+Apalis supports durable workers with Postgres and Redis backends.
+Underway supports Postgres jobs, retries, and enqueueing inside an application transaction.
+Fang provides database-backed background processing.
+Postgres-backed queues fit the existing infrastructure; no crate is selected or installed.
+Next selection check: transaction integration and compatibility with the installed SQLx version.
+No tests or model calls run for this survey.
+
+### Rig durable-run investigation — 2026-10-30
+
+Checked the installed Rig 0.44.0 source and official durable-run documentation.
+Rig includes serializable AgentRun state and agent.resume(run).
+An application can persist state between model/tool steps and reload it after restart.
+This supplies agent continuation, not an automatic database queue or worker recovery service.
+The application still owns checkpoint storage, scheduling, and recovery coordination.
+Existing researcher.prompt calls do not save checkpoints.
+No implementation change, tests, or model calls run. Queue selection remains open.
+Reference: https://rig.rs/docs/concepts/runs
+
+### Whole-job queue recommendation — 2026-10-30
+
+Recommend evaluating Underway 0.2.0 for a single research task with whole-run retries.
+Verified documented transactional enqueue, retry policy, timeout, heartbeat, and concurrency-key APIs.
+Its SQLx dependency is ^0.8.2, compatible in version range with this project's 0.8.6.
+No dependency resolution or runtime recovery test is performed yet. No crate is installed.
+Graph replay safety remains application work; queue retries do not provide exactly-once Memgraph writes.
+Sources: https://docs.rs/underway/0.2.0/underway/queue/struct.Queue.html and https://docs.rs/crate/underway/0.2.0
+
+### Underway idempotency API check — 2026-10-30
+
+Underway 0.2.0 documents no dedicated enqueue idempotency-key parameter.
+Its concurrency_key serializes execution for matching keys; it does not deduplicate enqueue requests.
+Application-level deduplication can use a unique source-message record in the enqueue transaction.
+That prevents duplicate scheduling, not repeated Memgraph effects during job retries.
+Documentation review only; no runtime checks or implementation changes.

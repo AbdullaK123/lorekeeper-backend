@@ -22,8 +22,8 @@ impl WorldService {
         payload: CreateWorldRequest
     ) -> Result<WorldResponse, ServiceError> {
         let result = self.world_repo.create(
-            payload.name,
-            payload.description,
+            payload.name.into_inner(),
+            payload.description.into_inner(),
             user_id
         ).await?;
         Ok(result.into())
@@ -39,8 +39,8 @@ impl WorldService {
         let result = self.world_repo.update(
             id,
             user_id,
-            payload.new_name,
-            payload.new_description
+            payload.new_name.map(String::from),
+            payload.new_description.map(String::from)
         ).await?;
         match result {
             Some(world) => Ok(world.into()),

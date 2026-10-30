@@ -54,6 +54,7 @@ pub async fn create_app() -> (Router, JobScheduler) {
         model.clone().into(),
         load_prompt("agents").expect("Agent prompt not found"),
         retrieval_service.clone(),
+        graph_repo.clone(),
     );
     let researcher_service = ResearcherService::new(
         model.into(),

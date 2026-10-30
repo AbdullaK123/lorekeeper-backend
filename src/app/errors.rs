@@ -9,6 +9,8 @@ use validator::ValidationErrors;
 
 #[derive(Error, Debug)]
 pub enum AppError {
+    #[error("{0}")]
+    Conflict(String),
     #[error("Validation error: {0}")]
     ValidationError(String),
     #[error("Authentication error: {0}")]
@@ -25,13 +27,17 @@ pub enum AppError {
 
 impl From<InfrastructureError> for AppError {
     fn from(value: InfrastructureError) -> Self {
-        AppError::DownstreamServiceError(value.to_string())
+        match value {
+            InfrastructureError::Conflict(message) => Self::Conflict(message),
+            other => Self::DownstreamServiceError(other.to_string()),
+        }
     }
 }
 
 impl From<ServiceError> for AppError {
     fn from(value: ServiceError) -> Self {
         match value {
+            ServiceError::Conflict(message) => Self::Conflict(message),
             ServiceError::AuthError => Self::AuthError(value.to_string()),
             ServiceError::NotFound(e) => Self::NotFound(e.to_string()),
             ServiceError::InternalError(e) => Self::InternalError(e.to_string()),
@@ -59,6 +65,7 @@ impl From<ValidationErrors> for AppError {
 impl IntoResponse for AppError {
     fn into_response(self) -> Response {
         let (status, tag, message) = match &self {
+            AppError::Conflict(e) => (StatusCode::CONFLICT, "conflict", e),
             AppError::InternalError(e) => (StatusCode::INTERNAL_SERVER_ERROR, "internal", e),
             AppError::AuthError(e) => (StatusCode::UNAUTHORIZED, "auth", e),
             AppError::NotFound(e) => (StatusCode::NOT_FOUND, "not_found", e),

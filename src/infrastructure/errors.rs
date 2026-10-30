@@ -4,6 +4,8 @@ use neo4rs;
 
 #[derive(Error, Debug)]
 pub enum InfrastructureError {
+    #[error("{0}")]
+    Conflict(String),
     #[error("Database error")]
     Database(#[from] sqlx::Error),
     #[error("Memgraph error")]

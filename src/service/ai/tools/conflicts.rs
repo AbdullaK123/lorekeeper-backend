@@ -1,6 +1,6 @@
 use crate::{
     data::{Conflict, GraphRepository},
-    service::ServiceError,
+    service::{RetrievalService, ServiceError, conflicts},
 };
 use rig::tool::PortableTool;
 use schemars::JsonSchema;
@@ -65,5 +65,41 @@ impl PortableTool for FlagConflict {
             "Recorded conflict [ID: {}]. Canon remains unchanged.",
             saved.id
         ))
+    }
+}
+
+pub struct GetConflicts {
+    pub graph_repo: GraphRepository,
+    pub world_id: String,
+}
+
+#[derive(Deserialize, JsonSchema)]
+pub struct GetConflictsArgs {}
+
+impl PortableTool for GetConflicts {
+    const NAME: &'static str = "get_conflicts";
+    type Args = GetConflictsArgs;
+    type Output = Vec<Conflict>;
+    type Error = ServiceError;
+
+    fn description(&self) -> String {
+        "List all saved unresolved conflicts in this world. Call this when the writer asks \
+         about contradictions, disputed claims, or unresolved inconsistencies. World search \
+         results do not include conflict records; do not infer that no conflicts exist from \
+         those results. Each conflict includes the subject entity ID, affected field, both \
+         claims, severity, explanation, and available source message IDs. Present both claims \
+         as unresolved rather than choosing one or inventing a reconciliation. An empty list \
+         means no unresolved conflicts are recorded, not that the world has no possible \
+         contradictions. This tool only reads records and does not change canon or resolve conflicts."
+            .to_string()
+    }
+
+    fn parameters(&self) -> serde_json::Value {
+        serde_json::to_value(schemars::schema_for!(GetConflictsArgs)).unwrap()
+    }
+
+    async fn call(&self, _arguments: Self::Args) -> Result<Self::Output, Self::Error> {
+        let conflicts = self.graph_repo.get_conflicts(&self.world_id).await?;
+        Ok(conflicts)
     }
 }

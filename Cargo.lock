@@ -4371,6 +4371,7 @@ dependencies = [
  "tower-sessions-sqlx-store-chrono",
  "tracing",
  "tracing-subscriber",
+ "unicode-normalization",
  "uuid",
  "validator",
 ]

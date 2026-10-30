@@ -9,6 +9,8 @@ mod data;
 mod infrastructure;
 #[path = "../src/service/mod.rs"]
 mod service;
+#[path = "../src/shared/mod.rs"]
+mod shared;
 
 #[tokio::test(flavor = "multi_thread", worker_threads = 4)]
 #[ignore = "requires an isolated Postgres database, Memgraph, and an OpenRouter key"]
@@ -370,10 +372,11 @@ async fn chat_agent_has_no_graph_write_tools() {
     let client = rig::providers::openrouter::new("unused-test-key");
     let embedding_model: rig::DynModel<rig::operation::Embedding> = client.embedding("openai/text-embedding-3-small", None).into();
     let retrieval = service::RetrievalService::new(repo.clone(), embedding_model);
-    let factory = service::ChatAgentFactory::new(client.chat("unused-test-model").into(), "test".into(), retrieval);
-    let agent = factory.create_agent(world, String::new());
-    let names: Vec<_> = agent.tool_server_handle().static_tool_defs().into_iter().map(|d| d.name).collect();
-    assert_eq!(names, vec!["search_world"], "Chat must never mutate lore before message persistence");
+    let factory = service::ChatAgentFactory::new(client.chat("unused-test-model").into(), "test".into(), retrieval, repo);
+    let agent = factory.create_agent(&world, String::new());
+    let mut names: Vec<_> = agent.tool_server_handle().static_tool_defs().into_iter().map(|d| d.name).collect();
+    names.sort();
+    assert_eq!(names, vec!["get_conflicts", "search_world"], "Chat must have conflict lookup while remaining read-only");
 }
 
 #[tokio::test]
@@ -585,4 +588,113 @@ async fn conflict_message_sources_accumulate_without_duplicates() {
     let legacy = repo.get_conflicts_by_entity(&entity.id, &world).await.unwrap();
     repo.delete_graph(&world).await.unwrap();
     assert!(legacy[0].source_message_ids.is_empty(), "Legacy conflicts need empty source lists, not invented message IDs");
+}
+
+#[tokio::test]
+#[ignore = "requires Memgraph; makes no AI calls"]
+async fn conflict_lookup_excludes_resolved_and_foreign_records() {
+    use rig::tool::PortableTool;
+    let (repo, world) = graph_fixture().await;
+    let foreign_world = format!("qa-foreign-conflicts-{}", uuid::Uuid::new_v4());
+    let local = save_graph_entity(&repo, &graph_entity(&world, "Local archive")).await;
+    let foreign = save_graph_entity(&repo, &graph_entity(&foreign_world, "Foreign archive")).await;
+    let mut saved_local = None;
+    for (scope, entity, field, resolved) in [
+        (&world, &local, "access", false),
+        (&world, &local, "opening", true),
+        (&foreign_world, &foreign, "secret", false),
+    ] {
+        let conflict = data::Conflict {
+            id: uuid::Uuid::new_v4().to_string(), world_id: scope.clone(), entity_id: entity.id.clone(),
+            field: field.into(), existing_value: serde_json::json!("daylight"), new_value: serde_json::json!("midnight"),
+            severity: "hard".into(), explanation: "Unresolved access hours".into(),
+            source_conversation: "qa".into(), resolved: false, source_message_ids: vec![],
+        };
+        let mut saved = repo.upsert_conflict(&conflict, TEST_SOURCE_MESSAGE_ID).await.unwrap().unwrap();
+        if resolved {
+            saved.resolved = true;
+            assert!(repo.update_conflict(&saved.id, scope, &saved).await.unwrap(), "Fixture must resolve the selected conflict");
+        } else if scope == &world {
+            saved_local = Some(saved);
+        }
+    }
+    let tool = service::GetConflicts { graph_repo: repo.clone(), world_id: world.clone() };
+    let results = tool.call(service::GetConflictsArgs {}).await.unwrap();
+    repo.delete_graph(&world).await.unwrap();
+    repo.delete_graph(&foreign_world).await.unwrap();
+    assert_eq!(results.len(), 1, "Lookup must exclude resolved conflicts and other writers' records");
+    let expected = saved_local.unwrap();
+    assert_eq!(results[0].id, expected.id, "Lookup returns the wrong conflict");
+    assert_eq!(results[0].entity_id, local.id, "Conflict subject identity must reach chat");
+    assert_eq!(results[0].existing_value, serde_json::json!("daylight"), "Original claim must reach chat");
+    assert_eq!(results[0].new_value, serde_json::json!("midnight"), "Disputed claim must reach chat");
+    assert_eq!(results[0].source_message_ids, vec![TEST_SOURCE_MESSAGE_ID], "Source messages must reach chat");
+}
+
+#[tokio::test]
+#[ignore = "requires Memgraph; makes no AI calls"]
+async fn conflict_lookup_empty_world_uses_object_arguments() {
+    use rig::tool::PortableTool;
+    let (repo, world) = graph_fixture().await;
+    let tool = service::GetConflicts { graph_repo: repo, world_id: world };
+    assert_eq!(tool.parameters()["type"], "object", "Tool arguments must be an object for provider tool calls");
+    assert!(tool.call(service::GetConflictsArgs {}).await.unwrap().is_empty(), "An empty world must return an empty conflict list");
+}
+
+#[test]
+fn tool_text_search_rejects_invalid_queries_before_execution() {
+    for query in ["".to_owned(), " \u{200b} ".into(), "safe\0evil".into(), "safe\u{202e}evil".into(), "x".repeat(501)] {
+        assert!(serde_json::from_value::<service::SearchWorldArgs>(serde_json::json!({"query": query})).is_err(),
+            "Invalid queries reach embedding and search calls");
+    }
+    let args: service::SearchWorldArgs = serde_json::from_value(serde_json::json!({"query": "  Café   council "})).unwrap();
+    assert_eq!(args.query.as_str(), "Café council", "Search uses unnormalized input");
+}
+
+#[test]
+fn tool_text_graph_rejects_invalid_names_aliases_and_descriptions() {
+    let valid = serde_json::json!({"name":"Mira", "aliases":[], "kind":["character"], "description":"Engineer", "properties":{}});
+    for (field, value) in [
+        ("name", serde_json::json!(" \u{200b} ")),
+        ("name", serde_json::json!("x".repeat(256))),
+        ("aliases", serde_json::json!(["safe\u{202e}evil"])),
+        ("aliases", serde_json::json!([""])),
+        ("description", serde_json::json!("safe\0evil")),
+        ("description", serde_json::json!("x".repeat(10_001))),
+    ] {
+        let mut entity = valid.clone();
+        entity[field] = value;
+        assert!(serde_json::from_value::<service::UpdateGraphArgs>(serde_json::json!({"entities":[entity]})).is_err(),
+            "Invalid graph text reaches embedding or storage: {field}");
+    }
+    let relationship = serde_json::json!({"from_id":"a", "to_id":"b", "rel_type":"KNOWS", "description":"bad\0text", "properties":{}});
+    assert!(serde_json::from_value::<service::UpdateGraphArgs>(serde_json::json!({"relationships":[relationship]})).is_err(),
+        "Relationship descriptions bypass text validation");
+}
+
+#[test]
+fn tool_text_graph_conversion_preserves_normalized_values() {
+    let input: service::GraphEntityInput = serde_json::from_value(serde_json::json!({
+        "name":" Cafe\u{301}\u{200b}  Keeper ", "aliases":["  The   Keeper "], "kind":["character"],
+        "description":" first\r\nsecond ", "properties":{}
+    })).unwrap();
+    let entity = data::Entity::from((input, "world"));
+    assert_eq!(entity.name, "Café Keeper", "Saved entity name bypasses normalization");
+    assert_eq!(entity.name_key, data::name_key("Café Keeper"), "Name key differs from normalized name");
+    assert_eq!(entity.aliases, vec!["The Keeper"], "Aliases bypass normalization");
+    assert_eq!(entity.description, "first\nsecond", "Prose loses its line structure");
+}
+
+#[test]
+fn tool_text_schemas_publish_string_length_bounds() {
+    let query = serde_json::to_value(schemars::schema_for!(shared::SearchQuery)).unwrap();
+    assert_eq!(query["type"], "string");
+    assert_eq!(query["minLength"], 1);
+    assert_eq!(query["maxLength"], 500);
+    let name = serde_json::to_value(schemars::schema_for!(shared::EntityName)).unwrap();
+    assert_eq!(name["maxLength"], 255);
+    let description = serde_json::to_value(schemars::schema_for!(shared::Description)).unwrap();
+    assert_eq!(description["minLength"], 0);
+    let search = serde_json::to_value(schemars::schema_for!(service::SearchWorldArgs)).unwrap();
+    assert!(search["properties"]["query"].is_object(), "Search tool schema loses its query field");
 }

@@ -365,6 +365,25 @@ impl GraphRepository {
 
     // --- Conflicts ---
 
+    pub async fn get_conflicts(
+        &self,
+        world_id: &str,
+    ) -> Result<Vec<Conflict>, InfrastructureError> {
+        Ok(self
+            .fetch_all::<Conflict>(
+                query(
+                    "
+                    MATCH (c:Conflict {world_id: $world_id})
+                    WHERE c.resolved = false
+                    RETURN c
+                    ",
+                )
+                .param("world_id", world_id),
+                "c",
+            )
+            .await?)
+    }
+
     pub async fn update_conflict(
         &self,
         id: &str,

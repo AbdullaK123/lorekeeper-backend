@@ -1,3 +1,4 @@
+use crate::shared::{ChatContent, ConversationTitle};
 use chrono::{DateTime, Utc};
 use rig::message::Message as RigMessage;
 use serde::{Deserialize, Serialize};
@@ -72,8 +73,7 @@ pub struct ConversationRow {
 
 #[derive(Debug, Deserialize, Validate)]
 pub struct ChatRequest {
-    #[validate(length(min = 1, max = 10000))]
-    pub content: String,
+    pub content: ChatContent,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -112,7 +112,7 @@ pub struct ConversationItem {
 
 #[derive(Debug, Clone, Serialize, Deserialize, Validate)]
 pub struct CreateConversationRequest {
-    pub title: String,
+    pub title: ConversationTitle,
 }
 
 impl From<ConversationRow> for ConversationItem {

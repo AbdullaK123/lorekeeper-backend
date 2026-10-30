@@ -172,6 +172,32 @@ class ApiTests(unittest.TestCase):
         allowed = r.headers.get("Access-Control-Allow-Methods", "")
         self.assertIn("PATCH", allowed, "Browsers cannot update worlds because preflight rejects PATCH")
 
+    def test_world_text_is_normalized_before_storage(self):
+        r = request(self.a, "POST", "/world", json={
+            "name": "  Cafe\u0301\u200b   Reach  ", "description": "  first\r\nsecond  "})
+        self.assertEqual(r.status_code, 200, f"Valid normalized text is rejected: {r.text}")
+        w = r.json()["id"]
+        saved = request(self.a, "GET", f"/world/{w}").json()
+        self.assertEqual(saved["name"], "Café Reach", "Unnormalized names reach saved worlds")
+        self.assertEqual(saved["description"], "first\nsecond", "Description line breaks change during storage")
+
+    def test_invalid_world_update_does_not_change_saved_name(self):
+        w = world(self.a, "Unchanged name")
+        for name in ("   ", "safe\u202eevil", "safe\x00evil", "x" * 256):
+            with self.subTest(name=repr(name)):
+                r = request(self.a, "PATCH", f"/world/{w}", json={"new_name": name})
+                self.assertEqual(r.status_code, 422, "Invalid names cross the update boundary")
+        saved = request(self.a, "GET", f"/world/{w}").json()
+        self.assertEqual(saved["name"], "Unchanged name", "Rejected updates change saved data")
+
+    def test_blank_conversation_title_is_rejected(self):
+        r = request(self.a, "POST", f"/world/{self.w}/conversations", json={"title": " \u200b "})
+        self.assertEqual(r.status_code, 422, "Invisible-only titles enter saved conversations")
+
+    def test_blank_chat_is_rejected_before_model_processing(self):
+        r = request(self.a, "POST", f"/conversation/{self.c}/messages", json={"content": " \n\u200b "})
+        self.assertEqual(r.status_code, 422, "Blank chat reaches paid model processing")
+
     def test_duplicate_signup_returns_conflict(self):
         r = request(self.a, "POST", "/auth/signup", json={
             "username": "QA", "email": self.emails[0], "password": PASSWORD})

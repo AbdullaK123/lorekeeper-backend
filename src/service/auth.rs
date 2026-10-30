@@ -50,9 +50,9 @@ impl AuthService {
     }
     
     pub async fn signup(&self, payload: SignupRequest) -> Result<UserResponse, ServiceError> {
-        let password_hash = Self::hash_password(payload.password).await?;
+        let password_hash = Self::hash_password(payload.password.into_inner()).await?;
         let user = self.user_repo.sign_up(
-            payload.username,
+            payload.username.into_inner(),
             payload.email,
             password_hash
         ).await?;

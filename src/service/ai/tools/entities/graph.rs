@@ -1,3 +1,4 @@
+use crate::shared::{Description, EntityName};
 use std::collections::HashMap;
 
 use crate::{
@@ -21,11 +22,11 @@ pub struct UpdateGraph {
 pub struct GraphEntityInput {
     /// Exact saved ID for updates. Omit or use null for a new subject.
     pub id: Option<String>,
-    pub name: String,
-    pub aliases: Vec<String>,
+    pub name: EntityName,
+    pub aliases: Vec<EntityName>,
     pub kind: Vec<String>,
     /// Complete updated description. Preserve earlier facts when adding details.
-    pub description: String,
+    pub description: Description,
     /// Complete updated properties. Omitted properties are removed.
     pub properties: HashMap<String, serde_json::Value>,
 }
@@ -37,7 +38,7 @@ pub struct GraphRelationshipInput {
     pub from_id: String,
     pub to_id: String,
     pub rel_type: String,
-    pub description: String,
+    pub description: Description,
     pub properties: HashMap<String, serde_json::Value>,
 }
 
@@ -46,11 +47,11 @@ impl From<(GraphEntityInput, &str)> for Entity {
         Self {
             id: input.id.unwrap_or_else(|| Uuid::new_v4().to_string()),
             world_id: world_id.to_owned(),
-            name_key: name_key(&input.name),
-            name: input.name,
-            aliases: input.aliases,
+            name_key: name_key(input.name.as_str()),
+            name: input.name.into_inner(),
+            aliases: input.aliases.into_iter().map(String::from).collect(),
             kind: input.kind,
-            description: input.description,
+            description: input.description.into_inner(),
             properties: input.properties,
             source_message_ids: Vec::new(),
         }
@@ -65,7 +66,7 @@ impl From<(GraphRelationshipInput, &str, &str)> for Relationship {
             from_id: input.from_id,
             to_id: input.to_id,
             rel_type: input.rel_type,
-            description: input.description,
+            description: input.description.into_inner(),
             properties: input.properties,
             source_message_ids: Vec::new(),
             source_conversation: conversation_id.to_owned(),

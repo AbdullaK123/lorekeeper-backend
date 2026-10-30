@@ -1,0 +1,374 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Clarifying roles and rules**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" use"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" provided"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" for"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" my"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" answer"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" O"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ren"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" one"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" guarding"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" reservoir"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" soldiers"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" can't"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" access"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" water"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" without"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" permit"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" from"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" council"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" L"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ysa"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" responsible"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" for"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" keeping"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Sun"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Archive"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" which"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" available"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" for"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" civilian"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" scholars"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" only"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" during"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" daylight"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" hours"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Both"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" are"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" referred"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" as"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" W"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"arden"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" they"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" are"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" not"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" related"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Additionally"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"’s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" important"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" note"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" archive"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" contains"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" original"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" aqu"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"educt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" plans"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" which"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" might"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" be"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" relevant"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"’ll"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" keep"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" everything"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" concise"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" clear"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"!"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"**"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"O"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ren"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" D"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ask"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"**"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" W"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"arden"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" of"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" **"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"S"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"able"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"cross"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" reservoir"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"**"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" He"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" refuses"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" let"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" soldiers"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" draw"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" water"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" without"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" **"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"c"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"oun"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"cil"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" permit"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"**"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":".\n\n"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"**"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"L"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"ysa"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Renn"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"**"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" W"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"arden"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" of"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" **"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Sun"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Archive"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"**,"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" which"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" holds"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" original"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" aqu"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"educt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" plans"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" She"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" admits"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" civilian"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" scholars"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" **"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"during"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" daylight"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" only"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"**"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":".\n\n"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"They"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" share"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" title"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" “"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"W"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"arden"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":",”"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" they"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" guard"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" different"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" places"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" are"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" unrelated"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"**Oren Dask** is the Warden of the **Sablecross reservoir**. He refuses to let soldiers draw water without a **council permit**.\n\n**Lysa Renn** is the Warden of the **Sun Archive**, which holds the original aqueduct plans. She admits civilian scholars **during daylight only**.\n\nThey share the title “Warden,” but they guard different places and are unrelated."}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Clarifying roles and rules**\n\nI need to use the provided lore for my answer. Oren is the one guarding the reservoir, and soldiers can't access water without a permit from the council. Lysa is responsible for keeping the Sun Archive, which is available for civilian scholars only during daylight hours. Both are referred to as Warden, but they are not related. Additionally, it’s important to note that the archive contains original aqueduct plans, which might be relevant. I’ll keep everything concise and clear!","native":{"item":{"reasoning":"**Clarifying roles and rules**\n\nI need to use the provided lore for my answer. Oren is the one guarding the reservoir, and soldiers can't access water without a permit from the council. Lysa is responsible for keeping the Sun Archive, which is available for civilian scholars only during daylight hours. Both are referred to as Warden, but they are not related. Additionally, it’s important to note that the archive contains original aqueduct plans, which might be relevant. I’ll keep everything concise and clear!","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying roles and rules**\n\nI need to use the provided lore for my answer. Oren is the one guarding the reservoir, and soldiers can't access water without a permit from the council. Lysa is responsible for keeping the Sun Archive, which is available for civilian scholars only during daylight hours. Both are referred to as Warden, but they are not related. Additionally, it’s important to note that the archive contains original aqueduct plans, which might be relevant. I’ll keep everything concise and clear!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq5FH8hFftYKOJnorhqDsrg5uTGRW5kO5Vl6HGi8HAzVGDu1H5ycnNdD7NqZa8tI-G29A-hV3wi_wihKMIOaS36sq2nsgJ-JpOt8HiUhVMe0yTdVyrqwrWsPC3P0U4Z3d4qor9oJcVgSMLcQ3YULt5h9ma_2L29E6Zuk32RwoCi6RQCxCtmViUo-yrA6lSL2S1-yVIk7jUV40JJtS8UxVHvuQYL8c_IaleNoUB0rvB71HrPGkz3ParM_MzNP-4P-qjBQ8dBozC-CGoRlJMroiFYFHMhUNKesUE_wrqViI_3ZgxiccgP6BmJHvr0twbgnXv9q8h4e3eekhNu7ZkydkF30J_vEHGSmnD9IX3Kc034FejMZb3QuGwsPo8Tf55Wg_Ed11JRtWaQYGfHN26FwKJ74wgJoK5gUc0-TILgUa-GPqw91CfdcptYUz6UdwfSPpikrsTp7oJ3j3xFOG8NoCDcPa2wBpStVK7Lo-dvDx-8xgP_LxIMWOfqWeiAvnGAJQIRgliAU8lrnsg7hj5CuNhLZzWjw99p0Q5JC4Q1AvNrU89D63xd3oOQ1qv8mxKp3ILzfMvCYw0y7JeVBtsJHX77UJLO2kqImxqbzFhgAgmTNy1Hh3o3H_4KzEodkF8zx5LXk92CypLoHmQ6p7pgxmut-6nO1rlsXS-aFf7U4qeZSK56iD07Bj8TOvPiw-eKXcmgrK2xZgzBpvm-LClvSOoLfXIlCQ5XIu_UQDBR5ntkSkrU02dIb2qh_gEl9EUByLfQGxkG_PsYM2nT2WoJv_77NJ9Y0Tkd_ZtJ8d8l0vUlN3XCaKNlmoNZp1JQSyYHB59nMI8SGSyCKYkCvnbOch-c4ENRCsDbLgWFpTO43EjGvzZt6tw6mL232g70JnMNfPPeJ8n1CgFPH7D4SQKi1WyluqZ0M11V-HBDLehITZCkIf5ZXpJSndYckYOxVuZUC0erni7QzvK0bPs8DGlIQl9ZdHeCu55MDEOSP5E2kUsQUjknEFdYKPxCJDqBdowoq6vjHWPz0hgOunKhRJeoL_iPTFmuf4oKNLjjtH0b50Upjro6i8bMRUv1MfwaK-PvFk8eOYHV6UT3zNkw3N2tnAYe-rQm0iZpgQlBYLLtj2bp2kxg-tEJKUDpnOzAlbH57DglYTZ3zHBF7zlaic3iUzINHrKa7d3OOOeg5QKLcuWVs7_-1BT0AJBRXsh7NyRo9jtWxdTGEWBOr57luEbis9utqAkQBez8Za9zvVbR0KRTBKSbEAPNXurxRdHmVKt1p4RgHNhDyYCttGzsv9xG3OFduo1q-tzODRgD8OiW5iyZsrN-g8Ib9ISS_t4wsAQl4SpoQpMnHJnphqg_dyKQP48dNEO4UWE973FOp0QyXBciaoN_eBLlMgUaEh9L61qIknVx-t_0v5ZHU38J6nsMdyePLi38EmDxRyU6fX6fBhpdM7iPg9xAFGnLyGskx-n50HIT4T3TtquBZoiOWDezOLe4vLRaCrSop5FxUS1t6Emoby-wuE6BHLJdhct6v-dV2zUCn8UA7kExhgRqQLB8uC-aAz0lqWTNcCfeqK3ki3C7JaGudFIcwwo1tXaq95Pqb7480YNB4ZAMjh7hWNUAXOZCpL8q0JeVfiqzDvg2rV5b0EgHgSxWWfkcNK3--1q3tX_ojH2RHmUVz-K2Xh-gQHVBZQwtY1qDzc1GSXgQKhMlOIm7-0G_NNax5xTWj09lD-aKFGxXx7tMx81CTWsXK-kcHtROovZfwFFx_HY0FjpIYljMNnn739Tt1bkDkltR4-IKztR5uBK3P1X38kcNa1sLBaP64_7-SWL7qpDUft40ei2y1Lv72iRTu8XXF-SyGpd813KC2x5G5OnY-JrNNBD6V7JkqScLmn4I-aQcJfgbW7GhXweBHl8sRzL9peTjtj940z-7owVJXljN2orgobJfvUiE3s2Eoz1sHAjfgPal51RvGR2EmcdQo4yFyUlGtrTu9-zwSduYtpp0jE41qBx0WDl_EDaSflh6ITNYuQjh7Nr8cQhMCNlJMzBc9ExeEZSDrDKhZY0YURrvGtRVE071GKC-uxrmdQOJJ345lNnfmqk06Db26zJQRW1dlJcvwgS0XC61pT5pc6AE7CthN97-Zy89nBJv-lO9qGcvk6qnu2HUp4wwZg8pUE6U-yxKJ2HA6DqMLlrWdrKbnoSm7W9tuBSXwIzwikpC92xxAelDrS9IgVrLy9CENx6suZIgrY3WP89JnHbiGpQwt8beAXXu4O-fai92kChUVqgQT4aqgrB-ECs0lkEcJtzfHojVS4PNduk0NtEqFyxwbKQsxHD5RbvHLjC3coBlq2sQQNcsefu7PwngSw6l_RtzNSwpmoDT66OeixEBxtup6iq7d50RIRDA-jrExjc8bTi4A9jBqIKFUtTEu_Q2mlWQHrkeKPRrX_2Fx5POsLjTrDLahAWxPIxX-AcpVX8KZYTcgzFpnrsUKY=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_090ab66f1783009e016ae451facb2c87d181fa9169e22e732e","index":1}]},"fingerprint":"b6af7d593084b65d"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":4913,"output_tokens":157,"total_tokens":5070,"cached_input_tokens":1953,"cache_creation_input_tokens":2957,"reasoning_tokens":66,"cost":{"total":0.000467955}},"response_id":"gen-1793348089-7zXRx3g1tKNYkq1SdFpc","finish_reason":"stop","raw":{"id":"gen-1793348089-7zXRx3g1tKNYkq1SdFpc","object":"chat.completion","created":1793348089,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"**Oren Dask** is the Warden of the **Sablecross reservoir**. He refuses to let soldiers draw water without a **council permit**.\n\n**Lysa Renn** is the Warden of the **Sun Archive**, which holds the original aqueduct plans. She admits civilian scholars **during daylight only**.\n\nThey share the title “Warden,” but they guard different places and are unrelated.","role":"assistant","reasoning":"**Clarifying roles and rules**\n\nI need to use the provided lore for my answer. Oren is the one guarding the reservoir, and soldiers can't access water without a permit from the council. Lysa is responsible for keeping the Sun Archive, which is available for civilian scholars only during daylight hours. Both are referred to as Warden, but they are not related. Additionally, it’s important to note that the archive contains original aqueduct plans, which might be relevant. I’ll keep everything concise and clear!","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying roles and rules**\n\nI need to use the provided lore for my answer. Oren is the one guarding the reservoir, and soldiers can't access water without a permit from the council. Lysa is responsible for keeping the Sun Archive, which is available for civilian scholars only during daylight hours. Both are referred to as Warden, but they are not related. Additionally, it’s important to note that the archive contains original aqueduct plans, which might be relevant. I’ll keep everything concise and clear!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq5FH8hFftYKOJnorhqDsrg5uTGRW5kO5Vl6HGi8HAzVGDu1H5ycnNdD7NqZa8tI-G29A-hV3wi_wihKMIOaS36sq2nsgJ-JpOt8HiUhVMe0yTdVyrqwrWsPC3P0U4Z3d4qor9oJcVgSMLcQ3YULt5h9ma_2L29E6Zuk32RwoCi6RQCxCtmViUo-yrA6lSL2S1-yVIk7jUV40JJtS8UxVHvuQYL8c_IaleNoUB0rvB71HrPGkz3ParM_MzNP-4P-qjBQ8dBozC-CGoRlJMroiFYFHMhUNKesUE_wrqViI_3ZgxiccgP6BmJHvr0twbgnXv9q8h4e3eekhNu7ZkydkF30J_vEHGSmnD9IX3Kc034FejMZb3QuGwsPo8Tf55Wg_Ed11JRtWaQYGfHN26FwKJ74wgJoK5gUc0-TILgUa-GPqw91CfdcptYUz6UdwfSPpikrsTp7oJ3j3xFOG8NoCDcPa2wBpStVK7Lo-dvDx-8xgP_LxIMWOfqWeiAvnGAJQIRgliAU8lrnsg7hj5CuNhLZzWjw99p0Q5JC4Q1AvNrU89D63xd3oOQ1qv8mxKp3ILzfMvCYw0y7JeVBtsJHX77UJLO2kqImxqbzFhgAgmTNy1Hh3o3H_4KzEodkF8zx5LXk92CypLoHmQ6p7pgxmut-6nO1rlsXS-aFf7U4qeZSK56iD07Bj8TOvPiw-eKXcmgrK2xZgzBpvm-LClvSOoLfXIlCQ5XIu_UQDBR5ntkSkrU02dIb2qh_gEl9EUByLfQGxkG_PsYM2nT2WoJv_77NJ9Y0Tkd_ZtJ8d8l0vUlN3XCaKNlmoNZp1JQSyYHB59nMI8SGSyCKYkCvnbOch-c4ENRCsDbLgWFpTO43EjGvzZt6tw6mL232g70JnMNfPPeJ8n1CgFPH7D4SQKi1WyluqZ0M11V-HBDLehITZCkIf5ZXpJSndYckYOxVuZUC0erni7QzvK0bPs8DGlIQl9ZdHeCu55MDEOSP5E2kUsQUjknEFdYKPxCJDqBdowoq6vjHWPz0hgOunKhRJeoL_iPTFmuf4oKNLjjtH0b50Upjro6i8bMRUv1MfwaK-PvFk8eOYHV6UT3zNkw3N2tnAYe-rQm0iZpgQlBYLLtj2bp2kxg-tEJKUDpnOzAlbH57DglYTZ3zHBF7zlaic3iUzINHrKa7d3OOOeg5QKLcuWVs7_-1BT0AJBRXsh7NyRo9jtWxdTGEWBOr57luEbis9utqAkQBez8Za9zvVbR0KRTBKSbEAPNXurxRdHmVKt1p4RgHNhDyYCttGzsv9xG3OFduo1q-tzODRgD8OiW5iyZsrN-g8Ib9ISS_t4wsAQl4SpoQpMnHJnphqg_dyKQP48dNEO4UWE973FOp0QyXBciaoN_eBLlMgUaEh9L61qIknVx-t_0v5ZHU38J6nsMdyePLi38EmDxRyU6fX6fBhpdM7iPg9xAFGnLyGskx-n50HIT4T3TtquBZoiOWDezOLe4vLRaCrSop5FxUS1t6Emoby-wuE6BHLJdhct6v-dV2zUCn8UA7kExhgRqQLB8uC-aAz0lqWTNcCfeqK3ki3C7JaGudFIcwwo1tXaq95Pqb7480YNB4ZAMjh7hWNUAXOZCpL8q0JeVfiqzDvg2rV5b0EgHgSxWWfkcNK3--1q3tX_ojH2RHmUVz-K2Xh-gQHVBZQwtY1qDzc1GSXgQKhMlOIm7-0G_NNax5xTWj09lD-aKFGxXx7tMx81CTWsXK-kcHtROovZfwFFx_HY0FjpIYljMNnn739Tt1bkDkltR4-IKztR5uBK3P1X38kcNa1sLBaP64_7-SWL7qpDUft40ei2y1Lv72iRTu8XXF-SyGpd813KC2x5G5OnY-JrNNBD6V7JkqScLmn4I-aQcJfgbW7GhXweBHl8sRzL9peTjtj940z-7owVJXljN2orgobJfvUiE3s2Eoz1sHAjfgPal51RvGR2EmcdQo4yFyUlGtrTu9-zwSduYtpp0jE41qBx0WDl_EDaSflh6ITNYuQjh7Nr8cQhMCNlJMzBc9ExeEZSDrDKhZY0YURrvGtRVE071GKC-uxrmdQOJJ345lNnfmqk06Db26zJQRW1dlJcvwgS0XC61pT5pc6AE7CthN97-Zy89nBJv-lO9qGcvk6qnu2HUp4wwZg8pUE6U-yxKJ2HA6DqMLlrWdrKbnoSm7W9tuBSXwIzwikpC92xxAelDrS9IgVrLy9CENx6suZIgrY3WP89JnHbiGpQwt8beAXXu4O-fai92kChUVqgQT4aqgrB-ECs0lkEcJtzfHojVS4PNduk0NtEqFyxwbKQsxHD5RbvHLjC3coBlq2sQQNcsefu7PwngSw6l_RtzNSwpmoDT66OeixEBxtup6iq7d50RIRDA-jrExjc8bTi4A9jBqIKFUtTEu_Q2mlWQHrkeKPRrX_2Fx5POsLjTrDLahAWxPIxX-AcpVX8KZYTcgzFpnrsUKY=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_090ab66f1783009e016ae451facb2c87d181fa9169e22e732e","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4913,"completion_tokens":157,"total_tokens":5070,"cost":0.000467955,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1953,"cache_write_tokens":2957,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000467955,"upstream_inference_prompt_cost":0.000389455,"upstream_inference_completions_cost":0.0000785},"completion_tokens_details":{"reasoning_tokens":66,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":4913,"output_tokens":157,"total_tokens":5070,"cached_input_tokens":1953,"cache_creation_input_tokens":2957,"reasoning_tokens":66,"cost":{"total":0.000467955}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":4913,"output_tokens":157,"total_tokens":5070,"cached_input_tokens":1953,"cache_creation_input_tokens":2957,"reasoning_tokens":66,"cost":{"total":0.000467955}},"response_id":"gen-1793348089-7zXRx3g1tKNYkq1SdFpc","finish_reason":"stop","raw":{"id":"gen-1793348089-7zXRx3g1tKNYkq1SdFpc","object":"chat.completion","created":1793348089,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"**Oren Dask** is the Warden of the **Sablecross reservoir**. He refuses to let soldiers draw water without a **council permit**.\n\n**Lysa Renn** is the Warden of the **Sun Archive**, which holds the original aqueduct plans. She admits civilian scholars **during daylight only**.\n\nThey share the title “Warden,” but they guard different places and are unrelated.","role":"assistant","reasoning":"**Clarifying roles and rules**\n\nI need to use the provided lore for my answer. Oren is the one guarding the reservoir, and soldiers can't access water without a permit from the council. Lysa is responsible for keeping the Sun Archive, which is available for civilian scholars only during daylight hours. Both are referred to as Warden, but they are not related. Additionally, it’s important to note that the archive contains original aqueduct plans, which might be relevant. I’ll keep everything concise and clear!","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying roles and rules**\n\nI need to use the provided lore for my answer. Oren is the one guarding the reservoir, and soldiers can't access water without a permit from the council. Lysa is responsible for keeping the Sun Archive, which is available for civilian scholars only during daylight hours. Both are referred to as Warden, but they are not related. Additionally, it’s important to note that the archive contains original aqueduct plans, which might be relevant. I’ll keep everything concise and clear!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq5FH8hFftYKOJnorhqDsrg5uTGRW5kO5Vl6HGi8HAzVGDu1H5ycnNdD7NqZa8tI-G29A-hV3wi_wihKMIOaS36sq2nsgJ-JpOt8HiUhVMe0yTdVyrqwrWsPC3P0U4Z3d4qor9oJcVgSMLcQ3YULt5h9ma_2L29E6Zuk32RwoCi6RQCxCtmViUo-yrA6lSL2S1-yVIk7jUV40JJtS8UxVHvuQYL8c_IaleNoUB0rvB71HrPGkz3ParM_MzNP-4P-qjBQ8dBozC-CGoRlJMroiFYFHMhUNKesUE_wrqViI_3ZgxiccgP6BmJHvr0twbgnXv9q8h4e3eekhNu7ZkydkF30J_vEHGSmnD9IX3Kc034FejMZb3QuGwsPo8Tf55Wg_Ed11JRtWaQYGfHN26FwKJ74wgJoK5gUc0-TILgUa-GPqw91CfdcptYUz6UdwfSPpikrsTp7oJ3j3xFOG8NoCDcPa2wBpStVK7Lo-dvDx-8xgP_LxIMWOfqWeiAvnGAJQIRgliAU8lrnsg7hj5CuNhLZzWjw99p0Q5JC4Q1AvNrU89D63xd3oOQ1qv8mxKp3ILzfMvCYw0y7JeVBtsJHX77UJLO2kqImxqbzFhgAgmTNy1Hh3o3H_4KzEodkF8zx5LXk92CypLoHmQ6p7pgxmut-6nO1rlsXS-aFf7U4qeZSK56iD07Bj8TOvPiw-eKXcmgrK2xZgzBpvm-LClvSOoLfXIlCQ5XIu_UQDBR5ntkSkrU02dIb2qh_gEl9EUByLfQGxkG_PsYM2nT2WoJv_77NJ9Y0Tkd_ZtJ8d8l0vUlN3XCaKNlmoNZp1JQSyYHB59nMI8SGSyCKYkCvnbOch-c4ENRCsDbLgWFpTO43EjGvzZt6tw6mL232g70JnMNfPPeJ8n1CgFPH7D4SQKi1WyluqZ0M11V-HBDLehITZCkIf5ZXpJSndYckYOxVuZUC0erni7QzvK0bPs8DGlIQl9ZdHeCu55MDEOSP5E2kUsQUjknEFdYKPxCJDqBdowoq6vjHWPz0hgOunKhRJeoL_iPTFmuf4oKNLjjtH0b50Upjro6i8bMRUv1MfwaK-PvFk8eOYHV6UT3zNkw3N2tnAYe-rQm0iZpgQlBYLLtj2bp2kxg-tEJKUDpnOzAlbH57DglYTZ3zHBF7zlaic3iUzINHrKa7d3OOOeg5QKLcuWVs7_-1BT0AJBRXsh7NyRo9jtWxdTGEWBOr57luEbis9utqAkQBez8Za9zvVbR0KRTBKSbEAPNXurxRdHmVKt1p4RgHNhDyYCttGzsv9xG3OFduo1q-tzODRgD8OiW5iyZsrN-g8Ib9ISS_t4wsAQl4SpoQpMnHJnphqg_dyKQP48dNEO4UWE973FOp0QyXBciaoN_eBLlMgUaEh9L61qIknVx-t_0v5ZHU38J6nsMdyePLi38EmDxRyU6fX6fBhpdM7iPg9xAFGnLyGskx-n50HIT4T3TtquBZoiOWDezOLe4vLRaCrSop5FxUS1t6Emoby-wuE6BHLJdhct6v-dV2zUCn8UA7kExhgRqQLB8uC-aAz0lqWTNcCfeqK3ki3C7JaGudFIcwwo1tXaq95Pqb7480YNB4ZAMjh7hWNUAXOZCpL8q0JeVfiqzDvg2rV5b0EgHgSxWWfkcNK3--1q3tX_ojH2RHmUVz-K2Xh-gQHVBZQwtY1qDzc1GSXgQKhMlOIm7-0G_NNax5xTWj09lD-aKFGxXx7tMx81CTWsXK-kcHtROovZfwFFx_HY0FjpIYljMNnn739Tt1bkDkltR4-IKztR5uBK3P1X38kcNa1sLBaP64_7-SWL7qpDUft40ei2y1Lv72iRTu8XXF-SyGpd813KC2x5G5OnY-JrNNBD6V7JkqScLmn4I-aQcJfgbW7GhXweBHl8sRzL9peTjtj940z-7owVJXljN2orgobJfvUiE3s2Eoz1sHAjfgPal51RvGR2EmcdQo4yFyUlGtrTu9-zwSduYtpp0jE41qBx0WDl_EDaSflh6ITNYuQjh7Nr8cQhMCNlJMzBc9ExeEZSDrDKhZY0YURrvGtRVE071GKC-uxrmdQOJJ345lNnfmqk06Db26zJQRW1dlJcvwgS0XC61pT5pc6AE7CthN97-Zy89nBJv-lO9qGcvk6qnu2HUp4wwZg8pUE6U-yxKJ2HA6DqMLlrWdrKbnoSm7W9tuBSXwIzwikpC92xxAelDrS9IgVrLy9CENx6suZIgrY3WP89JnHbiGpQwt8beAXXu4O-fai92kChUVqgQT4aqgrB-ECs0lkEcJtzfHojVS4PNduk0NtEqFyxwbKQsxHD5RbvHLjC3coBlq2sQQNcsefu7PwngSw6l_RtzNSwpmoDT66OeixEBxtup6iq7d50RIRDA-jrExjc8bTi4A9jBqIKFUtTEu_Q2mlWQHrkeKPRrX_2Fx5POsLjTrDLahAWxPIxX-AcpVX8KZYTcgzFpnrsUKY=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_090ab66f1783009e016ae451facb2c87d181fa9169e22e732e","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":4913,"completion_tokens":157,"total_tokens":5070,"cost":0.000467955,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1953,"cache_write_tokens":2957,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000467955,"upstream_inference_prompt_cost":0.000389455,"upstream_inference_completions_cost":0.0000785},"completion_tokens_details":{"reasoning_tokens":66,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"What are Oren Dask's and Lysa Renn's roles and access rules? Both are called Warden; distinguish them using saved lore."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Clarifying roles and rules**\n\nI need to use the provided lore for my answer. Oren is the one guarding the reservoir, and soldiers can't access water without a permit from the council. Lysa is responsible for keeping the Sun Archive, which is available for civilian scholars only during daylight hours. Both are referred to as Warden, but they are not related. Additionally, it’s important to note that the archive contains original aqueduct plans, which might be relevant. I’ll keep everything concise and clear!","native":{"item":{"reasoning":"**Clarifying roles and rules**\n\nI need to use the provided lore for my answer. Oren is the one guarding the reservoir, and soldiers can't access water without a permit from the council. Lysa is responsible for keeping the Sun Archive, which is available for civilian scholars only during daylight hours. Both are referred to as Warden, but they are not related. Additionally, it’s important to note that the archive contains original aqueduct plans, which might be relevant. I’ll keep everything concise and clear!","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying roles and rules**\n\nI need to use the provided lore for my answer. Oren is the one guarding the reservoir, and soldiers can't access water without a permit from the council. Lysa is responsible for keeping the Sun Archive, which is available for civilian scholars only during daylight hours. Both are referred to as Warden, but they are not related. Additionally, it’s important to note that the archive contains original aqueduct plans, which might be relevant. I’ll keep everything concise and clear!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq5FH8hFftYKOJnorhqDsrg5uTGRW5kO5Vl6HGi8HAzVGDu1H5ycnNdD7NqZa8tI-G29A-hV3wi_wihKMIOaS36sq2nsgJ-JpOt8HiUhVMe0yTdVyrqwrWsPC3P0U4Z3d4qor9oJcVgSMLcQ3YULt5h9ma_2L29E6Zuk32RwoCi6RQCxCtmViUo-yrA6lSL2S1-yVIk7jUV40JJtS8UxVHvuQYL8c_IaleNoUB0rvB71HrPGkz3ParM_MzNP-4P-qjBQ8dBozC-CGoRlJMroiFYFHMhUNKesUE_wrqViI_3ZgxiccgP6BmJHvr0twbgnXv9q8h4e3eekhNu7ZkydkF30J_vEHGSmnD9IX3Kc034FejMZb3QuGwsPo8Tf55Wg_Ed11JRtWaQYGfHN26FwKJ74wgJoK5gUc0-TILgUa-GPqw91CfdcptYUz6UdwfSPpikrsTp7oJ3j3xFOG8NoCDcPa2wBpStVK7Lo-dvDx-8xgP_LxIMWOfqWeiAvnGAJQIRgliAU8lrnsg7hj5CuNhLZzWjw99p0Q5JC4Q1AvNrU89D63xd3oOQ1qv8mxKp3ILzfMvCYw0y7JeVBtsJHX77UJLO2kqImxqbzFhgAgmTNy1Hh3o3H_4KzEodkF8zx5LXk92CypLoHmQ6p7pgxmut-6nO1rlsXS-aFf7U4qeZSK56iD07Bj8TOvPiw-eKXcmgrK2xZgzBpvm-LClvSOoLfXIlCQ5XIu_UQDBR5ntkSkrU02dIb2qh_gEl9EUByLfQGxkG_PsYM2nT2WoJv_77NJ9Y0Tkd_ZtJ8d8l0vUlN3XCaKNlmoNZp1JQSyYHB59nMI8SGSyCKYkCvnbOch-c4ENRCsDbLgWFpTO43EjGvzZt6tw6mL232g70JnMNfPPeJ8n1CgFPH7D4SQKi1WyluqZ0M11V-HBDLehITZCkIf5ZXpJSndYckYOxVuZUC0erni7QzvK0bPs8DGlIQl9ZdHeCu55MDEOSP5E2kUsQUjknEFdYKPxCJDqBdowoq6vjHWPz0hgOunKhRJeoL_iPTFmuf4oKNLjjtH0b50Upjro6i8bMRUv1MfwaK-PvFk8eOYHV6UT3zNkw3N2tnAYe-rQm0iZpgQlBYLLtj2bp2kxg-tEJKUDpnOzAlbH57DglYTZ3zHBF7zlaic3iUzINHrKa7d3OOOeg5QKLcuWVs7_-1BT0AJBRXsh7NyRo9jtWxdTGEWBOr57luEbis9utqAkQBez8Za9zvVbR0KRTBKSbEAPNXurxRdHmVKt1p4RgHNhDyYCttGzsv9xG3OFduo1q-tzODRgD8OiW5iyZsrN-g8Ib9ISS_t4wsAQl4SpoQpMnHJnphqg_dyKQP48dNEO4UWE973FOp0QyXBciaoN_eBLlMgUaEh9L61qIknVx-t_0v5ZHU38J6nsMdyePLi38EmDxRyU6fX6fBhpdM7iPg9xAFGnLyGskx-n50HIT4T3TtquBZoiOWDezOLe4vLRaCrSop5FxUS1t6Emoby-wuE6BHLJdhct6v-dV2zUCn8UA7kExhgRqQLB8uC-aAz0lqWTNcCfeqK3ki3C7JaGudFIcwwo1tXaq95Pqb7480YNB4ZAMjh7hWNUAXOZCpL8q0JeVfiqzDvg2rV5b0EgHgSxWWfkcNK3--1q3tX_ojH2RHmUVz-K2Xh-gQHVBZQwtY1qDzc1GSXgQKhMlOIm7-0G_NNax5xTWj09lD-aKFGxXx7tMx81CTWsXK-kcHtROovZfwFFx_HY0FjpIYljMNnn739Tt1bkDkltR4-IKztR5uBK3P1X38kcNa1sLBaP64_7-SWL7qpDUft40ei2y1Lv72iRTu8XXF-SyGpd813KC2x5G5OnY-JrNNBD6V7JkqScLmn4I-aQcJfgbW7GhXweBHl8sRzL9peTjtj940z-7owVJXljN2orgobJfvUiE3s2Eoz1sHAjfgPal51RvGR2EmcdQo4yFyUlGtrTu9-zwSduYtpp0jE41qBx0WDl_EDaSflh6ITNYuQjh7Nr8cQhMCNlJMzBc9ExeEZSDrDKhZY0YURrvGtRVE071GKC-uxrmdQOJJ345lNnfmqk06Db26zJQRW1dlJcvwgS0XC61pT5pc6AE7CthN97-Zy89nBJv-lO9qGcvk6qnu2HUp4wwZg8pUE6U-yxKJ2HA6DqMLlrWdrKbnoSm7W9tuBSXwIzwikpC92xxAelDrS9IgVrLy9CENx6suZIgrY3WP89JnHbiGpQwt8beAXXu4O-fai92kChUVqgQT4aqgrB-ECs0lkEcJtzfHojVS4PNduk0NtEqFyxwbKQsxHD5RbvHLjC3coBlq2sQQNcsefu7PwngSw6l_RtzNSwpmoDT66OeixEBxtup6iq7d50RIRDA-jrExjc8bTi4A9jBqIKFUtTEu_Q2mlWQHrkeKPRrX_2Fx5POsLjTrDLahAWxPIxX-AcpVX8KZYTcgzFpnrsUKY=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_090ab66f1783009e016ae451facb2c87d181fa9169e22e732e","index":1}]},"fingerprint":"b6af7d593084b65d"}},{"type":"text","text":"**Oren Dask** is the Warden of the **Sablecross reservoir**. He refuses to let soldiers draw water without a **council permit**.\n\n**Lysa Renn** is the Warden of the **Sun Archive**, which holds the original aqueduct plans. She admits civilian scholars **during daylight only**.\n\nThey share the title “Warden,” but they guard different places and are unrelated."}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793348089-7zXRx3g1tKNYkq1SdFpc"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Clarifying roles and rules**\n\nI need to use the provided lore for my answer. Oren is the one guarding the reservoir, and soldiers can't access water without a permit from the council. Lysa is responsible for keeping the Sun Archive, which is available for civilian scholars only during daylight hours. Both are referred to as Warden, but they are not related. Additionally, it’s important to note that the archive contains original aqueduct plans, which might be relevant. I’ll keep everything concise and clear!","native":{"item":{"reasoning":"**Clarifying roles and rules**\n\nI need to use the provided lore for my answer. Oren is the one guarding the reservoir, and soldiers can't access water without a permit from the council. Lysa is responsible for keeping the Sun Archive, which is available for civilian scholars only during daylight hours. Both are referred to as Warden, but they are not related. Additionally, it’s important to note that the archive contains original aqueduct plans, which might be relevant. I’ll keep everything concise and clear!","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying roles and rules**\n\nI need to use the provided lore for my answer. Oren is the one guarding the reservoir, and soldiers can't access water without a permit from the council. Lysa is responsible for keeping the Sun Archive, which is available for civilian scholars only during daylight hours. Both are referred to as Warden, but they are not related. Additionally, it’s important to note that the archive contains original aqueduct plans, which might be relevant. I’ll keep everything concise and clear!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq5FH8hFftYKOJnorhqDsrg5uTGRW5kO5Vl6HGi8HAzVGDu1H5ycnNdD7NqZa8tI-G29A-hV3wi_wihKMIOaS36sq2nsgJ-JpOt8HiUhVMe0yTdVyrqwrWsPC3P0U4Z3d4qor9oJcVgSMLcQ3YULt5h9ma_2L29E6Zuk32RwoCi6RQCxCtmViUo-yrA6lSL2S1-yVIk7jUV40JJtS8UxVHvuQYL8c_IaleNoUB0rvB71HrPGkz3ParM_MzNP-4P-qjBQ8dBozC-CGoRlJMroiFYFHMhUNKesUE_wrqViI_3ZgxiccgP6BmJHvr0twbgnXv9q8h4e3eekhNu7ZkydkF30J_vEHGSmnD9IX3Kc034FejMZb3QuGwsPo8Tf55Wg_Ed11JRtWaQYGfHN26FwKJ74wgJoK5gUc0-TILgUa-GPqw91CfdcptYUz6UdwfSPpikrsTp7oJ3j3xFOG8NoCDcPa2wBpStVK7Lo-dvDx-8xgP_LxIMWOfqWeiAvnGAJQIRgliAU8lrnsg7hj5CuNhLZzWjw99p0Q5JC4Q1AvNrU89D63xd3oOQ1qv8mxKp3ILzfMvCYw0y7JeVBtsJHX77UJLO2kqImxqbzFhgAgmTNy1Hh3o3H_4KzEodkF8zx5LXk92CypLoHmQ6p7pgxmut-6nO1rlsXS-aFf7U4qeZSK56iD07Bj8TOvPiw-eKXcmgrK2xZgzBpvm-LClvSOoLfXIlCQ5XIu_UQDBR5ntkSkrU02dIb2qh_gEl9EUByLfQGxkG_PsYM2nT2WoJv_77NJ9Y0Tkd_ZtJ8d8l0vUlN3XCaKNlmoNZp1JQSyYHB59nMI8SGSyCKYkCvnbOch-c4ENRCsDbLgWFpTO43EjGvzZt6tw6mL232g70JnMNfPPeJ8n1CgFPH7D4SQKi1WyluqZ0M11V-HBDLehITZCkIf5ZXpJSndYckYOxVuZUC0erni7QzvK0bPs8DGlIQl9ZdHeCu55MDEOSP5E2kUsQUjknEFdYKPxCJDqBdowoq6vjHWPz0hgOunKhRJeoL_iPTFmuf4oKNLjjtH0b50Upjro6i8bMRUv1MfwaK-PvFk8eOYHV6UT3zNkw3N2tnAYe-rQm0iZpgQlBYLLtj2bp2kxg-tEJKUDpnOzAlbH57DglYTZ3zHBF7zlaic3iUzINHrKa7d3OOOeg5QKLcuWVs7_-1BT0AJBRXsh7NyRo9jtWxdTGEWBOr57luEbis9utqAkQBez8Za9zvVbR0KRTBKSbEAPNXurxRdHmVKt1p4RgHNhDyYCttGzsv9xG3OFduo1q-tzODRgD8OiW5iyZsrN-g8Ib9ISS_t4wsAQl4SpoQpMnHJnphqg_dyKQP48dNEO4UWE973FOp0QyXBciaoN_eBLlMgUaEh9L61qIknVx-t_0v5ZHU38J6nsMdyePLi38EmDxRyU6fX6fBhpdM7iPg9xAFGnLyGskx-n50HIT4T3TtquBZoiOWDezOLe4vLRaCrSop5FxUS1t6Emoby-wuE6BHLJdhct6v-dV2zUCn8UA7kExhgRqQLB8uC-aAz0lqWTNcCfeqK3ki3C7JaGudFIcwwo1tXaq95Pqb7480YNB4ZAMjh7hWNUAXOZCpL8q0JeVfiqzDvg2rV5b0EgHgSxWWfkcNK3--1q3tX_ojH2RHmUVz-K2Xh-gQHVBZQwtY1qDzc1GSXgQKhMlOIm7-0G_NNax5xTWj09lD-aKFGxXx7tMx81CTWsXK-kcHtROovZfwFFx_HY0FjpIYljMNnn739Tt1bkDkltR4-IKztR5uBK3P1X38kcNa1sLBaP64_7-SWL7qpDUft40ei2y1Lv72iRTu8XXF-SyGpd813KC2x5G5OnY-JrNNBD6V7JkqScLmn4I-aQcJfgbW7GhXweBHl8sRzL9peTjtj940z-7owVJXljN2orgobJfvUiE3s2Eoz1sHAjfgPal51RvGR2EmcdQo4yFyUlGtrTu9-zwSduYtpp0jE41qBx0WDl_EDaSflh6ITNYuQjh7Nr8cQhMCNlJMzBc9ExeEZSDrDKhZY0YURrvGtRVE071GKC-uxrmdQOJJ345lNnfmqk06Db26zJQRW1dlJcvwgS0XC61pT5pc6AE7CthN97-Zy89nBJv-lO9qGcvk6qnu2HUp4wwZg8pUE6U-yxKJ2HA6DqMLlrWdrKbnoSm7W9tuBSXwIzwikpC92xxAelDrS9IgVrLy9CENx6suZIgrY3WP89JnHbiGpQwt8beAXXu4O-fai92kChUVqgQT4aqgrB-ECs0lkEcJtzfHojVS4PNduk0NtEqFyxwbKQsxHD5RbvHLjC3coBlq2sQQNcsefu7PwngSw6l_RtzNSwpmoDT66OeixEBxtup6iq7d50RIRDA-jrExjc8bTi4A9jBqIKFUtTEu_Q2mlWQHrkeKPRrX_2Fx5POsLjTrDLahAWxPIxX-AcpVX8KZYTcgzFpnrsUKY=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_090ab66f1783009e016ae451facb2c87d181fa9169e22e732e","index":1}]},"fingerprint":"b6af7d593084b65d"}},{"type":"text","text":"**Oren Dask** is the Warden of the **Sablecross reservoir**. He refuses to let soldiers draw water without a **council permit**.\n\n**Lysa Renn** is the Warden of the **Sun Archive**, which holds the original aqueduct plans. She admits civilian scholars **during daylight only**.\n\nThey share the title “Warden,” but they guard different places and are unrelated."}]}
+

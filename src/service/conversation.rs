@@ -124,7 +124,7 @@ impl ConversationService {
         let earlier_messages: Vec<Message> = conversation.messages.0.clone();
         let agent = self
             .agent_factory
-            .create_agent(conversation.world_id.to_string(), lore);
+            .create_agent(&conversation.world_id.to_string(), lore);
 
         let service = self.clone();
         let events = async_stream::stream! {

@@ -76,7 +76,7 @@ async fn create_conversation(
     let result = ctx.conversation_service.create_conversation(
         world_id,
         user_id,
-        payload.title
+        payload.title.into_inner()
     ).await?;
     Ok(Json(result))
 }

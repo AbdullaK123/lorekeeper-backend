@@ -1,3 +1,4 @@
+use crate::shared::{WorldName, Description};
 use chrono::{DateTime, Utc};
 use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
@@ -16,14 +17,14 @@ pub struct World {
 
 #[derive(Debug, Clone, Deserialize, Serialize, Validate)]
 pub struct CreateWorldRequest {
-    pub name: String,
-    pub description: String
+    pub name: WorldName,
+    pub description: Description
 }
 
 #[derive(Debug, Clone, Deserialize, Serialize, Validate)]
 pub struct UpdateWorldRequest {
-    pub new_name: Option<String>,
-    pub new_description: Option<String>
+    pub new_name: Option<WorldName>,
+    pub new_description: Option<Description>
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

@@ -3,6 +3,7 @@ mod cron_worker;
 mod data;
 mod infrastructure;
 mod service;
+mod shared;
 
 use app::create_app;
 use infrastructure::init_tracing;

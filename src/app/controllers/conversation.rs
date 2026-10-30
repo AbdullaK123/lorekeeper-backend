@@ -44,7 +44,7 @@ async fn chat_turn(
 ) -> Result<Sse<impl Stream<Item = Result<Event, axum::Error>>>, AppError> {
     let stream = ctx
         .conversation_service
-        .chat_turn(id, user_id, payload.content)
+        .chat_turn(id, user_id, payload.content.into_inner())
         .await?;
     let events = async_stream::stream! {
         futures::pin_mut!(stream);

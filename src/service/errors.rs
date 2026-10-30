@@ -4,6 +4,8 @@ use thiserror::Error;
 
 #[derive(Error, Debug)]
 pub enum ServiceError {
+    #[error("{0}")]
+    Conflict(String),
     #[error("Internal error: {0}")]
     InternalError(String),
     #[error("Resource not found: {0}")]
@@ -14,7 +16,10 @@ pub enum ServiceError {
 
 impl From<InfrastructureError> for ServiceError {
     fn from(value: InfrastructureError) -> Self {
-        Self::InternalError(value.to_string())
+        match value {
+            InfrastructureError::Conflict(message) => Self::Conflict(message),
+            other => Self::InternalError(other.to_string()),
+        }
     }
 }
 

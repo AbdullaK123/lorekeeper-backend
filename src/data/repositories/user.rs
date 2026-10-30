@@ -31,7 +31,15 @@ impl UserRepository {
             username,
             email,
             password_hash
-        ).fetch_one(&self.pool).await?;
+        ).fetch_one(&self.pool).await.map_err(|error| {
+            if error.as_database_error().is_some_and(|error| {
+                error.is_unique_violation() && error.constraint() == Some("users_email_key")
+            }) {
+                InfrastructureError::Conflict("An account with this email already exists".into())
+            } else {
+                error.into()
+            }
+        })?;
 
         Ok(result)
     }

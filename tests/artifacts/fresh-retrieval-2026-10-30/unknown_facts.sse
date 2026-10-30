@@ -1,0 +1,224 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Clarifying population details**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" focus"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" on"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" providing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" only"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" facts"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" are"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" available"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" seems"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" doesn"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"’t"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" specify"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" population"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" numbers"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" quantities"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" so"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" should"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" state"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" those"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" details"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" aren't"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" mentioned"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" might"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" clarify"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" if"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" possible"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" no"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" people"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" live"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" there"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"—but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" wouldn't"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" say"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" definit"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"ively"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Instead"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" should"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" avoid"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" making"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" assumptions"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" just"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" stick"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" what"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" existing"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" information"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" provides"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Let"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"’s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" be"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" precise"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"!"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"Those"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" figures"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" aren"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"’t"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" specified"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" lore"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" I"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" have"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":":"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" doesn"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"’t"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" give"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" S"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"able"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"cross"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"’s"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" population"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" how"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" much"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" water"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" remains"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" reservoir"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"Those figures aren’t specified in the lore I have: it doesn’t give Sablecross’s population or how much water remains in the reservoir."}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Clarifying population details**\n\nI need to focus on providing only facts that are available. It seems the lore doesn’t specify population numbers or quantities, so I should state that those details aren't mentioned. I might need to clarify if it's possible that no people live there—but I wouldn't say that definitively. Instead, I should avoid making assumptions and just stick to what the existing information provides. Let’s be precise!","native":{"item":{"reasoning":"**Clarifying population details**\n\nI need to focus on providing only facts that are available. It seems the lore doesn’t specify population numbers or quantities, so I should state that those details aren't mentioned. I might need to clarify if it's possible that no people live there—but I wouldn't say that definitively. Instead, I should avoid making assumptions and just stick to what the existing information provides. Let’s be precise!","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying population details**\n\nI need to focus on providing only facts that are available. It seems the lore doesn’t specify population numbers or quantities, so I should state that those details aren't mentioned. I might need to clarify if it's possible that no people live there—but I wouldn't say that definitively. Instead, I should avoid making assumptions and just stick to what the existing information provides. Let’s be precise!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq5FIpDTe2r8DumMlW9TmPOFL9G5yoPqVvreLqg5ueFZdPmviLv9yvwnop7n8xLX4PLllJN8g-RKsf5fod-ECxYQUe6l8eH9n02EMAJmFUcEK-hM5dC65ctEivBywvNOIbbm3pMnJnIgGn_3deJBkvXlLQ_P2KJfeu_94PHMXXJW5xLvJD0BZIyjTySIVZvDk15Ndm06KDL_Cv0JypI4X1iOFWcCEcAZoNcNChJHLNj9uHsqwbZ1O9wdh_AVpJNCi3RjJE6JSJaFNaX0q-qJWzdoQeoNTgq3YU5MQ-N_Fmup85iCOqBnjdsuYiLGGPcREVa-sVA4UjKc_Be-S6-2yt8dhRzgGe7zlenPi6x4D26Ed6QopYHe1OT_bt0FeVAfqvvtFgxLvZgwjE8A-3mKTcdIequ78vKFGFD0cyMCByS6c8_V9faItHHod4-84ansUwczrvYmzd0o5jNDT6OHApHKCAbSWrqdoN_1Pn0p5vsCLGguq0YgUZKg4CGbIvQ2oFaz56FkEkfYWMpux7uBiUrRak9Tu320K23uVYOhrD3rMx4Ewdr3b_DIgO_s0Cm_n0U-vkUYbechmaBxhFPeiIESRzkY6o_mSv_NLj9NdeFpUyyF9txyV-jf2bstOsKV7vveCBDgssL7IMbnlP_HmApBot8kcQcSjwokV8wQln01kwFxRh9s0nbFTLjtVl4ADEHh7YGGmNiqDucVTlqtF4ODippsPRU2rUJHiSMAdGcclbLNjaU2ZdKN80NnY_-y5ndynKRGkbZTXugSfi-5cF47hDhJOHCb00XwSfK_YX9-QB4FqL7L7cXP-651k7cc26PCEqujZVzyZ09T3ii30Hccsk7ep30u-sIysLX7yNuT_aKLMjdQYeJFmpcyZl2q8ZB1NJ6uwpuHD8Hpv7Mq3L8gtsfv3GvW_E3AaxFRQ2QiKNLdQRhYpyytVWp10XJh_uHrurwloiFM-mpOHFCyluf-3c3GXrtPaO-pVsPhwnzwOhJ-2ORdYbed3MLjygHUhzsRndj6esnieykMbzhy24J-iy5x_JmaUSpyBz6tgBhVCcggeMCyreGh0LmZcxuJd05WyIaoiuW-llSb3Q2cdQK3w7QjjlT9jbQofgkQCnFV7cWZeLSHZc84ne1b_VtFlzT-j0SksB_laHiGOvJeBv4XNu6a82QjyTijLlQLtxDAiIpNMQM6_yMBY2mtZHAgwb-iV7GGn12vSJh9NW-PlEEQZp0GpivA8z2euMvFu3t9W961pRZwnvDZvdEQ6-L19kd_2y9FibDmiIB3_6OSYnyI_rlDhNPDxPXSNYjGjgcd2WertvvHJIm7GGj77I9_VccNHcMdWPiwOgEbFOL1scspH6pcIR40zx6WoIu3RqDKGIAPrR7PasTVPY5N7EPizPTfxCaebxTOAKXONBoaD4tFZyDi6-bkMr1XhZno8eih6T176ZUIaFZdm5s1lX-LObAqz9TPhwtfzajHHkCc7_eMrFaRleytyOJor58ZEqmdVI2s2KsMRSuO65yhPGVp8V7BrlvWl5-dah7qaX4KG9MVf7V6eBMaeqncbvAubPHyNqxmedmnnwn0n4McoHdhDU1bC5LXH_VFKX3F41q7fwush-BPgxGxa-Gspaso8UYMC9I9pkL0MW2Ib9OaIGmsdkAdaBtbphzosDvHpLL2KjrzcsKc4FiRlU9lvKNy9T2A_flF9fNmfO8V-HrLRmp7tL4dLnz_k7QWj6gCZ8RwD579HdKrCJUg_upz1jTKkN_PU5HP3kLGTpdQRZT6B9VPqO6yUoN-ppISF0SLwLKxvQnvVnJWgeUacrGwO90s1rTmfsY8Wn8KcIZhz04V9EQY3FEbBCGuDcgLFlfgSVvIIEuBhSz2y2i1_B_F6lvJYpju6CJKwH7gCi4hB1vq9IBLGOds0bss9q39BqcFkC1iNFjU9FIG0kQvb590rjA7tFPIEizOls2t9W6kOekEWe8SB1ejcH.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0c0bdfb1f539f965016ae45228ce0c87d182923e343bf41407","index":1}]},"fingerprint":"644e31ddd1ac7cef"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":5674,"output_tokens":68,"total_tokens":5742,"cached_input_tokens":1953,"cache_creation_input_tokens":3718,"reasoning_tokens":33,"cost":{"total":0.00051858}},"response_id":"gen-1793348135-UtBB3iO62ZCM8mec7wxo","finish_reason":"stop","raw":{"id":"gen-1793348135-UtBB3iO62ZCM8mec7wxo","object":"chat.completion","created":1793348135,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Those figures aren’t specified in the lore I have: it doesn’t give Sablecross’s population or how much water remains in the reservoir.","role":"assistant","reasoning":"**Clarifying population details**\n\nI need to focus on providing only facts that are available. It seems the lore doesn’t specify population numbers or quantities, so I should state that those details aren't mentioned. I might need to clarify if it's possible that no people live there—but I wouldn't say that definitively. Instead, I should avoid making assumptions and just stick to what the existing information provides. Let’s be precise!","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying population details**\n\nI need to focus on providing only facts that are available. It seems the lore doesn’t specify population numbers or quantities, so I should state that those details aren't mentioned. I might need to clarify if it's possible that no people live there—but I wouldn't say that definitively. Instead, I should avoid making assumptions and just stick to what the existing information provides. Let’s be precise!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq5FIpDTe2r8DumMlW9TmPOFL9G5yoPqVvreLqg5ueFZdPmviLv9yvwnop7n8xLX4PLllJN8g-RKsf5fod-ECxYQUe6l8eH9n02EMAJmFUcEK-hM5dC65ctEivBywvNOIbbm3pMnJnIgGn_3deJBkvXlLQ_P2KJfeu_94PHMXXJW5xLvJD0BZIyjTySIVZvDk15Ndm06KDL_Cv0JypI4X1iOFWcCEcAZoNcNChJHLNj9uHsqwbZ1O9wdh_AVpJNCi3RjJE6JSJaFNaX0q-qJWzdoQeoNTgq3YU5MQ-N_Fmup85iCOqBnjdsuYiLGGPcREVa-sVA4UjKc_Be-S6-2yt8dhRzgGe7zlenPi6x4D26Ed6QopYHe1OT_bt0FeVAfqvvtFgxLvZgwjE8A-3mKTcdIequ78vKFGFD0cyMCByS6c8_V9faItHHod4-84ansUwczrvYmzd0o5jNDT6OHApHKCAbSWrqdoN_1Pn0p5vsCLGguq0YgUZKg4CGbIvQ2oFaz56FkEkfYWMpux7uBiUrRak9Tu320K23uVYOhrD3rMx4Ewdr3b_DIgO_s0Cm_n0U-vkUYbechmaBxhFPeiIESRzkY6o_mSv_NLj9NdeFpUyyF9txyV-jf2bstOsKV7vveCBDgssL7IMbnlP_HmApBot8kcQcSjwokV8wQln01kwFxRh9s0nbFTLjtVl4ADEHh7YGGmNiqDucVTlqtF4ODippsPRU2rUJHiSMAdGcclbLNjaU2ZdKN80NnY_-y5ndynKRGkbZTXugSfi-5cF47hDhJOHCb00XwSfK_YX9-QB4FqL7L7cXP-651k7cc26PCEqujZVzyZ09T3ii30Hccsk7ep30u-sIysLX7yNuT_aKLMjdQYeJFmpcyZl2q8ZB1NJ6uwpuHD8Hpv7Mq3L8gtsfv3GvW_E3AaxFRQ2QiKNLdQRhYpyytVWp10XJh_uHrurwloiFM-mpOHFCyluf-3c3GXrtPaO-pVsPhwnzwOhJ-2ORdYbed3MLjygHUhzsRndj6esnieykMbzhy24J-iy5x_JmaUSpyBz6tgBhVCcggeMCyreGh0LmZcxuJd05WyIaoiuW-llSb3Q2cdQK3w7QjjlT9jbQofgkQCnFV7cWZeLSHZc84ne1b_VtFlzT-j0SksB_laHiGOvJeBv4XNu6a82QjyTijLlQLtxDAiIpNMQM6_yMBY2mtZHAgwb-iV7GGn12vSJh9NW-PlEEQZp0GpivA8z2euMvFu3t9W961pRZwnvDZvdEQ6-L19kd_2y9FibDmiIB3_6OSYnyI_rlDhNPDxPXSNYjGjgcd2WertvvHJIm7GGj77I9_VccNHcMdWPiwOgEbFOL1scspH6pcIR40zx6WoIu3RqDKGIAPrR7PasTVPY5N7EPizPTfxCaebxTOAKXONBoaD4tFZyDi6-bkMr1XhZno8eih6T176ZUIaFZdm5s1lX-LObAqz9TPhwtfzajHHkCc7_eMrFaRleytyOJor58ZEqmdVI2s2KsMRSuO65yhPGVp8V7BrlvWl5-dah7qaX4KG9MVf7V6eBMaeqncbvAubPHyNqxmedmnnwn0n4McoHdhDU1bC5LXH_VFKX3F41q7fwush-BPgxGxa-Gspaso8UYMC9I9pkL0MW2Ib9OaIGmsdkAdaBtbphzosDvHpLL2KjrzcsKc4FiRlU9lvKNy9T2A_flF9fNmfO8V-HrLRmp7tL4dLnz_k7QWj6gCZ8RwD579HdKrCJUg_upz1jTKkN_PU5HP3kLGTpdQRZT6B9VPqO6yUoN-ppISF0SLwLKxvQnvVnJWgeUacrGwO90s1rTmfsY8Wn8KcIZhz04V9EQY3FEbBCGuDcgLFlfgSVvIIEuBhSz2y2i1_B_F6lvJYpju6CJKwH7gCi4hB1vq9IBLGOds0bss9q39BqcFkC1iNFjU9FIG0kQvb590rjA7tFPIEizOls2t9W6kOekEWe8SB1ejcH.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0c0bdfb1f539f965016ae45228ce0c87d182923e343bf41407","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":5674,"completion_tokens":68,"total_tokens":5742,"cost":0.00051858,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1953,"cache_write_tokens":3718,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00051858,"upstream_inference_prompt_cost":0.00048458,"upstream_inference_completions_cost":0.000034},"completion_tokens_details":{"reasoning_tokens":33,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":5674,"output_tokens":68,"total_tokens":5742,"cached_input_tokens":1953,"cache_creation_input_tokens":3718,"reasoning_tokens":33,"cost":{"total":0.00051858}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":5674,"output_tokens":68,"total_tokens":5742,"cached_input_tokens":1953,"cache_creation_input_tokens":3718,"reasoning_tokens":33,"cost":{"total":0.00051858}},"response_id":"gen-1793348135-UtBB3iO62ZCM8mec7wxo","finish_reason":"stop","raw":{"id":"gen-1793348135-UtBB3iO62ZCM8mec7wxo","object":"chat.completion","created":1793348135,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"Those figures aren’t specified in the lore I have: it doesn’t give Sablecross’s population or how much water remains in the reservoir.","role":"assistant","reasoning":"**Clarifying population details**\n\nI need to focus on providing only facts that are available. It seems the lore doesn’t specify population numbers or quantities, so I should state that those details aren't mentioned. I might need to clarify if it's possible that no people live there—but I wouldn't say that definitively. Instead, I should avoid making assumptions and just stick to what the existing information provides. Let’s be precise!","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying population details**\n\nI need to focus on providing only facts that are available. It seems the lore doesn’t specify population numbers or quantities, so I should state that those details aren't mentioned. I might need to clarify if it's possible that no people live there—but I wouldn't say that definitively. Instead, I should avoid making assumptions and just stick to what the existing information provides. Let’s be precise!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq5FIpDTe2r8DumMlW9TmPOFL9G5yoPqVvreLqg5ueFZdPmviLv9yvwnop7n8xLX4PLllJN8g-RKsf5fod-ECxYQUe6l8eH9n02EMAJmFUcEK-hM5dC65ctEivBywvNOIbbm3pMnJnIgGn_3deJBkvXlLQ_P2KJfeu_94PHMXXJW5xLvJD0BZIyjTySIVZvDk15Ndm06KDL_Cv0JypI4X1iOFWcCEcAZoNcNChJHLNj9uHsqwbZ1O9wdh_AVpJNCi3RjJE6JSJaFNaX0q-qJWzdoQeoNTgq3YU5MQ-N_Fmup85iCOqBnjdsuYiLGGPcREVa-sVA4UjKc_Be-S6-2yt8dhRzgGe7zlenPi6x4D26Ed6QopYHe1OT_bt0FeVAfqvvtFgxLvZgwjE8A-3mKTcdIequ78vKFGFD0cyMCByS6c8_V9faItHHod4-84ansUwczrvYmzd0o5jNDT6OHApHKCAbSWrqdoN_1Pn0p5vsCLGguq0YgUZKg4CGbIvQ2oFaz56FkEkfYWMpux7uBiUrRak9Tu320K23uVYOhrD3rMx4Ewdr3b_DIgO_s0Cm_n0U-vkUYbechmaBxhFPeiIESRzkY6o_mSv_NLj9NdeFpUyyF9txyV-jf2bstOsKV7vveCBDgssL7IMbnlP_HmApBot8kcQcSjwokV8wQln01kwFxRh9s0nbFTLjtVl4ADEHh7YGGmNiqDucVTlqtF4ODippsPRU2rUJHiSMAdGcclbLNjaU2ZdKN80NnY_-y5ndynKRGkbZTXugSfi-5cF47hDhJOHCb00XwSfK_YX9-QB4FqL7L7cXP-651k7cc26PCEqujZVzyZ09T3ii30Hccsk7ep30u-sIysLX7yNuT_aKLMjdQYeJFmpcyZl2q8ZB1NJ6uwpuHD8Hpv7Mq3L8gtsfv3GvW_E3AaxFRQ2QiKNLdQRhYpyytVWp10XJh_uHrurwloiFM-mpOHFCyluf-3c3GXrtPaO-pVsPhwnzwOhJ-2ORdYbed3MLjygHUhzsRndj6esnieykMbzhy24J-iy5x_JmaUSpyBz6tgBhVCcggeMCyreGh0LmZcxuJd05WyIaoiuW-llSb3Q2cdQK3w7QjjlT9jbQofgkQCnFV7cWZeLSHZc84ne1b_VtFlzT-j0SksB_laHiGOvJeBv4XNu6a82QjyTijLlQLtxDAiIpNMQM6_yMBY2mtZHAgwb-iV7GGn12vSJh9NW-PlEEQZp0GpivA8z2euMvFu3t9W961pRZwnvDZvdEQ6-L19kd_2y9FibDmiIB3_6OSYnyI_rlDhNPDxPXSNYjGjgcd2WertvvHJIm7GGj77I9_VccNHcMdWPiwOgEbFOL1scspH6pcIR40zx6WoIu3RqDKGIAPrR7PasTVPY5N7EPizPTfxCaebxTOAKXONBoaD4tFZyDi6-bkMr1XhZno8eih6T176ZUIaFZdm5s1lX-LObAqz9TPhwtfzajHHkCc7_eMrFaRleytyOJor58ZEqmdVI2s2KsMRSuO65yhPGVp8V7BrlvWl5-dah7qaX4KG9MVf7V6eBMaeqncbvAubPHyNqxmedmnnwn0n4McoHdhDU1bC5LXH_VFKX3F41q7fwush-BPgxGxa-Gspaso8UYMC9I9pkL0MW2Ib9OaIGmsdkAdaBtbphzosDvHpLL2KjrzcsKc4FiRlU9lvKNy9T2A_flF9fNmfO8V-HrLRmp7tL4dLnz_k7QWj6gCZ8RwD579HdKrCJUg_upz1jTKkN_PU5HP3kLGTpdQRZT6B9VPqO6yUoN-ppISF0SLwLKxvQnvVnJWgeUacrGwO90s1rTmfsY8Wn8KcIZhz04V9EQY3FEbBCGuDcgLFlfgSVvIIEuBhSz2y2i1_B_F6lvJYpju6CJKwH7gCi4hB1vq9IBLGOds0bss9q39BqcFkC1iNFjU9FIG0kQvb590rjA7tFPIEizOls2t9W6kOekEWe8SB1ejcH.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0c0bdfb1f539f965016ae45228ce0c87d182923e343bf41407","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":5674,"completion_tokens":68,"total_tokens":5742,"cost":0.00051858,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1953,"cache_write_tokens":3718,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00051858,"upstream_inference_prompt_cost":0.00048458,"upstream_inference_completions_cost":0.000034},"completion_tokens_details":{"reasoning_tokens":33,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"How many people live in Sablecross, and how much water remains in its reservoir? If those facts aren't saved, say so."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Clarifying population details**\n\nI need to focus on providing only facts that are available. It seems the lore doesn’t specify population numbers or quantities, so I should state that those details aren't mentioned. I might need to clarify if it's possible that no people live there—but I wouldn't say that definitively. Instead, I should avoid making assumptions and just stick to what the existing information provides. Let’s be precise!","native":{"item":{"reasoning":"**Clarifying population details**\n\nI need to focus on providing only facts that are available. It seems the lore doesn’t specify population numbers or quantities, so I should state that those details aren't mentioned. I might need to clarify if it's possible that no people live there—but I wouldn't say that definitively. Instead, I should avoid making assumptions and just stick to what the existing information provides. Let’s be precise!","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying population details**\n\nI need to focus on providing only facts that are available. It seems the lore doesn’t specify population numbers or quantities, so I should state that those details aren't mentioned. I might need to clarify if it's possible that no people live there—but I wouldn't say that definitively. Instead, I should avoid making assumptions and just stick to what the existing information provides. Let’s be precise!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq5FIpDTe2r8DumMlW9TmPOFL9G5yoPqVvreLqg5ueFZdPmviLv9yvwnop7n8xLX4PLllJN8g-RKsf5fod-ECxYQUe6l8eH9n02EMAJmFUcEK-hM5dC65ctEivBywvNOIbbm3pMnJnIgGn_3deJBkvXlLQ_P2KJfeu_94PHMXXJW5xLvJD0BZIyjTySIVZvDk15Ndm06KDL_Cv0JypI4X1iOFWcCEcAZoNcNChJHLNj9uHsqwbZ1O9wdh_AVpJNCi3RjJE6JSJaFNaX0q-qJWzdoQeoNTgq3YU5MQ-N_Fmup85iCOqBnjdsuYiLGGPcREVa-sVA4UjKc_Be-S6-2yt8dhRzgGe7zlenPi6x4D26Ed6QopYHe1OT_bt0FeVAfqvvtFgxLvZgwjE8A-3mKTcdIequ78vKFGFD0cyMCByS6c8_V9faItHHod4-84ansUwczrvYmzd0o5jNDT6OHApHKCAbSWrqdoN_1Pn0p5vsCLGguq0YgUZKg4CGbIvQ2oFaz56FkEkfYWMpux7uBiUrRak9Tu320K23uVYOhrD3rMx4Ewdr3b_DIgO_s0Cm_n0U-vkUYbechmaBxhFPeiIESRzkY6o_mSv_NLj9NdeFpUyyF9txyV-jf2bstOsKV7vveCBDgssL7IMbnlP_HmApBot8kcQcSjwokV8wQln01kwFxRh9s0nbFTLjtVl4ADEHh7YGGmNiqDucVTlqtF4ODippsPRU2rUJHiSMAdGcclbLNjaU2ZdKN80NnY_-y5ndynKRGkbZTXugSfi-5cF47hDhJOHCb00XwSfK_YX9-QB4FqL7L7cXP-651k7cc26PCEqujZVzyZ09T3ii30Hccsk7ep30u-sIysLX7yNuT_aKLMjdQYeJFmpcyZl2q8ZB1NJ6uwpuHD8Hpv7Mq3L8gtsfv3GvW_E3AaxFRQ2QiKNLdQRhYpyytVWp10XJh_uHrurwloiFM-mpOHFCyluf-3c3GXrtPaO-pVsPhwnzwOhJ-2ORdYbed3MLjygHUhzsRndj6esnieykMbzhy24J-iy5x_JmaUSpyBz6tgBhVCcggeMCyreGh0LmZcxuJd05WyIaoiuW-llSb3Q2cdQK3w7QjjlT9jbQofgkQCnFV7cWZeLSHZc84ne1b_VtFlzT-j0SksB_laHiGOvJeBv4XNu6a82QjyTijLlQLtxDAiIpNMQM6_yMBY2mtZHAgwb-iV7GGn12vSJh9NW-PlEEQZp0GpivA8z2euMvFu3t9W961pRZwnvDZvdEQ6-L19kd_2y9FibDmiIB3_6OSYnyI_rlDhNPDxPXSNYjGjgcd2WertvvHJIm7GGj77I9_VccNHcMdWPiwOgEbFOL1scspH6pcIR40zx6WoIu3RqDKGIAPrR7PasTVPY5N7EPizPTfxCaebxTOAKXONBoaD4tFZyDi6-bkMr1XhZno8eih6T176ZUIaFZdm5s1lX-LObAqz9TPhwtfzajHHkCc7_eMrFaRleytyOJor58ZEqmdVI2s2KsMRSuO65yhPGVp8V7BrlvWl5-dah7qaX4KG9MVf7V6eBMaeqncbvAubPHyNqxmedmnnwn0n4McoHdhDU1bC5LXH_VFKX3F41q7fwush-BPgxGxa-Gspaso8UYMC9I9pkL0MW2Ib9OaIGmsdkAdaBtbphzosDvHpLL2KjrzcsKc4FiRlU9lvKNy9T2A_flF9fNmfO8V-HrLRmp7tL4dLnz_k7QWj6gCZ8RwD579HdKrCJUg_upz1jTKkN_PU5HP3kLGTpdQRZT6B9VPqO6yUoN-ppISF0SLwLKxvQnvVnJWgeUacrGwO90s1rTmfsY8Wn8KcIZhz04V9EQY3FEbBCGuDcgLFlfgSVvIIEuBhSz2y2i1_B_F6lvJYpju6CJKwH7gCi4hB1vq9IBLGOds0bss9q39BqcFkC1iNFjU9FIG0kQvb590rjA7tFPIEizOls2t9W6kOekEWe8SB1ejcH.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0c0bdfb1f539f965016ae45228ce0c87d182923e343bf41407","index":1}]},"fingerprint":"644e31ddd1ac7cef"}},{"type":"text","text":"Those figures aren’t specified in the lore I have: it doesn’t give Sablecross’s population or how much water remains in the reservoir."}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793348135-UtBB3iO62ZCM8mec7wxo"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Clarifying population details**\n\nI need to focus on providing only facts that are available. It seems the lore doesn’t specify population numbers or quantities, so I should state that those details aren't mentioned. I might need to clarify if it's possible that no people live there—but I wouldn't say that definitively. Instead, I should avoid making assumptions and just stick to what the existing information provides. Let’s be precise!","native":{"item":{"reasoning":"**Clarifying population details**\n\nI need to focus on providing only facts that are available. It seems the lore doesn’t specify population numbers or quantities, so I should state that those details aren't mentioned. I might need to clarify if it's possible that no people live there—but I wouldn't say that definitively. Instead, I should avoid making assumptions and just stick to what the existing information provides. Let’s be precise!","reasoning_details":[{"type":"reasoning.summary","summary":"**Clarifying population details**\n\nI need to focus on providing only facts that are available. It seems the lore doesn’t specify population numbers or quantities, so I should state that those details aren't mentioned. I might need to clarify if it's possible that no people live there—but I wouldn't say that definitively. Instead, I should avoid making assumptions and just stick to what the existing information provides. Let’s be precise!","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq5FIpDTe2r8DumMlW9TmPOFL9G5yoPqVvreLqg5ueFZdPmviLv9yvwnop7n8xLX4PLllJN8g-RKsf5fod-ECxYQUe6l8eH9n02EMAJmFUcEK-hM5dC65ctEivBywvNOIbbm3pMnJnIgGn_3deJBkvXlLQ_P2KJfeu_94PHMXXJW5xLvJD0BZIyjTySIVZvDk15Ndm06KDL_Cv0JypI4X1iOFWcCEcAZoNcNChJHLNj9uHsqwbZ1O9wdh_AVpJNCi3RjJE6JSJaFNaX0q-qJWzdoQeoNTgq3YU5MQ-N_Fmup85iCOqBnjdsuYiLGGPcREVa-sVA4UjKc_Be-S6-2yt8dhRzgGe7zlenPi6x4D26Ed6QopYHe1OT_bt0FeVAfqvvtFgxLvZgwjE8A-3mKTcdIequ78vKFGFD0cyMCByS6c8_V9faItHHod4-84ansUwczrvYmzd0o5jNDT6OHApHKCAbSWrqdoN_1Pn0p5vsCLGguq0YgUZKg4CGbIvQ2oFaz56FkEkfYWMpux7uBiUrRak9Tu320K23uVYOhrD3rMx4Ewdr3b_DIgO_s0Cm_n0U-vkUYbechmaBxhFPeiIESRzkY6o_mSv_NLj9NdeFpUyyF9txyV-jf2bstOsKV7vveCBDgssL7IMbnlP_HmApBot8kcQcSjwokV8wQln01kwFxRh9s0nbFTLjtVl4ADEHh7YGGmNiqDucVTlqtF4ODippsPRU2rUJHiSMAdGcclbLNjaU2ZdKN80NnY_-y5ndynKRGkbZTXugSfi-5cF47hDhJOHCb00XwSfK_YX9-QB4FqL7L7cXP-651k7cc26PCEqujZVzyZ09T3ii30Hccsk7ep30u-sIysLX7yNuT_aKLMjdQYeJFmpcyZl2q8ZB1NJ6uwpuHD8Hpv7Mq3L8gtsfv3GvW_E3AaxFRQ2QiKNLdQRhYpyytVWp10XJh_uHrurwloiFM-mpOHFCyluf-3c3GXrtPaO-pVsPhwnzwOhJ-2ORdYbed3MLjygHUhzsRndj6esnieykMbzhy24J-iy5x_JmaUSpyBz6tgBhVCcggeMCyreGh0LmZcxuJd05WyIaoiuW-llSb3Q2cdQK3w7QjjlT9jbQofgkQCnFV7cWZeLSHZc84ne1b_VtFlzT-j0SksB_laHiGOvJeBv4XNu6a82QjyTijLlQLtxDAiIpNMQM6_yMBY2mtZHAgwb-iV7GGn12vSJh9NW-PlEEQZp0GpivA8z2euMvFu3t9W961pRZwnvDZvdEQ6-L19kd_2y9FibDmiIB3_6OSYnyI_rlDhNPDxPXSNYjGjgcd2WertvvHJIm7GGj77I9_VccNHcMdWPiwOgEbFOL1scspH6pcIR40zx6WoIu3RqDKGIAPrR7PasTVPY5N7EPizPTfxCaebxTOAKXONBoaD4tFZyDi6-bkMr1XhZno8eih6T176ZUIaFZdm5s1lX-LObAqz9TPhwtfzajHHkCc7_eMrFaRleytyOJor58ZEqmdVI2s2KsMRSuO65yhPGVp8V7BrlvWl5-dah7qaX4KG9MVf7V6eBMaeqncbvAubPHyNqxmedmnnwn0n4McoHdhDU1bC5LXH_VFKX3F41q7fwush-BPgxGxa-Gspaso8UYMC9I9pkL0MW2Ib9OaIGmsdkAdaBtbphzosDvHpLL2KjrzcsKc4FiRlU9lvKNy9T2A_flF9fNmfO8V-HrLRmp7tL4dLnz_k7QWj6gCZ8RwD579HdKrCJUg_upz1jTKkN_PU5HP3kLGTpdQRZT6B9VPqO6yUoN-ppISF0SLwLKxvQnvVnJWgeUacrGwO90s1rTmfsY8Wn8KcIZhz04V9EQY3FEbBCGuDcgLFlfgSVvIIEuBhSz2y2i1_B_F6lvJYpju6CJKwH7gCi4hB1vq9IBLGOds0bss9q39BqcFkC1iNFjU9FIG0kQvb590rjA7tFPIEizOls2t9W6kOekEWe8SB1ejcH.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0c0bdfb1f539f965016ae45228ce0c87d182923e343bf41407","index":1}]},"fingerprint":"644e31ddd1ac7cef"}},{"type":"text","text":"Those figures aren’t specified in the lore I have: it doesn’t give Sablecross’s population or how much water remains in the reservoir."}]}
+

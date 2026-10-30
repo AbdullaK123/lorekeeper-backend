@@ -15,7 +15,7 @@ async fn login(
 ) -> Result<Json<UserResponse>, AppError> {
     let user = ctx.auth_service.authenticate_user(
         payload.email,
-        payload.password
+        payload.password.into_inner()
     ).await?;
 
     session.cycle_id().await

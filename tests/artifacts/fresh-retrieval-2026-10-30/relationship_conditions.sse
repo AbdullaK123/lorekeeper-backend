@@ -1,0 +1,242 @@
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":0,"kind":"reasoning"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"**Summarizing saved lore**\n\nI"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" need"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" ensure"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" answer"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" is"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" concise"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" yet"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" detailed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" The"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" council"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" owned"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" land"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" that"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" was"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" permanently"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" destroyed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" by"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" lands"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"lide"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" 204"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" hasn't"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" been"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" rebuilt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" or"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" provided"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" with"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" an"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" alternate"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" supply"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" Currently"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" doesn't"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" supply"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" resources"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" but"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" historically"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":","}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" used"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" feed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" reservoir"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" It's"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" important"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" to"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" keep"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" this"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" information"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" clear"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" focused"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" for"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" better"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":" understanding"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"reasoning","part":0,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"start","part":1,"kind":"text"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"The"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" S"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"able"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"cross"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" council"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" owns"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Glass"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" Aqu"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"educt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" was"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" permanently"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" destroyed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" by"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" a"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" lands"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"lide"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" in"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" "}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"204"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" and"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" has"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" not"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" been"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" rebuilt"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" It"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" no"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" longer"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" supplies"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" S"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"able"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"cross"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" reservoir"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":";"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" it"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" fed"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" the"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" reservoir"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" before"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" its"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":" destruction"}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"text","part":1,"text":"."}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":1,"content":{"type":"text","text":"The Sablecross council owns the Glass Aqueduct. It was permanently destroyed by a landslide in 204 and has not been rebuilt. It no longer supplies the Sablecross reservoir; it fed the reservoir before its destruction."}}}
+
+data: {"type":"streamAssistantItem","item":"event","value":{"event":"end","part":0,"content":{"type":"reasoning","text":"**Summarizing saved lore**\n\nI need to ensure that the answer is concise yet detailed. The council owned land that was permanently destroyed by a landslide in 204, and it hasn't been rebuilt or provided with an alternate supply. Currently, it doesn't supply resources, but historically, it used to feed a reservoir. It's important to keep this information clear and focused for better understanding.","native":{"item":{"reasoning":"**Summarizing saved lore**\n\nI need to ensure that the answer is concise yet detailed. The council owned land that was permanently destroyed by a landslide in 204, and it hasn't been rebuilt or provided with an alternate supply. Currently, it doesn't supply resources, but historically, it used to feed a reservoir. It's important to keep this information clear and focused for better understanding.","reasoning_details":[{"type":"reasoning.summary","summary":"**Summarizing saved lore**\n\nI need to ensure that the answer is concise yet detailed. The council owned land that was permanently destroyed by a landslide in 204, and it hasn't been rebuilt or provided with an alternate supply. Currently, it doesn't supply resources, but historically, it used to feed a reservoir. It's important to keep this information clear and focused for better understanding.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq5FHvw_Kf0BecbJs0D33ejOAWfJh33jfHwQB71Wz9iSTsW0X3_QZ8C1OVenSD-i0FwljncS-kYFdgcLpziBMzMFMDDxwIDKRiMN49FhpN3mLtFm-AjP6ZEeYhuYqgnRh5ez-Wfi5Lc8mTVLB8RD1oQiAtdxjsYZOgSaG-2bDMVpLAHh0cyapG3zdRRoJgDQL_Zi4XXB8VkBfWT9b9B5F_2XXtvTDOz0nwRXurSTizmik3QVcgwl-jvMPiQwtANJDXUErlBFSEJpMKhPtLARkWA-evHPkOO5ti3lLfCVPaIMUuLAdRAkeRDN2oC7GYfuvhr_p5l2WFuC0NjzhR9wEJE9prJLv1nPTOeu9dCPKpz21TxzNlEtH3ffY3AzD4YQWSI_O0TmD0MlsLetuI8hBFNExjV3Z-m9D8Rwenue13l5hAv7x1dzf8Qobhp7r8mJEC0HdJ7RCVvzaEv5U_WHJEBp1Nw_YxLSP5t8CLWXNFzw12b9rE7gxN_X-jsvuRE_TMgtpmiJQB6HZ7ueMJghfOqxi1zxilTsNME4Q7ripEVu9HJ789bqGJsLiUglR9WE7ec702rFCbIwE1RL3Ux0tInDBUZww93nr_KKSbIFcRaG_YpxJ2N6pUYp1H0rRNWyoISK2pgT_x1cCkpqYada4RS9XelSXeCUxBaPECen-AUl7z6Ak1yNsCPlKguvouXhFRtIS8tq2QUi-tIii9u1l-bUDZqcamPcz_5Qcmv6yY-spPI3sF1Gb9hxE7OpcG0nysTQlhJ8548HOmS4r9jl88l6C2XbgxzToKPUj5eC9zHR7p4Dl_2NdPoBgjsWmMtjQrnug8ps4ljs9ZkwpuRuAAm0_fQriAJ9WGF_SsPXg7MSzemwf1p19tdHjU-gUlmXbf2Gk3aOm-M0utntAMt3BJpBSP6xQ-Bx25SIl86Pu1IC6cNmAEF9BohlWuCkPPWrD_tPcjajihWIzkGj7O7VAcsAlXrEqSk_gkyIidRc_TbAD-Xhl-etz87o5SIe4XoHhuJ-0Lpn3LynX_EWxRYXCEIu-gBJJojO8k1KJe5M70DviZWeCuozbfd7jaZ4a4eJZEMma-Db0CaFGABfOpGTf7BCmZIBjmMnREk1mewCtglbiiourDYD3to2y4ZSUktHvPxC5zZIFqYxz6FzYAizr75JAA9tGSwNRbihJeXifrB_r7lsexOzvPEY0ykKbxC6l1gT98gf-dLeJyMiU25OlqkKEUjraLWZTEOlDiqj9w7fAsG2rQWI_JZce_w1Ep5umuQn-0iNNEiPY8bqltvE3EMkYJ66YxS34SnSLRQw81QVkJy080ZKoGjesv1hPsmm-UuKP6vIp9RfjToxFmJkkZukOVXWGZ84vQWcX74446qqo4mDW8r8pglfJCWotCMxYCVcV27c34OoxoAKa_2-G7hsZV_jIm9RIET3VC-tCJQaDFn1tczzEi7NTf46B2m47dzqJu_X3KVY-y7t5H7HqJv2yOJ0QEFTIgFY8G3x2hnA3S8aOi0FyzTRI0FnuFVFcaogFrXheBgNOn-QWEDG5GSFEBvBKxLzu_-ZCNPmncOTdySN7ieF6qLGCPR8xHw6t9hDM78DMCsd72V93_2zkuAu_eqFiTCXn8_mFndpkuVDzLzggrRc1js2BeVzqtjqXHgoB2iyg17_zyVKLqh-F08pmuThvLyupj0UX46KOjdJw67E7p6p-Jy9oZbkvhrNQAl2DK5wkGUzCLNGC2PwrtBhz54wX-OKqFz_UXhnbuXiNUQifNBsIGug2TJ5B0e0j6UeJoiuEyslZ9i3f6Oph7WvPoSCcAbRZ9uZjrRM83Cc_2ez9xCbeUNoAO0ziS3zQfHHpHIF6Ss23kRvF0JkGYP-__w4JB9RLguTtK0-O18GfNQzlZMUC5oqmzsvtk3_kZi6LR7vRZ8DIOJ-I_7gGfjhL_rW6bHjtac0jTOFQnKk1W-7dr-m7p_-Z0LPgL1au2vK_wETn0OaId5VN8DUsTILT1esstAqRUnhTtlX2S9i28etIsdB6pOLWGc_ySDUngvWXug4Cjsg4sWDNeTtnm0rJCUqvyCpyyp1E-jZiS6AVZRnA=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0b527a226c6ca33c016ae451eeade487d19168b0c6ac664aff","index":1}]},"fingerprint":"0c454fa3d4c78f32"}}}}
+
+data: {"type":"completionCall","call_index":0,"usage":{"input_tokens":5012,"output_tokens":89,"total_tokens":5101,"cached_input_tokens":1953,"cache_creation_input_tokens":3056,"reasoning_tokens":37,"cost":{"total":0.00044633}},"response_id":"gen-1793348077-eKjxjJqPf8C6In9As6qy","finish_reason":"stop","raw":{"id":"gen-1793348077-eKjxjJqPf8C6In9As6qy","object":"chat.completion","created":1793348077,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"The Sablecross council owns the Glass Aqueduct. It was permanently destroyed by a landslide in 204 and has not been rebuilt. It no longer supplies the Sablecross reservoir; it fed the reservoir before its destruction.","role":"assistant","reasoning":"**Summarizing saved lore**\n\nI need to ensure that the answer is concise yet detailed. The council owned land that was permanently destroyed by a landslide in 204, and it hasn't been rebuilt or provided with an alternate supply. Currently, it doesn't supply resources, but historically, it used to feed a reservoir. It's important to keep this information clear and focused for better understanding.","reasoning_details":[{"type":"reasoning.summary","summary":"**Summarizing saved lore**\n\nI need to ensure that the answer is concise yet detailed. The council owned land that was permanently destroyed by a landslide in 204, and it hasn't been rebuilt or provided with an alternate supply. Currently, it doesn't supply resources, but historically, it used to feed a reservoir. It's important to keep this information clear and focused for better understanding.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq5FHvw_Kf0BecbJs0D33ejOAWfJh33jfHwQB71Wz9iSTsW0X3_QZ8C1OVenSD-i0FwljncS-kYFdgcLpziBMzMFMDDxwIDKRiMN49FhpN3mLtFm-AjP6ZEeYhuYqgnRh5ez-Wfi5Lc8mTVLB8RD1oQiAtdxjsYZOgSaG-2bDMVpLAHh0cyapG3zdRRoJgDQL_Zi4XXB8VkBfWT9b9B5F_2XXtvTDOz0nwRXurSTizmik3QVcgwl-jvMPiQwtANJDXUErlBFSEJpMKhPtLARkWA-evHPkOO5ti3lLfCVPaIMUuLAdRAkeRDN2oC7GYfuvhr_p5l2WFuC0NjzhR9wEJE9prJLv1nPTOeu9dCPKpz21TxzNlEtH3ffY3AzD4YQWSI_O0TmD0MlsLetuI8hBFNExjV3Z-m9D8Rwenue13l5hAv7x1dzf8Qobhp7r8mJEC0HdJ7RCVvzaEv5U_WHJEBp1Nw_YxLSP5t8CLWXNFzw12b9rE7gxN_X-jsvuRE_TMgtpmiJQB6HZ7ueMJghfOqxi1zxilTsNME4Q7ripEVu9HJ789bqGJsLiUglR9WE7ec702rFCbIwE1RL3Ux0tInDBUZww93nr_KKSbIFcRaG_YpxJ2N6pUYp1H0rRNWyoISK2pgT_x1cCkpqYada4RS9XelSXeCUxBaPECen-AUl7z6Ak1yNsCPlKguvouXhFRtIS8tq2QUi-tIii9u1l-bUDZqcamPcz_5Qcmv6yY-spPI3sF1Gb9hxE7OpcG0nysTQlhJ8548HOmS4r9jl88l6C2XbgxzToKPUj5eC9zHR7p4Dl_2NdPoBgjsWmMtjQrnug8ps4ljs9ZkwpuRuAAm0_fQriAJ9WGF_SsPXg7MSzemwf1p19tdHjU-gUlmXbf2Gk3aOm-M0utntAMt3BJpBSP6xQ-Bx25SIl86Pu1IC6cNmAEF9BohlWuCkPPWrD_tPcjajihWIzkGj7O7VAcsAlXrEqSk_gkyIidRc_TbAD-Xhl-etz87o5SIe4XoHhuJ-0Lpn3LynX_EWxRYXCEIu-gBJJojO8k1KJe5M70DviZWeCuozbfd7jaZ4a4eJZEMma-Db0CaFGABfOpGTf7BCmZIBjmMnREk1mewCtglbiiourDYD3to2y4ZSUktHvPxC5zZIFqYxz6FzYAizr75JAA9tGSwNRbihJeXifrB_r7lsexOzvPEY0ykKbxC6l1gT98gf-dLeJyMiU25OlqkKEUjraLWZTEOlDiqj9w7fAsG2rQWI_JZce_w1Ep5umuQn-0iNNEiPY8bqltvE3EMkYJ66YxS34SnSLRQw81QVkJy080ZKoGjesv1hPsmm-UuKP6vIp9RfjToxFmJkkZukOVXWGZ84vQWcX74446qqo4mDW8r8pglfJCWotCMxYCVcV27c34OoxoAKa_2-G7hsZV_jIm9RIET3VC-tCJQaDFn1tczzEi7NTf46B2m47dzqJu_X3KVY-y7t5H7HqJv2yOJ0QEFTIgFY8G3x2hnA3S8aOi0FyzTRI0FnuFVFcaogFrXheBgNOn-QWEDG5GSFEBvBKxLzu_-ZCNPmncOTdySN7ieF6qLGCPR8xHw6t9hDM78DMCsd72V93_2zkuAu_eqFiTCXn8_mFndpkuVDzLzggrRc1js2BeVzqtjqXHgoB2iyg17_zyVKLqh-F08pmuThvLyupj0UX46KOjdJw67E7p6p-Jy9oZbkvhrNQAl2DK5wkGUzCLNGC2PwrtBhz54wX-OKqFz_UXhnbuXiNUQifNBsIGug2TJ5B0e0j6UeJoiuEyslZ9i3f6Oph7WvPoSCcAbRZ9uZjrRM83Cc_2ez9xCbeUNoAO0ziS3zQfHHpHIF6Ss23kRvF0JkGYP-__w4JB9RLguTtK0-O18GfNQzlZMUC5oqmzsvtk3_kZi6LR7vRZ8DIOJ-I_7gGfjhL_rW6bHjtac0jTOFQnKk1W-7dr-m7p_-Z0LPgL1au2vK_wETn0OaId5VN8DUsTILT1esstAqRUnhTtlX2S9i28etIsdB6pOLWGc_ySDUngvWXug4Cjsg4sWDNeTtnm0rJCUqvyCpyyp1E-jZiS6AVZRnA=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0b527a226c6ca33c016ae451eeade487d19168b0c6ac664aff","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":5012,"completion_tokens":89,"total_tokens":5101,"cost":0.00044633,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1953,"cache_write_tokens":3056,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00044633,"upstream_inference_prompt_cost":0.00040183,"upstream_inference_completions_cost":0.0000445},"completion_tokens_details":{"reasoning_tokens":37,"image_tokens":0,"audio_tokens":0}}}}
+
+data: {"type":"finalResponse","usage":{"input_tokens":5012,"output_tokens":89,"total_tokens":5101,"cached_input_tokens":1953,"cache_creation_input_tokens":3056,"reasoning_tokens":37,"cost":{"total":0.00044633}},"completion_calls":[{"call_index":0,"usage":{"input_tokens":5012,"output_tokens":89,"total_tokens":5101,"cached_input_tokens":1953,"cache_creation_input_tokens":3056,"reasoning_tokens":37,"cost":{"total":0.00044633}},"response_id":"gen-1793348077-eKjxjJqPf8C6In9As6qy","finish_reason":"stop","raw":{"id":"gen-1793348077-eKjxjJqPf8C6In9As6qy","object":"chat.completion","created":1793348077,"model":"openai/gpt-6-luna","provider":"OpenAI","choices":[{"index":0,"message":{"content":"The Sablecross council owns the Glass Aqueduct. It was permanently destroyed by a landslide in 204 and has not been rebuilt. It no longer supplies the Sablecross reservoir; it fed the reservoir before its destruction.","role":"assistant","reasoning":"**Summarizing saved lore**\n\nI need to ensure that the answer is concise yet detailed. The council owned land that was permanently destroyed by a landslide in 204, and it hasn't been rebuilt or provided with an alternate supply. Currently, it doesn't supply resources, but historically, it used to feed a reservoir. It's important to keep this information clear and focused for better understanding.","reasoning_details":[{"type":"reasoning.summary","summary":"**Summarizing saved lore**\n\nI need to ensure that the answer is concise yet detailed. The council owned land that was permanently destroyed by a landslide in 204, and it hasn't been rebuilt or provided with an alternate supply. Currently, it doesn't supply resources, but historically, it used to feed a reservoir. It's important to keep this information clear and focused for better understanding.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq5FHvw_Kf0BecbJs0D33ejOAWfJh33jfHwQB71Wz9iSTsW0X3_QZ8C1OVenSD-i0FwljncS-kYFdgcLpziBMzMFMDDxwIDKRiMN49FhpN3mLtFm-AjP6ZEeYhuYqgnRh5ez-Wfi5Lc8mTVLB8RD1oQiAtdxjsYZOgSaG-2bDMVpLAHh0cyapG3zdRRoJgDQL_Zi4XXB8VkBfWT9b9B5F_2XXtvTDOz0nwRXurSTizmik3QVcgwl-jvMPiQwtANJDXUErlBFSEJpMKhPtLARkWA-evHPkOO5ti3lLfCVPaIMUuLAdRAkeRDN2oC7GYfuvhr_p5l2WFuC0NjzhR9wEJE9prJLv1nPTOeu9dCPKpz21TxzNlEtH3ffY3AzD4YQWSI_O0TmD0MlsLetuI8hBFNExjV3Z-m9D8Rwenue13l5hAv7x1dzf8Qobhp7r8mJEC0HdJ7RCVvzaEv5U_WHJEBp1Nw_YxLSP5t8CLWXNFzw12b9rE7gxN_X-jsvuRE_TMgtpmiJQB6HZ7ueMJghfOqxi1zxilTsNME4Q7ripEVu9HJ789bqGJsLiUglR9WE7ec702rFCbIwE1RL3Ux0tInDBUZww93nr_KKSbIFcRaG_YpxJ2N6pUYp1H0rRNWyoISK2pgT_x1cCkpqYada4RS9XelSXeCUxBaPECen-AUl7z6Ak1yNsCPlKguvouXhFRtIS8tq2QUi-tIii9u1l-bUDZqcamPcz_5Qcmv6yY-spPI3sF1Gb9hxE7OpcG0nysTQlhJ8548HOmS4r9jl88l6C2XbgxzToKPUj5eC9zHR7p4Dl_2NdPoBgjsWmMtjQrnug8ps4ljs9ZkwpuRuAAm0_fQriAJ9WGF_SsPXg7MSzemwf1p19tdHjU-gUlmXbf2Gk3aOm-M0utntAMt3BJpBSP6xQ-Bx25SIl86Pu1IC6cNmAEF9BohlWuCkPPWrD_tPcjajihWIzkGj7O7VAcsAlXrEqSk_gkyIidRc_TbAD-Xhl-etz87o5SIe4XoHhuJ-0Lpn3LynX_EWxRYXCEIu-gBJJojO8k1KJe5M70DviZWeCuozbfd7jaZ4a4eJZEMma-Db0CaFGABfOpGTf7BCmZIBjmMnREk1mewCtglbiiourDYD3to2y4ZSUktHvPxC5zZIFqYxz6FzYAizr75JAA9tGSwNRbihJeXifrB_r7lsexOzvPEY0ykKbxC6l1gT98gf-dLeJyMiU25OlqkKEUjraLWZTEOlDiqj9w7fAsG2rQWI_JZce_w1Ep5umuQn-0iNNEiPY8bqltvE3EMkYJ66YxS34SnSLRQw81QVkJy080ZKoGjesv1hPsmm-UuKP6vIp9RfjToxFmJkkZukOVXWGZ84vQWcX74446qqo4mDW8r8pglfJCWotCMxYCVcV27c34OoxoAKa_2-G7hsZV_jIm9RIET3VC-tCJQaDFn1tczzEi7NTf46B2m47dzqJu_X3KVY-y7t5H7HqJv2yOJ0QEFTIgFY8G3x2hnA3S8aOi0FyzTRI0FnuFVFcaogFrXheBgNOn-QWEDG5GSFEBvBKxLzu_-ZCNPmncOTdySN7ieF6qLGCPR8xHw6t9hDM78DMCsd72V93_2zkuAu_eqFiTCXn8_mFndpkuVDzLzggrRc1js2BeVzqtjqXHgoB2iyg17_zyVKLqh-F08pmuThvLyupj0UX46KOjdJw67E7p6p-Jy9oZbkvhrNQAl2DK5wkGUzCLNGC2PwrtBhz54wX-OKqFz_UXhnbuXiNUQifNBsIGug2TJ5B0e0j6UeJoiuEyslZ9i3f6Oph7WvPoSCcAbRZ9uZjrRM83Cc_2ez9xCbeUNoAO0ziS3zQfHHpHIF6Ss23kRvF0JkGYP-__w4JB9RLguTtK0-O18GfNQzlZMUC5oqmzsvtk3_kZi6LR7vRZ8DIOJ-I_7gGfjhL_rW6bHjtac0jTOFQnKk1W-7dr-m7p_-Z0LPgL1au2vK_wETn0OaId5VN8DUsTILT1esstAqRUnhTtlX2S9i28etIsdB6pOLWGc_ySDUngvWXug4Cjsg4sWDNeTtnm0rJCUqvyCpyyp1E-jZiS6AVZRnA=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0b527a226c6ca33c016ae451eeade487d19168b0c6ac664aff","index":1}]},"finish_reason":"stop","native_finish_reason":"completed"}],"service_tier":"default","usage":{"prompt_tokens":5012,"completion_tokens":89,"total_tokens":5101,"cost":0.00044633,"is_byok":false,"prompt_tokens_details":{"cached_tokens":1953,"cache_write_tokens":3056,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00044633,"upstream_inference_prompt_cost":0.00040183,"upstream_inference_completions_cost":0.0000445},"completion_tokens_details":{"reasoning_tokens":37,"image_tokens":0,"audio_tokens":0}}}}],"messages":[{"role":"user","content":[{"type":"text","text":"Who owns the Glass Aqueduct, what is its present condition, and does it currently supply the reservoir? Use only saved lore."}]},{"role":"assistant","content":[{"type":"reasoning","text":"**Summarizing saved lore**\n\nI need to ensure that the answer is concise yet detailed. The council owned land that was permanently destroyed by a landslide in 204, and it hasn't been rebuilt or provided with an alternate supply. Currently, it doesn't supply resources, but historically, it used to feed a reservoir. It's important to keep this information clear and focused for better understanding.","native":{"item":{"reasoning":"**Summarizing saved lore**\n\nI need to ensure that the answer is concise yet detailed. The council owned land that was permanently destroyed by a landslide in 204, and it hasn't been rebuilt or provided with an alternate supply. Currently, it doesn't supply resources, but historically, it used to feed a reservoir. It's important to keep this information clear and focused for better understanding.","reasoning_details":[{"type":"reasoning.summary","summary":"**Summarizing saved lore**\n\nI need to ensure that the answer is concise yet detailed. The council owned land that was permanently destroyed by a landslide in 204, and it hasn't been rebuilt or provided with an alternate supply. Currently, it doesn't supply resources, but historically, it used to feed a reservoir. It's important to keep this information clear and focused for better understanding.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq5FHvw_Kf0BecbJs0D33ejOAWfJh33jfHwQB71Wz9iSTsW0X3_QZ8C1OVenSD-i0FwljncS-kYFdgcLpziBMzMFMDDxwIDKRiMN49FhpN3mLtFm-AjP6ZEeYhuYqgnRh5ez-Wfi5Lc8mTVLB8RD1oQiAtdxjsYZOgSaG-2bDMVpLAHh0cyapG3zdRRoJgDQL_Zi4XXB8VkBfWT9b9B5F_2XXtvTDOz0nwRXurSTizmik3QVcgwl-jvMPiQwtANJDXUErlBFSEJpMKhPtLARkWA-evHPkOO5ti3lLfCVPaIMUuLAdRAkeRDN2oC7GYfuvhr_p5l2WFuC0NjzhR9wEJE9prJLv1nPTOeu9dCPKpz21TxzNlEtH3ffY3AzD4YQWSI_O0TmD0MlsLetuI8hBFNExjV3Z-m9D8Rwenue13l5hAv7x1dzf8Qobhp7r8mJEC0HdJ7RCVvzaEv5U_WHJEBp1Nw_YxLSP5t8CLWXNFzw12b9rE7gxN_X-jsvuRE_TMgtpmiJQB6HZ7ueMJghfOqxi1zxilTsNME4Q7ripEVu9HJ789bqGJsLiUglR9WE7ec702rFCbIwE1RL3Ux0tInDBUZww93nr_KKSbIFcRaG_YpxJ2N6pUYp1H0rRNWyoISK2pgT_x1cCkpqYada4RS9XelSXeCUxBaPECen-AUl7z6Ak1yNsCPlKguvouXhFRtIS8tq2QUi-tIii9u1l-bUDZqcamPcz_5Qcmv6yY-spPI3sF1Gb9hxE7OpcG0nysTQlhJ8548HOmS4r9jl88l6C2XbgxzToKPUj5eC9zHR7p4Dl_2NdPoBgjsWmMtjQrnug8ps4ljs9ZkwpuRuAAm0_fQriAJ9WGF_SsPXg7MSzemwf1p19tdHjU-gUlmXbf2Gk3aOm-M0utntAMt3BJpBSP6xQ-Bx25SIl86Pu1IC6cNmAEF9BohlWuCkPPWrD_tPcjajihWIzkGj7O7VAcsAlXrEqSk_gkyIidRc_TbAD-Xhl-etz87o5SIe4XoHhuJ-0Lpn3LynX_EWxRYXCEIu-gBJJojO8k1KJe5M70DviZWeCuozbfd7jaZ4a4eJZEMma-Db0CaFGABfOpGTf7BCmZIBjmMnREk1mewCtglbiiourDYD3to2y4ZSUktHvPxC5zZIFqYxz6FzYAizr75JAA9tGSwNRbihJeXifrB_r7lsexOzvPEY0ykKbxC6l1gT98gf-dLeJyMiU25OlqkKEUjraLWZTEOlDiqj9w7fAsG2rQWI_JZce_w1Ep5umuQn-0iNNEiPY8bqltvE3EMkYJ66YxS34SnSLRQw81QVkJy080ZKoGjesv1hPsmm-UuKP6vIp9RfjToxFmJkkZukOVXWGZ84vQWcX74446qqo4mDW8r8pglfJCWotCMxYCVcV27c34OoxoAKa_2-G7hsZV_jIm9RIET3VC-tCJQaDFn1tczzEi7NTf46B2m47dzqJu_X3KVY-y7t5H7HqJv2yOJ0QEFTIgFY8G3x2hnA3S8aOi0FyzTRI0FnuFVFcaogFrXheBgNOn-QWEDG5GSFEBvBKxLzu_-ZCNPmncOTdySN7ieF6qLGCPR8xHw6t9hDM78DMCsd72V93_2zkuAu_eqFiTCXn8_mFndpkuVDzLzggrRc1js2BeVzqtjqXHgoB2iyg17_zyVKLqh-F08pmuThvLyupj0UX46KOjdJw67E7p6p-Jy9oZbkvhrNQAl2DK5wkGUzCLNGC2PwrtBhz54wX-OKqFz_UXhnbuXiNUQifNBsIGug2TJ5B0e0j6UeJoiuEyslZ9i3f6Oph7WvPoSCcAbRZ9uZjrRM83Cc_2ez9xCbeUNoAO0ziS3zQfHHpHIF6Ss23kRvF0JkGYP-__w4JB9RLguTtK0-O18GfNQzlZMUC5oqmzsvtk3_kZi6LR7vRZ8DIOJ-I_7gGfjhL_rW6bHjtac0jTOFQnKk1W-7dr-m7p_-Z0LPgL1au2vK_wETn0OaId5VN8DUsTILT1esstAqRUnhTtlX2S9i28etIsdB6pOLWGc_ySDUngvWXug4Cjsg4sWDNeTtnm0rJCUqvyCpyyp1E-jZiS6AVZRnA=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0b527a226c6ca33c016ae451eeade487d19168b0c6ac664aff","index":1}]},"fingerprint":"0c454fa3d4c78f32"}},{"type":"text","text":"The Sablecross council owns the Glass Aqueduct. It was permanently destroyed by a landslide in 204 and has not been rebuilt. It no longer supplies the Sablecross reservoir; it fed the reservoir before its destruction."}],"origin":{"api":"openai.chat","provider":"openrouter","model":"openai/gpt-6-luna","response_model":"openai/gpt-6-luna","response_id":"gen-1793348077-eKjxjJqPf8C6In9As6qy"},"stop":"stop"}],"content":[{"type":"reasoning","text":"**Summarizing saved lore**\n\nI need to ensure that the answer is concise yet detailed. The council owned land that was permanently destroyed by a landslide in 204, and it hasn't been rebuilt or provided with an alternate supply. Currently, it doesn't supply resources, but historically, it used to feed a reservoir. It's important to keep this information clear and focused for better understanding.","native":{"item":{"reasoning":"**Summarizing saved lore**\n\nI need to ensure that the answer is concise yet detailed. The council owned land that was permanently destroyed by a landslide in 204, and it hasn't been rebuilt or provided with an alternate supply. Currently, it doesn't supply resources, but historically, it used to feed a reservoir. It's important to keep this information clear and focused for better understanding.","reasoning_details":[{"type":"reasoning.summary","summary":"**Summarizing saved lore**\n\nI need to ensure that the answer is concise yet detailed. The council owned land that was permanently destroyed by a landslide in 204, and it hasn't been rebuilt or provided with an alternate supply. Currently, it doesn't supply resources, but historically, it used to feed a reservoir. It's important to keep this information clear and focused for better understanding.","format":"openai-responses-v1","index":0},{"type":"reasoning.encrypted","data":"gAAAAABq5FHvw_Kf0BecbJs0D33ejOAWfJh33jfHwQB71Wz9iSTsW0X3_QZ8C1OVenSD-i0FwljncS-kYFdgcLpziBMzMFMDDxwIDKRiMN49FhpN3mLtFm-AjP6ZEeYhuYqgnRh5ez-Wfi5Lc8mTVLB8RD1oQiAtdxjsYZOgSaG-2bDMVpLAHh0cyapG3zdRRoJgDQL_Zi4XXB8VkBfWT9b9B5F_2XXtvTDOz0nwRXurSTizmik3QVcgwl-jvMPiQwtANJDXUErlBFSEJpMKhPtLARkWA-evHPkOO5ti3lLfCVPaIMUuLAdRAkeRDN2oC7GYfuvhr_p5l2WFuC0NjzhR9wEJE9prJLv1nPTOeu9dCPKpz21TxzNlEtH3ffY3AzD4YQWSI_O0TmD0MlsLetuI8hBFNExjV3Z-m9D8Rwenue13l5hAv7x1dzf8Qobhp7r8mJEC0HdJ7RCVvzaEv5U_WHJEBp1Nw_YxLSP5t8CLWXNFzw12b9rE7gxN_X-jsvuRE_TMgtpmiJQB6HZ7ueMJghfOqxi1zxilTsNME4Q7ripEVu9HJ789bqGJsLiUglR9WE7ec702rFCbIwE1RL3Ux0tInDBUZww93nr_KKSbIFcRaG_YpxJ2N6pUYp1H0rRNWyoISK2pgT_x1cCkpqYada4RS9XelSXeCUxBaPECen-AUl7z6Ak1yNsCPlKguvouXhFRtIS8tq2QUi-tIii9u1l-bUDZqcamPcz_5Qcmv6yY-spPI3sF1Gb9hxE7OpcG0nysTQlhJ8548HOmS4r9jl88l6C2XbgxzToKPUj5eC9zHR7p4Dl_2NdPoBgjsWmMtjQrnug8ps4ljs9ZkwpuRuAAm0_fQriAJ9WGF_SsPXg7MSzemwf1p19tdHjU-gUlmXbf2Gk3aOm-M0utntAMt3BJpBSP6xQ-Bx25SIl86Pu1IC6cNmAEF9BohlWuCkPPWrD_tPcjajihWIzkGj7O7VAcsAlXrEqSk_gkyIidRc_TbAD-Xhl-etz87o5SIe4XoHhuJ-0Lpn3LynX_EWxRYXCEIu-gBJJojO8k1KJe5M70DviZWeCuozbfd7jaZ4a4eJZEMma-Db0CaFGABfOpGTf7BCmZIBjmMnREk1mewCtglbiiourDYD3to2y4ZSUktHvPxC5zZIFqYxz6FzYAizr75JAA9tGSwNRbihJeXifrB_r7lsexOzvPEY0ykKbxC6l1gT98gf-dLeJyMiU25OlqkKEUjraLWZTEOlDiqj9w7fAsG2rQWI_JZce_w1Ep5umuQn-0iNNEiPY8bqltvE3EMkYJ66YxS34SnSLRQw81QVkJy080ZKoGjesv1hPsmm-UuKP6vIp9RfjToxFmJkkZukOVXWGZ84vQWcX74446qqo4mDW8r8pglfJCWotCMxYCVcV27c34OoxoAKa_2-G7hsZV_jIm9RIET3VC-tCJQaDFn1tczzEi7NTf46B2m47dzqJu_X3KVY-y7t5H7HqJv2yOJ0QEFTIgFY8G3x2hnA3S8aOi0FyzTRI0FnuFVFcaogFrXheBgNOn-QWEDG5GSFEBvBKxLzu_-ZCNPmncOTdySN7ieF6qLGCPR8xHw6t9hDM78DMCsd72V93_2zkuAu_eqFiTCXn8_mFndpkuVDzLzggrRc1js2BeVzqtjqXHgoB2iyg17_zyVKLqh-F08pmuThvLyupj0UX46KOjdJw67E7p6p-Jy9oZbkvhrNQAl2DK5wkGUzCLNGC2PwrtBhz54wX-OKqFz_UXhnbuXiNUQifNBsIGug2TJ5B0e0j6UeJoiuEyslZ9i3f6Oph7WvPoSCcAbRZ9uZjrRM83Cc_2ez9xCbeUNoAO0ziS3zQfHHpHIF6Ss23kRvF0JkGYP-__w4JB9RLguTtK0-O18GfNQzlZMUC5oqmzsvtk3_kZi6LR7vRZ8DIOJ-I_7gGfjhL_rW6bHjtac0jTOFQnKk1W-7dr-m7p_-Z0LPgL1au2vK_wETn0OaId5VN8DUsTILT1esstAqRUnhTtlX2S9i28etIsdB6pOLWGc_ySDUngvWXug4Cjsg4sWDNeTtnm0rJCUqvyCpyyp1E-jZiS6AVZRnA=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0","format":"openai-responses-v1","id":"rs_0b527a226c6ca33c016ae451eeade487d19168b0c6ac664aff","index":1}]},"fingerprint":"0c454fa3d4c78f32"}},{"type":"text","text":"The Sablecross council owns the Glass Aqueduct. It was permanently destroyed by a landslide in 204 and has not been rebuilt. It no longer supplies the Sablecross reservoir; it fed the reservoir before its destruction."}]}
+

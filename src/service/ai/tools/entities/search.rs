@@ -1,4 +1,5 @@
 use crate::service::{RetrievalService, ServiceError, format_hits};
+use crate::shared::SearchQuery;
 use rig::tool::PortableTool;
 use schemars::JsonSchema;
 use serde::Deserialize;
@@ -12,7 +13,7 @@ pub struct SearchWorld {
 pub struct SearchWorldArgs {
     /// What to look for, in plain words, e.g. "who runs the tavern on Meridian Station"
     /// or "the Iron Conclave's allies". Names, places, events, or a question all work.
-    pub query: String,
+    pub query: SearchQuery,
 }
 
 impl PortableTool for SearchWorld {
@@ -37,7 +38,7 @@ impl PortableTool for SearchWorld {
     async fn call(&self, args: Self::Args) -> Result<Self::Output, Self::Error> {
         let hits = self
             .retrieval_service
-            .search(&args.query, &self.world_id, 60.0)
+            .search(args.query.as_str(), &self.world_id, 60.0)
             .await?;
         Ok(format_hits(&hits))
     }

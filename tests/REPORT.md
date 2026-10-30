@@ -234,3 +234,56 @@ All requests finish without reported errors, and before/after graph snapshots ma
 The successful harness exit reflects transport completion, not five semantic passes.
 
 See [the evidence and full answers](artifacts/fresh-retrieval-2026-10-29/summary.md).
+
+
+## Conflict lookup and regression run — 2026-10-30
+
+The chat factory test now checks both read-only tools and the current factory signature.
+Two new live tests cover conflict world scope, resolved filtering, sources, empty results, and object arguments.
+
+| Suite | Pass | Fail | Skipped |
+| --- | ---: | ---: | ---: |
+| Pure Rust | 11 | 1 | 0 |
+| Native live database and worker checks | 25 | 0 | 0 |
+| API methods | 17 | 2 | 5 |
+| Fresh-conversation answer checks | 5 | 0 | 0 |
+
+The live Rust wrapper fails because two API test methods fail. Do not count that wrapper separately.
+Duplicate signup returns 500 instead of 409, an existing observed defect.
+Blank-name rejection tests fail for three inputs; the product rule still needs agreement.
+The pure failure is the existing synthetic duplicate-row ranking case, without demonstrated runtime duplicates.
+The five skipped API cases make paid model calls; the separate paid smoke runs as requested.
+
+All five fresh-conversation answers pass manual review. Chat calls `get_conflicts` and reports both saved contradictions.
+All research runs complete, and the graph remains unchanged.
+The run uses the verified synthetic fixture from `tests/scenarios/ardent_reach_10.json`.
+
+See [the smoke results and evidence](artifacts/fresh-retrieval-2026-10-30/summary.md).
+
+
+## Duplicate signup fix — 2026-10-30
+
+Two targeted live API tests pass: duplicate signup and login account-privacy behavior.
+Signup returns 409 for the email unique constraint instead of 500.
+Other database errors retain their existing handling.
+No model calls run. The full suite is not repeated.
+
+
+## Request-model text validation — 2026-10-30
+
+All 19 existing non-AI API checks pass. Five paid checks are skipped.
+Four new HTTP tests also pass in a separate targeted run.
+They verify normalized world storage, unchanged data after rejected updates, blank-title rejection, and blank-chat rejection.
+All eight text-type tests pass, including password Debug redaction.
+Blank world creation now returns 422. Duplicate signup still returns 409.
+No model calls run. Native graph/worker tests and the synthetic ranking case are not repeated.
+
+
+## AI tool text validation — 2026-10-30
+
+Search queries, entity names, aliases, and graph descriptions now use validated text wrappers.
+Tool JSON schemas publish string length bounds. Parsing rejects invalid text before execution.
+Four new tool-argument tests pass, covering rejection, normalized conversion, and schema bounds.
+All eight shared text tests pass.
+All 13 selected live graph/wiring regression tests pass, including isolation, rollback, sources, and read-only chat wiring.
+No paid model calls run. The full API suite is not repeated.
