@@ -24,15 +24,16 @@ Working foundations remain valuable and should stay in place during changes.
 | Accounts | Signup, login, logout, sessions, current user | Duplicate signup now returns 409; complete privacy acceptance remains |
 | Worlds | Create, list, read, update, delete; owner checks | Request text validation is enforced; deletion can race with background lore writes |
 | Conversations | Create, list, resume, delete; streamed replies | Long histories, interrupted streams, and concurrent turns need defined behavior |
-| Message storage | User and assistant messages save together before background research starts | Background research lacks durable jobs and visible retry status |
+| Message storage | User and assistant messages save together before background research starts | Workflow submission follows message commit; atomic handoff and visible status remain |
 | Lore storage | Entities, relationships, conflicts, search, graph repository methods | Alias collisions, source tracking, and safe updates need work |
 | Retrieval | Text and vector search, neighbor properties, relationship conditions | Conflict lookup passes five fresh-conversation checks; broader coverage remains |
 | Cleanup | Transactional deletion jobs, scheduled graph cleanup, retry after failure | Shutdown and competing background writes need further checks |
-| Researcher | [Prompt](../prompts/researcher.md), scoped search/read/write/conflict tools, background runtime wiring | Model behavior, durable jobs, and recovery still need acceptance |
+| Researcher | [Prompt](../prompts/researcher.md), scoped search/read/write/conflict tools, background runtime wiring | DBOS model/tool checkpoints implemented; interrupted writes and concurrent recovery still need acceptance |
 
 The runtime uses a background tool-using researcher after successful chat storage.
 Chat has read-only search access. The old structured extraction pipeline is removed.
-Researcher jobs still run in memory; durable recovery remains unfinished.
+Researcher jobs now run as DBOS workflows with model and tool checkpoints in Postgres.
+Local scripted-provider tests verify DBOS engine restart replay. Atomic handoff and interrupted graph writes remain unfinished.
 
 ## Test baseline
 

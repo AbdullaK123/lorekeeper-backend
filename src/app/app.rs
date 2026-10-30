@@ -1,4 +1,6 @@
-use crate::app::{create_auth_controller, create_conversation_controller, create_world_controller};
+use crate::app::{
+    create_auth_controller, create_conversation_controller, create_world_controller, setup_dbos,
+};
 use crate::cron_worker::start_scheduler;
 use crate::data::{ConversationRepository, GraphRepository, UserRepository, WorldRepository};
 use crate::infrastructure::{create_graph, create_pool, load_config, load_prompt, load_settings};
@@ -8,6 +10,7 @@ use crate::service::{
 };
 use axum::Router;
 use axum::routing::get;
+use dbos::DBOS;
 use neo4rs::Graph;
 use rig::DynModel;
 use rig::operation::Embedding;
@@ -24,7 +27,7 @@ pub struct AppState {
     pub conversation_service: ConversationService,
 }
 
-pub async fn create_app() -> (Router, JobScheduler) {
+pub async fn create_app() -> (Router, JobScheduler, DBOS) {
     let settings = load_settings();
     let config = load_config();
     let pool = create_pool(&settings, &config.db).await;
@@ -64,12 +67,16 @@ pub async fn create_app() -> (Router, JobScheduler) {
         embedding_model,
     );
 
+    let (dbos, research) = setup_dbos(&settings, researcher_service)
+        .await
+        .expect("Failed to initialize dbos");
+
     let conversation_service = ConversationService::new(
         conversation_repo,
         world_repo,
-        researcher_service,
         retrieval_service,
         agent_factory,
+        research,
     );
 
     let app_state = AppState {
@@ -94,5 +101,5 @@ pub async fn create_app() -> (Router, JobScheduler) {
         .layer(settings.cors_layer())
         .with_state(app_state);
 
-    (app, scheduler)
+    (app, scheduler, dbos)
 }

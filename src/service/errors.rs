@@ -1,8 +1,9 @@
 use crate::infrastructure::InfrastructureError;
 use rig::{ProviderError, run::PromptError};
+use serde::{Deserialize, Serialize};
 use thiserror::Error;
 
-#[derive(Error, Debug)]
+#[derive(Error, Debug, Serialize, Deserialize)]
 pub enum ServiceError {
     #[error("{0}")]
     Conflict(String),

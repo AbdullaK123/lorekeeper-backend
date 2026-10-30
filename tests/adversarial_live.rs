@@ -18,7 +18,7 @@ async fn adversarial_live_api() {
     let database = std::env::var("DATABASE_URL").expect("DATABASE_URL is required");
     assert!(database.ends_with("/lorekeeper_adversarial"), "Fault injection must never target development data");
     let listener = tokio::net::TcpListener::bind("127.0.0.1:18000").await.unwrap();
-    let (router, mut scheduler) = app::create_app().await;
+    let (router, mut scheduler, dbos) = app::create_app().await;
     let server = tokio::spawn(async move {
         axum::serve(listener, router).await.unwrap();
     });
@@ -30,8 +30,10 @@ async fn adversarial_live_api() {
             .status()
             .expect("python3 with requests must be installed")
     }).await.unwrap();
-    scheduler.shutdown().await.unwrap();
+    let scheduler_result = scheduler.shutdown().await;
+    dbos.shutdown().await;
     server.abort();
+    scheduler_result.unwrap();
     assert!(result.success(), "Live failures identify behavior that can harm users; inspect Python assertions");
 }
 
@@ -427,7 +429,7 @@ async fn researcher_smoke_conversation() {
     assert!(database.ends_with("/lorekeeper_adversarial"), "Smoke tests must use the isolated QA database");
     infrastructure::init_tracing();
     let listener = tokio::net::TcpListener::bind("127.0.0.1:18001").await.unwrap();
-    let (router, mut scheduler) = app::create_app().await;
+    let (router, mut scheduler, dbos) = app::create_app().await;
     let server = tokio::spawn(async move { axum::serve(listener, router).await.unwrap(); });
     let result = tokio::task::spawn_blocking(|| {
         std::process::Command::new("python3")
@@ -435,8 +437,10 @@ async fn researcher_smoke_conversation() {
             .env("QA_BASE_URL", "http://127.0.0.1:18001")
             .status().expect("Python with requests required")
     }).await.unwrap();
-    scheduler.shutdown().await.unwrap();
+    let scheduler_result = scheduler.shutdown().await;
+    dbos.shutdown().await;
     server.abort();
+    scheduler_result.unwrap();
     assert!(result.success(), "Smoke test did not complete; inspect retained artifacts and logs");
 }
 
@@ -698,3 +702,20 @@ fn tool_text_schemas_publish_string_length_bounds() {
     let search = serde_json::to_value(schemars::schema_for!(service::SearchWorldArgs)).unwrap();
     assert!(search["properties"]["query"].is_object(), "Search tool schema loses its query field");
 }
+
+#[tokio::test]
+#[ignore = "requires isolated QA Postgres; makes no AI calls"]
+async fn dbos_research_registration_starts_and_shuts_down() {
+    let database = std::env::var("DATABASE_URL").expect("DATABASE_URL required");
+    assert!(database.ends_with("/lorekeeper_adversarial"), "DBOS startup must use QA data");
+    let _ = tracing_subscriber::fmt().with_ansi(false).with_env_filter("info").try_init();
+    let (_router, mut scheduler, dbos) = app::create_app().await;
+    assert!(dbos.is_launched(), "DBOS stops before startup returns");
+    let scheduler_result = scheduler.shutdown().await;
+    dbos.shutdown().await;
+    scheduler_result.unwrap();
+    assert!(!dbos.is_launched(), "DBOS remains active after shutdown");
+}
+
+#[path = "cases/durable_research.rs"]
+mod durable_research;

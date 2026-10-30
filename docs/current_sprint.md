@@ -70,7 +70,7 @@ See the [test report](../tests/REPORT.md) for scope and remaining failures.
 
 ## Remaining work outside the completed pipeline scope
 
-- Durable research jobs, restart recovery, and visible retry status.
+- Atomic chat/job handoff and visible retry status; DBOS checkpoint replay is verified below.
 - Concurrent research updates and coordination with world deletion.
 - Support for distinct subjects sharing an identical canonical name; the unique-name constraint remains.
 - Explicit search truncation reporting and broader ambiguity evaluations.
@@ -270,3 +270,254 @@ Its concurrency_key serializes execution for matching keys; it does not deduplic
 Application-level deduplication can use a unique source-message record in the enqueue transaction.
 That prevents duplicate scheduling, not repeated Memgraph effects during job retries.
 Documentation review only; no runtime checks or implementation changes.
+
+### Idempotency wrapper crate investigation — 2026-10-30
+
+Checked primary docs for idempotent 2.0.0 and agent-effects 0.2.0.
+Idempotent offers keyed claims and cached results; its documented expired-lease case can leave an effect applied without a cached result.
+Agent-effects explicitly requires target-system cooperation for exactly-once effects and tracks unknown outcomes.
+Neither can force arbitrary external Memgraph writes to become idempotent across crashes.
+A stable operation key checked and recorded in the same graph transaction as its writes can protect that exact operation.
+Replaying an LLM run still needs stable operation identity; deduplicating a job alone does not provide it.
+Documentation review only. No crate installed or model calls run.
+Sources: https://docs.rs/idempotent/latest/idempotent/ and https://docs.rs/agent-effects/latest/agent_effects/
+
+### Underway setup starting point — 2026-10-30
+
+Initial task: install Underway 0.2 and run its migrations after create_pool in app startup.
+No worker, enqueue path, or retry behavior is implemented yet.
+Agreed minimal direction: durable pending jobs, one research job at a time, no automatic replay of failed/interrupted work.
+Dependency installation and migration execution remain unverified.
+
+### Official DBOS Rust SDK check — 2026-10-30
+
+Confirmed the official dbos-inc/dbos-transact-rust repository and dbos crate.
+DBOS stores workflow step results in Postgres and supports restart recovery without a separate orchestration service.
+The official README states Rust has no transactional steps yet and external writes are at-least-once.
+DBOS is an alternative to Underway for evaluation; neither is installed or selected by this review.
+A whole-researcher step would still repeat unfinished graph effects after a crash.
+Source: https://github.com/dbos-inc/dbos-transact-rust
+No tests or model calls run.
+
+### DBOS Rust integration outline — 2026-10-30
+
+Reviewed official Rust source for DBOS lifecycle, registration, step, and StepOptions.
+Proposed integration points: register research at startup, launch DBOS, submit from chat, checkpoint research via step.
+Rust uses explicit workflow registration and step closures; Python decorators do not apply.
+Step max_attempts defaults to one, but shutdown/crash leaves an unfinished step recoverable and it can execute again.
+Thus one whole-researcher step does not meet the earlier no-automatic-replay design without further policy.
+SDK source labels the implementation under construction. No dependency or runtime code changes made.
+Sources: official dbos-inc/dbos-transact-rust crates/dbos/src/{lib,instance,step}.rs.
+
+### Nexus Writer research durability reference — 2026-10-30
+
+Read live research_agent.py, research_agent_flow.py, and jobs.py in nexus-writer-backend.
+The agent attaches DBOSDurability; all custom research tools are explicitly wrapped with DBOS.step.
+Official Pydantic AI docs confirm the capability checkpoints model requests, while custom tools require explicit wrapping.
+The outer workflow separately checkpoints report storage, embedding, notification, and lock release.
+Submission uses SetWorkflowID(run_id). This is step-level agent replay, not one opaque researcher step.
+Rust inspiration: checkpoint individual model and tool calls, using Rig's stepping API as the integration boundary.
+No Rig/DBOS adapter is implemented or verified here. External writes retain the crash-before-checkpoint limit.
+No model calls or tests run during this reference review.
+
+### DBOS Rust startup lesson — 2026-10-30
+
+Checked official Config, DBOS lifecycle, and starter source before giving setup guidance.
+The project currently has no DBOS dependency. First task: add dbos, configure the database URL and application version, register a small workflow, then launch.
+Launch applies system migrations by default; shutdown belongs after server termination.
+Guidance follows current official source; resolved crate version and compilation remain unverified.
+No runtime code or dependencies changed during this lesson.
+
+### DBOS startup implementation review — 2026-10-30
+
+User added dbos 0.5.0, setup_dbos, app startup wiring, and shutdown after Axum exits.
+Review finds register_workflow maps errors but omits ?, so registration failure is ignored.
+The echo WorkflowRef is local and not returned for invoking the setup exercise.
+All-target cargo check fails at two live-test harness call sites: create_app now returns three values, while they expect two.
+The application binary checks successfully with warnings. No launch or database migration is exercised.
+Remaining: propagate registration failure, update test lifecycle to retain/shut down DBOS, then run echo.
+No runtime code changed during review.
+
+### DBOS test harness update — 2026-10-30
+
+Both live API and paid smoke harnesses now capture the DBOS handle returned by create_app.
+They shut down DBOS and abort the server before checking the scheduler shutdown result.
+User's workflow registration now propagates errors with ?.
+All-target cargo check passes with warnings.
+The real non-AI API suite passes: 23 checks pass and five paid checks are skipped.
+This exercises DBOS startup, system migrations, and shutdown against isolated QA services.
+The paid smoke harness compiles but is not executed. Echo invocation and crash recovery remain untested.
+No model calls run.
+
+### Next DBOS exercise — 2026-10-30
+
+Verified WorkflowRef::run(input) in the installed dbos 0.5.0 source.
+Next exercise: invoke the registered echo workflow after launch, assert the returned text, and inspect its stored workflow outcome.
+The invocation remains a user task; no code change or execution is performed for this guidance.
+
+### Echo invocation review — 2026-10-30
+
+User adds echo.run after launch, propagates errors, and logs its returned value.
+Code review confirms the expected ordering; runtime execution is not independently verified in this turn.
+Next exercise: wrap echo work in dbos::step so its result has a checkpoint.
+Restart recovery testing follows after the step exists.
+
+### Echo step live verification — 2026-10-30
+
+Direct backend startup cannot bind port 8000 because another process already uses it; that process is untouched.
+Added an opt-in isolated QA test for the existing setup_dbos path instead.
+The test passes: workflow registration, launch, echo step execution, expected result, and shutdown complete.
+Logs contain Executing echo step and Echo workflow completed with result=DBOS works.
+DBOS reports launched before shutdown and not launched afterward.
+No AI calls run. This proves basic execution, not crash recovery.
+Evidence: /tmp/lorekeeper-dbos-echo-test.log. Next: a controlled recovery exercise.
+
+### Researcher dependency handoff review — 2026-10-30
+
+User passes a ResearcherService clone to ConversationService and moves the original into setup_dbos.
+Ownership wiring is valid by inspection. DBOS setup accepts the service but does not use it yet.
+Next: define a serializable research workflow input matching process_message arguments.
+Echo registration and startup invocation remain temporary. Chat still starts research directly.
+No compilation or runtime tests run for this review. The direct DBOS startup test needs the new service argument.
+
+### App-layer DBOS move review — 2026-10-30
+
+DBOS setup now lives in src/app/dbos.rs and app exports it; infrastructure no longer exports it.
+ResearchInput exists with owned fields and Clone/Serialize/Deserialize.
+The move is incomplete: app/app.rs still imports setup_dbos from infrastructure; the direct startup test also uses the old path/signature.
+ResearchInput fields are private, so other modules cannot construct or read the input yet.
+Review only; no compilation or runtime tests run.
+
+### Research workflow preparation review — 2026-10-30
+
+Confirmed app imports setup_dbos from the app layer and ResearchInput fields are public.
+Next task is replacing echo registration with a research workflow accepting ResearchInput.
+Installed DBOS registration requires a reusable Fn closure; clone the captured researcher per invocation before async move.
+Remove echo's automatic startup invocation when replacing it. Researcher execution still needs per-model/tool checkpoints.
+No build or execution performed. The outdated direct setup test remains pending.
+
+### Research registration draft review — 2026-10-30
+
+Research workflow now accepts ResearchInput and calls process_message; echo startup execution is removed.
+Draft still clones the service outside the reusable closure, then moves it into the future.
+Move cloning inside a move closure before creating the async future.
+The body also discards its Result and returns unit; result/error conversion remains the next change.
+No compile or runtime check performed; no registered research job has run.
+
+### Research workflow result guidance — 2026-10-30
+
+Confirmed the workflow now clones ResearcherService inside the reusable closure.
+Next: return process_message's Result through DBOS's typed application-error variant.
+Installed DBOS requires application errors to implement serde serialization/deserialization and std::error::Error.
+ServiceError currently lacks serde derives; add them before mapping with dbos::Error::Application.
+Guidance only; no compilation or model execution performed.
+
+### Research result draft review — 2026-10-30
+
+The workflow now maps ServiceError to DBOS Application errors, but retains a let binding without returning it.
+ServiceError derives Serialize and Deserialize, but imports only Deserialize.
+Next fixes: make the service call the async block's final expression and import both serde derives.
+Compilation and workflow execution remain unverified. Research handle is not exposed and agent calls are not checkpointed yet.
+
+### Research registration compile attempt — 2026-10-30
+
+Confirmed the workflow returns the mapped researcher result and ServiceError imports both serde derives.
+Cargo check is interrupted by missing target/debug build files during dependency compilation.
+Errors include missing invoked.timestamp, object files, and rmeta temporary directories; disk has free space.
+This does not verify compilation of the new application code. No workflow/model calls run.
+Next integration task: return the typed research WorkflowRef alongside DBOS so callers can retain it.
+Per-model/tool checkpoints and the outdated startup test remain unfinished.
+
+### Research submission wiring guidance — 2026-10-30
+
+ConversationService now has a typed research_job field but submission is unfinished.
+Verified installed DBOS start_with persists and starts work without awaiting its result; workflow_id deduplicates submissions.
+Guidance uses saved user-message ID as workflow ID and service.research_job inside the owned stream.
+Remaining constructor wiring: remove obsolete direct researcher dependency, pass research handle, and import ServiceError in app/dbos.rs.
+No code edited or tests/model calls run. Per-model/tool checkpoint integration remains unfinished.
+
+### Chat research submission review — 2026-10-30
+
+Chat now builds ResearchInput after message storage and uses start_with with the saved message ID as workflow ID.
+Stream captures use the owned service clone and propagate submission failure.
+Remaining wiring errors by inspection: obsolete researcher_service constructor dependency, missing research argument in create_app, and missing ServiceError import in app/dbos.rs.
+No compilation or runtime checks run; submission is not marked verified.
+Research model/tool calls still lack DBOS steps.
+
+### Research submission wiring compiles — 2026-10-30
+
+Confirmed obsolete direct researcher dependency is removed from ConversationService.
+App passes the registered research handle and DBOS setup imports ServiceError.
+Application cargo check passes with warnings after dependency compilation.
+No workflow or paid model calls run. Runtime research submission remains unverified.
+Next: checkpoint individual model/tool operations; process_message still uses plain agent.prompt.
+Outdated DBOS startup test path/signature and full-suite verification remain pending.
+
+### Researcher step-loop starting point — 2026-10-30
+
+Inspected installed Rig AgentRun and AgentRunStep APIs.
+Next user task: replace the opaque prompt driver with an explicit three-branch stepping loop.
+Done returns the final output; CallModel and CallTools need checkpointed implementations before execution.
+No production code changes or model calls run. This is scaffolding guidance, not completed durable research.
+
+### Model-request preparation lesson — 2026-10-30
+
+User adds AgentRun loop; CallModel and CallTools branches remain empty.
+Verified installed Agent::tool_definitions(None) and CompletionRequest builder methods.
+Next task: obtain existing agent tool definitions and build each request from prompt/history, researcher preamble, and those definitions.
+The model call, DBOS checkpoint, ModelTurn feedback, and tool branch remain unfinished.
+No code changes, model calls, or compilation run for this guidance.
+
+### Durable researcher error boundary — 2026-10-30
+
+Request construction now includes existing tool definitions, history, and preamble.
+Verified CompletionResponse supports serialization for DBOS checkpoints.
+Before adding DBOS steps, process_message must preserve DBOS control errors rather than flattening them into ServiceError.
+Next guidance changes its return to dbos::Result<String, ServiceError>, removes the outer Application mapping, and maps Rig errors through ServiceError explicitly.
+No implementation edits, compilation, or model execution performed.
+
+### Model checkpoint guidance — 2026-10-30
+
+Researcher now returns dbos::Result and maps AgentRun errors through ServiceError.
+The app workflow still wraps that DBOS error in Application; remove that redundant mapping.
+Next task: wrap the single model call in dbos::step, clone its request per attempt, and preserve DBOS errors through ?.
+Response feedback and tool execution remain unfinished. No code edits or model calls performed.
+
+### Model request checkpoint implemented — 2026-10-30
+
+CallModel now invokes the provider inside dbos::step named research_model.
+The request is cloned per attempt; serializable model responses are checkpointed and DBOS errors propagate intact.
+Removed the redundant Application error wrapper from the registered workflow.
+Application cargo check passes with warnings. No workflow or paid model calls run.
+Research remains incomplete: the response is not fed into AgentRun, and CallTools is empty.
+Do not treat current research execution or crash recovery as verified. Next: ModelTurn feedback, then checkpointed tool execution.
+
+### Model response feedback lesson — 2026-10-30
+
+Next user task: convert the saved CompletionResponse to Rig ModelTurn using the advertised tool names.
+Feed it into AgentRun::model_response and explicitly fail unknown/disallowed tool calls through Rig's resolution API.
+This advances Rig to CallTools or Done without another provider request.
+Guidance only; feedback and tool execution are not yet implemented or runtime-tested.
+
+### DBOS researcher integration completed — 2026-10-30
+
+Finished the Rig stepping driver in run_durable_agent, shared by production research and focused integration tests.
+Each model request and each tool result has a DBOS step. Recorded responses rebuild Rig state during replay.
+Tools execute sequentially, preserve typed result content, return argument errors to the model, and reject unknown tools.
+Trusted world/conversation/message IDs still come from the registered research input and tool construction.
+The app logs research completion/failure for the existing smoke harness.
+Updated the obsolete echo test to verify actual app registration/startup/shutdown without submitting research.
+
+Verification:
+- All-target cargo check passes.
+- Four real-Postgres tests pass with a local scripted provider: completed-workflow deduplication, DBOS engine restart replay, invalid arguments, and unknown tools.
+- The restart test interrupts the final model request after two tool calls are checkpointed. Recovery reuses the initial model response and both tool results.
+- Broader non-AI live suite passes: 30 native checks plus the API wrapper; the API wrapper reports 23 passes and five paid skips.
+- Eight text tests pass. No external model calls or paid smoke tests run.
+
+Limits remain explicit: the restart test replaces the DBOS engine in one process, not an OS-level kill.
+A Memgraph commit and DBOS checkpoint are separate commits; an interrupted write may repeat.
+Chat storage and workflow submission are separate commits; atomic handoff remains unfinished.
+Visible job status, concurrent research/deletion coordination, and production recovery acceptance remain outside this change.
+The existing synthetic ranking case is not rerun or changed.
+See [DBOS integration results](../tests/artifacts/dbos-research-2026-10-30.md).

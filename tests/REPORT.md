@@ -287,3 +287,38 @@ Four new tool-argument tests pass, covering rejection, normalized conversion, an
 All eight shared text tests pass.
 All 13 selected live graph/wiring regression tests pass, including isolation, rollback, sources, and read-only chat wiring.
 No paid model calls run. The full API suite is not repeated.
+
+
+## DBOS test lifecycle wiring — 2026-10-30
+
+Both application harnesses accept the new three-value create_app return.
+They retain and shut down DBOS, including when scheduler shutdown returns an error.
+All-target cargo check passes. The non-AI API suite passes 23 checks; five paid cases are skipped.
+DBOS startup/migration/shutdown succeeds against QA Postgres.
+The paid smoke harness only compiles; no model calls run.
+Echo execution and restart recovery are not tested by this run.
+
+
+## Echo step live verification — 2026-10-30
+
+The focused dbos_echo_startup_completes_and_shuts_down test passes against QA Postgres.
+The actual echo step logs execution and returns DBOS works. DBOS then shuts down.
+Port 8000 was occupied, so the existing backend process remains untouched.
+No AI calls run. No crash recovery is tested.
+
+
+## DBOS research loop and replay — 2026-10-30
+
+All build targets check successfully.
+Four new local scripted-provider tests use real QA Postgres, with no external model requests.
+They verify duplicate workflow submission, engine restart replay after completed tools, invalid tool arguments, and unknown tools.
+The recovery test checkpoints one model response and two tool calls, interrupts the next model request, and recreates DBOS.
+It verifies only the unfinished model call repeats. This is engine restart coverage within one OS process.
+
+The broader live target passes 31 Rust tests: 30 native checks plus the API wrapper.
+The wrapper reports 23 API passes and five paid skips. Do not count the wrapper as an extra product behavior.
+All eight text tests pass. No paid smoke or pure synthetic-ranking rerun is performed.
+The obsolete echo test now verifies real research registration and application startup/shutdown.
+
+Graph-commit/checkpoint atomicity and chat-commit/submission atomicity are not provided by this change.
+See [the detailed result](artifacts/dbos-research-2026-10-30.md).

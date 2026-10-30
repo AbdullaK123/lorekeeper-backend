@@ -16,7 +16,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let listener = tokio::net::TcpListener::bind("0.0.0.0:8000").await?;
 
-    let (app, mut scheduler) = create_app().await;
+    let (app, mut scheduler, dbos) = create_app().await;
 
     info!("Started server on port 8000...");
     let server_result = axum::serve(listener, app)
@@ -28,6 +28,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .await;
 
     scheduler.shutdown().await?;
+    dbos.shutdown().await;
     server_result?;
 
     Ok(())

@@ -57,7 +57,7 @@ Coverage includes:
 The duplicate-row ranking test checks defensive behavior. Current graph queries may return only unique rows.
 Blank-name rejection is a proposed API contract. Confirm that rule before fixing its test.
 
-The suite does not prove restart recovery, client disconnect handling, or concurrent chat ordering.
+DBOS engine restart coverage is described below. OS-level crash recovery, client disconnect handling, and concurrent chat ordering remain unverified.
 
 
 ## Paid conversation smoke tests
@@ -80,3 +80,18 @@ cargo test --offline --test adversarial_live researcher_smoke_conversation -- --
 Without a scenario file, the runner uses the original 20-turn Brinewake scenario.
 Use a fresh output directory to preserve earlier evidence.
 System-created conflict links have no separate source list; their conflict nodes carry the reporting-message sources.
+
+
+## DBOS researcher replay tests (no model charges)
+
+With the isolated QA database configured, run:
+
+```bash
+cargo test --offline --test adversarial_live durable_research -- --ignored --test-threads=1
+```
+
+These tests use a local scripted HTTP provider and real Postgres.
+They exercise the production research driver with two tool calls per model turn.
+One test shuts down DBOS during a model request, recreates it, and verifies recorded operations do not execute again.
+This simulates engine restart in one process; it does not prove graph-write/checkpoint atomicity.
+The broader non-AI run must use `--skip researcher_smoke_conversation` to exclude the explicitly paid smoke harness.

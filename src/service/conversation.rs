@@ -3,7 +3,7 @@ use crate::data::{
     WorldRepository,
 };
 use crate::service::{
-    ChatAgentFactory, ResearcherService, RetrievalService, ServiceError, format_hits,
+    ChatAgentFactory, ResearchInput, RetrievalService, ServiceError, format_hits,
 };
 use chrono::Utc;
 use futures::{Stream, StreamExt};
@@ -14,25 +14,25 @@ use uuid::Uuid;
 pub struct ConversationService {
     pub conversation_repo: ConversationRepository,
     pub world_repo: WorldRepository,
-    researcher_service: ResearcherService,
     retrieval_service: RetrievalService,
     agent_factory: ChatAgentFactory,
+    research_job: dbos::WorkflowRef<ResearchInput, String, ServiceError>,
 }
 
 impl ConversationService {
     pub fn new(
         conversation_repo: ConversationRepository,
         world_repo: WorldRepository,
-        researcher_service: ResearcherService,
         retrieval_service: RetrievalService,
         agent_factory: ChatAgentFactory,
+        research_job: dbos::WorkflowRef<ResearchInput, String, ServiceError>,
     ) -> Self {
         Self {
             conversation_repo,
             world_repo,
-            researcher_service,
             retrieval_service,
             agent_factory,
+            research_job,
         }
     }
 
@@ -127,6 +127,7 @@ impl ConversationService {
             .create_agent(&conversation.world_id.to_string(), lore);
 
         let service = self.clone();
+
         let events = async_stream::stream! {
             let mut rig_stream = agent
                 .prompt(content.clone())
@@ -153,16 +154,28 @@ impl ConversationService {
                                 yield Err(e.into());
                                 break;
                             }
-                            let researcher = service.researcher_service.clone();
-                            let world_id = conversation.world_id;
-                            let text = content.clone();
-                            let earlier = earlier_messages.clone();
-                            tokio::spawn(async move {
-                                match researcher.process_message(world_id, id, message.clone().id(), &text, &earlier).await {
-                                    Ok(_) => tracing::info!("research completed for conversation {id}"),
-                                    Err(e) => tracing::error!("research failed for conversation {id}: {e}"),
-                                }
-                            });
+
+                            let input = ResearchInput {
+                                world_id: conversation.world_id,
+                                conversation_id: id,
+                                source_message_id: message.id(),
+                                message: content.clone(),
+                                history: earlier_messages.clone()
+                            };
+
+                            let workflow_id = message.id().to_string();
+
+                            if let Err(error) = service.research_job
+                                .start_with(input, dbos::StartOptions {
+                                    workflow_id: Some(&workflow_id),
+                                    ..Default::default()
+                                })
+                                .await
+                            {
+                                yield Err(ServiceError::InternalError(error.to_string()));
+                                break;
+                            }
+
                         }
                         yield Ok(item)
                     },
