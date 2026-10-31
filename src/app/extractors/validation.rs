@@ -1,15 +1,37 @@
-use axum::extract::{FromRequest, Request};
+use crate::app::errors::AppError;
 use axum::Json;
+use axum::extract::{FromRequest, Request};
 use serde::de::DeserializeOwned;
 use validator::Validate;
-use crate::app::errors::AppError;
 
 pub struct ValidatedJson<T>(pub T);
 
-impl <S, T> FromRequest<S> for ValidatedJson<T>
+pub struct ValidatedQuery<T>(pub T);
+
+impl<S, T> axum::extract::FromRequestParts<S> for ValidatedQuery<T>
 where
     S: Send + Sync,
-    T: DeserializeOwned + Validate
+    T: DeserializeOwned + Validate,
+{
+    type Rejection = AppError;
+
+    async fn from_request_parts(
+        parts: &mut axum::http::request::Parts,
+        state: &S,
+    ) -> Result<Self, Self::Rejection> {
+        let axum::extract::Query(query) =
+            axum::extract::Query::<T>::from_request_parts(parts, state)
+                .await
+                .map_err(|error| AppError::ValidationError(error.to_string()))?;
+        query.validate()?;
+        Ok(Self(query))
+    }
+}
+
+impl<S, T> FromRequest<S> for ValidatedJson<T>
+where
+    S: Send + Sync,
+    T: DeserializeOwned + Validate,
 {
     type Rejection = AppError;
 

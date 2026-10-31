@@ -1,8 +1,10 @@
 use crate::infrastructure::InfrastructureError;
+use crate::shared::{PageResponse, SearchQuery};
 use neo4rs::{Node, Relation, Row};
 use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
+use validator::Validate;
 
 pub trait FromRow: Sized {
     fn from_row(row: &Row, alias: &str) -> Result<Self, InfrastructureError>;
@@ -141,5 +143,222 @@ impl FromRow for Conflict {
                 Vec::new()
             },
         })
+    }
+}
+
+// HTTP query models. Cursor decoding belongs to the repository pagination implementation.
+fn default_page_limit() -> u32 {
+    50
+}
+
+#[derive(Debug, Deserialize, Validate)]
+pub struct GraphQuery {
+    #[serde(default = "default_page_limit")]
+    #[validate(range(min = 1, max = 100))]
+    pub limit: u32,
+    #[validate(length(max = 2048))]
+    pub cursor: Option<String>,
+}
+
+#[derive(Debug, Deserialize, Validate)]
+pub struct EntityListQuery {
+    #[serde(default = "default_page_limit")]
+    #[validate(range(min = 1, max = 100))]
+    pub limit: u32,
+    #[validate(length(max = 2048))]
+    pub cursor: Option<String>,
+    #[validate(length(min = 1, max = 100))]
+    pub kind: Option<String>,
+}
+
+#[derive(Debug, Deserialize, Validate)]
+pub struct EntitySearchQuery {
+    pub query: SearchQuery,
+    #[serde(default = "default_page_limit")]
+    #[validate(range(min = 1, max = 100))]
+    pub limit: u32,
+}
+
+#[derive(Debug, Deserialize, Validate)]
+pub struct NeighborQuery {
+    #[serde(default = "default_page_limit")]
+    #[validate(range(min = 1, max = 100))]
+    pub limit: u32,
+    #[validate(length(max = 2048))]
+    pub cursor: Option<String>,
+    #[validate(length(min = 1, max = 100))]
+    pub kind: Option<String>,
+    #[validate(length(min = 1, max = 100))]
+    pub rel_type: Option<String>,
+}
+
+#[derive(Debug, Deserialize, Validate)]
+pub struct ConflictListQuery {
+    #[serde(default = "default_page_limit")]
+    #[validate(range(min = 1, max = 100))]
+    pub limit: u32,
+    #[validate(length(max = 2048))]
+    pub cursor: Option<String>,
+    /// Omit to include both resolved and unresolved conflicts.
+    pub resolved: Option<bool>,
+}
+
+/// Nodes and edges for initial graph loading or neighborhood expansion.
+/// Pagination metadata belongs to PageResponse<GraphResponse>.
+#[derive(Debug, Serialize)]
+pub struct GraphResponse {
+    pub nodes: Vec<EntityResponse>,
+    pub edges: Vec<RelationshipResponse>,
+}
+
+#[derive(Debug, Serialize)]
+pub struct EntityResponse {
+    pub id: String,
+    pub name: String,
+    pub aliases: Vec<String>,
+    pub kind: Vec<String>,
+    pub description: String,
+    pub properties: HashMap<String, serde_json::Value>,
+    pub source_message_ids: Vec<String>,
+}
+
+#[derive(Debug, Serialize)]
+pub struct RelationshipResponse {
+    pub id: String,
+    pub from_id: String,
+    pub to_id: String,
+    pub rel_type: String,
+    pub description: String,
+    pub properties: HashMap<String, serde_json::Value>,
+    pub source_conversation: String,
+    pub source_message_ids: Vec<String>,
+}
+
+#[derive(Debug, Serialize)]
+pub struct ConflictResponse {
+    pub id: String,
+    pub entity_id: String,
+    pub field: String,
+    pub existing_value: serde_json::Value,
+    pub new_value: serde_json::Value,
+    pub severity: String,
+    pub explanation: String,
+    pub source_conversation: String,
+    pub source_message_ids: Vec<String>,
+    pub resolved: bool,
+}
+
+impl From<Entity> for EntityResponse {
+    fn from(entity: Entity) -> Self {
+        Self {
+            id: entity.id,
+            name: entity.name,
+            aliases: entity.aliases,
+            kind: entity.kind,
+            description: entity.description,
+            properties: entity.properties,
+            source_message_ids: entity.source_message_ids,
+        }
+    }
+}
+
+impl From<Relationship> for RelationshipResponse {
+    fn from(relationship: Relationship) -> Self {
+        Self {
+            id: relationship.id,
+            from_id: relationship.from_id,
+            to_id: relationship.to_id,
+            rel_type: relationship.rel_type,
+            description: relationship.description,
+            properties: relationship.properties,
+            source_conversation: relationship.source_conversation,
+            source_message_ids: relationship.source_message_ids,
+        }
+    }
+}
+
+impl From<Conflict> for ConflictResponse {
+    fn from(conflict: Conflict) -> Self {
+        Self {
+            id: conflict.id,
+            entity_id: conflict.entity_id,
+            field: conflict.field,
+            existing_value: conflict.existing_value,
+            new_value: conflict.new_value,
+            severity: conflict.severity,
+            explanation: conflict.explanation,
+            source_conversation: conflict.source_conversation,
+            source_message_ids: conflict.source_message_ids,
+            resolved: conflict.resolved,
+        }
+    }
+}
+
+impl From<(Vec<Entity>, Vec<Relationship>)> for GraphResponse {
+    fn from((entities, relationships): (Vec<Entity>, Vec<Relationship>)) -> Self {
+        Self {
+            nodes: entities.into_iter().map(EntityResponse::from).collect(),
+            edges: relationships
+                .into_iter()
+                .map(RelationshipResponse::from)
+                .collect(),
+        }
+    }
+}
+
+impl From<Vec<(Entity, Relationship)>> for GraphResponse {
+    fn from(neighbors: Vec<(Entity, Relationship)>) -> Self {
+        let (entities, relationships) = neighbors.into_iter().unzip();
+        Self::from((entities, relationships))
+    }
+}
+
+impl From<(Vec<(Entity, Relationship)>, Option<String>)> for PageResponse<GraphResponse> {
+    fn from((neighbors, next_cursor): (Vec<(Entity, Relationship)>, Option<String>)) -> Self {
+        Self {
+            data: neighbors.into(),
+            next_cursor,
+        }
+    }
+}
+
+impl From<(Vec<Entity>, Option<String>)> for PageResponse<Vec<EntityResponse>> {
+    fn from((entities, next_cursor): (Vec<Entity>, Option<String>)) -> Self {
+        Self {
+            data: entities.into_iter().map(EntityResponse::from).collect(),
+            next_cursor,
+        }
+    }
+}
+
+impl From<(Vec<Relationship>, Option<String>)> for PageResponse<Vec<RelationshipResponse>> {
+    fn from((relationships, next_cursor): (Vec<Relationship>, Option<String>)) -> Self {
+        Self {
+            data: relationships
+                .into_iter()
+                .map(RelationshipResponse::from)
+                .collect(),
+            next_cursor,
+        }
+    }
+}
+
+impl From<(Vec<Conflict>, Option<String>)> for PageResponse<Vec<ConflictResponse>> {
+    fn from((conflicts, next_cursor): (Vec<Conflict>, Option<String>)) -> Self {
+        Self {
+            data: conflicts.into_iter().map(ConflictResponse::from).collect(),
+            next_cursor,
+        }
+    }
+}
+
+impl From<(Vec<Entity>, Vec<Relationship>, Option<String>)> for PageResponse<GraphResponse> {
+    fn from(
+        (entities, relationships, next_cursor): (Vec<Entity>, Vec<Relationship>, Option<String>),
+    ) -> Self {
+        Self {
+            data: (entities, relationships).into(),
+            next_cursor,
+        }
     }
 }

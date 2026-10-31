@@ -75,6 +75,47 @@ class ApiTests(unittest.TestCase):
         self.assertIn(response.status_code, (403, 404),
                       f"Another user reaches private data: {response.status_code} {response.text[:300]}")
 
+    def test_world_graph_read_routes_enforce_access(self):
+        missing = str(uuid.uuid4())
+        endpoints = {
+            "graph": (200, {"nodes": [], "edges": []}),
+            "entities": (200, []),
+            "entities/search?query=archive": (200, []),
+            f"entities/{missing}": (404, None),
+            f"entities/{missing}/neighbors": (404, None),
+            f"relationships/{missing}": (404, None),
+            "conflicts": (200, []),
+            f"conflicts/{missing}": (404, None),
+        }
+        for suffix, (status, data) in endpoints.items():
+            path = f"/world/{self.w}/{suffix}"
+            with self.subTest(path=path):
+                response = request(self.a, "GET", path)
+                self.assertEqual(response.status_code, status,
+                                 f"World read route fails: {response.text[:300]}")
+                if status == 200:
+                    self.assertEqual(response.json()["data"], data,
+                                     "Empty world returns unexpected graph data")
+                    self.assertIsNone(response.json()["next_cursor"],
+                                      "Empty world advertises another page")
+                self.assert_denied(request(self.b, "GET", path))
+                self.assertIn(request(requests.Session(), "GET", path).status_code,
+                              (401, 403), "Anonymous caller reaches world graph data")
+
+    def test_world_graph_read_routes_validate_queries(self):
+        cases = [
+            "graph?limit=0", "graph?limit=101", "graph?limit=bad",
+            "graph?cursor=invalid", "entities?limit=0", "entities?kind=",
+            "entities/search", "entities/search?query=", "entities/search?query=archive&limit=101",
+            "conflicts?resolved=bad", "conflicts?limit=0", "conflicts?cursor=invalid",
+            f"entities/{uuid.uuid4()}/neighbors?limit=0",
+        ]
+        for suffix in cases:
+            with self.subTest(query=suffix):
+                response = request(self.a, "GET", f"/world/{self.w}/{suffix}")
+                self.assertEqual(response.status_code, 422,
+                                 f"Invalid world query reaches service logic: {response.text[:300]}")
+
     def test_unauthenticated_routes_reject_requests(self):
         for method, path, payload in [
             ("GET", "/world", None), ("GET", f"/world/{self.w}", None),

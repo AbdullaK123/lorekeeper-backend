@@ -3,7 +3,9 @@ use crate::app::{
 };
 use crate::cron_worker::start_scheduler;
 use crate::data::{ConversationRepository, GraphRepository, UserRepository, WorldRepository};
-use crate::infrastructure::{create_graph, create_pool, load_config, load_prompt, load_settings};
+use crate::infrastructure::{
+    Settings, create_graph, create_pool, load_config, load_prompt, load_settings,
+};
 use crate::service::{
     AuthService, ChatAgentFactory, ConversationService, ResearcherService, RetrievalService,
     WorldService,
@@ -32,12 +34,32 @@ pub async fn create_app() -> (Router, JobScheduler, DBOS) {
     let config = load_config();
     let pool = create_pool(&settings, &config.db).await;
     let graph = create_graph(&settings, &config.memgraph).await;
+    let (app_state, scheduler, dbos) = bootstrap(pool.clone(), graph, &settings).await;
+
+    let app = Router::new()
+        .route("/health", get(|| async { "ok" }))
+        .nest("/auth", create_auth_controller())
+        .nest("/world", create_world_controller())
+        .nest("/conversation", create_conversation_controller())
+        .layer(settings.trace_layer())
+        .layer(settings.session_layer(pool.clone()).await)
+        .layer(settings.cors_layer())
+        .with_state(app_state);
+
+    (app, scheduler, dbos)
+}
+
+async fn bootstrap(
+    pool: PgPool,
+    graph: Graph,
+    settings: &Settings,
+) -> (AppState, JobScheduler, DBOS) {
     let graph_repo = GraphRepository::new(graph.clone());
     let user_repo = UserRepository::new(pool.clone());
     let world_repo = WorldRepository::new(pool.clone());
     let conversation_repo = ConversationRepository::new(pool.clone());
     let auth_service = AuthService::new(user_repo);
-    let world_service = WorldService::new(world_repo.clone());
+    let world_service = WorldService::new(world_repo.clone(), graph_repo.clone());
 
     graph_repo
         .ensure_constraints()
@@ -67,7 +89,7 @@ pub async fn create_app() -> (Router, JobScheduler, DBOS) {
         embedding_model,
     );
 
-    let (dbos, research) = setup_dbos(&settings, researcher_service)
+    let (dbos, research) = setup_dbos(settings, researcher_service)
         .await
         .expect("Failed to initialize dbos");
 
@@ -91,15 +113,5 @@ pub async fn create_app() -> (Router, JobScheduler, DBOS) {
         .await
         .expect("Failed to start the world cleanup scheduler");
 
-    let app = Router::new()
-        .route("/health", get(|| async { "ok" }))
-        .nest("/auth", create_auth_controller())
-        .nest("/world", create_world_controller())
-        .nest("/conversation", create_conversation_controller())
-        .layer(settings.trace_layer())
-        .layer(settings.session_layer(pool.clone()).await)
-        .layer(settings.cors_layer())
-        .with_state(app_state);
-
-    (app, scheduler, dbos)
+    (app_state, scheduler, dbos)
 }

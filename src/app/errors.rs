@@ -28,6 +28,7 @@ pub enum AppError {
 impl From<InfrastructureError> for AppError {
     fn from(value: InfrastructureError) -> Self {
         match value {
+            InfrastructureError::InvalidInput(message) => Self::ValidationError(message),
             InfrastructureError::Conflict(message) => Self::Conflict(message),
             other => Self::DownstreamServiceError(other.to_string()),
         }
@@ -37,6 +38,7 @@ impl From<InfrastructureError> for AppError {
 impl From<ServiceError> for AppError {
     fn from(value: ServiceError) -> Self {
         match value {
+            ServiceError::InvalidInput(message) => Self::ValidationError(message),
             ServiceError::Conflict(message) => Self::Conflict(message),
             ServiceError::AuthError => Self::AuthError(value.to_string()),
             ServiceError::NotFound(e) => Self::NotFound(e.to_string()),

@@ -6,6 +6,8 @@ use thiserror::Error;
 #[derive(Error, Debug, Serialize, Deserialize)]
 pub enum ServiceError {
     #[error("{0}")]
+    InvalidInput(String),
+    #[error("{0}")]
     Conflict(String),
     #[error("Internal error: {0}")]
     InternalError(String),
@@ -18,6 +20,7 @@ pub enum ServiceError {
 impl From<InfrastructureError> for ServiceError {
     fn from(value: InfrastructureError) -> Self {
         match value {
+            InfrastructureError::InvalidInput(message) => Self::InvalidInput(message),
             InfrastructureError::Conflict(message) => Self::Conflict(message),
             other => Self::InternalError(other.to_string()),
         }

@@ -322,3 +322,22 @@ The obsolete echo test now verifies real research registration and application s
 
 Graph-commit/checkpoint atomicity and chat-commit/submission atomicity are not provided by this change.
 See [the detailed result](artifacts/dbos-research-2026-10-30.md).
+
+
+## Ownership and clone cleanup — 2026-10-30
+
+All-target cargo check passes after removing redundant data copies in chat, research, authentication, retrieval, and graph output.
+The live target passes 31 Rust tests: 30 native checks plus the API wrapper.
+The API wrapper passes 23 checks and skips five paid cases; DBOS replay tests also pass.
+Pure tests report 11 passes and the existing synthetic duplicate-row ranking failure.
+Search-result ownership changes preserve that ranking behavior; no speculative ranking fix is included.
+No external model calls or paid chat smoke tests run.
+
+## World graph routes — 2026-10-31
+
+All-target cargo check passes with warnings.
+Two selected live API tests pass through the real application router and isolated databases.
+All eight graph/entity/relationship/conflict routes enforce owner access on empty-world reads and missing records.
+Foreign users and anonymous callers are rejected. Invalid query values return HTTP 422.
+The Python checks take 3.544 seconds; the Rust API wrapper passes in 4.81 seconds.
+Populated entity/neighbor pagination remains untested in this run. No paid model calls run.

@@ -38,7 +38,7 @@ impl AuthService {
         if unwrapped_user.password_hash.is_none() {
             return Err(ServiceError::AuthError)
         }
-        let password_hash = PasswordHash::new(&unwrapped_user.password_hash.clone().unwrap())
+        let password_hash = PasswordHash::new(unwrapped_user.password_hash.as_deref().unwrap())
             .map_err(|e| ServiceError::InternalError(e.to_string()))?;
         let password_valid = Argon2::default()
             .verify_password(password.as_bytes(), &password_hash)
@@ -46,7 +46,7 @@ impl AuthService {
         if !password_valid {
             return Err(ServiceError::AuthError)
         }
-        Ok(unwrapped_user.clone())
+        Ok(unwrapped_user)
     }
     
     pub async fn signup(&self, payload: SignupRequest) -> Result<UserResponse, ServiceError> {

@@ -74,9 +74,9 @@ impl ResearcherService {
                 graph_repo: self.graph_repo.clone(),
             })
             .tool(UpdateGraph {
-                world_id: world_id.clone(),
-                conversation_id: conversation_id.clone(),
-                source_message_id: source_message_id.clone(),
+                world_id,
+                conversation_id,
+                source_message_id,
                 graph_repo: self.graph_repo.clone(),
                 embedding_model: self.embedding_model.clone(),
             })
@@ -94,15 +94,11 @@ impl ResearcherService {
         let world_id = world_id.to_string();
         let conversation_id = conversation_id.to_string();
         let source_message_id = source_message_id.to_string();
-        let agent = self.create_agent(
-            world_id.clone(),
-            conversation_id.clone(),
-            source_message_id.clone(),
-        );
         let input = serde_json::json!({
             "world_id": world_id, "message": message, "recent_messages": history,
             "source_conversation": conversation_id,
         });
+        let agent = self.create_agent(world_id, conversation_id, source_message_id);
         run_durable_agent(&agent, &self.model, &self.preamble, input.to_string()).await
     }
 }
@@ -126,16 +122,13 @@ pub(crate) async fn run_durable_agent(
             AgentRunStep::CallModel {
                 prompt, history, ..
             } => {
-                let request = CompletionRequest::new(prompt)
-                    .messages(history)
-                    .preamble(preamble.to_owned())
-                    .tools(definitions.clone());
-                let response = dbos::step("research_model", || {
-                    let request = request.clone();
-                    async move {
-                        let response = model.call(request).await.map_err(ServiceError::from)?;
-                        Ok::<_, dbos::Error<ServiceError>>(response)
-                    }
+                let response = dbos::step("research_model", || async {
+                    let request = CompletionRequest::new(prompt.clone())
+                        .messages(history.clone())
+                        .preamble(preamble)
+                        .tools(definitions.clone());
+                    let response = model.call(request).await.map_err(ServiceError::from)?;
+                    Ok::<_, dbos::Error<ServiceError>>(response)
                 })
                 .await?;
                 let turn = ModelTurn::from_response_parts(&response, names.clone(), names.clone());
@@ -153,24 +146,21 @@ pub(crate) async fn run_durable_agent(
                         continue;
                     }
                     let call = pending.tool_call;
-                    let result = dbos::step("research_tool", || {
-                        let call = call.clone();
-                        async move {
-                            let mut context = ToolContext::new();
-                            let result = agent
-                                .tool_server_handle()
-                                .execute(
-                                    call.function.name.as_ref(),
-                                    &call.function.arguments_value().to_string(),
-                                    &mut context,
-                                )
-                                .await;
-                            Ok::<_, dbos::Error<ServiceError>>(UserContent::tool_result(
-                                call.id,
-                                call.function.name,
-                                result.output().clone().into_content(),
-                            ))
-                        }
+                    let result = dbos::step("research_tool", || async {
+                        let mut context = ToolContext::new();
+                        let result = agent
+                            .tool_server_handle()
+                            .execute(
+                                call.function.name.as_ref(),
+                                &call.function.arguments_value().to_string(),
+                                &mut context,
+                            )
+                            .await;
+                        Ok::<_, dbos::Error<ServiceError>>(UserContent::tool_result(
+                            call.id.clone(),
+                            call.function.name.clone(),
+                            result.output().clone().into_content(),
+                        ))
                     })
                     .await?;
                     results.push(result);

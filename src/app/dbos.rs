@@ -1,3 +1,5 @@
+use std::sync::Arc;
+
 use dbos::{Config, DBOS};
 
 use crate::{
@@ -13,6 +15,7 @@ pub async fn setup_dbos(
     config.app_version = Some("dev-v1".into());
     let dbos = DBOS::new(config);
 
+    let researcher_service = Arc::new(researcher_service);
     let research = dbos
         .register_workflow("research", move |input: ResearchInput| {
             let service = researcher_service.clone();

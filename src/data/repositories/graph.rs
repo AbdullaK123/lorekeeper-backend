@@ -153,6 +153,104 @@ impl GraphRepository {
         .await
     }
 
+    /// Page entities by ID, then load directed relationships within that page.
+    /// The cursor is the last returned entity ID; callers must check world ownership.
+    pub async fn get_graph(
+        &self,
+        world_id: &str,
+        limit: u32,
+        cursor: Option<&str>,
+    ) -> Result<(Vec<Entity>, Vec<Relationship>, Option<String>), InfrastructureError> {
+        if !(1..=100).contains(&limit) {
+            return Err(InfrastructureError::InvalidInput(
+                "Graph page limit must be between 1 and 100".into(),
+            ));
+        }
+        if let Some(cursor) = cursor {
+            uuid::Uuid::parse_str(cursor)
+                .map_err(|_| InfrastructureError::InvalidInput("Invalid graph cursor".into()))?;
+        }
+        let mut entities = self
+            .fetch_all::<Entity>(
+                query(
+                    "MATCH (e:Entity {world_id: $world_id})
+                   WHERE e.id > $after_id
+                   RETURN e ORDER BY e.id LIMIT $limit",
+                )
+                .param("world_id", world_id)
+                .param("after_id", cursor.unwrap_or_default())
+                .param("limit", i64::from(limit) + 1),
+                "e",
+            )
+            .await?;
+        let has_more = entities.len() > limit as usize;
+        entities.truncate(limit as usize);
+        let next_cursor = if has_more {
+            entities.last().map(|entity| entity.id.clone())
+        } else {
+            None
+        };
+        if entities.is_empty() {
+            return Ok((entities, Vec::new(), next_cursor));
+        }
+        let ids: Vec<&str> = entities.iter().map(|entity| entity.id.as_str()).collect();
+        let relationships = self
+            .fetch_all::<Relationship>(
+                query(
+                    "MATCH (a:Entity {world_id: $world_id})-[r]->(b:Entity {world_id: $world_id})
+                   WHERE a.id IN $ids AND b.id IN $ids AND r.world_id = $world_id
+                   RETURN r ORDER BY r.id",
+                )
+                .param("world_id", world_id)
+                .param("ids", ids),
+                "r",
+            )
+            .await?;
+        Ok((entities, relationships, next_cursor))
+    }
+
+    /// Page world entities by ID, with an optional exact kind filter.
+    /// Callers must check world ownership before calling this method.
+    pub async fn list_entities(
+        &self,
+        world_id: &str,
+        limit: u32,
+        cursor: Option<&str>,
+        kind: Option<&str>,
+    ) -> Result<(Vec<Entity>, Option<String>), InfrastructureError> {
+        if !(1..=100).contains(&limit) {
+            return Err(InfrastructureError::InvalidInput(
+                "Entity page limit must be between 1 and 100".into(),
+            ));
+        }
+        if let Some(cursor) = cursor {
+            uuid::Uuid::parse_str(cursor)
+                .map_err(|_| InfrastructureError::InvalidInput("Invalid entity cursor".into()))?;
+        }
+        let mut entities = self
+            .fetch_all::<Entity>(
+                query(
+                    "MATCH (e:Entity {world_id: $world_id})
+                     WHERE e.id > $after_id AND ($kind IS NULL OR $kind IN e.kind)
+                     RETURN e ORDER BY e.id LIMIT $limit",
+                )
+                .param("world_id", world_id)
+                .param("after_id", cursor.unwrap_or_default())
+                .param("kind", kind.map(str::to_owned))
+                .param("limit", i64::from(limit) + 1),
+                "e",
+            )
+            .await?;
+        let has_more = entities.len() > limit as usize;
+        entities.truncate(limit as usize);
+        let next_cursor = if has_more {
+            entities.last().map(|entity| entity.id.clone())
+        } else {
+            None
+        };
+        Ok((entities, next_cursor))
+    }
+
     pub async fn get_entities_by_world(
         &self,
         world_id: &str,
@@ -220,6 +318,73 @@ impl GraphRepository {
             items.push((entity, relationship));
         }
         Ok(items)
+    }
+
+    /// Page connecting relationships by ID and return their neighboring entities.
+    /// The cursor is the last returned relationship ID; callers must check world ownership.
+    pub async fn get_entity_neighbors_page(
+        &self,
+        id: &str,
+        world_id: &str,
+        rel_type: Option<&str>,
+        kind: Option<&str>,
+        limit: u32,
+        cursor: Option<&str>,
+    ) -> Result<(Vec<(Entity, Relationship)>, Option<String>), InfrastructureError> {
+        if !(1..=100).contains(&limit) {
+            return Err(InfrastructureError::InvalidInput(
+                "Neighbor page limit must be between 1 and 100".into(),
+            ));
+        }
+        if let Some(cursor) = cursor {
+            uuid::Uuid::parse_str(cursor)
+                .map_err(|_| InfrastructureError::InvalidInput("Invalid neighbor cursor".into()))?;
+        }
+        let mut rows = self.graph.execute(
+            query(
+                "MATCH (e:Entity {id: $id, world_id: $world_id})-[r]-(m:Entity {world_id: $world_id})
+                 WHERE r.world_id = $world_id AND r.id > $after_id
+                   AND ($rel_type IS NULL OR type(r) = $rel_type)
+                   AND ($kind IS NULL OR $kind IN m.kind)
+                 RETURN DISTINCT r, m ORDER BY r.id LIMIT $limit",
+            )
+            .param("id", id)
+            .param("world_id", world_id)
+            .param("after_id", cursor.unwrap_or_default())
+            .param("rel_type", rel_type.map(str::to_owned))
+            .param("kind", kind.map(str::to_owned))
+            .param("limit", i64::from(limit) + 1),
+        ).await?;
+        let mut items = Vec::new();
+        while let Some(row) = rows.next().await? {
+            items.push((
+                Entity::from_row(&row, "m")?,
+                Relationship::from_row(&row, "r")?,
+            ));
+        }
+        let has_more = items.len() > limit as usize;
+        items.truncate(limit as usize);
+        let next_cursor = if has_more {
+            items
+                .last()
+                .map(|(_, relationship)| relationship.id.clone())
+        } else {
+            None
+        };
+        Ok((items, next_cursor))
+    }
+
+    pub async fn get_relationship(
+        &self,
+        id: &str,
+        world_id: &str,
+    ) -> Result<Option<Relationship>, InfrastructureError> {
+        self.fetch_one::<Relationship>(
+            query("MATCH (a:Entity {world_id: $world_id})-[r {id: $id, world_id: $world_id}]->(b:Entity {world_id: $world_id}) RETURN r LIMIT 1")
+                .param("id", id)
+                .param("world_id", world_id),
+            "r",
+        ).await
     }
 
     pub async fn update_relationship(
@@ -382,6 +547,46 @@ impl GraphRepository {
                 "c",
             )
             .await?)
+    }
+
+    pub async fn list_conflicts(
+        &self,
+        world_id: &str,
+        limit: u32,
+        cursor: Option<&str>,
+        resolved: Option<bool>,
+    ) -> Result<(Vec<Conflict>, Option<String>), InfrastructureError> {
+        if !(1..=100).contains(&limit) {
+            return Err(InfrastructureError::InvalidInput(
+                "Conflict page limit must be between 1 and 100".into(),
+            ));
+        }
+        if let Some(cursor) = cursor {
+            uuid::Uuid::parse_str(cursor)
+                .map_err(|_| InfrastructureError::InvalidInput("Invalid conflict cursor".into()))?;
+        }
+        let mut conflicts = self
+            .fetch_all::<Conflict>(
+                query(
+                    "MATCH (c:Conflict {world_id: $world_id})
+                   WHERE c.id > $after_id AND ($resolved IS NULL OR c.resolved = $resolved)
+                   RETURN c ORDER BY c.id LIMIT $limit",
+                )
+                .param("world_id", world_id)
+                .param("after_id", cursor.unwrap_or_default())
+                .param("resolved", resolved)
+                .param("limit", i64::from(limit) + 1),
+                "c",
+            )
+            .await?;
+        let has_more = conflicts.len() > limit as usize;
+        conflicts.truncate(limit as usize);
+        let next_cursor = if has_more {
+            conflicts.last().map(|conflict| conflict.id.clone())
+        } else {
+            None
+        };
+        Ok((conflicts, next_cursor))
     }
 
     pub async fn update_conflict(
@@ -669,20 +874,23 @@ impl GraphRepository {
         &self,
         world_id: &str,
         query_embedding: Vec<f64>,
+        limit: u32,
     ) -> Result<Vec<Entity>, InfrastructureError> {
         let results = self
             .fetch_all::<Entity>(
                 query(
                     r#"
-                CALL vector_search.search("entity_embedding", 50, $embedding) YIELD node, similarity
+                CALL vector_search.search("entity_embedding", $candidates, $embedding) YIELD node, similarity
                 WHERE node.world_id = $world_id
                 RETURN node, similarity
                 ORDER BY similarity DESC
-                LIMIT 10
+                LIMIT $limit
                 "#,
                 )
                 .param("world_id", world_id)
-                .param("embedding", query_embedding),
+                .param("embedding", query_embedding)
+                .param("candidates", i64::from(limit.max(50)))
+                .param("limit", i64::from(limit)),
                 "node",
             )
             .await?;
@@ -693,6 +901,7 @@ impl GraphRepository {
         &self,
         world_id: &str,
         query_text: &str,
+        limit: u32,
     ) -> Result<Vec<Entity>, InfrastructureError> {
         let cleaned: String = query_text
             .chars()
@@ -712,11 +921,12 @@ impl GraphRepository {
                     WHERE node.world_id = $world_id
                     RETURN node
                     ORDER BY score DESC
-                    LIMIT 10
+                    LIMIT $limit
                 "#,
                 )
                 .param("world_id", world_id)
-                .param("text", cleaned),
+                .param("text", cleaned)
+                .param("limit", i64::from(limit)),
                 "node",
             )
             .await?;

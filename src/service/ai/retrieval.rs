@@ -99,14 +99,14 @@ impl RetrievalService {
         Self { graph, embedder }
     }
 
-    fn rrf(lists: &[Vec<Entity>], k: f64) -> Vec<Entity> {
+    fn rrf(lists: Vec<Vec<Entity>>, k: f64) -> Vec<Entity> {
         let mut scoreboard: HashMap<String, f64> = HashMap::new();
-        for list in lists {
+        for list in &lists {
             for (i, entity) in list.iter().enumerate() {
                 *scoreboard.entry(entity.id.clone()).or_insert(0.0) += 1.0 / (k + i as f64 + 1.0);
             }
         }
-        let mut entities: Vec<Entity> = lists.concat();
+        let mut entities: Vec<Entity> = lists.into_iter().flatten().collect();
         let mut seen = HashSet::new();
         entities.retain(|e| seen.insert(e.id.clone()));
         entities.sort_by(|a, b| scoreboard[&b.id].total_cmp(&scoreboard[&a.id]));
@@ -120,12 +120,12 @@ impl RetrievalService {
         k: f64,
     ) -> Result<Vec<SearchHit>, ServiceError> {
         let query_embedding = self.embedder.embed_text(query).await?.vec;
-        let fts_search_results = self.graph.fts_search_entities(world_id, query).await?;
+        let fts_search_results = self.graph.fts_search_entities(world_id, query, 10).await?;
         let vector_search_results = self
             .graph
-            .vector_search_entities(world_id, query_embedding)
+            .vector_search_entities(world_id, query_embedding, 10)
             .await?;
-        let rrf_results = Self::rrf(&[fts_search_results, vector_search_results], k);
+        let rrf_results = Self::rrf(vec![fts_search_results, vector_search_results], k);
 
         let mut hits = Vec::new();
         for entity in rrf_results.into_iter().take(5) {

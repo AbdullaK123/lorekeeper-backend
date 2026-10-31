@@ -109,9 +109,11 @@ impl ConversationService {
         ServiceError,
     > {
         let conversation = self.get_conversation(id, user_id).await?;
+        let world_id = conversation.world_id;
+        let world_key = world_id.to_string();
         let hits = self
             .retrieval_service
-            .search(&content, &conversation.world_id.to_string(), 60.0)
+            .search(&content, &world_key, 60.0)
             .await?;
         let lore = format_hits(&hits);
         let message = Message::User {
@@ -121,10 +123,8 @@ impl ConversationService {
         };
         let history = conversation.rig_history();
         // The conversation as it was before this turn: researcher context for resolving "his", "the city", ...
-        let earlier_messages: Vec<Message> = conversation.messages.0.clone();
-        let agent = self
-            .agent_factory
-            .create_agent(&conversation.world_id.to_string(), lore);
+        let earlier_messages = conversation.messages.0;
+        let agent = self.agent_factory.create_agent(&world_key, lore);
 
         let service = self.clone();
 
@@ -136,8 +136,6 @@ impl ConversationService {
                 .stream();
             while let Some(item) = rig_stream.next().await {
 
-                let message = message.clone();
-
                 match item {
                     Ok(item) => {
                         if let MultiTurnStreamItem::FinalResponse(resp) = &item {
@@ -147,23 +145,23 @@ impl ConversationService {
                                 tool_calls: None,
                                 created_at: Utc::now()
                             };
-                            let svc = &service;
-                            let messages = vec![message.clone(), reply];
-                            if let Err(e) = svc.append_messages(id, user_id, &messages).await {
+                            let source_message_id = message.id();
+                            let messages = [message, reply];
+                            if let Err(e) = service.append_messages(id, user_id, &messages).await {
                                 tracing::error!("saving chat turn failed: {e}");
                                 yield Err(e.into());
                                 break;
                             }
 
                             let input = ResearchInput {
-                                world_id: conversation.world_id,
+                                world_id,
                                 conversation_id: id,
-                                source_message_id: message.id(),
-                                message: content.clone(),
-                                history: earlier_messages.clone()
+                                source_message_id,
+                                message: content,
+                                history: earlier_messages
                             };
 
-                            let workflow_id = message.id().to_string();
+                            let workflow_id = source_message_id.to_string();
 
                             if let Err(error) = service.research_job
                                 .start_with(input, dbos::StartOptions {
@@ -175,7 +173,8 @@ impl ConversationService {
                                 yield Err(ServiceError::InternalError(error.to_string()));
                                 break;
                             }
-
+                            yield Ok(item);
+                            break;
                         }
                         yield Ok(item)
                     },

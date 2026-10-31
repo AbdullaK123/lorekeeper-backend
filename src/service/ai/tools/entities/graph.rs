@@ -116,50 +116,50 @@ fn validate_graph_id(id: &str) -> Result<(), ServiceError> {
 }
 
 #[derive(Serialize)]
-struct SavedEntity {
-    id: String,
-    name: String,
+struct SavedEntity<'a> {
+    id: &'a str,
+    name: &'a str,
 }
 
-impl From<&Entity> for SavedEntity {
-    fn from(entity: &Entity) -> Self {
+impl<'a> From<&'a Entity> for SavedEntity<'a> {
+    fn from(entity: &'a Entity) -> Self {
         Self {
-            id: entity.id.clone(),
-            name: entity.name.clone(),
+            id: &entity.id,
+            name: &entity.name,
         }
     }
 }
 
 #[derive(Serialize)]
-struct SavedRelationship {
-    id: String,
-    from_id: String,
-    to_id: String,
-    rel_type: String,
+struct SavedRelationship<'a> {
+    id: &'a str,
+    from_id: &'a str,
+    to_id: &'a str,
+    rel_type: &'a str,
 }
 
-impl From<&Relationship> for SavedRelationship {
-    fn from(relationship: &Relationship) -> Self {
+impl<'a> From<&'a Relationship> for SavedRelationship<'a> {
+    fn from(relationship: &'a Relationship) -> Self {
         Self {
-            id: relationship.id.clone(),
-            from_id: relationship.from_id.clone(),
-            to_id: relationship.to_id.clone(),
-            rel_type: relationship.rel_type.clone(),
+            id: &relationship.id,
+            from_id: &relationship.from_id,
+            to_id: &relationship.to_id,
+            rel_type: &relationship.rel_type,
         }
     }
 }
 
 #[derive(Serialize)]
-struct GraphUpdateResult {
-    saved_entities: Vec<SavedEntity>,
-    saved_relationships: Vec<SavedRelationship>,
+struct GraphUpdateResult<'a> {
+    saved_entities: Vec<SavedEntity<'a>>,
+    saved_relationships: Vec<SavedRelationship<'a>>,
     retracted_relationship_ids: Vec<String>,
 }
 
-impl GraphUpdateResult {
+impl<'a> GraphUpdateResult<'a> {
     fn from_saved(
-        entities: &[(Entity, Vec<f64>)],
-        relationships: &[Relationship],
+        entities: &'a [(Entity, Vec<f64>)],
+        relationships: &'a [Relationship],
         retracted_relationship_ids: Vec<String>,
     ) -> Self {
         Self {

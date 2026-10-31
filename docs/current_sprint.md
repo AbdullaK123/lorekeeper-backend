@@ -521,3 +521,214 @@ Chat storage and workflow submission are separate commits; atomic handoff remain
 Visible job status, concurrent research/deletion coordination, and production recovery acceptance remain outside this change.
 The existing synthetic ranking case is not rerun or changed.
 See [DBOS integration results](../tests/artifacts/dbos-research-2026-10-30.md).
+
+### Ownership and clone cleanup — 2026-10-30
+
+Audited production clone sites, focusing on research, chat, auth, retrieval, and graph-result formatting.
+Removed per-stream-event user-message clones. Chat moves saved message/history values into final processing and research input.
+Reused the world ID string instead of formatting it twice. Final response terminates the stream after submitting research.
+Research agent construction moves IDs to their final owners. Model requests are built only inside executing DBOS steps.
+Tool steps borrow the pending call instead of cloning the entire call; owned checkpoint identifiers/content still copy as required.
+DBOS registration shares ResearcherService through Arc instead of copying its prompt/configuration for every workflow.
+Login borrows the stored password hash, returns its owned User, and copies the UUID directly.
+Retrieval consumes search result lists instead of cloning every entity through concat; ranking rules are unchanged.
+Graph update response views borrow saved IDs/names instead of copying strings before serialization.
+Retained clones needed for owned Rig requests, checkpoint results, independent tool contexts, and shared async handles.
+
+Verification: all-target cargo check passes. The live suite passes 30 native checks plus the API wrapper (23 API passes, five paid skips).
+All four DBOS replay tests pass within that run. Pure tests report 11 passes and the unchanged synthetic duplicate-ranking failure.
+No external model calls run. Paid chat streaming is not re-smoked for this cleanup.
+
+### Manual research loop walkthrough — 2026-10-31
+
+Read the current implementation before explaining AgentRun's role.
+Walkthrough starts with its stored conversation state, next_step requests, and model-call budget.
+Distinguishes Rig's in-memory state tracking from DBOS model/tool result persistence.
+No code changes or tests run. Detailed branch walkthrough continues as a learning task.
+
+### Remaining product scope audit — 2026-10-31
+
+Compared user stories, plan, controller routes, and graph repository methods.
+Current public routes cover accounts/sessions, worlds, and conversations. Graph browsing and conflict-review routes are absent.
+Graph visualization is the next proposed product slice: world-scoped graph data, entity search/detail, bounded neighbor expansion, and client views.
+Further product work includes source navigation, conflict resolution, research status, reasoning/gap review, and SaaS epics 9–15.
+Repository methods are foundations rather than completed authorized HTTP workflows.
+Some older epic checklists still list completed source storage/context formatting as remaining; use current verified evidence when planning.
+No implementation changes or tests run for this audit.
+
+### WorldService method inventory — 2026-10-31
+
+Reviewed WorldService and graph repository reads before defining the next API slice.
+Proposed read methods: get_graph, list_entities, search_entities, get_entity, get_entity_neighbors, get_relationship, list_conflicts, and get_conflict.
+Proposed follow-up mutation: resolve_conflict with an explicit writer decision; toggling resolved alone does not apply that decision to canon.
+All methods require user/world scope and ownership verification before graph access.
+GraphRepository is the new service dependency. Bounded graph/list queries and individual relationship lookup need repository work.
+Source-message navigation stays with conversation APIs; billing/account operations stay outside WorldService.
+Inventory only; no methods or stubs implemented and no tests run.
+
+### Pagination wrapper review — 2026-10-31
+
+User adds shared PageResponse<T> with data: T and next_cursor: Option<String>, exported through shared.
+The wrapper is valid: T describes the whole page payload, allowing a vector for lists or nodes/edges for graph data.
+Use PageResponse<Vec<EntityResponse>> for entity pages; keep pagination metadata in the wrapper.
+No changes or runtime tests performed. World graph query/response models remain unimplemented.
+
+### Graph API model scaffolding — 2026-10-31
+
+Added GraphQuery, EntityListQuery, EntitySearchQuery, NeighborQuery, and ConflictListQuery in data/models/graph.rs.
+Queries declare a default limit of 50, valid limits 1–100, bounded cursor/filter strings, and validated SearchQuery text.
+Added GraphResponse, EntityResponse, RelationshipResponse, and ConflictResponse with source references and directed edge IDs.
+PageResponse<T> remains the single pagination wrapper; GraphResponse contains only nodes and edges.
+All-target cargo check passes with warnings. No runtime tests or model calls run for these type definitions.
+Remaining: conversions, service/repository methods, cursor implementation, and HTTP query validation wiring.
+Conflict-resolution requests remain deferred until the decision contract is defined.
+
+### WorldService read-method scaffolding — 2026-10-31
+
+Added eight async stubs: get_graph, list_entities, search_entities, get_entity, get_entity_neighbors, get_relationship, list_conflicts, and get_conflict.
+Signatures use user/world UUIDs, record UUIDs, borrowed query models, and typed paginated responses.
+WorldService now receives GraphRepository; app constructor wiring is updated.
+Bodies contain explicit todo markers and are not connected to HTTP routes.
+All-target cargo check passes with warnings. No runtime tests or stub/model execution run.
+Ownership checks, conversions, queries, pagination, and HTTP wiring remain implementation work.
+Conflict resolution stays deferred until its request contract is defined.
+
+### Graph response conversions — 2026-10-31
+
+Added owned From conversions for Entity, Relationship, and Conflict into their API response types.
+GraphResponse accepts separate entity/relationship lists or existing neighbor query tuples.
+Paginated record lists convert with an explicit next_cursor; the shared PageResponse accepts any payload/cursor pair.
+Conversions move fields and collections without cloning; graph order and input rows are preserved.
+All-target cargo check passes with warnings. No runtime tests or model calls run for these mechanical conversions.
+WorldService read stubs, pagination queries, and HTTP endpoint wiring remain unfinished.
+
+### Graph repository pagination — 2026-10-31
+
+Added GraphRepository::get_graph with stable entity-ID ordering and a last-ID cursor.
+Each page returns 1–100 entities and relationships whose endpoints both belong to that page and world.
+An extra entity probe determines whether another page exists. Empty and final pages return no cursor.
+Added graph-page response conversion and invalid-input error mapping to HTTP 422.
+Added four real Memgraph tests for page boundaries, direction, world scope, and invalid input.
+Tests do not execute: compilation stops at the unfinished WorldService::get_graph return path (E0317).
+Repository-wide formatting check also fails; no broad formatting changes applied.
+Remaining: finish the service call, rerun graph_page_ tests, then add HTTP routes and query validation.
+
+### World graph service review — 2026-10-31
+
+Reviewed the user's completed WorldService::get_graph implementation.
+World ownership is checked before graph access; repository errors propagate and results convert to the response.
+All four graph_page_ tests pass against real Memgraph fixtures (1.61 seconds).
+Suggested borrowing the cursor with as_deref() and using the existing page conversion; service code stays unchanged.
+HTTP routes and query validation wiring remain unfinished. Service ownership behavior has no new dedicated runtime test.
+
+### Entity listing approach — 2026-10-31
+
+Reviewed list_entities and EntityListQuery. Existing get_entities_by_world has no pagination or kind filter.
+Next repository method needs world scope, optional kind filtering, stable ID ordering, and limit-plus-one cursor detection.
+Reuse the graph-page pagination pattern without loading relationships. No implementation changes or tests for this planning step.
+
+### Entity listing repository query — 2026-10-31
+
+Added GraphRepository::list_entities(world_id, limit, cursor, kind).
+Uses world-scoped, parameterized Cypher with optional exact kind filtering and stable ID ordering.
+Validates limits and cursor syntax; fetches one extra entity to detect the next page.
+Returns entities and an optional next cursor for the existing response conversion.
+git diff --check passes for the repository file. Confirmed neo4rs supports optional query parameters.
+No runtime tests run for this method. The service list_entities body still lacks its final return value.
+Remaining: finish the service call, verify filtered pagination against Memgraph, and wire HTTP routes.
+
+### Entity listing review findings — 2026-10-31
+
+The current service call uses an undefined kind variable; it must borrow query.kind.
+The page conversion applies to the full repository tuple, not Vec<Entity> alone.
+Found an error in the newly added repository filter: Entity.kind is a list, so filtering needs membership rather than scalar equality.
+These issues remain unfixed and unverified. Resolve them before moving to search_entities.
+
+### Entity kind filter correction — 2026-10-31
+
+Changed list_entities to use $kind IN e.kind because entity kinds are stored as lists.
+The null filter still allows all kinds. Query values remain parameterized.
+git diff --check passes for the repository file. No runtime tests run for this correction.
+Filtered pagination still needs Memgraph verification; service fixes listed above are not rechecked here.
+
+### Entity listing service follow-up — 2026-10-31
+
+Confirmed list_entities now borrows query.kind and query.cursor and converts the full repository tuple with result.into().
+The previously reported undefined variable and vector-conversion issues are corrected by inspection.
+No compile or runtime checks run for this follow-up. Filtered pagination verification remains pending.
+
+### Reusable text-search limit — 2026-10-31
+
+Added a u32 limit argument to fts_search_entities and bound it as a Cypher parameter.
+The existing agent retrieval caller passes 10. Removed cursor from EntitySearchQuery for top-match search without pagination.
+WorldService::search_entities remains a stub for the next implementation step.
+All-target offline cargo check passes with existing warnings. Changed-file whitespace check passes.
+No runtime tests or external model calls run for this mechanical change.
+
+### Reusable vector-search limit — 2026-10-31
+
+Added a u32 limit argument to vector_search_entities; agent retrieval passes 10.
+Cypher binds the output limit and candidate count. Candidate count stays at least 50 and grows for larger limits.
+All-target offline cargo check and changed-file whitespace check pass, with existing compiler warnings.
+No runtime search tests or external model calls run. World-scoped filtering still occurs after global vector candidate selection.
+
+### Paginated neighbor repository query — 2026-10-31
+
+Added get_entity_neighbors_page with limit and cursor arguments; existing agent neighbor reads stay unchanged.
+Pages by relationship ID so multiple edges between the same entities remain separate records.
+Filters neighbor and relationship world scope, optional relationship type, and kind-list membership.
+Fetches one extra row to detect the next cursor and validates limit/cursor inputs.
+Returns (neighbor/relationship pairs, next_cursor). The limit counts edges rather than unique neighbor nodes.
+Changed-file whitespace check passes. No compilation or runtime checks run for this addition.
+Remaining: wire the world service to the paginated method, convert its response, and verify pagination against Memgraph.
+
+### Neighbor service conversion review — 2026-10-31
+
+Confirmed the service now passes pagination and filters to get_entity_neighbors_page and awaits its result.
+Missing conversion: (Vec<(Entity, Relationship)>, Option<String>) into PageResponse<GraphResponse>.
+The conversion can reuse GraphResponse::from(neighbor pairs) and preserve next_cursor.
+No code changes or compile/runtime checks for this review. Source entity inclusion and duplicate neighbor nodes remain response-design considerations.
+
+### Paginated neighbor response conversion — 2026-10-31
+
+Added From<(Vec<(Entity, Relationship)>, Option<String>)> for PageResponse<GraphResponse>.
+Reuses the existing neighbor-pair conversion and moves the cursor unchanged, without cloning.
+All-target offline cargo check passes with warnings. Changed-file whitespace check passes.
+No runtime tests run. Neighbor query pagination still needs Memgraph verification.
+
+### Remaining world-service read methods — 2026-10-31
+
+Completed get_relationship, list_conflicts, and get_conflict with world ownership checks and typed responses.
+Missing relationships and conflicts return NotFound. Added world-scoped relationship lookup and paginated conflict listing queries.
+Conflict pages sort by ID, validate pagination inputs, and support resolved, unresolved, or both states.
+Existing agent conflict queries retain their behavior. No WorldService todo stubs remain.
+All-target offline cargo check passes with existing warnings; changed-file whitespace check passes.
+Two new live tests pass against isolated Postgres and Memgraph (1.11 seconds).
+Tests cover owner reads, foreign-user rejection, missing records, conflict page boundaries, filters, scope, and invalid pagination.
+The first test run exposed fixture cleanup order; corrected it and reran successfully.
+Remaining: HTTP controllers/routes, query validation wiring, and live verification of entity/neighbor pagination.
+No external model calls run.
+
+### World graph HTTP routes — 2026-10-31
+
+Follow-up: grouped all world-controller imports at the top and merged repeated module imports.
+Controller rustfmt and whitespace checks pass. Import-only change; no runtime tests rerun.
+
+### Application bootstrap extraction — 2026-10-31
+
+Moved repository/service creation, graph constraints, DBOS setup, AppState assembly, and scheduler startup into bootstrap(pool, graph, settings).
+bootstrap returns AppState, JobScheduler, and DBOS so existing shutdown ownership stays intact.
+create_app retains configuration loading, database connections, router construction, and middleware wiring.
+All-target offline cargo check passes with existing warnings. Formatted app.rs; changed-file whitespace check passes.
+No runtime tests or model calls run for this mechanical extraction. Existing product verification tasks remain unchanged.
+
+Wired eight GET routes under /world/{world_id}: graph, entities, entities/search,
+entities/{entity_id}, entities/{entity_id}/neighbors, relationships/{relationship_id},
+conflicts, and conflicts/{conflict_id}.
+Handlers extract the authenticated user, parse UUID paths, and call the world service.
+Added reusable ValidatedQuery extraction; malformed query values and model validation errors return HTTP 422.
+All-target offline cargo check passes with existing warnings. Changed-file whitespace check passes.
+Two live API tests pass through the real router (3.544 seconds; Rust wrapper also passes).
+Tests cover all eight routes on empty worlds, missing records, foreign-user and anonymous rejection,
+and invalid limits, filters, cursors, and search text. No external model calls run.
+Remaining: populated entity/neighbor pagination tests and frontend integration.

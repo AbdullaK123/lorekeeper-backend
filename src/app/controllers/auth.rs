@@ -21,7 +21,7 @@ async fn login(
     session.cycle_id().await
         .map_err(|e| AppError::DownstreamServiceError(e.to_string()))?;
 
-    session.insert("user_id", user.id.clone()).await
+    session.insert("user_id", user.id).await
         .map_err(|e| AppError::DownstreamServiceError(e.to_string()))?;
 
     Ok(Json(user.into()))

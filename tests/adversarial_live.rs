@@ -719,3 +719,156 @@ async fn dbos_research_registration_starts_and_shuts_down() {
 
 #[path = "cases/durable_research.rs"]
 mod durable_research;
+
+#[tokio::test]
+#[ignore = "requires Memgraph; makes no AI calls"]
+async fn graph_page_keeps_edges_within_its_nodes_and_world() {
+    let (repo, world) = graph_fixture().await;
+    let foreign_world = format!("qa-graph-{}", uuid::Uuid::new_v4());
+    let mut a = graph_entity(&world, "Page A");
+    let mut b = graph_entity(&world, "Page B");
+    let mut c = graph_entity(&world, "Page C");
+    a.id = uuid::Uuid::from_u128(1).to_string();
+    b.id = uuid::Uuid::from_u128(2).to_string();
+    c.id = uuid::Uuid::from_u128(3).to_string();
+    let ab = graph_relationship(&world, &a.id, &b.id, "KNOWS");
+    let ba = graph_relationship(&world, &b.id, &a.id, "MENTORS");
+    let bc = graph_relationship(&world, &b.id, &c.id, "KNOWS");
+    repo.update_graph_batch(&world, &[(a.clone(), embedding()), (b.clone(), embedding()), (c.clone(), embedding())],
+        &[ab.clone(), ba.clone(), bc], &[], TEST_SOURCE_MESSAGE_ID).await.unwrap();
+    let mut foreign = graph_entity(&foreign_world, "Foreign page B");
+    foreign.id = b.id.clone();
+    repo.update_graph_batch(&foreign_world, &[(foreign, embedding())], &[], &[], TEST_SOURCE_MESSAGE_ID).await.unwrap();
+    // A malformed foreign connection must not enter a page, even with a matching endpoint ID.
+    let settings = infrastructure::load_settings();
+    let config = infrastructure::load_config();
+    let graph = infrastructure::create_graph(&settings, &config.memgraph).await;
+    graph.run(neo4rs::query("MATCH (a:Entity {world_id: $world, id: $a}), (b:Entity {world_id: $foreign, id: $b}) CREATE (a)-[:LEAKS {world_id: $world}]->(b)")
+        .param("world", world.as_str()).param("foreign", foreign_world.as_str())
+        .param("a", a.id.as_str()).param("b", b.id.as_str())).await.unwrap();
+    let first = repo.get_graph(&world, 2, None).await.unwrap();
+    let second = repo.get_graph(&world, 2, first.2.as_deref()).await.unwrap();
+    repo.delete_graph(&world).await.unwrap();
+    repo.delete_graph(&foreign_world).await.unwrap();
+    assert_eq!(first.0.iter().map(|e| &e.id).collect::<Vec<_>>(), vec![&a.id, &b.id], "Graph pages lose stable ID ordering");
+    assert!(first.0.iter().all(|e| e.world_id == world), "Graph page exposes a foreign entity");
+    assert_eq!(first.1.len(), 2, "Page includes cross-page/foreign edges or drops internal edges");
+    assert!(first.1.iter().any(|r| r.id == ab.id && r.from_id == a.id && r.to_id == b.id), "Graph loses edge direction");
+    assert!(first.1.iter().any(|r| r.id == ba.id), "Reverse-direction edge disappears");
+    assert_eq!(first.2.as_deref(), Some(b.id.as_str()), "Cursor points past an entity that was not returned");
+    assert_eq!(second.0.len(), 1, "Next page repeats or skips an entity");
+    assert_eq!(second.0[0].id, c.id, "Next page does not resume after its cursor");
+    assert!(second.1.is_empty(), "Graph returns an edge with a missing endpoint");
+    assert!(second.2.is_none(), "Last page advertises another page");
+}
+
+#[tokio::test]
+#[ignore = "requires Memgraph; makes no AI calls"]
+async fn graph_page_exact_limit_has_no_next_cursor() {
+    let (repo, world) = graph_fixture().await;
+    let a = graph_entity(&world, "Exactly one");
+    repo.update_graph_batch(&world, &[(a.clone(), embedding())], &[], &[], TEST_SOURCE_MESSAGE_ID).await.unwrap();
+    let page = repo.get_graph(&world, 1, None).await.unwrap();
+    repo.delete_graph(&world).await.unwrap();
+    assert_eq!(page.0.len(), 1, "Exact-size page loses its last record");
+    assert!(page.2.is_none(), "Exact-size final page produces a useless extra request");
+}
+
+#[tokio::test]
+#[ignore = "requires Memgraph; makes no AI calls"]
+async fn graph_page_empty_world_has_no_cursor_or_edges() {
+    let (repo, world) = graph_fixture().await;
+    let page = repo.get_graph(&world, 50, None).await.unwrap();
+    assert!(page.0.is_empty() && page.1.is_empty() && page.2.is_none(), "Empty world returns phantom graph data or a cursor");
+}
+
+#[tokio::test]
+#[ignore = "requires Memgraph; makes no AI calls"]
+async fn graph_page_rejects_invalid_limits_and_cursors() {
+    let (repo, world) = graph_fixture().await;
+    for limit in [0, 101, u32::MAX] {
+        assert!(matches!(repo.get_graph(&world, limit, None).await, Err(infrastructure::InfrastructureError::InvalidInput(_))),
+            "Unbounded graph page limit reaches the database");
+    }
+    for cursor in ["", "not-a-cursor", "' RETURN 1 //"] {
+        assert!(matches!(repo.get_graph(&world, 50, Some(cursor)).await, Err(infrastructure::InfrastructureError::InvalidInput(_))),
+            "Malformed cursors are accepted or reported as server failures");
+    }
+    let error: app::errors::AppError = service::ServiceError::from(
+        infrastructure::InfrastructureError::InvalidInput("Invalid graph cursor".into())).into();
+    use axum::response::IntoResponse;
+    assert_eq!(error.into_response().status(), axum::http::StatusCode::UNPROCESSABLE_ENTITY,
+        "Invalid pagination input becomes an HTTP 500");
+}
+
+#[tokio::test]
+#[ignore = "requires isolated Postgres and live Memgraph; makes no AI calls"]
+async fn world_reads_reject_foreign_users_and_missing_records() {
+    let (pool, worlds, owner, world, _) = world_deletion_fixture().await;
+    let (graph, _) = graph_fixture().await;
+    let scope = world.to_string();
+    let a = graph_entity(&scope, "Reader A");
+    let b = graph_entity(&scope, "Reader B");
+    let edge = graph_relationship(&scope, &a.id, &b.id, "KNOWS");
+    graph.update_graph_batch(&scope, &[(a.clone(), embedding()), (b, embedding())], &[edge.clone()], &[], TEST_SOURCE_MESSAGE_ID).await.unwrap();
+    let conflict = data::Conflict {
+        id: uuid::Uuid::new_v4().to_string(), world_id: scope.clone(), entity_id: a.id,
+        field: "age".into(), existing_value: serde_json::json!(20), new_value: serde_json::json!(30),
+        severity: "hard".into(), explanation: "Conflicting ages".into(),
+        source_conversation: "qa".into(), resolved: false, source_message_ids: vec![],
+    };
+    let saved = graph.upsert_conflict(&conflict, TEST_SOURCE_MESSAGE_ID).await.unwrap().unwrap();
+    let service = service::WorldService::new(worlds, graph.clone());
+    let edge_id = uuid::Uuid::parse_str(&edge.id).unwrap();
+    let conflict_id = uuid::Uuid::parse_str(&saved.id).unwrap();
+    let query = data::ConflictListQuery { limit: 1, cursor: None, resolved: None };
+    let stranger = uuid::Uuid::new_v4();
+    assert!(matches!(service.get_relationship(world, stranger, edge_id).await, Err(service::ServiceError::NotFound(_))), "Foreign user reads a private relationship");
+    assert!(matches!(service.get_conflict(world, stranger, conflict_id).await, Err(service::ServiceError::NotFound(_))), "Foreign user reads private conflict claims");
+    assert!(matches!(service.list_conflicts(world, stranger, &query).await, Err(service::ServiceError::NotFound(_))), "Foreign user lists private conflicts");
+    assert_eq!(service.get_relationship(world, owner, edge_id).await.unwrap().id, edge.id, "Owner cannot read the relationship");
+    assert_eq!(service.get_conflict(world, owner, conflict_id).await.unwrap().id, saved.id, "Owner cannot read the conflict");
+    assert_eq!(service.list_conflicts(world, owner, &query).await.unwrap().data.len(), 1, "Owner loses saved conflicts");
+    let missing = uuid::Uuid::new_v4();
+    assert!(matches!(service.get_relationship(world, owner, missing).await, Err(service::ServiceError::NotFound(_))), "Missing relationship does not return NotFound");
+    assert!(matches!(service.get_conflict(world, owner, missing).await, Err(service::ServiceError::NotFound(_))), "Missing conflict does not return NotFound");
+    graph.delete_graph(&scope).await.unwrap();
+    sqlx::query("DELETE FROM worlds WHERE id = $1").bind(world).execute(&pool).await.unwrap();
+    sqlx::query("DELETE FROM users WHERE id = $1").bind(owner).execute(&pool).await.unwrap();
+}
+
+#[tokio::test]
+#[ignore = "requires Memgraph; makes no AI calls"]
+async fn world_reads_conflict_pages_preserve_filters_and_scope() {
+    let (repo, world) = graph_fixture().await;
+    let entity = save_graph_entity(&repo, &graph_entity(&world, "Conflict pages")).await;
+    for index in 1..=3 {
+        let conflict = data::Conflict {
+            id: uuid::Uuid::from_u128(index).to_string(), world_id: world.clone(), entity_id: entity.id.clone(),
+            field: format!("field-{index}"), existing_value: serde_json::json!("old"), new_value: serde_json::json!("new"),
+            severity: "hard".into(), explanation: "QA conflict".into(), source_conversation: "qa".into(),
+            resolved: false, source_message_ids: vec![],
+        };
+        let mut saved = repo.upsert_conflict(&conflict, TEST_SOURCE_MESSAGE_ID).await.unwrap().unwrap();
+        if index == 2 {
+            saved.resolved = true;
+            repo.update_conflict(&saved.id, &world, &saved).await.unwrap();
+        }
+    }
+    let first = repo.list_conflicts(&world, 1, None, Some(false)).await.unwrap();
+    let second = repo.list_conflicts(&world, 1, first.1.as_deref(), Some(false)).await.unwrap();
+    let resolved = repo.list_conflicts(&world, 10, None, Some(true)).await.unwrap();
+    let all = repo.list_conflicts(&world, 10, None, None).await.unwrap();
+    let foreign = repo.list_conflicts("missing-world", 10, None, None).await.unwrap();
+    let foreign_lookup = repo.get_conflict(&first.0[0].id, "missing-world").await.unwrap();
+    repo.delete_graph(&world).await.unwrap();
+    assert_eq!(first.0[0].id, uuid::Uuid::from_u128(1).to_string(), "First conflict page loses ID order");
+    assert_eq!(second.0[0].id, uuid::Uuid::from_u128(3).to_string(), "Cursor skips unresolved conflicts or includes resolved records");
+    assert!(second.1.is_none(), "Final conflict page advertises another page");
+    assert_eq!(resolved.0.len(), 1, "Resolved filter includes unresolved conflicts");
+    assert!(resolved.0[0].resolved, "Resolved filter returns the wrong claim");
+    assert_eq!(all.0.len(), 3, "Omitted filter excludes stored conflicts");
+    assert!(foreign.0.is_empty() && foreign_lookup.is_none(), "Foreign world receives private conflicts");
+    assert!(matches!(repo.list_conflicts(&world, 0, None, None).await, Err(infrastructure::InfrastructureError::InvalidInput(_))), "Zero limit bypasses pagination validation");
+    assert!(matches!(repo.list_conflicts(&world, 1, Some("invalid"), None).await, Err(infrastructure::InfrastructureError::InvalidInput(_))), "Malformed conflict cursor reaches the database");
+}
