@@ -1,5 +1,15 @@
 # Backend test findings — 2026-10-26
 
+## Exact conflict property targets — 2026-11-01
+
+Seven selected live conflict tests pass in 8.01 seconds against isolated Postgres and Memgraph.
+Three new tests verify the reporting-tool-to-acceptance flow, invalid labels, and foreign entity rejection.
+The flow checks the stored original claim, typed new claim, source IDs, unchanged canon before acceptance,
+and accepted property/source updates without changing unrelated properties.
+Existing source accumulation, unresolved-conflict lookup, and conflict pagination regressions also pass.
+All-target offline cargo check passes with warnings. Dependency compilation precedes tests by 5m 48s.
+No paid model calls or real-model prompt evaluation run.
+
 ## Atomic accept-new transaction — 2026-11-01
 
 Four selected live API tests pass in 11.310 seconds; the Rust app wrapper passes in 14.45 seconds.

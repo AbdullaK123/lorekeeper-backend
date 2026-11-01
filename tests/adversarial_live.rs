@@ -569,7 +569,9 @@ async fn conflict_message_sources_accumulate_without_duplicates() {
     let graph = infrastructure::create_graph(&settings, &config.memgraph).await;
     let repo = data::GraphRepository::new(graph.clone());
     let world = format!("qa-conflict-sources-{}", uuid::Uuid::new_v4());
-    let entity = save_graph_entity(&repo, &graph_entity(&world, "Sealed archive")).await;
+    let mut archive = graph_entity(&world, "Sealed archive");
+    archive.properties.insert("access".into(), serde_json::json!("sealed"));
+    let entity = save_graph_entity(&repo, &archive).await;
     let first = uuid::Uuid::new_v4().to_string();
     let second = uuid::Uuid::new_v4().to_string();
     for source in [&first, &second, &first] {
@@ -579,7 +581,7 @@ async fn conflict_message_sources_accumulate_without_duplicates() {
         };
         tool.call(service::FlagConflictArgs {
             entity_id: entity.id.clone(), field: "access".into(),
-            existing_value: serde_json::json!("sealed"), new_value: serde_json::json!("entered"),
+            new_value: serde_json::json!("entered"),
             severity: "hard".into(), explanation: "Unresolved entry into sealed archive".into(),
         }).await.unwrap();
     }
@@ -882,3 +884,6 @@ async fn world_reads_conflict_pages_preserve_filters_and_scope() {
     assert!(matches!(repo.list_conflicts(&world, 0, None, None).await, Err(infrastructure::InfrastructureError::InvalidInput(_))), "Zero limit bypasses pagination validation");
     assert!(matches!(repo.list_conflicts(&world, 1, Some("invalid"), None).await, Err(infrastructure::InfrastructureError::InvalidInput(_))), "Malformed conflict cursor reaches the database");
 }
+
+#[path = "cases/conflict_targets.rs"]
+mod conflict_targets;

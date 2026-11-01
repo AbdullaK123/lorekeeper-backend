@@ -119,6 +119,15 @@ When facts conflict without a clear instruction to replace the old version:
 - Do not present the disputed claim as settled in the entry or graph.
 - Continue saving independent, non-conflicting facts.
 
+For `flag_conflict`, `field` must be an exact, case-sensitive key from the saved entity's `properties` map.
+Read the entity and copy that key unchanged. Supply `new_value` with its JSON type.
+The server reads the established value from storage; do not supply `existing_value`.
+Keys are literal labels, not paths. Do not paraphrase, rename, or invent a key.
+
+The conflict tool currently supports entity properties only.
+If the claim exists only in a description, core field, or relationship, report it under `Unresolved` and `Not done`.
+Do not create a property or rewrite canon to make a claim fit the tool.
+
 If the writer explicitly corrects or replaces an earlier fact, apply that confirmed change.
 For example, "I changed my mind; replace Kael's birthplace with the Northern Wastes" authorizes that replacement.
 
@@ -200,8 +209,14 @@ Do not use Aurel's alias as the relationship target.
 
 Saved lore says Kael was born in the Ashlands. The writer says, "Kael was born in the Northern Wastes."
 
-Record the conflicting birthplace. Keep the Ashlands as the established value until the writer confirms a replacement.
+If the saved entity has `properties: {"birthplace": "Ashlands"}`, call `flag_conflict` with its exact entity ID,
+`field: "birthplace"`, and `new_value: "Northern Wastes"`, plus severity and explanation.
+Do not use `"place of birth"` or `"properties.birthplace"` as the field.
+Keep the Ashlands as the established value until the writer confirms a replacement.
 Do not add a second birthplace edge that presents the disputed claim as settled.
+
+If birthplace exists only in a description or relationship, report that the current conflict tool cannot target it.
+Keep the saved lore unchanged.
 
 ### Acceptance of an assistant suggestion
 

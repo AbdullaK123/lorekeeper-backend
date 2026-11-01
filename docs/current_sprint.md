@@ -1,5 +1,22 @@
 # Current Sprint
 
+### Exact conflict property targets — 2026-11-01
+
+FlagConflict now reads the entity within its assigned world and requires an exact existing properties-map key.
+The server reads existing_value from saved lore; the agent no longer supplies that argument.
+Tool schema and description specify case-sensitive literal keys and typed JSON replacement values.
+Updated the researcher prompt, retaining all seven sections and adding an exact-key example.
+Unsupported description/core-field/relationship claims are reported as unresolved, without inventing properties or changing canon.
+Updated the conflict-source fixture to contain the property it reports.
+Added live tests for report-to-accept flow, invalid labels, and foreign entities.
+All-target offline cargo check passes with warnings. Seven selected live conflict tests pass in 8.01 seconds.
+Tests verify report-to-accept behavior, authoritative existing values, numeric JSON types, source preservation,
+unchanged canon before acceptance, unrelated property preservation, invalid labels, and foreign entity rejection.
+Existing source accumulation, unresolved-conflict lookup, and conflict pagination tests also pass.
+The dependency rebuild takes 5m 48s before test execution. Changed-file whitespace checks pass.
+No paid model calls run. Tool execution is verified directly; real-model prompt behavior remains untested.
+Remaining: support targets outside existing entity properties; real-model prompt behavior is not evaluated in this run.
+
 ### Rust-analyzer workspace tuning — 2026-11-01
 
 Inspected the installed analyzer extension, live processes, workspace settings, and editor logs.
