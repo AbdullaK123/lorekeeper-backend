@@ -1,5 +1,6 @@
 """Live contract tests. Create fresh users; inject faults only in the QA database."""
 import concurrent.futures
+import contextlib
 import os
 import subprocess
 import time
@@ -74,6 +75,204 @@ class ApiTests(unittest.TestCase):
     def assert_denied(self, response):
         self.assertIn(response.status_code, (403, 404),
                       f"Another user reaches private data: {response.status_code} {response.text[:300]}")
+
+    @contextlib.contextmanager
+    def populated_graph(self):
+        w = world(self.a, "Graph browsing QA")
+        nodes = [str(uuid.UUID(int=i)) for i in (1, 2, 3)]
+        edges = [str(uuid.UUID(int=i)) for i in (11, 12, 13, 14)]
+        try:
+            for index, (node, kind) in enumerate(zip(nodes, ("character", "character", "place"))):
+                cypher(f"CREATE (:Entity {{id: '{node}', world_id: '{w}', name: 'Archive{index}', "
+                       f"name_key: 'archive{index}', aliases: ['Alias{index}'], kind: ['{kind}', 'lore'], "
+                       "description: 'QA graph browsing', properties: '{}', source_message_ids: []})")
+            for edge, source, target, label in zip(
+                    edges, (nodes[0], nodes[1], nodes[0], nodes[0]),
+                    (nodes[1], nodes[0], nodes[2], nodes[1]),
+                    ("KNOWS", "MENTORS", "VISITS", "MENTORS")):
+                cypher(f"MATCH (a:Entity {{world_id: '{w}', id: '{source}'}}), "
+                       f"(b:Entity {{world_id: '{w}', id: '{target}'}}) "
+                       f"CREATE (a)-[:{label} {{id: '{edge}', world_id: '{w}', "
+                       f"from_id: '{source}', to_id: '{target}', rel_type: '{label}', "
+                       "description: 'QA connection', properties: '{}', source_conversation: 'qa', "
+                       "source_message_ids: []}]->(b)")
+            yield w, nodes, edges
+        finally:
+            cypher(f"MATCH (n {{world_id: '{w}'}}) DETACH DELETE n")
+            request(self.a, "DELETE", f"/world/{w}").raise_for_status()
+
+    @contextlib.contextmanager
+    def conflict_resolution_fixture(self):
+        with self.populated_graph() as (w, nodes, _):
+            conflict = str(uuid.uuid4())
+            cypher(f"MATCH (e:Entity {{world_id: '{w}', id: '{nodes[0]}'}}) "
+                   f"CREATE (e)-[:HAS_CONFLICT]->(:Conflict {{id: '{conflict}', world_id: '{w}', "
+                   f"entity_id: '{nodes[0]}', field: 'age', existing_value: '20', new_value: '30', "
+                   "severity: 'hard', explanation: 'Conflicting ages', source_conversation: 'qa', "
+                   "source_message_ids: [], resolved: false})")
+            yield w, nodes[0], conflict
+
+    def test_accept_conflict_updates_only_saved_property(self):
+        with self.conflict_resolution_fixture() as (w, entity, conflict):
+            path = f"/world/{w}/conflicts/{conflict}"
+            cypher(f"MATCH (e:Entity {{world_id: '{w}', id: '{entity}'}}) "
+                   "SET e.properties = '{\"age\":20,\"title\":\"Captain\"}'")
+            payload = {"decision": "accept_new"}
+            self.assert_denied(request(self.b, "POST", path + "/resolve", json=payload))
+            accepted = request(self.a, "POST", path + "/resolve", json=payload)
+            self.assertEqual(accepted.status_code, 200, f"Accept-new fails: {accepted.text[:300]}")
+            self.assertEqual(accepted.json()["decision"], "accept_new", "Accepted claim has the wrong decision")
+            self.assertTrue(accepted.json()["resolved"], "Accepted conflict remains open")
+            result = request(self.a, "GET", f"/world/{w}/entities/{entity}").json()
+            self.assertEqual(result["properties"], {"age": 30, "title": "Captain"},
+                             "Accept-new changes unrelated facts or loses the value type")
+            self.assertEqual(request(self.a, "POST", path + "/resolve", json=payload).json(), accepted.json(),
+                             "Retry changes the accepted claim")
+            rejected = request(self.a, "POST", path + "/resolve", json={"decision": "keep_existing"})
+            self.assertGreaterEqual(rejected.status_code, 400, "A later keep-existing request relabels an accepted claim")
+            self.assertEqual(request(self.a, "GET", path).json()["decision"], "accept_new",
+                             "A different decision overwrites the accepted decision")
+
+    def test_accept_conflict_rolls_back_entity_on_resolution_failure(self):
+        with self.conflict_resolution_fixture() as (w, entity, conflict):
+            label = "QaResolution" + uuid.uuid4().hex
+            cypher(f"MATCH (e:Entity {{world_id: '{w}', id: '{entity}'}}) SET e.properties = '{{\"age\":20}}'")
+            cypher(f"MATCH (c:Conflict {{world_id: '{w}', id: '{conflict}'}}) SET c:{label}")
+            cypher(f"CREATE (:{label} {{world_id: '{w}', decision: 'accept_new'}})")
+            cypher(f"CREATE CONSTRAINT ON (n:{label}) ASSERT n.decision IS UNIQUE")
+            try:
+                response = request(self.a, "POST", f"/world/{w}/conflicts/{conflict}/resolve",
+                                   json={"decision": "accept_new"})
+                self.assertEqual(response.status_code, 500, "Injected resolution failure is hidden")
+                current = request(self.a, "GET", f"/world/{w}/entities/{entity}").json()
+                self.assertEqual(current["properties"], {"age": 20},
+                                 "Entity update commits despite conflict resolution failure")
+                claim = request(self.a, "GET", f"/world/{w}/conflicts/{conflict}").json()
+                self.assertFalse(claim["resolved"], "Failed transaction still resolves the conflict")
+                self.assertIsNone(claim["decision"], "Failed transaction stores a decision")
+            finally:
+                cypher(f"DROP CONSTRAINT ON (n:{label}) ASSERT n.decision IS UNIQUE")
+
+    def test_conflict_resolution_keeps_existing_fact(self):
+        with self.conflict_resolution_fixture() as (w, entity, conflict):
+            path = f"/world/{w}/conflicts/{conflict}"
+            payload = {"decision": "keep_existing"}
+            before = request(self.a, "GET", f"/world/{w}/entities/{entity}").json()
+            self.assert_denied(request(self.b, "POST", path + "/resolve", json=payload))
+            self.assertEqual(request(requests.Session(), "POST", path + "/resolve", json=payload).status_code,
+                             401, "Anonymous caller can resolve a private conflict")
+            still_open = request(self.a, "GET", path).json()
+            self.assertFalse(still_open["resolved"], "Rejected callers still change the conflict")
+            self.assertIsNone(still_open["decision"], "Older conflict unexpectedly has a decision")
+            response = request(self.a, "POST", path + "/resolve", json=payload)
+            self.assertEqual(response.status_code, 200, f"Resolution route fails: {response.text[:300]}")
+            resolved = response.json()
+            self.assertTrue(resolved["resolved"], "Successful resolution leaves the conflict open")
+            self.assertEqual(resolved["decision"], "keep_existing", "Resolution hides the writer's decision")
+            self.assertEqual((resolved["existing_value"], resolved["new_value"]), (20, 30),
+                             "Resolution destroys either disputed claim")
+            reread = request(self.a, "GET", path)
+            self.assertEqual(reread.json(), resolved, "Decision disappears on a later read")
+            retried = request(self.a, "POST", path + "/resolve", json=payload)
+            self.assertEqual(retried.status_code, 200, "Retry fails after successful resolution")
+            self.assertEqual(retried.json(), resolved, "Retry changes the saved decision")
+            different = request(self.a, "POST", path + "/resolve", json={"decision": "accept_new"})
+            self.assertEqual(different.status_code, 409, "Accept-new overwrites an existing keep-existing decision")
+            self.assertEqual(request(self.a, "GET", f"/world/{w}/entities/{entity}").json(), before,
+                             "Keep-existing resolution changes the saved entity")
+            unresolved = self.graph_page(w, "conflicts", resolved="false")
+            self.assertEqual(unresolved["data"], [], "Resolved conflict remains in the unresolved list")
+            closed = self.graph_page(w, "conflicts", resolved="true")
+            self.assertEqual([c["id"] for c in closed["data"]], [conflict], "Resolved conflict is lost from review")
+
+    def test_conflict_resolution_rejects_invalid_requests(self):
+        with self.conflict_resolution_fixture() as (w, _, conflict):
+            path = f"/world/{w}/conflicts/{conflict}/resolve"
+            for payload in ({}, {"decision": "merge"}, {"decision": "keepexisting"},
+                            {"decision": None}, {"decision": 1}):
+                with self.subTest(payload=payload):
+                    response = request(self.a, "POST", path, json=payload)
+                    self.assertEqual(response.status_code, 422,
+                                     "Unsupported or missing decision reaches the resolution write")
+            malformed = request(self.a, "POST", path, data="{", headers={"Content-Type": "application/json"})
+            self.assertEqual(malformed.status_code, 422, "Malformed JSON reaches resolution logic")
+            ambiguous = request(self.a, "POST", path, json={"decision": "accept_new"})
+            self.assertEqual(ambiguous.status_code, 422, "Unmapped conflict field silently creates or changes a property")
+            unchanged = request(self.a, "GET", f"/world/{w}/conflicts/{conflict}").json()
+            self.assertFalse(unchanged["resolved"], "Invalid request resolves the conflict")
+            self.assertIsNone(unchanged["decision"], "Invalid request records a decision")
+            payload = {"decision": "keep_existing"}
+            for url in (f"/world/{w}/conflicts/{uuid.uuid4()}/resolve",
+                        f"/world/{self.w}/conflicts/{conflict}/resolve",
+                        f"/world/{uuid.uuid4()}/conflicts/{conflict}/resolve"):
+                self.assertEqual(request(self.a, "POST", url, json=payload).status_code, 404,
+                                 "Resolution ignores the requested world or missing conflict")
+
+    def graph_page(self, w, suffix, **params):
+        response = request(self.a, "GET", f"/world/{w}/{suffix}", params=params)
+        self.assertEqual(response.status_code, 200,
+                         f"Populated graph request fails: {response.text[:300]}")
+        return response.json()
+
+    def test_populated_entity_pages_preserve_filters(self):
+        with self.populated_graph() as (w, nodes, _):
+            first = self.graph_page(w, "entities", limit=1, kind="character")
+            second = self.graph_page(w, "entities", limit=1, kind="character", cursor=first["next_cursor"])
+            self.assertEqual([e["id"] for e in first["data"] + second["data"]], nodes[:2],
+                             "Filtered pages repeat, skip, or include unrelated entities")
+            self.assertEqual(first["next_cursor"], nodes[0], "Cursor does not identify the returned entity")
+            self.assertIsNone(second["next_cursor"], "Exact-size final page advertises more entities")
+            all_nodes = self.graph_page(w, "entities", limit=3)
+            self.assertEqual([e["id"] for e in all_nodes["data"]], nodes, "Unfiltered listing drops entities")
+            self.assertIsNone(all_nodes["next_cursor"], "Exact-size unfiltered page advertises more entities")
+            empty = self.graph_page(w, "entities", kind="unknown")
+            self.assertEqual(empty["data"], [], "Unknown kind returns unrelated entities")
+            self.assertIsNone(empty["next_cursor"], "Empty filter produces a cursor")
+
+    def test_populated_graph_pages_keep_edge_endpoints(self):
+        with self.populated_graph() as (w, nodes, edges):
+            first = self.graph_page(w, "graph", limit=2)
+            second = self.graph_page(w, "graph", limit=2, cursor=first["next_cursor"])
+            self.assertEqual([n["id"] for n in first["data"]["nodes"]], nodes[:2], "Graph loses stable node order")
+            self.assertEqual({e["id"] for e in first["data"]["edges"]}, {edges[0], edges[1], edges[3]},
+                             "Graph drops internal edges or exposes edges outside its page")
+            for edge in first["data"]["edges"]:
+                self.assertIn(edge["from_id"], nodes[:2], "Edge source is missing from its graph page")
+                self.assertIn(edge["to_id"], nodes[:2], "Edge target is missing from its graph page")
+            self.assertEqual([n["id"] for n in second["data"]["nodes"]], nodes[2:], "Graph cursor skips its next node")
+            self.assertEqual(second["data"]["edges"], [], "Last graph page includes cross-page edges")
+            self.assertIsNone(second["next_cursor"], "Last graph page advertises more nodes")
+
+    def test_populated_neighbor_pages_preserve_parallel_edges(self):
+        with self.populated_graph() as (w, nodes, edges):
+            suffix = f"entities/{nodes[0]}/neighbors"
+            first = self.graph_page(w, suffix, limit=2)
+            second = self.graph_page(w, suffix, limit=2, cursor=first["next_cursor"])
+            self.assertEqual([e["id"] for e in first["data"]["edges"] + second["data"]["edges"]], edges,
+                             "Neighbor pages skip parallel or reverse-direction relationships")
+            self.assertEqual(first["next_cursor"], edges[1], "Neighbor cursor uses a node instead of an edge")
+            self.assertIsNone(second["next_cursor"], "Final neighbor page advertises extra edges")
+            incoming = first["data"]["edges"][1]
+            self.assertEqual((incoming["from_id"], incoming["to_id"]), (nodes[1], nodes[0]),
+                             "Neighbor traversal reverses a saved relationship")
+            filtered = self.graph_page(w, suffix, kind="character", rel_type="MENTORS", limit=10)
+            self.assertEqual([e["id"] for e in filtered["data"]["edges"]], [edges[1], edges[3]],
+                             "Combined relationship and kind filters lose valid neighbors")
+            empty = self.graph_page(w, suffix, kind="place", rel_type="MENTORS")
+            self.assertEqual(empty["data"], {"nodes": [], "edges": []}, "Combined filters return unrelated neighbors")
+
+    def test_populated_graph_record_reads_enforce_world_scope(self):
+        with self.populated_graph() as (w, nodes, edges):
+            for suffix, record_id in ((f"entities/{nodes[0]}", nodes[0]),
+                                      (f"relationships/{edges[0]}", edges[0])):
+                response = request(self.a, "GET", f"/world/{w}/{suffix}")
+                self.assertEqual(response.status_code, 200, "Owner cannot inspect a saved graph record")
+                self.assertEqual(response.json()["id"], record_id, "Lookup returns a different graph record")
+                self.assertEqual(request(self.a, "GET", f"/world/{self.w}/{suffix}").status_code, 404,
+                                 "Record lookup ignores the requested world")
+                self.assert_denied(request(self.b, "GET", f"/world/{w}/{suffix}"))
+            self.assert_denied(request(self.b, "GET", f"/world/{w}/graph"))
+            self.assert_denied(request(self.b, "GET", f"/world/{w}/entities/{nodes[0]}/neighbors"))
 
     def test_world_graph_read_routes_enforce_access(self):
         missing = str(uuid.uuid4())

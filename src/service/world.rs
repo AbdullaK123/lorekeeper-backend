@@ -1,7 +1,8 @@
 use crate::data::{
     ConflictListQuery, ConflictResponse, CreateWorldRequest, EntityListQuery, EntityResponse,
     EntitySearchQuery, GraphQuery, GraphRepository, GraphResponse, NeighborQuery,
-    RelationshipResponse, UpdateWorldRequest, WorldRepository, WorldResponse,
+    RelationshipResponse, ResolveConflictRequest, UpdateWorldRequest, WorldRepository,
+    WorldResponse,
 };
 use crate::service::ServiceError;
 use crate::shared::PageResponse;
@@ -245,6 +246,38 @@ impl WorldService {
         let conflict = self
             .graph_repo
             .get_conflict(&conflict_id.to_string(), &world_id.to_string())
+            .await?
+            .ok_or_else(|| ServiceError::NotFound("Conflict not found".into()))?;
+        Ok(conflict.into())
+    }
+
+    pub async fn resolve_conflict(
+        &self,
+        conflict_id: Uuid,
+        world_id: Uuid,
+        user_id: Uuid,
+    ) -> Result<ConflictResponse, ServiceError> {
+        self.get_by_id(world_id, user_id).await?;
+        let resolved = self
+            .graph_repo
+            .resolve_conflict(&conflict_id.to_string(), &world_id.to_string())
+            .await?;
+        match resolved {
+            Some(conflict) => Ok(conflict.into()),
+            None => Err(ServiceError::NotFound("Conflict not found".to_string())),
+        }
+    }
+
+    pub async fn accept_new(
+        &self,
+        conflict_id: Uuid,
+        world_id: Uuid,
+        user_id: Uuid,
+    ) -> Result<ConflictResponse, ServiceError> {
+        self.get_by_id(world_id, user_id).await?;
+        let conflict = self
+            .graph_repo
+            .accept_conflict(&conflict_id.to_string(), &world_id.to_string())
             .await?
             .ok_or_else(|| ServiceError::NotFound("Conflict not found".into()))?;
         Ok(conflict.into())

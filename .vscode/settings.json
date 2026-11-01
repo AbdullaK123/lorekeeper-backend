@@ -1,16 +1,25 @@
 {
     // Show real compiler errors. Your global settings turn this off.
     "rust-analyzer.checkOnSave": true,
-    // `check` is fast. Switch to "clippy" for extra style hints once WSL has more memory.
+    // Keep compiler diagnostics fast; run clippy separately.
     "rust-analyzer.check.command": "check",
     // Also check tests, so errors in test files show up too.
     "rust-analyzer.check.allTargets": true,
 
     // Own build folder, so rust-analyzer and `cargo` in the terminal stop waiting on each other.
     "rust-analyzer.cargo.targetDir": true,
-    // Fewer parallel jobs = less memory at once. WSL only has ~7.6 GB.
-    "rust-analyzer.cachePriming.numThreads": 2,
-    "rust-analyzer.check.extraArgs": ["--jobs", "4"],
+    // Bound analysis and compiler work on this memory-limited WSL host.
+    "rust-analyzer.numThreads": 2,
+    "rust-analyzer.lru.capacity": 64,
+    // Avoid eagerly computing the entire dependency graph on startup.
+    "rust-analyzer.cachePriming.enable": false,
+    "rust-analyzer.cargo.extraArgs": ["--jobs", "2"],
+    "rust-analyzer.check.extraArgs": ["--jobs", "2"],
+    // Avoid database-dependent diagnostics and damaged incremental build caches.
+    "rust-analyzer.cargo.extraEnv": {
+        "SQLX_OFFLINE": "true",
+        "CARGO_INCREMENTAL": "0"
+    },
 
     // Tidy the code on every save.
     "[rust]": {

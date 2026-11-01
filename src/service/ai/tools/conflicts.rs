@@ -54,6 +54,7 @@ impl PortableTool for FlagConflict {
             severity: args.severity,
             explanation: args.explanation,
             resolved: false,
+            decision: None,
             source_message_ids: Vec::new(),
         };
         let saved = self

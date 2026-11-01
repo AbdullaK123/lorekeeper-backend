@@ -1,5 +1,90 @@
 # Current Sprint
 
+### Rust-analyzer workspace tuning — 2026-11-01
+
+Inspected the installed analyzer extension, live processes, workspace settings, and editor logs.
+Observed about 2.7 GiB RSS initially and editor-loop stalls up to 11 seconds in existing logs.
+Limited analyzer workers and Cargo jobs to two; reduced syntax-tree cache capacity to 64.
+Disabled eager cache priming after observing full warm-up raise RSS to about 3.9 GiB.
+Enabled SQLX_OFFLINE and disabled Cargo incremental builds for analyzer commands only.
+Kept separate analyzer build storage, compiler checks on save, all-target diagnostics, and macro support.
+Validated every analyzer setting name against installed extension 0.3.3097 and confirmed live configuration uptake.
+Restarted only this workspace's analyzer; VS Code relaunched it successfully.
+Offline all-target checks pass both in normal and analyzer build directories, with no compiler errors.
+The warmed analyzer-directory check takes 6.89 seconds. Fresh server logs show no analyzer/flycheck errors at inspection.
+Memory still grows as code loads (sampled 1.3–2.8 GiB after the final restart); these settings do not impose a RAM cap.
+New SQLx queries require refreshed .sqlx metadata for offline editor checks.
+Workspace settings whitespace check passes. No application changes, runtime tests, or paid calls for this task.
+
+### Conflict match diagnostic check — 2026-11-01
+
+Inspected the controller after a reported non-exhaustive-match diagnostic.
+The saved controller handles both AcceptNew and KeepExisting; the enum has exactly these two variants.
+The last all-target check passes. No new compile run or code change for this inspection.
+The reported diagnostic does not match the current saved file; save/reload editor diagnostics before changing the match.
+
+### Atomic accept-new conflict resolution — 2026-11-01
+
+Added GraphRepository::accept_conflict(conflict_id, world_id) with one neo4rs transaction.
+Loads the saved conflict and entity, replaces the exact existing Entity.properties key with the saved JSON value,
+merges conflict message sources into entity sources, and records resolved=true/decision=accept_new before commit.
+Unknown property keys return InvalidInput without resolving the conflict. Core entity fields and free-text targets remain unsupported.
+Retries of accepted conflicts return their stored result; another completed decision cannot be overwritten.
+Wired the existing accept_new service stub and endpoint enum branch to the repository method.
+Four selected live API tests pass in 11.310 seconds; the real Rust app wrapper passes in 14.45 seconds.
+Tests prove rollback of the entity update when a temporary unique constraint rejects the later conflict write.
+They also cover typed values, unrelated property preservation, access, retries, conflicting decisions, invalid targets,
+and the existing keep-existing/request-validation behavior. Temporary constraint and fixtures are removed.
+Test compilation, Python syntax, and whitespace checks pass. No paid model calls run.
+All-target offline cargo check also passes with warnings after disabling incremental caching to bypass a missing-cache-file error.
+Remaining: define exact targets for core fields and ambiguous legacy conflicts; frontend conflict review remains unfinished.
+
+### Accept-new variant review — 2026-11-01
+
+Reviewed the user's AcceptNew variant with entity_id, field, and string new_value fields.
+These values already exist on the saved conflict; accepting its stored claim should not require resubmitting them.
+Stored claims use serde_json::Value, so string-only request values would lose type information.
+Exact field targeting remains undefined: the conflict tool currently accepts a free-form field string.
+No implementation changes or tests for this review. Accept-new application remains unimplemented.
+
+### Keep-existing conflict HTTP endpoint — 2026-11-01
+
+Added POST /world/{world_id}/conflicts/{conflict_id}/resolve with authenticated user and UUID path extraction.
+Validated JSON accepts decision=keep_existing; missing, malformed, or unsupported decisions return 422.
+The handler calls the existing ownership-checked service and returns ConflictResponse.
+Made the request decision field public and added Validate for the existing JSON extractor.
+Two live API tests pass in 19.679 seconds; the real Rust app wrapper passes in 22.75 seconds.
+Checks cover persisted decisions, preserved claims/entity data, retries, resolved/unresolved lists,
+foreign-user and anonymous rejection, invalid requests, missing records, and wrong-world access.
+Python syntax, formatting, and changed-file whitespace checks pass. Test compilation passes with warnings.
+No paid model calls run. Other conflict decisions and frontend review workflows remain unfinished.
+
+### Conflict decision models — 2026-11-01
+
+Added optional typed decision fields to Conflict and ConflictResponse and their conversion.
+Database reads return None for older conflicts without a decision and deserialize stored decisions when present.
+ConflictDecision now derives Debug and uses snake_case serialization, matching keep_existing in Memgraph.
+New-conflict constructors and test fixtures initialize decision to None.
+All-target offline cargo check passes with warnings. Changed-file whitespace check passes.
+Two live world-read tests pass in 1.04 seconds against isolated Postgres and Memgraph.
+Extended service checks verify legacy reads, foreign-user resolution rejection, response serialization,
+persisted decision reads, unchanged existing claims, and repeated keep-existing resolution.
+Remaining: expose conflict resolution through an HTTP route. No external model calls run.
+
+### Keep-existing conflict query — 2026-11-01
+
+Service follow-up: reviewed the completed resolve_conflict method. It checks world ownership before mutation,
+returns the converted conflict on success, and maps a missing conflict to NotFound.
+Review by inspection only; no compilation or runtime tests for this follow-up.
+The method currently supports keep-existing only and does not consume ResolveConflictRequest.
+
+Added GraphRepository::resolve_conflict(id, world_id), returning the updated conflict or None.
+The single world-scoped query sets resolved=true and decision=keep_existing without changing the saved fact.
+Live Memgraph query checks verify scope, persisted decision, unchanged fact, retries, and missing-ID behavior.
+The initial check needed corrected parsing of mgconsole string output; temporary fixtures are removed.
+Repository whitespace check passes. Full Rust compilation is not run: the user is still writing the service return path.
+Remaining: finish service wiring and expose the stored decision in conflict read/response models.
+
 ## Sprint 1: Replace Graph Extraction with the Researcher
 
 **Status:** Complete for the agreed pipeline scope.
@@ -721,6 +806,29 @@ bootstrap returns AppState, JobScheduler, and DBOS so existing shutdown ownershi
 create_app retains configuration loading, database connections, router construction, and middleware wiring.
 All-target offline cargo check passes with existing warnings. Formatted app.rs; changed-file whitespace check passes.
 No runtime tests or model calls run for this mechanical extraction. Existing product verification tasks remain unchanged.
+
+### Remaining scope review after route wiring — 2026-10-31
+
+Reviewed the current sprint, project plan, and all epic titles against completed graph API work.
+Next concrete verification task: populated entity/neighbor page tests, including filters, direction, cursor boundaries, and multiple edges.
+Product work still includes graph client integration, conflict decisions, source navigation, visible research state,
+long-conversation behavior, reasoning/gap workflows, and the account/billing/usage/email/operations/privacy/support epics.
+The project plan's 72-test baseline is historical and does not represent the latest targeted runs.
+No new implementation or tests for this scope review. No epic is marked complete by route wiring alone.
+
+### Populated graph API verification — 2026-10-31
+
+Added four live API tests with fresh synthetic worlds, entities, and directed relationships.
+Verified entity kind filters, ID ordering, exact-size final pages, empty filters, and cursor continuation.
+Verified graph pages include internal edges only and preserve all returned edge endpoints.
+Verified neighbor pagination retains parallel/reverse edges, edge direction, and combined kind/type filters.
+Verified populated entity/relationship reads respect world scope and reject foreign users.
+All four new tests plus the two existing route/access/validation tests pass: six API tests in 19.408 seconds.
+The Rust application wrapper also passes in 22.13 seconds, exercising bootstrap and shutdown.
+Python syntax and changed-file whitespace checks pass. No external model calls run.
+Fixture cleanup removes graph records and deletes the temporary worlds through the API.
+The previously pending populated entity/neighbor pagination checks are now verified for these fixtures.
+Remaining product work includes frontend integration, conflict decisions, source navigation, and research-status workflows.
 
 Wired eight GET routes under /world/{world_id}: graph, entities, entities/search,
 entities/{entity_id}, entities/{entity_id}/neighbors, relationships/{relationship_id},

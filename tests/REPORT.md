@@ -1,5 +1,28 @@
 # Backend test findings — 2026-10-26
 
+## Atomic accept-new transaction — 2026-11-01
+
+Four selected live API tests pass in 11.310 seconds; the Rust app wrapper passes in 14.45 seconds.
+A temporary fixture-only unique constraint forces the conflict write to fail after the entity update.
+The entity property and conflict state both remain unchanged, verifying transaction rollback.
+Other checks cover successful JSON property replacement, preserved unrelated properties, retries,
+decision overwrite rejection, invalid targets, ownership, and keep-existing regression behavior.
+Only exact existing Entity.properties keys are supported. No paid model calls or full-suite run.
+
+## Conflict resolution HTTP endpoint — 2026-11-01
+
+Two selected live API tests pass in 19.679 seconds; the Rust API wrapper passes in 22.75 seconds.
+Verified keep_existing resolution, persisted response/read values, retries, preserved claims and entity data,
+resolved-list filtering, access checks, malformed requests, unsupported decisions, and missing/wrong-world records.
+Runs use isolated Postgres and Memgraph fixtures. No paid model calls or full-suite run.
+
+## Conflict decision reads — 2026-11-01
+
+All-target offline cargo check passes with warnings. Two live world-read tests pass in 1.04 seconds.
+Extended service checks cover older records without decisions, persisted keep_existing decisions,
+response serialization, foreign-user resolution rejection, unchanged existing claims, and retries.
+These tests use isolated Postgres and Memgraph. No external model calls run.
+
 ## Latest full run — 2026-10-27
 
 | Suite | Pass | Fail | Skipped |
@@ -341,3 +364,13 @@ All eight graph/entity/relationship/conflict routes enforce owner access on empt
 Foreign users and anonymous callers are rejected. Invalid query values return HTTP 422.
 The Python checks take 3.544 seconds; the Rust API wrapper passes in 4.81 seconds.
 Populated entity/neighbor pagination remains untested in this run. No paid model calls run.
+
+## Populated graph browsing — 2026-10-31
+
+Four new populated-world API tests pass, together with both existing graph-route checks.
+Six Python tests pass in 19.408 seconds; the real Rust app wrapper passes in 22.13 seconds.
+Coverage includes kind filters, entity/relationship cursor boundaries, exact-size final pages,
+graph edge endpoints, parallel edges, reverse direction, combined neighbor filters, and world-scoped record reads.
+Existing route tests recheck anonymous/foreign-user denial and invalid query responses.
+Synthetic graph fixtures are removed and temporary worlds are deleted through the API.
+Python syntax and whitespace checks pass. No paid model calls or full-suite run.

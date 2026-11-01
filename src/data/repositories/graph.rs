@@ -1,4 +1,6 @@
-use crate::data::models::{Conflict, Conversation, Entity, FromRow, Relationship, name_key};
+use crate::data::models::{
+    Conflict, ConflictDecision, Conversation, Entity, FromRow, Relationship, name_key,
+};
 use crate::infrastructure::InfrastructureError;
 use neo4rs::{Graph, Query, query};
 
@@ -609,6 +611,98 @@ impl GraphRepository {
             )
             .await?;
         Ok(result.next().await?.is_some())
+    }
+
+    /// Keep the current fact and record the writer's decision in the same query.
+    /// Callers must check world ownership before resolving a conflict.
+    pub async fn resolve_conflict(
+        &self,
+        id: &str,
+        world_id: &str,
+    ) -> Result<Option<Conflict>, InfrastructureError> {
+        self.fetch_one::<Conflict>(
+            query(
+                "MATCH (c:Conflict {id: $id, world_id: $world_id})
+                 WHERE c.decision IS NULL OR c.decision = 'keep_existing'
+                 SET c.resolved = true, c.decision = 'keep_existing'
+                 RETURN c",
+            )
+            .param("id", id)
+            .param("world_id", world_id),
+            "c",
+        )
+        .await
+    }
+
+    /// Accept a saved claim targeting an exact, existing Entity.properties key.
+    /// Entity changes and conflict resolution commit together. Callers check ownership.
+    pub async fn accept_conflict(
+        &self,
+        conflict_id: &str,
+        world_id: &str,
+    ) -> Result<Option<Conflict>, InfrastructureError> {
+        let mut txn = self.graph.start_txn().await?;
+        let result: Result<Option<Conflict>, InfrastructureError> = async {
+            let mut rows = txn.execute(
+                query("MATCH (c:Conflict {id: $id, world_id: $world_id}), (e:Entity {world_id: $world_id})
+                       WHERE e.id = c.entity_id RETURN c, e")
+                    .param("id", conflict_id)
+                    .param("world_id", world_id),
+            ).await?;
+            let Some(row) = rows.next(&mut txn).await? else {
+                return Ok(None);
+            };
+            let conflict = Conflict::from_row(&row, "c")?;
+            if conflict.resolved {
+                return if matches!(conflict.decision, Some(ConflictDecision::AcceptNew)) {
+                    Ok(Some(conflict))
+                } else {
+                    Err(InfrastructureError::Conflict("Conflict already resolved with another decision".into()))
+                };
+            }
+            let mut entity = Entity::from_row(&row, "e")?;
+            let property = entity.properties.get_mut(&conflict.field).ok_or_else(|| {
+                InfrastructureError::InvalidInput(
+                    "Accept-new requires an exact, existing entity property key".into(),
+                )
+            })?;
+            *property = conflict.new_value.clone();
+            for source in &conflict.source_message_ids {
+                if !entity.source_message_ids.contains(source) {
+                    entity.source_message_ids.push(source.clone());
+                }
+            }
+            let properties = serde_json::to_string(&entity.properties)
+                .map_err(|error| InfrastructureError::InternalError(error.to_string()))?;
+            txn.run(
+                query("MATCH (e:Entity {id: $id, world_id: $world_id})
+                       SET e.properties = $properties, e.source_message_ids = $sources")
+                    .param("id", entity.id)
+                    .param("world_id", world_id)
+                    .param("properties", properties)
+                    .param("sources", entity.source_message_ids),
+            ).await?;
+            let mut saved = txn.execute(
+                query("MATCH (c:Conflict {id: $id, world_id: $world_id})
+                       SET c.resolved = true, c.decision = 'accept_new' RETURN c")
+                    .param("id", conflict_id)
+                    .param("world_id", world_id),
+            ).await?;
+            let row = saved.next(&mut txn).await?.ok_or_else(|| {
+                InfrastructureError::InternalError("Conflict disappeared during resolution".into())
+            })?;
+            Ok(Some(Conflict::from_row(&row, "c")?))
+        }.await;
+        match result {
+            Ok(conflict) => {
+                txn.commit().await?;
+                Ok(conflict)
+            }
+            Err(error) => {
+                txn.rollback().await?;
+                Err(error)
+            }
+        }
     }
 
     pub async fn get_conflict(

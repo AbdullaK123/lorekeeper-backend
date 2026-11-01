@@ -1,10 +1,10 @@
 use crate::app::errors::AppError;
 use crate::app::{AppState, UserId, ValidatedJson, ValidatedQuery};
 use crate::data::{
-    ConflictListQuery, ConflictResponse, ConversationItemsResponse, ConversationResponse,
-    CreateConversationRequest, CreateWorldRequest, EntityListQuery, EntityResponse,
-    EntitySearchQuery, GraphQuery, GraphResponse, NeighborQuery, RelationshipResponse,
-    UpdateWorldRequest, WorldResponse,
+    ConflictDecision, ConflictListQuery, ConflictResponse, ConversationItemsResponse,
+    ConversationResponse, CreateConversationRequest, CreateWorldRequest, EntityListQuery,
+    EntityResponse, EntitySearchQuery, GraphQuery, GraphResponse, NeighborQuery,
+    RelationshipResponse, ResolveConflictRequest, UpdateWorldRequest, WorldResponse,
 };
 use crate::shared::PageResponse;
 use axum::extract::{Path, State};
@@ -175,6 +175,27 @@ async fn get_conflict(
     ))
 }
 
+async fn resolve_conflict(
+    State(ctx): State<AppState>,
+    UserId(user_id): UserId,
+    Path((world_id, conflict_id)): Path<(Uuid, Uuid)>,
+    ValidatedJson(payload): ValidatedJson<ResolveConflictRequest>,
+) -> Result<Json<ConflictResponse>, AppError> {
+    let conflict = match payload.decision {
+        ConflictDecision::AcceptNew => {
+            ctx.world_service
+                .accept_new(conflict_id, world_id, user_id)
+                .await?
+        }
+        ConflictDecision::KeepExisting => {
+            ctx.world_service
+                .resolve_conflict(conflict_id, world_id, user_id)
+                .await?
+        }
+    };
+    Ok(Json(conflict))
+}
+
 async fn get_entity_neighbors(
     State(ctx): State<AppState>,
     UserId(user_id): UserId,
@@ -204,6 +225,10 @@ pub fn create_world_controller() -> Router<AppState> {
         )
         .route("/{world_id}/conflicts", get(list_conflicts))
         .route("/{world_id}/conflicts/{conflict_id}", get(get_conflict))
+        .route(
+            "/{world_id}/conflicts/{conflict_id}/resolve",
+            post(resolve_conflict),
+        )
         .route("/", post(create_world).get(get_worlds))
         .route(
             "/{world_id}",

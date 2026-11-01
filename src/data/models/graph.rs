@@ -119,6 +119,8 @@ pub struct Conflict {
     pub source_conversation: String,
     pub resolved: bool,
     #[serde(default)]
+    pub decision: Option<ConflictDecision>,
+    #[serde(default)]
     pub source_message_ids: Vec<String>,
 }
 
@@ -137,6 +139,11 @@ impl FromRow for Conflict {
             explanation: node.get("explanation")?,
             source_conversation: node.get("source_conversation")?,
             resolved: node.get("resolved")?,
+            decision: if node.keys().contains(&"decision") {
+                node.get("decision")?
+            } else {
+                None
+            },
             source_message_ids: if node.keys().contains(&"source_message_ids") {
                 node.get("source_message_ids")?
             } else {
@@ -246,6 +253,7 @@ pub struct ConflictResponse {
     pub source_conversation: String,
     pub source_message_ids: Vec<String>,
     pub resolved: bool,
+    pub decision: Option<ConflictDecision>,
 }
 
 impl From<Entity> for EntityResponse {
@@ -290,6 +298,7 @@ impl From<Conflict> for ConflictResponse {
             source_conversation: conflict.source_conversation,
             source_message_ids: conflict.source_message_ids,
             resolved: conflict.resolved,
+            decision: conflict.decision,
         }
     }
 }
@@ -361,4 +370,16 @@ impl From<(Vec<Entity>, Vec<Relationship>, Option<String>)> for PageResponse<Gra
             next_cursor,
         }
     }
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum ConflictDecision {
+    KeepExisting,
+    AcceptNew,
+}
+
+#[derive(Clone, Serialize, Deserialize, Validate)]
+pub struct ResolveConflictRequest {
+    pub decision: ConflictDecision,
 }

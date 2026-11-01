@@ -237,7 +237,7 @@ async fn graph_delete_entity_removes_attached_conflicts() {
         id: uuid::Uuid::new_v4().to_string(), world_id: world.clone(), entity_id: entity.id.clone(),
         field: "description".into(), existing_value: serde_json::json!("old"),
         new_value: serde_json::json!("new"), severity: "hard".into(), explanation: "QA".into(),
-        source_conversation: "qa".into(), resolved: false, source_message_ids: vec![],
+        source_conversation: "qa".into(), resolved: false, decision: None, source_message_ids: vec![],
     };
     repo.upsert_conflict(&conflict, TEST_SOURCE_MESSAGE_ID).await.unwrap().expect("QA conflict must exist");
     assert!(repo.delete_entity(&entity.id, &world).await.unwrap(), "Existing entities cannot be deleted");
@@ -612,7 +612,7 @@ async fn conflict_lookup_excludes_resolved_and_foreign_records() {
             id: uuid::Uuid::new_v4().to_string(), world_id: scope.clone(), entity_id: entity.id.clone(),
             field: field.into(), existing_value: serde_json::json!("daylight"), new_value: serde_json::json!("midnight"),
             severity: "hard".into(), explanation: "Unresolved access hours".into(),
-            source_conversation: "qa".into(), resolved: false, source_message_ids: vec![],
+            source_conversation: "qa".into(), resolved: false, decision: None, source_message_ids: vec![],
         };
         let mut saved = repo.upsert_conflict(&conflict, TEST_SOURCE_MESSAGE_ID).await.unwrap().unwrap();
         if resolved {
@@ -815,7 +815,7 @@ async fn world_reads_reject_foreign_users_and_missing_records() {
         id: uuid::Uuid::new_v4().to_string(), world_id: scope.clone(), entity_id: a.id,
         field: "age".into(), existing_value: serde_json::json!(20), new_value: serde_json::json!(30),
         severity: "hard".into(), explanation: "Conflicting ages".into(),
-        source_conversation: "qa".into(), resolved: false, source_message_ids: vec![],
+        source_conversation: "qa".into(), resolved: false, decision: None, source_message_ids: vec![],
     };
     let saved = graph.upsert_conflict(&conflict, TEST_SOURCE_MESSAGE_ID).await.unwrap().unwrap();
     let service = service::WorldService::new(worlds, graph.clone());
@@ -829,6 +829,16 @@ async fn world_reads_reject_foreign_users_and_missing_records() {
     assert_eq!(service.get_relationship(world, owner, edge_id).await.unwrap().id, edge.id, "Owner cannot read the relationship");
     assert_eq!(service.get_conflict(world, owner, conflict_id).await.unwrap().id, saved.id, "Owner cannot read the conflict");
     assert_eq!(service.list_conflicts(world, owner, &query).await.unwrap().data.len(), 1, "Owner loses saved conflicts");
+    assert!(service.get_conflict(world, owner, conflict_id).await.unwrap().decision.is_none(), "Legacy conflicts without a decision must remain readable");
+    assert!(matches!(service.resolve_conflict(conflict_id, world, stranger).await, Err(service::ServiceError::NotFound(_))), "Foreign user resolves another writer's conflict");
+    let resolved = service.resolve_conflict(conflict_id, world, owner).await.unwrap();
+    assert!(resolved.resolved, "Resolution response still reports an open conflict");
+    assert_eq!(serde_json::to_value(&resolved).unwrap()["decision"], "keep_existing", "Response hides or misnames the writer's stored decision");
+    let reread = service.get_conflict(world, owner, conflict_id).await.unwrap();
+    assert!(matches!(reread.decision, Some(data::ConflictDecision::KeepExisting)), "A later read loses the saved decision");
+    assert_eq!(reread.existing_value, conflict.existing_value, "Keeping existing lore changes its saved claim");
+    let retried = service.resolve_conflict(conflict_id, world, owner).await.unwrap();
+    assert!(matches!(retried.decision, Some(data::ConflictDecision::KeepExisting)), "Retry loses the existing decision");
     let missing = uuid::Uuid::new_v4();
     assert!(matches!(service.get_relationship(world, owner, missing).await, Err(service::ServiceError::NotFound(_))), "Missing relationship does not return NotFound");
     assert!(matches!(service.get_conflict(world, owner, missing).await, Err(service::ServiceError::NotFound(_))), "Missing conflict does not return NotFound");
@@ -847,7 +857,7 @@ async fn world_reads_conflict_pages_preserve_filters_and_scope() {
             id: uuid::Uuid::from_u128(index).to_string(), world_id: world.clone(), entity_id: entity.id.clone(),
             field: format!("field-{index}"), existing_value: serde_json::json!("old"), new_value: serde_json::json!("new"),
             severity: "hard".into(), explanation: "QA conflict".into(), source_conversation: "qa".into(),
-            resolved: false, source_message_ids: vec![],
+            resolved: false, decision: None, source_message_ids: vec![],
         };
         let mut saved = repo.upsert_conflict(&conflict, TEST_SOURCE_MESSAGE_ID).await.unwrap().unwrap();
         if index == 2 {
