@@ -137,3 +137,27 @@ impl From<Vec<ConversationRow>> for ConversationItemsResponse {
         }
     }
 }
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct MessageResponse {
+    pub world_id: Uuid,
+    pub conversation_id: Uuid,
+    pub message: Message,
+}
+
+#[derive(Debug, FromRow)]
+pub struct MessageRow {
+    pub world_id: Uuid,
+    pub conversation_id: Uuid,
+    pub message: Json<Message>,
+}
+
+impl From<MessageRow> for MessageResponse {
+    fn from(row: MessageRow) -> Self {
+        Self {
+            world_id: row.world_id,
+            conversation_id: row.conversation_id,
+            message: row.message.0,
+        }
+    }
+}

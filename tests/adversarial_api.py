@@ -1,6 +1,7 @@
 """Live contract tests. Create fresh users; inject faults only in the QA database."""
 import concurrent.futures
 import contextlib
+import json
 import os
 import subprocess
 import time
@@ -75,6 +76,59 @@ class ApiTests(unittest.TestCase):
     def assert_denied(self, response):
         self.assertIn(response.status_code, (403, 404),
                       f"Another user reaches private data: {response.status_code} {response.text[:300]}")
+
+    @contextlib.contextmanager
+    def source_messages_fixture(self):
+        w = world(self.a, "Source navigation QA")
+        c = conversation(self.a, w)
+        stamp = "2026-11-01T00:00:00Z"
+        messages = [
+            {"role": "user", "id": str(uuid.uuid4()), "content": "The harbor closes at dusk.", "created_at": stamp},
+            {"role": "assistant", "id": str(uuid.uuid4()), "content": None,
+             "tool_calls": [{"id": "qa-call", "name": "search_world", "arguments": {"query": "harbor"}}],
+             "created_at": stamp},
+            {"role": "tool", "id": str(uuid.uuid4()), "tool_call_id": "qa-call",
+             "content": "Saved harbor lore", "created_at": stamp},
+        ]
+        try:
+            body = json.dumps(messages).replace("'", "''")
+            sql(f"UPDATE conversations SET messages = '{body}'::jsonb WHERE id = '{c}'")
+            yield w, c, messages
+        finally:
+            request(self.a, "DELETE", f"/world/{w}").raise_for_status()
+
+    def test_source_message_route_preserves_all_roles(self):
+        with self.source_messages_fixture() as (w, c, messages):
+            for message in messages:
+                with self.subTest(role=message["role"]):
+                    response = request(self.a, "GET", f"/world/{w}/messages/{message['id']}")
+                    self.assertEqual(response.status_code, 200, f"Saved source is unreachable: {response.text[:300]}")
+                    self.assertEqual(response.json(), {"world_id": w, "conversation_id": c, "message": message},
+                                     "Source navigation changes message data or points to the wrong conversation")
+
+    def test_source_message_route_enforces_scope(self):
+        with self.source_messages_fixture() as (w, _, messages):
+            message = messages[0]["id"]
+            path = f"/world/{w}/messages/{message}"
+            self.assertEqual(request(self.b, "GET", path).status_code, 404,
+                             "Foreign user reads private source text")
+            self.assertEqual(request(requests.Session(), "GET", path).status_code, 401,
+                             "Anonymous caller reads private source text")
+            for url in (f"/world/{self.w}/messages/{message}",
+                        f"/world/{uuid.uuid4()}/messages/{message}",
+                        f"/world/{w}/messages/{uuid.uuid4()}"):
+                self.assertEqual(request(self.a, "GET", url).status_code, 404,
+                                 "Wrong world or missing message returns private source data")
+            for url in (f"/world/{w}/messages/not-a-uuid", f"/world/not-a-uuid/messages/{message}"):
+                self.assertEqual(request(self.a, "GET", url).status_code, 400,
+                                 "Invalid source identifier bypasses UUID path parsing")
+
+    def test_source_message_route_returns_404_after_deletion(self):
+        with self.source_messages_fixture() as (w, c, messages):
+            deleted = request(self.a, "DELETE", f"/conversation/{c}")
+            self.assertEqual(deleted.status_code, 204, "Conversation fixture cannot be deleted")
+            response = request(self.a, "GET", f"/world/{w}/messages/{messages[0]['id']}")
+            self.assertEqual(response.status_code, 404, "Deleted conversation still exposes source messages")
 
     @contextlib.contextmanager
     def populated_graph(self):

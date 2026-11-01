@@ -1,5 +1,52 @@
 # Current Sprint
 
+### Source-message HTTP endpoint — 2026-11-01
+
+Wired GET /world/{world_id}/messages/{message_id} in the world controller.
+The handler extracts the authenticated user and UUID path values, then delegates to ConversationService::get_message.
+Returns the existing MessageResponse with world ID, conversation ID, and the complete saved message.
+Added live API checks for all stored roles, world/user scope, anonymous rejection, missing IDs,
+malformed UUIDs, and source lookup after conversation deletion.
+Python syntax and changed-file whitespace checks pass. All three live API tests pass in 7.828 seconds.
+The Rust application wrapper passes in 10.62 seconds; test compilation passes with warnings and SQLX_OFFLINE=true.
+Temporary source worlds are deleted through the API. No paid model calls run.
+Remaining product work: connect source links in client views and answers.
+
+### Source-message service review — 2026-11-01
+
+Reviewed ConversationService::get_message and its repository query by inspection.
+The service forwards world/user/message IDs, converts the typed row, and returns NotFound when absent.
+The repository scopes the lookup by both conversation world and user; the service preserves that scope.
+No compilation or runtime checks for this review. The HTTP message-lookup route remains unwired.
+
+### Typed source-message repository lookup — 2026-11-01
+
+Completed ConversationRepository::get_message with query_as!, a typed Json<Message> result, and fetch_optional.
+Returns Option<MessageRow> with world_id and conversation_id alongside the saved message.
+Added MessageRow and its owned conversion into the existing MessageResponse.
+The query retains both world and user scope; messages remain in the existing JSONB storage.
+Refreshed SQLx offline metadata through cargo sqlx prepare --workspace with all-target checks; preparation passes with warnings.
+Added three live Postgres tests for role/content/tool preservation, wrong scope/missing IDs, and deleted conversations.
+All three live Postgres tests pass in 1.13 seconds with SQLX_OFFLINE=true during compilation.
+Changed-file whitespace checks pass. No paid model calls run.
+Service and HTTP source-lookup wiring remain unfinished.
+
+### Source-message lookup design — 2026-11-01
+
+Follow-up inspection: MessageResponse exists and repository get_message contains the proposed scoped JSONB query.
+The method remains incomplete: it returns Option<Message>, lacks a typed row/result return, and awaits fetch() instead of fetch_optional().
+Next step is MessageRow plus query_as! with a typed Json<Message> column, returning Option<MessageRow>.
+No compilation or runtime tests for this inspection.
+
+Reviewed current Message variants, JSONB conversation storage, conversation repository, and HTTP routes.
+Proposed GET /world/{world_id}/messages/{message_id}, with UUID path inputs and no JSON body.
+Response reuses Message and adds conversation_id/world_id; message already contains its own ID, role, content, and timestamp.
+ConversationRepository lookup scopes conversations to world/user and selects the matching JSONB message by ID.
+ConversationService checks world ownership, loads the scoped message, and maps missing/deleted records to NotFound.
+The world controller delegates to ConversationService. No schema migration is needed for this first lookup.
+Tests planned: every stored role, owner access, wrong-world and foreign-user rejection, missing/deleted messages.
+Design only; no implementation or verification run for this step.
+
 ### Exact conflict property targets — 2026-11-01
 
 FlagConflict now reads the entity within its assigned world and requires an exact existing properties-map key.

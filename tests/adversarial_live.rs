@@ -887,3 +887,6 @@ async fn world_reads_conflict_pages_preserve_filters_and_scope() {
 
 #[path = "cases/conflict_targets.rs"]
 mod conflict_targets;
+
+#[path = "cases/message_lookup.rs"]
+mod message_lookup;

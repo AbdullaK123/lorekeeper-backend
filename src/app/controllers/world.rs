@@ -3,7 +3,7 @@ use crate::app::{AppState, UserId, ValidatedJson, ValidatedQuery};
 use crate::data::{
     ConflictDecision, ConflictListQuery, ConflictResponse, ConversationItemsResponse,
     ConversationResponse, CreateConversationRequest, CreateWorldRequest, EntityListQuery,
-    EntityResponse, EntitySearchQuery, GraphQuery, GraphResponse, NeighborQuery,
+    EntityResponse, EntitySearchQuery, GraphQuery, GraphResponse, MessageResponse, NeighborQuery,
     RelationshipResponse, ResolveConflictRequest, UpdateWorldRequest, WorldResponse,
 };
 use crate::shared::PageResponse;
@@ -209,8 +209,21 @@ async fn get_entity_neighbors(
     ))
 }
 
+async fn get_message(
+    State(ctx): State<AppState>,
+    UserId(user_id): UserId,
+    Path((world_id, message_id)): Path<(Uuid, Uuid)>,
+) -> Result<Json<MessageResponse>, AppError> {
+    Ok(Json(
+        ctx.conversation_service
+            .get_message(world_id, user_id, message_id)
+            .await?,
+    ))
+}
+
 pub fn create_world_controller() -> Router<AppState> {
     Router::new()
+        .route("/{world_id}/messages/{message_id}", get(get_message))
         .route("/{world_id}/graph", get(get_graph))
         .route("/{world_id}/entities", get(list_entities))
         .route("/{world_id}/entities/search", get(search_entities))

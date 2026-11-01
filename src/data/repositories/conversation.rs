@@ -1,4 +1,5 @@
-use crate::data::ConversationRow;
+use crate::app::world;
+use crate::data::{ConversationRow, MessageRow};
 use crate::data::Message;
 use crate::infrastructure::InfrastructureError;
 use serde_json;
@@ -164,5 +165,32 @@ impl ConversationRepository {
         .execute(&self.pool)
         .await?;
         Ok(result.rows_affected() > 0)
+    }
+
+    pub async fn get_message(
+        &self,
+        world_id: Uuid,
+        user_id: Uuid,
+        message_id: &str,
+    ) -> Result<Option<MessageRow>, InfrastructureError> {
+        let result = sqlx::query_as!(
+            MessageRow,
+            r#"
+            SELECT c.world_id, c.id AS conversation_id,
+                   item.message AS "message!: Json<Message>"
+            FROM conversations c
+            CROSS JOIN LATERAL jsonb_array_elements(c.messages) AS item(message)
+            WHERE c.world_id = $1
+            AND c.user_id = $2
+            AND item.message->>'id' = $3::text
+            LIMIT 1
+            "#,
+            world_id,
+            user_id,
+            message_id
+        )
+        .fetch_optional(&self.pool)
+        .await?;
+        Ok(result)
     }
 }

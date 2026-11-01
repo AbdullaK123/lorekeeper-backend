@@ -1,6 +1,6 @@
 use crate::data::{
     ConversationItemsResponse, ConversationRepository, ConversationResponse, Message,
-    WorldRepository,
+    MessageResponse, WorldRepository,
 };
 use crate::service::{
     ChatAgentFactory, ResearchInput, RetrievalService, ServiceError, format_hits,
@@ -192,5 +192,21 @@ impl ConversationService {
     pub async fn delete_conversation(&self, id: Uuid, user_id: Uuid) -> Result<bool, ServiceError> {
         let result = self.conversation_repo.delete(id, user_id).await?;
         Ok(result)
+    }
+
+    pub async fn get_message(
+        &self,
+        world_id: Uuid,
+        user_id: Uuid,
+        message_id: Uuid,
+    ) -> Result<MessageResponse, ServiceError> {
+        let result = self
+            .conversation_repo
+            .get_message(world_id, user_id, &message_id.to_string())
+            .await?;
+        match result {
+            Some(row) => Ok(row.into()),
+            None => Err(ServiceError::NotFound("Message not found".to_string())),
+        }
     }
 }

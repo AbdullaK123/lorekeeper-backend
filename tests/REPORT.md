@@ -1,5 +1,22 @@
 # Backend test findings — 2026-10-26
 
+## Source-message HTTP endpoint — 2026-11-01
+
+Three selected live API tests pass in 7.828 seconds; the real Rust application wrapper passes in 10.62 seconds.
+Verified the endpoint preserves user, assistant, and tool messages, including complete tool-call data.
+Verified foreign-user/anonymous denial, wrong-world and missing-source responses, malformed UUID rejection,
+and 404 after conversation deletion. Synthetic worlds are removed through the API.
+Test compilation with offline SQLx metadata, Python syntax, and whitespace checks pass.
+No paid model calls or full-suite run.
+
+## Source-message repository lookup — 2026-11-01
+
+Three selected live Postgres tests pass in 1.13 seconds.
+Verified user, assistant, and tool message round trips, including timestamps, absent assistant text, and tool-call details.
+Verified world/user scope, missing IDs, and lookup after conversation deletion.
+SQLx all-target preparation passes and offline metadata is refreshed. Tests compile with SQLX_OFFLINE=true.
+No model calls or HTTP source-lookup tests run; service/route implementation remains pending.
+
 ## Exact conflict property targets — 2026-11-01
 
 Seven selected live conflict tests pass in 8.01 seconds against isolated Postgres and Memgraph.
