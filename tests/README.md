@@ -1,6 +1,7 @@
 # Adversarial backend tests
 
-These tests expose current bugs. Failures are expected until those bugs are fixed.
+These tests check current contracts and expose remaining defects.
+Updated: 2026-11-02. See [findings](REPORT.md) for the latest scoped results.
 The tests do not change production code.
 
 Run the pure tests:
@@ -24,14 +25,16 @@ source .env
 set +a
 export DATABASE_URL=postgresql://dev:password@localhost:5433/lorekeeper_adversarial
 sqlx migrate run
-SQLX_OFFLINE=true cargo test --offline --test adversarial_live -- --ignored --nocapture --test-threads=1
+SQLX_OFFLINE=true CARGO_INCREMENTAL=0 cargo test --offline --jobs 2 --test adversarial_live -- --ignored --nocapture --test-threads=1 --skip adversarial_live_api --skip researcher_smoke_conversation
 ```
 
-The test server uses port 18000. The existing server stays running.
+The command above selects free native database tests. Run the HTTP wrapper separately below.
+The HTTP test server uses port 18000. The existing server can stay running on port 8000.
 The harness refuses another database name. Fault injection uses a trigger scoped to one test conversation.
 The trigger is removed in `finally`. Do not interrupt the test during fault injection.
 AI tests make paid external requests. Set `QA_AI=1` only when those calls are authorized.
-The default command skips them. Run live tests serially because the scheduler processes the shared QA job table.
+The command above excludes the paid smoke harness and the HTTP wrapper.
+The HTTP wrapper skips its paid Python cases unless QA_AI=1. Run live tests serially because the scheduler processes the shared QA job table.
 Set `QA_TESTS` to space-separated Python test names to select specific checks.
 For example, use `QA_TESTS='ApiTests.test_foreign_world_conversation_creation_is_denied'`.
 Graph tests use the local Memgraph database with fresh world IDs.
@@ -52,10 +55,14 @@ Coverage includes:
 - Real graph retries, world isolation, injection attempts, deletion, and structured data.
 - Scheduled world cleanup, including conflicts, job removal, and preservation of another world.
 - Retry after a rejected job removal, without blocking other cleanup jobs.
-- Ambiguous aliases, lost search context, and ranking with duplicate rows.
+- Contextual identity scenarios, preserved search context, and the known duplicate-row ranking assertion.
+- Populated graph/entity/neighbor pagination, filters, direction, and source-message access.
+- Atomic supported conflict decisions and exact existing-property targets.
+- Research status mappings, current-attempt tracking, retry access, concurrent requests, and saved-history reconstruction.
+- Log capture for private request data and internal error payloads.
 
 The duplicate-row ranking test checks defensive behavior. Current graph queries may return only unique rows.
-Blank-name rejection is a proposed API contract. Confirm that rule before fixing its test.
+Typed request validation now rejects blank world names with HTTP 422.
 
 DBOS engine restart coverage is described below. OS-level crash recovery, client disconnect handling, and concurrent chat ordering remain unverified.
 
@@ -95,3 +102,37 @@ They exercise the production research driver with two tool calls per model turn.
 One test shuts down DBOS during a model request, recreates it, and verifies recorded operations do not execute again.
 This simulates engine restart in one process; it does not prove graph-write/checkpoint atomicity.
 The broader non-AI run must use `--skip researcher_smoke_conversation` to exclude the explicitly paid smoke harness.
+
+
+## Research status and retry HTTP tests
+
+After exporting the isolated QA environment and applying migrations:
+
+```sh
+unset QA_AI QA_SMOKE_PAID
+export QA_TESTS='ApiTests.test_research_retry_rejects_ineligible_states ApiTests.test_research_retry_enforces_access_and_user_role ApiTests.test_research_retry_resumes_exhausted_workflow ApiTests.test_research_retry_tracks_fork_and_blocks_duplicate ApiTests.test_research_status_maps_all_stored_states ApiTests.test_research_status_missing_workflow_is_not_submitted ApiTests.test_research_status_enforces_message_access ApiTests.test_research_status_lookup_error_is_not_not_submitted ApiTests.test_research_status_deleted_message_is_not_exposed'
+SQLX_OFFLINE=true CARGO_INCREMENTAL=0 cargo test --offline --jobs 2 --test adversarial_live adversarial_live_api -- --ignored --test-threads=1
+```
+
+These cases use synthetic DBOS records with isolated application versions. They make no model calls.
+The lookup-error case uses an unknown stored DBOS status, not a database outage.
+The scripted submission case in cases/research_retry.rs runs a real local DBOS workflow without a model.
+Fork tests verify current-attempt polling and two concurrent retries producing one accepted fork.
+
+## Latest recorded results — 2026-11-02
+
+- All-target offline compilation passes with warnings.
+- 43 free native integration tests pass in 9.17 seconds.
+- Nine selected retry/status HTTP tests pass in 9.475 seconds; wrapper takes 10.93 seconds.
+- The all-target unit run stops with 11 passes and one duplicate-row retrieval-ranking failure.
+
+These results come from separate commands. They are not a full-suite pass total.
+The paid smoke artifacts are historical evidence; this verification makes no paid provider calls.
+
+
+## Nested conversation routes
+
+Conversation read/delete and chat use /world/{world_id}/conversations/{conversation_id} and its /messages child.
+The former /conversation/{id} routes are removed. Test clients and smoke runners pass the world ID explicitly.
+The nested-conversation test checks a valid read/delete and rejects wrong or missing parent worlds.
+Wrong-world chat checks stop before model retrieval, so these checks incur no model charges.

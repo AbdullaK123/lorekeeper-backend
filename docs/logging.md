@@ -24,7 +24,10 @@ This enables application detail without enabling debug output for every dependen
 
 HTTP events contain the method, route template, status, and response latency.
 Service spans carry available user, world, conversation, message, and record IDs.
-Research events use the source message ID as the workflow ID.
+Original research jobs use the source message ID as the workflow ID.
+A forked retry has another workflow ID. The retry submission event records that active ID.
+The research_workflow registration span still labels its source message ID as workflow_id; it is not the fork ID.
+Use the source message ID plus the retry mapping to connect attempts.
 Chat events distinguish message storage from workflow submission.
 Model and tool events inside DBOS steps describe executed calls; checkpoint replay skips those calls.
 Graph events distinguish committed batches from rollback attempts.
@@ -42,3 +45,12 @@ Library logging remains controlled by its own tracing targets and the chosen `RU
 
 The capture tests in `tests/cases/logging.rs` verify request and error-log privacy.
 Database, workflow replay, and selected HTTP regressions verify behavior after instrumentation.
+
+
+## Retry diagnostics — 2026-11-02
+
+The conversation.retry_research span includes world, user, and source message IDs.
+A successful retry submission logs its active workflow ID.
+Status reads follow the saved current-attempt mapping.
+A submission error can occur after chat storage; the source message remains readable.
+Logging and capture tests do not prove cross-database commit atomicity.

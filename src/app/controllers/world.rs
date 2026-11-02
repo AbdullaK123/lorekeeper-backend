@@ -1,3 +1,4 @@
+use crate::app::create_conversation_controller;
 use crate::app::errors::AppError;
 use crate::app::{AppState, UserId, ValidatedJson, ValidatedQuery};
 use crate::data::{
@@ -248,6 +249,10 @@ async fn retry_research(
 
 pub fn create_world_controller() -> Router<AppState> {
     Router::new()
+        .nest(
+            "/{world_id}/conversations",
+            create_conversation_controller(),
+        )
         .route(
             "/{world_id}/messages/{message_id}/research/retry",
             post(retry_research),

@@ -106,11 +106,11 @@ print(f"SMOKE world={world} conversation={conversation}", flush=True)
 (OUT / "report.json").write_text(json.dumps(report, indent=2))
 for index, message in enumerate(TURNS, 1):
     started = time.monotonic()
-    response = call("POST", f"/conversation/{conversation}/messages", json={"content": message})
+    response = call("POST", f"/world/{world}/conversations/{conversation}/messages", json={"content": message})
     response.encoding = "utf-8"
     raw = response.text
     (OUT / f"turn-{index:02}.sse").write_text(raw)
-    saved = call("GET", f"/conversation/{conversation}").json()
+    saved = call("GET", f"/world/{world}/conversations/{conversation}").json()
     # Store actual saved messages rather than reconstructing them from stream deltas.
     (OUT / "conversation.json").write_text(json.dumps(saved, indent=2))
     research = wait_research(conversation, index) if "finalResponse" in raw else {"not_started": True}

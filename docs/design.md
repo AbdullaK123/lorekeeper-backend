@@ -1,13 +1,14 @@
 # Lorekeeper — Design and Development Lifecycle
 
-Updated: 2026-10-27.
+Updated: 2026-11-02.
 
 The [user stories](user_stories.md) define the required outcomes.
 The [product vision](product_soul.md) defines the audience and purpose.
 The [project plan](project_plan.md) tracks current work and delivery order.
 This document describes each epic through six lifecycle stages.
 
-Design choices below describe intended behavior. They do not claim completed implementation.
+The status notes below distinguish built backend behavior from intended product behavior.
+Build lists remain lifecycle checklists; they do not mean every listed item is unfinished.
 Open decisions require answers before the affected build work starts.
 
 Each epic follows this cycle:
@@ -23,6 +24,8 @@ The project reaches delivery completion when all epics pass acceptance in the de
 Maintenance continues after delivery completion.
 
 ## Epic 1: Keep My Worlds Private and Separate
+
+**Implementation status — 2026-11-02:** Backend account/world CRUD, ownership checks, typed validation, duplicate-signup handling, and cleanup jobs exist. Client acceptance and deletion/research coordination remain.
 
 ### 1. Define
 
@@ -45,7 +48,7 @@ A deleted world stays deleted after retries and restarts.
 - Coordinate research writes with deletion so stale jobs cannot restore removed lore.
 - Show account errors, world validation errors, and pending deletion in the client.
 
-**Open decisions:** World-name rules, deletion status visibility, and coordination between research and deletion.
+**Open decisions:** Deletion status visibility and coordination between research and deletion. Typed world-name validation is implemented.
 
 ### 3. Build
 
@@ -77,6 +80,8 @@ A deleted world stays deleted after retries and restarts.
 
 ## Epic 2: Build My World Through Conversation
 
+**Implementation status — 2026-11-02:** Streamed chat, saved UUID messages, conversation reads, and scoped source-message lookup exist. Client navigation, long-history behavior, and concurrent/interrupted turn rules remain.
+
 ### 1. Define
 
 **Stories:** US-005, US-006, US-007, US-008, US-009.
@@ -97,7 +102,7 @@ Interruptions and retries do not silently lose or duplicate accepted turns.
 - Set note-size and history limits with clear client feedback.
 - Define context selection for conversations larger than the model's input limit.
 
-**Open decisions:** Concurrent turn ordering, interrupted reply storage, retry identity, and supported note size.
+**Open decisions:** Concurrent turn ordering, interrupted reply storage, and supported note/history limits. Research retry identity uses a current-workflow mapping.
 
 ### 3. Build
 
@@ -129,6 +134,8 @@ Interruptions and retries do not silently lose or duplicate accepted turns.
 
 ## Epic 3: Remember My Lore Without Manual Filing
 
+**Implementation status — 2026-11-02:** The old extraction pipeline is removed. The researcher uses scoped tools and DBOS checkpoints. Research status/retry APIs and current-attempt tracking are built and tested. Separate commits and deletion coordination remain limits; see [retry details](research_retry.md).
+
 ### 1. Define
 
 **Stories:** US-010, US-011, US-012, US-013, US-014, US-015.
@@ -151,7 +158,7 @@ Unclear references never silently attach facts to the wrong subject.
 - Prevent competing jobs from overwriting newer accepted facts.
 - Surface pending work, failures, and unresolved references to the writer.
 
-**Open decisions:** Tool schemas, same-name entity storage, source representation, write coordination, and recovery after partial graph writes.
+**Open decisions:** Broader same-name identity acceptance, write coordination, and recovery after partial graph writes. Current tools use exact IDs and message source references.
 
 ### 3. Build
 
@@ -186,6 +193,8 @@ Unclear references never silently attach facts to the wrong subject.
 
 ## Epic 4: Find Answers I Can Trust
 
+**Implementation status — 2026-11-02:** Retrieval includes entity/neighbor properties and relationship conditions. Source IDs persist on lore and resolve through an authorized message endpoint. Claim-level answer citations and product navigation remain.
+
 ### 1. Define
 
 **Stories:** US-016, US-017, US-018, US-019, US-020.
@@ -206,7 +215,7 @@ The system does not present missing or disputed information as established fact.
 - Distinguish established facts, disputed claims, and unknown details.
 - Show when relevant background research remains pending.
 
-**Open decisions:** Fact-level source storage, citation format, retrieval limits, and source behavior after conversation deletion.
+**Open decisions:** Claim-level citation format, product retrieval limits, and deleted-source presentation. Source lookup returns 404 after conversation deletion.
 
 ### 3. Build
 
@@ -240,6 +249,8 @@ The system does not present missing or disputed information as established fact.
 
 ## Epic 5: Keep Control of Canon and Contradictions
 
+**Implementation status — 2026-11-02:** Conflict list/detail and decision APIs exist. Accept-new atomically updates an existing entity property and resolves the conflict. Broader field/relationship targets and client review remain.
+
 ### 1. Define
 
 **Stories:** US-021, US-022, US-023, US-024, US-025, US-026, US-027.
@@ -260,7 +271,7 @@ The decision updates affected lore without erasing unrelated facts.
 - Preserve the writer's decision and its source for later review.
 - Reject stale resolution requests that would overwrite a newer decision.
 
-**Open decisions:** Resolution actions, clarification state, and consistent updates across affected facts and relationships.
+**Open decisions:** Broader conflict targets, clarification state, and consistent updates across affected relationships. Existing property targets support keep-existing and accept-new.
 
 ### 3. Build
 
@@ -294,6 +305,8 @@ The decision updates affected lore without erasing unrelated facts.
 
 ## Epic 6: See How My World Connects
 
+**Implementation status — 2026-11-02:** Scoped graph, entity, neighbor, relationship, and text-search APIs are built. Populated pagination and isolation tests pass. The product visualization and source-navigation client remain.
+
 ### 1. Define
 
 **Stories:** US-028, US-029, US-030, US-031.
@@ -313,7 +326,7 @@ Large worlds remain usable without loading the entire graph at once.
 - Provide clear empty, loading, failure, and partial-result states.
 - Provide an accessible list view alongside the visual graph.
 
-**Open decisions:** Graph response contracts, navigation limits, layout approach, and supported world size.
+**Open decisions:** Product layout, navigation limits, and supported world size. Backend response and pagination contracts are implemented.
 
 ### 3. Build
 
@@ -345,6 +358,8 @@ Large worlds remain usable without loading the entire graph at once.
 - Preserve accessible navigation as visual behavior changes.
 
 ## Epic 7: Reason About Consequences Within My World
+
+**Implementation status — 2026-11-02:** Search and graph context exist. Dedicated consequence reasoning and deployed acceptance remain unfinished.
 
 ### 1. Define
 
@@ -399,6 +414,8 @@ Exploration changes no canon without explicit writer confirmation.
 
 ## Epic 8: Find Gaps and Choose What to Develop
 
+**Implementation status — 2026-11-02:** Search foundations exist. Dedicated gap-review workflows and persistent open-question views remain unfinished.
+
 ### 1. Define
 
 **Stories:** US-036, US-037, US-038, US-039.
@@ -452,6 +469,8 @@ Open questions remain available across sessions.
 
 ## Epic 9: Access and Recover My Account
 
+**Implementation status — 2026-11-02:** Basic password signup, login, logout, and sessions exist. OAuth, email verification, recovery, and account linking remain unfinished.
+
 ### 1. Define
 
 **Stories:** US-040, US-041, US-042, US-043, US-044.
@@ -490,6 +509,8 @@ Writers need secure sign-in and recovery without losing their existing worlds.
 - Rotate credentials and review provider changes.
 
 ## Epic 10: Manage My Subscription and Payments
+
+**Implementation status — 2026-11-02:** Stripe billing is required scope. No completed billing workflow is recorded.
 
 ### 1. Define
 
@@ -531,6 +552,8 @@ Writers need clear pricing, secure payment, and predictable subscription changes
 
 ## Epic 11: Understand and Control Usage
 
+**Implementation status — 2026-11-02:** Usage accounting and spending controls are required scope. No completed allowance workflow is recorded.
+
 ### 1. Define
 
 **Stories:** US-051, US-052, US-053, US-054.
@@ -570,6 +593,8 @@ Writers need predictable allowances. Operators need enforceable spending control
 - Alert on abnormal spending, stuck reservations, and repeated limit bypass attempts.
 
 ## Epic 12: Receive Essential Service Emails
+
+**Implementation status — 2026-11-02:** Service email delivery is required scope. No completed delivery workflow is recorded.
 
 ### 1. Define
 
@@ -611,6 +636,8 @@ Essential emails help writers access accounts and understand service changes.
 
 ## Epic 13: Operate and Recover the Service
 
+**Implementation status — 2026-11-02:** Structured logging, cleanup retries, DBOS replay tests, and Ctrl+C shutdown exist. Hosting, alerts, backup recovery, SIGTERM behavior, and deployment acceptance remain.
+
 ### 1. Define
 
 **Stories:** US-058, US-059, US-060, US-061.
@@ -649,6 +676,8 @@ The deployed service needs observable failures, tested recovery, and safe releas
 - Track capacity, dependency updates, and incidents with corrective actions.
 
 ## Epic 14: Protect and Manage My Data
+
+**Implementation status — 2026-11-02:** Owner checks and world/conversation deletion exist. Exports, full account deletion, retention rules, and deletion during active research remain.
 
 ### 1. Define
 
@@ -690,6 +719,8 @@ Writers own private worlds and need clear data controls and processing disclosur
 - Keep policies current as providers and storage behavior change.
 
 ## Epic 15: Get Help and Resolve Service Problems
+
+**Implementation status — 2026-11-02:** Research retry APIs exist for writers. Support intake, restricted operator tools, and audit workflows remain unfinished.
 
 ### 1. Define
 

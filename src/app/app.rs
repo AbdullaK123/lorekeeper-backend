@@ -1,6 +1,4 @@
-use crate::app::{
-    create_auth_controller, create_conversation_controller, create_world_controller, setup_dbos,
-};
+use crate::app::{create_auth_controller, create_world_controller, setup_dbos};
 use crate::cron_worker::start_scheduler;
 use crate::data::{ConversationRepository, GraphRepository, UserRepository, WorldRepository};
 use crate::infrastructure::{
@@ -41,7 +39,6 @@ pub async fn create_app() -> (Router, JobScheduler, DBOS) {
         .route("/health", get(|| async { "ok" }))
         .nest("/auth", create_auth_controller())
         .nest("/world", create_world_controller())
-        .nest("/conversation", create_conversation_controller())
         .layer(settings.trace_layer())
         .layer(settings.session_layer(pool.clone()).await)
         .layer(settings.cors_layer())

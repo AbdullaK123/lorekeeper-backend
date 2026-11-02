@@ -80,13 +80,14 @@ impl ConversationService {
     #[tracing::instrument(name = "conversation.get_conversation", level = "info", skip_all, fields(id = %id, user_id = %user_id))]
     pub async fn get_conversation(
         &self,
+        world_id: Uuid,
         id: Uuid,
         user_id: Uuid,
     ) -> Result<ConversationResponse, ServiceError> {
         let result = self.conversation_repo.get_by_id(id, user_id).await?;
         match result {
-            Some(conversation) => Ok(conversation.into()),
-            None => Err(ServiceError::NotFound("Conversation not found".to_string())),
+            Some(conversation) if conversation.world_id == world_id => Ok(conversation.into()),
+            _ => Err(ServiceError::NotFound("Conversation not found".to_string())),
         }
     }
 
@@ -111,6 +112,7 @@ impl ConversationService {
     #[tracing::instrument(name = "conversation.chat_turn", level = "info", skip_all, fields(id = %id, user_id = %user_id))]
     pub async fn chat_turn(
         &self,
+        world_id: Uuid,
         id: Uuid,
         user_id: Uuid,
         content: String,
@@ -118,7 +120,7 @@ impl ConversationService {
         impl Stream<Item = Result<MultiTurnStreamItem, ServiceError>> + Send + 'static + use<>,
         ServiceError,
     > {
-        let conversation = self.get_conversation(id, user_id).await?;
+        let conversation = self.get_conversation(world_id, id, user_id).await?;
         let world_id = conversation.world_id;
         let world_key = world_id.to_string();
         let hits = self
@@ -207,7 +209,13 @@ impl ConversationService {
 
     // delete a convo
     #[tracing::instrument(name = "conversation.delete_conversation", level = "info", skip_all, fields(id = %id, user_id = %user_id))]
-    pub async fn delete_conversation(&self, id: Uuid, user_id: Uuid) -> Result<bool, ServiceError> {
+    pub async fn delete_conversation(
+        &self,
+        world_id: Uuid,
+        id: Uuid,
+        user_id: Uuid,
+    ) -> Result<bool, ServiceError> {
+        self.get_conversation(world_id, id, user_id).await?;
         let result = self.conversation_repo.delete(id, user_id).await?;
         Ok(result)
     }

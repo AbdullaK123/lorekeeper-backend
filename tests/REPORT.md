@@ -1,4 +1,27 @@
-# Backend test findings — 2026-10-26
+# Backend test findings
+
+Latest recorded verification: 2026-11-02. Earlier dated entries remain historical evidence.
+See [test instructions](README.md) for reproducible free and paid runs.
+
+## Playground API workbench — 2026-11-02
+
+Six local client tests pass through npm test in playground.
+Coverage checks query/path encoding, neighbor cursors, missing record IDs, mutation payloads,
+HTTP failure inspection, session credentials, and nested conversation requests.
+The playground production build and socket-free server-render check pass.
+An earlier Vite render probe reports a sandbox WebSocket bind error; the bundled render avoids sockets.
+No real browser walkthrough, new live-backend run, or paid model calls for this UI change.
+UI state changes for selection races and aborted streams remain unverified in a browser.
+
+## Nested conversation routes — 2026-11-02
+
+The controller mounts under /world/{world_id}/conversations. The former /conversation mount is removed.
+Thirteen selected HTTP tests pass in 5.179 seconds; wrapper takes 7.16 seconds.
+The new populated fixture verifies correct-world read/delete and wrong or missing parent-world rejection
+for reads, deletes, and chat. Rejected requests leave stored messages unchanged.
+Existing anonymous, foreign-user, validation, deletion, source, and research-status checks also pass.
+All-target compilation and playground production build pass. No paid model calls run.
+Successful paid chat and browser interaction are not rerun for this route change.
 
 ## Research retry feature — 2026-11-02
 

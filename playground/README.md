@@ -1,59 +1,88 @@
 # Lorekeeper Playground
 
-A small React app for testing the backend by hand. It's a dev tool, not the product UI.
+Updated: 2026-11-02.
 
-Use it to chat with a world the way a writer would, then check what the backend did: which tools the AI called, what lore the search returned, and how long the reply took.
+A development UI for testing the backend contracts used by the product UI.
+It is a testing tool, not the finished writer-facing product.
+It uses real sessions, worlds, conversations, and backend responses.
 
-## What it does
+## Run
 
-- **Log in or sign up** against the real backend.
-- **Create worlds and conversations** in the left sidebar.
-- **Chat** in the middle. Replies stream in word by word, and **Stop** cancels a reply.
-- **Inspect** the last reply in the right panel:
-  - **Trace:** time to first word, total time, tokens, cost, each `search_world` call with its query and result, and the model's reasoning.
-  - **Raw:** every SSE event exactly as the backend sent it.
+Start the backend on port 8000 using the [root setup](../README.md#local-setup).
 
-## Run it
-
-The backend must be running on port 8000 (see the [main README](../README.md)).
-
-```bash
+```sh
 cd playground
-npm install      # first time only
+npm install
 npm run dev
 ```
 
 Open http://localhost:5173.
+Vite forwards /api requests to the backend and preserves session cookies.
 
-## How it talks to the backend
+## Chat and stream
 
-The Vite dev server forwards every `/api/*` request to `http://localhost:8000` and strips the `/api` prefix (see [vite.config.js](vite.config.js)). The browser sees one origin, so the session cookie works with no CORS setup.
+1. Log in or create a test account.
+2. Create or select a world, then a conversation.
+3. Send a message and inspect the streamed reply.
+4. Use Stop to abort the browser's stream request.
 
-`EventSource`, the browser's built-in SSE client, only supports `GET`. Chat turns are `POST`, so [src/api.js](src/api.js) reads the SSE stream by hand with `fetch`.
+The inspector shows stream events, model text, tools, timing, and reported usage.
+Saved chat bubbles display message IDs for source and research checks.
+Conversation requests use /world/{world_id}/conversations/{conversation_id}.
+Changing the world or conversation aborts the active browser stream and ignores late results from that selection.
+Stopping the browser stream does not guarantee cancellation of backend research.
 
-## Check what extraction saved
+## API workbench
 
-Extraction runs in the background a few seconds after each reply. To see the graph, query Memgraph directly:
+Select a world, then open API workbench. A conversation is optional for graph reads.
 
-```bash
-docker exec -it lorekeeper-backend-app-memgraph-1 mgconsole
+| Request | Controls |
+| --- | --- |
+| Graph and entity pages | Limit, cursor, and entity-kind filter where supported |
+| Entity search | Text query and limit |
+| Entity details and connections | Entity ID, edge pagination, kind/type filters |
+| Relationship details | Relationship ID |
+| Conflict list/details | Resolved filter, pagination, conflict ID |
+| Conflict decisions | Keep existing or accept new |
+| Source message | Message ID or saved-message selector |
+| Research status and retry | Message ID or saved-message selector |
+| Saved conversation and deletion | Conversation ID, defaulting to the selected conversation |
+
+The workbench shows the exact request path, HTTP status, duration, and JSON response.
+HTTP errors remain visible as responses. Network errors appear separately.
+Use next cursor copies the server's cursor into the form; send another request to load that page.
+Empty pages remain visible as JSON. No polling or mutation starts automatically.
+
+Conflict decisions change stored canon where supported. Conversation deletion removes saved history.
+An accepted retry can make paid model and embedding calls.
+See the [retry contract](../docs/research_retry.md) for eligibility and recovery limits.
+
+## Suggested test flow
+
+1. Chat about a synthetic world, then copy the saved user message ID.
+2. Check Research status until it completes or fails.
+3. Inspect entity search and graph pages after completion.
+4. Open entity, relationship, conflict, and source IDs from the returned JSON.
+5. Resolve a supported conflict and read it back.
+6. Test retry on an eligible failed or not-submitted source; inspect the returned status.
+7. Inspect raw errors for invalid IDs, filters, and ineligible retries.
+
+Graph exploration currently uses JSON rather than an interactive graph layout.
+Claim-level citations, the full product conflict/recovery flow, world editing, and billing screens remain outside this tool.
+The stream inspector hides below 1100px. World/conversation selection remains available on small screens.
+
+## Verify changes
+
+```sh
+npm test
+npm run build
 ```
 
-```cypher
-// all entities in a world
-MATCH (e:Entity {world_id: "<world id>"}) RETURN e.name, e.kind, e.description;
+Six client tests cover request encoding, filters/cursors, missing IDs, conflict/retry request bodies,
+HTTP error inspection, session credentials, and nested conversation URLs.
+They replace fetch locally and make no backend or model calls.
+A server-render check verifies the workbench's initial controls; it is not a browser interaction test.
+The production build checks JSX and module integration.
 
-// all connections
-MATCH (a:Entity {world_id: "<world id>"})-[r]->(b) RETURN a.name, type(r), b.name;
-
-// open conflicts
-MATCH (e:Entity {world_id: "<world id>"})-[:HAS_CONFLICT]->(c:Conflict) RETURN e.name, c.field, c.explanation;
-```
-
-To find a world's ID, open http://localhost:5173/api/world while logged in. It lists your worlds with their IDs.
-
-## Known limits
-
-- **It reads Rig's raw event format.** The backend forwards Rig's stream events as they are. A Rig upgrade can change that format and break the chat view here. The parsing lives in `applyEvent` in [src/App.jsx](src/App.jsx).
-- **No graph view.** The backend has no graph endpoints yet, so use `mgconsole` as shown above.
-- **Desktop only.** The inspector hides below 1100px, and the sidebar below 720px.
+Use [backend tests](../tests/README.md) for real HTTP contracts and database behavior.
+Rig's SSE event shapes can change when Rig changes; the inspector parser may need updates.

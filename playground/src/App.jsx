@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { api, streamChatTurn } from "./api.js";
+import ApiWorkbench from "./ApiWorkbench.jsx";
 
 /* ------------------------------------------------------------------ */
 /* Auth                                                                */
@@ -232,7 +233,7 @@ function Chat({ conversation, trace, onSend, streaming, onStop }) {
 
       <div className="messages" aria-live="polite">
         {messages.map((m, i) => (
-          <Bubble key={i} role={m.role}>{m.content}</Bubble>
+          <Bubble key={m.id || i} role={m.role}><div className="message-id mono">{m.id}</div>{m.content}</Bubble>
         ))}
         {liveTurn && (
           <>
@@ -320,7 +321,7 @@ function Inspector({ trace }) {
             </details>
           )}
 
-          <p className="muted small">Extraction runs in the background after the reply is saved. Query the graph a few seconds later — see the playground README.</p>
+          <p className="muted small">Research runs after chat storage. Use the API workbench to inspect its status and saved graph.</p>
         </div>
       ) : (
         <div className="raw">
@@ -346,8 +347,10 @@ export default function App() {
   const [conversation, setConversation] = useState(null);
   const [trace, setTrace] = useState(null);
   const [streaming, setStreaming] = useState(false);
+  const [view, setView] = useState("chat");
   const [error, setError] = useState("");
   const abortRef = useRef(null);
+  const selectionRef = useRef(0);
 
   const guard = useCallback(async (fn) => {
     try {
@@ -368,39 +371,56 @@ export default function App() {
   }, [user, guard]);
 
   async function pickWorld(w) {
+    const selected = ++selectionRef.current;
+    abortRef.current?.abort();
+    setStreaming(false);
+    setConversations([]);
     setWorld(w);
     setConversationId(null);
     setConversation(null);
     setTrace(null);
-    await guard(async () => setConversations((await api.conversations(w.id)).conversations));
+    await guard(async () => {
+      const result = await api.conversations(w.id);
+      if (selected === selectionRef.current) setConversations(result.conversations);
+    });
   }
 
   async function pickConversation(id) {
+    const selected = ++selectionRef.current;
+    abortRef.current?.abort();
+    setStreaming(false);
     setConversationId(id);
+    setConversation(null);
     setTrace(null);
-    await guard(async () => setConversation(await api.conversation(id)));
+    await guard(async () => {
+      const result = await api.conversation(world.id, id);
+      if (selected === selectionRef.current) setConversation(result);
+    });
   }
 
   async function send(text) {
+    const selected = selectionRef.current;
+    const previousCount = conversation?.messages?.length || 0;
     setStreaming(true);
     setTrace(emptyTrace(text));
     const controller = new AbortController();
     abortRef.current = controller;
     try {
-      await streamChatTurn(conversationId, text, {
+      await streamChatTurn(world.id, conversationId, text, {
         signal: controller.signal,
-        onEvent: (ev) => setTrace((t) => applyEvent(t, ev)),
+        onEvent: (ev) => { if (selected === selectionRef.current) setTrace((t) => applyEvent(t, ev)); },
       });
     } catch (err) {
-      if (err.name !== "AbortError") setTrace((t) => ({ ...t, error: err.message, status: "Error", done: true }));
+      if (selected === selectionRef.current && err.name !== "AbortError") setTrace((t) => ({ ...t, error: err.message, status: "Error", done: true }));
     } finally {
+      if (selected !== selectionRef.current) return;
       setStreaming(false);
       abortRef.current = null;
       // Reload the saved history; keep the trace for the inspector.
-      const fresh = await guard(() => api.conversation(conversationId));
-      if (fresh) {
+      const fresh = await guard(() => api.conversation(world.id, conversationId));
+      if (fresh && selected === selectionRef.current) {
         setConversation(fresh);
-        setTrace((t) => (t ? { ...t, persisted: true, done: true } : t));
+        setTrace((t) => (t ? { ...t, persisted: fresh.messages.length > previousCount, done: true } : t));
       }
     }
   }
@@ -436,7 +456,20 @@ export default function App() {
       />
       <div className="center">
         {error && <div className="banner" role="alert">{error}<button className="ghost small" onClick={() => setError("")} aria-label="Dismiss">×</button></div>}
-        <Chat conversation={conversation} trace={trace} onSend={send} streaming={streaming} onStop={() => abortRef.current?.abort()} />
+        <nav className="workspace-nav" aria-label="Testing views">
+          <button className={view === "chat" ? "primary" : "ghost"} aria-pressed={view === "chat"} onClick={() => setView("chat")}>Chat and stream</button>
+          <button className={view === "api" ? "primary" : "ghost"} aria-pressed={view === "api"} onClick={() => setView("api")}>API workbench</button>
+        </nav>
+        {view === "api" ? world ? <ApiWorkbench key={world.id} world={world} conversation={conversation} conversationId={conversationId}
+          onDeleted={(id) => {
+            setConversations((items) => items.filter((item) => item.id !== id));
+            if (id === conversationId) {
+              selectionRef.current += 1;
+              abortRef.current?.abort();
+              setStreaming(false);
+              setConversation(null); setConversationId(null); setTrace(null);
+            }
+          }} /> : <main className="chat empty-state"><p className="muted">Select a world to test its APIs.</p></main> : <Chat conversation={conversation} trace={trace} onSend={send} streaming={streaming} onStop={() => abortRef.current?.abort()} />}
       </div>
       <Inspector trace={trace} />
     </div>

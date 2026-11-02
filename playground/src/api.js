@@ -1,26 +1,30 @@
 // Thin client for the Lorekeeper backend. Every path goes through Vite's /api proxy.
 
-async function request(method, path, body) {
+export async function inspectRequest(method, path, body) {
+  const started = performance.now();
   const res = await fetch(`/api${path}`, {
     method,
     credentials: "include",
-    headers: body ? { "Content-Type": "application/json" } : {},
-    body: body ? JSON.stringify(body) : undefined,
+    headers: body === undefined ? {} : { "Content-Type": "application/json" },
+    body: body === undefined ? undefined : JSON.stringify(body),
   });
   const text = await res.text();
-  let data = null;
-  try {
-    data = text ? JSON.parse(text) : null;
-  } catch {
-    data = text;
-  }
-  if (!res.ok) {
-    const message = (data && (data.error || data.message)) || text || res.statusText;
-    const err = new Error(`${res.status} ${typeof message === "string" ? message : JSON.stringify(message)}`);
-    err.status = res.status;
+  let data;
+  try { data = text ? JSON.parse(text) : null; } catch { data = text; }
+  return { method, path, status: res.status, ok: res.ok,
+    durationMs: Math.round(performance.now() - started), data };
+}
+
+async function request(method, path, body) {
+  const result = await inspectRequest(method, path, body);
+  if (!result.ok) {
+    const data = result.data;
+    const message = (data && (data.message || data.error)) || data || "Request failed";
+    const err = new Error(`${result.status} ${typeof message === "string" ? message : JSON.stringify(message)}`);
+    err.status = result.status;
     throw err;
   }
-  return data;
+  return result.data;
 }
 
 export const api = {
@@ -35,8 +39,8 @@ export const api = {
 
   conversations: (worldId) => request("GET", `/world/${worldId}/conversations`),
   createConversation: (worldId, title) => request("POST", `/world/${worldId}/conversations`, { title }),
-  conversation: (id) => request("GET", `/conversation/${id}`),
-  deleteConversation: (id) => request("DELETE", `/conversation/${id}`),
+  conversation: (worldId, id) => request("GET", `/world/${worldId}/conversations/${id}`),
+  deleteConversation: (worldId, id) => request("DELETE", `/world/${worldId}/conversations/${id}`),
 };
 
 /**
@@ -44,8 +48,8 @@ export const api = {
  * EventSource can't POST, so this parses the stream by hand:
  * messages are separated by a blank line; each has optional `event:` and `data:` lines.
  */
-export async function streamChatTurn(conversationId, content, { onEvent, signal }) {
-  const res = await fetch(`/api/conversation/${conversationId}/messages`, {
+export async function streamChatTurn(worldId, conversationId, content, { onEvent, signal }) {
+  const res = await fetch(`/api/world/${worldId}/conversations/${conversationId}/messages`, {
     method: "POST",
     credentials: "include",
     headers: { "Content-Type": "application/json", Accept: "text/event-stream" },

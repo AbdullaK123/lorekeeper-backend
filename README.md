@@ -1,211 +1,182 @@
 # Lorekeeper Backend
 
-**A place to save your fictional world so you don't forget.**
+A place to save your fictional world so you do not forget.
 
-Writers chat about their world. An AI replies like a collaborator, and in the background it saves the lore (characters, places, factions, events) into a knowledge graph. Later answers come from that graph, so they trace back to what the writer actually said.
+Writers discuss their worlds through chat. A background researcher saves stated lore in Memgraph.
+Later replies search that lore. Writers can inspect sources, browse connections, and resolve supported conflicts through the API.
+The product client and SaaS launch workflows remain unfinished.
 
-See [docs/product_soul.md](docs/product_soul.md) for the product vision and [docs/project_plan.md](docs/project_plan.md) for the build plan.
+Updated: 2026-11-02.
 
-## How it works
+## Documentation
 
-One chat turn, `POST /conversation/{id}/messages`:
+- [Product vision](docs/product_soul.md): audience and purpose.
+- [User stories](docs/user_stories.md): all 15 required epics.
+- [Lifecycle design](docs/design.md): Define, Design, Build, Test, Deploy, and Maintain for each epic.
+- [Project plan](docs/project_plan.md): built foundations and remaining scope.
+- [Current sprint](docs/current_sprint.md): current evidence and next work.
+- [Research retries](docs/research_retry.md), [logging](docs/logging.md), and [tests](tests/README.md).
 
-```
-writer's message
-   │
-   ├─ 1. search the world's graph ───────────┐   (meaning + exact words, merged with RRF,
-   │                                         │    then pull in connected entities)
-   ├─ 2. chat agent replies ◄── lore ────────┘
-   │      • streams back as SSE
-   │      • may call the search_world tool for more
-   │      • never writes to the graph
-   │
-   ├─ 3. save the message and the reply (Postgres)
-   │
-   └─ 4. background job: extract lore ──► Memgraph
-          • find entities in the message
-          • new → create · existing → check for contradictions, merge the rest
-          • every write is safe to run twice
-```
+No epic has recorded acceptance for its full deployed user workflow.
 
-Two rules shape the design:
+## Data flow
 
-- **Only extraction writes lore.** The chat agent can read the graph but never change it. Extraction runs on **every** message, so lore never depends on the AI deciding to save it.
-- **Contradictions don't overwrite.** If a message contradicts saved lore, extraction records a **conflict** and keeps the old value until the writer decides.
+1. Search the world's lore using text search, vector search, and connected entities.
+2. Stream a chat reply through SSE. The chat agent can search lore and conflicts but cannot write lore.
+3. Save the user message and assistant reply together in Postgres. Each saved message has a UUID.
+4. Submit a DBOS research workflow using the user message ID as its original workflow ID.
+5. The researcher searches, reads, updates the graph, and reports conflicts through scoped tools.
+6. DBOS stores model and tool checkpoints in Postgres. Replayed completed steps reuse their saved results.
 
-## Stack
+A checkpoint is a saved operation result. It does not make a Memgraph write atomic with its Postgres checkpoint.
+Chat storage and workflow submission also use separate commits.
+Retrying failed research can fork a new workflow. A mapping links the source message to the current attempt.
+See [retry behavior and limits](docs/research_retry.md).
 
-| Part | Choice |
-|---|---|
-| HTTP server | [Axum](https://docs.rs/axum) 0.8 |
-| Users, worlds, conversations | Postgres 18 via [sqlx](https://docs.rs/sqlx) |
-| Knowledge graph + search indexes | [Memgraph](https://memgraph.com/docs) via [neo4rs](https://docs.rs/neo4rs) |
-| AI (chat, extraction, embeddings) | [Rig](https://docs.rs/rig-core) 0.44, through [OpenRouter](https://openrouter.ai) |
-| Sessions | [tower-sessions](https://docs.rs/tower-sessions), stored in Postgres |
+The writer controls canon. Supported conflict decisions keep the existing claim or accept the stored replacement.
+Accepting a replacement updates an existing entity property and resolves the conflict in one graph transaction.
+Core fields and relationship conflict targets still need broader support.
 
-Models are set in [src/app/app.rs](src/app/app.rs): the chat and extraction model, and `openai/text-embedding-3-small` for embeddings (1536 dimensions).
+## Stack and layout
 
-## Project layout
+| Area | Implementation |
+| --- | --- |
+| HTTP | Axum 0.8, Tokio, session cookies |
+| Relational storage | Postgres 18, SQLx 0.8 |
+| Lore graph | Memgraph, neo4rs 0.8 |
+| Models | Rig 0.44 through OpenRouter |
+| Durable research | DBOS 0.5, using Postgres |
+| Cleanup | tokio-cron-scheduler 0.15 and persisted world cleanup jobs |
+| Logs | Structured tracing events with private payloads excluded |
 
-```
-src/
-├── main.rs                  starts the server
-├── app/                     HTTP layer
-│   ├── app.rs               builds every service once, wires routes
-│   ├── controllers/         route handlers (auth, world, conversation)
-│   ├── middleware/          sessions, auth extractor
-│   └── config/              env settings + config.yaml (pool sizes)
-├── service/                 business logic
-│   ├── ai/
-│   │   ├── agent.rs         ChatAgentFactory: one agent per request
-│   │   ├── extraction.rs    ExtractionService: message → graph
-│   │   ├── retrieval.rs     RetrievalService: graph RAG search
-│   │   └── tools/           search_world tool for the agent
-│   └── auth.rs, world.rs, conversation.rs
-├── data/
-│   ├── models/              structs: DB rows, graph nodes, extraction types
-│   └── repositories/        SQL (Postgres) and Cypher (Memgraph)
-└── infrastructure/          DB connections, prompt loading, tracing
-
-prompts/                     system prompts (loaded at startup)
-├── agents.md                the chat agent
-├── extraction.md            finds entities and relationships in a message
-└── conflict.md              compares new info with saved lore
-
-migrations/                  Postgres schema (sqlx)
-playground/                  dev UI for testing by hand (see its README)
-docs/                        product vision and build plan
+```text
+src/app/                    bootstrap, DBOS registration, routes, extractors, middleware
+src/service/                auth, worlds, conversations, cleanup
+src/service/ai/              chat factory, researcher loop, retrieval, scoped tools
+src/data/                   models and Postgres/Memgraph repositories
+src/shared/                 validated text types and pagination types
+src/infrastructure/         settings, connections, prompt loading, tracing
+prompts/agents.md            chat instructions
+prompts/researcher.md        lore research instructions
+migrations/                 application Postgres schema
+.sqlx/                      offline metadata for SQLx macros
+tests/                      pure tests, local integration tests, paid smoke evidence
+playground/                 chat/stream inspector and API workbench; not the product client
 ```
 
-## Setup
+Model choices live in [app.rs](src/app/app.rs). The old structured extraction service and prompts are removed.
 
-### 1. Prerequisites
+## Local setup
 
-- Rust (stable) and Docker
-- `sqlx-cli` for migrations: `cargo install sqlx-cli --no-default-features --features postgres`
-- An [OpenRouter](https://openrouter.ai) API key
+Requires stable Rust, Docker, SQLx CLI, and an OpenRouter key.
+Install the CLI with `cargo install sqlx-cli --no-default-features --features postgres`.
 
-### 2. Start the databases
-
-```bash
+```sh
 docker compose up -d app-db app-memgraph
 ```
 
-| Service | Host port | Notes |
-|---|---|---|
-| Postgres (`app-db`) | **5433** | Not 5432, so it can run next to other projects' Postgres. |
-| Memgraph (`app-memgraph`) | 7687 | Bolt protocol, used by the app and `mgconsole`. |
+Postgres uses host port 5433. Memgraph uses Bolt port 7687.
+Create a git-ignored `.env`:
 
-### 3. Create `.env`
-
-`.env` is git-ignored. Every value is required.
-
-```bash
+```dotenv
 DATABASE_URL=postgresql://dev:password@localhost:5433/app_db
-OPENROUTER_API_KEY=sk-or-...
+OPENROUTER_API_KEY=your-key
 MEMGRAPH_URI=bolt://localhost:7687
 MEMGRAPH_USER=
 MEMGRAPH_PASSWORD=
-SESSION_SECRET_KEY=<at least 64 random characters>
-CORS_ALLOWED_ORIGINS=http://localhost:3000
+SESSION_SECRET_KEY=replace-with-at-least-64-random-characters
+CORS_ALLOWED_ORIGINS=http://localhost:5173
 ENV=dev
 ```
 
-| Variable | What it does |
-|---|---|
-| `DATABASE_URL` | Postgres connection. sqlx also uses it **at compile time** to check every SQL query. |
-| `OPENROUTER_API_KEY` | Used for chat, extraction and embeddings. |
-| `MEMGRAPH_URI`, `_USER`, `_PASSWORD` | Memgraph connection. The local container has no auth, so user and password stay empty. |
-| `SESSION_SECRET_KEY` | Signs the session cookie. Must be 64+ bytes, or the server refuses to start. Generate one with `head -c 96 /dev/urandom \| base64 \| tr -d '\n=+/'`. |
-| `CORS_ALLOWED_ORIGINS` | Comma-separated origins allowed to call the API with cookies. |
-| `ENV` | `dev`, `staging` or `prod`. `prod` marks the session cookie as HTTPS-only. |
+Export settings and apply migrations before starting:
 
-Pool sizes and other non-secret settings live in [src/app/config/config.yaml](src/app/config/config.yaml).
-
-### 4. Run migrations
-
-```bash
-sqlx migrate run
+```sh
+set -a
+source .env
+set +a
+cargo sqlx migrate run
+SQLX_OFFLINE=true cargo run
 ```
 
-The Memgraph schema doesn't need a migration. The app creates its constraint and search indexes at every startup, and that's safe to repeat.
-
-### 5. Run
-
-The app reads settings from environment variables only. It doesn't load `.env` itself, so export it first:
-
-```bash
-set -a; . ./.env; set +a
-cargo run
-```
-
-You should see `Started server on port 8000...`. Check it with `curl localhost:8000/health`, which should return `ok`.
+The app does not load `.env` itself or apply application migrations automatically.
+DBOS initializes its own system schema during startup.
+The app creates graph constraints and indexes during bootstrap.
+Non-secret settings live in [config.yaml](src/app/config/config.yaml).
+Check `GET http://localhost:8000/health` for `ok`.
+Ctrl+C drains HTTP requests, then shuts down the cleanup scheduler and DBOS.
+SIGTERM behavior still needs implementation or verification before deployment.
 
 ## API
 
-All routes except signup, login and health need a session cookie from `POST /auth/login`.
+Except health, signup, and login, these routes require a session cookie.
 
-| Method | Path | Body | Returns |
-|---|---|---|---|
-| GET | `/health` | | `ok` |
-| POST | `/auth/signup` | `{username, email, password}` | user |
-| POST | `/auth/login` | `{email, password}` | user + session cookie |
-| POST | `/auth/logout` | | |
-| GET | `/auth/me` | | current user |
-| GET | `/world` | | your worlds |
-| POST | `/world` | `{name, description}` | world |
-| GET / PATCH / DELETE | `/world/{world_id}` | PATCH: `{new_name?, new_description?}` | world |
-| GET | `/world/{world_id}/conversations` | | `{conversations: [...]}` |
-| POST | `/world/{world_id}/conversations` | `{title}` | conversation |
-| GET / DELETE | `/conversation/{id}` | | conversation with messages |
-| POST | `/conversation/{id}/messages` | `{content}` (1–10,000 chars) | **SSE stream** (see below) |
+| Method | Path | Purpose |
+| --- | --- | --- |
+| GET | `/health` | Health response |
+| POST | `/auth/signup`, `/auth/login`, `/auth/logout` | Account session actions |
+| GET | `/auth/me` | Current user |
+| GET / POST | `/world` | List or create worlds |
+| GET / PATCH / DELETE | `/world/{world_id}` | Read, update, or delete a world |
+| GET / POST | `/world/{world_id}/conversations` | List or create conversations |
+| GET / DELETE | `/world/{world_id}/conversations/{id}` | Read saved history or delete a conversation |
+| POST | `/world/{world_id}/conversations/{id}/messages` | Stream chat; body: `{ "content": "..." }` |
+| GET | `/world/{world_id}/graph` | Bounded graph page |
+| GET | `/world/{world_id}/entities` | Filtered entity page |
+| GET | `/world/{world_id}/entities/search` | Text search for browsing |
+| GET | `/world/{world_id}/entities/{entity_id}` | Entity details |
+| GET | `/world/{world_id}/entities/{entity_id}/neighbors` | Filtered, paginated connections |
+| GET | `/world/{world_id}/relationships/{relationship_id}` | Directed relationship details |
+| GET | `/world/{world_id}/conflicts` | Filtered conflict page |
+| GET | `/world/{world_id}/conflicts/{conflict_id}` | Conflict claims and sources |
+| POST | `/world/{world_id}/conflicts/{conflict_id}/resolve` | Apply the stored conflict decision |
+| GET | `/world/{world_id}/messages/{message_id}` | Read a source message with conversation context IDs |
+| GET | `/world/{world_id}/messages/{message_id}/research` | Read current research status |
+| POST | `/world/{world_id}/messages/{message_id}/research/retry` | Submit missing research or retry eligible failed work |
 
-Passwords need 8+ characters, upper and lower case, a number and a symbol.
+Conversation read, delete, and chat routes are nested under their world.
+The service checks both conversation ownership and the requested world before conversation actions.
+The former /conversation/{id} routes are removed.
 
-### The chat stream
+Query and response types live in [graph.rs](src/data/models/graph.rs) and [conversations.rs](src/data/models/conversations.rs).
+Cursors are opaque strings. Graph pages contain edges whose endpoints both belong to that page.
+Neighbor pagination counts edges. Agent retrieval uses graph RAG; entity browsing uses text search.
 
-`POST /conversation/{id}/messages` answers with `text/event-stream`. Each `data:` line is one JSON event from Rig's agent stream. The useful ones:
+Chat returns Rig events as an SSE stream. Event shapes can change when Rig changes.
+Stream errors use `event: error`. An early model failure does not save a partial turn.
+A later research submission failure can occur after chat messages save. Check research status before recovery.
+Research statuses are `not_submitted`, `queued`, `running`, `completed`, `failed`, and `cancelled`.
 
-| `type` | Meaning |
-|---|---|
-| `streamAssistantItem` with `value.event == "text"` | a piece of the reply, in `value.text` |
-| `streamAssistantItem` with `value.event == "reasoning"` | a piece of the model's reasoning |
-| `toolCall` / `toolResult` | the agent called `search_world` and got lore back |
-| `finalResponse` | the run finished; token usage is in `usage` |
+## Verification
 
-If the AI fails partway, the stream sends an `event: error` with a message and stops. Messages are saved only when the run finishes, so a failed turn leaves no half-saved history and can be retried.
-
-**Heads-up:** these are Rig's own event shapes, passed through unchanged. They can change when Rig is upgraded.
-
-## Tests
-
-```bash
-cargo test
+```sh
+SQLX_OFFLINE=true CARGO_INCREMENTAL=0 cargo check --offline --all-targets
+SQLX_OFFLINE=true CARGO_INCREMENTAL=0 cargo test --offline --all-targets
 ```
 
-Unit tests cover the pure logic with no database or AI involved: merging new info into saved entities ([extraction/tests.rs](src/service/ai/extraction/tests.rs)), plus RRF ranking and lore formatting ([retrieval/tests.rs](src/service/ai/retrieval/tests.rs)).
+Offline metadata validates macro queries against recorded schema information.
+Runtime SQLx queries still need real database tests. Refresh metadata when macro queries change.
+Use the [playground](playground/README.md) to exercise graph, conflict, source, and recovery APIs manually.
+Its API workbench shows status, timing, request paths, and raw JSON.
+See [test instructions](tests/README.md) for isolated database runs and paid-test safeguards.
 
-sqlx checks queries against the database at compile time, so `app-db` must be running for `cargo build` and `cargo test`.
+Latest recorded results on 2026-11-02:
 
-To test the whole system by hand, use the [playground](playground/README.md).
+- All-target compile check passes with warnings.
+- 43 free native database regressions pass.
+- Thirteen selected nested conversation route/access/validation HTTP tests pass.
+- Earlier research retry/status verification passes nine selected HTTP tests.
+- The broader unit run has 11 passes and one duplicate-row retrieval-ranking failure.
 
-## Logging
+These are scoped results, not a claim that every product workflow passes.
+See [test findings](tests/REPORT.md) for evidence and earlier runs.
 
-The app logs to stdout with `tracing`. The default level is `info`. Change it with `RUST_LOG`:
+## Logging and remaining scope
 
-```bash
-RUST_LOG="info,tower_http=debug" cargo run
-RUST_LOG="lorekeeper_backend=debug" cargo run
-```
+Use `RUST_LOG=info,lorekeeper_backend=debug` for application detail.
+See [logging guidance](docs/logging.md) for IDs, privacy, and replay behavior.
 
-Background extraction logs errors as `extraction failed for conversation <id>: ...`. Rig logs a `WARN` when an extraction attempt fails to parse and retries.
-
-## Troubleshooting
-
-| Symptom | Cause and fix |
-|---|---|
-| Build fails with `password authentication failed for user "dev"` | sqlx reached the wrong Postgres. Lorekeeper's is on **5433**. Check `docker ps` and `DATABASE_URL`. |
-| Startup logs `Tried to retrieve an unknown database "neo4j"` | neo4rs must be told Memgraph's database name. `create_graph` sets `.db("memgraph")`, so keep it. |
-| Startup panics `Invalid environment configuration.: MissingValue(...)` | A variable is missing from your environment. Export `.env` first (step 5). |
-| Startup panics `Invalid secret key. Must be at least 64 bytes.` | `SESSION_SECRET_KEY` is too short. |
-| rust-analyzer shows no compiler errors | Check `rust-analyzer.checkOnSave` isn't `false` in your editor settings. |
+Remaining work includes product client flows, long conversation behavior, deletion coordination,
+recovery commit gaps, and broader conflict targets. OAuth, account recovery, Stripe billing,
+usage controls, service emails, exports, support, and deployment recovery remain required scope.
+The [project plan](docs/project_plan.md) tracks these without marking whole epics complete from backend routes alone.

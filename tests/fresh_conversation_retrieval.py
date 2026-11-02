@@ -59,14 +59,14 @@ report = {"world_id": world, "original_conversation_id": fixture["conversation_i
 (OUT / "report.json").write_text(json.dumps(report, indent=2))
 for index, (name, question) in enumerate(QUESTIONS, 1):
     conversation = call("POST", f"/world/{world}/conversations", json={"title": f"Fresh retrieval: {name}"}).json()["id"]
-    initial = call("GET", f"/conversation/{conversation}").json()
+    initial = call("GET", f"/world/{world}/conversations/{conversation}").json()
     assert initial["messages"] == [], "Retrieval check requires an empty conversation"
     started = time.monotonic()
-    response = call("POST", f"/conversation/{conversation}/messages", json={"content": question})
+    response = call("POST", f"/world/{world}/conversations/{conversation}/messages", json={"content": question})
     response.encoding = "utf-8"
     raw = response.text
     (OUT / f"{name}.sse").write_text(raw)
-    saved = call("GET", f"/conversation/{conversation}").json()
+    saved = call("GET", f"/world/{world}/conversations/{conversation}").json()
     status = wait_research(conversation) if '"type":"finalResponse"' in raw or '"type": "finalResponse"' in raw else "not_started"
     messages = saved["messages"]
     item = {"name": name, "conversation_id": conversation, "initial_message_count": 0,

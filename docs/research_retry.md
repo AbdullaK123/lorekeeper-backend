@@ -1,5 +1,7 @@
 # Research retries
 
+Updated: 2026-11-02.
+
 `POST /world/{world_id}/messages/{message_id}/research/retry`
 
 Requires a logged-in owner and a saved user message. No request body is needed.
@@ -21,3 +23,16 @@ DBOS submission and mapping writes remain separate commits. A process crash betw
 This endpoint does not promise exactly-once graph writes or cancel research when a conversation is deleted.
 Mapping rows currently have no foreign key because messages live in JSONB; deletion does not remove those rows.
 Message access checks still prevent reading research status after its conversation is deleted.
+
+
+## Verification
+
+The local scripted submission test verifies saved source text and earlier-only history without model calls.
+HTTP tests cover blocked states, ownership, message roles, exhausted-job resume,
+concurrent fork rejection, repeated failed attempts, and polling the current attempt.
+The latest run passes 43 free native regressions and nine retry/status HTTP tests.
+See [test findings](../tests/REPORT.md) for scope and the separate retrieval-ranking failure.
+
+The mapping schema is [20261102000000_add_message_research_workflows.sql](../migrations/20261102000000_add_message_research_workflows.sql).
+It is applied to local development and QA databases. Other environments must run migrations before release.
+No product retry UI is implemented by this backend endpoint.

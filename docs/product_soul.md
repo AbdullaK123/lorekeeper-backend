@@ -77,3 +77,15 @@ These responsibilities support the product promise.
 They do not change who owns the canon: the writer.
 
 See the [user stories](user_stories.md), [lifecycle design](design.md), and [project plan](project_plan.md) for delivery scope.
+
+
+## Vision and current delivery — 2026-11-02
+
+This document describes the product promise, not a claim that every feature ships today.
+The target audience remains writers with large fictional worlds and scattered lore.
+
+The backend now supports conversation, background research, graph browsing APIs, source-message reads,
+supported conflict decisions, and research status/retry endpoints.
+The product client, reasoning and gap-review flows, and SaaS launch workflows remain unfinished.
+Reliability limits are recorded in the [project plan](project_plan.md) and [retry contract](research_retry.md).
+A story is complete only when its writer-facing workflow passes acceptance.

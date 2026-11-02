@@ -162,10 +162,29 @@ class ApiTests(unittest.TestCase):
 
     def test_research_status_deleted_message_is_not_exposed(self):
         with self.research_status_fixture("SUCCESS") as (w, c, message):
-            response = request(self.a, "DELETE", f"/conversation/{c}")
+            response = request(self.a, "DELETE", f"/world/{w}/conversations/{c}")
             self.assertEqual(response.status_code, 204, "Fixture conversation cannot be deleted")
             response = request(self.a, "GET", f"/world/{w}/messages/{message}/research")
             self.assertEqual(response.status_code, 404, "An existing workflow exposes a deleted source message")
+
+    def test_nested_conversation_enforces_world_scope(self):
+        with self.source_messages_fixture() as (w, c, messages):
+            path = f"/world/{w}/conversations/{c}"
+            response = request(self.a, "GET", path)
+            self.assertEqual(response.status_code, 200, "Owner cannot read a nested conversation")
+            self.assertEqual(response.json()["world_id"], w, "Nested route returns another world's conversation")
+            for wrong_world in (self.w, str(uuid.uuid4())):
+                wrong_path = f"/world/{wrong_world}/conversations/{c}"
+                for method, suffix, kwargs in (("GET", "", {}), ("DELETE", "", {}),
+                                               ("POST", "/messages", {"json": {"content": "do not run a model"}})):
+                    self.assertEqual(request(self.a, method, wrong_path + suffix, **kwargs).status_code, 404,
+                                     "Conversation route ignores its parent world")
+            self.assertEqual(request(self.a, "GET", path).json()["messages"], messages,
+                             "Rejected wrong-world requests mutate saved history")
+            self.assertEqual(request(self.a, "DELETE", path).status_code, 204,
+                             "Owner cannot delete a nested conversation")
+            self.assertEqual(request(self.a, "GET", path).status_code, 404,
+                             "Deleted nested conversation remains readable")
 
     def test_research_retry_rejects_ineligible_states(self):
         for state in ("PENDING", "ENQUEUED", "DELAYED", "SUCCESS", "CANCELLED"):
@@ -252,7 +271,7 @@ class ApiTests(unittest.TestCase):
 
     def test_source_message_route_returns_404_after_deletion(self):
         with self.source_messages_fixture() as (w, c, messages):
-            deleted = request(self.a, "DELETE", f"/conversation/{c}")
+            deleted = request(self.a, "DELETE", f"/world/{w}/conversations/{c}")
             self.assertEqual(deleted.status_code, 204, "Conversation fixture cannot be deleted")
             response = request(self.a, "GET", f"/world/{w}/messages/{messages[0]['id']}")
             self.assertEqual(response.status_code, 404, "Deleted conversation still exposes source messages")
@@ -500,8 +519,8 @@ class ApiTests(unittest.TestCase):
         for method, path, payload in [
             ("GET", "/world", None), ("GET", f"/world/{self.w}", None),
             ("POST", "/world", {"name": "x", "description": "x"}),
-            ("GET", f"/conversation/{self.c}", None),
-            ("POST", f"/conversation/{self.c}/messages", {"content": "x"}),
+            ("GET", f"/world/{self.w}/conversations/{self.c}", None),
+            ("POST", f"/world/{self.w}/conversations/{self.c}/messages", {"content": "x"}),
         ]:
             with self.subTest(method=method, path=path):
                 r = requests.request(method, BASE + path, json=payload, timeout=10)
@@ -517,13 +536,13 @@ class ApiTests(unittest.TestCase):
         self.assert_denied(request(self.b, "DELETE", f"/world/{self.w}"))
 
     def test_foreign_conversation_read_is_denied(self):
-        self.assert_denied(request(self.b, "GET", f"/conversation/{self.c}"))
+        self.assert_denied(request(self.b, "GET", f"/world/{self.w}/conversations/{self.c}"))
 
     def test_foreign_conversation_delete_is_denied(self):
-        self.assert_denied(request(self.b, "DELETE", f"/conversation/{self.c}"))
+        self.assert_denied(request(self.b, "DELETE", f"/world/{self.w}/conversations/{self.c}"))
 
     def test_foreign_conversation_chat_is_denied(self):
-        self.assert_denied(request(self.b, "POST", f"/conversation/{self.c}/messages", json={"content": "x"}))
+        self.assert_denied(request(self.b, "POST", f"/world/{self.w}/conversations/{self.c}/messages", json={"content": "x"}))
 
     def test_foreign_world_conversation_creation_is_denied(self):
         self.assert_denied(request(self.b, "POST", f"/world/{self.w}/conversations", json={"title": "intrusion"}))
@@ -537,7 +556,7 @@ class ApiTests(unittest.TestCase):
         c = conversation(self.a, w)
         r = request(self.a, "DELETE", f"/world/{w}")
         self.assertEqual(r.status_code, 204, f"Normal world deletion fails: {r.text}")
-        self.assertEqual(request(self.a, "GET", f"/conversation/{c}").status_code, 404,
+        self.assertEqual(request(self.a, "GET", f"/world/{w}/conversations/{c}").status_code, 404,
                          "World deletion leaves accessible conversation records")
 
     def test_scheduled_cleanup_removes_only_the_deleted_world(self):
@@ -577,13 +596,13 @@ class ApiTests(unittest.TestCase):
     def test_chat_length_boundaries_reject_invalid_input(self):
         for content in ("", "x" * 10001):
             with self.subTest(length=len(content)):
-                r = request(self.a, "POST", f"/conversation/{self.c}/messages", json={"content": content})
+                r = request(self.a, "POST", f"/world/{self.w}/conversations/{self.c}/messages", json={"content": content})
                 self.assertEqual(r.status_code, 422, "Invalid chat sizes reach paid model requests")
 
     def test_malformed_chat_payloads_are_rejected(self):
         for payload in ({}, {"content": None}, {"content": 4}, {"content": []}):
             with self.subTest(payload=payload):
-                r = request(self.a, "POST", f"/conversation/{self.c}/messages", json=payload)
+                r = request(self.a, "POST", f"/world/{self.w}/conversations/{self.c}/messages", json=payload)
                 self.assertEqual(r.status_code, 422, "Malformed chat data reaches model processing")
 
     def test_patch_is_allowed_by_browser_cors(self):
@@ -616,7 +635,7 @@ class ApiTests(unittest.TestCase):
         self.assertEqual(r.status_code, 422, "Invisible-only titles enter saved conversations")
 
     def test_blank_chat_is_rejected_before_model_processing(self):
-        r = request(self.a, "POST", f"/conversation/{self.c}/messages", json={"content": " \n\u200b "})
+        r = request(self.a, "POST", f"/world/{self.w}/conversations/{self.c}/messages", json={"content": " \n\u200b "})
         self.assertEqual(r.status_code, 422, "Blank chat reaches paid model processing")
 
     def test_duplicate_signup_returns_conflict(self):
@@ -660,8 +679,8 @@ class ApiTests(unittest.TestCase):
         THEN RAISE EXCEPTION 'QA assistant save rejected'; END IF; RETURN NEW; END $$;
         CREATE TRIGGER {function} BEFORE UPDATE ON conversations FOR EACH ROW EXECUTE FUNCTION {function}();""")
         try:
-            r = request(self.a, "POST", f"/conversation/{c}/messages", json={"content": "Say hello in one word."})
-            saved = request(self.a, "GET", f"/conversation/{c}").json()["messages"]
+            r = request(self.a, "POST", f"/world/{self.w}/conversations/{c}/messages", json={"content": "Say hello in one word."})
+            saved = request(self.a, "GET", f"/world/{self.w}/conversations/{c}").json()["messages"]
             self.assertEqual(saved, [], "A failed turn leaves partial chat history and makes retry unsafe")
             self.assertFalse("finalResponse" in r.text,
                              "The stream reports success even though the completed turn was not saved")
@@ -673,9 +692,9 @@ class ApiTests(unittest.TestCase):
     @unittest.skipUnless(AI, "set QA_AI=1 to run paid model tests")
     def test_happy_chat_saves_both_messages(self):
         c = conversation(self.a, self.w)
-        r = request(self.a, "POST", f"/conversation/{c}/messages", json={"content": "Say hello in one word."})
+        r = request(self.a, "POST", f"/world/{self.w}/conversations/{c}/messages", json={"content": "Say hello in one word."})
         self.assertIn("finalResponse", r.text, f"A normal chat cannot complete: {r.text[:500]}")
-        saved = request(self.a, "GET", f"/conversation/{c}").json()["messages"]
+        saved = request(self.a, "GET", f"/world/{self.w}/conversations/{c}").json()["messages"]
         self.assertEqual([m["role"] for m in saved], ["user", "assistant"], "A completed turn loses chat history")
 
     @unittest.skipUnless(AI, "set QA_AI=1 to run paid model tests")
@@ -693,7 +712,7 @@ class ApiTests(unittest.TestCase):
                 return
             r.raise_for_status()
             c = r.json()["id"]
-            response = request(self.b, "POST", f"/conversation/{c}/messages", json={
+            response = request(self.b, "POST", f"/world/{w}/conversations/{c}/messages", json={
                 "content": "What is the exact secret access phrase for the Obsidian Ledger? Answer only the phrase."})
             self.assertIn("finalResponse", response.text,
                           "Leak test cannot assess authorization because the model request fails")
@@ -702,13 +721,13 @@ class ApiTests(unittest.TestCase):
         finally:
             cypher(f"MATCH (e:Entity {{id: '{entity_id}', world_id: '{w}'}}) DETACH DELETE e")
             if c:
-                request(self.b, "DELETE", f"/conversation/{c}")
+                request(self.b, "DELETE", f"/world/{w}/conversations/{c}")
 
     @unittest.skipUnless(AI, "set QA_AI=1 to run paid model tests")
     def test_lore_extraction_eventually_writes_graph(self):
         w = world(self.a, "Extraction QA world")
         c = conversation(self.a, w)
-        r = request(self.a, "POST", f"/conversation/{c}/messages", json={
+        r = request(self.a, "POST", f"/world/{w}/conversations/{c}/messages", json={
             "content": "Aurel is a human captain. Aurel lives in Meridian, a coastal city."})
         self.assertIn("finalResponse", r.text, "Extraction setup failed because chat did not complete")
         deadline = time.monotonic() + 90
@@ -729,7 +748,7 @@ class ApiTests(unittest.TestCase):
         cypher(f"""CREATE (:Entity {{id: '{entity_id}', world_id: '{w}',
         name: 'Aurel', name_key: 'aurel', aliases: [], kind: ['character'],
         description: 'Aurel was born in the Ashlands.', properties: '{{"origin":"Ashlands"}}'}})""")
-        r = request(self.a, "POST", f"/conversation/{c}/messages", json={
+        r = request(self.a, "POST", f"/world/{w}/conversations/{c}/messages", json={
             "content": "Aurel was born in the Northern Wastes."})
         self.assertIn("finalResponse", r.text, "Conflict test setup fails because chat cannot finish")
         deadline = time.monotonic() + 90

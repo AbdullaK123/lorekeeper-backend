@@ -1,5 +1,82 @@
 # Current Sprint
 
+Updated: 2026-11-02.
+
+## Nested conversation controller — 2026-11-02
+
+Nested the conversation controller within the world controller under /{world_id}/conversations.
+Removed the app-level /conversation mount. Read/delete/chat now extract world and conversation IDs.
+ConversationService checks the requested world before returning, deleting, or starting model work.
+Updated playground calls, Python API tests, smoke runners, and route documentation.
+All-target offline compile check passes with existing warnings.
+Thirteen selected live HTTP tests pass in 5.179 seconds; wrapper passes in 7.16 seconds.
+Tests cover correct-world reads/deletes, wrong-world rejection, cross-user/anonymous access,
+input validation, and source/research lookup after deletion. No paid model calls run.
+Playground production build passes. Python parsing, API JavaScript syntax, and whitespace checks pass.
+Paid successful-chat smoke is not rerun. Earlier reliability limits remain unchanged.
+
+## Playground API testing workspace — 2026-11-02
+
+Added a world-scoped API workbench beside the existing chat/stream view.
+Presets cover graph/entity/neighbor/relationship reads, search, conflicts and decisions,
+source messages, research status/retry, and conversation reads/deletion.
+Shows request paths/bodies, HTTP status, timing, raw JSON, errors, and next-cursor controls.
+Saved-message selection supplies source IDs. Mutations require an explicit action and explain their effects.
+No automatic model calls or retry polling. Existing session cookies remain in use.
+World/conversation switches abort the browser stream and ignore stale selection responses.
+Failed turns no longer display as persisted merely because old history reloads.
+Added small-screen selection support and kept existing light/dark tokens.
+Six local client tests pass; production build and a server-render check pass.
+The first Vite render probe hit a sandbox WebSocket bind error; a socket-free bundled render passes.
+No real browser walkthrough, backend regression rerun, or paid model calls for this UI change.
+Updated playground instructions. This remains a development test UI, not product epic acceptance.
+
+## Current status
+
+The tool-using lore pipeline is implemented. The old extraction service is removed.
+Graph read APIs, supported conflict decisions, source lookup, structured logging,
+and research status/retry endpoints are built. Product client acceptance remains unfinished.
+No epic is marked complete from backend work alone.
+
+## Latest verification
+
+- Offline all-target compilation passes with warnings.
+- 43 free native database regressions pass in 9.17 seconds.
+- Thirteen nested-route/access/validation HTTP tests pass in 5.179 seconds.
+- Earlier retry/status verification passes nine HTTP tests in 9.475 seconds.
+- The broader unit run has 11 passes and one duplicate-row retrieval-ranking failure.
+- Retry verification makes no paid model calls.
+- The workflow mapping migration is applied to local development and isolated QA databases.
+
+These are scoped runs. They do not form a single full-suite pass count.
+
+## Remaining work
+
+- Product graph browsing, source navigation, conflict review, and research recovery screens.
+- Long-history limits, interrupted replies, and concurrent chat behavior.
+- Conflict targets beyond existing entity properties and unresolved-reference workflows.
+- Chat/job, graph/checkpoint, and fork/mapping commit gaps.
+- Research/deletion coordination and cleanup of workflow mapping rows.
+- The remaining reasoning, gap-review, account, billing, usage, email, operations, privacy, and support stories.
+
+Choose one bounded implementation slice next. The researcher pipeline does not need another redesign.
+The [project plan](project_plan.md) and [lifecycle design](design.md) retain full scope.
+
+## Documentation refresh — 2026-11-02
+
+Updated root and playground READMEs, product vision notes, story delivery status,
+project plan, each epic's lifecycle status, logging/retry guides, and test instructions/report.
+Removed stale descriptions of extraction, missing graph APIs, missing source IDs, and missing research recovery APIs.
+Preserved historical test evidence and remaining reliability limits.
+This refresh changes documentation only. All local Markdown links across 11 documents resolve.
+Confirmed 69 unique stories, 15 epics in each planning document, and six lifecycle stages per design epic.
+Whitespace checks pass.
+No new application or paid-model tests run for this documentation task.
+
+## Historical work log
+
+Entries below describe the state at their recorded time. Later entries and the current summary supersede older pending items.
+
 ### Research retry feature implementation — 2026-11-02
 
 Completed POST /world/{world_id}/messages/{message_id}/research/retry and service wiring.

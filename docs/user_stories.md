@@ -6,6 +6,23 @@ They need to remember details, avoid contradictions, and understand how their wo
 The writer owns the canon: facts they establish or confirm about their fictional world.
 These stories describe intended product behavior, not current implementation status.
 
+## Delivery status — 2026-11-02
+
+All 15 epics and 69 stories remain required. Backend endpoints alone do not complete a story.
+No complete epic has recorded acceptance in the deployed product.
+
+| Stories | Backend support now available | Remaining user workflow |
+| --- | --- | --- |
+| US-001–009 | Sessions, worlds, saved/streamed conversations, typed validation | Product screens; long/interrupted/concurrent conversation rules |
+| US-010–015 | Tool-using researcher, DBOS checkpoints, status and retry endpoints | Visible client recovery; commit gaps and deletion coordination |
+| US-016–020 | Graph retrieval, message source IDs, source-message reads | Answer citations and source navigation |
+| US-021–027 | Conflict reads, source evidence, decisions for existing entity properties | Client review, broader conflict targets, clarification flows |
+| US-028–031 | Scoped graph browsing, search, details, and paginated connections | Product graph visualization and navigation |
+| Epics 7–8 | Search and graph foundations | Dedicated reasoning and gap-review workflows |
+| Epics 9–15 | Basic accounts, logs, cleanup, research recovery foundations | OAuth, recovery, billing, usage, emails, operations, privacy, support |
+
+See the [project plan](project_plan.md) and [current sprint](current_sprint.md) for evidence and limits.
+
 ## Epic 1: Keep My Worlds Private and Separate
 
 - **US-001:** As a writer, I want a private account so I can protect my unpublished lore.

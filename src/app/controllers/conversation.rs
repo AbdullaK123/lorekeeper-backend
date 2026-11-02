@@ -12,11 +12,11 @@ use uuid::Uuid;
 async fn get_conversation(
     State(ctx): State<AppState>,
     UserId(user_id): UserId,
-    Path(id): Path<Uuid>,
+    Path((world_id, id)): Path<(Uuid, Uuid)>,
 ) -> Result<Json<ConversationResponse>, AppError> {
     let result = ctx
         .conversation_service
-        .get_conversation(id, user_id)
+        .get_conversation(world_id, id, user_id)
         .await?;
     Ok(Json(result))
 }
@@ -24,11 +24,11 @@ async fn get_conversation(
 async fn delete_conversation(
     State(ctx): State<AppState>,
     UserId(user_id): UserId,
-    Path(id): Path<Uuid>,
+    Path((world_id, id)): Path<(Uuid, Uuid)>,
 ) -> Result<impl IntoResponse, AppError> {
     let result = ctx
         .conversation_service
-        .delete_conversation(id, user_id)
+        .delete_conversation(world_id, id, user_id)
         .await?;
     if !result {
         return Err(AppError::NotFound("Conversation not found".to_string()));
@@ -39,12 +39,12 @@ async fn delete_conversation(
 async fn chat_turn(
     State(ctx): State<AppState>,
     UserId(user_id): UserId,
-    Path(id): Path<Uuid>,
+    Path((world_id, id)): Path<(Uuid, Uuid)>,
     ValidatedJson(payload): ValidatedJson<ChatRequest>,
 ) -> Result<Sse<impl Stream<Item = Result<Event, axum::Error>>>, AppError> {
     let stream = ctx
         .conversation_service
-        .chat_turn(id, user_id, payload.content.into_inner())
+        .chat_turn(world_id, id, user_id, payload.content.into_inner())
         .await?;
     let events = async_stream::stream! {
         futures::pin_mut!(stream);

@@ -1,6 +1,6 @@
 # Lorekeeper — Project Plan
 
-Updated: 2026-10-29.
+Updated: 2026-11-02.
 
 ## Completion rule
 
@@ -24,9 +24,12 @@ Working foundations remain valuable and should stay in place during changes.
 | Accounts | Signup, login, logout, sessions, current user | Duplicate signup now returns 409; complete privacy acceptance remains |
 | Worlds | Create, list, read, update, delete; owner checks | Request text validation is enforced; deletion can race with background lore writes |
 | Conversations | Create, list, resume, delete; streamed replies | Long histories, interrupted streams, and concurrent turns need defined behavior |
-| Message storage | User and assistant messages save together before background research starts | Workflow submission follows message commit; atomic handoff and visible status remain |
-| Lore storage | Entities, relationships, conflicts, search, graph repository methods | Alias collisions, source tracking, and safe updates need work |
+| Message storage | User and assistant messages save together before background research starts | Research status and retry APIs are built; chat/job handoff and fork/mapping persistence remain separate commits |
+| Lore storage | Entities, relationships, conflicts, search, graph repository methods | Message sources persist on entities, relationships, and conflicts; broader identity acceptance and write coordination remain |
 | Retrieval | Text and vector search, neighbor properties, relationship conditions | Conflict lookup passes five fresh-conversation checks; broader coverage remains |
+| Graph APIs | Scoped graph, entity, neighbor, relationship, and conflict reads; supported conflict decisions | Product graph views and broader conflict targets remain |
+| Sources and recovery | Source-message reads, research status, retry submission and current-attempt tracking | Client flows, crash commit gaps, and mapping deletion cleanup remain |
+| Logging | Structured request/service/repository/workflow logs and privacy capture tests | Production monitoring and alerting remain |
 | Cleanup | Transactional deletion jobs, scheduled graph cleanup, retry after failure | Shutdown and competing background writes need further checks |
 | Researcher | [Prompt](../prompts/researcher.md), scoped search/read/write/conflict tools, background runtime wiring | DBOS model/tool checkpoints implemented; interrupted writes and concurrent recovery still need acceptance |
 
@@ -37,23 +40,19 @@ Local scripted-provider tests verify DBOS engine restart replay. Atomic handoff 
 
 ## Test baseline
 
-The latest recorded [test report](../tests/REPORT.md) contains 72 distinct tests: 65 pass and seven fail.
-These are recorded results, not a new test run for this plan.
+Latest recorded verification on 2026-11-02:
 
-| Failure | Planned action |
-| --- | --- |
-| Shared alias selects the wrong entity | Test contextual identity through the researcher tools |
-| Alias shadows another entity's canonical name | Require exact saved targets for writes; preserve distinct subjects |
-| Neighbor properties disappear from answer context | Fixed; context-preservation test passes |
-| Relationship descriptions disappear from answer context | Fixed; context-preservation test passes |
-| Fresh chat reports no unresolved conflicts despite two saved records | Fixed; chat calls get_conflicts and presents both records; [verified rerun](../tests/artifacts/fresh-retrieval-2026-10-30/summary.md) |
-| Synthetic duplicate-row ranking test | No demonstrated occurrence in current queries; no fix scheduled |
-| Duplicate signup returns 500 | Fixed; real signup and login privacy regression tests pass |
-| Blank world names pass validation | Fixed; typed request validation rejects blank create/update names with 422 |
+- All-target offline compilation passes with warnings.
+- 43 free native database regressions pass in 9.17 seconds.
+- Nine research retry/status HTTP tests pass in 9.475 seconds.
+- The broader unit run has 11 passes and one duplicate-row retrieval-ranking failure.
+- No paid model calls run in that verification.
 
-Replace implementation-specific alias tests with behavioral tests when the old pipeline leaves production.
-Keep tests proving that facts attach to the correct subject.
-Do not remove a failed behavior to make the suite pass.
+These are separate scoped runs, not a combined full-suite pass count.
+The duplicate-row assertion remains failing; no current query occurrence is demonstrated and no fix is scheduled.
+Earlier paid smoke results remain in [test findings](../tests/REPORT.md) and their artifacts.
+Source preservation, conflict targets, graph APIs, and restart replay have targeted evidence.
+This evidence does not prove every identity case or exactly-once writes across databases.
 
 ## Epic completion checks
 
@@ -96,7 +95,8 @@ Follow-up questions use the conversation and saved lore without inventing canon.
 
 **Stories:** US-010, US-011, US-012, US-013, US-014, US-015.
 
-**Built:** Background researcher after saved chat, exact-ID batch writes, full reads, and conflict reporting tools.
+**Built:** Tool-using researcher, exact-ID batch writes, full reads, conflict reporting, message sources,
+DBOS checkpoints, status polling, and retry APIs. Retry state tracks the current workflow attempt.
 
 **Remaining:**
 
@@ -104,7 +104,8 @@ Follow-up questions use the conversation and saved lore without inventing canon.
 - Preserve old facts, minor details, relationship conditions, and sources during updates.
 - Resolve identity through context; ask for clarification when evidence remains unclear.
 - Support distinct subjects with the same name without silently merging them.
-- Persist research jobs and expose pending, complete, failed, and retry states.
+- Connect the built status/retry APIs to client feedback.
+- Close chat/job and fork/mapping commit gaps; define cleanup for mapping rows after message deletion.
 - Protect updates against concurrent jobs and repeated processing.
 
 **Done when:** Restarting or retrying research loses no accepted lore and creates no duplicate facts or relationships.
@@ -115,12 +116,12 @@ The writer can see and retry failed saves.
 
 **Stories:** US-016, US-017, US-018, US-019, US-020.
 
-**Built:** Natural-language search, combined search ranking, and graph context for replies.
+**Built:** Natural-language retrieval, combined ranking, entity/neighbor properties, relationship conditions,
+message source IDs, and an authorized source-message API.
 
 **Remaining:**
 
-- Store stable references to source messages and carry them through lore updates.
-- Return relevant entity properties, neighbor properties, and relationship conditions.
+- Complete claim-level answer citations and their client navigation.
 - Link answer claims to readable source statements in the client.
 - State unknown details clearly and distinguish unresolved claims from established facts.
 - Test retrieval with indirect wording, minor details, and misleading nearby matches.
@@ -132,15 +133,14 @@ Answers preserve conditions and direction, and identify missing evidence.
 
 **Stories:** US-021, US-022, US-023, US-024, US-025, US-026, US-027.
 
-**Built:** Conflict records, contradiction checks, and prompt rules for explicit corrections.
-Some tests cover preserved canon and contradictions across connected facts.
+**Built:** Source-aware conflict records, scoped list/detail APIs, exact property-key conflict reporting,
+and keep-existing/accept-new decisions. Accept-new updates the entity property and resolves the conflict atomically.
 
 **Remaining:**
 
-- Preserve both disputed claims and their sources.
-- Expose unresolved conflicts and unclear references through APIs and client views.
-- Let the writer resolve a conflict or make an explicit correction.
-- Apply the decision consistently to saved facts and affected relationships.
+- Connect conflict read/decision APIs to client review.
+- Extend supported conflict targets beyond existing entity properties.
+- Define unclear-reference review and consistent changes across affected relationships.
 - Keep hypothetical statements and unapproved assistant suggestions outside canon.
 - Route unresolved identity questions back to the writer before attaching facts.
 
@@ -151,11 +151,11 @@ Unresolved issues remain visible across sessions without silently replacing esta
 
 **Stories:** US-028, US-029, US-030, US-031.
 
-**Built:** Graph storage and repository methods for entities, relationships, and neighbors.
+**Built:** Owner-scoped graph, entity, search, neighbor, relationship, and conflict HTTP reads.
+Filtered pagination and populated graph fixtures have targeted tests.
 
 **Remaining:**
 
-- Add authorized graph APIs for browsing, search, details, and bounded neighborhood loading.
 - Build the visual graph and entity inspection views in the client.
 - Support following connections across entity types.
 - Show relationship direction, conditions, details, and source links.
@@ -309,10 +309,13 @@ Containers, health response, cleanup retries, and partial shutdown handling prov
 
 ### Stage 1: Define the research boundary
 
+**Status:** Runtime boundary and tools are built; broader identity acceptance remains.
+
 **Supports:** Epics 3, 4, and 5.
 
 The researcher prompt and initial runtime tools are implemented.
-The old extraction pipeline is removed. Source references and unresolved design decisions still need completion.
+The old extraction pipeline is removed. Message references and scoped read/write contracts are implemented.
+Broader identity behavior and explicit unresolved-reference workflows still need acceptance.
 
 1. Define stable entity references and source message references.
 2. Define search and full-read results, including facts, relationships, conditions, conflicts, and sources.
@@ -327,6 +330,8 @@ Do not give the conversational agent unrestricted lore writes.
 **Exit check:** Example tool calls represent every researcher prompt example without guessing a target or losing source evidence.
 
 ### Stage 2: Build one researcher workflow
+
+**Status:** Implemented and smoke-tested. The items below describe required acceptance coverage, not missing tool scaffolds.
 
 **Supports:** Epics 3 and 5.
 
@@ -350,7 +355,7 @@ They also cover qualifiers, explicit corrections, speculation, and unresolved re
 2. Run jobs with bounded work, durable status, retries, and restart recovery.
 3. Prevent competing jobs from overwriting newer accepted facts.
 4. Coordinate deletion with research so stale work cannot restore deleted lore.
-5. Expose research status and safe retry through the API and client.
+5. Connect the built research status/retry APIs to the client and close their recorded commit gaps.
 6. Complete behavioral acceptance of the researcher now wired into the runtime.
 7. Keep obsolete extraction and alias logic removed; add regression cases against the active tools.
 
@@ -376,7 +381,7 @@ The resulting answers reflect the writer's decision.
 
 **Supports:** Epic 6.
 
-1. Expose scoped graph browsing and detail APIs.
+1. Use the built scoped graph, entity, neighbor, relationship, and conflict APIs.
 2. Build the visual graph and connection inspection views.
 3. Add source navigation and bounded loading for large worlds.
 
@@ -414,7 +419,7 @@ Use the [lifecycle design](design.md) for each epic’s release and maintenance 
 
 **Supports:** All epics.
 
-1. Fix account errors and settle world-name validation.
+1. Preserve verified duplicate-signup handling and typed request validation.
 2. Complete account, world, conversation, and recovery screens.
 3. Test ownership across every new route and tool.
 4. Test interrupted streams, concurrent turns, worker recovery, and deletion races.
@@ -444,10 +449,14 @@ Choose these rules before building their dependent flows:
 Record each choice in the matching design epic and verify current provider requirements during implementation.
 The earlier code-size estimate excludes this added scope and needs revision.
 
-## Immediate next piece
+## Immediate next pieces
 
-Verify the researcher against the existing prompt examples.
-Check saved facts, explicit corrections, unresolved conflicts, and ambiguous identity through the new runtime.
-Complete source references and durable jobs without reintroducing name-based write targets.
+The researcher pipeline, graph read APIs, supported conflict decisions, source lookup, logging,
+and research status/retry endpoints are implemented. Do not restart the extraction redesign.
 
-This is the next small piece. The full researcher replacement is not one task.
+1. Connect product client flows for graph browsing, source inspection, conflict decisions, and research recovery.
+2. Choose the next backend slice: long-history limits, broader conflict targets, or deletion/research coordination.
+3. Close recorded recovery commit gaps and mapping-row cleanup before claiming full recovery acceptance.
+4. Keep SaaS account, billing, usage, email, privacy, support, and operations scope visible.
+
+The next implementation task needs a bounded acceptance check. No new task is started by this documentation update.
