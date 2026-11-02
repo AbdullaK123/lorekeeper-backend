@@ -234,8 +234,24 @@ async fn get_researcher_status(
     ))
 }
 
+async fn retry_research(
+    State(ctx): State<AppState>,
+    UserId(user_id): UserId,
+    Path((world_id, message_id)): Path<(Uuid, Uuid)>,
+) -> Result<Json<ResearchStatusResponse>, AppError> {
+    Ok(Json(
+        ctx.conversation_service
+            .retry_research_run(world_id, user_id, message_id)
+            .await?,
+    ))
+}
+
 pub fn create_world_controller() -> Router<AppState> {
     Router::new()
+        .route(
+            "/{world_id}/messages/{message_id}/research/retry",
+            post(retry_research),
+        )
         .route("/{world_id}/messages/{message_id}", get(get_message))
         .route(
             "/{world_id}/messages/{message_id}/research",

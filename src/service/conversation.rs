@@ -6,6 +6,7 @@ use crate::service::{
     ChatAgentFactory, ResearchInput, RetrievalService, ServiceError, format_hits,
 };
 use chrono::Utc;
+use dbos::sysdb::types::WorkflowStatus;
 use futures::{Stream, StreamExt};
 use rig::agent::MultiTurnStreamItem;
 use serde::Serialize;
@@ -236,10 +237,8 @@ impl ConversationService {
         message_id: Uuid,
     ) -> Result<ResearchStatusResponse, ServiceError> {
         self.get_message(world_id, user_id, message_id).await?;
-        let status = self
-            .dbos_client
-            .workflow_status(&message_id.to_string())
-            .await?;
+        let workflow_id = self.current_research_workflow(message_id).await?;
+        let status = self.dbos_client.workflow_status(&workflow_id).await?;
         match status {
             Some(status) => {
                 tracing::debug!(workflow_status = %status.as_str(), "research status loaded");
@@ -254,5 +253,100 @@ impl ConversationService {
                 })
             }
         }
+    }
+
+    async fn current_research_workflow(&self, message_id: Uuid) -> Result<String, ServiceError> {
+        Ok(self
+            .conversation_repo
+            .get_research_workflow(message_id)
+            .await?
+            .unwrap_or_else(|| message_id.to_string()))
+    }
+
+    #[tracing::instrument(name = "conversation.retry_research", skip_all, fields(%world_id, %user_id, %message_id))]
+    pub async fn retry_research_run(
+        &self,
+        world_id: Uuid,
+        user_id: Uuid,
+        message_id: Uuid,
+    ) -> Result<ResearchStatusResponse, ServiceError> {
+        let saved = self.get_message(world_id, user_id, message_id).await?;
+        let content = match saved.message {
+            Message::User { content, .. } => content,
+            _ => {
+                return Err(ServiceError::InvalidInput(
+                    "Research requires a user message".into(),
+                ));
+            }
+        };
+        // Serialize retry requests for this message across application instances.
+        let lock = self
+            .conversation_repo
+            .lock_research_retry(message_id)
+            .await?;
+        self.get_message(world_id, user_id, message_id).await?;
+        let workflow_id = self.current_research_workflow(message_id).await?;
+
+        let status = self.dbos_client.workflow_status(&workflow_id).await?;
+        let active_id = match status {
+            Some(WorkflowStatus::Error) => {
+                let handle = self
+                    .dbos_client
+                    .fork::<String, ServiceError>(&workflow_id, dbos::ForkFrom::LastFailure)
+                    .await?;
+                handle.workflow_id().to_owned()
+            }
+            Some(WorkflowStatus::MaxRecoveryAttemptsExceeded) => {
+                self.dbos_client
+                    .resume::<String, ServiceError>(&workflow_id)
+                    .await?;
+                workflow_id
+            }
+            None => {
+                let history = self
+                    .conversation_repo
+                    .get_by_id(saved.conversation_id, user_id)
+                    .await?
+                    .ok_or_else(|| ServiceError::NotFound("Conversation not found".into()))?;
+                let source_index = history
+                    .messages
+                    .0
+                    .iter()
+                    .position(|message| message.id() == message_id)
+                    .ok_or_else(|| ServiceError::NotFound("Message not found".into()))?;
+                let input = ResearchInput {
+                    world_id,
+                    conversation_id: saved.conversation_id,
+                    source_message_id: message_id,
+                    message: content,
+                    history: history.messages.0.into_iter().take(source_index).collect(),
+                };
+                self.research_job
+                    .start_with(
+                        input,
+                        dbos::StartOptions {
+                            workflow_id: Some(&workflow_id),
+                            ..Default::default()
+                        },
+                    )
+                    .await
+                    .map_err(|error| ServiceError::InternalError(error.to_string()))?;
+                workflow_id
+            }
+            Some(_) => {
+                return Err(ServiceError::Conflict(
+                    "Research cannot be retried in its current state".into(),
+                ));
+            }
+        };
+        self.conversation_repo
+            .set_research_workflow(message_id, &active_id)
+            .await?;
+        lock.commit()
+            .await
+            .map_err(|error| ServiceError::InternalError(error.to_string()))?;
+        tracing::info!(workflow_id = %active_id, "research retry submitted");
+        self.get_researcher_status(world_id, user_id, message_id)
+            .await
     }
 }

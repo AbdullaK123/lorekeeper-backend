@@ -893,3 +893,9 @@ mod message_lookup;
 
 #[path = "cases/logging.rs"]
 mod logging;
+
+#[path = "cases/research_status.rs"]
+mod research_status;
+
+#[path = "cases/research_retry.rs"]
+mod research_retry;

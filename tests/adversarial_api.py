@@ -97,6 +97,133 @@ class ApiTests(unittest.TestCase):
         finally:
             request(self.a, "DELETE", f"/world/{w}").raise_for_status()
 
+    @contextlib.contextmanager
+    def research_status_fixture(self, status=None):
+        with self.source_messages_fixture() as (w, c, messages):
+            message = messages[0]["id"]
+            try:
+                if status is not None:
+                    sql(f"INSERT INTO dbos.workflow_status "
+                        "(workflow_uuid, status, name, executor_id, application_version, application_name, queue_name) "
+                        f"VALUES ('{message}', '{status}', 'qa_status_fixture', 'qa_status_fixture', "
+                        f"'qa-status-{message}', 'lorekeeper', 'qa-status-{message}')")
+                yield w, c, message
+            finally:
+                sql(f"DELETE FROM dbos.workflow_status WHERE workflow_uuid = '{message}' AND name = 'qa_status_fixture'")
+
+    def test_research_status_maps_all_stored_states(self):
+        cases = {
+            "ENQUEUED": "queued", "DELAYED": "queued", "PENDING": "running",
+            "SUCCESS": "completed", "ERROR": "failed", "CANCELLED": "cancelled",
+            "MAX_RECOVERY_ATTEMPTS_EXCEEDED": "failed",
+        }
+        with self.research_status_fixture("ENQUEUED") as (w, _, message):
+            for stored, expected in cases.items():
+                with self.subTest(stored=stored):
+                    sql(f"UPDATE dbos.workflow_status SET status = '{stored}' WHERE workflow_uuid = '{message}'")
+                    response = request(self.a, "GET", f"/world/{w}/messages/{message}/research")
+                    self.assertEqual(response.status_code, 200, f"Stored research state is unreadable: {response.text[:300]}")
+                    self.assertEqual(response.json(), {"status": expected},
+                                     "Research status misrepresents queued, active, or finished work")
+
+    def test_research_status_missing_workflow_is_not_submitted(self):
+        with self.research_status_fixture() as (w, _, message):
+            response = request(self.a, "GET", f"/world/{w}/messages/{message}/research")
+            self.assertEqual(response.status_code, 200, "Saved message without a workflow is treated as missing data")
+            self.assertEqual(response.json(), {"status": "not_submitted"},
+                             "No workflow is reported as running or finished")
+
+    def test_research_status_enforces_message_access(self):
+        with self.research_status_fixture("SUCCESS") as (w, _, message):
+            path = f"/world/{w}/messages/{message}/research"
+            self.assertEqual(request(self.b, "GET", path).status_code, 404, "Foreign user sees private research status")
+            self.assertEqual(request(requests.Session(), "GET", path).status_code, 401,
+                             "Anonymous caller reads private research status")
+            for url in (f"/world/{self.w}/messages/{message}/research",
+                        f"/world/{uuid.uuid4()}/messages/{message}/research",
+                        f"/world/{w}/messages/{uuid.uuid4()}/research"):
+                self.assertEqual(request(self.a, "GET", url).status_code, 404,
+                                 "Status endpoint ignores message ownership or world scope")
+            for url in (f"/world/{w}/messages/invalid/research",
+                        f"/world/invalid/messages/{message}/research"):
+                self.assertEqual(request(self.a, "GET", url).status_code, 400,
+                                 "Status endpoint accepts malformed identifiers")
+
+    def test_research_status_lookup_error_is_not_not_submitted(self):
+        with self.research_status_fixture("QA_UNKNOWN_STATUS") as (w, _, message):
+            path = f"/world/{w}/messages/{message}/research"
+            response = request(self.a, "GET", path)
+            self.assertEqual(response.status_code, 500,
+                             "Failed DBOS status decoding is reported as a valid status")
+            self.assertEqual(response.json().get("error"), "internal",
+                             "DBOS lookup failure becomes not_submitted instead of a server error")
+            self.assertEqual(request(self.b, "GET", path).status_code, 404,
+                             "Status lookup runs before the message access check")
+
+    def test_research_status_deleted_message_is_not_exposed(self):
+        with self.research_status_fixture("SUCCESS") as (w, c, message):
+            response = request(self.a, "DELETE", f"/conversation/{c}")
+            self.assertEqual(response.status_code, 204, "Fixture conversation cannot be deleted")
+            response = request(self.a, "GET", f"/world/{w}/messages/{message}/research")
+            self.assertEqual(response.status_code, 404, "An existing workflow exposes a deleted source message")
+
+    def test_research_retry_rejects_ineligible_states(self):
+        for state in ("PENDING", "ENQUEUED", "DELAYED", "SUCCESS", "CANCELLED"):
+            with self.subTest(state=state), self.research_status_fixture(state) as (w, _, message):
+                response = request(self.a, "POST", f"/world/{w}/messages/{message}/research/retry")
+                self.assertEqual(response.status_code, 409, "Retry launches research in an ineligible state")
+
+    def test_research_retry_enforces_access_and_user_role(self):
+        with self.source_messages_fixture() as (w, _, messages):
+            path = f"/world/{w}/messages/{messages[0]['id']}/research/retry"
+            self.assertEqual(request(self.b, "POST", path).status_code, 404, "Foreign user starts private research")
+            self.assertEqual(request(requests.Session(), "POST", path).status_code, 401, "Anonymous user starts research")
+            for message in messages[1:]:
+                response = request(self.a, "POST", f"/world/{w}/messages/{message['id']}/research/retry")
+                self.assertEqual(response.status_code, 422, "Assistant or tool text becomes user canon")
+
+    def test_research_retry_resumes_exhausted_workflow(self):
+        with self.research_status_fixture("MAX_RECOVERY_ATTEMPTS_EXCEEDED") as (w, _, message):
+            try:
+                path = f"/world/{w}/messages/{message}/research"
+                response = request(self.a, "POST", path + "/retry")
+                self.assertEqual(response.status_code, 200, "Recovery-exhausted workflow cannot resume")
+                self.assertEqual(sql(f"SELECT workflow_id FROM message_research_workflows WHERE message_id='{message}'"),
+                                 message, "Resume unnecessarily changes workflow identity")
+                self.assertEqual(request(self.a, "GET", path).json(), {"status": "queued"},
+                                 "Resume remains reported as failed")
+            finally:
+                sql(f"DELETE FROM message_research_workflows WHERE message_id='{message}'")
+
+    def test_research_retry_tracks_fork_and_blocks_duplicate(self):
+        with self.research_status_fixture("ERROR") as (w, _, message):
+            sql(f"INSERT INTO dbos.operation_outputs (workflow_uuid, function_id, function_name, output) "
+                f"VALUES ('{message}', 0, 'qa_checkpoint', '{{}}')")
+            path = f"/world/{w}/messages/{message}/research"
+            try:
+                with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+                    responses = list(executor.map(lambda _: request(self.a, "POST", path + "/retry"), range(2)))
+                self.assertEqual(sorted(r.status_code for r in responses), [200, 409],
+                                 "Concurrent retry creates duplicate forks or fails to submit")
+                active = sql(f"SELECT workflow_id FROM message_research_workflows WHERE message_id='{message}'")
+                self.assertTrue(active and active != message, "Retry loses the new fork ID")
+                self.assertEqual(request(self.a, "GET", path).json(), {"status": "queued"},
+                                 "Polling still reports the original failed workflow")
+                sql(f"UPDATE dbos.workflow_status SET status='SUCCESS' WHERE workflow_uuid='{active}'")
+                self.assertEqual(request(self.a, "GET", path).json(), {"status": "completed"},
+                                 "Polling does not follow retry completion")
+                sql(f"UPDATE dbos.workflow_status SET status='ERROR' WHERE workflow_uuid='{active}'")
+                sql(f"INSERT INTO dbos.operation_outputs (workflow_uuid, function_id, function_name, output) "
+                    f"VALUES ('{active}', 0, 'qa_checkpoint', '{{}}') ON CONFLICT DO NOTHING")
+                response = request(self.a, "POST", path + "/retry")
+                self.assertEqual(response.status_code, 200, "A second failed attempt cannot be retried")
+                newest = sql(f"SELECT workflow_id FROM message_research_workflows WHERE message_id='{message}'")
+                self.assertNotIn(newest, (message, active), "Second retry forks the wrong attempt")
+            finally:
+                sql(f"DELETE FROM message_research_workflows WHERE message_id='{message}'")
+                sql(f"DELETE FROM dbos.workflow_status WHERE name='qa_status_fixture' "
+                    f"AND application_version='qa-status-{message}' AND workflow_uuid<>'{message}'")
+
     def test_source_message_route_preserves_all_roles(self):
         with self.source_messages_fixture() as (w, c, messages):
             for message in messages:

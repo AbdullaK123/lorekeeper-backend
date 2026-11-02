@@ -1,5 +1,28 @@
 # Backend test findings — 2026-10-26
 
+## Research retry feature — 2026-11-02
+
+All 43 free native database regressions pass in 9.17 seconds, including a new scripted submission test.
+The new test checks saved source text, earlier-only history, completion, tracking, and completed-job rejection.
+Nine retry/status HTTP tests pass in 9.475 seconds; their wrapper takes 10.93 seconds.
+New HTTP coverage verifies access, user-message roles, blocked states, exhausted-job resume,
+concurrent duplicate rejection, repeated failure forks, and current-attempt polling.
+Workflow fixtures use isolated application versions so no provider executes them.
+Migration applies successfully to local QA and development databases. No paid model calls run.
+All-target compile check passes. The wider unit run fails the existing retrieval duplicate-ranking assertion
+(11 pass, 1 fail); no retrieval implementation changes are part of this feature.
+Submission/mapping crash atomicity and deletion cleanup are not guaranteed; see docs/research_retry.md.
+
+## Research-status endpoint — 2026-11-02
+
+One Rust test passes for all seven DBOS state mappings and the not_submitted spelling.
+Five live HTTP tests pass in 6.162 seconds; the Rust wrapper takes 8.21 seconds.
+Coverage includes authentication, ownership, world scope, invalid IDs, missing workflows, and deleted messages.
+An unknown stored DBOS status produces 500 instead of not_submitted.
+The same malformed record remains hidden from a foreign caller with 404.
+This checks a real lookup/decode failure, not a database outage.
+Fixtures use synthetic workflow records. No paid model calls run; the full suite is not rerun.
+
 ## Structured application logging — 2026-11-02
 
 Two new capture tests pass and verify private query text, request bodies, credentials, and internal payloads stay out of application logs.

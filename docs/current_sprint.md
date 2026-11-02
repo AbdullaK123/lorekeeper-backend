@@ -1,5 +1,171 @@
 # Current Sprint
 
+### Research retry feature implementation — 2026-11-02
+
+Completed POST /world/{world_id}/messages/{message_id}/research/retry and service wiring.
+Missing jobs submit saved user text with only earlier messages. ERROR forks the current attempt;
+recovery-exhausted jobs resume. Active, completed, and cancelled jobs return Conflict.
+Rejects assistant/tool messages and checks ownership before DBOS access.
+Status lookup follows the saved current workflow ID, falling back to message ID for original jobs.
+Postgres advisory transaction locks serialize retries per message across application instances.
+Applied the additive mapping migration to local development app_db and isolated lorekeeper_adversarial.
+Offline all-target compile check passes. One scripted submission/history test passes without model calls.
+All 43 free native database regressions pass in 9.17 seconds, including the new submission test.
+Nine live retry/status HTTP tests pass in 9.475 seconds; wrapper passes in 10.93 seconds.
+Verified concurrent retries create one fork, second failed attempts fork the latest job,
+status follows retry completion, exhausted workflows resume, and invalid roles/states/access are rejected.
+The broader all-target unit run has 11 passing tests and one unrelated retrieval duplicate-ranking failure.
+No retrieval code changed. No paid model calls run. Whitespace check passes.
+Documented the API in docs/research_retry.md.
+Limits remain explicit: DBOS submission and mapping persistence use separate commits;
+a crash between them can leave an untracked fork. JSONB messages provide no mapping foreign key,
+so conversation deletion does not clean mapping rows or cancel running research.
+Client integration remains outside this backend task.
+
+### Fork ID override check — 2026-11-02
+
+Verified installed ForkOptions: LastFailure does not accept a caller-chosen forked_id.
+Beginning/Step allow a chosen ID, but the original message ID already identifies an existing workflow.
+No implementation changes or runtime checks. Mapping remains the current proposed way to follow forked retries.
+
+### Retry workflow ID clarification — 2026-11-02
+
+Rechecked the current retry code and installed fork documentation.
+NotSubmitted explicitly sets the original message ID in StartOptions; it needs no mapping.
+Failed calls fork with the source workflow ID, producing a different workflow ID by default.
+The mapping is needed only for following forked retries under the current design, not for every submission.
+No implementation changes or tests for this clarification.
+
+### Research workflow mapping repository methods — 2026-11-02
+
+Added set_research_workflow with an upsert and get_research_workflow returning Option<String>.
+Both methods use bound SQL parameters and InfrastructureError, matching the repository error boundary.
+Queries use runtime SQLx APIs; offline metadata is unchanged and does not validate these new SQL strings.
+Offline all-target cargo check passes in 7.35 seconds with warnings. Whitespace check passes.
+Migration application and database behavior remain unverified. Service wiring and deletion cleanup remain unfinished.
+
+### Message research workflow mapping migration — 2026-11-02
+
+Added 20261102000000_add_message_research_workflows.sql.
+The table maps each source message UUID to its current DBOS workflow ID as text.
+message_id is the primary key, allowing one current workflow per message.
+Messages remain in JSONB, so the table has no message foreign key.
+Whitespace check passes. Migration is not applied or database-tested.
+Repository upsert/read methods, retry/status integration, and deletion cleanup remain unfinished.
+
+### Retry submission compile verification — 2026-11-02
+
+Confirmed typed DBOS submission errors now map explicitly to ServiceError::InternalError.
+Offline all-target cargo check passes in 7.65 seconds with warnings.
+No runtime tests run; retry behavior is not verified by compilation.
+Next: track the workflow ID returned by fork so status polling follows the retry.
+Raw failure-state handling and HTTP retry wiring remain unfinished.
+
+### Retry saved-file follow-up — 2026-11-02
+
+Confirmed the corrected source-history prefix remains on disk.
+Submission still calls error.into(); ServiceError still converts only the default dbos::Error type.
+Next correction: map the typed submission error explicitly or add an appropriate conversion.
+Inspection only; no new compilation or runtime checks.
+
+### Retry history fix reapplied — 2026-11-02
+
+A fresh disk read showed the old unwrap and invalid .f(...) call instead of the earlier patch.
+Reapplied the ID-position lookup and owned prefix collection; reread the file to confirm the saved change.
+ResearchInput now consumes earlier_messages directly. No runtime tests or new compilation run.
+The separate DBOS submission-error conversion remains unresolved.
+
+### Retry history prefix fix — 2026-11-02
+
+Replaced the source-only filter with an ID-position lookup and the prefix before that position.
+Moves earlier messages into ResearchInput without cloning the message list.
+Missing conversations or source messages now return NotFound instead of panicking.
+Offline all-target cargo check fails at the separate submission-error conversion on conversation.rs:329.
+start_with returns dbos::Error<ServiceError>; existing From handles only the default dbos::Error type.
+No runtime tests run. Error conversion and previously recorded retry design issues remain unfinished.
+
+### Retry history trimming review — 2026-11-02
+
+The new slice removes only the final conversation message, not the source and all later messages.
+Its len(...) call also uses invalid Rust syntax.
+Next: find the source message position by ID and keep the prefix before that position.
+Inspection only; no tests or compile checks run. Other retry issues remain open.
+
+### Retry error propagation review — 2026-11-02
+
+Confirmed submission failures now return errors and the wildcard branch returns Conflict.
+Next correction: retry input must contain only conversation messages before the source message.
+Current history includes the source, its reply, and any later turns.
+Fork status tracking, raw failure-state handling, and unchecked conversation lookup remain unfinished.
+Inspection only; no compile or runtime checks run.
+
+### Retry response follow-up — 2026-11-02
+
+Reviewed the updated retry return branches by inspection.
+NotSubmitted still logs submission failure and returns Queued afterward; failure propagation remains missing.
+The wildcard branch still returns unit, so the method remains incomplete.
+Failed fork tracking and source-history scope remain unresolved. No tests or compile checks run.
+
+### Retry local-name correction review — 2026-11-02
+
+Confirmed saved message reuse, self.research_job, and saved.conversation_id replace the undefined local names.
+Next: propagate submission errors and return ResearchStatusResponse after accepted submission.
+Other retry branches, history scope, unchecked conversation lookup, and fork status tracking remain unfinished.
+Inspection only; no compilation or tests run.
+
+### Retry submission follow-up review — 2026-11-02
+
+Reviewed the current retry method by inspection; it remains unfinished.
+saved, service, and the logging id are undefined; match branches do not return the declared result.
+The submission error branch logs without propagating failure.
+History currently includes the whole conversation rather than only messages before the source.
+Next: retain the checked message result, correct local names, then finish error/response handling and history scope.
+No compile or runtime tests run for this review.
+
+### Retry message-content guidance — 2026-11-02
+
+Inspected Message and MessageResponse while reviewing the unfinished retry method.
+Explained matching Message::User to extract owned content and rejecting assistant/tool messages.
+Reuse the checked get_message result instead of fetching again with unwrap.
+No implementation edits or tests; retry submission and history reconstruction remain unfinished.
+
+### Retry branch guidance — 2026-11-02
+
+Reviewed the retry scaffold and installed Client enqueue APIs.
+NotSubmitted needs a new submission using saved user content and earlier history; existing WorkflowRef::start_with can be reused.
+Running, Queued, Completed, and Cancelled need no DBOS mutation under the current retry policy.
+Failed combines ERROR and MAX_RECOVERY_ATTEMPTS_EXCEEDED; inspect raw state before selecting fork or resume.
+Retry-ID tracking and response behavior remain unfinished. No tests run for this guidance.
+
+### Installed DBOS retry API check — 2026-11-02
+
+Inspected DBOS 0.5.0 management APIs and Postgres resume implementation.
+Client::resume does not re-enqueue ERROR or SUCCESS workflows.
+Client::fork with ForkFrom::LastFailure creates a new workflow and preserves earlier checkpoints.
+This corrects the earlier generic advice to resume any failed workflow.
+The new workflow ID must be tracked for status lookup; current lookup uses the source message ID.
+No implementation or runtime tests for this API check.
+
+### Research retry scaffold review — 2026-11-02
+
+Reviewed retry_research_run by inspection using the code-review-mentor skill.
+The method checks message access and allows only Failed into the retry branch.
+NotSubmitted, Running, Queued, Completed, and Cancelled currently enter rejection branches.
+All branch bodies remain placeholders; retry and response behavior are not implemented.
+Next decision: whether NotSubmitted should support submission through this recovery endpoint.
+No compilation or runtime tests run for this review.
+
+### Research-status endpoint tests — 2026-11-02
+
+Added one Rust mapping test and five live HTTP tests for the research-status endpoint.
+All seven stored DBOS states map to the expected public status.
+Verified not_submitted, authentication, ownership, world scope, invalid IDs, and deleted messages.
+An unknown stored DBOS status returns 500; a foreign caller still receives 404.
+The lookup-error test uses malformed stored data, not a database outage.
+The Rust test passes. Five HTTP tests pass in 6.162 seconds; their wrapper takes 8.21 seconds.
+No paid model calls run. These results close the pending endpoint behavior tests below.
+Full-suite testing and live research execution are outside this focused run.
+
 ### Application logging pass — 2026-11-02
 
 Added structured service/repository spans with skipped arguments and explicit typed IDs where available.

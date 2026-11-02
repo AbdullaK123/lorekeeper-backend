@@ -17,6 +17,50 @@ impl ConversationRepository {
         Self { pool }
     }
 
+    pub async fn lock_research_retry(
+        &self,
+        message_id: Uuid,
+    ) -> Result<sqlx::Transaction<'_, sqlx::Postgres>, InfrastructureError> {
+        let mut transaction = self.pool.begin().await?;
+        sqlx::query("SELECT pg_advisory_xact_lock(hashtextextended($1, 0))")
+            .bind(message_id.to_string())
+            .execute(&mut *transaction)
+            .await?;
+        Ok(transaction)
+    }
+
+    #[tracing::instrument(name = "repository.conversation.set_research_workflow", level = "debug", skip_all, fields(%message_id))]
+    pub async fn set_research_workflow(
+        &self,
+        message_id: Uuid,
+        workflow_id: &str,
+    ) -> Result<(), InfrastructureError> {
+        sqlx::query(
+            "INSERT INTO message_research_workflows (message_id, workflow_id)
+             VALUES ($1, $2)
+             ON CONFLICT (message_id) DO UPDATE SET workflow_id = EXCLUDED.workflow_id",
+        )
+        .bind(message_id)
+        .bind(workflow_id)
+        .execute(&self.pool)
+        .await?;
+        Ok(())
+    }
+
+    #[tracing::instrument(name = "repository.conversation.get_research_workflow", level = "debug", skip_all, fields(%message_id))]
+    pub async fn get_research_workflow(
+        &self,
+        message_id: Uuid,
+    ) -> Result<Option<String>, InfrastructureError> {
+        let workflow_id = sqlx::query_scalar::<_, String>(
+            "SELECT workflow_id FROM message_research_workflows WHERE message_id = $1",
+        )
+        .bind(message_id)
+        .fetch_optional(&self.pool)
+        .await?;
+        Ok(workflow_id)
+    }
+
     #[tracing::instrument(name = "repository.conversation.create", level = "debug", skip_all)]
     pub async fn create(
         &self,
