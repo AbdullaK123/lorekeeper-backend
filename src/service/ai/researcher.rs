@@ -83,6 +83,7 @@ impl ResearcherService {
             .build()
     }
 
+    #[tracing::instrument(name = "researcher.process_message", level = "info", skip_all, fields(world_id = %world_id, conversation_id = %conversation_id, source_message_id = %source_message_id))]
     pub async fn process_message(
         &self,
         world_id: Uuid,
@@ -91,6 +92,10 @@ impl ResearcherService {
         message: &str,
         history: &[Message],
     ) -> dbos::Result<String, ServiceError> {
+        tracing::debug!(
+            history_messages = history.len(),
+            "preparing research context"
+        );
         let world_id = world_id.to_string();
         let conversation_id = conversation_id.to_string();
         let source_message_id = source_message_id.to_string();
@@ -123,17 +128,30 @@ pub(crate) async fn run_durable_agent(
                 prompt, history, ..
             } => {
                 let response = dbos::step("research_model", || async {
+                    let started = std::time::Instant::now();
+                    tracing::debug!(history_messages = history.len(), "calling research model");
                     let request = CompletionRequest::new(prompt.clone())
                         .messages(history.clone())
                         .preamble(preamble)
                         .tools(definitions.clone());
-                    let response = model.call(request).await.map_err(ServiceError::from)?;
+                    let response = model
+                        .call(request)
+                        .await
+                        .inspect_err(|_| {
+                            tracing::warn!("research model request failed");
+                        })
+                        .map_err(ServiceError::from)?;
+                    tracing::debug!(
+                        elapsed_ms = started.elapsed().as_millis() as u64,
+                        "research model request completed"
+                    );
                     Ok::<_, dbos::Error<ServiceError>>(response)
                 })
                 .await?;
                 let turn = ModelTurn::from_response_parts(&response, names.clone(), names.clone());
                 let outcome = run.model_response(turn).map_err(ServiceError::from)?;
                 if let ModelTurnOutcome::NeedsResolution(_) = outcome {
+                    tracing::warn!("research model produced an invalid tool request");
                     run.resolve_invalid_tool_call(InvalidToolCallAction::fail())
                         .map_err(ServiceError::from)?;
                 }
@@ -147,6 +165,8 @@ pub(crate) async fn run_durable_agent(
                     }
                     let call = pending.tool_call;
                     let result = dbos::step("research_tool", || async {
+                        let started = std::time::Instant::now();
+                        tracing::debug!(tool_name = %call.function.name, "executing research tool");
                         let mut context = ToolContext::new();
                         let result = agent
                             .tool_server_handle()
@@ -156,6 +176,8 @@ pub(crate) async fn run_durable_agent(
                                 &mut context,
                             )
                             .await;
+                        tracing::debug!(tool_name = %call.function.name,
+                            elapsed_ms = started.elapsed().as_millis() as u64, "research tool call completed");
                         Ok::<_, dbos::Error<ServiceError>>(UserContent::tool_result(
                             call.id.clone(),
                             call.function.name.clone(),

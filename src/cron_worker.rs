@@ -14,14 +14,15 @@ pub async fn start_scheduler(
     let job = Job::new_async("*/5 * * * * *", move |_, _| {
         let cleanup_service = cleanup_service.clone();
         Box::pin(async move {
-            if let Err(error) = cleanup_service.run_once().await {
-                tracing::error!("world cleanup failed: {error}");
+            if cleanup_service.run_once().await.is_err() {
+                tracing::error!("world cleanup batch failed");
             }
         })
     })?;
 
     scheduler.add(job).await?;
     scheduler.start().await?;
+    tracing::info!(interval_seconds = 5, "world cleanup scheduler started");
 
     Ok(scheduler)
 }

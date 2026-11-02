@@ -4,7 +4,8 @@ use crate::data::{
     ConflictDecision, ConflictListQuery, ConflictResponse, ConversationItemsResponse,
     ConversationResponse, CreateConversationRequest, CreateWorldRequest, EntityListQuery,
     EntityResponse, EntitySearchQuery, GraphQuery, GraphResponse, MessageResponse, NeighborQuery,
-    RelationshipResponse, ResolveConflictRequest, UpdateWorldRequest, WorldResponse,
+    RelationshipResponse, ResearchStatusResponse, ResolveConflictRequest, UpdateWorldRequest,
+    WorldResponse,
 };
 use crate::shared::PageResponse;
 use axum::extract::{Path, State};
@@ -221,9 +222,25 @@ async fn get_message(
     ))
 }
 
+async fn get_researcher_status(
+    State(ctx): State<AppState>,
+    UserId(user_id): UserId,
+    Path((world_id, message_id)): Path<(Uuid, Uuid)>,
+) -> Result<Json<ResearchStatusResponse>, AppError> {
+    Ok(Json(
+        ctx.conversation_service
+            .get_researcher_status(world_id, user_id, message_id)
+            .await?,
+    ))
+}
+
 pub fn create_world_controller() -> Router<AppState> {
     Router::new()
         .route("/{world_id}/messages/{message_id}", get(get_message))
+        .route(
+            "/{world_id}/messages/{message_id}/research",
+            get(get_researcher_status),
+        )
         .route("/{world_id}/graph", get(get_graph))
         .route("/{world_id}/entities", get(list_entities))
         .route("/{world_id}/entities/search", get(search_entities))

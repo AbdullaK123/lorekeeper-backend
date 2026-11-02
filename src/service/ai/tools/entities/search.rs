@@ -35,11 +35,13 @@ impl PortableTool for SearchWorld {
         serde_json::to_value(schemars::schema_for!(SearchWorldArgs)).unwrap()
     }
 
+    #[tracing::instrument(name = "tool.search_world", level = "debug", skip_all)]
     async fn call(&self, args: Self::Args) -> Result<Self::Output, Self::Error> {
         let hits = self
             .retrieval_service
             .search(args.query.as_str(), &self.world_id, 60.0)
             .await?;
+        tracing::debug!(world_id = %self.world_id, result_count = hits.len(), "world search tool completed");
         Ok(format_hits(&hits))
     }
 }

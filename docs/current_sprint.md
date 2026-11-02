@@ -1,5 +1,84 @@
 # Current Sprint
 
+### Application logging pass — 2026-11-02
+
+Added structured service/repository spans with skipped arguments and explicit typed IDs where available.
+Added lifecycle events for startup, database connections, prompt loading, auth, chat storage/submission,
+research model/tool execution, graph commits/rollback attempts, conflict records, cleanup, and shutdown.
+Routine repository details remain at debug. Private input and raw provider/database error text are omitted from new application logs.
+Replaced full-URI HTTP spans with method and matched-route templates so search query text stays private.
+Added logging documentation with application-only debug configuration and correlation guidance.
+Two log-capture tests pass: query/body/credential redaction and internal failure-payload exclusion.
+The first native run was stopped after detecting the missing project Postgres service on port 5433.
+Restored only the Compose app-db service using its existing volume; the QA database and migrations remain intact.
+After restoration, all 42 free native regressions pass in 7.36 seconds, including DBOS replay and transaction rollback.
+Six selected HTTP regressions pass in 5.873 seconds; their Rust wrapper passes in 6.44 seconds.
+Final all-target offline cargo check passes with existing warnings. Changed-file whitespace checks pass.
+No paid model calls run. Research-status endpoint behavior tests remain a separate pending task.
+
+### Research-status route review — 2026-11-02
+
+Reviewed GET /world/{world_id}/messages/{message_id}/research and its controller by inspection.
+Handler forwards authenticated user and parsed UUIDs to ConversationService::get_researcher_status.
+Service checks message access before DBOS lookup; missing workflows map to NotSubmitted and existing states map explicitly.
+No new compile/runtime checks for this review. Next: status mapping, HTTP access, and DBOS-error behavior tests.
+
+### DBOS service-error conversion — 2026-11-02
+
+Added From<dbos::Error> for ServiceError, mapping lookup failures to InternalError with the original error text.
+This lets the research-status method propagate DBOS failures with await? without reporting NotSubmitted.
+Changed-file whitespace check passes. All-target offline cargo check passes with existing warnings after a dependency rebuild (2m 38s).
+No runtime tests or paid model calls. Status endpoint wiring and behavioral tests remain pending.
+
+### Research status mapping review — 2026-11-02
+
+Confirmed all installed workflow states now map correctly to the intended API states, including Queued and Cancelled.
+The service still needs DBOS error handling for workflow_status(...).await?.
+No code changes or compile/runtime checks for this review. HTTP wiring and status tests remain pending.
+
+### Missing research workflow response review — 2026-11-02
+
+Confirmed get_researcher_status now returns NotSubmitted for an owned message without a workflow record.
+Next correction: introduce Queued for existing Enqueued/Delayed workflows; preserve the distinct Cancelled state.
+DBOS error conversion and HTTP wiring remain unfinished. Inspection only; no tests run.
+
+### Research client startup correction review — 2026-11-02
+
+Confirmed bootstrap now handles Client::connect failure with expect, matching existing startup behavior.
+Next correction: map an owned message without a workflow to a successful NotSubmitted response.
+Enqueued/Delayed mapping and DBOS-to-service error handling remain unfinished by inspection.
+No compile/runtime checks for this follow-up.
+
+### Research client bootstrap review — 2026-11-02
+
+Confirmed the client is now created after DBOS setup and passed to ConversationService.
+Found await? in bootstrap despite its tuple return type; startup error handling still needs correction.
+Snake-case status serialization is added. Missing-workflow and Enqueued/Delayed mappings remain unchanged from the previous review.
+No compile/runtime checks for this inspection.
+
+### Research status implementation review — 2026-11-02
+
+Reviewed the new ConversationService status method and ResearchStatus mapping by inspection.
+Message ownership lookup correctly precedes DBOS access.
+Found two response-contract issues: missing workflows return NotFound instead of NotSubmitted,
+and existing Enqueued/Delayed workflows map to NotSubmitted instead of a waiting state.
+No code changes or compile/runtime checks for this review. Bootstrap/client wiring still needs verification.
+
+### DBOS status API lookup — 2026-11-02
+
+Verified installed DBOS 0.5.0 exposes Client::connect(ClientConfig) and workflow_status(workflow_id).
+workflow_status returns Result<Option<WorkflowStatus>>: missing workflow is None; database failures remain errors.
+WorkflowHandle::status also exists, but reports an unknown workflow as WorkflowNotFound.
+Status lookup is a one-shot read, distinct from awaiting workflow result completion.
+No implementation or tests for this API explanation.
+
+### Research-status learning session — 2026-11-02
+
+Started a focused explanation of background workflow state and user-visible progress.
+Reviewed current chat/job submission and installed DBOS 0.5 workflow statuses before teaching.
+Key distinction: saved chat and completed research are separate outcomes; workflow state is not a completion percentage.
+No implementation or tests for this teaching step. Status endpoint and status mapping remain design work.
+
 ### Source-message HTTP endpoint — 2026-11-01
 
 Wired GET /world/{world_id}/messages/{message_id} in the world controller.

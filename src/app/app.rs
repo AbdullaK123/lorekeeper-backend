@@ -30,6 +30,7 @@ pub struct AppState {
 }
 
 pub async fn create_app() -> (Router, JobScheduler, DBOS) {
+    tracing::info!("initializing application");
     let settings = load_settings();
     let config = load_config();
     let pool = create_pool(&settings, &config.db).await;
@@ -46,6 +47,7 @@ pub async fn create_app() -> (Router, JobScheduler, DBOS) {
         .layer(settings.cors_layer())
         .with_state(app_state);
 
+    tracing::info!("application routes and middleware ready");
     (app, scheduler, dbos)
 }
 
@@ -54,6 +56,7 @@ async fn bootstrap(
     graph: Graph,
     settings: &Settings,
 ) -> (AppState, JobScheduler, DBOS) {
+    tracing::info!("assembling application services");
     let graph_repo = GraphRepository::new(graph.clone());
     let user_repo = UserRepository::new(pool.clone());
     let world_repo = WorldRepository::new(pool.clone());
@@ -65,6 +68,7 @@ async fn bootstrap(
         .ensure_constraints()
         .await
         .expect("Failed to ensure constraints");
+    tracing::info!("graph constraints and indexes ready");
 
     let client = openrouter::from_env().expect("OPENROUTER_API_KEY not set");
 
@@ -93,12 +97,17 @@ async fn bootstrap(
         .await
         .expect("Failed to initialize dbos");
 
+    let dbos_client = dbos::Client::connect(dbos::ClientConfig::new(&settings.database_url))
+        .await
+        .expect("Failed to initialize dbos client.");
+
     let conversation_service = ConversationService::new(
         conversation_repo,
         world_repo,
         retrieval_service,
         agent_factory,
         research,
+        dbos_client,
     );
 
     let app_state = AppState {
@@ -113,5 +122,6 @@ async fn bootstrap(
         .await
         .expect("Failed to start the world cleanup scheduler");
 
+    tracing::info!("application services ready");
     (app_state, scheduler, dbos)
 }

@@ -1,6 +1,6 @@
 use crate::app::world;
-use crate::data::{ConversationRow, MessageRow};
 use crate::data::Message;
+use crate::data::{ConversationRow, MessageRow};
 use crate::infrastructure::InfrastructureError;
 use serde_json;
 use sqlx::PgPool;
@@ -17,6 +17,7 @@ impl ConversationRepository {
         Self { pool }
     }
 
+    #[tracing::instrument(name = "repository.conversation.create", level = "debug", skip_all)]
     pub async fn create(
         &self,
         world_id: Uuid,
@@ -43,6 +44,11 @@ impl ConversationRepository {
         Ok(result)
     }
 
+    #[tracing::instrument(
+        name = "repository.conversation.update_title",
+        level = "debug",
+        skip_all
+    )]
     pub async fn update_title(
         &self,
         id: Uuid,
@@ -70,6 +76,11 @@ impl ConversationRepository {
         Ok(result)
     }
 
+    #[tracing::instrument(
+        name = "repository.conversation.append_messages",
+        level = "debug",
+        skip_all
+    )]
     pub async fn append_messages(
         &self,
         id: Uuid,
@@ -100,6 +111,7 @@ impl ConversationRepository {
         Ok(result)
     }
 
+    #[tracing::instrument(name = "repository.conversation.get_by_id", level = "debug", skip_all)]
     pub async fn get_by_id(
         &self,
         id: Uuid,
@@ -127,6 +139,11 @@ impl ConversationRepository {
         Ok(result)
     }
 
+    #[tracing::instrument(
+        name = "repository.conversation.get_by_world_id",
+        level = "debug",
+        skip_all
+    )]
     pub async fn get_by_world_id(
         &self,
         world_id: Uuid,
@@ -154,6 +171,7 @@ impl ConversationRepository {
         Ok(result)
     }
 
+    #[tracing::instrument(name = "repository.conversation.delete", level = "debug", skip_all)]
     pub async fn delete(&self, id: Uuid, user_id: Uuid) -> Result<bool, InfrastructureError> {
         let result = sqlx::query!(
             r#"
@@ -167,6 +185,11 @@ impl ConversationRepository {
         Ok(result.rows_affected() > 0)
     }
 
+    #[tracing::instrument(
+        name = "repository.conversation.get_message",
+        level = "debug",
+        skip_all
+    )]
     pub async fn get_message(
         &self,
         world_id: Uuid,

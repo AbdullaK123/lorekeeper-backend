@@ -890,3 +890,6 @@ mod conflict_targets;
 
 #[path = "cases/message_lookup.rs"]
 mod message_lookup;
+
+#[path = "cases/logging.rs"]
+mod logging;

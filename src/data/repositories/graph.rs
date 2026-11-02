@@ -34,6 +34,7 @@ impl GraphRepository {
         while let Some(row) = result.next().await? {
             rows.push(T::from_row(&row, alias)?)
         }
+        tracing::debug!(row_count = rows.len(), "graph rows loaded");
         Ok(rows)
     }
 
@@ -50,6 +51,11 @@ impl GraphRepository {
     }
 
     /// Idempotent: Memgraph skips a constraint that already exists. Run once at startup.
+    #[tracing::instrument(
+        name = "repository.graph.ensure_constraints",
+        level = "debug",
+        skip_all
+    )]
     pub async fn ensure_constraints(&self) -> Result<(), InfrastructureError> {
         self.graph
             .run(query(
@@ -76,6 +82,7 @@ impl GraphRepository {
         Ok(())
     }
 
+    #[tracing::instrument(name = "repository.graph.update_entity", level = "debug", skip_all)]
     pub async fn update_entity(
         &self,
         id: &str,
@@ -110,6 +117,7 @@ impl GraphRepository {
         Ok(result.next().await?.is_some())
     }
 
+    #[tracing::instrument(name = "repository.graph.delete_entity", level = "debug", skip_all)]
     pub async fn delete_entity(
         &self,
         id: &str,
@@ -141,6 +149,7 @@ impl GraphRepository {
         Ok(exists)
     }
 
+    #[tracing::instrument(name = "repository.graph.get_entity", level = "debug", skip_all)]
     pub async fn get_entity(
         &self,
         id: &str,
@@ -157,6 +166,7 @@ impl GraphRepository {
 
     /// Page entities by ID, then load directed relationships within that page.
     /// The cursor is the last returned entity ID; callers must check world ownership.
+    #[tracing::instrument(name = "repository.graph.get_graph", level = "debug", skip_all)]
     pub async fn get_graph(
         &self,
         world_id: &str,
@@ -213,6 +223,7 @@ impl GraphRepository {
 
     /// Page world entities by ID, with an optional exact kind filter.
     /// Callers must check world ownership before calling this method.
+    #[tracing::instrument(name = "repository.graph.list_entities", level = "debug", skip_all)]
     pub async fn list_entities(
         &self,
         world_id: &str,
@@ -253,6 +264,11 @@ impl GraphRepository {
         Ok((entities, next_cursor))
     }
 
+    #[tracing::instrument(
+        name = "repository.graph.get_entities_by_world",
+        level = "debug",
+        skip_all
+    )]
     pub async fn get_entities_by_world(
         &self,
         world_id: &str,
@@ -267,6 +283,11 @@ impl GraphRepository {
 
     /// Entities whose name or any alias matches one of `names` (compared via `name_key`).
     /// This is how extraction finds `existing_entities` for a message.
+    #[tracing::instrument(
+        name = "repository.graph.find_entities_by_names",
+        level = "debug",
+        skip_all
+    )]
     pub async fn find_entities_by_names(
         &self,
         world_id: &str,
@@ -287,6 +308,11 @@ impl GraphRepository {
         .await
     }
 
+    #[tracing::instrument(
+        name = "repository.graph.get_entity_neighbors",
+        level = "debug",
+        skip_all
+    )]
     pub async fn get_entity_neighbors(
         &self,
         id: &str,
@@ -324,6 +350,11 @@ impl GraphRepository {
 
     /// Page connecting relationships by ID and return their neighboring entities.
     /// The cursor is the last returned relationship ID; callers must check world ownership.
+    #[tracing::instrument(
+        name = "repository.graph.get_entity_neighbors_page",
+        level = "debug",
+        skip_all
+    )]
     pub async fn get_entity_neighbors_page(
         &self,
         id: &str,
@@ -376,6 +407,7 @@ impl GraphRepository {
         Ok((items, next_cursor))
     }
 
+    #[tracing::instrument(name = "repository.graph.get_relationship", level = "debug", skip_all)]
     pub async fn get_relationship(
         &self,
         id: &str,
@@ -389,6 +421,11 @@ impl GraphRepository {
         ).await
     }
 
+    #[tracing::instrument(
+        name = "repository.graph.update_relationship",
+        level = "debug",
+        skip_all
+    )]
     pub async fn update_relationship(
         &self,
         id: &str,
@@ -416,6 +453,11 @@ impl GraphRepository {
         Ok(result.next().await?.is_some())
     }
 
+    #[tracing::instrument(
+        name = "repository.graph.delete_relationship",
+        level = "debug",
+        skip_all
+    )]
     pub async fn delete_relationship(
         &self,
         id: &str,
@@ -445,6 +487,11 @@ impl GraphRepository {
 
     // --- Conversations ---
 
+    #[tracing::instrument(
+        name = "repository.graph.create_conversation",
+        level = "debug",
+        skip_all
+    )]
     pub async fn create_conversation(
         &self,
         conversation: &Conversation,
@@ -468,6 +515,11 @@ impl GraphRepository {
         Ok(())
     }
 
+    #[tracing::instrument(
+        name = "repository.graph.update_conversation",
+        level = "debug",
+        skip_all
+    )]
     pub async fn update_conversation(
         &self,
         id: &str,
@@ -490,6 +542,11 @@ impl GraphRepository {
         Ok(result.next().await?.is_some())
     }
 
+    #[tracing::instrument(
+        name = "repository.graph.delete_conversation",
+        level = "debug",
+        skip_all
+    )]
     pub async fn delete_conversation(
         &self,
         id: &str,
@@ -516,6 +573,7 @@ impl GraphRepository {
         Ok(exists)
     }
 
+    #[tracing::instrument(name = "repository.graph.get_conversation", level = "debug", skip_all)]
     pub async fn get_conversation(
         &self,
         id: &str,
@@ -532,6 +590,7 @@ impl GraphRepository {
 
     // --- Conflicts ---
 
+    #[tracing::instrument(name = "repository.graph.get_conflicts", level = "debug", skip_all)]
     pub async fn get_conflicts(
         &self,
         world_id: &str,
@@ -551,6 +610,7 @@ impl GraphRepository {
             .await?)
     }
 
+    #[tracing::instrument(name = "repository.graph.list_conflicts", level = "debug", skip_all)]
     pub async fn list_conflicts(
         &self,
         world_id: &str,
@@ -591,6 +651,7 @@ impl GraphRepository {
         Ok((conflicts, next_cursor))
     }
 
+    #[tracing::instrument(name = "repository.graph.update_conflict", level = "debug", skip_all)]
     pub async fn update_conflict(
         &self,
         id: &str,
@@ -615,6 +676,7 @@ impl GraphRepository {
 
     /// Keep the current fact and record the writer's decision in the same query.
     /// Callers must check world ownership before resolving a conflict.
+    #[tracing::instrument(name = "repository.graph.resolve_conflict", level = "debug", skip_all)]
     pub async fn resolve_conflict(
         &self,
         id: &str,
@@ -636,6 +698,7 @@ impl GraphRepository {
 
     /// Accept a saved claim targeting an exact, existing Entity.properties key.
     /// Entity changes and conflict resolution commit together. Callers check ownership.
+    #[tracing::instrument(name = "repository.graph.accept_conflict", level = "debug", skip_all)]
     pub async fn accept_conflict(
         &self,
         conflict_id: &str,
@@ -696,15 +759,27 @@ impl GraphRepository {
         match result {
             Ok(conflict) => {
                 txn.commit().await?;
+                tracing::info!(
+                    world_id,
+                    conflict_id,
+                    found = conflict.is_some(),
+                    "accept-new transaction committed"
+                );
                 Ok(conflict)
             }
             Err(error) => {
+                tracing::warn!(
+                    world_id,
+                    conflict_id,
+                    "accept-new transaction failed; rolling back"
+                );
                 txn.rollback().await?;
                 Err(error)
             }
         }
     }
 
+    #[tracing::instrument(name = "repository.graph.get_conflict", level = "debug", skip_all)]
     pub async fn get_conflict(
         &self,
         id: &str,
@@ -719,6 +794,11 @@ impl GraphRepository {
         .await
     }
 
+    #[tracing::instrument(
+        name = "repository.graph.get_conflicts_by_entity",
+        level = "debug",
+        skip_all
+    )]
     pub async fn get_conflicts_by_entity(
         &self,
         entity_id: &str,
@@ -737,6 +817,11 @@ impl GraphRepository {
 
     // --- Cross-type queries ---
 
+    #[tracing::instrument(
+        name = "repository.graph.get_relationships_by_entity",
+        level = "debug",
+        skip_all
+    )]
     pub async fn get_relationships_by_entity(
         &self,
         entity_id: &str,
@@ -754,6 +839,11 @@ impl GraphRepository {
         .await
     }
 
+    #[tracing::instrument(
+        name = "repository.graph.get_entities_by_conversation",
+        level = "debug",
+        skip_all
+    )]
     pub async fn get_entities_by_conversation(
         &self,
         conversation_id: &str,
@@ -773,6 +863,11 @@ impl GraphRepository {
     }
 
     /// Exact-ID writes. Any failed validation or write rolls back the entire batch.
+    #[tracing::instrument(
+        name = "repository.graph.update_graph_batch",
+        level = "debug",
+        skip_all
+    )]
     pub async fn update_graph_batch(
         &self,
         world_id: &str,
@@ -896,9 +991,17 @@ impl GraphRepository {
         match result {
             Ok(()) => {
                 txn.commit().await?;
+                tracing::info!(
+                    world_id,
+                    entities = entities.len(),
+                    relationships = relationships.len(),
+                    retractions = retracted_ids.len(),
+                    "graph batch committed"
+                );
                 Ok(())
             }
             Err(error) => {
+                tracing::warn!(world_id, "graph batch failed; rolling back");
                 txn.rollback().await?;
                 Err(error)
             }
@@ -908,6 +1011,7 @@ impl GraphRepository {
     // One open conflict per entity field: a retry, or a later message contradicting
     // the same field, updates that conflict instead of adding another.
     // Returns None when the entity doesn't exist in this world.
+    #[tracing::instrument(name = "repository.graph.upsert_conflict", level = "debug", skip_all)]
     pub async fn upsert_conflict(
         &self,
         conflict: &Conflict,
@@ -964,6 +1068,11 @@ impl GraphRepository {
         .await
     }
 
+    #[tracing::instrument(
+        name = "repository.graph.vector_search_entities",
+        level = "debug",
+        skip_all
+    )]
     pub async fn vector_search_entities(
         &self,
         world_id: &str,
@@ -991,6 +1100,11 @@ impl GraphRepository {
         Ok(results)
     }
 
+    #[tracing::instrument(
+        name = "repository.graph.fts_search_entities",
+        level = "debug",
+        skip_all
+    )]
     pub async fn fts_search_entities(
         &self,
         world_id: &str,
@@ -1027,6 +1141,11 @@ impl GraphRepository {
         Ok(results)
     }
 
+    #[tracing::instrument(
+        name = "repository.graph.delete_relationships_by_endpoints",
+        level = "debug",
+        skip_all
+    )]
     pub async fn delete_relationships_by_endpoints(
         &self,
         world_id: &str,
@@ -1061,6 +1180,7 @@ impl GraphRepository {
             .await?)
     }
 
+    #[tracing::instrument(name = "repository.graph.delete_graph", level = "debug", skip_all)]
     pub async fn delete_graph(&self, world_id: &str) -> Result<(), InfrastructureError> {
         Ok(self
             .graph

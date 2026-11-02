@@ -113,18 +113,25 @@ impl RetrievalService {
         entities
     }
 
+    #[tracing::instrument(name = "retrieval.search", level = "info", skip_all)]
     pub async fn search(
         &self,
         query: &str,
         world_id: &str,
         k: f64,
     ) -> Result<Vec<SearchHit>, ServiceError> {
+        let started = std::time::Instant::now();
         let query_embedding = self.embedder.embed_text(query).await?.vec;
         let fts_search_results = self.graph.fts_search_entities(world_id, query, 10).await?;
         let vector_search_results = self
             .graph
             .vector_search_entities(world_id, query_embedding, 10)
             .await?;
+        tracing::debug!(
+            text_hits = fts_search_results.len(),
+            vector_hits = vector_search_results.len(),
+            "hybrid search candidates loaded"
+        );
         let rrf_results = Self::rrf(vec![fts_search_results, vector_search_results], k);
 
         let mut hits = Vec::new();
@@ -135,6 +142,11 @@ impl RetrievalService {
                 .await?;
             hits.push(SearchHit { entity, neighbors });
         }
+        tracing::debug!(
+            result_count = hits.len(),
+            elapsed_ms = started.elapsed().as_millis() as u64,
+            "hybrid retrieval completed"
+        );
         Ok(hits)
     }
 }

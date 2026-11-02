@@ -77,6 +77,19 @@ impl IntoResponse for AppError {
                 (StatusCode::SERVICE_UNAVAILABLE, "downstream", e)
             }
         };
+        if status.is_server_error() {
+            tracing::error!(
+                status = status.as_u16(),
+                error_category = tag,
+                "request failed"
+            );
+        } else {
+            tracing::debug!(
+                status = status.as_u16(),
+                error_category = tag,
+                "request rejected"
+            );
+        }
         (status, Json(json!({"error": tag, "message": message}))).into_response()
     }
 }

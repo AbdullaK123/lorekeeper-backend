@@ -1,6 +1,6 @@
 use crate::data::{
     ConversationItemsResponse, ConversationRepository, ConversationResponse, Message,
-    MessageResponse, WorldRepository,
+    MessageResponse, ResearchStatus, ResearchStatusResponse, WorldRepository,
 };
 use crate::service::{
     ChatAgentFactory, ResearchInput, RetrievalService, ServiceError, format_hits,
@@ -8,6 +8,7 @@ use crate::service::{
 use chrono::Utc;
 use futures::{Stream, StreamExt};
 use rig::agent::MultiTurnStreamItem;
+use serde::Serialize;
 use uuid::Uuid;
 
 #[derive(Clone)]
@@ -17,6 +18,7 @@ pub struct ConversationService {
     retrieval_service: RetrievalService,
     agent_factory: ChatAgentFactory,
     research_job: dbos::WorkflowRef<ResearchInput, String, ServiceError>,
+    dbos_client: dbos::Client,
 }
 
 impl ConversationService {
@@ -26,6 +28,7 @@ impl ConversationService {
         retrieval_service: RetrievalService,
         agent_factory: ChatAgentFactory,
         research_job: dbos::WorkflowRef<ResearchInput, String, ServiceError>,
+        dbos_client: dbos::Client,
     ) -> Self {
         Self {
             conversation_repo,
@@ -33,10 +36,12 @@ impl ConversationService {
             retrieval_service,
             agent_factory,
             research_job,
+            dbos_client,
         }
     }
 
     // create a conversation thread
+    #[tracing::instrument(name = "conversation.create_conversation", level = "info", skip_all, fields(world_id = %world_id, user_id = %user_id))]
     pub async fn create_conversation(
         &self,
         world_id: Uuid,
@@ -57,6 +62,7 @@ impl ConversationService {
     }
 
     // list conversations for a world id
+    #[tracing::instrument(name = "conversation.get_conversations", level = "info", skip_all, fields(world_id = %world_id, user_id = %user_id))]
     pub async fn get_conversations(
         &self,
         world_id: Uuid,
@@ -70,6 +76,7 @@ impl ConversationService {
     }
 
     // get a convo by id
+    #[tracing::instrument(name = "conversation.get_conversation", level = "info", skip_all, fields(id = %id, user_id = %user_id))]
     pub async fn get_conversation(
         &self,
         id: Uuid,
@@ -83,6 +90,7 @@ impl ConversationService {
     }
 
     // append messages to a convo
+    #[tracing::instrument(name = "conversation.append_messages", level = "info", skip_all, fields(id = %id, user_id = %user_id))]
     pub async fn append_messages(
         &self,
         id: Uuid,
@@ -99,6 +107,7 @@ impl ConversationService {
         }
     }
 
+    #[tracing::instrument(name = "conversation.chat_turn", level = "info", skip_all, fields(id = %id, user_id = %user_id))]
     pub async fn chat_turn(
         &self,
         id: Uuid,
@@ -129,6 +138,7 @@ impl ConversationService {
         let service = self.clone();
 
         let events = async_stream::stream! {
+            let started = std::time::Instant::now();
             let mut rig_stream = agent
                 .prompt(content.clone())
                 .history(history)
@@ -148,10 +158,12 @@ impl ConversationService {
                             let source_message_id = message.id();
                             let messages = [message, reply];
                             if let Err(e) = service.append_messages(id, user_id, &messages).await {
-                                tracing::error!("saving chat turn failed: {e}");
+                                tracing::error!(conversation_id = %id, message_id = %source_message_id, "saving chat turn failed");
                                 yield Err(e.into());
                                 break;
                             }
+
+                            tracing::info!(conversation_id = %id, message_id = %source_message_id, "chat turn saved");
 
                             let input = ResearchInput {
                                 world_id,
@@ -170,15 +182,19 @@ impl ConversationService {
                                 })
                                 .await
                             {
+                                tracing::error!(conversation_id = %id, workflow_id = %workflow_id, "research workflow submission failed");
                                 yield Err(ServiceError::InternalError(error.to_string()));
                                 break;
                             }
+                            tracing::info!(conversation_id = %id, workflow_id = %workflow_id,
+                                elapsed_ms = started.elapsed().as_millis() as u64, "research workflow submitted");
                             yield Ok(item);
                             break;
                         }
                         yield Ok(item)
                     },
                     Err(e) => {
+                        tracing::error!(conversation_id = %id, "chat model stream failed");
                         yield Err(e.into());
                         break;
                     }
@@ -189,11 +205,13 @@ impl ConversationService {
     }
 
     // delete a convo
+    #[tracing::instrument(name = "conversation.delete_conversation", level = "info", skip_all, fields(id = %id, user_id = %user_id))]
     pub async fn delete_conversation(&self, id: Uuid, user_id: Uuid) -> Result<bool, ServiceError> {
         let result = self.conversation_repo.delete(id, user_id).await?;
         Ok(result)
     }
 
+    #[tracing::instrument(name = "conversation.get_message", level = "info", skip_all, fields(world_id = %world_id, user_id = %user_id, message_id = %message_id))]
     pub async fn get_message(
         &self,
         world_id: Uuid,
@@ -207,6 +225,34 @@ impl ConversationService {
         match result {
             Some(row) => Ok(row.into()),
             None => Err(ServiceError::NotFound("Message not found".to_string())),
+        }
+    }
+
+    #[tracing::instrument(name = "conversation.get_researcher_status", level = "debug", skip_all, fields(world_id = %world_id, user_id = %user_id, message_id = %message_id))]
+    pub async fn get_researcher_status(
+        &self,
+        world_id: Uuid,
+        user_id: Uuid,
+        message_id: Uuid,
+    ) -> Result<ResearchStatusResponse, ServiceError> {
+        self.get_message(world_id, user_id, message_id).await?;
+        let status = self
+            .dbos_client
+            .workflow_status(&message_id.to_string())
+            .await?;
+        match status {
+            Some(status) => {
+                tracing::debug!(workflow_status = %status.as_str(), "research status loaded");
+                Ok(ResearchStatusResponse {
+                    status: ResearchStatus::from_workflow_status(status),
+                })
+            }
+            None => {
+                tracing::debug!("message has no submitted research workflow");
+                Ok(ResearchStatusResponse {
+                    status: ResearchStatus::NotSubmitted,
+                })
+            }
         }
     }
 }

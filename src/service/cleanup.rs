@@ -14,6 +14,7 @@ impl CleanupService {
         Self { pool, graph_repo }
     }
 
+    #[tracing::instrument(name = "cleanup.run_once", level = "debug", skip_all)]
     pub async fn run_once(&self) -> Result<(), ServiceError> {
         let pending_batch = sqlx::query!(
             "
@@ -27,6 +28,13 @@ impl CleanupService {
         .await
         .map_err(InfrastructureError::from)?;
 
+        if !pending_batch.is_empty() {
+            tracing::info!(
+                job_count = pending_batch.len(),
+                "processing world cleanup batch"
+            );
+        }
+
         for pending in pending_batch {
             // Delete this world's graph data, then remove its cleanup job.
             let result = self
@@ -34,8 +42,8 @@ impl CleanupService {
                 .delete_graph(&pending.world_id.to_string())
                 .await;
 
-            if let Err(e) = &result {
-                tracing::error!(world_id = %pending.world_id, error = %e, "graph cleanup failed");
+            if result.is_err() {
+                tracing::error!(world_id = %pending.world_id, "graph cleanup failed; job retained for retry");
             }
 
             if let Ok(()) = &result {
@@ -49,8 +57,10 @@ impl CleanupService {
                 .await
                 .map_err(InfrastructureError::from);
 
-                if let Err(e) = result {
-                    tracing::error!(world_id = %pending.world_id, error = %e, "removing cleanup job failed");
+                if result.is_err() {
+                    tracing::error!(world_id = %pending.world_id, "removing cleanup job failed; cleanup will repeat");
+                } else {
+                    tracing::info!(world_id = %pending.world_id, "world cleanup completed");
                 }
             }
         }

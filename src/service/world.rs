@@ -23,6 +23,7 @@ impl WorldService {
     }
 
     // create a world
+    #[tracing::instrument(name = "world.create_world", level = "info", skip_all, fields(user_id = %user_id))]
     pub async fn create_world(
         &self,
         user_id: Uuid,
@@ -36,10 +37,12 @@ impl WorldService {
                 user_id,
             )
             .await?;
+        tracing::info!(world_id = %result.id, "world created");
         Ok(result.into())
     }
 
     // update a world
+    #[tracing::instrument(name = "world.update_world", level = "info", skip_all, fields(id = %id, user_id = %user_id))]
     pub async fn update_world(
         &self,
         id: Uuid,
@@ -56,18 +59,24 @@ impl WorldService {
             )
             .await?;
         match result {
-            Some(world) => Ok(world.into()),
+            Some(world) => {
+                tracing::info!(world_id = %world.id, "world updated");
+                Ok(world.into())
+            }
             None => Err(ServiceError::NotFound("World not found".to_string())),
         }
     }
 
     // delete a world
+    #[tracing::instrument(name = "world.delete_world", level = "info", skip_all, fields(id = %id, user_id = %user_id))]
     pub async fn delete_world(&self, id: Uuid, user_id: Uuid) -> Result<bool, ServiceError> {
         let result = self.world_repo.delete(id, user_id).await?;
+        tracing::info!(deleted = result, "world deletion request completed");
         Ok(result)
     }
 
     // get a world by id
+    #[tracing::instrument(name = "world.get_by_id", level = "info", skip_all, fields(id = %id, user_id = %user_id))]
     pub async fn get_by_id(&self, id: Uuid, user_id: Uuid) -> Result<WorldResponse, ServiceError> {
         let result = self.world_repo.get_by_id(id, user_id).await?;
         match result {
@@ -77,12 +86,14 @@ impl WorldService {
     }
 
     // get a user's worlds
+    #[tracing::instrument(name = "world.get", level = "info", skip_all, fields(user_id = %user_id))]
     pub async fn get(&self, user_id: Uuid) -> Result<Vec<WorldResponse>, ServiceError> {
         let result = self.world_repo.get(user_id).await?;
         Ok(result.into_iter().map(|w| w.into()).collect())
     }
 
     /// Check world ownership, then load a bounded set of nodes and edges.
+    #[tracing::instrument(name = "world.get_graph", level = "info", skip_all, fields(world_id = %world_id, user_id = %user_id))]
     pub async fn get_graph(
         &self,
         world_id: Uuid,
@@ -104,6 +115,7 @@ impl WorldService {
     }
 
     /// Check world ownership, then page entities using the requested filters.
+    #[tracing::instrument(name = "world.list_entities", level = "info", skip_all, fields(world_id = %world_id, user_id = %user_id))]
     pub async fn list_entities(
         &self,
         world_id: Uuid,
@@ -127,6 +139,7 @@ impl WorldService {
     }
 
     /// Check world ownership, then search saved entities.
+    #[tracing::instrument(name = "world.search_entities", level = "info", skip_all, fields(world_id = %world_id, user_id = %user_id))]
     pub async fn search_entities(
         &self,
         world_id: Uuid,
@@ -145,6 +158,7 @@ impl WorldService {
     }
 
     /// Check world ownership, then read an entity within that world.
+    #[tracing::instrument(name = "world.get_entity", level = "info", skip_all, fields(world_id = %world_id, user_id = %user_id, entity_id = %entity_id))]
     pub async fn get_entity(
         &self,
         world_id: Uuid,
@@ -166,6 +180,7 @@ impl WorldService {
     }
 
     /// Check world ownership, then page the entity's neighbors and connecting edges.
+    #[tracing::instrument(name = "world.get_entity_neighbors", level = "info", skip_all, fields(world_id = %world_id, user_id = %user_id, entity_id = %entity_id))]
     pub async fn get_entity_neighbors(
         &self,
         world_id: Uuid,
@@ -200,6 +215,7 @@ impl WorldService {
     }
 
     /// Check world ownership, then read a relationship within that world.
+    #[tracing::instrument(name = "world.get_relationship", level = "info", skip_all, fields(world_id = %world_id, user_id = %user_id, relationship_id = %relationship_id))]
     pub async fn get_relationship(
         &self,
         world_id: Uuid,
@@ -216,6 +232,7 @@ impl WorldService {
     }
 
     /// Check world ownership, then page conflicts using the resolution filter.
+    #[tracing::instrument(name = "world.list_conflicts", level = "info", skip_all, fields(world_id = %world_id, user_id = %user_id))]
     pub async fn list_conflicts(
         &self,
         world_id: Uuid,
@@ -236,6 +253,7 @@ impl WorldService {
     }
 
     /// Check world ownership, then read both claims and their sources.
+    #[tracing::instrument(name = "world.get_conflict", level = "info", skip_all, fields(world_id = %world_id, user_id = %user_id, conflict_id = %conflict_id))]
     pub async fn get_conflict(
         &self,
         world_id: Uuid,
@@ -251,6 +269,7 @@ impl WorldService {
         Ok(conflict.into())
     }
 
+    #[tracing::instrument(name = "world.resolve_conflict", level = "info", skip_all, fields(conflict_id = %conflict_id, world_id = %world_id, user_id = %user_id))]
     pub async fn resolve_conflict(
         &self,
         conflict_id: Uuid,
@@ -263,11 +282,15 @@ impl WorldService {
             .resolve_conflict(&conflict_id.to_string(), &world_id.to_string())
             .await?;
         match resolved {
-            Some(conflict) => Ok(conflict.into()),
+            Some(conflict) => {
+                tracing::info!("keep-existing conflict decision saved");
+                Ok(conflict.into())
+            }
             None => Err(ServiceError::NotFound("Conflict not found".to_string())),
         }
     }
 
+    #[tracing::instrument(name = "world.accept_new", level = "info", skip_all, fields(conflict_id = %conflict_id, world_id = %world_id, user_id = %user_id))]
     pub async fn accept_new(
         &self,
         conflict_id: Uuid,

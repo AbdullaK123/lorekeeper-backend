@@ -30,6 +30,7 @@ impl PortableTool for ReadEntity {
         serde_json::to_value(schemars::schema_for!(ReadEntityArgs)).unwrap()
     }
 
+    #[tracing::instrument(name = "tool.read_entity", level = "debug", skip_all)]
     async fn call(&self, args: Self::Args) -> Result<Self::Output, Self::Error> {
         let entity = self
             .graph_repo
@@ -44,6 +45,8 @@ impl PortableTool for ReadEntity {
             .graph_repo
             .get_conflicts_by_entity(&entity.id, &self.world_id)
             .await?;
+        tracing::debug!(world_id = %self.world_id, entity_id = %entity.id,
+            neighbors = neighbors.len(), conflicts = conflicts.len(), "entity tool read completed");
         Ok(serde_json::json!({"entity": entity, "neighbors": neighbors, "conflicts": conflicts}))
     }
 }

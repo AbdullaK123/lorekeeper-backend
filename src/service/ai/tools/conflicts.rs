@@ -46,6 +46,7 @@ impl PortableTool for FlagConflict {
         serde_json::to_value(schemars::schema_for!(FlagConflictArgs)).unwrap()
     }
 
+    #[tracing::instrument(name = "tool.flag_conflict", level = "debug", skip_all)]
     async fn call(&self, args: Self::Args) -> Result<Self::Output, Self::Error> {
         let entity = self
             .graph_repo
@@ -76,6 +77,8 @@ impl PortableTool for FlagConflict {
             .upsert_conflict(&conflict, &self.source_message_id)
             .await?
             .ok_or_else(|| ServiceError::NotFound("Entity not found in this world.".into()))?;
+        tracing::info!(world_id = %self.world_id, conflict_id = %saved.id,
+            entity_id = %saved.entity_id, message_id = %self.source_message_id, "conflict recorded");
         Ok(format!(
             "Recorded conflict [ID: {}]. Canon remains unchanged.",
             saved.id
@@ -113,8 +116,10 @@ impl PortableTool for GetConflicts {
         serde_json::to_value(schemars::schema_for!(GetConflictsArgs)).unwrap()
     }
 
+    #[tracing::instrument(name = "tool.get_conflicts", level = "debug", skip_all)]
     async fn call(&self, _arguments: Self::Args) -> Result<Self::Output, Self::Error> {
         let conflicts = self.graph_repo.get_conflicts(&self.world_id).await?;
+        tracing::debug!(world_id = %self.world_id, result_count = conflicts.len(), "conflict tool read completed");
         Ok(conflicts)
     }
 }

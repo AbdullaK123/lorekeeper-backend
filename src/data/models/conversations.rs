@@ -1,5 +1,7 @@
+use crate::data::ResearchStatus::NotSubmitted;
 use crate::shared::{ChatContent, ConversationTitle};
 use chrono::{DateTime, Utc};
+use dbos::sysdb::types::WorkflowStatus;
 use rig::message::Message as RigMessage;
 use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
@@ -160,4 +162,32 @@ impl From<MessageRow> for MessageResponse {
             message: row.message.0,
         }
     }
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum ResearchStatus {
+    Running,
+    Queued,
+    Completed,
+    NotSubmitted,
+    Failed,
+    Cancelled,
+}
+
+impl ResearchStatus {
+    pub fn from_workflow_status(status: WorkflowStatus) -> Self {
+        match status {
+            WorkflowStatus::Enqueued | WorkflowStatus::Delayed => Self::Queued,
+            WorkflowStatus::Cancelled => Self::Cancelled,
+            WorkflowStatus::Error | WorkflowStatus::MaxRecoveryAttemptsExceeded => Self::Failed,
+            WorkflowStatus::Pending => Self::Running,
+            WorkflowStatus::Success => Self::Completed,
+        }
+    }
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct ResearchStatusResponse {
+    pub status: ResearchStatus,
 }

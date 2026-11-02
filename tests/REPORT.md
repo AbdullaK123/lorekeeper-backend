@@ -1,5 +1,13 @@
 # Backend test findings — 2026-10-26
 
+## Structured application logging — 2026-11-02
+
+Two new capture tests pass and verify private query text, request bodies, credentials, and internal payloads stay out of application logs.
+All 42 free native regressions pass in 7.36 seconds after restoring the missing project Postgres container.
+The restored service reuses its existing volume; no data reset occurs.
+Six selected auth/graph/conflict/source HTTP checks pass in 5.873 seconds; the Rust wrapper passes in 6.44 seconds.
+All-target offline cargo check passes with existing warnings. No paid tests or provider calls run.
+
 ## Source-message HTTP endpoint — 2026-11-01
 
 Three selected live API tests pass in 7.828 seconds; the real Rust application wrapper passes in 10.62 seconds.

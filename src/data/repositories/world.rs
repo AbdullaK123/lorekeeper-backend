@@ -14,6 +14,7 @@ impl WorldRepository {
         Self { pool }
     }
 
+    #[tracing::instrument(name = "repository.world.get", level = "debug", skip_all)]
     pub async fn get(&self, user_id: Uuid) -> Result<Vec<World>, InfrastructureError> {
         let result = sqlx::query_as!(World, "SELECT * FROM worlds WHERE user_id=$1", user_id)
             .fetch_all(&self.pool)
@@ -21,6 +22,7 @@ impl WorldRepository {
         Ok(result)
     }
 
+    #[tracing::instrument(name = "repository.world.get_by_id", level = "debug", skip_all)]
     pub async fn get_by_id(
         &self,
         id: Uuid,
@@ -39,6 +41,7 @@ impl WorldRepository {
         Ok(result)
     }
 
+    #[tracing::instrument(name = "repository.world.create", level = "debug", skip_all)]
     pub async fn create(
         &self,
         name: String,
@@ -61,6 +64,7 @@ impl WorldRepository {
         Ok(result)
     }
 
+    #[tracing::instrument(name = "repository.world.update", level = "debug", skip_all)]
     pub async fn update(
         &self,
         id: Uuid,
@@ -89,6 +93,7 @@ impl WorldRepository {
         Ok(result)
     }
 
+    #[tracing::instrument(name = "repository.world.delete", level = "debug", skip_all)]
     pub async fn delete(&self, id: Uuid, user_id: Uuid) -> Result<bool, InfrastructureError> {
         let mut tx = self.pool.begin().await?;
 
@@ -117,6 +122,9 @@ impl WorldRepository {
         }
 
         tx.commit().await?;
+        if result.rows_affected() > 0 {
+            tracing::info!(world_id = %id, "world deletion and graph cleanup job committed");
+        }
 
         Ok(result.rows_affected() > 0)
     }

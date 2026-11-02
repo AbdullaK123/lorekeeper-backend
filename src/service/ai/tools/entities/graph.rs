@@ -196,7 +196,9 @@ impl PortableTool for UpdateGraph {
         serde_json::to_value(schemars::schema_for!(UpdateGraphArgs)).unwrap()
     }
 
+    #[tracing::instrument(name = "tool.update_graph", level = "debug", skip_all)]
     async fn call(&self, args: Self::Args) -> Result<Self::Output, Self::Error> {
+        let started = std::time::Instant::now();
         args.validate_ids()?;
 
         let mut entities = Vec::new();
@@ -228,6 +230,10 @@ impl PortableTool for UpdateGraph {
                 &self.source_message_id,
             )
             .await?;
+        tracing::info!(world_id = %self.world_id, conversation_id = %self.conversation_id,
+            message_id = %self.source_message_id, entities = entities.len(), relationships = relationships.len(),
+            retractions = args.retracted_relationship_ids.len(), elapsed_ms = started.elapsed().as_millis() as u64,
+            "graph update tool completed");
         let result = GraphUpdateResult::from_saved(
             &entities,
             &relationships,

@@ -38,3 +38,9 @@ impl From<PromptError> for ServiceError {
         Self::InternalError(value.to_string())
     }
 }
+
+impl From<dbos::Error> for ServiceError {
+    fn from(value: dbos::Error) -> Self {
+        Self::InternalError(value.to_string())
+    }
+}
