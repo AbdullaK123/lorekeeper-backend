@@ -1,0 +1,16 @@
+{
+  "test": "accepted_description_does_not_keep_old_search_embedding",
+  "beforeFix": {
+    "result": "failed refresh assertion",
+    "descriptionAfter": "A 41-year-old keeper.",
+    "embeddingAfter": "identical to pre-correction vector",
+    "seconds": 0.97
+  },
+  "afterFix": {
+    "result": "four conflict regressions pass",
+    "seconds": 1.34,
+    "replacementVectorStoredExactly": true,
+    "repeatPreservesFirstVector": true
+  },
+  "providerCalls": 0
+}

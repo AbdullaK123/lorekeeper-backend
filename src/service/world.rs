@@ -6,8 +6,8 @@ use crate::data::{
 };
 use crate::service::ServiceError;
 use crate::shared::PageResponse;
-use rig::AgentBuilder;
 use rig::providers::openrouter;
+use rig::{AgentBuilder, DynModel, operation::Embedding};
 use uuid::Uuid;
 
 #[derive(Clone)]
@@ -307,7 +307,7 @@ impl WorldService {
             .await?
             .ok_or_else(|| ServiceError::NotFound("Conflict not found".into()))?;
 
-        let entity = self
+        let mut entity = self
             .graph_repo
             .get_entity(&conflict.entity_id, &world_id.to_string())
             .await?
@@ -330,14 +330,22 @@ impl WorldService {
             "accepted_value": conflict.new_value,
         });
 
-        let new_description = agent.prompt(input.to_string()).await?;
+        entity.description = agent.prompt(input.to_string()).await?.output();
+        let embedding_model: DynModel<Embedding> = client
+            .embedding("openai/text-embedding-3-small", None)
+            .into();
+        let embedding = embedding_model
+            .embed_text(&entity.embedding_text())
+            .await?
+            .vec;
 
         let conflict = self
             .graph_repo
             .accept_conflict(
                 &conflict_id.to_string(),
                 &world_id.to_string(),
-                &new_description.output(),
+                &entity.description,
+                &embedding,
             )
             .await?
             .ok_or_else(|| ServiceError::NotFound("Conflict not found".into()))?;

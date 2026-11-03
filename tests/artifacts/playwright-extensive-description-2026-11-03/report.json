@@ -1,0 +1,1203 @@
+{
+  "started": "2026-11-03T11:03:10.078Z",
+  "base": "http://127.0.0.1:8000",
+  "steps": [
+    {
+      "name": "signup",
+      "ok": true,
+      "seconds": 2.9
+    },
+    {
+      "name": "create-world-and-conversation",
+      "ok": true,
+      "seconds": 0.398,
+      "detail": {
+        "worldId": "01a1a113-dace-70af-8619-6be9d3f6b120",
+        "conversationId": "01a1a113-db28-7b97-bc6f-efa3df827df1"
+      }
+    },
+    {
+      "name": "save-lore-and-research",
+      "ok": true,
+      "seconds": 28.93,
+      "detail": {
+        "sourceId": "03cd9bd3-1bc5-4868-bb45-394c152b7b3e",
+        "research": "completed"
+      }
+    },
+    {
+      "name": "inspect-graph-and-source",
+      "ok": true,
+      "seconds": 0.31,
+      "detail": {
+        "nodes": 4,
+        "edges": 4,
+        "mara": {
+          "id": "433bf46a-55ed-4c94-8f60-35633deb4207",
+          "name": "Mara Vale",
+          "aliases": [],
+          "kind": [
+            "person"
+          ],
+          "description": "Keeper of Glasswatch Lighthouse; born in Bellhaven; 34 years old.",
+          "properties": {
+            "source_conversation": "01a1a113-db28-7b97-bc6f-efa3df827df1",
+            "birthplace": "Bellhaven",
+            "age": 34
+          },
+          "source_message_ids": [
+            "03cd9bd3-1bc5-4868-bb45-394c152b7b3e"
+          ]
+        }
+      }
+    },
+    {
+      "name": "retrieve-established-lore",
+      "ok": true,
+      "seconds": 7.618,
+      "detail": {
+        "sourceId": "a744ede6-0886-45f5-926d-8681c4cbe033",
+        "research": "completed"
+      }
+    },
+    {
+      "name": "report-contradiction",
+      "ok": true,
+      "seconds": 22.536,
+      "detail": {
+        "id": "a2b68280-95df-4501-865e-e7e6d7fc8cbd",
+        "entity_id": "433bf46a-55ed-4c94-8f60-35633deb4207",
+        "field": "age",
+        "existing_value": 34,
+        "new_value": 41,
+        "severity": "soft",
+        "explanation": "Writer reports an older note saying Mara Vale is 41, while current notes say 34, and asks to keep the existing age for now. Existing age 34 remains established; 41 is recorded as disputed for review.",
+        "source_conversation": "01a1a113-db28-7b97-bc6f-efa3df827df1",
+        "source_message_ids": [
+          "5d280e6e-f375-457b-82ef-89c1522b7008"
+        ],
+        "resolved": false,
+        "decision": null
+      }
+    },
+    {
+      "name": "accept-conflict-and-read-back",
+      "ok": true,
+      "seconds": 2.193,
+      "detail": {
+        "decision": "accept_new",
+        "field": "age",
+        "value": 41
+      }
+    },
+    {
+      "name": "retrieve-accepted-canon",
+      "ok": true,
+      "seconds": 6.57,
+      "detail": {
+        "answer": "41",
+        "research": "completed",
+        "savedAge": 41
+      }
+    },
+    {
+      "name": "fresh-conversation-preserves-canon",
+      "ok": true,
+      "seconds": 7.077,
+      "detail": {
+        "answer": "41",
+        "research": "completed",
+        "savedAge": 41
+      }
+    },
+    {
+      "name": "repeat-acceptance-preserves-entity",
+      "ok": true,
+      "seconds": 3.189
+    },
+    {
+      "name": "extended-question-01",
+      "ok": true,
+      "seconds": 6.5,
+      "detail": {
+        "answer": "Mara Vale’s accepted age is 41, and her birthplace is Bellhaven.",
+        "research": "completed",
+        "savedAge": 41
+      }
+    },
+    {
+      "name": "extended-question-02",
+      "ok": true,
+      "seconds": 6.328,
+      "detail": {
+        "answer": "Mara is the keeper of Glasswatch Lighthouse, and she is 41 years old.",
+        "research": "completed",
+        "savedAge": 41
+      }
+    },
+    {
+      "name": "extended-question-03",
+      "ok": true,
+      "seconds": 7.047,
+      "detail": {
+        "answer": "Mara Vale is 41 years old, was born in Bellhaven, and keeps Glasswatch Lighthouse.",
+        "research": "completed",
+        "savedAge": 41
+      }
+    },
+    {
+      "name": "extended-question-04",
+      "ok": true,
+      "seconds": 9.077,
+      "detail": {
+        "answer": "Glasswatch Lighthouse is owned by the Tide Council. Mara Vale is 41 years old.",
+        "research": "completed",
+        "savedAge": 41
+      }
+    },
+    {
+      "name": "extended-question-05",
+      "ok": true,
+      "seconds": 7.562,
+      "detail": {
+        "answer": "Mara is the keeper of Glasswatch Lighthouse in Bellhaven. Her currently saved age is 41.",
+        "research": "completed",
+        "savedAge": 41
+      }
+    },
+    {
+      "name": "extended-question-06",
+      "ok": true,
+      "seconds": 6.384,
+      "detail": {
+        "answer": "**Mara Vale**\n- **Age:** 41\n- **Birthplace:** Bellhaven\n- **Role:** Keeper of Glasswatch Lighthouse",
+        "research": "completed",
+        "savedAge": 41
+      }
+    },
+    {
+      "name": "extended-question-07",
+      "ok": true,
+      "seconds": 5.785,
+      "detail": {
+        "answer": "Yes—Mara is currently 41 according to accepted lore.",
+        "research": "completed",
+        "savedAge": 41
+      }
+    },
+    {
+      "name": "extended-question-08",
+      "ok": true,
+      "seconds": 6.128,
+      "detail": {
+        "answer": "The saved description says Mara is 41 years old and was born in Bellhaven.",
+        "research": "completed",
+        "savedAge": 41
+      }
+    },
+    {
+      "name": "extended-question-09",
+      "ok": true,
+      "seconds": 9.402,
+      "detail": {
+        "answer": "Mara Vale, 41, is the keeper of Glasswatch Lighthouse in Bellhaven.",
+        "research": "completed",
+        "savedAge": 41
+      }
+    },
+    {
+      "name": "extended-question-10",
+      "ok": true,
+      "seconds": 8.484,
+      "detail": {
+        "answer": "Mara is 41 years old and keeps Glasswatch Lighthouse.",
+        "research": "completed",
+        "savedAge": 41
+      }
+    },
+    {
+      "name": "extended-question-11",
+      "ok": true,
+      "seconds": 5.888,
+      "detail": {
+        "answer": "Mara Vale is 41, was born in Bellhaven, and works as the keeper of Glasswatch Lighthouse.",
+        "research": "completed",
+        "savedAge": 41
+      }
+    },
+    {
+      "name": "extended-question-12",
+      "ok": true,
+      "seconds": 7.531,
+      "detail": {
+        "answer": "Mara is associated with Bellhaven, where she was born and keeps Glasswatch Lighthouse. She is 41 years old.",
+        "research": "completed",
+        "savedAge": 41
+      }
+    },
+    {
+      "name": "extended-question-13",
+      "ok": true,
+      "seconds": 7.027,
+      "detail": {
+        "answer": "Mara Vale is 41 years old and keeps Glasswatch Lighthouse in Bellhaven.",
+        "research": "completed",
+        "savedAge": 41
+      }
+    },
+    {
+      "name": "extended-question-14",
+      "ok": true,
+      "seconds": 7.152,
+      "detail": {
+        "answer": "Mara Vale is 41, was born in Bellhaven, and is the keeper of Glasswatch Lighthouse.",
+        "research": "completed",
+        "savedAge": 41
+      }
+    },
+    {
+      "name": "extended-question-15",
+      "ok": true,
+      "seconds": 5.647,
+      "detail": {
+        "answer": "41",
+        "research": "completed",
+        "savedAge": 41
+      }
+    },
+    {
+      "name": "reload-preserves-history",
+      "ok": true,
+      "seconds": 0.291
+    },
+    {
+      "name": "mobile-workbench-preserves-canon",
+      "ok": true,
+      "seconds": 0.189
+    },
+    {
+      "name": "inspect-errors-and-retry-rejection",
+      "ok": true,
+      "seconds": 0.253,
+      "detail": {
+        "retryStatus": 409,
+        "invalidIdStatus": 400
+      }
+    }
+  ],
+  "consoleErrors": [],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/signup",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a113-db28-7b97-bc6f-efa3df827df1",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a113-db28-7b97-bc6f-efa3df827df1/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a113-db28-7b97-bc6f-efa3df827df1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/03cd9bd3-1bc5-4868-bb45-394c152b7b3e/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/03cd9bd3-1bc5-4868-bb45-394c152b7b3e/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/03cd9bd3-1bc5-4868-bb45-394c152b7b3e/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/03cd9bd3-1bc5-4868-bb45-394c152b7b3e/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/03cd9bd3-1bc5-4868-bb45-394c152b7b3e/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/03cd9bd3-1bc5-4868-bb45-394c152b7b3e/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/03cd9bd3-1bc5-4868-bb45-394c152b7b3e/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/03cd9bd3-1bc5-4868-bb45-394c152b7b3e/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/03cd9bd3-1bc5-4868-bb45-394c152b7b3e/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/03cd9bd3-1bc5-4868-bb45-394c152b7b3e/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/03cd9bd3-1bc5-4868-bb45-394c152b7b3e/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/03cd9bd3-1bc5-4868-bb45-394c152b7b3e/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/03cd9bd3-1bc5-4868-bb45-394c152b7b3e/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/03cd9bd3-1bc5-4868-bb45-394c152b7b3e/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/03cd9bd3-1bc5-4868-bb45-394c152b7b3e/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/graph",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/03cd9bd3-1bc5-4868-bb45-394c152b7b3e",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a113-db28-7b97-bc6f-efa3df827df1/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a113-db28-7b97-bc6f-efa3df827df1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/a744ede6-0886-45f5-926d-8681c4cbe033/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/a744ede6-0886-45f5-926d-8681c4cbe033/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/a744ede6-0886-45f5-926d-8681c4cbe033/research",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a113-db28-7b97-bc6f-efa3df827df1/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a113-db28-7b97-bc6f-efa3df827df1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/5d280e6e-f375-457b-82ef-89c1522b7008/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/5d280e6e-f375-457b-82ef-89c1522b7008/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/5d280e6e-f375-457b-82ef-89c1522b7008/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/5d280e6e-f375-457b-82ef-89c1522b7008/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/5d280e6e-f375-457b-82ef-89c1522b7008/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/5d280e6e-f375-457b-82ef-89c1522b7008/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/5d280e6e-f375-457b-82ef-89c1522b7008/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/5d280e6e-f375-457b-82ef-89c1522b7008/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/5d280e6e-f375-457b-82ef-89c1522b7008/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conflicts",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conflicts/a2b68280-95df-4501-865e-e7e6d7fc8cbd/resolve",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a113-db28-7b97-bc6f-efa3df827df1/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a113-db28-7b97-bc6f-efa3df827df1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/565b57e9-f4b4-4520-8628-37a425c6653c/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/565b57e9-f4b4-4520-8628-37a425c6653c/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/565b57e9-f4b4-4520-8628-37a425c6653c/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/84c15157-0d71-43c1-ba7c-5d3a9d3ff019/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/84c15157-0d71-43c1-ba7c-5d3a9d3ff019/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/84c15157-0d71-43c1-ba7c-5d3a9d3ff019/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conflicts/a2b68280-95df-4501-865e-e7e6d7fc8cbd/resolve",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conflicts",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/534f2695-f138-4721-9b06-66c2deea7318/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/534f2695-f138-4721-9b06-66c2deea7318/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/534f2695-f138-4721-9b06-66c2deea7318/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/51c363ce-5fa5-48dd-994a-8c34005de7b6/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/51c363ce-5fa5-48dd-994a-8c34005de7b6/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/51c363ce-5fa5-48dd-994a-8c34005de7b6/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/50dfc936-3971-4c30-9c44-834239059a2f/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/50dfc936-3971-4c30-9c44-834239059a2f/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/50dfc936-3971-4c30-9c44-834239059a2f/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/6799f2de-1c92-470a-bb3e-511b18ebe9da/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/6799f2de-1c92-470a-bb3e-511b18ebe9da/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/6799f2de-1c92-470a-bb3e-511b18ebe9da/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/d664c7b8-3d19-4de3-ae60-a93646286e7b/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/d664c7b8-3d19-4de3-ae60-a93646286e7b/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/d664c7b8-3d19-4de3-ae60-a93646286e7b/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/9f62eb20-6ffd-4f48-ab4a-cd4b84b1dbab/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/9f62eb20-6ffd-4f48-ab4a-cd4b84b1dbab/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/9f62eb20-6ffd-4f48-ab4a-cd4b84b1dbab/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/8bf7e7e8-3156-4c76-9fb3-8d0e2964fe60/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/8bf7e7e8-3156-4c76-9fb3-8d0e2964fe60/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/8bf7e7e8-3156-4c76-9fb3-8d0e2964fe60/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/b69e061c-011a-47d3-acf0-0cde78856542/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/b69e061c-011a-47d3-acf0-0cde78856542/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/b69e061c-011a-47d3-acf0-0cde78856542/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/9efd046c-b81b-4eb8-b840-0e3769d86281/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/9efd046c-b81b-4eb8-b840-0e3769d86281/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/9efd046c-b81b-4eb8-b840-0e3769d86281/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/9efd046c-b81b-4eb8-b840-0e3769d86281/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/a05ed1de-3680-4ffc-b269-1e4b370be8f7/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/a05ed1de-3680-4ffc-b269-1e4b370be8f7/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/a05ed1de-3680-4ffc-b269-1e4b370be8f7/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/a05ed1de-3680-4ffc-b269-1e4b370be8f7/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/f19e72b4-5abe-41ba-8257-1a1ebdcacded/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/f19e72b4-5abe-41ba-8257-1a1ebdcacded/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/f19e72b4-5abe-41ba-8257-1a1ebdcacded/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/594e355d-a534-444f-bd96-cbc909ac2e5c/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/594e355d-a534-444f-bd96-cbc909ac2e5c/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/594e355d-a534-444f-bd96-cbc909ac2e5c/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/a5454d3c-743e-4c98-8a0c-77c23b1dc86b/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/a5454d3c-743e-4c98-8a0c-77c23b1dc86b/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/a5454d3c-743e-4c98-8a0c-77c23b1dc86b/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/312e6a7f-67fa-42dd-9834-30027676612a/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/312e6a7f-67fa-42dd-9834-30027676612a/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/312e6a7f-67fa-42dd-9834-30027676612a/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/ef849697-908d-4043-a17b-04571fc5c9a9/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/ef849697-908d-4043-a17b-04571fc5c9a9/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/ef849697-908d-4043-a17b-04571fc5c9a9/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/conversations/01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/433bf46a-55ed-4c94-8f60-35633deb4207",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/messages/03cd9bd3-1bc5-4868-bb45-394c152b7b3e/research/retry",
+      "status": 409
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a113-dace-70af-8619-6be9d3f6b120/entities/invalid-id",
+      "status": 400
+    }
+  ],
+  "email": "playwright-1793703793035@example.com",
+  "worldId": "01a1a113-dace-70af-8619-6be9d3f6b120",
+  "conversationId": "01a1a113-db28-7b97-bc6f-efa3df827df1",
+  "acceptedCanonCheck": {
+    "answer": "41",
+    "savedAge": 41
+  },
+  "freshConversationId": "01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+  "freshAnswer": "41",
+  "extensiveAnswers": [
+    {
+      "question": "What is Mara Vale’s accepted age and birthplace?",
+      "answer": "Mara Vale’s accepted age is 41, and her birthplace is Bellhaven.",
+      "messageId": "534f2695-f138-4721-9b06-66c2deea7318"
+    },
+    {
+      "question": "What job does Mara have, and how old is she?",
+      "answer": "Mara is the keeper of Glasswatch Lighthouse, and she is 41 years old.",
+      "messageId": "51c363ce-5fa5-48dd-994a-8c34005de7b6"
+    },
+    {
+      "question": "Describe Mara using only current saved canon, including her age.",
+      "answer": "Mara Vale is 41 years old, was born in Bellhaven, and keeps Glasswatch Lighthouse.",
+      "messageId": "50dfc936-3971-4c30-9c44-834239059a2f"
+    },
+    {
+      "question": "Who owns Glasswatch Lighthouse? Also state Mara’s current age.",
+      "answer": "Glasswatch Lighthouse is owned by the Tide Council. Mara Vale is 41 years old.",
+      "messageId": "6799f2de-1c92-470a-bb3e-511b18ebe9da"
+    },
+    {
+      "question": "Where does Mara work, and what age is currently saved for her?",
+      "answer": "Mara is the keeper of Glasswatch Lighthouse in Bellhaven. Her currently saved age is 41.",
+      "messageId": "d664c7b8-3d19-4de3-ae60-a93646286e7b"
+    },
+    {
+      "question": "Give a short character card for Mara: age, birthplace, and role.",
+      "answer": "**Mara Vale**\n- **Age:** 41\n- **Birthplace:** Bellhaven\n- **Role:** Keeper of Glasswatch Lighthouse",
+      "messageId": "9f62eb20-6ffd-4f48-ab4a-cd4b84b1dbab"
+    },
+    {
+      "question": "Is Mara currently 41 according to accepted lore? Answer briefly.",
+      "answer": "Yes—Mara is currently 41 according to accepted lore.",
+      "messageId": "8bf7e7e8-3156-4c76-9fb3-8d0e2964fe60"
+    },
+    {
+      "question": "What does the saved description say about Mara’s age and birthplace?",
+      "answer": "The saved description says Mara is 41 years old and was born in Bellhaven.",
+      "messageId": "b69e061c-011a-47d3-acf0-0cde78856542"
+    },
+    {
+      "question": "Summarize Mara’s connection to the lighthouse and include her age.",
+      "answer": "Mara Vale, 41, is the keeper of Glasswatch Lighthouse in Bellhaven.",
+      "messageId": "9efd046c-b81b-4eb8-b840-0e3769d86281"
+    },
+    {
+      "question": "Without changing any facts, list Mara’s current age and occupation.",
+      "answer": "Mara is 41 years old and keeps Glasswatch Lighthouse.",
+      "messageId": "a05ed1de-3680-4ffc-b269-1e4b370be8f7"
+    },
+    {
+      "question": "Remind me of Mara’s age, birthplace, and workplace.",
+      "answer": "Mara Vale is 41, was born in Bellhaven, and works as the keeper of Glasswatch Lighthouse.",
+      "messageId": "f19e72b4-5abe-41ba-8257-1a1ebdcacded"
+    },
+    {
+      "question": "Which place is associated with Mara, and how old is she?",
+      "answer": "Mara is associated with Bellhaven, where she was born and keeps Glasswatch Lighthouse. She is 41 years old.",
+      "messageId": "594e355d-a534-444f-bd96-cbc909ac2e5c"
+    },
+    {
+      "question": "Give one sentence about Mara that includes her accepted age.",
+      "answer": "Mara Vale is 41 years old and keeps Glasswatch Lighthouse in Bellhaven.",
+      "messageId": "a5454d3c-743e-4c98-8a0c-77c23b1dc86b"
+    },
+    {
+      "question": "What established details do we have about Mara? Include her age.",
+      "answer": "Mara Vale is 41, was born in Bellhaven, and is the keeper of Glasswatch Lighthouse.",
+      "messageId": "312e6a7f-67fa-42dd-9834-30027676612a"
+    },
+    {
+      "question": "Final canon check: give Mara Vale’s current accepted age only.",
+      "answer": "41",
+      "messageId": "ef849697-908d-4043-a17b-04571fc5c9a9"
+    }
+  ],
+  "finished": "2026-11-03T11:06:22.830Z"
+}

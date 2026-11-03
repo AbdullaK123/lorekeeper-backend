@@ -189,3 +189,11 @@ The paid browser script checks the accepted property and exact entity/source sna
 It repeats the age question in a fresh conversation. The [passing rerun](artifacts/playwright-canon-decisions-2026-11-03/summary.md) preserves age 41.
 Free coverage includes resolved-decision formatting and chat_canon_context::, which inspects a local model request for current lore in system context.
 The free native suite now contains 44 passing checks. The wider unit duplicate-ranking failure remains a separate historical finding.
+
+### Extensive Playwright mode
+
+Set `QA_PLAYWRIGHT_EXTENSIVE=1` alongside the existing paid-browser flags.
+This runs 20 paid chat turns, background research, and two conflict-description rewrite calls.
+The harness checks corrected descriptions, repeated acceptance, longer history, reload, mobile reads, and errors.
+The normal run also fails if the description omits age 41, retains age 34, or loses Bellhaven/Glasswatch.
+Latest evidence: [28 passing checks](artifacts/playwright-extensive-description-2026-11-03/summary.md).

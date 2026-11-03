@@ -1,0 +1,129 @@
+{
+  "data": {
+    "nodes": [
+      {
+        "id": "433bf46a-55ed-4c94-8f60-35633deb4207",
+        "name": "Mara Vale",
+        "aliases": [],
+        "kind": [
+          "person"
+        ],
+        "description": "Keeper of Glasswatch Lighthouse; born in Bellhaven; 34 years old.",
+        "properties": {
+          "source_conversation": "01a1a113-db28-7b97-bc6f-efa3df827df1",
+          "birthplace": "Bellhaven",
+          "age": 34
+        },
+        "source_message_ids": [
+          "03cd9bd3-1bc5-4868-bb45-394c152b7b3e"
+        ]
+      },
+      {
+        "id": "61c0c275-d01e-4c2a-ac67-3ea5b0702e0b",
+        "name": "Glasswatch Lighthouse",
+        "aliases": [],
+        "kind": [
+          "lighthouse",
+          "place"
+        ],
+        "description": "A lighthouse in Bellhaven, owned by the Tide Council and kept by Mara Vale.",
+        "properties": {
+          "source_conversation": "01a1a113-db28-7b97-bc6f-efa3df827df1"
+        },
+        "source_message_ids": [
+          "03cd9bd3-1bc5-4868-bb45-394c152b7b3e"
+        ]
+      },
+      {
+        "id": "8df5a440-b04a-4def-8f96-2db6b3e9b952",
+        "name": "Tide Council",
+        "aliases": [],
+        "kind": [
+          "organization"
+        ],
+        "description": "Owner of Glasswatch Lighthouse.",
+        "properties": {
+          "source_conversation": "01a1a113-db28-7b97-bc6f-efa3df827df1"
+        },
+        "source_message_ids": [
+          "03cd9bd3-1bc5-4868-bb45-394c152b7b3e"
+        ]
+      },
+      {
+        "id": "e3181f5e-c2ba-41fc-b225-5b3a53c49962",
+        "name": "Bellhaven",
+        "aliases": [],
+        "kind": [
+          "settlement",
+          "place"
+        ],
+        "description": "The birthplace of Mara Vale and location of Glasswatch Lighthouse.",
+        "properties": {
+          "source_conversation": "01a1a113-db28-7b97-bc6f-efa3df827df1"
+        },
+        "source_message_ids": [
+          "03cd9bd3-1bc5-4868-bb45-394c152b7b3e"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "241311c7-da3a-4582-bee3-8f884ac72b75",
+        "from_id": "433bf46a-55ed-4c94-8f60-35633deb4207",
+        "to_id": "61c0c275-d01e-4c2a-ac67-3ea5b0702e0b",
+        "rel_type": "KEEPS",
+        "description": "Mara Vale is the keeper of Glasswatch Lighthouse.",
+        "properties": {
+          "source_conversation": "01a1a113-db28-7b97-bc6f-efa3df827df1"
+        },
+        "source_conversation": "01a1a113-db28-7b97-bc6f-efa3df827df1",
+        "source_message_ids": [
+          "03cd9bd3-1bc5-4868-bb45-394c152b7b3e"
+        ]
+      },
+      {
+        "id": "351437fb-f0a2-49bb-bba3-4f1cb141bfb9",
+        "from_id": "433bf46a-55ed-4c94-8f60-35633deb4207",
+        "to_id": "e3181f5e-c2ba-41fc-b225-5b3a53c49962",
+        "rel_type": "BORN_IN",
+        "description": "Mara Vale was born in Bellhaven.",
+        "properties": {
+          "source_conversation": "01a1a113-db28-7b97-bc6f-efa3df827df1"
+        },
+        "source_conversation": "01a1a113-db28-7b97-bc6f-efa3df827df1",
+        "source_message_ids": [
+          "03cd9bd3-1bc5-4868-bb45-394c152b7b3e"
+        ]
+      },
+      {
+        "id": "861ca26f-1bae-42c4-9ed9-42523022425d",
+        "from_id": "61c0c275-d01e-4c2a-ac67-3ea5b0702e0b",
+        "to_id": "8df5a440-b04a-4def-8f96-2db6b3e9b952",
+        "rel_type": "OWNED_BY",
+        "description": "Glasswatch Lighthouse is owned by the Tide Council.",
+        "properties": {
+          "source_conversation": "01a1a113-db28-7b97-bc6f-efa3df827df1"
+        },
+        "source_conversation": "01a1a113-db28-7b97-bc6f-efa3df827df1",
+        "source_message_ids": [
+          "03cd9bd3-1bc5-4868-bb45-394c152b7b3e"
+        ]
+      },
+      {
+        "id": "bc2eb7c3-2586-40ac-a7c7-d3ae869e5fe0",
+        "from_id": "61c0c275-d01e-4c2a-ac67-3ea5b0702e0b",
+        "to_id": "e3181f5e-c2ba-41fc-b225-5b3a53c49962",
+        "rel_type": "LOCATED_IN",
+        "description": "Glasswatch Lighthouse stands in Bellhaven.",
+        "properties": {
+          "source_conversation": "01a1a113-db28-7b97-bc6f-efa3df827df1"
+        },
+        "source_conversation": "01a1a113-db28-7b97-bc6f-efa3df827df1",
+        "source_message_ids": [
+          "03cd9bd3-1bc5-4868-bb45-394c152b7b3e"
+        ]
+      }
+    ]
+  },
+  "next_cursor": null
+}

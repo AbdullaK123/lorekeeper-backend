@@ -1,0 +1,216 @@
+{
+  "id": "01a1a114-e845-7e10-ab1b-03e50ff87cfd",
+  "world_id": "01a1a113-dace-70af-8619-6be9d3f6b120",
+  "title": "Fresh canon check",
+  "messages": [
+    {
+      "role": "user",
+      "id": "84c15157-0d71-43c1-ba7c-5d3a9d3ff019",
+      "content": "How old is Mara Vale according to currently accepted canon? Give her current age only.",
+      "created_at": "2026-11-03T11:04:26.441207804Z"
+    },
+    {
+      "role": "assistant",
+      "id": "dc89067f-d127-41a2-8645-635863da099b",
+      "content": "41",
+      "tool_calls": null,
+      "created_at": "2026-11-03T11:04:27.840126993Z"
+    },
+    {
+      "role": "user",
+      "id": "534f2695-f138-4721-9b06-66c2deea7318",
+      "content": "What is Mara Vale’s accepted age and birthplace?",
+      "created_at": "2026-11-03T11:04:35.609029736Z"
+    },
+    {
+      "role": "assistant",
+      "id": "ba56c481-5797-4f77-9f3c-df8dc2c3e28c",
+      "content": "Mara Vale’s accepted age is 41, and her birthplace is Bellhaven.",
+      "tool_calls": null,
+      "created_at": "2026-11-03T11:04:37.684824259Z"
+    },
+    {
+      "role": "user",
+      "id": "51c363ce-5fa5-48dd-994a-8c34005de7b6",
+      "content": "What job does Mara have, and how old is she?",
+      "created_at": "2026-11-03T11:04:42.096658066Z"
+    },
+    {
+      "role": "assistant",
+      "id": "d9d30976-404c-4a77-b0e6-8db086e6d99a",
+      "content": "Mara is the keeper of Glasswatch Lighthouse, and she is 41 years old.",
+      "tool_calls": null,
+      "created_at": "2026-11-03T11:04:44.129173060Z"
+    },
+    {
+      "role": "user",
+      "id": "50dfc936-3971-4c30-9c44-834239059a2f",
+      "content": "Describe Mara using only current saved canon, including her age.",
+      "created_at": "2026-11-03T11:04:48.568545707Z"
+    },
+    {
+      "role": "assistant",
+      "id": "08bd8903-14db-40a3-bdcf-0d0d1dfaa29b",
+      "content": "Mara Vale is 41 years old, was born in Bellhaven, and keeps Glasswatch Lighthouse.",
+      "tool_calls": null,
+      "created_at": "2026-11-03T11:04:51.176448353Z"
+    },
+    {
+      "role": "user",
+      "id": "6799f2de-1c92-470a-bb3e-511b18ebe9da",
+      "content": "Who owns Glasswatch Lighthouse? Also state Mara’s current age.",
+      "created_at": "2026-11-03T11:04:57.125989493Z"
+    },
+    {
+      "role": "assistant",
+      "id": "cc1bdb9b-c4ed-472f-a82d-1b84b9e4f2e3",
+      "content": "Glasswatch Lighthouse is owned by the Tide Council. Mara Vale is 41 years old.",
+      "tool_calls": null,
+      "created_at": "2026-11-03T11:05:00.350783122Z"
+    },
+    {
+      "role": "user",
+      "id": "d664c7b8-3d19-4de3-ae60-a93646286e7b",
+      "content": "Where does Mara work, and what age is currently saved for her?",
+      "created_at": "2026-11-03T11:05:04.837794704Z"
+    },
+    {
+      "role": "assistant",
+      "id": "e7b53617-be0a-49e3-b618-633a33d538c7",
+      "content": "Mara is the keeper of Glasswatch Lighthouse in Bellhaven. Her currently saved age is 41.",
+      "tool_calls": null,
+      "created_at": "2026-11-03T11:05:08.013269594Z"
+    },
+    {
+      "role": "user",
+      "id": "9f62eb20-6ffd-4f48-ab4a-cd4b84b1dbab",
+      "content": "Give a short character card for Mara: age, birthplace, and role.",
+      "created_at": "2026-11-03T11:05:12.593482522Z"
+    },
+    {
+      "role": "assistant",
+      "id": "88a11128-834b-4583-b13b-a09509471fe1",
+      "content": "**Mara Vale**\n- **Age:** 41\n- **Birthplace:** Bellhaven\n- **Role:** Keeper of Glasswatch Lighthouse",
+      "tool_calls": null,
+      "created_at": "2026-11-03T11:05:14.416432088Z"
+    },
+    {
+      "role": "user",
+      "id": "8bf7e7e8-3156-4c76-9fb3-8d0e2964fe60",
+      "content": "Is Mara currently 41 according to accepted lore? Answer briefly.",
+      "created_at": "2026-11-03T11:05:18.924191633Z"
+    },
+    {
+      "role": "assistant",
+      "id": "1c6a1a9a-9424-4e3b-bd48-5aaa02016367",
+      "content": "Yes—Mara is currently 41 according to accepted lore.",
+      "tool_calls": null,
+      "created_at": "2026-11-03T11:05:20.315278714Z"
+    },
+    {
+      "role": "user",
+      "id": "b69e061c-011a-47d3-acf0-0cde78856542",
+      "content": "What does the saved description say about Mara’s age and birthplace?",
+      "created_at": "2026-11-03T11:05:24.770339845Z"
+    },
+    {
+      "role": "assistant",
+      "id": "aca7fb01-d9b1-4699-bb4e-db22b586963b",
+      "content": "The saved description says Mara is 41 years old and was born in Bellhaven.",
+      "tool_calls": null,
+      "created_at": "2026-11-03T11:05:26.438660557Z"
+    },
+    {
+      "role": "user",
+      "id": "9efd046c-b81b-4eb8-b840-0e3769d86281",
+      "content": "Summarize Mara’s connection to the lighthouse and include her age.",
+      "created_at": "2026-11-03T11:05:31.000814241Z"
+    },
+    {
+      "role": "assistant",
+      "id": "58126c45-cab3-4679-b9c9-6e895f56aade",
+      "content": "Mara Vale, 41, is the keeper of Glasswatch Lighthouse in Bellhaven.",
+      "tool_calls": null,
+      "created_at": "2026-11-03T11:05:34.314263140Z"
+    },
+    {
+      "role": "user",
+      "id": "a05ed1de-3680-4ffc-b269-1e4b370be8f7",
+      "content": "Without changing any facts, list Mara’s current age and occupation.",
+      "created_at": "2026-11-03T11:05:40.470262852Z"
+    },
+    {
+      "role": "assistant",
+      "id": "db3b8982-3b15-44cc-8656-57e470789dee",
+      "content": "Mara is 41 years old and keeps Glasswatch Lighthouse.",
+      "tool_calls": null,
+      "created_at": "2026-11-03T11:05:42.853301569Z"
+    },
+    {
+      "role": "user",
+      "id": "f19e72b4-5abe-41ba-8257-1a1ebdcacded",
+      "content": "Remind me of Mara’s age, birthplace, and workplace.",
+      "created_at": "2026-11-03T11:05:49.040833268Z"
+    },
+    {
+      "role": "assistant",
+      "id": "a93b7652-bd97-4ff0-b1a7-450087ae3a84",
+      "content": "Mara Vale is 41, was born in Bellhaven, and works as the keeper of Glasswatch Lighthouse.",
+      "tool_calls": null,
+      "created_at": "2026-11-03T11:05:50.548438763Z"
+    },
+    {
+      "role": "user",
+      "id": "594e355d-a534-444f-bd96-cbc909ac2e5c",
+      "content": "Which place is associated with Mara, and how old is she?",
+      "created_at": "2026-11-03T11:05:55.003934951Z"
+    },
+    {
+      "role": "assistant",
+      "id": "ca1bda25-6686-44a0-a4de-b6c1eb672d39",
+      "content": "Mara is associated with Bellhaven, where she was born and keeps Glasswatch Lighthouse. She is 41 years old.",
+      "tool_calls": null,
+      "created_at": "2026-11-03T11:05:58.139056399Z"
+    },
+    {
+      "role": "user",
+      "id": "a5454d3c-743e-4c98-8a0c-77c23b1dc86b",
+      "content": "Give one sentence about Mara that includes her accepted age.",
+      "created_at": "2026-11-03T11:06:02.497601802Z"
+    },
+    {
+      "role": "assistant",
+      "id": "7c1a1d3e-3b9d-47e1-8145-bf31ea8f1ea1",
+      "content": "Mara Vale is 41 years old and keeps Glasswatch Lighthouse in Bellhaven.",
+      "tool_calls": null,
+      "created_at": "2026-11-03T11:06:03.916222738Z"
+    },
+    {
+      "role": "user",
+      "id": "312e6a7f-67fa-42dd-9834-30027676612a",
+      "content": "What established details do we have about Mara? Include her age.",
+      "created_at": "2026-11-03T11:06:09.731313101Z"
+    },
+    {
+      "role": "assistant",
+      "id": "9e12dc7f-1c98-423f-8449-b218ab4cb402",
+      "content": "Mara Vale is 41, was born in Bellhaven, and is the keeper of Glasswatch Lighthouse.",
+      "tool_calls": null,
+      "created_at": "2026-11-03T11:06:12.508087902Z"
+    },
+    {
+      "role": "user",
+      "id": "ef849697-908d-4043-a17b-04571fc5c9a9",
+      "content": "Final canon check: give Mara Vale’s current accepted age only.",
+      "created_at": "2026-11-03T11:06:16.863399114Z"
+    },
+    {
+      "role": "assistant",
+      "id": "4f5a7b91-04c1-468e-af39-3b859c3557e8",
+      "content": "41",
+      "tool_calls": null,
+      "created_at": "2026-11-03T11:06:18.216500033Z"
+    }
+  ],
+  "updated_at": "2026-11-03T11:06:18.217351Z"
+}

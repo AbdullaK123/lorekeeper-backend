@@ -1,5 +1,27 @@
 # Backend test findings
 
+## Embedding refresh and release image — 2026-11-03
+
+A free database regression reproduces the stale-vector bug, then passes after the fix.
+All four conflict tests pass in 1.34 seconds. All-target compilation passes with warnings.
+All 16 checks pass on the rebuilt dev/prod image, including asset gating and clean exit 0.
+See [evidence](artifacts/docker-verification-2026-11-03/summary.md).
+No paid browser rerun or full suite rerun occurs. Earlier stale vectors are not backfilled.
+
+## Extensive description browser verification — 2026-11-03
+
+All 28 Playwright checks pass in 192.75 seconds on a rebuilt local debug API.
+A fresh QA world receives 20 paid chat turns and background research, plus two description rewrites.
+Accepted age 41 now agrees with the description, which retains unrelated facts and removes age 34.
+Both threads answer 41. Fifteen extended questions preserve the full entity and source IDs after research completes.
+Repeated acceptance, resolved-conflict reads, exact history after reload, mobile inspection, and displayed errors pass.
+No uncaught browser errors occur. The old stale-description finding is fixed in this tested scenario.
+Evidence: [extensive browser summary](artifacts/playwright-extensive-description-2026-11-03/summary.md).
+No full suite rerun or Docker rebuild occurs. The temporary API stops; QA evidence remains.
+Next: verify container packaging. Concurrent edits, search indexing, and broader conflict targets remain unchecked.
+All story requirements and epic acceptance states stay unchanged.
+
+
 Latest recorded verification: 2026-11-03. Earlier dated entries remain historical evidence.
 See [test instructions](README.md) for reproducible free and paid runs.
 

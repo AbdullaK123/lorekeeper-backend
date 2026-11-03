@@ -2,6 +2,35 @@
 
 Updated: 2026-11-03.
 
+## Extensive description browser verification — 2026-11-03
+
+All 28 Playwright checks pass in 192.75 seconds on a rebuilt local debug API.
+A fresh QA world receives 20 paid chat turns and background research, plus two description rewrites.
+Accepted age 41 now agrees with the description, which retains unrelated facts and removes age 34.
+Both threads answer 41. Fifteen extended questions preserve the full entity and source IDs after research completes.
+Repeated acceptance, resolved-conflict reads, exact history after reload, mobile inspection, and displayed errors pass.
+No uncaught browser errors occur. The old stale-description finding is fixed in this tested scenario.
+Evidence: [extensive browser summary](../tests/artifacts/playwright-extensive-description-2026-11-03/summary.md).
+No full suite rerun or Docker rebuild occurs. The temporary API stops; QA evidence remains.
+Next: verify container packaging. Concurrent edits, search indexing, and broader conflict targets remain unchecked.
+All story requirements and epic acceptance states stay unchanged.
+
+
+## Stale embedding fix — 2026-11-03
+
+A free Memgraph test reproduces the bug: corrected descriptions retain the old stored search vector.
+WorldService now embeds the corrected description before opening the acceptance transaction.
+Entity::embedding_text shares the name/kinds/description format with researcher graph writes.
+The repository saves the replacement vector, description, property, sources, and decision together.
+Embedding failure returns before graph writes. Repeated acceptance keeps the first committed vector.
+Verification: all four conflict regressions pass in 1.34 seconds. All-target offline compilation, formatting, and whitespace checks pass.
+The rebuilt image includes this fix. All 16 dev/prod runtime checks pass, including clean exit 0.
+Image: lorekeeper-backend:verified-20261103. No Compose rollout or hosted deployment occurs.
+Evidence: [image and embedding verification](../tests/artifacts/docker-verification-2026-11-03/summary.md).
+No paid browser rerun or full suite rerun occurs for this change.
+Concurrent-edit protection and backfilling earlier accepted entities remain outside this change.
+Frontend work stays deferred. Story scope and epic acceptance stay unchanged.
+
 ## Completion rule
 
 The project is done when all 15 [epics](user_stories.md) pass their acceptance checks.
@@ -460,6 +489,26 @@ Record each choice in the matching design epic and verify current provider requi
 The earlier code-size estimate excludes this added scope and needs revision.
 
 ## Immediate next pieces
+
+Next-step review: verify the current changes in a rebuilt Docker image.
+Check health, playground access under ENV=dev, asset blocking under ENV=prod, and clean shutdown.
+The 28-step browser run verifies the local debug API, not the release image.
+No implementation changes or tests run in this planning turn. Scope and epic acceptance stay unchanged.
+User direction: focus on backend work. Defer the actual frontend, including graph visualization.
+Keep all frontend stories in scope for later; do not schedule them as the next implementation slice.
+Release image verification now passes all 16 checks after the description and embedding fixes.
+Stale embeddings are reproduced and fixed for future acceptance writes. Existing stale vectors still need a repair plan.
+Concurrent-edit protection and research/deletion coordination remain backend gaps.
+This planning turn changes no application code and runs no tests. Epic acceptance stays unchanged.
+
+
+Next verification: rerun the fresh-world Playwright acceptance flow with an explicit description assertion.
+Require age 41 in saved properties, removal of the old age claim from the description, and agreement in both conversation answers.
+After question research completes, require the accepted entity and source IDs to remain unchanged.
+The existing browser harness does not fail on stale descriptions; strengthen that check before running.
+This planning turn runs no tests or paid calls and changes no application code.
+Scope and epic acceptance stay unchanged. Concurrent-edit protection remains separate unfinished work.
+
 
 Implemented: accept_conflict now receives the generated description and saves it in the existing graph transaction.
 Properties, description, message sources, and the conflict decision share that transaction.

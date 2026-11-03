@@ -24,6 +24,17 @@ pub struct Entity {
     pub source_message_ids: Vec<String>,
 }
 
+impl Entity {
+    pub fn embedding_text(&self) -> String {
+        format!(
+            "{}. {}. {}",
+            self.name,
+            self.kind.join(", "),
+            self.description
+        )
+    }
+}
+
 /// Normalized name for search and legacy lookups. IDs identify saved entities.
 pub fn name_key(name: &str) -> String {
     name.trim().to_lowercase()

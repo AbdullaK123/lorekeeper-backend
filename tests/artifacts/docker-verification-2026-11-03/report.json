@@ -1,0 +1,124 @@
+{
+  "image": "lorekeeper-backend:verified-20261103",
+  "checks": [
+    {
+      "name": "non-root-user",
+      "ok": true,
+      "detail": "lorekeeper"
+    },
+    {
+      "name": "default-production",
+      "ok": true,
+      "detail": [
+        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "ENV=prod"
+      ]
+    },
+    {
+      "name": "stop-signal",
+      "ok": true,
+      "detail": "SIGINT"
+    },
+    {
+      "name": "runtime-secrets-and-build-tools-absent",
+      "ok": true,
+      "detail": {
+        "exitCode": 0
+      }
+    },
+    {
+      "name": "dev-health",
+      "ok": true,
+      "detail": {
+        "status": 200,
+        "body": "ok"
+      }
+    },
+    {
+      "name": "dev-playground",
+      "ok": true,
+      "detail": {
+        "status": 200
+      }
+    },
+    {
+      "name": "dev-javascript-asset",
+      "ok": true,
+      "detail": {
+        "path": "/assets/index-BaUykE4a.js",
+        "status": 200
+      }
+    },
+    {
+      "name": "dev-api-alias",
+      "ok": true,
+      "detail": {
+        "status": 200
+      }
+    },
+    {
+      "name": "dev-unauthenticated-world-rejected",
+      "ok": true,
+      "detail": {
+        "status": 401
+      }
+    },
+    {
+      "name": "dev-clean-shutdown",
+      "ok": true,
+      "detail": {
+        "exitCode": 0,
+        "oomKilled": false,
+        "seconds": 0.51
+      }
+    },
+    {
+      "name": "prod-health",
+      "ok": true,
+      "detail": {
+        "status": 200,
+        "body": "ok"
+      }
+    },
+    {
+      "name": "prod-root-blocked",
+      "ok": true,
+      "detail": {
+        "status": 404
+      }
+    },
+    {
+      "name": "prod-assets-blocked",
+      "ok": true,
+      "detail": {
+        "path": "/assets/index-BaUykE4a.js",
+        "status": 404
+      }
+    },
+    {
+      "name": "prod-api-alias-blocked",
+      "ok": true,
+      "detail": {
+        "status": 404
+      }
+    },
+    {
+      "name": "prod-unauthenticated-world-rejected",
+      "ok": true,
+      "detail": {
+        "status": 401
+      }
+    },
+    {
+      "name": "prod-clean-shutdown",
+      "ok": true,
+      "detail": {
+        "exitCode": 0,
+        "oomKilled": false,
+        "seconds": 0.42
+      }
+    }
+  ],
+  "imageId": "sha256:cb3a5dd169cec2e1556dfcd3cce11f014e3d951cca2928501767f8a546fae963",
+  "sizeBytes": 44299277
+}

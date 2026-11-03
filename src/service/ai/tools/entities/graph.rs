@@ -204,12 +204,7 @@ impl PortableTool for UpdateGraph {
         let mut entities = Vec::new();
         for input in args.entities {
             let entity = Entity::from((input, self.world_id.as_str()));
-            let text = format!(
-                "{}. {}. {}",
-                entity.name,
-                entity.kind.join(", "),
-                entity.description
-            );
+            let text = entity.embedding_text();
             let embedding = self.embedding_model.embed_text(&text).await?.vec;
             entities.push((entity, embedding));
         }

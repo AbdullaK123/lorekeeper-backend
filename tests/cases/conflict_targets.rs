@@ -66,7 +66,7 @@ async fn conflict_targets_report_then_accept_saved_property() {
     );
     let description = "A 31-year-old captain from Bellhaven.";
     let accepted = graph
-        .accept_conflict(&conflict.id, &scope, description)
+        .accept_conflict(&conflict.id, &scope, description, &embedding())
         .await
         .unwrap()
         .unwrap();
@@ -88,6 +88,7 @@ async fn conflict_targets_report_then_accept_saved_property() {
             &conflict.id,
             &scope,
             "A repeated request must not overwrite lore",
+            &embedding(),
         )
         .await
         .unwrap();
@@ -214,4 +215,76 @@ async fn conflict_targets_reject_foreign_entities() {
         "Foreign tool creates a conflict against private lore"
     );
     graph.delete_graph(&world).await.unwrap();
+}
+
+#[tokio::test]
+#[ignore = "requires Memgraph; makes no AI calls"]
+async fn accepted_description_does_not_keep_old_search_embedding() {
+    let settings = infrastructure::load_settings();
+    let config = infrastructure::load_config();
+    let raw = infrastructure::create_graph(&settings, &config.memgraph).await;
+    let repo = data::GraphRepository::new(raw.clone());
+    let world = format!("qa-embedding-{}", uuid::Uuid::new_v4());
+    let mut entity = graph_entity(&world, "Embedding correction");
+    entity.description = "A 34-year-old keeper.".into();
+    entity
+        .properties
+        .insert("age".into(), serde_json::json!(34));
+    let entity = save_graph_entity(&repo, &entity).await;
+    service::FlagConflict {
+        world_id: world.clone(),
+        conversation_id: "qa".into(),
+        source_message_id: TEST_SOURCE_MESSAGE_ID.into(),
+        graph_repo: repo.clone(),
+    }
+    .call(service::FlagConflictArgs {
+        entity_id: entity.id.clone(),
+        field: "age".into(),
+        new_value: serde_json::json!(41),
+        severity: "soft".into(),
+        explanation: "QA accepted correction".into(),
+    })
+    .await
+    .unwrap();
+    let conflict = repo.get_conflicts(&world).await.unwrap().remove(0);
+    let mut corrected_embedding = vec![0.0; 1536];
+    corrected_embedding[1] = 1.0;
+    repo.accept_conflict(
+        &conflict.id,
+        &world,
+        "A 41-year-old keeper.",
+        &corrected_embedding,
+    )
+    .await
+    .unwrap();
+    repo.accept_conflict(&conflict.id, &world, "Repeated replacement", &embedding())
+        .await
+        .unwrap();
+    let updated = repo.get_entity(&entity.id, &world).await.unwrap().unwrap();
+    let mut rows = raw
+        .execute(
+            neo4rs::query(
+                "MATCH (e:Entity {id: $id, world_id: $world}) RETURN e.embedding AS embedding",
+            )
+            .param("id", entity.id)
+            .param("world", world.clone()),
+        )
+        .await
+        .unwrap();
+    let stored: Vec<f64> = rows
+        .next()
+        .await
+        .unwrap()
+        .unwrap()
+        .get("embedding")
+        .unwrap();
+    repo.delete_graph(&world).await.unwrap();
+    assert_eq!(
+        updated.description, "A 41-year-old keeper.",
+        "The correction never reaches the description"
+    );
+    assert_eq!(
+        stored, corrected_embedding,
+        "Accepted description does not save its replacement search vector"
+    );
 }

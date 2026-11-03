@@ -207,7 +207,9 @@ try {
     assert.deepEqual(entity.properties[conflict.field], conflict.new_value, 'Accepted claim does not reach saved lore');
     acceptedEntity = entity;
     await fs.writeFile(path.join(output, 'accepted-entity.json'), JSON.stringify(entity, null, 2));
-    if (/age 34\b/.test(entity.description)) report.findings = [{ issue: 'Accepted age updates the property but leaves age 34 in the entity description', entityId: mara.id, description: entity.description, properties: entity.properties }];
+    assert.ok(/\b41\b/.test(entity.description), 'Rewritten description omits the accepted age');
+    assert.ok(!/\b34\b/.test(entity.description), 'Rewritten description retains the rejected age');
+    assert.ok(/Bellhaven/i.test(entity.description) && /Glasswatch/i.test(entity.description), 'Description rewrite loses unrelated established facts');
     return { decision: resolved.decision, field: conflict.field, value: entity.properties[conflict.field] };
   });
   await step('retrieve-accepted-canon', async () => {
@@ -237,6 +239,62 @@ try {
     assert.deepEqual(entity, acceptedEntity, 'Fresh question changes saved canon or source references');
     return { answer, research, savedAge: entity.properties[conflict.field] };
   });
+  if (process.env.QA_PLAYWRIGHT_EXTENSIVE === '1') {
+    await step('repeat-acceptance-preserves-entity', async () => {
+      await workbench('resolve', { 'Conflict ID': conflict.id, Decision: 'accept_new' });
+      const entity = await workbench('entity', { 'Entity ID': mara.id });
+      assert.deepEqual(entity, acceptedEntity, 'Repeated acceptance changes already accepted lore');
+      const resolved = await workbench('conflicts', { Resolved: 'true' });
+      assert.ok(resolved.data.some(c => c.id === conflict.id && c.decision === 'accept_new'), 'Resolved decision disappears from review');
+    });
+    const questions = [
+      'What is Mara Vale’s accepted age and birthplace?',
+      'What job does Mara have, and how old is she?',
+      'Describe Mara using only current saved canon, including her age.',
+      'Who owns Glasswatch Lighthouse? Also state Mara’s current age.',
+      'Where does Mara work, and what age is currently saved for her?',
+      'Give a short character card for Mara: age, birthplace, and role.',
+      'Is Mara currently 41 according to accepted lore? Answer briefly.',
+      'What does the saved description say about Mara’s age and birthplace?',
+      'Summarize Mara’s connection to the lighthouse and include her age.',
+      'Without changing any facts, list Mara’s current age and occupation.',
+      'Remind me of Mara’s age, birthplace, and workplace.',
+      'Which place is associated with Mara, and how old is she?',
+      'Give one sentence about Mara that includes her accepted age.',
+      'What established details do we have about Mara? Include her age.',
+      'Final canon check: give Mara Vale’s current accepted age only.',
+    ];
+    report.extensiveAnswers = [];
+    for (const [index, question] of questions.entries()) {
+      await step(`extended-question-${String(index + 1).padStart(2, '0')}`, async () => {
+        const id = await chat(question);
+        const answer = lastMessages.filter(m => m.role === 'assistant').at(-1).content;
+        const research = await waitResearch(id);
+        const entity = await workbench('entity', { 'Entity ID': mara.id });
+        report.extensiveAnswers.push({ question, answer, messageId: id });
+        assert.ok(/\b41\b/.test(answer), 'Longer history loses the accepted age');
+        assert.ok(!/\b34\b/.test(answer), 'Answer reintroduces rejected age');
+        assert.deepEqual(entity, acceptedEntity, 'Question research changes accepted lore or sources');
+        return { answer, research, savedAge: entity.properties.age };
+      });
+    }
+    await step('reload-preserves-history', async () => {
+      const expected = lastMessages;
+      await page.reload();
+      await page.getByRole('button', { name: 'Glasswatch browser test', exact: true }).click();
+      await page.getByRole('button', { name: 'Fresh canon check', exact: true }).click();
+      const conversation = await workbench('conversation');
+      assert.deepEqual(conversation.messages, expected, 'Reload loses or changes saved conversation messages');
+      await fs.writeFile(path.join(output, 'extended-conversation.json'), JSON.stringify(conversation, null, 2));
+    });
+    await step('mobile-workbench-preserves-canon', async () => {
+      await page.setViewportSize({ width: 390, height: 844 });
+      const entity = await workbench('entity', { 'Entity ID': mara.id });
+      assert.deepEqual(entity, acceptedEntity, 'Mobile workbench shows different saved lore');
+      assert.ok(await page.getByRole('button', { name: 'Send request', exact: true }).isVisible(), 'Mobile layout hides request action');
+      await page.setViewportSize({ width: 1440, height: 1000 });
+    });
+  }
   await step('inspect-errors-and-retry-rejection', async () => {
     const error = await workbench('retry', { 'Message ID': sourceId }, 409);
     assert.ok(error.message || error.error, 'UI has no recovery error detail');
