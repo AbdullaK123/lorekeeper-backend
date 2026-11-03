@@ -6,7 +6,7 @@ Writers discuss their worlds through chat. A background researcher saves stated 
 Later replies search that lore. Writers can inspect sources, browse connections, and resolve supported conflicts through the API.
 The product client and SaaS launch workflows remain unfinished.
 
-Updated: 2026-11-02.
+Updated: 2026-11-03.
 
 ## Documentation
 
@@ -189,14 +189,17 @@ Use the [playground](playground/README.md) to exercise graph, conflict, source, 
 Its API workbench shows status, timing, request paths, and raw JSON.
 See [test instructions](tests/README.md) for isolated database runs and paid-test safeguards.
 
-Latest recorded results on 2026-11-02:
+Latest recorded results on 2026-11-03:
 
 - All-target compile check passes with warnings.
-- 43 free native database regressions pass.
+- A real Playwright canon regression passes 10 steps, including same-thread and fresh-thread answers after conflict acceptance.
+- 44 free native regressions pass, including a local-model request-context check.
 - Thirteen selected nested conversation route/access/validation HTTP tests pass.
 - Earlier research retry/status verification passes nine selected HTTP tests.
 - The broader unit run has 11 passes and one duplicate-row retrieval-ranking failure.
 
+Resolved writer decisions now reach chat through retrieval context, and question-only research preserves accepted lore in that scenario.
+Description summaries can still lag behind property changes.
 These are scoped results, not a claim that every product workflow passes.
 See [test findings](tests/REPORT.md) for evidence and earlier runs.
 

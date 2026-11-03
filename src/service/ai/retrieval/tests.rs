@@ -88,6 +88,7 @@ fn format_hits_draws_outgoing_and_incoming_arrows() {
     let mags = entity("m", "Old Mags", "character", "");
 
     let hit = SearchHit {
+        conflicts: vec![],
         entity: kael,
         neighbors: vec![
             (conclave, rel("k", "c", "MEMBER_OF")),
@@ -110,6 +111,7 @@ fn format_hits_lists_properties_without_json_quotes() {
     tavern.properties.insert("rooms".into(), json!(12));
 
     let out = format_hits(&[SearchHit {
+        conflicts: vec![],
         entity: tavern,
         neighbors: vec![],
     }]);
@@ -123,10 +125,12 @@ fn format_hits_lists_properties_without_json_quotes() {
 #[test]
 fn format_hits_separates_hits_with_a_blank_line() {
     let a = SearchHit {
+        conflicts: vec![],
         entity: entity("a", "A", "x", ""),
         neighbors: vec![],
     };
     let b = SearchHit {
+        conflicts: vec![],
         entity: entity("b", "B", "x", ""),
         neighbors: vec![],
     };
@@ -141,6 +145,7 @@ fn neighbor_properties_must_reach_the_chat_agent() {
         .properties
         .insert("population".into(), json!(53000));
     let hit = SearchHit {
+        conflicts: vec![],
         entity: entity("person", "Aurel", "character", ""),
         neighbors: vec![(neighbor, rel("person", "city", "LIVES_IN"))],
     };
@@ -156,6 +161,7 @@ fn relationship_qualifiers_must_reach_the_chat_agent() {
     let mut relationship = rel("person", "city", "LIVES_IN");
     relationship.description = "Only during winter.".into();
     let hit = SearchHit {
+        conflicts: vec![],
         entity: entity("person", "Aurel", "character", ""),
         neighbors: vec![(entity("city", "Meridian", "city", ""), relationship)],
     };
@@ -192,5 +198,33 @@ fn search_ties_keep_the_input_order() {
         ids(&ranked),
         vec!["a", "b"],
         "Equal search scores make otherwise identical prompts change unpredictably"
+    );
+}
+
+#[test]
+fn resolved_writer_decision_reaches_chat_context() {
+    let entity = entity("mara", "Mara", "person", "Age 34.");
+    let conflict = crate::data::Conflict {
+        id: "decision".into(),
+        world_id: entity.world_id.clone(),
+        entity_id: entity.id.clone(),
+        field: "age".into(),
+        existing_value: serde_json::json!(34),
+        new_value: serde_json::json!(41),
+        severity: "hard".into(),
+        explanation: "Disputed age".into(),
+        source_conversation: "thread".into(),
+        resolved: true,
+        decision: Some(crate::data::ConflictDecision::AcceptNew),
+        source_message_ids: vec![],
+    };
+    let text = format_hits(&[SearchHit {
+        entity,
+        neighbors: vec![],
+        conflicts: vec![conflict],
+    }]);
+    assert!(
+        text.contains("Writer decision [decision]: accepted age = 41"),
+        "Chat receives the old summary without the writer's accepted replacement"
     );
 }

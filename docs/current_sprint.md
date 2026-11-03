@@ -1,6 +1,6 @@
 # Current Sprint
 
-Updated: 2026-11-02.
+Updated: 2026-11-03.
 
 ## Nested conversation controller — 2026-11-02
 
@@ -68,6 +68,52 @@ Set ENV: dev explicitly on the Compose API service, overriding .env and the imag
 The standalone image still defaults to production. Compose validation and whitespace checks pass.
 No containers are restarted for this configuration change.
 
+## Playwright writer workflow — 2026-11-03
+
+Ran real Chromium against the built playground/API image and isolated QA database.
+Five real chat turns exercise signup, world/conversation creation, saved lore, research polling,
+graph/source inspection, contradiction reporting, conflict acceptance, and follow-up answers.
+Observed a real canon-preservation failure: accepting age 41 updates the property but leaves age 34 in the description.
+The next question gets answer 34. Research for that question calls update_graph with age 34 and reverts the saved value.
+Sanitized DBOS checkpoints and message source IDs identify that write. A fresh conversation then also answers 34.
+Completed-job retry rejection and invalid-ID errors display correctly. Basic 390x844 control visibility passes.
+No uncaught browser page errors. Eligible failed-job recovery and full mobile accessibility are not covered.
+Test harness selectors/HTTP parsing are corrected during resumed runs; prior paid turns are reused.
+Evidence and screenshots: tests/artifacts/playwright-2026-11-03/summary.md.
+Added an explicitly paid, opt-in Playwright workflow script; final script syntax and whitespace checks pass.
+The scenario fails acceptance. No application fixes or full-suite rerun are included.
+Removed the temporary API container. Project database services remain running with existing volumes and QA evidence.
+Next: fix accepted-canon authority and consistency before adding more features.
+
+## Canon regression fix investigation — 2026-11-03
+
+Inspected researcher input, agent prompts, and conflict reads after the browser failure.
+Found a concrete input-contract mismatch: runtime sends message, but the researcher prompt names user_message.
+read_entity already returns resolved conflicts through get_conflicts_by_entity; no new decision table is needed for that read.
+Next: align the input key, make current properties/resolved decisions outrank stale history/description,
+and rerun the browser regression before choosing further safeguards.
+Description consistency after acceptance remains a separate observed gap. No code edits or tests for this review.
+
+## Canon authority fix and browser regression — 2026-11-03
+
+Aligned research input with user_message and tightened latest-message/no-question-write rules.
+Added current-property/writer-decision authority to both prompts, with the observed age example.
+Moved current lore from Rig's static documents into explicitly labeled system data.
+Static documents otherwise merge into the first old user message when history exists.
+Input/prompt-only and system-context-only browser runs preserve storage but still answer the old age.
+A read-only diagnostic confirms text/vector retrieval returns current age 41.
+Included resolved writer decisions in SearchHit and formatted them into retrieval context for chat/search tools.
+The final fresh-world Playwright run passes all 10 steps: accepted age 41 is answered in both old and fresh threads.
+After research completes, entity data and source IDs remain unchanged.
+All three question-only workflows have no tool calls. Screenshots and evidence are retained under
+ tests/artifacts/playwright-canon-decisions-2026-11-03/summary.md.
+One new formatting test and one local-model request-context test pass.
+All 44 free native regressions pass in 12.94 seconds; all-target offline compilation passes with warnings.
+Thirteen paid chat turns across three browser attempts and one embedding diagnostic run for this fix.
+The test API is stopped; QA evidence and database volumes remain. The Docker image is not rebuilt.
+Remaining: description text can still be stale; this fix makes current properties and decisions authoritative instead of rewriting summaries.
+No full unit-suite rerun; the separate duplicate-ranking failure is not changed.
+
 ## Current status
 
 The tool-using lore pipeline is implemented. The old extraction service is removed.
@@ -89,6 +135,7 @@ These are scoped runs. They do not form a single full-suite pass count.
 
 ## Remaining work
 
+- Canon authority regression now passes one browser scenario; stale summary text still needs a defined update policy.
 - Product graph browsing, source navigation, conflict review, and research recovery screens.
 - Long-history limits, interrupted replies, and concurrent chat behavior.
 - Conflict targets beyond existing entity properties and unresolved-reference workflows.

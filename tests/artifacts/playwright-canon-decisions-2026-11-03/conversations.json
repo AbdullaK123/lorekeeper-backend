@@ -1,0 +1,79 @@
+[
+  {
+    "id": "01a1a05a-c5ac-71d2-9bef-32c15f00a40b",
+    "world_id": "01a1a05a-c533-7920-96a4-49528ccb633e",
+    "messages": [
+      {
+        "id": "3e9a7f20-0ed8-473a-8c9a-39c4cadf8875",
+        "role": "user",
+        "content": "Mara Vale is the keeper of Glasswatch Lighthouse. She was born in Bellhaven and is 34 years old. Glasswatch Lighthouse stands in Bellhaven and is owned by the Tide Council. These are established facts for this world.",
+        "created_at": "2026-11-03T07:41:07.791942152Z"
+      },
+      {
+        "id": "752a39fe-63f6-477e-abfb-cb5451d146f6",
+        "role": "assistant",
+        "content": "Mara\u2019s life seems tightly bound to Bellhaven: she was born there and now keeps the lighthouse the Tide Council owns. Does the Council leave her to run Glasswatch independently, or do they expect her to answer for what happens there?",
+        "created_at": "2026-11-03T07:41:10.914279920Z",
+        "tool_calls": null
+      },
+      {
+        "id": "47586a1b-b240-4b97-bded-9f666462af2a",
+        "role": "user",
+        "content": "What do we know about Mara Vale and Glasswatch Lighthouse? Use only the established facts.",
+        "created_at": "2026-11-03T07:41:34.658597953Z"
+      },
+      {
+        "id": "d860c001-aa80-4972-b102-40e658a8b051",
+        "role": "assistant",
+        "content": "Mara Vale is 34, was born in Bellhaven, and is the keeper of Glasswatch Lighthouse. The lighthouse stands in Bellhaven and is owned by the Tide Council.",
+        "created_at": "2026-11-03T07:41:37.219345358Z",
+        "tool_calls": null
+      },
+      {
+        "id": "c1f17d6c-bf03-41fa-9d73-f1ddabddf036",
+        "role": "user",
+        "content": "I found an older note saying Mara Vale is 41 years old, but my current notes say 34. I don't know which note is right. Keep the existing age for now and record the disagreement for review.",
+        "created_at": "2026-11-03T07:41:41.623137373Z"
+      },
+      {
+        "id": "0f80ba3e-f4da-4b45-a5e8-2aad282b2753",
+        "role": "assistant",
+        "content": "For now, Mara\u2019s working age remains **34**. The older note says **41**, so the discrepancy is unresolved and can be reviewed later.",
+        "created_at": "2026-11-03T07:41:47.975292087Z",
+        "tool_calls": null
+      },
+      {
+        "id": "68de9957-a14f-4584-848e-81de243509e8",
+        "role": "user",
+        "content": "How old is Mara Vale now, according to the accepted canon? Give her current age only.",
+        "created_at": "2026-11-03T07:42:03.280627894Z"
+      },
+      {
+        "id": "32ac4297-d210-4115-b596-c1f090c61c19",
+        "role": "assistant",
+        "content": "41",
+        "created_at": "2026-11-03T07:42:06.320849814Z",
+        "tool_calls": null
+      }
+    ]
+  },
+  {
+    "id": "01a1a05b-c03c-7025-ae58-5738067f6e19",
+    "world_id": "01a1a05a-c533-7920-96a4-49528ccb633e",
+    "messages": [
+      {
+        "id": "d81d989c-ef73-4737-9ee1-807b5c3394f6",
+        "role": "user",
+        "content": "How old is Mara Vale according to currently accepted canon? Give her current age only.",
+        "created_at": "2026-11-03T07:42:10.772984856Z"
+      },
+      {
+        "id": "a7bb4b40-f0ec-4ee8-990e-23cf246e303f",
+        "role": "assistant",
+        "content": "41",
+        "created_at": "2026-11-03T07:42:12.355358939Z",
+        "tool_calls": null
+      }
+    ]
+  }
+]

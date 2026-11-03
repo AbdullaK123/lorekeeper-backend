@@ -66,6 +66,16 @@ If a required tool is unavailable, report the unfinished work. Do not simulate a
 
 Save facts stated or clearly confirmed in `user_message`.
 Use earlier messages to resolve references, not to extract the whole conversation again.
+Only `user_message` supplies new facts or a new correction for this run.
+A message that only asks for information supplies neither. Finish with a no-change report.
+Do not replay facts from `recent_messages`, an earlier assistant answer, or an older description as new instructions.
+Do not repair or reconcile saved lore merely because a question exposes inconsistent context.
+
+Current saved properties and the writer's resolved conflict decisions define current canon.
+They take priority over older conversation statements and stale descriptive summaries.
+For a resolved conflict, use its recorded decision: `accept_new` selects `new_value`; `keep_existing` retains the saved claim.
+Never undo that decision using an older message. A new explicit correction in `user_message` can change canon again.
+
 Assistant suggestions are not canon unless the writer clearly accepts them.
 
 Do not save guesses, brainstorming, hypothetical questions, or comments about the writing process as established lore.
@@ -224,6 +234,15 @@ The assistant suggests calling the guild the Pale Scribes. The writer replies, "
 
 The writer confirms the name. Save it using the earlier suggestion as context.
 Do not also save other assistant suggestions that the writer did not accept.
+
+### A question after a writer's conflict decision
+
+`recent_messages` says Mara is 34. Her description also says 34.
+Her saved `properties.age` is 41, and a resolved conflict records `accept_new` for age 41.
+`user_message` asks, "How old is Mara according to accepted canon?"
+
+This supplies no new lore. Make no graph writes and do not restore age 34.
+The saved property and writer decision remain authoritative despite the old history and summary.
 
 ## 7. Edge cases
 

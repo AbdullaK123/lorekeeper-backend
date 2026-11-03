@@ -1,0 +1,235 @@
+[
+  {
+    "step": 0,
+    "name": "research_model",
+    "tool_calls": [
+      {
+        "type": "toolcall",
+        "id": {
+          "provider": "call_ygYr5SqpYNKmGDEbKrrLshyF"
+        },
+        "function": {
+          "name": "search_world",
+          "arguments": {
+            "query": "Mara Vale age keeper Glasswatch Lighthouse Bellhaven 34 disagreement older note 41"
+          }
+        },
+        "native": {
+          "item": {
+            "type": "function",
+            "id": "call_ygYr5SqpYNKmGDEbKrrLshyF",
+            "function": {
+              "name": "search_world",
+              "arguments": "{\"query\":\"Mara Vale age keeper Glasswatch Lighthouse Bellhaven 34 disagreement older note 41\"}"
+            }
+          },
+          "fingerprint": "f73d7d4eb2d3b8ff"
+        }
+      }
+    ]
+  },
+  {
+    "step": 1,
+    "name": "research_tool",
+    "result": {
+      "type": "toolresult",
+      "call": {
+        "provider": "call_ygYr5SqpYNKmGDEbKrrLshyF"
+      },
+      "name": "search_world",
+      "content": [
+        {
+          "type": "text",
+          "text": "Mara Vale (person) [ID: 64c27749-f9a3-4fc2-9348-e3e8419be0c5]: Keeper of Glasswatch Lighthouse. Born in Bellhaven; age 34.\n  Properties: age: 41; birthplace: Bellhaven; source_conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc\n  - KEEPER_OF \u2192 Glasswatch Lighthouse (lighthouse) [ID: 93d91401-cfdb-4b61-a10a-74cd2d2b790f]: A lighthouse in Bellhaven, owned by the Tide Council.\n    Neighbor properties: source_conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc\n    Relationship: Mara Vale is the keeper of Glasswatch Lighthouse.\n    Relationship properties: source_conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc\n\nBellhaven (place, settlement) [ID: 46bce796-fe91-42dd-984a-4c082b55525f]: The birthplace of Mara Vale and location of Glasswatch Lighthouse.\n  Properties: source_conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc\n  - \u2190 LOCATED_IN from Glasswatch Lighthouse (lighthouse) [ID: 93d91401-cfdb-4b61-a10a-74cd2d2b790f]: A lighthouse in Bellhaven, owned by the Tide Council.\n    Neighbor properties: source_conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc\n    Relationship: Glasswatch Lighthouse stands in Bellhaven.\n    Relationship properties: source_conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc\n\nGlasswatch Lighthouse (lighthouse) [ID: 93d91401-cfdb-4b61-a10a-74cd2d2b790f]: A lighthouse in Bellhaven, owned by the Tide Council.\n  Properties: source_conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc\n  - \u2190 KEEPER_OF from Mara Vale (person) [ID: 64c27749-f9a3-4fc2-9348-e3e8419be0c5]: Keeper of Glasswatch Lighthouse. Born in Bellhaven; age 34.\n    Neighbor properties: age: 41; birthplace: Bellhaven; source_conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc\n    Relationship: Mara Vale is the keeper of Glasswatch Lighthouse.\n    Relationship properties: source_conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc\n  - LOCATED_IN \u2192 Bellhaven (place, settlement) [ID: 46bce796-fe91-42dd-984a-4c082b55525f]: The birthplace of Mara Vale and location of Glasswatch Lighthouse.\n    Neighbor properties: source_conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc\n    Relationship: Glasswatch Lighthouse stands in Bellhaven.\n    Relationship properties: source_conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc\n  - OWNED_BY \u2192 Tide Council (organization, council) [ID: 035e6452-1aff-4094-adbd-59d34b6cb722]: Owner of Glasswatch Lighthouse.\n    Neighbor properties: source_conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc\n    Relationship: Glasswatch Lighthouse is owned by the Tide Council.\n    Relationship properties: source_conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc\n\nTide Council (organization, council) [ID: 035e6452-1aff-4094-adbd-59d34b6cb722]: Owner of Glasswatch Lighthouse.\n  Properties: source_conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc\n  - \u2190 OWNED_BY from Glasswatch Lighthouse (lighthouse) [ID: 93d91401-cfdb-4b61-a10a-74cd2d2b790f]: A lighthouse in Bellhaven, owned by the Tide Council.\n    Neighbor properties: source_conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc\n    Relationship: Glasswatch Lighthouse is owned by the Tide Council.\n    Relationship properties: source_conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc"
+        }
+      ]
+    }
+  },
+  {
+    "step": 2,
+    "name": "research_model",
+    "tool_calls": [
+      {
+        "type": "toolcall",
+        "id": {
+          "provider": "call_ZUHRL2eGGN0ZciwvFeVLVQdx"
+        },
+        "function": {
+          "name": "read_entity",
+          "arguments": {
+            "entity_id": "64c27749-f9a3-4fc2-9348-e3e8419be0c5"
+          }
+        },
+        "native": {
+          "item": {
+            "type": "function",
+            "id": "call_ZUHRL2eGGN0ZciwvFeVLVQdx",
+            "function": {
+              "name": "read_entity",
+              "arguments": "{\"entity_id\":\"64c27749-f9a3-4fc2-9348-e3e8419be0c5\"}"
+            }
+          },
+          "fingerprint": "4d146e967c99dd3c"
+        }
+      }
+    ]
+  },
+  {
+    "step": 3,
+    "name": "research_tool",
+    "result": {
+      "type": "toolresult",
+      "call": {
+        "provider": "call_ZUHRL2eGGN0ZciwvFeVLVQdx"
+      },
+      "name": "read_entity",
+      "content": [
+        {
+          "type": "json",
+          "value": {
+            "entity": {
+              "id": "64c27749-f9a3-4fc2-9348-e3e8419be0c5",
+              "world_id": "01a1a039-6863-7327-b745-793905a85caa",
+              "name": "Mara Vale",
+              "name_key": "mara vale",
+              "aliases": [],
+              "kind": [
+                "person"
+              ],
+              "description": "Keeper of Glasswatch Lighthouse. Born in Bellhaven; age 34.",
+              "properties": {
+                "age": 41,
+                "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc",
+                "birthplace": "Bellhaven"
+              },
+              "source_message_ids": [
+                "0f76eed1-e038-40e4-a499-16a86088f062",
+                "83d760c1-421d-4854-a228-6664d8724a5e"
+              ]
+            },
+            "neighbors": [
+              [
+                {
+                  "id": "93d91401-cfdb-4b61-a10a-74cd2d2b790f",
+                  "world_id": "01a1a039-6863-7327-b745-793905a85caa",
+                  "name": "Glasswatch Lighthouse",
+                  "name_key": "glasswatch lighthouse",
+                  "aliases": [],
+                  "kind": [
+                    "lighthouse"
+                  ],
+                  "description": "A lighthouse in Bellhaven, owned by the Tide Council.",
+                  "properties": {
+                    "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc"
+                  },
+                  "source_message_ids": [
+                    "0f76eed1-e038-40e4-a499-16a86088f062"
+                  ]
+                },
+                {
+                  "id": "bb618978-0168-4a34-acb0-5a02b233c491",
+                  "world_id": "01a1a039-6863-7327-b745-793905a85caa",
+                  "from_id": "64c27749-f9a3-4fc2-9348-e3e8419be0c5",
+                  "to_id": "93d91401-cfdb-4b61-a10a-74cd2d2b790f",
+                  "rel_type": "KEEPER_OF",
+                  "description": "Mara Vale is the keeper of Glasswatch Lighthouse.",
+                  "properties": {
+                    "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc"
+                  },
+                  "source_message_ids": [
+                    "0f76eed1-e038-40e4-a499-16a86088f062"
+                  ],
+                  "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc"
+                }
+              ]
+            ],
+            "conflicts": [
+              {
+                "id": "31b1d8f6-2d6b-4cbd-9c62-49161fcd914c",
+                "world_id": "01a1a039-6863-7327-b745-793905a85caa",
+                "entity_id": "64c27749-f9a3-4fc2-9348-e3e8419be0c5",
+                "field": "age",
+                "existing_value": 34,
+                "new_value": 41,
+                "severity": "hard",
+                "explanation": "The writer reports an older note giving Mara Vale's age as 41, while current notes give 34, and says they do not know which is right. Keep the established age 34; record 41 as disputed for review. Source conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc.",
+                "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc",
+                "resolved": true,
+                "decision": "accept_new",
+                "source_message_ids": [
+                  "83d760c1-421d-4854-a228-6664d8724a5e"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "step": 4,
+    "name": "research_model",
+    "tool_calls": [
+      {
+        "type": "toolcall",
+        "id": {
+          "provider": "call_rHNMAYMZo2lDvlrz37v4iGVF"
+        },
+        "function": {
+          "name": "update_graph",
+          "arguments": {
+            "entities": [
+              {
+                "id": "64c27749-f9a3-4fc2-9348-e3e8419be0c5",
+                "name": "Mara Vale",
+                "aliases": [],
+                "kind": [
+                  "person"
+                ],
+                "description": "Keeper of Glasswatch Lighthouse. Born in Bellhaven; age 34.",
+                "properties": {
+                  "age": 34,
+                  "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc",
+                  "birthplace": "Bellhaven"
+                }
+              }
+            ]
+          }
+        },
+        "native": {
+          "item": {
+            "type": "function",
+            "id": "call_rHNMAYMZo2lDvlrz37v4iGVF",
+            "function": {
+              "name": "update_graph",
+              "arguments": "{\"entities\":[{\"id\":\"64c27749-f9a3-4fc2-9348-e3e8419be0c5\",\"name\":\"Mara Vale\",\"aliases\":[],\"kind\":[\"person\"],\"description\":\"Keeper of Glasswatch Lighthouse. Born in Bellhaven; age 34.\",\"properties\":{\"age\":34,\"source_conversation\":\"01a1a039-68b6-7d0e-8ff2-baa4fcd919fc\",\"birthplace\":\"Bellhaven\"}}]}"
+            }
+          },
+          "fingerprint": "7ec9428a417368e0"
+        }
+      }
+    ]
+  },
+  {
+    "step": 5,
+    "name": "research_tool",
+    "result": {
+      "type": "toolresult",
+      "call": {
+        "provider": "call_rHNMAYMZo2lDvlrz37v4iGVF"
+      },
+      "name": "update_graph",
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"saved_entities\":[{\"id\":\"64c27749-f9a3-4fc2-9348-e3e8419be0c5\",\"name\":\"Mara Vale\"}],\"saved_relationships\":[],\"retracted_relationship_ids\":[]}"
+        }
+      ]
+    }
+  },
+  {
+    "step": 6,
+    "name": "research_model",
+    "tool_calls": []
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "vector": {
+    "stdout": "\"node.name\",\"node.properties\",\"similarity\"\n\"\"\"Mara Vale\"\"\",\"\"\"{\\\"\"birthplace\\\"\":\\\"\"Bellhaven\\\"\",\\\"\"source_conversation\\\"\":\\\"\"01a1a051-052e-7343-9e3a-7043cf498d45\\\"\",\\\"\"age\\\"\":41}\"\"\",\"0.655699\"\n",
+    "stderr": ""
+  },
+  "fts": {
+    "stdout": "\"node.name\",\"node.properties\"\n\"\"\"Mara Vale\"\"\",\"\"\"{\\\"\"birthplace\\\"\":\\\"\"Bellhaven\\\"\",\\\"\"source_conversation\\\"\":\\\"\"01a1a051-052e-7343-9e3a-7043cf498d45\\\"\",\\\"\"age\\\"\":41}\"\"\"\n\"\"\"Glasswatch Lighthouse\"\"\",\"\"\"{\\\"\"source_conversation\\\"\":\\\"\"01a1a051-052e-7343-9e3a-7043cf498d45\\\"\"}\"\"\"\n",
+    "stderr": ""
+  },
+  "counts": {
+    "stdout": "\"count(e)\"\n\"145\"\n",
+    "stderr": ""
+  }
+}

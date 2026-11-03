@@ -1,0 +1,15 @@
+{
+  "id": "31b1d8f6-2d6b-4cbd-9c62-49161fcd914c",
+  "entity_id": "64c27749-f9a3-4fc2-9348-e3e8419be0c5",
+  "field": "age",
+  "existing_value": 34,
+  "new_value": 41,
+  "severity": "hard",
+  "explanation": "The writer reports an older note giving Mara Vale's age as 41, while current notes give 34, and says they do not know which is right. Keep the established age 34; record 41 as disputed for review. Source conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc.",
+  "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc",
+  "source_message_ids": [
+    "83d760c1-421d-4854-a228-6664d8724a5e"
+  ],
+  "resolved": false,
+  "decision": null
+}

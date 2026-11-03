@@ -1,6 +1,6 @@
 # Lorekeeper — Project Plan
 
-Updated: 2026-11-02.
+Updated: 2026-11-03.
 
 ## Completion rule
 
@@ -451,6 +451,10 @@ Record each choice in the matching design epic and verify current provider requi
 The earlier code-size estimate excludes this added scope and needs revision.
 
 ## Immediate next pieces
+
+The 2026-11-03 canon rollback now has a passing [browser regression](../tests/artifacts/playwright-canon-decisions-2026-11-03/summary.md).
+Current properties and resolved decisions override stale history; questions preserve saved lore in that scenario.
+Description text can still lag behind an accepted property. Define summary consistency before declaring full canon acceptance.
 
 The researcher pipeline, graph read APIs, supported conflict decisions, source lookup, logging,
 and research status/retry endpoints are implemented. Do not restart the extraction redesign.

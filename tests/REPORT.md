@@ -1,7 +1,34 @@
 # Backend test findings
 
-Latest recorded verification: 2026-11-02. Earlier dated entries remain historical evidence.
+Latest recorded verification: 2026-11-03. Earlier dated entries remain historical evidence.
 See [test instructions](README.md) for reproducible free and paid runs.
+
+## Canon authority fix — 2026-11-03
+
+The final fresh-world Playwright run passes all 10 steps across five paid chat turns.
+Both same-thread and fresh-thread questions answer accepted age 41.
+Entity properties and source IDs remain identical after question research completes.
+All three pure-question workflows have no tool calls, verified from QA DBOS records.
+Two intermediate browser attempts still answer 34 while preserving storage; their evidence is retained.
+The passing implementation aligns user_message, clarifies authority, supplies current lore as system data,
+and includes resolved writer decisions in retrieval context.
+One formatting unit test and one local-model request-context test pass.
+All 44 free native regressions pass in 12.94 seconds; offline all-target compilation passes with warnings.
+Stored description text still contains age 34; the passing case verifies authority despite that stale summary.
+See [final browser evidence](artifacts/playwright-canon-decisions-2026-11-03/summary.md).
+No Docker image rebuild or full unit-suite rerun for this source fix.
+
+## Playwright writer workflow — 2026-11-03
+
+**Fails accepted-canon preservation.** Five paid chat turns run through real Chromium and the built playground against QA data.
+Signup, world/conversation creation, saved lore, graph/source reads, contradiction reporting, and conflict acceptance work.
+Accept-new changes Mara's age property from 34 to 41 while the description retains age 34.
+The next question receives answer 34. Its research workflow explicitly writes age 34 back through update_graph.
+A fresh conversation then also answers 34 after that reversion.
+Retrying completed research displays 409; invalid UUID inspection displays plain-text 400. No uncaught page errors appear.
+Basic small-screen control visibility is checked; this is not full mobile accessibility acceptance.
+See the [summary and screenshots](artifacts/playwright-2026-11-03/summary.md), captured entity states, and sanitized workflow checkpoints.
+No application fix or full-suite rerun. Temporary test API is removed; QA world evidence is retained.
 
 ## Multi-stage container verification — 2026-11-02
 

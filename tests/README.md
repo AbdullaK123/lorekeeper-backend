@@ -157,3 +157,35 @@ Build the image with docker build -t lorekeeper-backend:local . from the reposit
 The latest temporary-container check uses the isolated QA database and a dummy provider key.
 It verifies prod/dev route gates, health, built assets, non-root execution, absent build tools/secrets, and graceful stop.
 This is image validation, not deployed acceptance or a full-suite result. Apply application migrations separately.
+
+
+## Real Playwright writer workflow (paid)
+
+The opt-in script tests the built playground through Chromium. It submits real chat/research requests.
+Run only after authorizing provider charges. Use the isolated QA database and a fresh output directory.
+Install Playwright outside the repository if it is not already available:
+
+```sh
+npm install --prefix /tmp/lorekeeper-browser --no-save playwright
+/tmp/lorekeeper-browser/node_modules/.bin/playwright install chromium
+QA_PLAYWRIGHT_PAID=1 \
+PLAYWRIGHT_MODULE=/tmp/lorekeeper-browser/node_modules/playwright/index.mjs \
+QA_BASE_URL=http://127.0.0.1:18000 \
+QA_PLAYWRIGHT_OUTPUT=tests/artifacts/my-browser-run \
+node tests/playwright_workflow.mjs
+```
+
+Start the dev API against QA data before this command. An existing compatible Chromium can be selected with PLAYWRIGHT_CHROMIUM_EXECUTABLE.
+The script retains screenshots, saved messages, and response outcomes. It exits nonzero on failed assertions.
+QA_PLAYWRIGHT_RESUME=1 can reuse saved account/world data after harness interruptions.
+After the accepted-canon assertion fails, QA_PLAYWRIGHT_FINISH_ONLY=1 with resume checks errors/mobile controls and a fresh conversation.
+That continuation still performs a paid chat and retains the original failure result.
+The [2026-11-03 evidence](artifacts/playwright-2026-11-03/summary.md) records an actual canon reversion, not a passing acceptance run.
+
+
+### Canon authority regression
+
+The paid browser script checks the accepted property and exact entity/source snapshot after research finishes.
+It repeats the age question in a fresh conversation. The [passing rerun](artifacts/playwright-canon-decisions-2026-11-03/summary.md) preserves age 41.
+Free coverage includes resolved-decision formatting and chat_canon_context::, which inspects a local model request for current lore in system context.
+The free native suite now contains 44 passing checks. The wider unit duplicate-ranking failure remains a separate historical finding.

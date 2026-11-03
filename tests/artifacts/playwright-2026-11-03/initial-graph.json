@@ -1,0 +1,115 @@
+{
+  "data": {
+    "nodes": [
+      {
+        "id": "035e6452-1aff-4094-adbd-59d34b6cb722",
+        "name": "Tide Council",
+        "aliases": [],
+        "kind": [
+          "organization",
+          "council"
+        ],
+        "description": "Owner of Glasswatch Lighthouse.",
+        "properties": {
+          "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc"
+        },
+        "source_message_ids": [
+          "0f76eed1-e038-40e4-a499-16a86088f062"
+        ]
+      },
+      {
+        "id": "46bce796-fe91-42dd-984a-4c082b55525f",
+        "name": "Bellhaven",
+        "aliases": [],
+        "kind": [
+          "place",
+          "settlement"
+        ],
+        "description": "The birthplace of Mara Vale and location of Glasswatch Lighthouse.",
+        "properties": {
+          "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc"
+        },
+        "source_message_ids": [
+          "0f76eed1-e038-40e4-a499-16a86088f062"
+        ]
+      },
+      {
+        "id": "64c27749-f9a3-4fc2-9348-e3e8419be0c5",
+        "name": "Mara Vale",
+        "aliases": [],
+        "kind": [
+          "person"
+        ],
+        "description": "Keeper of Glasswatch Lighthouse. Born in Bellhaven; age 34.",
+        "properties": {
+          "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc",
+          "age": 34,
+          "birthplace": "Bellhaven"
+        },
+        "source_message_ids": [
+          "0f76eed1-e038-40e4-a499-16a86088f062"
+        ]
+      },
+      {
+        "id": "93d91401-cfdb-4b61-a10a-74cd2d2b790f",
+        "name": "Glasswatch Lighthouse",
+        "aliases": [],
+        "kind": [
+          "lighthouse"
+        ],
+        "description": "A lighthouse in Bellhaven, owned by the Tide Council.",
+        "properties": {
+          "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc"
+        },
+        "source_message_ids": [
+          "0f76eed1-e038-40e4-a499-16a86088f062"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "2ca1e73e-ea5f-4abd-a1b5-8d2b4753de9a",
+        "from_id": "93d91401-cfdb-4b61-a10a-74cd2d2b790f",
+        "to_id": "46bce796-fe91-42dd-984a-4c082b55525f",
+        "rel_type": "LOCATED_IN",
+        "description": "Glasswatch Lighthouse stands in Bellhaven.",
+        "properties": {
+          "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc"
+        },
+        "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc",
+        "source_message_ids": [
+          "0f76eed1-e038-40e4-a499-16a86088f062"
+        ]
+      },
+      {
+        "id": "bb618978-0168-4a34-acb0-5a02b233c491",
+        "from_id": "64c27749-f9a3-4fc2-9348-e3e8419be0c5",
+        "to_id": "93d91401-cfdb-4b61-a10a-74cd2d2b790f",
+        "rel_type": "KEEPER_OF",
+        "description": "Mara Vale is the keeper of Glasswatch Lighthouse.",
+        "properties": {
+          "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc"
+        },
+        "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc",
+        "source_message_ids": [
+          "0f76eed1-e038-40e4-a499-16a86088f062"
+        ]
+      },
+      {
+        "id": "fa99fdc1-00bf-42bc-863c-bb82bee10f8c",
+        "from_id": "93d91401-cfdb-4b61-a10a-74cd2d2b790f",
+        "to_id": "035e6452-1aff-4094-adbd-59d34b6cb722",
+        "rel_type": "OWNED_BY",
+        "description": "Glasswatch Lighthouse is owned by the Tide Council.",
+        "properties": {
+          "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc"
+        },
+        "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc",
+        "source_message_ids": [
+          "0f76eed1-e038-40e4-a499-16a86088f062"
+        ]
+      }
+    ]
+  },
+  "next_cursor": null
+}

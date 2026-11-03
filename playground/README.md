@@ -111,3 +111,19 @@ The production build checks JSX and module integration.
 
 Use [backend tests](../tests/README.md) for real HTTP contracts and database behavior.
 Rig's SSE event shapes can change when Rig changes; the inspector parser may need updates.
+
+
+## Browser verification — 2026-11-03
+
+A real Playwright run covers signup, world/conversation creation, chat, research polling,
+graph/source inspection, conflict acceptance, and visible HTTP errors.
+The UI flow exposes a backend canon-preservation failure: accepted age 41 later becomes 34 again.
+See [browser evidence](../tests/artifacts/playwright-2026-11-03/summary.md) and [paid-run instructions](../tests/README.md#real-playwright-writer-workflow-paid).
+This is failing acceptance evidence; it does not mark the product conflict workflow complete.
+
+
+### Canon regression rerun
+
+The [source-fix rerun](../tests/artifacts/playwright-canon-decisions-2026-11-03/summary.md) passes all 10 steps.
+Same-thread and fresh-thread questions answer accepted age 41 without changing stored lore or source IDs.
+The old description remains stale; this test verifies current property and writer-decision authority, not summary regeneration.

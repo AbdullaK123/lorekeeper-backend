@@ -1,0 +1,17 @@
+{
+  "id": "3f6ace8b-7d34-4529-bee2-ca78ac704317",
+  "name": "Mara Vale",
+  "aliases": [],
+  "kind": [
+    "person"
+  ],
+  "description": "Keeper of Glasswatch Lighthouse. Born in Bellhaven; age 34.",
+  "properties": {
+    "source_conversation": "01a1a04c-252d-75b7-9fd8-76efbbe46ad0",
+    "age": 41
+  },
+  "source_message_ids": [
+    "17be3cac-bd38-4b3f-9402-be6d6994d8d0",
+    "db2c6caf-493d-4edb-a147-21b79bdbdff8"
+  ]
+}

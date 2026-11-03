@@ -1,0 +1,17 @@
+[
+  {
+    "message_id": "47586a1b-b240-4b97-bded-9f666462af2a",
+    "message": "What do we know about Mara Vale and Glasswatch Lighthouse? Use only the established facts.",
+    "tools": []
+  },
+  {
+    "message_id": "68de9957-a14f-4584-848e-81de243509e8",
+    "message": "How old is Mara Vale now, according to the accepted canon? Give her current age only.",
+    "tools": []
+  },
+  {
+    "message_id": "d81d989c-ef73-4737-9ee1-807b5c3394f6",
+    "message": "How old is Mara Vale according to currently accepted canon? Give her current age only.",
+    "tools": []
+  }
+]

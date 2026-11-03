@@ -899,3 +899,6 @@ mod research_status;
 
 #[path = "cases/research_retry.rs"]
 mod research_retry;
+
+#[path = "cases/chat_canon_context.rs"]
+mod chat_canon_context;

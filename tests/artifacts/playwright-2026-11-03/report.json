@@ -1,0 +1,338 @@
+{
+  "started": "2026-11-03T07:12:27.072Z",
+  "base": "http://127.0.0.1:18000",
+  "steps": [
+    {
+      "name": "resume-session",
+      "ok": true,
+      "seconds": 1.38
+    },
+    {
+      "name": "inspect-errors-and-retry-rejection",
+      "ok": true,
+      "seconds": 0.946,
+      "detail": {
+        "retryStatus": 409,
+        "invalidIdStatus": 400,
+        "savedAge": 34
+      }
+    },
+    {
+      "name": "mobile-workbench",
+      "ok": true,
+      "seconds": 0.028
+    },
+    {
+      "name": "fresh-conversation-canon-check",
+      "ok": false,
+      "seconds": 17.756,
+      "error": "Fresh conversation also ignores accepted age"
+    }
+  ],
+  "consoleErrors": [],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/conversations",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/conversations/01a1a039-68b6-7d0e-8ff2-baa4fcd919fc",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/messages/ea1e5a44-23f9-4be7-a05f-ea733a1326b3/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/entities/64c27749-f9a3-4fc2-9348-e3e8419be0c5",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/messages/0f76eed1-e038-40e4-a499-16a86088f062/research/retry",
+      "status": 409
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/entities/invalid-id",
+      "status": 400
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/conversations",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/conversations/01a1a040-9c4d-7b25-830c-9e18b1daa313",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/conversations/01a1a040-9c4d-7b25-830c-9e18b1daa313/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/conversations/01a1a040-9c4d-7b25-830c-9e18b1daa313",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/messages/f1c38cbe-b0bb-4456-832f-38fc1edb4136/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/messages/f1c38cbe-b0bb-4456-832f-38fc1edb4136/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/messages/f1c38cbe-b0bb-4456-832f-38fc1edb4136/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/messages/f1c38cbe-b0bb-4456-832f-38fc1edb4136/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/messages/f1c38cbe-b0bb-4456-832f-38fc1edb4136/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/messages/f1c38cbe-b0bb-4456-832f-38fc1edb4136/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/messages/f1c38cbe-b0bb-4456-832f-38fc1edb4136/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/messages/f1c38cbe-b0bb-4456-832f-38fc1edb4136/research",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/world/01a1a039-6863-7327-b745-793905a85caa/messages/f1c38cbe-b0bb-4456-832f-38fc1edb4136/research",
+      "status": 200
+    }
+  ],
+  "worldId": "01a1a039-6863-7327-b745-793905a85caa",
+  "conversationId": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc",
+  "email": "playwright-1793689478306@example.com",
+  "previousSetup": [
+    {
+      "name": "signup",
+      "ok": true,
+      "seconds": 0.881
+    },
+    {
+      "name": "create-world-and-conversation",
+      "ok": true,
+      "seconds": 0.643,
+      "detail": {
+        "worldId": "01a1a039-6863-7327-b745-793905a85caa",
+        "conversationId": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc"
+      }
+    },
+    {
+      "name": "resume-session",
+      "ok": true,
+      "seconds": 0.899
+    },
+    {
+      "name": "save-lore-and-research",
+      "ok": true,
+      "seconds": 0.186,
+      "detail": {
+        "sourceId": "0f76eed1-e038-40e4-a499-16a86088f062",
+        "research": "completed"
+      }
+    },
+    {
+      "name": "inspect-graph-and-source",
+      "ok": true,
+      "seconds": 0.263,
+      "detail": {
+        "nodes": 4,
+        "edges": 3,
+        "mara": {
+          "id": "64c27749-f9a3-4fc2-9348-e3e8419be0c5",
+          "name": "Mara Vale",
+          "aliases": [],
+          "kind": [
+            "person"
+          ],
+          "description": "Keeper of Glasswatch Lighthouse. Born in Bellhaven; age 34.",
+          "properties": {
+            "age": 34,
+            "birthplace": "Bellhaven",
+            "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc"
+          },
+          "source_message_ids": [
+            "0f76eed1-e038-40e4-a499-16a86088f062"
+          ]
+        }
+      }
+    },
+    {
+      "name": "retrieve-established-lore",
+      "ok": true,
+      "seconds": 18.789,
+      "detail": {
+        "sourceId": "cefbc6c1-c308-4037-830b-adaadea98bab",
+        "research": "completed"
+      }
+    },
+    {
+      "name": "resume-session",
+      "ok": true,
+      "seconds": 0.876
+    },
+    {
+      "name": "save-lore-and-research",
+      "ok": true,
+      "seconds": 0.158,
+      "detail": {
+        "sourceId": "0f76eed1-e038-40e4-a499-16a86088f062",
+        "research": "completed"
+      }
+    },
+    {
+      "name": "inspect-graph-and-source",
+      "ok": true,
+      "seconds": 0.265,
+      "detail": {
+        "nodes": 4,
+        "edges": 3,
+        "mara": {
+          "id": "64c27749-f9a3-4fc2-9348-e3e8419be0c5",
+          "name": "Mara Vale",
+          "aliases": [],
+          "kind": [
+            "person"
+          ],
+          "description": "Keeper of Glasswatch Lighthouse. Born in Bellhaven; age 34.",
+          "properties": {
+            "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc",
+            "age": 34,
+            "birthplace": "Bellhaven"
+          },
+          "source_message_ids": [
+            "0f76eed1-e038-40e4-a499-16a86088f062"
+          ]
+        }
+      }
+    },
+    {
+      "name": "retrieve-established-lore",
+      "ok": true,
+      "seconds": 0.128,
+      "detail": {
+        "sourceId": "cefbc6c1-c308-4037-830b-adaadea98bab",
+        "research": "completed"
+      }
+    },
+    {
+      "name": "report-contradiction",
+      "ok": true,
+      "seconds": 0.405,
+      "detail": {
+        "id": "31b1d8f6-2d6b-4cbd-9c62-49161fcd914c",
+        "entity_id": "64c27749-f9a3-4fc2-9348-e3e8419be0c5",
+        "field": "age",
+        "existing_value": 34,
+        "new_value": 41,
+        "severity": "hard",
+        "explanation": "The writer reports an older note giving Mara Vale's age as 41, while current notes give 34, and says they do not know which is right. Keep the established age 34; record 41 as disputed for review. Source conversation: 01a1a039-68b6-7d0e-8ff2-baa4fcd919fc.",
+        "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc",
+        "source_message_ids": [
+          "83d760c1-421d-4854-a228-6664d8724a5e"
+        ],
+        "resolved": false,
+        "decision": null
+      }
+    },
+    {
+      "name": "accept-conflict-and-read-back",
+      "ok": true,
+      "seconds": 0.334,
+      "detail": {
+        "decision": "accept_new",
+        "field": "age",
+        "value": 41
+      }
+    },
+    {
+      "name": "resume-session",
+      "ok": true,
+      "seconds": 0.957
+    }
+  ],
+  "failure": "AssertionError [ERR_ASSERTION]: Reply does not use the accepted age\n    at file:///root/lorekeeper-backend/tests/playwright_workflow.mjs:178:12\n    at async step (file:///root/lorekeeper-backend/tests/playwright_workflow.mjs:34:20)\n    at async file:///root/lorekeeper-backend/tests/playwright_workflow.mjs:175:3",
+  "findings": [
+    {
+      "issue": "Accepted age updates the property but leaves age 34 in the entity description",
+      "entityId": "64c27749-f9a3-4fc2-9348-e3e8419be0c5",
+      "description": "Keeper of Glasswatch Lighthouse. Born in Bellhaven; age 34.",
+      "properties": {
+        "birthplace": "Bellhaven",
+        "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc",
+        "age": 41
+      }
+    }
+  ],
+  "entityAfterWrongAnswer": {
+    "id": "64c27749-f9a3-4fc2-9348-e3e8419be0c5",
+    "name": "Mara Vale",
+    "aliases": [],
+    "kind": [
+      "person"
+    ],
+    "description": "Keeper of Glasswatch Lighthouse. Born in Bellhaven; age 34.",
+    "properties": {
+      "birthplace": "Bellhaven",
+      "source_conversation": "01a1a039-68b6-7d0e-8ff2-baa4fcd919fc",
+      "age": 34
+    },
+    "source_message_ids": [
+      "0f76eed1-e038-40e4-a499-16a86088f062",
+      "83d760c1-421d-4854-a228-6664d8724a5e",
+      "ea1e5a44-23f9-4be7-a05f-ea733a1326b3"
+    ]
+  },
+  "freshConversationId": "01a1a040-9c4d-7b25-830c-9e18b1daa313",
+  "freshAnswer": "34",
+  "followupFailure": "AssertionError [ERR_ASSERTION]: Fresh conversation also ignores accepted age\n    at file:///root/lorekeeper-backend/tests/playwright_workflow.mjs:161:14\n    at async step (file:///root/lorekeeper-backend/tests/playwright_workflow.mjs:34:20)\n    at async file:///root/lorekeeper-backend/tests/playwright_workflow.mjs:149:5",
+  "finished": "2026-11-03T07:12:49.136Z"
+}

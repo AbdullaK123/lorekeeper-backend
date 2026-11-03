@@ -100,7 +100,7 @@ impl ResearcherService {
         let conversation_id = conversation_id.to_string();
         let source_message_id = source_message_id.to_string();
         let input = serde_json::json!({
-            "world_id": world_id, "message": message, "recent_messages": history,
+            "world_id": world_id, "user_message": message, "recent_messages": history,
             "source_conversation": conversation_id,
         });
         let agent = self.create_agent(world_id, conversation_id, source_message_id);

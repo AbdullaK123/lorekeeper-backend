@@ -1,5 +1,5 @@
 use crate::{
-    data::{Entity, GraphRepository, Relationship},
+    data::{Conflict, ConflictDecision, Entity, GraphRepository, Relationship},
     service::ServiceError,
 };
 use rig::{DynModel, operation::Embedding};
@@ -8,6 +8,7 @@ use std::collections::{HashMap, HashSet};
 pub struct SearchHit {
     pub entity: Entity,
     pub neighbors: Vec<(Entity, Relationship)>,
+    pub conflicts: Vec<Conflict>,
 }
 
 /// Includes exact saved identity for both matches and their neighbors.
@@ -56,6 +57,18 @@ pub fn format_hits(hits: &[SearchHit]) -> String {
             lines.push(format!(
                 "  Properties: {}",
                 format_properties(&hit.entity.properties)
+            ));
+        }
+
+        for conflict in hit.conflicts.iter().filter(|conflict| conflict.resolved) {
+            let (action, value) = match conflict.decision {
+                Some(ConflictDecision::AcceptNew) => ("accepted", &conflict.new_value),
+                Some(ConflictDecision::KeepExisting) => ("kept", &conflict.existing_value),
+                None => continue,
+            };
+            lines.push(format!(
+                "  Writer decision [{}]: {action} {} = {}. Earlier disputed values are not the writer's decision.",
+                conflict.id, conflict.field, value
             ));
         }
 
@@ -140,7 +153,15 @@ impl RetrievalService {
                 .graph
                 .get_entity_neighbors(&entity.id, world_id, None, None)
                 .await?;
-            hits.push(SearchHit { entity, neighbors });
+            let conflicts = self
+                .graph
+                .get_conflicts_by_entity(&entity.id, world_id)
+                .await?;
+            hits.push(SearchHit {
+                entity,
+                neighbors,
+                conflicts,
+            });
         }
         tracing::debug!(
             result_count = hits.len(),
