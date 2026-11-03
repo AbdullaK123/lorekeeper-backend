@@ -5,7 +5,7 @@ use rig::tool::PortableTool;
 #[tokio::test]
 #[ignore = "requires isolated Postgres and Memgraph; makes no AI calls"]
 async fn conflict_targets_report_then_accept_saved_property() {
-    let (pool, worlds, owner, world, _) = world_deletion_fixture().await;
+    let (pool, _worlds, owner, world, _) = world_deletion_fixture().await;
     let (graph, _) = graph_fixture().await;
     let scope = world.to_string();
     let mut entity = graph_entity(&scope, "Exact conflict target");
@@ -64,10 +64,11 @@ async fn conflict_targets_report_then_accept_saved_property() {
         entity.properties,
         "Reporting a disputed claim changes canon before writer acceptance"
     );
-    let service = service::WorldService::new(worlds, graph.clone());
-    let accepted = service
-        .accept_new(uuid::Uuid::parse_str(&conflict.id).unwrap(), world, owner)
+    let description = "A 31-year-old captain from Bellhaven.";
+    let accepted = graph
+        .accept_conflict(&conflict.id, &scope, description)
         .await
+        .unwrap()
         .unwrap();
     assert!(
         accepted.resolved,
@@ -78,6 +79,23 @@ async fn conflict_targets_report_then_accept_saved_property() {
         "Acceptance records the wrong decision"
     );
     let updated = graph.get_entity(&entity.id, &scope).await.unwrap().unwrap();
+    assert_eq!(
+        updated.description, description,
+        "Acceptance updates the property but leaves a stale description"
+    );
+    graph
+        .accept_conflict(
+            &conflict.id,
+            &scope,
+            "A repeated request must not overwrite lore",
+        )
+        .await
+        .unwrap();
+    let repeated = graph.get_entity(&entity.id, &scope).await.unwrap().unwrap();
+    assert_eq!(
+        repeated.description, description,
+        "Repeated acceptance overwrites the first accepted description"
+    );
     assert_eq!(
         updated.properties["age"],
         serde_json::json!(31),

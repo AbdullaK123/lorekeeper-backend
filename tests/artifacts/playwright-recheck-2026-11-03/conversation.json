@@ -1,0 +1,21 @@
+{
+  "id": "01a1a102-9c46-71f7-9f89-edb6fcaef1c0",
+  "world_id": "01a1a101-9cb8-7b2c-8a4b-b419b3770556",
+  "title": "Fresh canon check",
+  "messages": [
+    {
+      "role": "user",
+      "id": "efa7a3c3-7784-4070-a6a8-6bbd40b34d53",
+      "content": "How old is Mara Vale according to currently accepted canon? Give her current age only.",
+      "created_at": "2026-11-03T10:44:26.232014812Z"
+    },
+    {
+      "role": "assistant",
+      "id": "6ed306a3-9330-4ef0-aa25-7bea734810ea",
+      "content": "41",
+      "tool_calls": null,
+      "created_at": "2026-11-03T10:44:27.820056926Z"
+    }
+  ],
+  "updated_at": "2026-11-03T10:44:27.821537Z"
+}

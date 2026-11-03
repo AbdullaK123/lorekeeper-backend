@@ -6,7 +6,53 @@ They need to remember details, avoid contradictions, and understand how their wo
 The writer owns the canon: facts they establish or confirm about their fictional world.
 These stories describe intended product behavior, not current implementation status.
 
-## Delivery status — 2026-11-02
+## Delivery status — 2026-11-03
+
+Implemented: accept_conflict now receives the generated description and saves it in the existing graph transaction.
+Properties, description, message sources, and the conflict decision share that transaction.
+The service passes model output text and maps model-client environment errors into ServiceError.
+The free repository regression now checks description persistence and unchanged description on repeated acceptance.
+Verification: focused free database regression passes (1 test, 1.38 seconds). All-target offline compilation passes with warnings. Formatting and whitespace checks pass.
+It no longer exercises WorldService, which now makes a paid model call.
+Stale-input protection and description-based search indexing remain unchecked.
+No browser rerun or paid calls occur in this implementation turn. Scope and epic acceptance stay unchanged.
+
+
+Transaction guidance: reuse GraphRepository::accept_conflict and its existing commit/rollback handling.
+Add the rewritten description as an argument and include e.description in the existing entity SET query.
+The property, description, sources, and conflict decision then commit in the same graph transaction.
+The service now generates new_description, but the repository does not save it yet.
+A stale-input check remains needed before claiming concurrent-edit protection.
+No application code changes or tests run during this guidance turn. Scope and epic acceptance stay unchanged.
+
+
+Request guidance: use a tool-free Rig AgentBuilder with the configured chat model.
+Send the old description and accepted field/value as JSON data; request only revised description text.
+Await prompt to obtain a String. Existing ServiceError conversions cover provider and prompt errors.
+Prefer injecting the configured model from bootstrap instead of creating clients inside WorldService.
+The current acceptance method contains an unfinished request expression. No application code changes or tests run here.
+The atomic description write and stale-snapshot check remain unimplemented. Scope and acceptance stay unchanged.
+
+
+Proposed description fix: WorldService reads the entity and conflict, then requests one focused description rewrite.
+The model receives the existing description and accepted correction, with instructions to preserve unrelated facts.
+Run that model call before opening the write transaction.
+Extend accept_conflict to save the corrected property, description, sources, and decision together.
+Reject a stale entity snapshot instead of overwriting changes made during the model call.
+If rewriting fails, leave the conflict unresolved and the entity unchanged.
+This is a proposal, not an implemented or verified change. No code or tests run this turn.
+Scope and epic acceptance stay unchanged. Description-based search indexing also needs checking during implementation.
+
+Next task: choose how accepting a conflict also updates the entity description.
+The observed case saves age 41 while the description still says 34 years old.
+Acceptance check: property, description, and answers agree after acceptance; question research preserves that result.
+The implementation approach remains undecided. No code changes or tests run in this planning turn.
+Product scope and epic acceptance stay unchanged.
+
+Fresh-world recheck: all 10 browser steps pass again; both threads answer the accepted age 41.
+Research preserves the accepted entity. The description still says 34 years old.
+See [recheck evidence](../tests/artifacts/playwright-recheck-2026-11-03/summary.md).
+No application changes or full suite rerun occur. Story scope and epic acceptance stay unchanged.
 
 All 15 epics and 69 stories remain required. Backend endpoints alone do not complete a story.
 No complete epic has recorded acceptance in the deployed product.
@@ -20,6 +66,17 @@ No complete epic has recorded acceptance in the deployed product.
 | US-028–031 | Scoped graph browsing, search, details, and paginated connections | Product graph visualization and navigation |
 | Epics 7–8 | Search and graph foundations | Dedicated reasoning and gap-review workflows |
 | Epics 9–15 | Basic accounts, logs, cleanup, research recovery foundations | OAuth, recovery, billing, usage, emails, operations, privacy, support |
+
+The latest browser regression passes 10 steps for accepted canon in existing and fresh conversations.
+Research preserves the saved entity after question-only turns. All 44 free native regressions pass.
+This supports US-013, US-017, and US-025 within that tested scenario.
+Stale descriptions, product screens, and deployed acceptance remain unfinished.
+Next: verify the rebuilt image, then address stale descriptions affecting US-017 and US-025.
+This planning review changes no story requirements or acceptance states.
+See the [browser evidence](../tests/artifacts/playwright-canon-decisions-2026-11-03/summary.md).
+
+This turn changes documentation only. All story requirements and acceptance states stay unchanged.
+Project instructions now require PM updates before every final response.
 
 See the [project plan](project_plan.md) and [current sprint](current_sprint.md) for evidence and limits.
 

@@ -1,6 +1,6 @@
 # Lorekeeper — Design and Development Lifecycle
 
-Updated: 2026-11-02.
+Updated: 2026-11-03.
 
 The [user stories](user_stories.md) define the required outcomes.
 The [product vision](product_soul.md) defines the audience and purpose.
@@ -22,6 +22,66 @@ Each epic follows this cycle:
 
 The project reaches delivery completion when all epics pass acceptance in the deployed product.
 Maintenance continues after delivery completion.
+
+## Latest design evidence — 2026-11-03
+
+Implemented: accept_conflict now receives the generated description and saves it in the existing graph transaction.
+Properties, description, message sources, and the conflict decision share that transaction.
+The service passes model output text and maps model-client environment errors into ServiceError.
+The free repository regression now checks description persistence and unchanged description on repeated acceptance.
+Verification: focused free database regression passes (1 test, 1.38 seconds). All-target offline compilation passes with warnings. Formatting and whitespace checks pass.
+It no longer exercises WorldService, which now makes a paid model call.
+Stale-input protection and description-based search indexing remain unchecked.
+No browser rerun or paid calls occur in this implementation turn. Scope and epic acceptance stay unchanged.
+
+
+Transaction guidance: reuse GraphRepository::accept_conflict and its existing commit/rollback handling.
+Add the rewritten description as an argument and include e.description in the existing entity SET query.
+The property, description, sources, and conflict decision then commit in the same graph transaction.
+The service now generates new_description, but the repository does not save it yet.
+A stale-input check remains needed before claiming concurrent-edit protection.
+No application code changes or tests run during this guidance turn. Scope and epic acceptance stay unchanged.
+
+
+Request guidance: use a tool-free Rig AgentBuilder with the configured chat model.
+Send the old description and accepted field/value as JSON data; request only revised description text.
+Await prompt to obtain a String. Existing ServiceError conversions cover provider and prompt errors.
+Prefer injecting the configured model from bootstrap instead of creating clients inside WorldService.
+The current acceptance method contains an unfinished request expression. No application code changes or tests run here.
+The atomic description write and stale-snapshot check remain unimplemented. Scope and acceptance stay unchanged.
+
+
+Proposed description fix: WorldService reads the entity and conflict, then requests one focused description rewrite.
+The model receives the existing description and accepted correction, with instructions to preserve unrelated facts.
+Run that model call before opening the write transaction.
+Extend accept_conflict to save the corrected property, description, sources, and decision together.
+Reject a stale entity snapshot instead of overwriting changes made during the model call.
+If rewriting fails, leave the conflict unresolved and the entity unchanged.
+This is a proposal, not an implemented or verified change. No code or tests run this turn.
+Scope and epic acceptance stay unchanged. Description-based search indexing also needs checking during implementation.
+
+Next task: choose how accepting a conflict also updates the entity description.
+The observed case saves age 41 while the description still says 34 years old.
+Acceptance check: property, description, and answers agree after acceptance; question research preserves that result.
+The implementation approach remains undecided. No code changes or tests run in this planning turn.
+Product scope and epic acceptance stay unchanged.
+
+Fresh-world recheck: all 10 browser steps pass again; both threads answer the accepted age 41.
+Research preserves the accepted entity. The description still says 34 years old.
+See [recheck evidence](../tests/artifacts/playwright-recheck-2026-11-03/summary.md).
+No application changes or full suite rerun occur. Story scope and epic acceptance stay unchanged.
+
+Current lore appears as labeled system data. Retrieval includes resolved writer decisions.
+The researcher receives `user_message` and treats questions as requests for information, not new facts.
+A fresh-world browser test passes all 10 steps, including accepted-canon answers in two conversations.
+Research preserves saved entity data after those questions. All 44 free native regressions pass.
+Descriptions can still contain old values. Summary updates remain an open design decision.
+The Docker image needs rebuilding. Deployed epic acceptance remains unfinished.
+Next packaging check: image health, dev playground serving, and production asset blocking.
+Then address stale descriptions after conflict acceptance. No design or scope change occurs in this planning turn.
+
+This turn updates documentation only. The lifecycle stages and product scope stay unchanged.
+PM updates now occur before every final response, as required by [project instructions](../AGENTS.md).
 
 ## Epic 1: Keep My Worlds Private and Separate
 

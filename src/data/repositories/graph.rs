@@ -703,6 +703,7 @@ impl GraphRepository {
         &self,
         conflict_id: &str,
         world_id: &str,
+        new_description: &str,
     ) -> Result<Option<Conflict>, InfrastructureError> {
         let mut txn = self.graph.start_txn().await?;
         let result: Result<Option<Conflict>, InfrastructureError> = async {
@@ -739,10 +740,12 @@ impl GraphRepository {
                 .map_err(|error| InfrastructureError::InternalError(error.to_string()))?;
             txn.run(
                 query("MATCH (e:Entity {id: $id, world_id: $world_id})
-                       SET e.properties = $properties, e.source_message_ids = $sources")
+                       SET e.properties = $properties, e.source_message_ids = $sources,
+                           e.description = $description")
                     .param("id", entity.id)
                     .param("world_id", world_id)
                     .param("properties", properties)
+                    .param("description", new_description)
                     .param("sources", entity.source_message_ids),
             ).await?;
             let mut saved = txn.execute(

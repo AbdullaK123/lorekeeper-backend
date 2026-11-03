@@ -17,6 +17,12 @@ This repository contains backend work. The plan also names required client work.
 No epic currently has recorded acceptance for its complete user workflow.
 Working foundations remain valuable and should stay in place during changes.
 
+## Planning record — 2026-11-03
+
+Project instructions now require PM updates before every final response.
+This turn changes documentation only. Product scope and delivery priorities stay unchanged.
+The latest browser evidence supports one canon scenario, not complete epic acceptance.
+
 ## Current foundations
 
 | Area | Implemented | Remaining limits |
@@ -41,13 +47,16 @@ Local scripted-provider tests verify DBOS engine restart replay. Atomic handoff 
 
 ## Test baseline
 
-Latest recorded verification on 2026-11-02:
+Latest recorded verification on 2026-11-03:
 
 - All-target offline compilation passes with warnings.
-- 43 free native database regressions pass in 9.17 seconds.
+- 44 free native regressions pass in 12.94 seconds.
 - Nine research retry/status HTTP tests pass in 9.475 seconds.
 - The broader unit run has 11 passes and one duplicate-row retrieval-ranking failure.
-- No paid model calls run in that verification.
+- The accepted-canon browser regression passes all 10 steps in a fresh QA world.
+- Both existing and fresh conversations answer the accepted age; research preserves saved entity data.
+- Browser fix attempts use 13 paid chat turns and one embedding diagnostic.
+- The full unit suite is not rerun. The Docker image still needs rebuilding.
 
 These are separate scoped runs, not a combined full-suite pass count.
 The duplicate-row assertion remains failing; no current query occurrence is demonstrated and no fix is scheduled.
@@ -451,6 +460,57 @@ Record each choice in the matching design epic and verify current provider requi
 The earlier code-size estimate excludes this added scope and needs revision.
 
 ## Immediate next pieces
+
+Implemented: accept_conflict now receives the generated description and saves it in the existing graph transaction.
+Properties, description, message sources, and the conflict decision share that transaction.
+The service passes model output text and maps model-client environment errors into ServiceError.
+The free repository regression now checks description persistence and unchanged description on repeated acceptance.
+Verification: focused free database regression passes (1 test, 1.38 seconds). All-target offline compilation passes with warnings. Formatting and whitespace checks pass.
+It no longer exercises WorldService, which now makes a paid model call.
+Stale-input protection and description-based search indexing remain unchecked.
+No browser rerun or paid calls occur in this implementation turn. Scope and epic acceptance stay unchanged.
+
+
+Transaction guidance: reuse GraphRepository::accept_conflict and its existing commit/rollback handling.
+Add the rewritten description as an argument and include e.description in the existing entity SET query.
+The property, description, sources, and conflict decision then commit in the same graph transaction.
+The service now generates new_description, but the repository does not save it yet.
+A stale-input check remains needed before claiming concurrent-edit protection.
+No application code changes or tests run during this guidance turn. Scope and epic acceptance stay unchanged.
+
+
+Request guidance: use a tool-free Rig AgentBuilder with the configured chat model.
+Send the old description and accepted field/value as JSON data; request only revised description text.
+Await prompt to obtain a String. Existing ServiceError conversions cover provider and prompt errors.
+Prefer injecting the configured model from bootstrap instead of creating clients inside WorldService.
+The current acceptance method contains an unfinished request expression. No application code changes or tests run here.
+The atomic description write and stale-snapshot check remain unimplemented. Scope and acceptance stay unchanged.
+
+
+Proposed description fix: WorldService reads the entity and conflict, then requests one focused description rewrite.
+The model receives the existing description and accepted correction, with instructions to preserve unrelated facts.
+Run that model call before opening the write transaction.
+Extend accept_conflict to save the corrected property, description, sources, and decision together.
+Reject a stale entity snapshot instead of overwriting changes made during the model call.
+If rewriting fails, leave the conflict unresolved and the entity unchanged.
+This is a proposal, not an implemented or verified change. No code or tests run this turn.
+Scope and epic acceptance stay unchanged. Description-based search indexing also needs checking during implementation.
+
+Next task: choose how accepting a conflict also updates the entity description.
+The observed case saves age 41 while the description still says 34 years old.
+Acceptance check: property, description, and answers agree after acceptance; question research preserves that result.
+The implementation approach remains undecided. No code changes or tests run in this planning turn.
+Product scope and epic acceptance stay unchanged.
+
+Fresh-world recheck: all 10 browser steps pass again; both threads answer the accepted age 41.
+Research preserves the accepted entity. The description still says 34 years old.
+See [recheck evidence](../tests/artifacts/playwright-recheck-2026-11-03/summary.md).
+No application changes or full suite rerun occur. Story scope and epic acceptance stay unchanged.
+
+Next-step review: rebuild the API image, then verify health and environment-based playground serving.
+The latest canon checks use the local debug API; they do not verify the current container image.
+Then address the observed stale description after conflict acceptance.
+This planning turn runs no application tests and changes no delivery acceptance states.
 
 The 2026-11-03 canon rollback now has a passing [browser regression](../tests/artifacts/playwright-canon-decisions-2026-11-03/summary.md).
 Current properties and resolved decisions override stale history; questions preserve saved lore in that scenario.

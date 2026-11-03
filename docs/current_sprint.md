@@ -114,6 +114,81 @@ The test API is stopped; QA evidence and database volumes remain. The Docker ima
 Remaining: description text can still be stale; this fix makes current properties and decisions authoritative instead of rewriting summaries.
 No full unit-suite rerun; the separate duplicate-ranking failure is not changed.
 
+## Every-turn PM tracking rule — 2026-11-03
+
+Updated `AGENTS.md` to require PM updates before every final response.
+The rule covers sprint, plan, design, and story status, including turns without code changes.
+Synced those docs with the latest canon browser result and 44 passing free native regressions.
+Product scope and epic acceptance stay unchanged. No application tests run for this documentation change.
+Remaining: stale descriptions, Docker rebuild, product client workflows, and the other listed delivery gaps.
+Verification: checked local Markdown links and patch whitespace after these edits.
+
+## Next-step review — 2026-11-03
+
+Reviewed all four PM docs. Next: rebuild the API image with the verified canon changes.
+Then check health, dev playground serving, and production asset blocking in that image.
+After packaging verification, address the observed stale description after conflict acceptance.
+No application code changes or tests run this turn. Scope and epic acceptance stay unchanged.
+
+## Playwright recheck — 2026-11-03
+
+A fresh-world browser rerun passes all 10 steps against the rebuilt local debug API.
+Five paid chat turns and background research run. Both conversations answer age 41.
+Question research preserves the full accepted entity and source IDs. No uncaught browser errors occur.
+Direct inspection confirms the remaining mismatch: age property 41, description says 34 years old.
+The browser assertions pass without requiring description updates. This is not full summary consistency acceptance.
+Evidence: [recheck summary](../tests/artifacts/playwright-recheck-2026-11-03/summary.md).
+No application code changes or full suite rerun. Docker packaging remains unverified for these changes.
+Next: define how conflict acceptance updates descriptions. Product scope and epic acceptance stay unchanged.
+
+## Next task: description consistency — 2026-11-03
+
+Next task: choose how accepting a conflict also updates the entity description.
+The observed case saves age 41 while the description still says 34 years old.
+Acceptance check: property, description, and answers agree after acceptance; question research preserves that result.
+The implementation approach remains undecided. No code changes or tests run in this planning turn.
+Product scope and epic acceptance stay unchanged.
+
+## Description update proposal — 2026-11-03
+
+Proposed description fix: WorldService reads the entity and conflict, then requests one focused description rewrite.
+The model receives the existing description and accepted correction, with instructions to preserve unrelated facts.
+Run that model call before opening the write transaction.
+Extend accept_conflict to save the corrected property, description, sources, and decision together.
+Reject a stale entity snapshot instead of overwriting changes made during the model call.
+If rewriting fails, leave the conflict unresolved and the entity unchanged.
+This is a proposal, not an implemented or verified change. No code or tests run this turn.
+Scope and epic acceptance stay unchanged. Description-based search indexing also needs checking during implementation.
+
+## Description request guidance — 2026-11-03
+
+Request guidance: use a tool-free Rig AgentBuilder with the configured chat model.
+Send the old description and accepted field/value as JSON data; request only revised description text.
+Await prompt to obtain a String. Existing ServiceError conversions cover provider and prompt errors.
+Prefer injecting the configured model from bootstrap instead of creating clients inside WorldService.
+The current acceptance method contains an unfinished request expression. No application code changes or tests run here.
+The atomic description write and stale-snapshot check remain unimplemented. Scope and acceptance stay unchanged.
+
+## Description transaction guidance — 2026-11-03
+
+Transaction guidance: reuse GraphRepository::accept_conflict and its existing commit/rollback handling.
+Add the rewritten description as an argument and include e.description in the existing entity SET query.
+The property, description, sources, and conflict decision then commit in the same graph transaction.
+The service now generates new_description, but the repository does not save it yet.
+A stale-input check remains needed before claiming concurrent-edit protection.
+No application code changes or tests run during this guidance turn. Scope and epic acceptance stay unchanged.
+
+## Description transaction implementation — 2026-11-03
+
+Implemented: accept_conflict now receives the generated description and saves it in the existing graph transaction.
+Properties, description, message sources, and the conflict decision share that transaction.
+The service passes model output text and maps model-client environment errors into ServiceError.
+The free repository regression now checks description persistence and unchanged description on repeated acceptance.
+Verification: focused free database regression passes (1 test, 1.38 seconds). All-target offline compilation passes with warnings. Formatting and whitespace checks pass.
+It no longer exercises WorldService, which now makes a paid model call.
+Stale-input protection and description-based search indexing remain unchecked.
+No browser rerun or paid calls occur in this implementation turn. Scope and epic acceptance stay unchanged.
+
 ## Current status
 
 The tool-using lore pipeline is implemented. The old extraction service is removed.
@@ -123,8 +198,11 @@ No epic is marked complete from backend work alone.
 
 ## Latest verification
 
+- Accepted-canon Playwright regression passes all 10 steps in a fresh QA world.
+- Existing and fresh conversations answer age 41; question research preserves the entity.
+
 - Offline all-target compilation passes with warnings.
-- 43 free native database regressions pass in 9.17 seconds.
+- 44 free native regressions pass in 12.94 seconds.
 - Thirteen nested-route/access/validation HTTP tests pass in 5.179 seconds.
 - Earlier retry/status verification passes nine HTTP tests in 9.475 seconds.
 - The broader unit run has 11 passes and one duplicate-row retrieval-ranking failure.
