@@ -6,18 +6,43 @@ A development UI for testing the backend contracts used by the product UI.
 It is a testing tool, not the finished writer-facing product.
 It uses real sessions, worlds, conversations, and backend responses.
 
-## Run
+## Run as static files from the backend
 
-Start the backend on port 8000 using the [root setup](../README.md#local-setup).
+Build the playground once:
 
 ```sh
 cd playground
 npm install
+npm run build
+```
+
+Start the backend with ENV=dev using the [root setup](../README.md#local-setup).
+Open http://localhost:8000/. Axum serves only the built files in playground/dist.
+The dev-only /api alias forwards the existing client requests to the backend routes with session cookies.
+Rebuild after frontend changes. No Node or Vite server runs while Axum serves these files.
+The source files and node_modules are not served.
+ENV=staging and ENV=prod expose neither playground files nor the /api alias.
+Normal API routes remain available in every environment.
+
+## Container build
+
+The root Dockerfile builds the playground in a Node stage and copies only dist into the API runtime image.
+It also builds the API in a separate Rust stage. No Node server runs in the final image.
+With ENV=dev, open the API's published port at http://localhost:8000/.
+The same image keeps static serving disabled in staging and production.
+See [container setup](../README.md#container-build) for build and migration commands.
+
+## Run with frontend live reload
+
+For frontend editing, keep the backend on port 8000 and run:
+
+```sh
+cd playground
 npm run dev
 ```
 
-Open http://localhost:5173.
-Vite forwards /api requests to the backend and preserves session cookies.
+Open http://localhost:5173. Vite proxies /api requests to the backend's normal routes.
+The built static copy and live-reload copy use the same client paths.
 
 ## Chat and stream
 

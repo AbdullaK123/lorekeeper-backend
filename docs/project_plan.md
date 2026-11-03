@@ -29,6 +29,7 @@ Working foundations remain valuable and should stay in place during changes.
 | Retrieval | Text and vector search, neighbor properties, relationship conditions | Conflict lookup passes five fresh-conversation checks; broader coverage remains |
 | Graph APIs | Scoped graph, entity, neighbor, relationship, and conflict reads; supported conflict decisions | Product graph views and broader conflict targets remain |
 | Sources and recovery | Source-message reads, research status, retry submission and current-attempt tracking | Client flows, crash commit gaps, and mapping deletion cleanup remain |
+| Container packaging | Multi-stage playground/API build, non-root runtime, dev-only static files, tested graceful stop | Hosting, migrations during release, backups, and deployed acceptance remain |
 | Logging | Structured request/service/repository/workflow logs and privacy capture tests | Production monitoring and alerting remain |
 | Cleanup | Transactional deletion jobs, scheduled graph cleanup, retry after failure | Shutdown and competing background writes need further checks |
 | Researcher | [Prompt](../prompts/researcher.md), scoped search/read/write/conflict tools, background runtime wiring | DBOS model/tool checkpoints implemented; interrupted writes and concurrent recovery still need acceptance |

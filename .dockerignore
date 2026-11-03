@@ -1,0 +1,15 @@
+.git
+.env
+.env.*
+!.env.example
+.learning
+.codex
+.agents
+.aws
+.vscode
+target
+playground/node_modules
+playground/dist
+tests
+docs
+*.log

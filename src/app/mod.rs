@@ -5,6 +5,7 @@ pub mod dbos;
 pub mod errors;
 pub mod extractors;
 pub mod middleware;
+pub(crate) mod playground;
 
 pub use app::*;
 pub use controllers::*;

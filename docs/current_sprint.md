@@ -31,6 +31,43 @@ The first Vite render probe hit a sandbox WebSocket bind error; a socket-free bu
 No real browser walkthrough, backend regression rerun, or paid model calls for this UI change.
 Updated playground instructions. This remains a development test UI, not product epic acceptance.
 
+## Dev-only static playground serving — 2026-11-02
+
+Axum serves the built playground/dist directory at / only when ENV=dev.
+Added a dev-only /api alias so the existing client works without Vite or a Node server.
+Existing API routes remain mounted normally. Staging and production expose neither static files nor the alias.
+Enabled tower-http filesystem serving and updated the dependency lockfile.
+One isolated router test passes across dev/staging/prod, assets, original/aliased routes, missing paths, and traversal.
+Two selected live HTTP tests pass in 6.476 seconds; wrapper passes in 10.88 seconds.
+The live test loads built HTML/JS and verifies signed sessions and anonymous rejection through /api.
+Offline all-target compilation passes with existing warnings. Whitespace and Python parsing checks pass.
+No paid model calls. Updated root/playground/test instructions; rebuild frontend assets after UI edits.
+No full-suite rerun or browser walkthrough for this change.
+
+## Multi-stage API image — 2026-11-02
+
+Added playground build, Rust release build, and minimal Debian runtime stages.
+Rust compilation uses locked dependencies and checked-in SQLx offline metadata, without service credentials.
+Runtime includes the binary, prompts, YAML config, and built playground assets; it defaults to ENV=prod.
+Runs as UID 10001. SIGINT matches the existing shutdown handler; Compose adds an init process.
+Added .dockerignore to exclude local secrets, caches, Git state, and test artifacts.
+Corrected Compose API indentation; database services, networks, and volumes remain intact.
+Compose validation and the full Docker build pass. Release compilation takes 8m 57s on the first build.
+Built lorekeeper-backend:local; runtime image size is 42.2 MiB.
+Temporary prod/dev container smoke checks pass against the QA database with a dummy provider key.
+Verified health, dev-only static/alias routes, built JavaScript, anonymous rejection,
+non-root execution, no Rust/Node tools or .env, and clean graceful shutdown in both environments.
+Smoke containers are removed; existing service containers are not restarted or reset.
+The first smoke approval review times out; the permitted retry succeeds.
+Root/playground setup docs are updated. No paid model calls or full-suite rerun.
+Application migrations still run separately before API startup; packaging does not complete operational epic acceptance.
+
+## Compose development environment override — 2026-11-02
+
+Set ENV: dev explicitly on the Compose API service, overriding .env and the image default.
+The standalone image still defaults to production. Compose validation and whitespace checks pass.
+No containers are restarted for this configuration change.
+
 ## Current status
 
 The tool-using lore pipeline is implemented. The old extraction service is removed.

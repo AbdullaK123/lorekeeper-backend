@@ -44,6 +44,11 @@ pub async fn create_app() -> (Router, JobScheduler, DBOS) {
         .layer(settings.cors_layer())
         .with_state(app_state);
 
+    let app = crate::app::playground::with_dev_playground(
+        app,
+        &settings.env,
+        concat!(env!("CARGO_MANIFEST_DIR"), "/playground/dist"),
+    );
     tracing::info!("application routes and middleware ready");
     (app, scheduler, dbos)
 }

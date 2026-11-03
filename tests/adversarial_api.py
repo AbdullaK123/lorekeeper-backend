@@ -167,6 +167,22 @@ class ApiTests(unittest.TestCase):
             response = request(self.a, "GET", f"/world/{w}/messages/{message}/research")
             self.assertEqual(response.status_code, 404, "An existing workflow exposes a deleted source message")
 
+    def test_dev_static_playground_preserves_api_sessions(self):
+        response = request(self.a, "GET", "/")
+        self.assertEqual(response.status_code, 200, "Built dev playground is unavailable")
+        self.assertIn('id="root"', response.text, "Root does not serve the playground entry")
+        self.assertIn("text/html", response.headers.get("Content-Type", ""), "Browser cannot identify playground HTML")
+        import re
+        asset = re.search(r'src="([^"]+\.js)"', response.text)
+        self.assertIsNotNone(asset, "Built HTML has no JavaScript entry")
+        self.assertEqual(request(self.a, "GET", asset.group(1)).status_code, 200, "Browser cannot load the built JavaScript")
+        self.assertEqual(request(self.a, "GET", "/api/auth/me").json(), request(self.a, "GET", "/auth/me").json(),
+                         "Static playground API alias loses the signed session")
+        self.assertEqual(request(requests.Session(), "GET", "/api/auth/me").status_code, 401,
+                         "Development alias bypasses authentication")
+        self.assertEqual(request(self.a, "GET", "/api/world").status_code, 200, "World UI cannot call the API alias")
+        self.assertEqual(request(self.a, "GET", "/api/missing").status_code, 404, "Unknown API request returns playground HTML")
+
     def test_nested_conversation_enforces_world_scope(self):
         with self.source_messages_fixture() as (w, c, messages):
             path = f"/world/{w}/conversations/{c}"

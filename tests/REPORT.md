@@ -3,6 +3,23 @@
 Latest recorded verification: 2026-11-02. Earlier dated entries remain historical evidence.
 See [test instructions](README.md) for reproducible free and paid runs.
 
+## Multi-stage container verification — 2026-11-02
+
+Compose validation and a full image build pass. Rust release compilation takes 8m 57s.
+The final lorekeeper-backend:local runtime image is 42.2 MiB and uses non-root UID 10001.
+Temporary containers pass prod/dev health, environment-gated static/alias, built-asset,
+API session rejection, and graceful-stop checks. Both stop with exit code zero and shutdown-complete logs.
+Runtime checks confirm no cargo, Node, or /app/.env. Tests use the isolated QA database and a dummy provider key.
+Temporary containers are removed. No existing service reset, paid model calls, or full-suite rerun.
+
+## Dev-only static playground — 2026-11-02
+
+One router test passes for development-only HTML/assets/API alias serving and staging/production exclusion.
+It also checks missing paths, traversal rejection, and preservation of original API routes.
+Two selected live HTTP tests pass in 6.476 seconds; wrapper takes 10.88 seconds.
+Live checks load the built HTML and JavaScript and verify /api session protection.
+Offline all-target compilation passes with warnings. No paid calls or full-suite rerun.
+
 ## Playground API workbench — 2026-11-02
 
 Six local client tests pass through npm test in playground.

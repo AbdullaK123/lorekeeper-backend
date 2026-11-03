@@ -136,3 +136,24 @@ Conversation read/delete and chat use /world/{world_id}/conversations/{conversat
 The former /conversation/{id} routes are removed. Test clients and smoke runners pass the world ID explicitly.
 The nested-conversation test checks a valid read/delete and rejects wrong or missing parent worlds.
 Wrong-world chat checks stop before model retrieval, so these checks incur no model charges.
+
+
+## Development static serving
+
+Run SQLX_OFFLINE=true cargo test --offline --bin lorekeeper-backend playground::tests:: for the isolated router test.
+It creates temporary HTML/JS files and checks dev-only serving, staging/production exclusion,
+the dev /api alias, original API routes, missing files, and path traversal.
+No database or model calls are needed.
+
+
+For ApiTests.test_dev_static_playground_preserves_api_sessions, first run npm run build inside playground and set ENV=dev.
+The live check loads the real HTML/JS assets and verifies the /api alias preserves sessions and rejects anonymous users.
+The full Python suite includes this check, so build static assets before running that suite.
+
+
+## Container packaging
+
+Build the image with docker build -t lorekeeper-backend:local . from the repository root.
+The latest temporary-container check uses the isolated QA database and a dummy provider key.
+It verifies prod/dev route gates, health, built assets, non-root execution, absent build tools/secrets, and graceful stop.
+This is image validation, not deployed acceptance or a full-suite result. Apply application migrations separately.

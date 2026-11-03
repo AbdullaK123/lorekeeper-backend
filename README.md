@@ -104,8 +104,37 @@ DBOS initializes its own system schema during startup.
 The app creates graph constraints and indexes during bootstrap.
 Non-secret settings live in [config.yaml](src/app/config/config.yaml).
 Check `GET http://localhost:8000/health` for `ok`.
+With ENV=dev, build the playground using npm install and npm run build inside playground, then open http://localhost:8000/.
+Axum serves playground/dist and adds a dev-only /api alias for its client requests.
+Staging and production do not expose these static files or that alias.
+See [playground instructions](playground/README.md) for static builds and optional Vite live reload.
 Ctrl+C drains HTTP requests, then shuts down the cleanup scheduler and DBOS.
 SIGTERM behavior still needs implementation or verification before deployment.
+
+## Container build
+
+The Dockerfile has separate playground, Rust build, and runtime stages.
+The final image runs as a non-root user and contains no Rust or Node build tools.
+The image defaults to ENV=prod. Local Compose explicitly overrides it with ENV=dev.
+Built playground files remain available only when ENV=dev.
+
+```sh
+docker build -t lorekeeper-backend:local .
+```
+
+For the local Compose stack, start the databases and apply application migrations first.
+Then run:
+
+```sh
+docker compose up -d --build api
+```
+
+Compose supplies database service names inside the shared network.
+API startup does not apply application migrations. Use the SQLx command from local setup before starting it.
+No OpenRouter key or database credentials are needed during image compilation.
+The build uses SQLX_OFFLINE and checked-in .sqlx metadata.
+.dockerignore excludes local secrets, build output, Git state, and test artifacts from the context.
+The container uses SIGINT on stop to match the server's current graceful-shutdown handler.
 
 ## API
 
