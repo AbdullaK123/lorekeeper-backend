@@ -81,6 +81,7 @@ impl UserRepository {
         Ok(result)
     }
 
+    #[tracing::instrument(name = "repository.user.update_password", level = "debug", skip_all, fields(user_id = %id))]
     pub async fn update_password(
         &self,
         id: Uuid,
@@ -102,6 +103,7 @@ impl UserRepository {
         .await?)
     }
 
+    #[tracing::instrument(name = "repository.user.verify_user", level = "debug", skip_all, fields(user_id = %id))]
     pub async fn verify_user(
         &self,
         id: Uuid,

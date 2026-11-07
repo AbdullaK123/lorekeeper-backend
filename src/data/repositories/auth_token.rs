@@ -19,6 +19,7 @@ impl AuthTokenRepository {
         Self { pool }
     }
 
+    #[tracing::instrument(name = "repository.auth_token.upsert", level = "debug", skip_all, fields(user_id = %user_id))]
     pub async fn upsert_token(
         &self,
         user_id: Uuid,
@@ -56,9 +57,11 @@ impl AuthTokenRepository {
         .fetch_one(&self.pool)
         .await?;
 
+        tracing::debug!("auth token stored");
         Ok((result, token))
     }
 
+    #[tracing::instrument(name = "repository.auth_token.consume", level = "debug", skip_all, fields(user_id = %user_id))]
     pub async fn consume_token(
         &self,
         user_id: Uuid,
@@ -66,7 +69,7 @@ impl AuthTokenRepository {
         token_hash: String,
         connection: &mut sqlx::PgConnection,
     ) -> Result<Option<AuthTokenRow>, InfrastructureError> {
-        Ok(sqlx::query_as!(
+        let result = sqlx::query_as!(
             AuthTokenRow,
             r#"
             DELETE FROM auth_tokens
@@ -84,6 +87,11 @@ impl AuthTokenRepository {
             token_hash
         )
         .fetch_optional(connection)
-        .await?)
+        .await?;
+        tracing::debug!(
+            matched = result.is_some(),
+            "auth token consume query completed; caller owns commit"
+        );
+        Ok(result)
     }
 }

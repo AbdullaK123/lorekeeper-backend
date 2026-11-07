@@ -54,3 +54,19 @@ A successful retry submission logs its active workflow ID.
 Status reads follow the saved current-attempt mapping.
 A submission error can occur after chat storage; the source message remains readable.
 Logging and capture tests do not prove cross-database commit atomicity.
+
+## Auth email spans — 2026-11-07
+
+Auth handlers, password hashing, reset and verification services, email sending,
+and token/user writes now have named operation spans.
+All new spans use skip_all. Service and repository spans add only user_id where available.
+They do not record token values, hashes, passwords, email addresses, URLs, keys, or return values.
+
+## Auth outcome events — 2026-11-07
+
+Reset and verification log rejected tokens, rollback attempts, completed rollbacks, and committed changes.
+Transaction failures identify begin, commit, or rollback without logging raw errors.
+Email logs separate template failures, provider submission failures, and provider acceptance.
+Provider acceptance does not mean delivery to the recipient.
+Token consume logs report a matching row before commit; the caller still owns the transaction.
+Email request rejections record missing users or already-verified accounts without recipient addresses.

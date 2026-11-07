@@ -1,5 +1,26 @@
 # Current Sprint
 
+## Auth logging gaps — 2026-11-07
+
+Added auth outcome events for rejected requests/tokens, transaction commits, rollbacks, and transaction failures.
+Added email rendering, provider submission, failure, and acceptance events. Acceptance does not imply delivery.
+Token logs distinguish stored tokens from consumption inside an uncommitted caller transaction.
+Events omit credentials, token hashes, addresses, URLs, payloads, and raw error text.
+Updated logging guidance. Both existing HTTP/error logging capture tests pass in 0.01 seconds.
+The test target compiles with existing warnings; whitespace checks pass.
+New auth outcome events are reviewed in source; their runtime branches are not exercised here.
+No email/provider calls or database transaction tests occur.
+Auth delivery priorities, remaining work, story scope, and epic acceptance stay unchanged.
+
+## Auth tracing coverage — 2026-11-07
+
+Added 19 missing tracing::instrument attributes across auth handlers, services, and repository writes.
+All new spans skip arguments. Explicit context contains only user_id where available.
+No raw errors or return values are added to these spans. Updated docs/logging.md.
+All-target offline compilation passes with existing warnings in 19.47 seconds.
+Whitespace checks pass. No tests, email sends, or provider calls occur.
+Remaining auth delivery work and epic acceptance stay unchanged.
+
 ## Configured auth email base URL — 2026-11-07
 
 Settings now requires API_BASE_URL. Bootstrap passes it into AuthService.

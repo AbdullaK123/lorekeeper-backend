@@ -10,6 +10,7 @@ use axum::{Json, Router};
 use serde_json::json;
 use tower_sessions::Session;
 
+#[tracing::instrument(name = "controller.auth.login", level = "debug", skip_all)]
 async fn login(
     State(ctx): State<AppState>,
     session: Session,
@@ -34,6 +35,7 @@ async fn login(
     Ok(Json(user.into()))
 }
 
+#[tracing::instrument(name = "controller.auth.logout", level = "debug", skip_all)]
 async fn logout(session: Session) -> Result<impl IntoResponse, AppError> {
     session
         .flush()
@@ -45,6 +47,7 @@ async fn logout(session: Session) -> Result<impl IntoResponse, AppError> {
     })))
 }
 
+#[tracing::instrument(name = "controller.auth.signup", level = "debug", skip_all)]
 async fn signup(
     State(ctx): State<AppState>,
     ValidatedJson(payload): ValidatedJson<SignupRequest>,
@@ -53,6 +56,7 @@ async fn signup(
     Ok(Json(user))
 }
 
+#[tracing::instrument(name = "controller.auth.get_profile", level = "debug", skip_all)]
 async fn get_profile(
     State(ctx): State<AppState>,
     UserId(user_id): UserId,
@@ -61,6 +65,11 @@ async fn get_profile(
     Ok(Json(user))
 }
 
+#[tracing::instrument(
+    name = "controller.auth.request_password_reset",
+    level = "debug",
+    skip_all
+)]
 async fn request_password_reset(
     State(ctx): State<AppState>,
     UserId(user_id): UserId,
@@ -69,6 +78,7 @@ async fn request_password_reset(
     Ok(Json(json!({ "message": "Password reset email sent." })))
 }
 
+#[tracing::instrument(name = "controller.auth.reset_password", level = "debug", skip_all)]
 async fn reset_password(
     State(ctx): State<AppState>,
     ValidatedJson(payload): ValidatedJson<ResetPasswordRequest>,
@@ -84,6 +94,11 @@ async fn reset_password(
     Ok(Json(user))
 }
 
+#[tracing::instrument(
+    name = "controller.auth.request_email_verification",
+    level = "debug",
+    skip_all
+)]
 async fn request_email_verification(
     State(ctx): State<AppState>,
     UserId(user_id): UserId,
@@ -92,6 +107,7 @@ async fn request_email_verification(
     Ok(Json(json!({ "message": "Verification email sent." })))
 }
 
+#[tracing::instrument(name = "controller.auth.verify_email", level = "debug", skip_all)]
 async fn verify_email(
     State(ctx): State<AppState>,
     ValidatedJson(payload): ValidatedJson<VerifyEmailRequest>,
