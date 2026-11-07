@@ -1,0 +1,9 @@
+
+running 4 tests
+test auth_requests::confirmation_requests_accept_valid_inputs ... ok
+test auth_requests::confirmation_requests_reject_empty_or_oversized_tokens ... ok
+test auth_requests::confirmation_requests_require_user_identity ... ok
+test auth_requests::reset_request_rejects_weak_passwords ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 82 filtered out; finished in 0.00s
+

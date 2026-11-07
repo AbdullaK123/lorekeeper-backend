@@ -902,3 +902,9 @@ mod research_retry;
 
 #[path = "cases/chat_canon_context.rs"]
 mod chat_canon_context;
+
+#[path = "cases/auth_tokens.rs"]
+mod auth_tokens;
+
+#[path = "cases/auth_requests.rs"]
+mod auth_requests;

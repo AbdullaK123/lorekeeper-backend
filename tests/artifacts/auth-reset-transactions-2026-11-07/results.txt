@@ -1,0 +1,15 @@
+test auth_tokens::auth_tokens_concurrent_consumers_cannot_both_succeed ... ok
+test auth_tokens::auth_tokens_expired_token_cannot_be_consumed ... ok
+test auth_tokens::auth_tokens_purpose_lifetimes_are_not_swapped ... ok
+test auth_tokens::auth_tokens_reissue_invalidates_the_previous_link ... ok
+test auth_tokens::auth_tokens_reset_commits_password_with_token_consumption ... ok
+test auth_tokens::auth_tokens_reset_failure_restores_consumed_token ... ok
+test auth_tokens::auth_tokens_reset_secret_cannot_be_replayed_through_service ... ok
+test auth_tokens::auth_tokens_reset_with_expired_secret_cannot_change_password ... ok
+test auth_tokens::auth_tokens_reset_with_invalid_secret_cannot_change_password ... ok
+test auth_tokens::auth_tokens_valid_token_cannot_be_reused ... ok
+test auth_tokens::auth_tokens_verification_rollback_restores_account_and_token ... ok
+test auth_tokens::auth_tokens_wrong_hash_does_not_consume_a_valid_link ... ok
+test auth_tokens::auth_tokens_wrong_purpose_cannot_consume_the_token ... ok
+test auth_tokens::auth_tokens_wrong_user_cannot_consume_the_token ... ok
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 68 filtered out; finished in 6.64s

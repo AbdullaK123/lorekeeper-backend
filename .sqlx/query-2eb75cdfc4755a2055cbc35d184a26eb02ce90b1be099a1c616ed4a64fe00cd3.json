@@ -32,6 +32,11 @@
         "ordinal": 5,
         "name": "updated_at",
         "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 6,
+        "name": "verified",
+        "type_info": "Bool"
       }
     ],
     "parameters": {
@@ -46,6 +51,7 @@
       false,
       false,
       true,
+      false,
       false,
       false
     ]

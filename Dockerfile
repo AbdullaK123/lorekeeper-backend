@@ -12,6 +12,7 @@ ENV SQLX_OFFLINE=true CARGO_INCREMENTAL=0
 COPY Cargo.toml Cargo.lock ./
 COPY .sqlx/ ./.sqlx/
 COPY src/ ./src/
+COPY templates/ ./templates/
 RUN cargo build --locked --release --bin lorekeeper-backend --jobs 2 \
     && cp target/release/lorekeeper-backend /usr/local/bin/lorekeeper-backend
 

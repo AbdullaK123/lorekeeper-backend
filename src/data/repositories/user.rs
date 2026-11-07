@@ -80,4 +80,44 @@ impl UserRepository {
         .await?;
         Ok(result)
     }
+
+    pub async fn update_password(
+        &self,
+        id: Uuid,
+        new_password_hash: String,
+        connection: &mut sqlx::PgConnection,
+    ) -> Result<Option<User>, InfrastructureError> {
+        Ok(sqlx::query_as!(
+            User,
+            "
+            UPDATE users
+            SET password_hash = $2
+            WHERE id = $1
+            RETURNING *
+            ",
+            id,
+            new_password_hash
+        )
+        .fetch_optional(connection)
+        .await?)
+    }
+
+    pub async fn verify_user(
+        &self,
+        id: Uuid,
+        connection: &mut sqlx::PgConnection,
+    ) -> Result<Option<User>, InfrastructureError> {
+        Ok(sqlx::query_as!(
+            User,
+            "
+            UPDATE users
+            SET verified=TRUE
+            WHERE id=$1
+            RETURNING *
+            ",
+            id
+        )
+        .fetch_optional(connection)
+        .await?)
+    }
 }

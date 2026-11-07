@@ -7,7 +7,7 @@ edition = "2024"
 anyhow = "1.0.104"
 axum = {version = "0.8.9", features=["macros"]}
 envy = "0.4.2"
-tokio = {version="1.53.1", features=["full"]}
+tokio = { version = "1.53.1", features = ["full", "macros", "rt-multi-thread"] }
 tracing = "0.1.44"
 tracing-subscriber = { version = "0.3.23", features = ["env-filter"] }
 tower = "0.5.3"
@@ -33,4 +33,9 @@ futures = "0.3"
 tokio-cron-scheduler = "0.15.1"
 unicode-normalization = "0.1.25"
 dbos = "0.5.0"
+askama = "0.16.1"
+resend-rs = "0.35.1"
+nanoid = "0.5.0"
+sha2 = "0.11.1"
+hex = "0.4.3"
 

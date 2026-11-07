@@ -1,5 +1,34 @@
 # Backend test findings
 
+## Auth bootstrap and reset transaction tests — 2026-11-07
+
+Bootstrap now creates AuthTokenRepository and passes pool, user repository, token repository, and Resend key into AuthService.
+Adapted the eight token tests to pass explicit connections. Added six service/repository transaction regressions.
+All 14 tests pass in 6.64 seconds, including valid reset, invalid/expired rejection, replay rejection,
+injected password-write failure with reusable token after rollback, and verification rollback restoring both records.
+A test-only raw-error-text expectation is corrected to match the existing sanitized error boundary.
+All-target compilation and SQLx preparation pass with warnings; metadata refresh takes 19.86 seconds.
+Formatting and whitespace checks pass. No token test users/rows or fault-injection functions/triggers remain in QA.
+Evidence: [transaction test summary](artifacts/auth-reset-transactions-2026-11-07/summary.md).
+No reset HTTP endpoints, verification service, session policy, emails, model calls, browser tests, or full suite are completed by this task.
+No production business logic changes beyond bootstrap wiring. Product scope and epic acceptance stay unchanged.
+
+
+## Auth-token repository database verification — 2026-11-07
+
+Added eight real Postgres tests in tests/cases/auth_tokens.rs and registered them in adversarial_live.
+All eight pass in 0.80 seconds: single use, expired-token rejection, reissue invalidation, wrong-user/purpose/hash rejection,
+concurrent consumption with exactly one winner, and the 30-minute/24-hour lifetime policy.
+The raw token matches its stored SHA-256 verifier and is not stored in plaintext.
+Created the isolated lorekeeper_adversarial database and applied all seven migrations after the earlier reset.
+QA cleanup leaves zero token users and zero auth-token rows. Development data remains untouched.
+All-target SQLx preparation succeeds with warnings in 22.26 seconds; cache includes the current consume query.
+Formatting and whitespace checks pass. No application code changes, emails, model calls, full suite, or browser tests occur.
+Evidence: [token test summary](artifacts/auth-tokens-2026-11-07/summary.md).
+Remaining: service/endpoints, session handling, and shared transactions for token consumption plus account updates.
+Product scope and epic acceptance stay unchanged.
+
+
 ## Embedding refresh and release image — 2026-11-03
 
 A free database regression reproduces the stale-vector bug, then passes after the fix.

@@ -197,3 +197,25 @@ This runs 20 paid chat turns, background research, and two conflict-description 
 The harness checks corrected descriptions, repeated acceptance, longer history, reload, mobile reads, and errors.
 The normal run also fails if the description omits age 41, retains age 34, or loses Bellhaven/Glasswatch.
 Latest evidence: [28 passing checks](artifacts/playwright-extensive-description-2026-11-03/summary.md).
+
+### Auth-token repository checks
+
+Use the migrated, isolated `lorekeeper_adversarial` Postgres database. No email or model key is needed.
+
+```bash
+DATABASE_URL=postgresql://dev:password@localhost:5433/lorekeeper_adversarial \
+SQLX_OFFLINE=true CARGO_INCREMENTAL=0 \
+cargo test --offline --jobs 1 --test adversarial_live auth_tokens:: -- --ignored --test-threads=1
+```
+
+The 14 tests cover token lifecycles, service password resets, failure rollback, and verification rollback.
+The Resend client uses a dummy key in these tests and sends no emails.
+[Recorded results](artifacts/auth-tokens-2026-11-07/summary.md).
+
+Latest auth transaction evidence: [14 passing tests](artifacts/auth-reset-transactions-2026-11-07/summary.md).
+
+### Auth confirmation request validation
+
+Run `SQLX_OFFLINE=true cargo test --offline --jobs 1 --test adversarial_live auth_requests::`.
+These four tests check required user identity, token length, and password policy.
+They use no database, model, or email provider.

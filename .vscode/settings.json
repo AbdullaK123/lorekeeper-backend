@@ -3,22 +3,36 @@
     "rust-analyzer.checkOnSave": true,
     // Keep compiler diagnostics fast; run clippy separately.
     "rust-analyzer.check.command": "check",
-    // Also check tests, so errors in test files show up too.
-    "rust-analyzer.check.allTargets": true,
+    // Check the API on save. Run the full test-target check separately.
+    "rust-analyzer.cargo.allTargets": false,
+    "rust-analyzer.check.allTargets": false,
 
     // Own build folder, so rust-analyzer and `cargo` in the terminal stop waiting on each other.
     "rust-analyzer.cargo.targetDir": true,
     // Bound analysis and compiler work on this memory-limited WSL host.
     "rust-analyzer.numThreads": 2,
-    "rust-analyzer.lru.capacity": 64,
+    "rust-analyzer.lru.capacity": 32,
     // Avoid eagerly computing the entire dependency graph on startup.
     "rust-analyzer.cachePriming.enable": false,
-    "rust-analyzer.cargo.extraArgs": ["--jobs", "2"],
-    "rust-analyzer.check.extraArgs": ["--jobs", "2"],
-    // Avoid database-dependent diagnostics and damaged incremental build caches.
+    "rust-analyzer.cargo.extraArgs": ["--jobs", "1"],
+    // Check inherits cargo.extraArgs. Repeating --jobs makes Cargo reject the command.
+    "rust-analyzer.check.extraArgs": [],
+    // SQLx and Askama need macro expansion and build scripts.
+    "rust-analyzer.cargo.buildScripts.enable": true,
+    "rust-analyzer.procMacro.enable": true,
+    "rust-analyzer.procMacro.processes": 1,
+    "rust-analyzer.files.exclude": ["target", ".git", "playground/node_modules", "playground/dist", "tests/artifacts"],
+    // Validate new SQL against the local Compose database while developing.
+    // Docker and CI can still use SQLX_OFFLINE=true with prepared .sqlx metadata.
     "rust-analyzer.cargo.extraEnv": {
-        "SQLX_OFFLINE": "true",
+        "SQLX_OFFLINE": "false",
+        "DATABASE_URL": "postgresql://dev:password@localhost:5433/app_db",
         "CARGO_INCREMENTAL": "0"
+    },
+    // Macro workers must use the same database mode as Cargo checks.
+    "rust-analyzer.server.extraEnv": {
+        "SQLX_OFFLINE": "false",
+        "DATABASE_URL": "postgresql://dev:password@localhost:5433/app_db"
     },
 
     // Tidy the code on every save.
@@ -29,7 +43,9 @@
 
     // Don't let VS Code watch or search the huge build folder.
     "files.watcherExclude": {
-        "**/target/**": true
+        "**/target/**": true,
+        "**/playground/node_modules/**": true,
+        "**/tests/artifacts/**": true
     },
     "search.exclude": {
         "**/target": true

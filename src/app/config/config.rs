@@ -25,6 +25,8 @@ pub struct Settings {
     pub memgraph_uri: String,
     pub memgraph_user: String,
     pub memgraph_password: String,
+    pub resend_api_key: String,
+    pub api_base_url: String,
     session_secret_key: String,
     cors_allowed_origins: Vec<String>,
     pub env: Environment,

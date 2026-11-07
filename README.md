@@ -87,6 +87,7 @@ MEMGRAPH_PASSWORD=
 SESSION_SECRET_KEY=replace-with-at-least-64-random-characters
 CORS_ALLOWED_ORIGINS=http://localhost:5173
 ENV=dev
+API_BASE_URL=http://localhost:8000/api
 ```
 
 Export settings and apply migrations before starting:
@@ -145,6 +146,10 @@ Except health, signup, and login, these routes require a session cookie.
 | GET | `/health` | Health response |
 | POST | `/auth/signup`, `/auth/login`, `/auth/logout` | Account session actions |
 | GET | `/auth/me` | Current user |
+| POST | `/auth/password_reset/request` | Send reset email for the signed-in user |
+| POST | `/auth/email_verification/request` | Send verification email for the signed-in user |
+| POST | `/auth/password_reset` | Confirm reset with user_id, token, and new_password |
+| POST | `/auth/email_verification` | Confirm verification with user_id and token |
 | GET / POST | `/world` | List or create worlds |
 | GET / PATCH / DELETE | `/world/{world_id}` | Read, update, or delete a world |
 | GET / POST | `/world/{world_id}/conversations` | List or create conversations |
@@ -212,3 +217,17 @@ Remaining work includes product client flows, long conversation behavior, deleti
 recovery commit gaps, and broader conflict targets. OAuth, account recovery, Stripe billing,
 usage controls, service emails, exports, support, and deployment recovery remain required scope.
 The [project plan](docs/project_plan.md) tracks these without marking whole epics complete from backend routes alone.
+
+### Auth email confirmation
+
+Email-request routes require a signed-in session and no request body.
+Confirmation routes accept JSON without a session. Verification needs `user_id` and `token`.
+Password reset also needs `new_password`, using the signup password rules.
+Confirmation returns `UserResponse`; sending returns a JSON `message`.
+These routes do not create a login session or revoke existing sessions.
+
+Email URLs use the required API_BASE_URL setting. Include any path prefix, such as /api for the dev alias.
+For production, set the public HTTPS API URL. A trailing slash is optional.
+The browser confirmation page remains pending.
+Opening an email URL does not consume its token: confirmation requires POST.
+Logged-out password-reset requests by email address remain pending.
