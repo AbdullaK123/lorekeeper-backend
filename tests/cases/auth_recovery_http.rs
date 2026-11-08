@@ -71,6 +71,153 @@ fn cookie_pair(header: &str) -> &str {
     header.split(';').next().unwrap()
 }
 
+fn verification_payload(emails: &Captured, email: &str, user_id: &str) -> Value {
+    let captured = emails.lock().unwrap();
+    let message = captured
+        .last()
+        .expect("Verification request sends no email");
+    assert_eq!(
+        message["to"][0], email,
+        "Verification email goes to the wrong account"
+    );
+    let link = message["html"]
+        .as_str()
+        .unwrap()
+        .split("href=\"")
+        .find_map(|part| {
+            part.split('"')
+                .next()
+                .filter(|url| url.contains("/auth/email_verification?"))
+        })
+        .expect("Verification email lacks a confirmation link")
+        .replace("&#38;", "&")
+        .replace("&amp;", "&");
+    let base = std::env::var("API_BASE_URL").unwrap();
+    assert!(
+        link.starts_with(&format!(
+            "{}/auth/email_verification?",
+            base.trim_end_matches('/')
+        )),
+        "Verification link ignores the configured API base URL"
+    );
+    let uri: axum::http::Uri = link.parse().unwrap();
+    let axum::extract::Query(params) =
+        axum::extract::Query::<data::VerifyEmailRequest>::try_from_uri(&uri).unwrap();
+    assert_eq!(
+        params.user_id.to_string(),
+        user_id,
+        "Verification link names a different user"
+    );
+    json!({"user_id":params.user_id, "token":params.token})
+}
+
+async fn verify_email_flow(
+    app: &Router,
+    pool: &sqlx::PgPool,
+    emails: &Captured,
+    email: &str,
+    user_id: &str,
+    cookie: &str,
+) {
+    let initial = emails.lock().unwrap().len();
+    let denied = request(app, "/auth/email_verification/request", json!({})).await;
+    assert_eq!(
+        denied.0, 401,
+        "Logged-out callers can request verification email"
+    );
+    assert_eq!(
+        emails.lock().unwrap().len(),
+        initial,
+        "An unauthorized request sends email"
+    );
+    let sent = with_cookie(app, "POST", "/auth/email_verification/request", cookie).await;
+    assert_eq!(sent.0, 200, "A logged-in user cannot request verification");
+    assert_eq!(
+        emails.lock().unwrap().len(),
+        initial + 1,
+        "Verification sends an unexpected number of emails"
+    );
+    let expired = verification_payload(emails, email, user_id);
+    let user_uuid = uuid::Uuid::parse_str(user_id).unwrap();
+    sqlx::query("UPDATE auth_tokens SET created_at=NOW()-INTERVAL '2 hours', expired_at=NOW()-INTERVAL '1 hour' WHERE user_id=$1 AND purpose='email_verification'")
+        .bind(user_uuid).execute(pool).await.unwrap();
+    let rejected = request(app, "/auth/email_verification", expired).await;
+    assert_eq!(rejected.0, 422, "An expired token verifies the account");
+    let flag: bool = sqlx::query_scalar("SELECT verified FROM users WHERE id=$1")
+        .bind(user_uuid)
+        .fetch_one(pool)
+        .await
+        .unwrap();
+    assert!(
+        !flag,
+        "Expired-token rejection still changes the verification flag"
+    );
+    assert_eq!(
+        with_cookie(app, "POST", "/auth/email_verification/request", cookie)
+            .await
+            .0,
+        200,
+        "An expired link prevents issuing a new one"
+    );
+    let valid = verification_payload(emails, email, user_id);
+    let invalid = request(
+        app,
+        "/auth/email_verification",
+        json!({"user_id":user_id,"token":"wrong-secret"}),
+    )
+    .await;
+    assert_eq!(invalid.0, 422, "An invalid secret verifies an account");
+    let wrong_user = request(
+        app,
+        "/auth/email_verification",
+        json!({"user_id":uuid::Uuid::new_v4(),"token":valid["token"]}),
+    )
+    .await;
+    assert_eq!(
+        wrong_user.0, 422,
+        "Verification token authorizes a different account"
+    );
+    let verified = request(app, "/auth/email_verification", valid.clone()).await;
+    assert_eq!(
+        verified.0, 200,
+        "Valid emailed credentials cannot confirm without a session"
+    );
+    assert_eq!(
+        verified.1["verified"], true,
+        "Confirmation response does not report verification"
+    );
+    assert_eq!(
+        verified.1["id"], user_id,
+        "Verification response names a different account"
+    );
+    assert!(
+        verified.2.is_none(),
+        "Email confirmation creates a login session"
+    );
+    let saved: bool = sqlx::query_scalar("SELECT verified FROM users WHERE id=$1")
+        .bind(user_uuid)
+        .fetch_one(pool)
+        .await
+        .unwrap();
+    assert!(
+        saved,
+        "Verification success does not persist the account flag"
+    );
+    let replay = request(app, "/auth/email_verification", valid).await;
+    assert_eq!(replay.0, 422, "A verification token can be consumed twice");
+    let count = emails.lock().unwrap().len();
+    let repeat = with_cookie(app, "POST", "/auth/email_verification/request", cookie).await;
+    assert_eq!(
+        repeat.0, 409,
+        "Already verified accounts can issue more verification links"
+    );
+    assert_eq!(
+        emails.lock().unwrap().len(),
+        count,
+        "Already verified accounts still trigger delivery"
+    );
+}
+
 #[tokio::test(flavor = "multi_thread", worker_threads = 4)]
 #[ignore = "requires isolated QA Postgres, Memgraph and RESEND_BASE_URL=http://127.0.0.1:18082; no real email/model calls"]
 async fn recovery_http_requires_valid_input_and_consumes_links_once() {
@@ -407,6 +554,9 @@ async fn recovery_http_requires_valid_input_and_consumes_links_once() {
         after.0, 200,
         "Replay rejection still changes the saved password"
     );
+
+    let active_cookie = cookie_pair(after.2.as_deref().unwrap());
+    verify_email_flow(&app, &pool, &emails, &email, &user_id, active_cookie).await;
 
     sqlx::query("DELETE FROM users WHERE id=$1")
         .bind(uuid::Uuid::parse_str(&user_id).unwrap())

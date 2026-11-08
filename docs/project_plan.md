@@ -1,5 +1,19 @@
 # Lorekeeper — Project Plan
 
+## Verification HTTP workflow passed — 2026-11-08
+
+The verification API now has local-capture HTTP evidence, completing this backend verification task. Full auth/product acceptance remains open.
+The combined auth HTTP workflow passes in 9.84 seconds. Target compilation, formatting, and whitespace checks pass.
+No application edits, real emails, paid model calls, browser runs, full-suite rerun, or deployment occur.
+Evidence: tests/artifacts/email-verification-http-2026-11-08/summary.md. All four PM docs reviewed; product scope stays unchanged.
+
+## Next backend verification: email confirmation — 2026-11-08
+
+Next: extend local email-capture HTTP coverage to verification requests and confirmation.
+Cover signed-in request access, correct recipient/link, verified flag persistence, and rejection of invalid/expired/replayed tokens.
+Existing validation and transaction tests do not cover this full HTTP flow. Browser pages remain deferred to frontend work.
+Reviewed all four PM docs and existing auth HTTP coverage. No application edits or tests occur this turn. Scope and acceptance stay unchanged.
+
 ## Custom sessions replacement verified — 2026-11-08
 
 Custom sessions replace Tower Sessions in the backend. Account-wide reset revocation now has HTTP and transaction rollback evidence. This completes the tested backend replacement, not the full recovery product story or auth epic.

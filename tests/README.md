@@ -235,3 +235,6 @@ Evidence: [passing workflow](artifacts/auth-recovery-http-2026-11-08/summary.md)
 
 The recovery HTTP workflow also checks custom session cookies, profile reads, expired/forged cookie rejection, logout, and reset invalidation across two sessions.
 Run with `ENV=dev` and `ENV=prod` to check the Secure flag. No signing-key setting is required.
+
+The same workflow now covers email verification requests and confirmation, including expiry, wrong-user/invalid secrets, replay, persisted verification, and already-verified request rejection.
+Latest evidence: [verification HTTP checks](artifacts/email-verification-http-2026-11-08/summary.md).

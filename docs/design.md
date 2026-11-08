@@ -1,5 +1,19 @@
 # Lorekeeper — Design and Development Lifecycle
 
+## Verification HTTP workflow passed — 2026-11-08
+
+Tests use the actual verification request and confirmation routes, existing email template, session extractor, token expiry, and Postgres flag update. Confirmation continues to accept JSON credentials without a session.
+The combined auth HTTP workflow passes in 9.84 seconds. Target compilation, formatting, and whitespace checks pass.
+No application edits, real emails, paid model calls, browser runs, full-suite rerun, or deployment occur.
+Evidence: tests/artifacts/email-verification-http-2026-11-08/summary.md. All four PM docs reviewed; product scope stays unchanged.
+
+## Next backend verification: email confirmation — 2026-11-08
+
+Next: extend local email-capture HTTP coverage to verification requests and confirmation.
+Cover signed-in request access, correct recipient/link, verified flag persistence, and rejection of invalid/expired/replayed tokens.
+Existing validation and transaction tests do not cover this full HTTP flow. Browser pages remain deferred to frontend work.
+Reviewed all four PM docs and existing auth HTTP coverage. No application edits or tests occur this turn. Scope and acceptance stay unchanged.
+
 ## Custom sessions replacement verified — 2026-11-08
 
 The application uses sessions(token_hash, user_id, expires_at), SHA-256 token lookup, fixed 24-hour expiry, and explicit cookie policy. Reset deletes user sessions in its existing transaction. Tower middleware and signing-key configuration are removed; the old store schema remains unused. Logs skip all credential arguments/returns.
