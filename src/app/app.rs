@@ -2,7 +2,7 @@ use crate::app::{create_auth_controller, create_world_controller, setup_dbos};
 use crate::cron_worker::start_scheduler;
 use crate::data::{ConversationRepository, GraphRepository, UserRepository, WorldRepository};
 use crate::infrastructure::{
-    Settings, create_graph, create_pool, load_config, load_prompt, load_settings,
+    Environment, Settings, create_graph, create_pool, load_config, load_prompt, load_settings,
 };
 use crate::service::{
     AuthService, ChatAgentFactory, ConversationService, ResearcherService, RetrievalService,
@@ -20,6 +20,7 @@ use tokio_cron_scheduler::JobScheduler;
 
 #[derive(Clone)]
 pub struct AppState {
+    pub is_prod: bool,
     pool: PgPool,
     graph: Graph,
     pub auth_service: AuthService,
@@ -40,7 +41,6 @@ pub async fn create_app() -> (Router, JobScheduler, DBOS) {
         .nest("/auth", create_auth_controller())
         .nest("/world", create_world_controller())
         .layer(settings.trace_layer())
-        .layer(settings.session_layer(pool.clone()).await)
         .layer(settings.cors_layer())
         .with_state(app_state);
 
@@ -114,6 +114,7 @@ async fn bootstrap(
     );
 
     let app_state = AppState {
+        is_prod: settings.env == Environment::Prod,
         pool: pool.clone(),
         graph,
         auth_service,

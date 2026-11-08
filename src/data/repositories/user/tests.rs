@@ -683,3 +683,61 @@ async fn auth_tokens_concurrent_password_updates_cannot_both_commit() {
     );
     f.cleanup().await;
 }
+
+#[tokio::test]
+#[ignore = "requires isolated Postgres; no email or model calls"]
+async fn auth_tokens_session_delete_failure_rolls_back_password_and_token() {
+    let f = Fixture::new().await;
+    let auth = f.auth_service();
+    let (session, _) = auth.create_session(&f.user).await.unwrap();
+    let (_, reset) = f
+        .repo
+        .upsert_token(f.user, data::AuthTokenPurpose::PasswordReset)
+        .await
+        .unwrap();
+    let before = f.saved_password().await;
+    let name = format!("qa_session_failure_{}", f.user.simple());
+    sqlx::query(&format!("CREATE FUNCTION {name}() RETURNS trigger LANGUAGE plpgsql AS $$ BEGIN RAISE EXCEPTION 'Injected session-delete failure'; END $$"))
+        .execute(&f.pool).await.unwrap();
+    sqlx::query(&format!("CREATE TRIGGER {name} BEFORE DELETE ON sessions FOR EACH ROW WHEN (OLD.user_id = '{}'::uuid) EXECUTE FUNCTION {name}()", f.user))
+        .execute(&f.pool).await.unwrap();
+    let failed = auth
+        .reset_password(f.user, reset.clone(), "Changed-Password-671!".into())
+        .await;
+    let after = f.saved_password().await;
+    let session_after = auth.get_user_id_from_session(&session).await.unwrap();
+    sqlx::query(&format!("DROP TRIGGER {name} ON sessions"))
+        .execute(&f.pool)
+        .await
+        .unwrap();
+    sqlx::query(&format!("DROP FUNCTION {name}()"))
+        .execute(&f.pool)
+        .await
+        .unwrap();
+    let retry = auth
+        .reset_password(f.user, reset, "Changed-Password-671!".into())
+        .await;
+    let revoked = auth.get_user_id_from_session(&session).await.unwrap();
+    f.cleanup().await;
+    assert!(
+        failed.is_err(),
+        "Session deletion failure reports a successful password reset"
+    );
+    assert_eq!(
+        after, before,
+        "Failed session revocation still changes the password"
+    );
+    assert_eq!(
+        session_after,
+        Some(f.user),
+        "Failed reset partially deletes the session"
+    );
+    assert!(
+        retry.is_ok(),
+        "Failed session deletion permanently consumes the reset token"
+    );
+    assert!(
+        revoked.is_none(),
+        "Successful retry leaves the old session active"
+    );
+}

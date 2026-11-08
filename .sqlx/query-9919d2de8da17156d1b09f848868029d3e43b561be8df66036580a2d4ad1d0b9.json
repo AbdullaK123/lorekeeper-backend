@@ -1,0 +1,15 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            DELETE FROM sessions WHERE token_hash=$1 AND user_id=$2\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Uuid"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "9919d2de8da17156d1b09f848868029d3e43b561be8df66036580a2d4ad1d0b9"
+}

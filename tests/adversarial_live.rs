@@ -894,3 +894,6 @@ mod chat_canon_context;
 
 #[path = "cases/auth_requests.rs"]
 mod auth_requests;
+
+#[path = "cases/auth_recovery_http.rs"]
+mod auth_recovery_http;

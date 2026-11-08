@@ -1,12 +1,14 @@
 mod auth_tokens;
+mod sessions;
 
 #[cfg(test)]
 mod tests;
 
 use crate::data::models::User;
-use crate::data::{AuthTokenPurpose, AuthTokenRow};
+use crate::data::{AuthTokenPurpose, AuthTokenRow, SessionRow};
 use crate::infrastructure::InfrastructureError;
 use auth_tokens::AuthTokenRepository;
+use sessions::SessionRepository;
 use sqlx::PgPool;
 use uuid::Uuid;
 
@@ -14,12 +16,14 @@ use uuid::Uuid;
 pub struct UserRepository {
     pool: PgPool,
     auth_tokens: AuthTokenRepository,
+    sessions: SessionRepository,
 }
 
 impl UserRepository {
     pub fn new(pool: PgPool) -> Self {
         Self {
             auth_tokens: AuthTokenRepository::new(pool.clone()),
+            sessions: SessionRepository::new(pool.clone()),
             pool,
         }
     }
@@ -155,7 +159,18 @@ impl UserRepository {
                     InfrastructureError::InvalidInput("Invalid or expired reset token".into())
                 })?;
 
-            self.update_password(id, new_password_hash, &mut *tx).await
+            let user = self
+                .update_password(id, new_password_hash, &mut *tx)
+                .await?;
+
+            if user.is_none() {
+                return Ok(None);
+            } else {
+                self.sessions
+                    .delete_all(&user.as_ref().unwrap().id, &mut *tx)
+                    .await?;
+                return Ok(user);
+            }
         }
         .await;
 
@@ -257,5 +272,31 @@ impl UserRepository {
         purpose: AuthTokenPurpose,
     ) -> Result<(AuthTokenRow, String), InfrastructureError> {
         self.auth_tokens.upsert_token(user_id, purpose).await
+    }
+
+    #[tracing::instrument(name = "repository.user.get_session", level = "debug", skip_all)]
+    pub async fn get_session(
+        &self,
+        token_hash: &str,
+    ) -> Result<Option<SessionRow>, InfrastructureError> {
+        Ok(self.sessions.get(token_hash).await?)
+    }
+
+    #[tracing::instrument(name = "repository.user.create_session", level = "debug", skip_all, fields(user_id = %user_id))]
+    pub async fn create_session(
+        &self,
+        token_hash: &str,
+        user_id: &Uuid,
+    ) -> Result<SessionRow, InfrastructureError> {
+        Ok(self.sessions.create(token_hash, user_id).await?)
+    }
+
+    #[tracing::instrument(name = "repository.user.delete_session", level = "debug", skip_all, fields(user_id = %user_id))]
+    pub async fn delete_session(
+        &self,
+        token_hash: &str,
+        user_id: &Uuid,
+    ) -> Result<bool, InfrastructureError> {
+        Ok(self.sessions.delete(token_hash, user_id).await?)
     }
 }

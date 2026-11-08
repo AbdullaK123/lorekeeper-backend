@@ -1,5 +1,12 @@
 # Backend test findings
 
+## Custom sessions — 2026-11-08
+
+All-target compilation passes. Auth database tests: 17 pass. Integration pure tests: 12 pass. Text types: eight pass.
+Library tests: 13 pass and the known retrieval-ranking failure remains. HTTP recovery passes in dev and prod using loopback email capture.
+Formatting and whitespace checks pass; QA fixture users/triggers are removed. No real emails, paid AI calls, browser tests, or deployment occur.
+Evidence: tests/artifacts/custom-sessions-2026-11-08/summary.md. All four PM docs reviewed; scope stays unchanged.
+
 ## User repository owns auth transactions — 2026-11-08
 
 Implemented the planned ownership refactor in repositories/user/mod.rs and its private auth_tokens child.

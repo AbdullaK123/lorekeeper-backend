@@ -1,0 +1,77 @@
+warning: unused import: `crate::app::world`
+ --> src/data/repositories/conversation.rs:1:5
+  |
+1 | use crate::app::world;
+  |     ^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `crate::data::ResearchStatus::NotSubmitted`
+ --> src/data/models/conversations.rs:1:5
+  |
+1 | use crate::data::ResearchStatus::NotSubmitted;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: ambiguous glob re-exports
+ --> src/data/mod.rs:5:9
+  |
+5 | pub use repositories::*;
+  |         ^^^^^^^^^^^^^^^ the name `graph` in the type namespace is first re-exported here
+6 | pub use models::*;
+  |         --------- but the name `graph` in the type namespace is also re-exported here
+  |
+  = note: `#[warn(ambiguous_glob_reexports)]` on by default
+
+warning: ambiguous glob re-exports
+ --> src/data/mod.rs:5:9
+  |
+5 | pub use repositories::*;
+  |         ^^^^^^^^^^^^^^^ the name `user` in the type namespace is first re-exported here
+6 | pub use models::*;
+  |         --------- but the name `user` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+ --> src/data/mod.rs:5:9
+  |
+5 | pub use repositories::*;
+  |         ^^^^^^^^^^^^^^^ the name `world` in the type namespace is first re-exported here
+6 | pub use models::*;
+  |         --------- but the name `world` in the type namespace is also re-exported here
+
+warning: unused import: `ResolveConflictRequest`
+ --> src/service/world.rs:4:27
+  |
+4 |     RelationshipResponse, ResolveConflictRequest, UpdateWorldRequest, WorldRepository,
+  |                           ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `serde::Serialize`
+  --> src/service/conversation.rs:12:5
+   |
+12 | use serde::Serialize;
+   |     ^^^^^^^^^^^^^^^^
+
+warning: fields `pool` and `graph` are never read
+  --> src/app/app.rs:23:5
+   |
+22 | pub struct AppState {
+   |            -------- fields in this struct
+23 |     pool: PgPool,
+   |     ^^^^
+24 |     graph: Graph,
+   |     ^^^^^
+   |
+   = note: `AppState` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `lorekeeper-backend` (lib) generated 8 warnings (run `cargo fix --lib -p lorekeeper-backend` to apply 4 suggestions)
+   Compiling lorekeeper-backend v0.1.0 (/root/lorekeeper-backend)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.10s
+warning: the following packages contain code that will be rejected by a future version of Rust: proc-macro-error2 v2.0.1
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
+     Running tests/adversarial_live.rs (target/debug/deps/adversarial_live-478ffc56b55c50b1)
+
+running 1 test
+test auth_recovery_http::recovery_http_requires_valid_input_and_consumes_links_once ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 59 filtered out; finished in 5.43s
+

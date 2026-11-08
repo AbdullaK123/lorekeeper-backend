@@ -1,6 +1,7 @@
 use crate::data::{AuthTokenPurpose, SignupRequest, User, UserRepository, UserResponse};
 use crate::service::{EmailService, ServiceError};
 use argon2::{Argon2, PasswordHash, PasswordHasher, PasswordVerifier};
+use chrono::{DateTime, Utc};
 use sha2::{Digest, Sha256};
 use tokio;
 use uuid::Uuid;
@@ -83,25 +84,26 @@ impl AuthService {
         }
     }
 
-    #[tracing::instrument(name = "auth.send_password_reset_email", level = "info", skip_all, fields(user_id = %user_id))]
-    pub async fn send_password_reset_email(&self, user_id: Uuid) -> Result<(), ServiceError> {
-        let user = self.user_repo.get_user_by_id(user_id).await?;
+    #[tracing::instrument(name = "auth.send_password_reset_email", level = "info", skip_all)]
+    pub async fn send_password_reset_email(&self, user_email: String) -> Result<(), ServiceError> {
+        let user = self.user_repo.get_user_by_email(user_email).await?;
         if user.is_none() {
             tracing::info!(reason = "user_not_found", "auth email request rejected");
-            return Err(ServiceError::NotFound("User not found".to_string()));
+            return Ok(());
         }
+        let user = user.unwrap();
         let (_, token) = self
             .user_repo
-            .issue_auth_token(user_id, AuthTokenPurpose::PasswordReset)
+            .issue_auth_token(user.id, AuthTokenPurpose::PasswordReset)
             .await?;
 
         let reset_url = format!(
-            "{}/auth/password_reset?user_id={user_id}&token={}",
-            self.api_base_url, token
+            "{}/auth/password_reset?user_id={}&token={}",
+            self.api_base_url, user.id, token
         );
 
         self.email_service
-            .send_password_reset_email(&user.unwrap().email, &reset_url)
+            .send_password_reset_email(&user.email, &reset_url)
             .await?;
 
         Ok(())
@@ -163,5 +165,44 @@ impl AuthService {
             .await?
             .map(Into::into)
             .ok_or_else(|| ServiceError::NotFound("User not found".into()))
+    }
+
+    #[tracing::instrument(name = "auth.create_session", level = "debug", skip_all, fields(user_id = %user_id))]
+    pub async fn create_session(
+        &self,
+        user_id: &Uuid,
+    ) -> Result<(String, DateTime<Utc>), ServiceError> {
+        let token = nanoid::nanoid!();
+        let token_hash = hex::encode(Sha256::digest(token.as_bytes()));
+        let row = self.user_repo.create_session(&token_hash, user_id).await?;
+        tracing::debug!(expires_at = %row.expires_at, "session created");
+        Ok((token, row.expires_at))
+    }
+
+    #[tracing::instrument(name = "auth.get_user_id_from_session", level = "debug", skip_all)]
+    pub async fn get_user_id_from_session(
+        &self,
+        token: &str,
+    ) -> Result<Option<Uuid>, ServiceError> {
+        let token_hash = hex::encode(Sha256::digest(token.as_bytes()));
+        let row = self.user_repo.get_session(&token_hash).await?;
+        match row {
+            Some(session) => {
+                tracing::debug!(user_id = %session.user_id, "session resolved");
+                Ok(Some(session.user_id))
+            }
+            None => {
+                tracing::debug!(reason = "missing_or_expired", "session rejected");
+                Ok(None)
+            }
+        }
+    }
+
+    #[tracing::instrument(name = "auth.delete_session", level = "debug", skip_all, fields(user_id = %user_id))]
+    pub async fn delete_session(&self, token: &str, user_id: &Uuid) -> Result<bool, ServiceError> {
+        let token_hash = hex::encode(Sha256::digest(token.as_bytes()));
+        let deleted = self.user_repo.delete_session(&token_hash, user_id).await?;
+        tracing::debug!(deleted, "session deletion completed");
+        Ok(deleted)
     }
 }

@@ -1,5 +1,259 @@
 # Lorekeeper — User Stories
 
+## Custom sessions replacement verified — 2026-11-08
+
+Recovery evidence now includes two existing sessions rejected after reset, fresh password login, logout invalidation, expiry/forgery rejection, and rollback after deletion failure. Browser confirmation flows and broader product acceptance remain open.
+All-target compilation passes. Auth database tests: 17 pass. Integration pure tests: 12 pass. Text types: eight pass.
+Library tests: 13 pass and the known retrieval-ranking failure remains. HTTP recovery passes in dev and prod using loopback email capture.
+Formatting and whitespace checks pass; QA fixture users/triggers are removed. No real emails, paid AI calls, browser tests, or deployment occur.
+Evidence: tests/artifacts/custom-sessions-2026-11-08/summary.md. All four PM docs reviewed; scope stays unchanged.
+
+## Logout cookie removal confirmed — 2026-11-08
+
+Inspection confirms logout returns the updated CookieJar and removes session_id at Path=/ after deleting its database session.
+Old Tower Sessions middleware still runs and uses the same cookie name. Remove its layer, helper/configuration, unused controller import, and dependencies before runtime verification.
+Next verification: login/profile/logout plus two existing sessions invalidated by password reset.
+Reviewed all four PM docs. No application edits, compilation, or tests occur; replacement acceptance remains pending.
+
+## Custom logout review — 2026-11-08
+
+Logout now resolves the custom session user and deletes the matching custom database session.
+It still returns only JSON. The browser cookie is not removed; return CookieJar::remove with a session_id cookie using Path=/ alongside JSON.
+The Tower Session import is now unused. Old middleware/configuration removal remains pending.
+Reviewed all four PM docs. Inspection only: no application edits or tests. Replacement acceptance stays open.
+
+## Custom UserId extractor review — 2026-11-08
+
+Inspection confirms UserId now reads session_id through CookieJar and resolves identity through AuthService using AppState.
+Missing cookies and missing/expired sessions return AuthError; database failures propagate separately.
+Next: replace Tower-based logout with custom session deletion and matching cookie removal, then remove obsolete Tower middleware/configuration.
+Reviewed all four PM docs. No application edits, compilation, or tests occur. Runtime acceptance stays pending.
+
+## UserId cookie extraction guidance — 2026-11-08
+
+Use CookieJar::from_headers(&parts.headers), then get("session_id") to read the raw token.
+For the simplest state access, implement FromRequestParts<AppState> rather than generic S; the extractor can then call state.auth_service.get_user_id_from_session.
+Missing cookies and absent/expired sessions map to AuthError. Propagate actual lookup errors through AppError.
+Remove the old Tower Session import/extraction; the draft Cookie import also lacks a semicolon and should become CookieJar.
+Guidance only: no application edits or tests. All four PM docs reviewed; extractor wiring remains pending.
+
+## Login cookie settings implemented — 2026-11-08
+
+Cookie policy is implemented for login, but story acceptance remains open. UserId/logout still use Tower Sessions, and HTTP session invalidation tests remain pending.
+SQLX_OFFLINE=true cargo check --offline --jobs 2 --all-targets passes with existing warnings in 25.77 seconds.
+Selected Rust files are formatted; git diff --check passes. No tests, email sends, model calls, or deployments occur.
+All four PM docs reviewed. Product scope stays unchanged.
+
+## Cookie builder guidance — 2026-11-08
+
+Checked installed cookie 0.18.2 builder API. Use path, http_only, same_site, secure, expires, then build.
+Convert the database chrono expiry timestamp to time::OffsetDateTime for expires. A direct time dependency is needed for that import.
+Secure must use the configured environment; AppState currently does not expose an is_prod value, so that wiring remains necessary.
+Guidance only: no dependency/application edits or tests. All four PM docs reviewed; integration remains pending.
+
+## Custom login cookie review — 2026-11-08
+
+Login now creates a custom database session and returns the updated CookieJar with the raw session token.
+Cookie::new alone leaves auth-cookie policy unset. Set Path=/, HttpOnly, SameSite=Lax, Secure in production, and browser expiry matching the stored expiry.
+Logout and UserId still use Tower Sessions. Login now uses the custom table, so authentication wiring is mixed and migration remains incomplete.
+Reviewed all four PM docs. No application edits or tests occur this turn. Prior recovery results predate these changes and do not verify the new session path.
+
+## Cookie extractor API guidance — 2026-11-08
+
+Checked official axum-extra CookieJar documentation. Use its cookie feature and a CookieJar handler argument to read named cookies.
+jar.get("session_id").map(|cookie| cookie.value()) gives the optional raw session token. A missing cookie means unauthenticated.
+CookieJar add/remove changes reach the client only when the updated jar is returned in the response.
+axum-extra is not yet a direct dependency. Guidance only: no dependency or application edits and no tests occur.
+Reviewed all four PM docs. Custom-session cookie/extractor integration and acceptance remain pending.
+
+## Session identity lookup review — 2026-11-08
+
+Inspection confirms get_user_id_from_session returns Option<Uuid> after hashing the supplied token and querying an unexpired session.
+Next: login sets the raw token cookie; UserId reads it and resolves the user through AuthService. Cookie policy and logout follow in the replacement.
+Reviewed all four PM docs. No application edits or tests occur. Tower Sessions remains active; replacement and acceptance stay pending.
+
+## Auth session service review — 2026-11-08
+
+Inspection confirms create_session generates a raw token, persists its SHA-256 hash, and returns the token plus database expiry.
+Session reads/deletes hash supplied tokens before repository calls. No raw-token logging appears in the new methods.
+Remaining API issue: session_valid returns bool and discards the row's user_id, which the UserId extractor needs.
+Recommend resolve_session returning Result<Option<Uuid>, ServiceError>, mapping an active row to its user_id.
+Reviewed all four PM docs. No application edits or tests occur; cookie/extractor wiring and runtime replacement remain pending.
+
+## Parent session methods review — 2026-11-08
+
+UserRepository now exposes get_session, create_session, and delete_session delegating to its private child.
+Inspection only; no compilation or tests. Next work is AuthService token generation/hashing and cookie/extractor wiring.
+All four PM docs reviewed. Tower Sessions replacement and product acceptance remain pending; no application edits this turn.
+
+## Session child and reset transaction review — 2026-11-08
+
+Inspection confirms UserRepository constructs and holds SessionRepository; the child derives Debug.
+Reset now consumes its token, updates the password, and deletes the user's custom sessions on the same transaction connection.
+The existing error branch rolls back all three operations. Zero deleted sessions is allowed; it does not fail reset.
+Tower Sessions still supplies active login/extractor behavior, so deleting custom rows does not yet revoke current Tower sessions.
+Next: parent session create/read/delete methods, followed by AuthService, cookie, and UserId wiring to the custom table.
+Reviewed all four PM docs. No application edits, compilation, or tests occur this turn. Runtime replacement and acceptance stay pending.
+
+## Session lookup follow-up — 2026-11-08
+
+Inspection confirms get now takes only token_hash and filters expired sessions. SessionRow supplies user_id.
+Next: UserRepository must hold and construct the sessions child. Add Debug to the child to satisfy the parent's existing derive.
+No application edits or tests occur this turn. All four PM docs reviewed; replacement and acceptance remain pending.
+
+## Session repository review — 2026-11-08
+
+Reviewed create/get/delete/delete_all queries and corrected migration syntax by inspection.
+Expiry filtering exists; delete_all accepts the parent's connection for shared transactions.
+Main API question: get requires user_id although the cookie carries only the random session token. Token-hash lookup can return user_id from SessionRow.
+UserRepository declares the sessions module but does not yet construct or hold SessionRepository. Tower Sessions remains active.
+Reviewed all four PM docs. No application edits, compilation, migrations, or tests occur this turn. Session replacement and acceptance remain pending.
+
+## Sessions migration review — 2026-11-08
+
+Reviewed migrations/20261108094008_sessions_table.sql. Columns match the proposed auth-session design.
+The user_id foreign key cascades on deletion, and its index supports user-wide session deletion.
+Syntax blocker: CREATE TABLE lacks its terminating semicolon before CREATE INDEX.
+The expiry default sets a fixed 24-hour lifetime at insertion; it does not implement sliding expiry.
+Reviewed all four PM docs. No migration edits, database application, or tests occur. Replacement and acceptance remain pending.
+
+## Application-owned auth sessions proposal — 2026-11-08
+
+User proposes replacing Tower Sessions with an application-owned session layer. Current use is login identity, logout, and expiry.
+A focused design uses sessions(token_hash, user_id, expires_at), a random secret cookie, and a database-backed UserId extractor.
+Login inserts a fresh session; logout deletes that session; reset deletes all user sessions within the existing password/token transaction.
+Use established randomness, hashing, and cookie libraries. Replacing the session framework does not mean implementing cryptography or cookie parsing.
+This moves responsibility for cookie policy, expiry, and concurrent login/reset behavior into the app. Tests must cover these before replacement is accepted.
+Proposal only: no dependency removal, schema changes, application edits, or tests occur. Existing clients would need to log in again after a cutover.
+Reviewed all four PM docs. Scope and epic acceptance remain unchanged.
+
+## Direct session ownership alternative — 2026-11-08
+
+User rejects session-version invalidation as an unwanted design. Do not implement it without a new decision.
+Alternative: a user_id column owned and maintained by the session store, with an index for account-wide deletion.
+A column alone is insufficient: the installed store never writes it. A custom SessionStore or store adapter must maintain ownership when creating/saving sessions.
+Password reset can delete the user's session rows in its transaction. Concurrency behavior, including in-flight session saves, still needs design and tests.
+This is an alternative for discussion, not an accepted implementation. More integration code is required than version checks.
+Reviewed all four PM docs. No application changes or tests occur. Acceptance remains open.
+
+## Session invalidation simplicity review — 2026-11-08
+
+Checked installed PostgresStore methods: deletion takes a session ID; there is no user-wide deletion method.
+Recommend the previously proposed per-user session version as the smallest focused implementation; do not scan binary session records.
+This remains a recommendation, not approval to implement. No application changes or tests occur this turn.
+Reviewed all four PM docs. Session invalidation and product acceptance remain open.
+
+## Finding sessions by user — 2026-11-08
+
+Installed PostgresStore serializes the full session Record with rmp_serde (MessagePack) into data BYTEA.
+To find existing sessions for a user without schema changes: read unexpired id/data rows, decode each Record in Rust, and compare record.data["user_id"].
+This requires scanning and decoding active sessions; the current table has no searchable user_id index.
+This is an inspection approach, not an accepted or implemented account-wide revocation solution.
+Reviewed all four PM docs. No application changes, session deletions, or tests occur. Acceptance stays open.
+
+## Session store columns — 2026-11-08
+
+Installed store schema has id TEXT primary key, data BYTEA, and expiry_date TIMESTAMPTZ; all are NOT NULL.
+There is no separate user_id column. Session invalidation design remains open.
+Reviewed all four PM docs. Source inspection only; no application changes or tests occur. Acceptance stays unchanged.
+
+## Session store table lookup — 2026-11-08
+
+Verified installed tower-sessions-sqlx-store-chrono 0.14.2 defaults: schema tower_sessions, table session.
+Current session setup uses these defaults. User rejects the proposed version design as too complex; it remains unimplemented.
+Next investigation follows the existing store. No replacement design is accepted yet.
+Reviewed all four PM docs. No application changes or tests occur. Recovery acceptance stays open.
+
+## Proposed session version design — 2026-11-08
+
+Proposal: add users.session_version with default zero. Store the current version with user_id at login.
+UserId loads the user's current version and rejects missing, mismatched, or deleted-user sessions with 401.
+Password reset increments the version in the same transaction as the password update and token consumption.
+This rejects all older sessions without scanning the session store. Existing sessions without a version must log in again.
+It adds one user lookup to authenticated requests. Old stored session rows expire normally; rejection does not require bulk deletion.
+Reviewed all four PM docs. Design only: no migration, application edits, or tests this turn. Acceptance remains open.
+
+## Reset-handler session flush review — 2026-11-08
+
+The handler now flushes the session attached to the reset request after a successful password change.
+This clears only that requesting session. It does not revoke other browser/device sessions for the target user.
+A logged-out reset request has no authenticated session to revoke. Account-wide session invalidation remains open.
+Reviewed all four PM docs and the changed handler. No application edits or tests occur this turn. Product scope and acceptance stay unchanged.
+
+## Next backend task: reset session invalidation — 2026-11-08
+
+Recovery still lacks evidence that an existing login loses access after reset. Proposed acceptance: old sessions receive 401; a fresh login using the new password succeeds. This remains unimplemented and unverified.
+Reviewed all four PM docs and session/reset code. No application changes or tests occur this turn. Product scope stays unchanged.
+
+## Recovery HTTP verification — 2026-11-08
+
+API evidence now covers logged-out requests through reset and login. Product recovery acceptance remains open for confirmation pages and session policy.
+Added an opt-in HTTP recovery workflow test using the full application router and real QA Postgres/Memgraph.
+Requests use Tower oneshot through the router and middleware; email uses an actual loopback HTTP capture server.
+The installed Resend SDK supports RESEND_BASE_URL, so no production injection or controller-state changes are needed.
+The workflow passes in 5.43 seconds: logged-out known/unknown requests return the same response; invalid email sends nothing.
+It checks email recipient and API_BASE_URL, missing query inputs, weak passwords, invalid secrets, successful reset without a session, old-password rejection, new-password login, and replay rejection.
+An initial harness failure came from decoding &amp; but not Askama's numeric ampersand entity. The harness now handles both. Application code stays unchanged.
+The successful run removes its user; two users from failed harness attempts are also removed from QA. Login session records follow normal expiry.
+Formatting and git diff --check pass. No real emails, paid model calls, browser tests, rebuilds, or deployments occur.
+The unrelated known retrieval-ranking failure is not rerun. This targeted test does not make the full suite green.
+Confirmation pages, existing-session revocation, and broader recovery abuse controls remain pending. Product scope and epic acceptance stay unchanged.
+Evidence: tests/artifacts/auth-recovery-http-2026-11-08/summary.md. Reviewed all four PM docs.
+
+## Recovery verification priority — 2026-11-08
+
+Account recovery acceptance remains pending HTTP evidence. Verify a logged-out reset request, valid confirmation, login with the new password, and rejection of token replay. No story is newly accepted.
+Reviewed all four PM docs. No application changes or tests occur this turn. Product scope stays unchanged.
+
+## Auth cleanup test run — 2026-11-08
+
+Local library tests: 13 pass, one known retrieval-ranking failure, 16 database tests ignored by default.
+Ran those 16 auth database tests separately against isolated QA Postgres: all pass in 6.90 seconds.
+Explicit integration targets: 12 pass with 47 ignored; text-type tests: eight pass.
+Total executed tests: 49 pass and one known failure. The full suite is not green.
+The failure remains duplicate_rows_in_one_search_must_not_outvote_two_independent_searches in unchanged retrieval code.
+Evidence: tests/artifacts/auth-cleanup-retest-2026-11-08/. No application changes, emails, paid model calls, browser runs, or deployments occur.
+Reviewed all four PM docs. HTTP recovery coverage and product acceptance remain pending; scope stays unchanged.
+
+## Reset API cleanup — 2026-11-08
+
+Removed stale ResetPasswordRequest and Query imports, and the missing user_id tracing field.
+The reset-request controller returns the agreed neutral success message. Unknown-account no-op behavior stays unchanged.
+Adapted existing auth validation tests to separate PasswordResetParams and PasswordResetPayload. Added invalid-email validation coverage.
+All five targeted auth request tests pass. The integration test target compiles with existing warnings.
+Updated root README for public email requests and query/body confirmation inputs. Selected-file formatting and git diff --check pass.
+No email sends, model calls, database regressions, or HTTP recovery tests run this turn.
+Next: verify logged-out request and confirmation behavior through HTTP. Confirmation pages and session policy remain pending.
+Reviewed all four PM docs. Product scope and epic acceptance stay unchanged.
+
+## Missing-account branch review — 2026-11-08
+
+Inspection confirms unknown emails now return Ok(()) before token creation or email delivery.
+The neutral response text remains proposed: the controller still says "Password reset email sent."
+Compile blockers remain: stale ResetPasswordRequest imports in the controller and auth request tests, and missing user_id in the sender tracing attribute.
+Reviewed all four PM docs. No application changes or tests occur this turn. Recovery and epic acceptance remain incomplete.
+
+## Unknown-email reset behavior — 2026-11-08
+
+Decision: an unknown email skips token creation and email delivery, then returns Ok(()).
+The controller uses the same neutral success message for known and unknown emails: "If an account exists, we will send a reset link."
+Database and email-provider failures remain real errors; do not silently swallow them. This decision covers the missing-account branch only.
+Reviewed all four PM docs. No application changes or tests occur this turn. Recovery and epic acceptance remain incomplete.
+
+## Logged-out reset implementation review — 2026-11-08
+
+By inspection, reset requests now accept validated email JSON without UserId. Confirmation separates query credentials from the password body.
+Two compile blockers remain: the controller imports removed ResetPasswordRequest, and the email sender tracing attribute references missing user_id.
+Unknown emails still return NotFound, so the public response reveals account existence. Recovery remains incomplete.
+The changed confirmation contract also needs matching test and client updates before acceptance.
+Reviewed all four PM docs. No application edits, compilation, tests, email sends, or model calls occur this turn.
+Product scope and epic acceptance remain unchanged.
+
+## Backend next-step review — 2026-11-08
+
+Account recovery remains incomplete: the current reset-request route requires a login. Next acceptance check: a logged-out user can request recovery by email, with the same public response for known and unknown accounts. No story is newly accepted.
+Reviewed all four PM docs and the auth controller. No application code changes or tests occur this turn.
+
 ## User repository owns auth transactions — 2026-11-08
 
 Implemented the planned ownership refactor in repositories/user/mod.rs and its private auth_tokens child.

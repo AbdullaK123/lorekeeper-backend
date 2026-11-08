@@ -51,6 +51,19 @@ pub struct SignupRequest {
     pub password: PasswordInput,
 }
 
+#[derive(Debug, Clone, Deserialize, Validate)]
+pub struct PasswordResetRequest {
+    #[validate(email)]
+    pub email: String,
+}
+
+#[derive(Debug, Clone, Deserialize, Validate)]
+pub struct PasswordResetParams {
+    pub user_id: Uuid,
+    #[validate(length(min = 1, max = 256))]
+    pub token: String,
+}
+
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct UserResponse {
     pub id: Uuid,
@@ -82,10 +95,7 @@ pub struct VerifyEmailRequest {
 }
 
 #[derive(Deserialize, Validate)]
-pub struct ResetPasswordRequest {
-    pub user_id: Uuid,
-    #[validate(length(min = 1, max = 256))]
-    pub token: String,
+pub struct PasswordResetPayload {
     #[validate(custom(function = "validate_password"))]
     pub new_password: PasswordInput,
 }

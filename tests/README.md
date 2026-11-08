@@ -209,15 +209,29 @@ SQLX_OFFLINE=true \
 cargo test --offline --jobs 1 --lib data::repositories::user::tests:: -- --ignored --test-threads=1
 ```
 
-The 16 tests live in `src/data/repositories/user/tests.rs` beside the private token child.
-They cover token lifecycles, service password resets, verification, rollback, replay, and concurrent password updates.
+The 17 tests live in `src/data/repositories/user/tests.rs` beside the private token child.
+They cover token lifecycles, service password resets, verification, rollback, replay, concurrent password updates, and session-deletion rollback.
 The Resend client uses a dummy key in these tests and sends no emails.
 [Recorded results](artifacts/auth-tokens-2026-11-07/summary.md).
 
-Latest auth transaction evidence: [16 passing tests](artifacts/user-repository-ownership-2026-11-08/summary.md).
+Latest auth transaction evidence: [17 passing tests and HTTP session checks](artifacts/custom-sessions-2026-11-08/summary.md).
 
 ### Auth confirmation request validation
 
 Run `SQLX_OFFLINE=true cargo test --offline --jobs 1 --test adversarial_live auth_requests::`.
 These four tests check required user identity, token length, and password policy.
 They use no database, model, or email provider.
+
+### Recovery HTTP workflow
+
+`auth_recovery_http::recovery_http_requires_valid_input_and_consumes_links_once` is opt-in.
+Use isolated QA database and Memgraph settings from the native integration setup.
+Set `RESEND_BASE_URL=http://127.0.0.1:18082` and `RESEND_API_KEY=re_test_not_sent`.
+The test binds that capture port itself. Use a synthetic OpenRouter key; no model calls occur.
+Set `API_BASE_URL=http://localhost:18000` and the normal session/CORS/dev settings.
+Run `SQLX_OFFLINE=true cargo test --offline --jobs 2 --test adversarial_live auth_recovery_http:: -- --ignored --test-threads=1`.
+The test runs HTTP requests through the full router in process and captures SDK email requests locally.
+Evidence: [passing workflow](artifacts/auth-recovery-http-2026-11-08/summary.md).
+
+The recovery HTTP workflow also checks custom session cookies, profile reads, expired/forged cookie rejection, logout, and reset invalidation across two sessions.
+Run with `ENV=dev` and `ENV=prod` to check the Secure flag. No signing-key setting is required.

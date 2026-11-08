@@ -70,3 +70,11 @@ Email logs separate template failures, provider submission failures, and provide
 Provider acceptance does not mean delivery to the recipient.
 Token consume logs report a matching row before commit; the caller still owns the transaction.
 Email request rejections record missing users or already-verified accounts without recipient addresses.
+
+## Custom auth sessions — 2026-11-08
+
+The UserId extractor, auth session methods, parent repository methods, and session child queries have named spans.
+Spans skip all arguments and return values. They include explicit user IDs where available.
+Events record missing cookies, missing/expired sessions, resolved user IDs, expiry, and deletion counts.
+Deletion counts inside repository queries describe executed statements. Password-reset commit events establish persistence.
+Raw cookie tokens, token hashes, and cookie headers are never included in these events.

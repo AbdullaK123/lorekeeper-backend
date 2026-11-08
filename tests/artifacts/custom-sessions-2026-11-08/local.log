@@ -1,0 +1,123 @@
+warning: unused import: `crate::app::world`
+ --> src/data/repositories/conversation.rs:1:5
+  |
+1 | use crate::app::world;
+  |     ^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `crate::data::ResearchStatus::NotSubmitted`
+ --> src/data/models/conversations.rs:1:5
+  |
+1 | use crate::data::ResearchStatus::NotSubmitted;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: ambiguous glob re-exports
+ --> src/data/mod.rs:5:9
+  |
+5 | pub use repositories::*;
+  |         ^^^^^^^^^^^^^^^ the name `graph` in the type namespace is first re-exported here
+6 | pub use models::*;
+  |         --------- but the name `graph` in the type namespace is also re-exported here
+  |
+  = note: `#[warn(ambiguous_glob_reexports)]` on by default
+
+warning: ambiguous glob re-exports
+ --> src/data/mod.rs:5:9
+  |
+5 | pub use repositories::*;
+  |         ^^^^^^^^^^^^^^^ the name `user` in the type namespace is first re-exported here
+6 | pub use models::*;
+  |         --------- but the name `user` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+ --> src/data/mod.rs:5:9
+  |
+5 | pub use repositories::*;
+  |         ^^^^^^^^^^^^^^^ the name `world` in the type namespace is first re-exported here
+6 | pub use models::*;
+  |         --------- but the name `world` in the type namespace is also re-exported here
+
+warning: unused import: `ResolveConflictRequest`
+ --> src/service/world.rs:4:27
+  |
+4 |     RelationshipResponse, ResolveConflictRequest, UpdateWorldRequest, WorldRepository,
+  |                           ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `serde::Serialize`
+  --> src/service/conversation.rs:12:5
+   |
+12 | use serde::Serialize;
+   |     ^^^^^^^^^^^^^^^^
+
+warning: fields `pool` and `graph` are never read
+  --> src/app/app.rs:24:5
+   |
+22 | pub struct AppState {
+   |            -------- fields in this struct
+23 |     pub is_prod: bool,
+24 |     pool: PgPool,
+   |     ^^^^
+25 |     graph: Graph,
+   |     ^^^^^
+   |
+   = note: `AppState` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `lorekeeper-backend` (lib) generated 8 warnings (run `cargo fix --lib -p lorekeeper-backend` to apply 4 suggestions)
+warning: `lorekeeper-backend` (lib test) generated 8 warnings (8 duplicates)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.37s
+warning: the following packages contain code that will be rejected by a future version of Rust: proc-macro-error2 v2.0.1
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
+     Running unittests src/lib.rs (target/debug/deps/lorekeeper_backend-64bd57b49d32a543)
+
+running 31 tests
+test data::repositories::user::tests::auth_tokens_concurrent_consumers_cannot_both_succeed ... ignored, requires isolated Postgres; no email or model calls
+test data::repositories::user::tests::auth_tokens_concurrent_password_updates_cannot_both_commit ... ignored, requires isolated Postgres; no email or model calls
+test data::repositories::user::tests::auth_tokens_expired_token_cannot_be_consumed ... ignored, requires isolated Postgres; no email or model calls
+test data::repositories::user::tests::auth_tokens_purpose_lifetimes_are_not_swapped ... ignored, requires isolated Postgres; no email or model calls
+test data::repositories::user::tests::auth_tokens_reissue_invalidates_the_previous_link ... ignored, requires isolated Postgres; no email or model calls
+test data::repositories::user::tests::auth_tokens_reset_commits_password_with_token_consumption ... ignored, requires isolated Postgres; no email or model calls
+test data::repositories::user::tests::auth_tokens_reset_failure_restores_consumed_token ... ignored, requires isolated Postgres; no email or model calls
+test data::repositories::user::tests::auth_tokens_reset_secret_cannot_be_replayed_through_service ... ignored, requires isolated Postgres; no email or model calls
+test data::repositories::user::tests::auth_tokens_reset_with_expired_secret_cannot_change_password ... ignored, requires isolated Postgres; no email or model calls
+test data::repositories::user::tests::auth_tokens_reset_with_invalid_secret_cannot_change_password ... ignored, requires isolated Postgres; no email or model calls
+test data::repositories::user::tests::auth_tokens_session_delete_failure_rolls_back_password_and_token ... ignored, requires isolated Postgres; no email or model calls
+test data::repositories::user::tests::auth_tokens_valid_token_cannot_be_reused ... ignored, requires isolated Postgres; no email or model calls
+test data::repositories::user::tests::auth_tokens_verification_failure_restores_consumed_token ... ignored, requires isolated Postgres; no email or model calls
+test data::repositories::user::tests::auth_tokens_verification_rollback_restores_account_and_token ... ignored, requires isolated Postgres; no email or model calls
+test data::repositories::user::tests::auth_tokens_wrong_hash_does_not_consume_a_valid_link ... ignored, requires isolated Postgres; no email or model calls
+test data::repositories::user::tests::auth_tokens_wrong_purpose_cannot_consume_the_token ... ignored, requires isolated Postgres; no email or model calls
+test data::repositories::user::tests::auth_tokens_wrong_user_cannot_consume_the_token ... ignored, requires isolated Postgres; no email or model calls
+test service::ai::retrieval::tests::duplicate_rows_in_one_search_must_not_outvote_two_independent_searches ... FAILED
+test service::ai::retrieval::tests::format_hits_says_so_when_nothing_matched ... ok
+test service::ai::retrieval::tests::format_hits_draws_outgoing_and_incoming_arrows ... ok
+test service::ai::retrieval::tests::relationship_qualifiers_must_reach_the_chat_agent ... ok
+test service::ai::retrieval::tests::format_hits_separates_hits_with_a_blank_line ... ok
+test service::ai::retrieval::tests::format_hits_lists_properties_without_json_quotes ... ok
+test service::ai::retrieval::tests::neighbor_properties_must_reach_the_chat_agent ... ok
+test service::ai::retrieval::tests::resolved_writer_decision_reaches_chat_context ... ok
+test service::ai::retrieval::tests::rrf_handles_no_lists_and_empty_lists ... ok
+test service::ai::retrieval::tests::rrf_puts_an_entity_found_by_both_searches_first ... ok
+test service::ai::retrieval::tests::rrf_returns_each_entity_once ... ok
+test service::ai::retrieval::tests::rrf_keeps_entities_found_by_only_one_search ... ok
+test service::ai::retrieval::tests::search_ties_keep_the_input_order ... ok
+test app::playground::tests::playground_and_api_alias_exist_only_in_dev ... ok
+
+failures:
+
+---- service::ai::retrieval::tests::duplicate_rows_in_one_search_must_not_outvote_two_independent_searches stdout ----
+
+thread 'service::ai::retrieval::tests::duplicate_rows_in_one_search_must_not_outvote_two_independent_searches' (18) panicked at src/service/ai/retrieval/tests.rs:182:5:
+assertion `left == right` failed: Repeated rows from one search crowd out lore confirmed by both searches
+  left: "duplicate"
+ right: "consensus"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    service::ai::retrieval::tests::duplicate_rows_in_one_search_must_not_outvote_two_independent_searches
+
+test result: FAILED. 13 passed; 1 failed; 17 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `--lib`

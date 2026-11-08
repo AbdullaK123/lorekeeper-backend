@@ -1,15 +1,11 @@
-use crate::app::{create_cors_layer, create_session_layer, create_trace_layer};
+use crate::app::{create_cors_layer, create_trace_layer};
 use axum::http::header::{ACCEPT, AUTHORIZATION, CONTENT_TYPE};
 use axum::http::{HeaderValue, Method};
 use serde::{Deserialize, Serialize};
 use serde_yaml_bw;
-use sqlx::PgPool;
 use std::fs::File;
 use tower_http::cors::CorsLayer;
 use tower_http::trace::{HttpMakeClassifier, TraceLayer};
-use tower_sessions::SessionManagerLayer;
-use tower_sessions::service::SignedCookie;
-use tower_sessions_sqlx_store_chrono::PostgresStore;
 
 #[derive(Debug, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "lowercase")]
@@ -27,7 +23,6 @@ pub struct Settings {
     pub memgraph_password: String,
     pub resend_api_key: String,
     pub api_base_url: String,
-    session_secret_key: String,
     cors_allowed_origins: Vec<String>,
     pub env: Environment,
 }
@@ -69,19 +64,6 @@ impl Settings {
             ],
             true,
         )
-    }
-
-    pub async fn session_layer(
-        &self,
-        pool: PgPool,
-    ) -> SessionManagerLayer<PostgresStore, SignedCookie> {
-        // Hands off execution to your factory, which handles migration and key validation safely
-        create_session_layer(
-            pool,
-            self.env == Environment::Prod,
-            &self.session_secret_key,
-        )
-        .await
     }
 
     pub fn trace_layer(&self) -> TraceLayer<HttpMakeClassifier, crate::app::RequestSpan> {

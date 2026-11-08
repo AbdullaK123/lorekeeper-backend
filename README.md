@@ -94,7 +94,6 @@ OPENROUTER_API_KEY=your-key
 MEMGRAPH_URI=bolt://localhost:7687
 MEMGRAPH_USER=
 MEMGRAPH_PASSWORD=
-SESSION_SECRET_KEY=replace-with-at-least-64-random-characters
 CORS_ALLOWED_ORIGINS=http://localhost:5173
 ENV=dev
 API_BASE_URL=http://localhost:8000/api
@@ -149,16 +148,16 @@ The container uses SIGINT on stop to match the server's current graceful-shutdow
 
 ## API
 
-Except health, signup, and login, these routes require a session cookie.
+Protected routes require the session_id cookie. Recovery requests and token confirmations also work without a login.
 
 | Method | Path | Purpose |
 | --- | --- | --- |
 | GET | `/health` | Health response |
 | POST | `/auth/signup`, `/auth/login`, `/auth/logout` | Account session actions |
 | GET | `/auth/me` | Current user |
-| POST | `/auth/password_reset/request` | Send reset email for the signed-in user |
+| POST | `/auth/password_reset/request` | Request reset by email without a session |
 | POST | `/auth/email_verification/request` | Send verification email for the signed-in user |
-| POST | `/auth/password_reset` | Confirm reset with user_id, token, and new_password |
+| POST | `/auth/password_reset` | Confirm reset with query user_id/token and JSON new_password |
 | POST | `/auth/email_verification` | Confirm verification with user_id and token |
 | GET / POST | `/world` | List or create worlds |
 | GET / PATCH / DELETE | `/world/{world_id}` | Read, update, or delete a world |
@@ -230,17 +229,25 @@ The [project plan](docs/project_plan.md) tracks these without marking whole epic
 
 ### Auth email confirmation
 
-Email-request routes require a signed-in session and no request body.
-Confirmation routes accept JSON without a session. Verification needs `user_id` and `token`.
-Password reset also needs `new_password`, using the signup password rules.
+Password-reset requests accept JSON `{ "email": "user@example.com" }` without a session.
+They return the same neutral message for known and unknown accounts.
+Verification email requests require a signed-in session and no body.
+Verification confirmation accepts JSON `user_id` and `token` without a session.
+Password-reset confirmation takes `user_id` and `token` in the query string.
+Its JSON body contains `new_password`, using the signup password rules.
 Confirmation returns `UserResponse`; sending returns a JSON `message`.
-These routes do not create a login session or revoke existing sessions.
+Confirmation does not create a login session. Password reset revokes all sessions for that user.
+Sessions live in the application sessions table. Only SHA-256 token hashes are stored.
+Login sets an HttpOnly, SameSite=Lax cookie at Path=/, with Secure enabled in production.
+Both cookie and database expiry use a fixed 24-hour lifetime. Logout deletes the row and clears the cookie.
+SESSION_SECRET_KEY is no longer required. Existing Tower Sessions cookies require a new login.
 
 Email URLs use the required API_BASE_URL setting. Include any path prefix, such as /api for the dev alias.
 For production, set the public HTTPS API URL. A trailing slash is optional.
 The browser confirmation page remains pending.
 Opening an email URL does not consume its token: confirmation requires POST.
-Logged-out password-reset requests by email address remain pending.
+The logged-out recovery API workflow passes with local email capture.
+See [HTTP verification](tests/artifacts/auth-recovery-http-2026-11-08/summary.md).
 
 ### Rust-analyzer performance
 
