@@ -50,6 +50,7 @@ Core fields and relationship conflict targets still need broader support.
 | Logs | Structured tracing events with private payloads excluded |
 
 ```text
+src/lib.rs                  shared app modules used by the binary and integration tests
 src/app/                    bootstrap, DBOS registration, routes, extractors, middleware
 src/service/                auth, worlds, conversations, cleanup
 src/service/ai/              chat factory, researcher loop, retrieval, scoped tools
@@ -63,6 +64,15 @@ migrations/                 application Postgres schema
 tests/                      pure tests, local integration tests, paid smoke evidence
 playground/                 chat/stream inspector and API workbench; not the product client
 ```
+
+GraphRepository lives in `src/data/repositories/graph/mod.rs`.
+Its constructor builds private entity, relationship, conflict, graph-conversation, and maintenance repositories.
+Children own queries; the parent coordinates graph pages and shared transactions.
+Services and tools keep using the existing GraphRepository API.
+
+UserRepository lives in `src/data/repositories/user/mod.rs` and constructs its private auth-token repository.
+It owns transactions that consume a token and reset a password or verify an email.
+AuthService handles hashing and email delivery without its own database pool.
 
 Model choices live in [app.rs](src/app/app.rs). The old structured extraction service and prompts are removed.
 
@@ -184,8 +194,8 @@ Research statuses are `not_submitted`, `queued`, `running`, `completed`, `failed
 ## Verification
 
 ```sh
-SQLX_OFFLINE=true CARGO_INCREMENTAL=0 cargo check --offline --all-targets
-SQLX_OFFLINE=true CARGO_INCREMENTAL=0 cargo test --offline --all-targets
+SQLX_OFFLINE=true cargo check --offline --all-targets
+SQLX_OFFLINE=true cargo test --offline --all-targets
 ```
 
 Offline metadata validates macro queries against recorded schema information.
@@ -231,3 +241,21 @@ For production, set the public HTTPS API URL. A trailing slash is optional.
 The browser confirmation page remains pending.
 Opening an email URL does not consume its token: confirmation requires POST.
 Logged-out password-reset requests by email address remain pending.
+
+### Rust-analyzer performance
+
+Workspace settings use four analysis workers and two Cargo jobs.
+The IDE skips expansion of tracing's instrument macro; Cargo still expands and checks it.
+SQLx and Askama expansion remain enabled. Unlinked-file diagnostics remain enabled.
+Run Developer: Reload Window after changing worker settings to rebuild the analyzer's state.
+The syntax cache is 64 trees. This is a tuning choice, not a hard memory limit.
+
+Development builds use incremental compilation and line-table debug information.
+This retains source-line backtraces but omits full debugger variable/type details.
+Cargo defaults to two jobs to limit memory pressure. Release settings remain unchanged.
+Rust-analyzer uses its own build cache, so its first build also needs dependency compilation.
+Changing profiles causes one dependency rebuild. Do not clear target directories during normal development.
+
+The binary and integration tests import src/lib.rs instead of compiling separate copies of the app modules.
+Startup profiling is temporarily enabled in server.extraEnv. A full window reload loads these environment variables.
+Remove RA_PROFILE and RA_LOG after capturing the remaining startup delay.

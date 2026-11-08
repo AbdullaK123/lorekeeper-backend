@@ -1,0 +1,26 @@
+[
+  {
+    "label": "unittests src/lib.rs",
+    "path": "target/debug/deps/lorekeeper_backend-77dfcd278e161a86",
+    "exit": 101,
+    "seconds": 0.01
+  },
+  {
+    "label": "unittests src/main.rs",
+    "path": "target/debug/deps/lorekeeper_backend-c70fd0feae87a23d",
+    "exit": 0,
+    "seconds": 0.0
+  },
+  {
+    "label": "tests/adversarial_live.rs",
+    "path": "target/debug/deps/adversarial_live-478ffc56b55c50b1",
+    "exit": 0,
+    "seconds": 0.01
+  },
+  {
+    "label": "tests/text_types.rs",
+    "path": "target/debug/deps/text_types-eb8546226905c4f8",
+    "exit": 0,
+    "seconds": 0.0
+  }
+]

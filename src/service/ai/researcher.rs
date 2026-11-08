@@ -51,7 +51,7 @@ impl ResearcherService {
         }
     }
 
-    pub(crate) fn create_agent(
+    pub fn create_agent(
         &self,
         world_id: String,
         conversation_id: String,
@@ -110,7 +110,7 @@ impl ResearcherService {
 
 /// Replay completed model/tool operations through DBOS, then advance Rig's state machine.
 /// Tool calls run sequentially so their checkpoint order is stable during recovery.
-pub(crate) async fn run_durable_agent(
+pub async fn run_durable_agent(
     agent: &Agent,
     model: &DynModel<Completion>,
     preamble: &str,

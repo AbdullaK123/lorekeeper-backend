@@ -1,12 +1,4 @@
-mod app;
-mod cron_worker;
-mod data;
-mod infrastructure;
-mod service;
-mod shared;
-
-use app::create_app;
-use infrastructure::init_tracing;
+use lorekeeper_backend::{app::create_app, infrastructure::init_tracing};
 use tracing::info;
 
 #[tokio::main]

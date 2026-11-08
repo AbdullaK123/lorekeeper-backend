@@ -1,0 +1,33 @@
+
+running 14 tests
+test service::ai::retrieval::tests::format_hits_draws_outgoing_and_incoming_arrows ... ok
+test service::ai::retrieval::tests::format_hits_lists_properties_without_json_quotes ... ok
+test service::ai::retrieval::tests::format_hits_says_so_when_nothing_matched ... ok
+test service::ai::retrieval::tests::duplicate_rows_in_one_search_must_not_outvote_two_independent_searches ... FAILED
+test service::ai::retrieval::tests::neighbor_properties_must_reach_the_chat_agent ... ok
+test service::ai::retrieval::tests::format_hits_separates_hits_with_a_blank_line ... ok
+test service::ai::retrieval::tests::relationship_qualifiers_must_reach_the_chat_agent ... ok
+test service::ai::retrieval::tests::resolved_writer_decision_reaches_chat_context ... ok
+test service::ai::retrieval::tests::rrf_puts_an_entity_found_by_both_searches_first ... ok
+test service::ai::retrieval::tests::rrf_keeps_entities_found_by_only_one_search ... ok
+test service::ai::retrieval::tests::rrf_returns_each_entity_once ... ok
+test service::ai::retrieval::tests::search_ties_keep_the_input_order ... ok
+test service::ai::retrieval::tests::rrf_handles_no_lists_and_empty_lists ... ok
+test app::playground::tests::playground_and_api_alias_exist_only_in_dev ... ok
+
+failures:
+
+---- service::ai::retrieval::tests::duplicate_rows_in_one_search_must_not_outvote_two_independent_searches stdout ----
+
+thread 'service::ai::retrieval::tests::duplicate_rows_in_one_search_must_not_outvote_two_independent_searches' (6) panicked at src/service/ai/retrieval/tests.rs:182:5:
+assertion `left == right` failed: Repeated rows from one search crowd out lore confirmed by both searches
+  left: "duplicate"
+ right: "consensus"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    service::ai::retrieval::tests::duplicate_rows_in_one_search_must_not_outvote_two_independent_searches
+
+test result: FAILED. 13 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+

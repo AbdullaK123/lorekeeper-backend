@@ -7,7 +7,7 @@ The tests do not change production code.
 Run the pure tests:
 
 ```bash
-SQLX_OFFLINE=true cargo test --offline --bin lorekeeper-backend
+SQLX_OFFLINE=true cargo test --offline --lib
 ```
 
 Live tests need the local Compose databases, Python 3, and `requests`.
@@ -25,7 +25,7 @@ source .env
 set +a
 export DATABASE_URL=postgresql://dev:password@localhost:5433/lorekeeper_adversarial
 sqlx migrate run
-SQLX_OFFLINE=true CARGO_INCREMENTAL=0 cargo test --offline --jobs 2 --test adversarial_live -- --ignored --nocapture --test-threads=1 --skip adversarial_live_api --skip researcher_smoke_conversation
+SQLX_OFFLINE=true cargo test --offline --jobs 2 --test adversarial_live -- --ignored --nocapture --test-threads=1 --skip adversarial_live_api --skip researcher_smoke_conversation
 ```
 
 The command above selects free native database tests. Run the HTTP wrapper separately below.
@@ -40,8 +40,9 @@ For example, use `QA_TESTS='ApiTests.test_foreign_world_conversation_creation_is
 Graph tests use the local Memgraph database with fresh world IDs.
 Graph fixture world IDs start with `qa-graph-`. API fixture worlds belong to fresh `qa-...@example.com` users.
 
-The Rust live target imports application modules because this crate has no library target.
-This also discovers the pure tests again. `--ignored` selects only live tests.
+The Rust live target imports the shared lorekeeper_backend library.
+Application unit tests live in the library target and are not copied into the integration target.
+`--ignored` selects only live tests.
 
 Coverage includes:
 
@@ -111,7 +112,7 @@ After exporting the isolated QA environment and applying migrations:
 ```sh
 unset QA_AI QA_SMOKE_PAID
 export QA_TESTS='ApiTests.test_research_retry_rejects_ineligible_states ApiTests.test_research_retry_enforces_access_and_user_role ApiTests.test_research_retry_resumes_exhausted_workflow ApiTests.test_research_retry_tracks_fork_and_blocks_duplicate ApiTests.test_research_status_maps_all_stored_states ApiTests.test_research_status_missing_workflow_is_not_submitted ApiTests.test_research_status_enforces_message_access ApiTests.test_research_status_lookup_error_is_not_not_submitted ApiTests.test_research_status_deleted_message_is_not_exposed'
-SQLX_OFFLINE=true CARGO_INCREMENTAL=0 cargo test --offline --jobs 2 --test adversarial_live adversarial_live_api -- --ignored --test-threads=1
+SQLX_OFFLINE=true cargo test --offline --jobs 2 --test adversarial_live adversarial_live_api -- --ignored --test-threads=1
 ```
 
 These cases use synthetic DBOS records with isolated application versions. They make no model calls.
@@ -140,7 +141,7 @@ Wrong-world chat checks stop before model retrieval, so these checks incur no mo
 
 ## Development static serving
 
-Run SQLX_OFFLINE=true cargo test --offline --bin lorekeeper-backend playground::tests:: for the isolated router test.
+Run SQLX_OFFLINE=true cargo test --offline --lib playground::tests:: for the isolated router test.
 It creates temporary HTML/JS files and checks dev-only serving, staging/production exclusion,
 the dev /api alias, original API routes, missing files, and path traversal.
 No database or model calls are needed.
@@ -204,15 +205,16 @@ Use the migrated, isolated `lorekeeper_adversarial` Postgres database. No email 
 
 ```bash
 DATABASE_URL=postgresql://dev:password@localhost:5433/lorekeeper_adversarial \
-SQLX_OFFLINE=true CARGO_INCREMENTAL=0 \
-cargo test --offline --jobs 1 --test adversarial_live auth_tokens:: -- --ignored --test-threads=1
+SQLX_OFFLINE=true \
+cargo test --offline --jobs 1 --lib data::repositories::user::tests:: -- --ignored --test-threads=1
 ```
 
-The 14 tests cover token lifecycles, service password resets, failure rollback, and verification rollback.
+The 16 tests live in `src/data/repositories/user/tests.rs` beside the private token child.
+They cover token lifecycles, service password resets, verification, rollback, replay, and concurrent password updates.
 The Resend client uses a dummy key in these tests and sends no emails.
 [Recorded results](artifacts/auth-tokens-2026-11-07/summary.md).
 
-Latest auth transaction evidence: [14 passing tests](artifacts/auth-reset-transactions-2026-11-07/summary.md).
+Latest auth transaction evidence: [16 passing tests](artifacts/user-repository-ownership-2026-11-08/summary.md).
 
 ### Auth confirmation request validation
 

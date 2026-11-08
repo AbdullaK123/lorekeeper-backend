@@ -1,9 +1,11 @@
 //! Real Postgres token lifecycle checks. No provider or email calls.
-use super::*;
+use super::auth_tokens::AuthTokenRepository;
+use crate::{data, infrastructure, service};
 use sha2::{Digest, Sha256};
 
 struct Fixture {
-    repo: data::AuthTokenRepository,
+    repo: AuthTokenRepository,
+    pool: sqlx::PgPool,
     user: uuid::Uuid,
 }
 
@@ -27,7 +29,8 @@ impl Fixture {
             .await
             .unwrap();
         Self {
-            repo: data::AuthTokenRepository::new(pool),
+            repo: AuthTokenRepository::new(pool.clone()),
+            pool,
             user,
         }
     }
@@ -38,7 +41,7 @@ impl Fixture {
         purpose: data::AuthTokenPurpose,
         hash: String,
     ) -> Result<Option<data::AuthTokenRow>, infrastructure::InfrastructureError> {
-        let mut connection = self.repo.pool.acquire().await?;
+        let mut connection = self.pool.acquire().await?;
         self.repo
             .consume_token(user, purpose, hash, &mut connection)
             .await
@@ -46,9 +49,7 @@ impl Fixture {
 
     fn auth_service(&self) -> service::AuthService {
         service::AuthService::new(
-            self.repo.pool.clone(),
-            data::UserRepository::new(self.repo.pool.clone()),
-            self.repo.clone(),
+            data::UserRepository::new(self.pool.clone()),
             "re_test_not_sent",
             "https://api.example.test",
         )
@@ -57,7 +58,7 @@ impl Fixture {
     async fn saved_password(&self) -> Option<String> {
         sqlx::query_scalar("SELECT password_hash FROM users WHERE id=$1")
             .bind(self.user)
-            .fetch_one(&self.repo.pool)
+            .fetch_one(&self.pool)
             .await
             .unwrap()
     }
@@ -65,10 +66,10 @@ impl Fixture {
     async fn cleanup(&self) {
         sqlx::query("DELETE FROM users WHERE id=$1")
             .bind(self.user)
-            .execute(&self.repo.pool)
+            .execute(&self.pool)
             .await
             .unwrap();
-        self.repo.pool.close().await;
+        self.pool.close().await;
     }
 }
 
@@ -127,7 +128,7 @@ async fn auth_tokens_expired_token_cannot_be_consumed() {
         .await
         .unwrap();
     sqlx::query("UPDATE auth_tokens SET created_at=NOW()-INTERVAL '2 hours', expired_at=NOW()-INTERVAL '1 hour' WHERE user_id=$1")
-        .bind(f.user).execute(&f.repo.pool).await.unwrap();
+        .bind(f.user).execute(&f.pool).await.unwrap();
     let consumed = f
         .consume_token(
             f.user,
@@ -153,7 +154,7 @@ async fn auth_tokens_reissue_invalidates_the_previous_link() {
         .await
         .unwrap();
     sqlx::query("UPDATE auth_tokens SET created_at=NOW()-INTERVAL '1 minute', expired_at=NOW()+INTERVAL '1 minute' WHERE user_id=$1")
-        .bind(f.user).execute(&f.repo.pool).await.unwrap();
+        .bind(f.user).execute(&f.pool).await.unwrap();
     let (new, new_raw) = f
         .repo
         .upsert_token(f.user, data::AuthTokenPurpose::PasswordReset)
@@ -163,7 +164,7 @@ async fn auth_tokens_reissue_invalidates_the_previous_link() {
         "SELECT count(*) FROM auth_tokens WHERE user_id=$1 AND purpose='password_reset'",
     )
     .bind(f.user)
-    .fetch_one(&f.repo.pool)
+    .fetch_one(&f.pool)
     .await
     .unwrap();
     let old_result = f
@@ -455,7 +456,7 @@ async fn auth_tokens_reset_with_expired_secret_cannot_change_password() {
         .await
         .unwrap();
     sqlx::query("UPDATE auth_tokens SET created_at=NOW()-INTERVAL '2 hours', expired_at=NOW()-INTERVAL '1 hour' WHERE user_id=$1")
-        .bind(f.user).execute(&f.repo.pool).await.unwrap();
+        .bind(f.user).execute(&f.pool).await.unwrap();
     let before = f.saved_password().await;
     let result = f
         .auth_service()
@@ -481,9 +482,9 @@ async fn auth_tokens_reset_failure_restores_consumed_token() {
         .unwrap();
     let name = format!("qa_reset_failure_{}", f.user.simple());
     sqlx::query(&format!("CREATE FUNCTION {name}() RETURNS trigger LANGUAGE plpgsql AS $$ BEGIN RAISE EXCEPTION 'Injected password-update failure'; END $$"))
-        .execute(&f.repo.pool).await.unwrap();
+        .execute(&f.pool).await.unwrap();
     sqlx::query(&format!("CREATE TRIGGER {name} BEFORE UPDATE OF password_hash ON users FOR EACH ROW WHEN (OLD.id = '{}'::uuid) EXECUTE FUNCTION {name}()", f.user))
-        .execute(&f.repo.pool).await.unwrap();
+        .execute(&f.pool).await.unwrap();
     let before = f.saved_password().await;
     let failed = f
         .auth_service()
@@ -491,11 +492,11 @@ async fn auth_tokens_reset_failure_restores_consumed_token() {
         .await;
     let after = f.saved_password().await;
     sqlx::query(&format!("DROP TRIGGER {name} ON users"))
-        .execute(&f.repo.pool)
+        .execute(&f.pool)
         .await
         .unwrap();
     sqlx::query(&format!("DROP FUNCTION {name}()"))
-        .execute(&f.repo.pool)
+        .execute(&f.pool)
         .await
         .unwrap();
     let retried = f
@@ -551,7 +552,7 @@ async fn auth_tokens_verification_rollback_restores_account_and_token() {
         .upsert_token(f.user, data::AuthTokenPurpose::EmailVerification)
         .await
         .unwrap();
-    let mut tx = f.repo.pool.begin().await.unwrap();
+    let mut tx = f.pool.begin().await.unwrap();
     let consumed = f
         .repo
         .consume_token(
@@ -562,14 +563,14 @@ async fn auth_tokens_verification_rollback_restores_account_and_token() {
         )
         .await
         .unwrap();
-    let updated = data::UserRepository::new(f.repo.pool.clone())
+    let updated = data::UserRepository::new(f.pool.clone())
         .verify_user(f.user, &mut tx)
         .await
         .unwrap();
     tx.rollback().await.unwrap();
     let verified: bool = sqlx::query_scalar("SELECT verified FROM users WHERE id=$1")
         .bind(f.user)
-        .fetch_one(&f.repo.pool)
+        .fetch_one(&f.pool)
         .await
         .unwrap();
     let restored = f
@@ -590,4 +591,95 @@ async fn auth_tokens_verification_rollback_restores_account_and_token() {
         restored.is_some(),
         "Rolling back permanently consumes the verification token"
     );
+}
+
+#[tokio::test]
+#[ignore = "requires isolated Postgres; no email or model calls"]
+async fn auth_tokens_verification_failure_restores_consumed_token() {
+    let f = Fixture::new().await;
+    let repo = data::UserRepository::new(f.pool.clone());
+    let (_, raw) = repo
+        .issue_auth_token(f.user, data::AuthTokenPurpose::EmailVerification)
+        .await
+        .unwrap();
+    let name = format!("qa_verify_failure_{}", f.user.simple());
+    sqlx::query(&format!("CREATE FUNCTION {name}() RETURNS trigger LANGUAGE plpgsql AS $$ BEGIN RAISE EXCEPTION 'Injected verification failure'; END $$"))
+        .execute(&f.pool).await.unwrap();
+    sqlx::query(&format!("CREATE TRIGGER {name} BEFORE UPDATE OF verified ON users FOR EACH ROW WHEN (OLD.id = '{}'::uuid) EXECUTE FUNCTION {name}()", f.user))
+        .execute(&f.pool).await.unwrap();
+    let failed = f.auth_service().verify_user(f.user, raw.clone()).await;
+    let verified: bool = sqlx::query_scalar("SELECT verified FROM users WHERE id=$1")
+        .bind(f.user)
+        .fetch_one(&f.pool)
+        .await
+        .unwrap();
+    sqlx::query(&format!("DROP TRIGGER {name} ON users"))
+        .execute(&f.pool)
+        .await
+        .unwrap();
+    sqlx::query(&format!("DROP FUNCTION {name}()"))
+        .execute(&f.pool)
+        .await
+        .unwrap();
+    let retried = f.auth_service().verify_user(f.user, raw.clone()).await;
+    let replay = f.auth_service().verify_user(f.user, raw).await;
+    f.cleanup().await;
+    assert!(
+        failed.is_err(),
+        "A failed verification write reports success"
+    );
+    assert!(
+        !verified,
+        "A failed transaction changes the verification flag"
+    );
+    assert!(
+        retried.is_ok_and(|user| user.verified),
+        "Rollback loses the verification token or retry fails to commit"
+    );
+    assert!(
+        matches!(replay, Err(service::ServiceError::InvalidInput(_))),
+        "A committed verification token remains reusable"
+    );
+}
+
+#[tokio::test]
+#[ignore = "requires isolated Postgres; no email or model calls"]
+async fn auth_tokens_concurrent_password_updates_cannot_both_commit() {
+    let f = Fixture::new().await;
+    let repo = data::UserRepository::new(f.pool.clone());
+    let (row, _) = repo
+        .issue_auth_token(f.user, data::AuthTokenPurpose::PasswordReset)
+        .await
+        .unwrap();
+    let (a, b) = tokio::join!(
+        repo.reset_password_with_token(f.user, row.token_hash.clone(), "first-hash".into()),
+        repo.reset_password_with_token(f.user, row.token_hash, "second-hash".into()),
+    );
+    let saved = f.saved_password().await;
+    let outcomes = [a, b];
+    let winners: Vec<_> = outcomes
+        .iter()
+        .filter_map(|result| result.as_ref().ok().and_then(Option::as_ref))
+        .collect();
+    assert_eq!(
+        winners.len(),
+        1,
+        "One reset token authorizes concurrent password changes"
+    );
+    assert_eq!(
+        saved, winners[0].password_hash,
+        "The committed password differs from the successful transaction"
+    );
+    assert_eq!(
+        outcomes
+            .iter()
+            .filter(|result| matches!(
+                result,
+                Err(infrastructure::InfrastructureError::InvalidInput(_))
+            ))
+            .count(),
+        1,
+        "The losing reset does not reject the spent token"
+    );
+    f.cleanup().await;
 }

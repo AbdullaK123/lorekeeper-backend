@@ -1,0 +1,85 @@
+   Compiling darling_core v0.20.11
+   Compiling darling_macro v0.20.11
+   Compiling darling v0.20.11
+   Compiling derive_builder_core v0.20.2
+   Compiling validator_derive v0.20.0
+   Compiling derive_builder_macro v0.20.2
+   Compiling derive_builder v0.20.2
+   Compiling validator v0.21.0
+   Compiling croner v3.0.1
+   Compiling tokio-cron-scheduler v0.15.1
+   Compiling lorekeeper-backend v0.1.0 (/root/lorekeeper-backend)
+warning: unused import: `crate::app::world`
+ --> src/data/repositories/conversation.rs:1:5
+  |
+1 | use crate::app::world;
+  |     ^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `crate::data::ResearchStatus::NotSubmitted`
+ --> src/data/models/conversations.rs:1:5
+  |
+1 | use crate::data::ResearchStatus::NotSubmitted;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: ambiguous glob re-exports
+ --> src/data/mod.rs:5:9
+  |
+5 | pub use repositories::*;
+  |         ^^^^^^^^^^^^^^^ the name `graph` in the type namespace is first re-exported here
+6 | pub use models::*;
+  |         --------- but the name `graph` in the type namespace is also re-exported here
+  |
+  = note: `#[warn(ambiguous_glob_reexports)]` on by default
+
+warning: ambiguous glob re-exports
+ --> src/data/mod.rs:5:9
+  |
+5 | pub use repositories::*;
+  |         ^^^^^^^^^^^^^^^ the name `user` in the type namespace is first re-exported here
+6 | pub use models::*;
+  |         --------- but the name `user` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+ --> src/data/mod.rs:5:9
+  |
+5 | pub use repositories::*;
+  |         ^^^^^^^^^^^^^^^ the name `world` in the type namespace is first re-exported here
+6 | pub use models::*;
+  |         --------- but the name `world` in the type namespace is also re-exported here
+
+warning: unused import: `ResolveConflictRequest`
+ --> src/service/world.rs:4:27
+  |
+4 |     RelationshipResponse, ResolveConflictRequest, UpdateWorldRequest, WorldRepository,
+  |                           ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `serde::Serialize`
+  --> src/service/conversation.rs:12:5
+   |
+12 | use serde::Serialize;
+   |     ^^^^^^^^^^^^^^^^
+
+warning: fields `pool` and `graph` are never read
+  --> src/app/app.rs:25:5
+   |
+24 | pub struct AppState {
+   |            -------- fields in this struct
+25 |     pool: PgPool,
+   |     ^^^^
+26 |     graph: Graph,
+   |     ^^^^^
+   |
+   = note: `AppState` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `lorekeeper-backend` (lib) generated 8 warnings (run `cargo fix --lib -p lorekeeper-backend` to apply 4 suggestions)
+warning: `lorekeeper-backend` (lib test) generated 8 warnings (8 duplicates)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 54.95s
+warning: the following packages contain code that will be rejected by a future version of Rust: proc-macro-error2 v2.0.1
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
+  Executable unittests src/lib.rs (target/debug/deps/lorekeeper_backend-77dfcd278e161a86)
+  Executable unittests src/main.rs (target/debug/deps/lorekeeper_backend-c70fd0feae87a23d)
+  Executable tests/adversarial_live.rs (target/debug/deps/adversarial_live-478ffc56b55c50b1)
+  Executable tests/text_types.rs (target/debug/deps/text_types-eb8546226905c4f8)

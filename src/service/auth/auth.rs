@@ -1,35 +1,21 @@
-use crate::data::{
-    AuthTokenPurpose, AuthTokenRepository, SignupRequest, User, UserRepository, UserResponse,
-};
-use crate::infrastructure::InfrastructureError;
+use crate::data::{AuthTokenPurpose, SignupRequest, User, UserRepository, UserResponse};
 use crate::service::{EmailService, ServiceError};
 use argon2::{Argon2, PasswordHash, PasswordHasher, PasswordVerifier};
 use sha2::{Digest, Sha256};
-use sqlx::PgPool;
 use tokio;
 use uuid::Uuid;
 
 #[derive(Clone)]
 pub struct AuthService {
-    pool: PgPool,
     user_repo: UserRepository,
-    auth_token_repo: AuthTokenRepository,
     email_service: EmailService,
     api_base_url: String,
 }
 
 impl AuthService {
-    pub fn new(
-        pool: PgPool,
-        user_repo: UserRepository,
-        auth_token_repo: AuthTokenRepository,
-        resend_api_key: &str,
-        api_base_url: &str,
-    ) -> Self {
+    pub fn new(user_repo: UserRepository, resend_api_key: &str, api_base_url: &str) -> Self {
         Self {
-            pool,
             user_repo,
-            auth_token_repo,
             email_service: EmailService::new(resend_api_key),
             api_base_url: api_base_url.trim_end_matches('/').to_owned(),
         }
@@ -105,8 +91,8 @@ impl AuthService {
             return Err(ServiceError::NotFound("User not found".to_string()));
         }
         let (_, token) = self
-            .auth_token_repo
-            .upsert_token(user_id, AuthTokenPurpose::PasswordReset)
+            .user_repo
+            .issue_auth_token(user_id, AuthTokenPurpose::PasswordReset)
             .await?;
 
         let reset_url = format!(
@@ -139,8 +125,8 @@ impl AuthService {
             ));
         }
         let (_, token) = self
-            .auth_token_repo
-            .upsert_token(user_id, AuthTokenPurpose::EmailVerification)
+            .user_repo
+            .issue_auth_token(user_id, AuthTokenPurpose::EmailVerification)
             .await?;
         let verification_url = format!(
             "{}/auth/email_verification?user_id={user_id}&token={}",
@@ -162,116 +148,20 @@ impl AuthService {
         let new_password_hash = Self::hash_password(new_password).await?;
         let token_hash = hex::encode(Sha256::digest(token.as_bytes()));
 
-        let mut tx = self.pool.begin().await.map_err(|e| {
-            tracing::error!(step = "begin", "auth transaction failed");
-            ServiceError::InternalError(e.to_string())
-        })?;
-
-        let result = async {
-            self.auth_token_repo
-                .consume_token(id, AuthTokenPurpose::PasswordReset, token_hash, &mut *tx)
-                .await?
-                .ok_or_else(|| {
-                    tracing::info!("password reset token rejected");
-                    InfrastructureError::InvalidInput("Invalid or expired reset token".into())
-                })?;
-
-            let new_user = self
-                .user_repo
-                .update_password(id, new_password_hash, &mut *tx)
-                .await;
-
-            new_user
-        }
-        .await;
-
-        match result {
-            Ok(Some(user)) => {
-                tx.commit().await.map_err(|e| {
-                    tracing::error!(step = "commit", "auth transaction failed");
-                    ServiceError::InternalError(e.to_string())
-                })?;
-                tracing::info!("password reset committed");
-                Ok(user.into())
-            }
-            Ok(None) => {
-                tracing::warn!(reason = "user_not_found", "rolling back auth transaction");
-                tx.rollback().await.map_err(|e| {
-                    tracing::error!(step = "rollback", "auth transaction failed");
-                    ServiceError::InternalError(e.to_string())
-                })?;
-                tracing::debug!("auth transaction rolled back");
-                Err(ServiceError::NotFound("User not found".into()))
-            }
-            Err(e) => {
-                tracing::warn!("rolling back auth transaction after operation failure");
-                tx.rollback().await.map_err(|e| {
-                    tracing::error!(step = "rollback", "auth transaction failed");
-                    ServiceError::InternalError(e.to_string())
-                })?;
-                tracing::debug!("auth transaction rolled back");
-                return Err(e.into());
-            }
-        }
+        self.user_repo
+            .reset_password_with_token(id, token_hash, new_password_hash)
+            .await?
+            .map(Into::into)
+            .ok_or_else(|| ServiceError::NotFound("User not found".into()))
     }
 
     #[tracing::instrument(name = "auth.verify_user", level = "info", skip_all, fields(user_id = %id))]
     pub async fn verify_user(&self, id: Uuid, token: String) -> Result<UserResponse, ServiceError> {
         let token_hash = hex::encode(Sha256::digest(token.as_bytes()));
-
-        let mut tx = self.pool.begin().await.map_err(|e| {
-            tracing::error!(step = "begin", "auth transaction failed");
-            ServiceError::InternalError(e.to_string())
-        })?;
-
-        let result = async {
-            self.auth_token_repo
-                .consume_token(
-                    id,
-                    AuthTokenPurpose::EmailVerification,
-                    token_hash,
-                    &mut *tx,
-                )
-                .await?
-                .ok_or_else(|| {
-                    tracing::info!("email verification token rejected");
-                    InfrastructureError::InvalidInput(
-                        "Invalid or expired verification token".into(),
-                    )
-                })?;
-
-            let user = self.user_repo.verify_user(id, &mut *tx).await;
-            user
-        }
-        .await;
-
-        match result {
-            Ok(Some(user)) => {
-                tx.commit().await.map_err(|e| {
-                    tracing::error!(step = "commit", "auth transaction failed");
-                    ServiceError::InternalError(e.to_string())
-                })?;
-                tracing::info!("email verification committed");
-                Ok(user.into())
-            }
-            Ok(None) => {
-                tracing::warn!(reason = "user_not_found", "rolling back auth transaction");
-                tx.rollback().await.map_err(|e| {
-                    tracing::error!(step = "rollback", "auth transaction failed");
-                    ServiceError::InternalError(e.to_string())
-                })?;
-                tracing::debug!("auth transaction rolled back");
-                Err(ServiceError::NotFound("User not found".to_string()))
-            }
-            Err(e) => {
-                tracing::warn!("rolling back auth transaction after operation failure");
-                tx.rollback().await.map_err(|e| {
-                    tracing::error!(step = "rollback", "auth transaction failed");
-                    ServiceError::InternalError(e.to_string())
-                })?;
-                tracing::debug!("auth transaction rolled back");
-                Err(e.into())
-            }
-        }
+        self.user_repo
+            .verify_email_with_token(id, token_hash)
+            .await?
+            .map(Into::into)
+            .ok_or_else(|| ServiceError::NotFound("User not found".into()))
     }
 }

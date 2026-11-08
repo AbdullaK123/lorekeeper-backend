@@ -1,16 +1,5 @@
 //! Opt-in live tests. See tests/README.md for isolated setup.
-#[path = "../src/app/mod.rs"]
-mod app;
-#[path = "../src/cron_worker.rs"]
-mod cron_worker;
-#[path = "../src/data/mod.rs"]
-mod data;
-#[path = "../src/infrastructure/mod.rs"]
-mod infrastructure;
-#[path = "../src/service/mod.rs"]
-mod service;
-#[path = "../src/shared/mod.rs"]
-mod shared;
+use lorekeeper_backend::{app, data, infrastructure, service, shared};
 
 #[tokio::test(flavor = "multi_thread", worker_threads = 4)]
 #[ignore = "requires an isolated Postgres database, Memgraph, and an OpenRouter key"]
@@ -902,9 +891,6 @@ mod research_retry;
 
 #[path = "cases/chat_canon_context.rs"]
 mod chat_canon_context;
-
-#[path = "cases/auth_tokens.rs"]
-mod auth_tokens;
 
 #[path = "cases/auth_requests.rs"]
 mod auth_requests;

@@ -1,0 +1,445 @@
+    Checking lorekeeper-backend v0.1.0 (/root/lorekeeper-backend)
+warning: unused import: `crate::app::world`
+ --> src/data/repositories/conversation.rs:1:5
+  |
+1 | use crate::app::world;
+  |     ^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `crate::data::ResearchStatus::NotSubmitted`
+ --> src/data/models/conversations.rs:1:5
+  |
+1 | use crate::data::ResearchStatus::NotSubmitted;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `ResolveConflictRequest`
+ --> src/service/world.rs:4:27
+  |
+4 |     RelationshipResponse, ResolveConflictRequest, UpdateWorldRequest, WorldRepository,
+  |                           ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `serde::Serialize`
+  --> src/service/conversation.rs:12:5
+   |
+12 | use serde::Serialize;
+   |     ^^^^^^^^^^^^^^^^
+
+warning: fields `pool` and `graph` are never read
+  --> src/app/app.rs:25:5
+   |
+24 | pub struct AppState {
+   |            -------- fields in this struct
+25 |     pool: PgPool,
+   |     ^^^^
+26 |     graph: Graph,
+   |     ^^^^^
+   |
+   = note: `AppState` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: variant `ForbiddenError` is never constructed
+  --> src/app/errors.rs:19:5
+   |
+11 | pub enum AppError {
+   |          -------- variant in this enum
+...
+19 |     ForbiddenError(String),
+   |     ^^^^^^^^^^^^^^
+   |
+   = note: `AppError` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
+
+warning: method `update_title` is never used
+  --> src/data/repositories/conversation.rs:96:18
+   |
+15 | impl ConversationRepository {
+   | --------------------------- method in this implementation
+...
+96 |     pub async fn update_title(
+   |                  ^^^^^^^^^^^^
+
+warning: field `conversations` is never read
+  --> src/data/repositories/graph/mod.rs:24:5
+   |
+19 | pub struct GraphRepository {
+   |            --------------- field in this struct
+...
+24 |     conversations: GraphConversationRepository,
+   |     ^^^^^^^^^^^^^
+   |
+   = note: `GraphRepository` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: multiple methods are never used
+   --> src/data/repositories/graph/mod.rs:45:18
+    |
+ 28 | impl GraphRepository {
+    | -------------------- methods in this implementation
+...
+ 45 |     pub async fn update_entity(
+    |                  ^^^^^^^^^^^^^
+...
+ 53 |     pub async fn delete_entity(
+    |                  ^^^^^^^^^^^^^
+...
+101 |     pub async fn get_entities_by_world(
+    |                  ^^^^^^^^^^^^^^^^^^^^^
+...
+110 |     pub async fn find_entities_by_names(
+    |                  ^^^^^^^^^^^^^^^^^^^^^^
+...
+154 |     pub async fn update_relationship(
+    |                  ^^^^^^^^^^^^^^^^^^^
+...
+165 |     pub async fn delete_relationship(
+    |                  ^^^^^^^^^^^^^^^^^^^
+...
+173 |     pub async fn create_conversation(
+    |                  ^^^^^^^^^^^^^^^^^^^
+...
+180 |     pub async fn update_conversation(
+    |                  ^^^^^^^^^^^^^^^^^^^
+...
+191 |     pub async fn delete_conversation(
+    |                  ^^^^^^^^^^^^^^^^^^^
+...
+199 |     pub async fn get_conversation(
+    |                  ^^^^^^^^^^^^^^^^
+...
+226 |     pub async fn update_conflict(
+    |                  ^^^^^^^^^^^^^^^
+...
+335 |     pub async fn get_relationships_by_entity(
+    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+345 |     pub async fn get_entities_by_conversation(
+    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+456 |     pub async fn delete_relationships_by_endpoints(
+    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: method `update_conflict` is never used
+  --> src/data/repositories/graph/conflicts.rs:80:25
+   |
+11 | impl ConflictRepository {
+   | ----------------------- method in this implementation
+...
+80 |     pub(super) async fn update_conflict(
+   |                         ^^^^^^^^^^^^^^^
+
+warning: field `graph` is never read
+ --> src/data/repositories/graph/conversations.rs:8:5
+  |
+7 | pub(super) struct GraphConversationRepository {
+  |                   --------------------------- field in this struct
+8 |     graph: Graph,
+  |     ^^^^^
+  |
+  = note: `GraphConversationRepository` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: methods `create_conversation`, `update_conversation`, `delete_conversation`, and `get_conversation` are never used
+   --> src/data/repositories/graph/conversations.rs:23:25
+    |
+ 11 | impl GraphConversationRepository {
+    | -------------------------------- methods in this implementation
+...
+ 23 |     pub(super) async fn create_conversation(
+    |                         ^^^^^^^^^^^^^^^^^^^
+...
+ 51 |     pub(super) async fn update_conversation(
+    |                         ^^^^^^^^^^^^^^^^^^^
+...
+ 78 |     pub(super) async fn delete_conversation(
+    |                         ^^^^^^^^^^^^^^^^^^^
+...
+105 |     pub(super) async fn get_conversation(
+    |                         ^^^^^^^^^^^^^^^^
+
+warning: methods `update_entity`, `delete_entity`, `get_entities_by_world`, `find_entities_by_names`, and `get_entities_by_conversation` are never used
+   --> src/data/repositories/graph/entities.rs:17:25
+    |
+ 11 | impl EntityRepository {
+    | --------------------- methods in this implementation
+...
+ 17 |     pub(super) async fn update_entity(
+    |                         ^^^^^^^^^^^^^
+...
+ 52 |     pub(super) async fn delete_entity(
+    |                         ^^^^^^^^^^^^^
+...
+147 |     pub(super) async fn get_entities_by_world(
+    |                         ^^^^^^^^^^^^^^^^^^^^^
+...
+167 |     pub(super) async fn find_entities_by_names(
+    |                         ^^^^^^^^^^^^^^^^^^^^^^
+...
+292 |     pub(super) async fn get_entities_by_conversation(
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: methods `update_relationship`, `delete_relationship`, `get_relationships_by_entity`, and `delete_relationships_by_endpoints` are never used
+   --> src/data/repositories/graph/relationships.rs:35:25
+    |
+ 11 | impl RelationshipRepository {
+    | --------------------------- methods in this implementation
+...
+ 35 |     pub(super) async fn update_relationship(
+    |                         ^^^^^^^^^^^^^^^^^^^
+...
+ 67 |     pub(super) async fn delete_relationship(
+    |                         ^^^^^^^^^^^^^^^^^^^
+...
+101 |     pub(super) async fn get_relationships_by_entity(
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+124 |     pub(super) async fn delete_relationships_by_endpoints(
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: enum `DataError` is never used
+ --> src/data/errors.rs:4:10
+  |
+4 | pub enum DataError {
+  |          ^^^^^^^^^
+
+warning: fields `user_id` and `created_at` are never read
+  --> src/data/models/conversations.rs:69:9
+   |
+66 | pub struct ConversationRow {
+   |            --------------- fields in this struct
+...
+69 |     pub user_id: Uuid,
+   |         ^^^^^^^
+...
+72 |     pub created_at: DateTime<Utc>,
+   |         ^^^^^^^^^^
+   |
+   = note: `ConversationRow` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: struct `Conversation` is never constructed
+   --> src/data/models/graph.rs:101:12
+    |
+101 | pub struct Conversation {
+    |            ^^^^^^^^^^^^
+
+warning: field `user_id` is never read
+  --> src/data/models/world.rs:11:9
+   |
+ 9 | pub struct World {
+   |            ----- field in this struct
+10 |     pub id: Uuid,
+11 |     pub user_id: Uuid,
+   |         ^^^^^^^
+   |
+   = note: `World` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: `lorekeeper-backend` (bin "lorekeeper-backend") generated 18 warnings (run `cargo fix --bin "lorekeeper-backend" -p lorekeeper-backend` to apply 4 suggestions)
+warning: unused import: `crate::app::world`
+ --> tests/../src/data/repositories/conversation.rs:1:5
+  |
+1 | use crate::app::world;
+  |     ^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `crate::data::ResearchStatus::NotSubmitted`
+ --> tests/../src/data/models/conversations.rs:1:5
+  |
+1 | use crate::data::ResearchStatus::NotSubmitted;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `ResolveConflictRequest`
+ --> tests/../src/service/world.rs:4:27
+  |
+4 |     RelationshipResponse, ResolveConflictRequest, UpdateWorldRequest, WorldRepository,
+  |                           ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `serde::Serialize`
+  --> tests/../src/service/conversation.rs:12:5
+   |
+12 | use serde::Serialize;
+   |     ^^^^^^^^^^^^^^^^
+
+warning: fields `pool` and `graph` are never read
+  --> tests/../src/app/app.rs:25:5
+   |
+24 | pub struct AppState {
+   |            -------- fields in this struct
+25 |     pool: PgPool,
+   |     ^^^^
+26 |     graph: Graph,
+   |     ^^^^^
+   |
+   = note: `AppState` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: variant `ForbiddenError` is never constructed
+  --> tests/../src/app/errors.rs:19:5
+   |
+11 | pub enum AppError {
+   |          -------- variant in this enum
+...
+19 |     ForbiddenError(String),
+   |     ^^^^^^^^^^^^^^
+   |
+   = note: `AppError` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
+
+warning: method `update_title` is never used
+  --> tests/../src/data/repositories/conversation.rs:96:18
+   |
+15 | impl ConversationRepository {
+   | --------------------------- method in this implementation
+...
+96 |     pub async fn update_title(
+   |                  ^^^^^^^^^^^^
+
+warning: field `conversations` is never read
+  --> tests/../src/data/repositories/graph/mod.rs:24:5
+   |
+19 | pub struct GraphRepository {
+   |            --------------- field in this struct
+...
+24 |     conversations: GraphConversationRepository,
+   |     ^^^^^^^^^^^^^
+   |
+   = note: `GraphRepository` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: multiple methods are never used
+   --> tests/../src/data/repositories/graph/mod.rs:45:18
+    |
+ 28 | impl GraphRepository {
+    | -------------------- methods in this implementation
+...
+ 45 |     pub async fn update_entity(
+    |                  ^^^^^^^^^^^^^
+...
+110 |     pub async fn find_entities_by_names(
+    |                  ^^^^^^^^^^^^^^^^^^^^^^
+...
+154 |     pub async fn update_relationship(
+    |                  ^^^^^^^^^^^^^^^^^^^
+...
+165 |     pub async fn delete_relationship(
+    |                  ^^^^^^^^^^^^^^^^^^^
+...
+173 |     pub async fn create_conversation(
+    |                  ^^^^^^^^^^^^^^^^^^^
+...
+180 |     pub async fn update_conversation(
+    |                  ^^^^^^^^^^^^^^^^^^^
+...
+191 |     pub async fn delete_conversation(
+    |                  ^^^^^^^^^^^^^^^^^^^
+...
+199 |     pub async fn get_conversation(
+    |                  ^^^^^^^^^^^^^^^^
+...
+335 |     pub async fn get_relationships_by_entity(
+    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+345 |     pub async fn get_entities_by_conversation(
+    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+456 |     pub async fn delete_relationships_by_endpoints(
+    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field `graph` is never read
+ --> tests/../src/data/repositories/graph/conversations.rs:8:5
+  |
+7 | pub(super) struct GraphConversationRepository {
+  |                   --------------------------- field in this struct
+8 |     graph: Graph,
+  |     ^^^^^
+  |
+  = note: `GraphConversationRepository` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: methods `create_conversation`, `update_conversation`, `delete_conversation`, and `get_conversation` are never used
+   --> tests/../src/data/repositories/graph/conversations.rs:23:25
+    |
+ 11 | impl GraphConversationRepository {
+    | -------------------------------- methods in this implementation
+...
+ 23 |     pub(super) async fn create_conversation(
+    |                         ^^^^^^^^^^^^^^^^^^^
+...
+ 51 |     pub(super) async fn update_conversation(
+    |                         ^^^^^^^^^^^^^^^^^^^
+...
+ 78 |     pub(super) async fn delete_conversation(
+    |                         ^^^^^^^^^^^^^^^^^^^
+...
+105 |     pub(super) async fn get_conversation(
+    |                         ^^^^^^^^^^^^^^^^
+
+warning: methods `update_entity`, `find_entities_by_names`, and `get_entities_by_conversation` are never used
+   --> tests/../src/data/repositories/graph/entities.rs:17:25
+    |
+ 11 | impl EntityRepository {
+    | --------------------- methods in this implementation
+...
+ 17 |     pub(super) async fn update_entity(
+    |                         ^^^^^^^^^^^^^
+...
+167 |     pub(super) async fn find_entities_by_names(
+    |                         ^^^^^^^^^^^^^^^^^^^^^^
+...
+292 |     pub(super) async fn get_entities_by_conversation(
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: methods `update_relationship`, `delete_relationship`, `get_relationships_by_entity`, and `delete_relationships_by_endpoints` are never used
+   --> tests/../src/data/repositories/graph/relationships.rs:35:25
+    |
+ 11 | impl RelationshipRepository {
+    | --------------------------- methods in this implementation
+...
+ 35 |     pub(super) async fn update_relationship(
+    |                         ^^^^^^^^^^^^^^^^^^^
+...
+ 67 |     pub(super) async fn delete_relationship(
+    |                         ^^^^^^^^^^^^^^^^^^^
+...
+101 |     pub(super) async fn get_relationships_by_entity(
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+124 |     pub(super) async fn delete_relationships_by_endpoints(
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: enum `DataError` is never used
+ --> tests/../src/data/errors.rs:4:10
+  |
+4 | pub enum DataError {
+  |          ^^^^^^^^^
+
+warning: fields `user_id` and `created_at` are never read
+  --> tests/../src/data/models/conversations.rs:69:9
+   |
+66 | pub struct ConversationRow {
+   |            --------------- fields in this struct
+...
+69 |     pub user_id: Uuid,
+   |         ^^^^^^^
+...
+72 |     pub created_at: DateTime<Utc>,
+   |         ^^^^^^^^^^
+   |
+   = note: `ConversationRow` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: struct `Conversation` is never constructed
+   --> tests/../src/data/models/graph.rs:101:12
+    |
+101 | pub struct Conversation {
+    |            ^^^^^^^^^^^^
+
+warning: field `user_id` is never read
+  --> tests/../src/data/models/world.rs:11:9
+   |
+ 9 | pub struct World {
+   |            ----- field in this struct
+10 |     pub id: Uuid,
+11 |     pub user_id: Uuid,
+   |         ^^^^^^^
+   |
+   = note: `World` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: `lorekeeper-backend` (test "adversarial_live") generated 17 warnings (run `cargo fix --test "adversarial_live" -p lorekeeper-backend` to apply 4 suggestions)
+warning: `lorekeeper-backend` (bin "lorekeeper-backend" test) generated 18 warnings (18 duplicates)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 40.38s
+warning: the following packages contain code that will be rejected by a future version of Rust: proc-macro-error2 v2.0.1
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`

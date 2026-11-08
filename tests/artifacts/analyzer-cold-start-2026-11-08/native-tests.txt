@@ -1,0 +1,242 @@
+
+running 59 tests
+test auth_tokens::auth_tokens_concurrent_consumers_cannot_both_succeed ... ok
+test auth_tokens::auth_tokens_expired_token_cannot_be_consumed ... ok
+test auth_tokens::auth_tokens_purpose_lifetimes_are_not_swapped ... ok
+test auth_tokens::auth_tokens_reissue_invalidates_the_previous_link ... ok
+test auth_tokens::auth_tokens_reset_commits_password_with_token_consumption ... ok
+test auth_tokens::auth_tokens_reset_failure_restores_consumed_token ... ok
+test auth_tokens::auth_tokens_reset_secret_cannot_be_replayed_through_service ... ok
+test auth_tokens::auth_tokens_reset_with_expired_secret_cannot_change_password ... ok
+test auth_tokens::auth_tokens_reset_with_invalid_secret_cannot_change_password ... ok
+test auth_tokens::auth_tokens_valid_token_cannot_be_reused ... ok
+test auth_tokens::auth_tokens_verification_rollback_restores_account_and_token ... ok
+test auth_tokens::auth_tokens_wrong_hash_does_not_consume_a_valid_link ... ok
+test auth_tokens::auth_tokens_wrong_purpose_cannot_consume_the_token ... ok
+test auth_tokens::auth_tokens_wrong_user_cannot_consume_the_token ... ok
+test chat_agent_has_no_graph_write_tools ... ok
+test chat_canon_context::current_lore_is_system_context_without_rewriting_old_user_messages ... ok
+test cleanup_retries_failed_job_removal_without_blocking_other_jobs ... ok
+test concurrent_message_appends_do_not_lose_writes ... ok
+test conflict_lookup_empty_world_uses_object_arguments ... ok
+test conflict_lookup_excludes_resolved_and_foreign_records ... ok
+test conflict_message_sources_accumulate_without_duplicates ... ok
+test conflict_targets::accepted_description_does_not_keep_old_search_embedding ... ok
+test conflict_targets::conflict_targets_reject_foreign_entities ... ok
+test conflict_targets::conflict_targets_reject_non_property_labels ... ok
+test conflict_targets::conflict_targets_report_then_accept_saved_property ... ok
+test dbos_research_registration_starts_and_shuts_down ... 2026-11-08T08:34:15.130918Z  INFO lorekeeper_backend::app::app: initializing application
+2026-11-08T08:34:15.131805Z  INFO lorekeeper_backend::infrastructure::database: connecting to Postgres max_connections=20
+2026-11-08T08:34:15.177914Z  INFO lorekeeper_backend::infrastructure::database: Postgres pool ready
+2026-11-08T08:34:15.177957Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:15.178017Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:15.178463Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:15.178473Z  INFO lorekeeper_backend::app::app: assembling application services
+2026-11-08T08:34:15.228511Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T08:34:15.270082Z  INFO lorekeeper_backend::app::app: graph constraints and indexes ready
+2026-11-08T08:34:15.271543Z  INFO lorekeeper_backend::app::dbos: initializing DBOS research workflow
+2026-11-08T08:34:17.752202Z  INFO sqlx::postgres::notice: schema "dbos" already exists, skipping
+2026-11-08T08:34:17.754043Z  INFO sqlx::postgres::notice: relation "dbos_migrations" already exists, skipping
+2026-11-08T08:34:17.814941Z  INFO dbos::instance: DBOS launched app_name="lorekeeper" executor_id="local" app_version="dev-v1"
+2026-11-08T08:34:17.815079Z  INFO lorekeeper_backend::app::dbos: DBOS research workflow ready
+2026-11-08T08:34:17.953901Z  INFO dbos::connection: DBOS client connected app_name="<none>"
+2026-11-08T08:34:17.954451Z  INFO tokio_cron_scheduler::job_scheduler: Uninited
+2026-11-08T08:34:17.954865Z  INFO tokio_cron_scheduler::job_scheduler: Job creator created
+2026-11-08T08:34:17.954897Z  INFO lorekeeper_backend::cron_worker: world cleanup scheduler started interval_seconds=5
+2026-11-08T08:34:17.954906Z  INFO lorekeeper_backend::app::app: application services ready
+2026-11-08T08:34:17.957921Z  INFO sqlx::postgres::notice: schema "tower_sessions" already exists, skipping
+2026-11-08T08:34:17.959444Z  INFO sqlx::postgres::notice: relation "session" already exists, skipping
+2026-11-08T08:34:17.960833Z  INFO lorekeeper_backend::app::playground: serving development playground at /
+2026-11-08T08:34:17.961745Z  INFO lorekeeper_backend::app::app: application routes and middleware ready
+2026-11-08T08:34:17.962046Z  INFO dbos::instance: cancelled workflows still running; they stay PENDING cancelled=2
+2026-11-08T08:34:17.963712Z  INFO dbos::instance: DBOS shut down app_name="lorekeeper"
+ok
+test durable_research::durable_research_invalid_arguments_return_to_model ... 2026-11-08T08:34:18.119759Z  INFO sqlx::postgres::notice: schema "dbos" already exists, skipping
+2026-11-08T08:34:18.121669Z  INFO sqlx::postgres::notice: relation "dbos_migrations" already exists, skipping
+2026-11-08T08:34:18.146826Z  INFO dbos::instance: DBOS launched app_name="test-34a8a5eb-ddac-4ea6-894d-84dea9c59048" executor_id="test-34a8a5eb-ddac-4ea6-894d-84dea9c59048" app_version="test-34a8a5eb-ddac-4ea6-894d-84dea9c59048"
+2026-11-08T08:34:18.320029Z  INFO dbos::instance: cancelled workflows still running; they stay PENDING cancelled=2
+2026-11-08T08:34:18.322054Z  INFO dbos::instance: DBOS shut down app_name="test-34a8a5eb-ddac-4ea6-894d-84dea9c59048"
+ok
+test durable_research::durable_research_restart_skips_recorded_model_and_tool_calls ... 2026-11-08T08:34:18.472791Z  INFO sqlx::postgres::notice: schema "dbos" already exists, skipping
+2026-11-08T08:34:18.475155Z  INFO sqlx::postgres::notice: relation "dbos_migrations" already exists, skipping
+2026-11-08T08:34:18.499193Z  INFO dbos::instance: DBOS launched app_name="test-45751423-ec53-44fd-aad1-38488fda1306" executor_id="test-45751423-ec53-44fd-aad1-38488fda1306" app_version="test-45751423-ec53-44fd-aad1-38488fda1306"
+2026-11-08T08:34:18.631744Z  INFO dbos::instance: cancelled workflows still running; they stay PENDING cancelled=3
+2026-11-08T08:34:18.633829Z  INFO dbos::instance: DBOS shut down app_name="test-45751423-ec53-44fd-aad1-38488fda1306"
+2026-11-08T08:34:18.821488Z  INFO sqlx::postgres::notice: schema "dbos" already exists, skipping
+2026-11-08T08:34:18.823409Z  INFO sqlx::postgres::notice: relation "dbos_migrations" already exists, skipping
+2026-11-08T08:34:18.855137Z  INFO dbos::recovery: re-enqueued workflows a previous run left PENDING workflows=1
+2026-11-08T08:34:18.855190Z  INFO dbos::instance: DBOS launched app_name="test-45751423-ec53-44fd-aad1-38488fda1306" executor_id="test-45751423-ec53-44fd-aad1-38488fda1306" app_version="test-45751423-ec53-44fd-aad1-38488fda1306"
+2026-11-08T08:34:18.969274Z  WARN dbos::sysdb::postgres: workflow already exists on a different queue; the stored queue is kept workflow_id=a5b2b60b-98dc-488a-b27a-2c10ebe2f7c6 stored=Some("_dbos_internal_queue") provided=None
+2026-11-08T08:34:19.979138Z  INFO dbos::instance: cancelled workflows still running; they stay PENDING cancelled=2
+2026-11-08T08:34:19.980228Z  INFO dbos::instance: DBOS shut down app_name="test-45751423-ec53-44fd-aad1-38488fda1306"
+ok
+test durable_research::durable_research_reuses_completed_workflow ... 2026-11-08T08:34:20.110657Z  INFO sqlx::postgres::notice: schema "dbos" already exists, skipping
+2026-11-08T08:34:20.112376Z  INFO sqlx::postgres::notice: relation "dbos_migrations" already exists, skipping
+2026-11-08T08:34:20.131991Z  INFO dbos::instance: DBOS launched app_name="test-8c320e4c-a707-4043-bf84-861d8ab947d6" executor_id="test-8c320e4c-a707-4043-bf84-861d8ab947d6" app_version="test-8c320e4c-a707-4043-bf84-861d8ab947d6"
+2026-11-08T08:34:20.249123Z  INFO dbos::instance: cancelled workflows still running; they stay PENDING cancelled=2
+2026-11-08T08:34:20.250038Z  INFO dbos::instance: DBOS shut down app_name="test-8c320e4c-a707-4043-bf84-861d8ab947d6"
+ok
+test durable_research::durable_research_unknown_tool_fails_without_execution ... 2026-11-08T08:34:20.380482Z  INFO sqlx::postgres::notice: schema "dbos" already exists, skipping
+2026-11-08T08:34:20.381637Z  INFO sqlx::postgres::notice: relation "dbos_migrations" already exists, skipping
+2026-11-08T08:34:20.399167Z  INFO dbos::instance: DBOS launched app_name="test-ef731481-3801-40f4-9836-be2f096d105f" executor_id="test-ef731481-3801-40f4-9836-be2f096d105f" app_version="test-ef731481-3801-40f4-9836-be2f096d105f"
+2026-11-08T08:34:20.485345Z  WARN workflow{workflow_id=e85dcaad-c441-497b-b67b-9e94ed4ce5c0 name=research}: lorekeeper_backend::service::ai::researcher: research model produced an invalid tool request
+2026-11-08T08:34:20.490944Z  INFO dbos::instance: cancelled workflows still running; they stay PENDING cancelled=2
+2026-11-08T08:34:20.491948Z  INFO dbos::instance: DBOS shut down app_name="test-ef731481-3801-40f4-9836-be2f096d105f"
+ok
+test graph_batch_foreign_endpoint_rolls_back_changes ... 2026-11-08T08:34:20.493956Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:20.494099Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:20.494939Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:20.495250Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T08:34:20.609466Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-foreign-222b3315-1933-4a34-8e3b-1ea7fe0f0e11" entities=1 relationships=0 retractions=0
+2026-11-08T08:34:20.679101Z  WARN lorekeeper_backend::data::repositories::graph: graph batch failed; rolling back world_id="qa-graph-4b6e7eac-2fbc-44f1-abfb-a0b53e97dc2f"
+ok
+test graph_batch_missing_endpoint_rolls_back_entities ... 2026-11-08T08:34:20.713055Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:20.713154Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:20.713481Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:20.713590Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T08:34:20.763776Z  WARN lorekeeper_backend::data::repositories::graph: graph batch failed; rolling back world_id="qa-graph-35b286fd-c351-4690-8b7a-97a5411d88ea"
+ok
+test graph_batch_rejects_retargeting_saved_relationship_id ... 2026-11-08T08:34:20.768673Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:20.768753Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:20.769203Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:20.769351Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T08:34:21.040211Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-cfc650c1-4683-47b0-8a8a-48c0023bec81" entities=3 relationships=1 retractions=0
+2026-11-08T08:34:21.043677Z  WARN lorekeeper_backend::data::repositories::graph: graph batch failed; rolling back world_id="qa-graph-cfc650c1-4683-47b0-8a8a-48c0023bec81"
+ok
+test graph_batch_retry_preserves_distinct_connections ... 2026-11-08T08:34:21.089535Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:21.089622Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:21.090064Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:21.090207Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T08:34:21.252769Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-e6fe7ecc-fc5f-4042-b144-fcf33251df44" entities=2 relationships=0 retractions=0
+2026-11-08T08:34:21.260397Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-e6fe7ecc-fc5f-4042-b144-fcf33251df44" entities=0 relationships=2 retractions=0
+2026-11-08T08:34:21.268175Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-e6fe7ecc-fc5f-4042-b144-fcf33251df44" entities=0 relationships=2 retractions=0
+2026-11-08T08:34:21.279213Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-e6fe7ecc-fc5f-4042-b144-fcf33251df44" entities=0 relationships=0 retractions=1
+ok
+test graph_delete_entity_removes_attached_conflicts ... 2026-11-08T08:34:21.308640Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:21.308778Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:21.309283Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:21.309407Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T08:34:21.406617Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-b78187cb-3a85-4838-926e-056a0acdb6ee" entities=1 relationships=0 retractions=0
+2026-11-08T08:34:21.424260Z  INFO neo4rs::pool: creating new connection...
+ok
+test graph_entity_properties_round_trip_without_loss ... 2026-11-08T08:34:21.451773Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:21.451857Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:21.452268Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:21.452436Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T08:34:21.546574Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-43b8b13d-c1d9-4172-924b-c345e94eee0e" entities=1 relationships=0 retractions=0
+ok
+test graph_page_empty_world_has_no_cursor_or_edges ... 2026-11-08T08:34:21.556708Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:21.556817Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:21.557616Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:21.557845Z  INFO neo4rs::pool: creating new connection...
+ok
+test graph_page_exact_limit_has_no_next_cursor ... 2026-11-08T08:34:21.565685Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:21.565814Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:21.566539Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:21.566896Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T08:34:21.719783Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-7371f6c2-c9e7-48b1-8986-0c85a725009d" entities=1 relationships=0 retractions=0
+ok
+test graph_page_keeps_edges_within_its_nodes_and_world ... 2026-11-08T08:34:21.749348Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:21.749440Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:21.749873Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:21.750009Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T08:34:22.003470Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-45a115ab-e172-4e0a-8bd1-8dbaf3254a16" entities=3 relationships=3 retractions=0
+2026-11-08T08:34:22.102752Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-f6a2777b-48dd-498d-a5d5-953eb98dc338" entities=1 relationships=0 retractions=0
+2026-11-08T08:34:22.103121Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:22.103193Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:22.103772Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:22.103833Z  INFO neo4rs::pool: creating new connection...
+ok
+test graph_page_rejects_invalid_limits_and_cursors ... 2026-11-08T08:34:22.174788Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:22.174878Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:22.175227Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+ok
+test graph_relationship_injection_is_rejected ... 2026-11-08T08:34:22.177270Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:22.177340Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:22.177759Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+ok
+test graph_relationship_retry_does_not_duplicate_edges ... 2026-11-08T08:34:22.178452Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:22.178491Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:22.178771Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:22.178856Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T08:34:22.279563Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-1c2b8eb7-8a76-4019-bcc3-6b9e68dce075" entities=1 relationships=0 retractions=0
+2026-11-08T08:34:22.369713Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-1c2b8eb7-8a76-4019-bcc3-6b9e68dce075" entities=1 relationships=0 retractions=0
+2026-11-08T08:34:22.378451Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-1c2b8eb7-8a76-4019-bcc3-6b9e68dce075" entities=0 relationships=1 retractions=0
+2026-11-08T08:34:22.384303Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-1c2b8eb7-8a76-4019-bcc3-6b9e68dce075" entities=0 relationships=1 retractions=0
+ok
+test graph_relationships_cannot_cross_worlds ... 2026-11-08T08:34:22.388423Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:22.388495Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:22.388975Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:22.389119Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T08:34:22.489213Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-423c8143-a51b-4962-bdc8-9fbd41a82fd7" entities=1 relationships=0 retractions=0
+2026-11-08T08:34:22.592377Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-e7315b37-f28d-41f1-a872-1e99814869a9" entities=1 relationships=0 retractions=0
+2026-11-08T08:34:22.601297Z  WARN lorekeeper_backend::data::repositories::graph: graph batch failed; rolling back world_id="qa-graph-423c8143-a51b-4962-bdc8-9fbd41a82fd7"
+ok
+test graph_retry_preserves_entity_identity ... 2026-11-08T08:34:22.606982Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:22.607081Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:22.607583Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:22.607741Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T08:34:22.701279Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-1617f744-3a08-4407-8e02-242f7bf24cc9" entities=1 relationships=0 retractions=0
+2026-11-08T08:34:22.804016Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-1617f744-3a08-4407-8e02-242f7bf24cc9" entities=1 relationships=0 retractions=0
+ok
+test graph_source_message_ids_accumulate_without_duplicates ... 2026-11-08T08:34:22.810957Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:22.811051Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:22.811542Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:22.811685Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T08:34:22.990549Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-037804be-71ba-4f00-bc47-2414f1c7d3fa" entities=2 relationships=1 retractions=0
+2026-11-08T08:34:23.174512Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-037804be-71ba-4f00-bc47-2414f1c7d3fa" entities=2 relationships=1 retractions=0
+2026-11-08T08:34:23.392645Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-037804be-71ba-4f00-bc47-2414f1c7d3fa" entities=2 relationships=1 retractions=0
+ok
+test legacy_graph_records_without_source_ids_remain_readable ... 2026-11-08T08:34:23.440238Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:23.440350Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:23.441017Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:23.441222Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T08:34:23.641773Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-legacy-sources-ff15ae93-2092-44f0-96c4-1e414bc47043" entities=2 relationships=1 retractions=0
+ok
+test message_id_migration_preserves_history_and_existing_ids ... ok
+test message_lookup::message_lookup_preserves_each_stored_role ... ok
+test message_lookup::message_lookup_rejects_wrong_scope_and_missing_sources ... ok
+test message_lookup::message_lookup_returns_none_after_conversation_deletion ... ok
+test research_retry::missing_research_uses_only_earlier_messages ... 2026-11-08T08:34:24.371955Z  INFO sqlx::postgres::notice: schema "dbos" already exists, skipping
+2026-11-08T08:34:24.373292Z  INFO sqlx::postgres::notice: relation "dbos_migrations" already exists, skipping
+2026-11-08T08:34:24.394649Z  INFO dbos::instance: DBOS launched app_name="retry-test-cf1de9df-353b-460a-97c9-05853e3a0500" executor_id="retry-test-cf1de9df-353b-460a-97c9-05853e3a0500" app_version="retry-test-cf1de9df-353b-460a-97c9-05853e3a0500"
+2026-11-08T08:34:24.548047Z  INFO dbos::connection: DBOS client connected app_name="<none>"
+2026-11-08T08:34:24.548339Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:24.548404Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:24.548870Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:24.617933Z  INFO conversation.retry_research{world_id=01a1ba4b-5f5c-7b9e-81c8-3b4ff17577ee user_id=342547b4-02c9-4dbc-8cfc-7cfba1f61ac3 message_id=0fab9728-2fb1-4695-b2af-af9316d3175c}: lorekeeper_backend::service::conversation: research retry submitted workflow_id=0fab9728-2fb1-4695-b2af-af9316d3175c
+2026-11-08T08:34:24.643325Z  INFO dbos::instance: cancelled workflows still running; they stay PENDING cancelled=2
+2026-11-08T08:34:24.644315Z  INFO dbos::instance: DBOS shut down app_name="retry-test-cf1de9df-353b-460a-97c9-05853e3a0500"
+ok
+test researcher_agent_has_complete_lore_tools ... 2026-11-08T08:34:24.663513Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:24.663604Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:24.664114Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+ok
+test researcher_read_preserves_details_and_rejects_foreign_entities ... 2026-11-08T08:34:24.666822Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:24.666911Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:24.667432Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:24.667625Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T08:34:24.859940Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-5d4563ae-a69e-4f98-9008-3e80b30c2452" entities=2 relationships=1 retractions=0
+ok
+test stored_message_ids_survive_repeated_reads ... ok
+test world_deletion_cannot_queue_cleanup_for_another_users_world ... ok
+test world_deletion_commits_its_cleanup_job ... 2026-11-08T08:34:25.344583Z  INFO lorekeeper_backend::data::repositories::world: world deletion and graph cleanup job committed world_id=01a1ba4b-63af-7364-ac61-c4472fe6aab1
+ok
+test world_deletion_rolls_back_when_cleanup_job_insertion_fails ... ok
+test world_reads_conflict_pages_preserve_filters_and_scope ... 2026-11-08T08:34:25.476075Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:25.476186Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:25.476977Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:25.477296Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T08:34:25.599161Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="qa-graph-6bf31008-20ec-4d46-8f86-5355511b147e" entities=1 relationships=0 retractions=0
+ok
+test world_reads_reject_foreign_users_and_missing_records ... 2026-11-08T08:34:25.797735Z  INFO lorekeeper_backend::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T08:34:25.798159Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T08:34:25.799504Z  INFO lorekeeper_backend::infrastructure::database: Memgraph connection ready
+2026-11-08T08:34:25.799752Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T08:34:26.006342Z  INFO lorekeeper_backend::data::repositories::graph: graph batch committed world_id="01a1ba4b-657d-7cbd-a452-c28885f2b92d" entities=2 relationships=1 retractions=0
+2026-11-08T08:34:26.064813Z  INFO world.resolve_conflict{conflict_id=012fd8a4-2e81-4e94-b1f8-645eb7151dca world_id=01a1ba4b-657d-7cbd-a452-c28885f2b92d user_id=7b1301d1-a613-4b41-b3b9-0fc457bf3645}: lorekeeper_backend::service::world: keep-existing conflict decision saved
+2026-11-08T08:34:26.078330Z  INFO world.resolve_conflict{conflict_id=012fd8a4-2e81-4e94-b1f8-645eb7151dca world_id=01a1ba4b-657d-7cbd-a452-c28885f2b92d user_id=7b1301d1-a613-4b41-b3b9-0fc457bf3645}: lorekeeper_backend::service::world: keep-existing conflict decision saved
+ok
+
+test result: ok. 59 passed; 0 failed; 0 ignored; 0 measured; 13 filtered out; finished in 19.19s
+

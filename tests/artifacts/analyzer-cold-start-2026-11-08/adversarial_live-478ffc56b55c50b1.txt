@@ -1,0 +1,77 @@
+
+running 72 tests
+test adversarial_live_api ... ignored, requires an isolated Postgres database, Memgraph, and an OpenRouter key
+test auth_tokens::auth_tokens_concurrent_consumers_cannot_both_succeed ... ignored, requires isolated Postgres; no email or model calls
+test auth_tokens::auth_tokens_expired_token_cannot_be_consumed ... ignored, requires isolated Postgres; no email or model calls
+test auth_tokens::auth_tokens_purpose_lifetimes_are_not_swapped ... ignored, requires isolated Postgres; no email or model calls
+test auth_tokens::auth_tokens_reissue_invalidates_the_previous_link ... ignored, requires isolated Postgres; no email or model calls
+test auth_tokens::auth_tokens_reset_commits_password_with_token_consumption ... ignored, requires isolated Postgres; no email or model calls
+test auth_tokens::auth_tokens_reset_failure_restores_consumed_token ... ignored, requires isolated Postgres; no email or model calls
+test auth_tokens::auth_tokens_reset_secret_cannot_be_replayed_through_service ... ignored, requires isolated Postgres; no email or model calls
+test auth_tokens::auth_tokens_reset_with_expired_secret_cannot_change_password ... ignored, requires isolated Postgres; no email or model calls
+test auth_tokens::auth_tokens_reset_with_invalid_secret_cannot_change_password ... ignored, requires isolated Postgres; no email or model calls
+test auth_tokens::auth_tokens_valid_token_cannot_be_reused ... ignored, requires isolated Postgres; no email or model calls
+test auth_tokens::auth_tokens_verification_rollback_restores_account_and_token ... ignored, requires isolated Postgres; no email or model calls
+test auth_tokens::auth_tokens_wrong_hash_does_not_consume_a_valid_link ... ignored, requires isolated Postgres; no email or model calls
+test auth_tokens::auth_tokens_wrong_purpose_cannot_consume_the_token ... ignored, requires isolated Postgres; no email or model calls
+test auth_tokens::auth_tokens_wrong_user_cannot_consume_the_token ... ignored, requires isolated Postgres; no email or model calls
+test chat_agent_has_no_graph_write_tools ... ignored, requires Memgraph; makes no AI calls
+test chat_canon_context::current_lore_is_system_context_without_rewriting_old_user_messages ... ignored, requires local Memgraph; model requests stay on localhost
+test cleanup_retries_failed_job_removal_without_blocking_other_jobs ... ignored, requires isolated Postgres and live Memgraph
+test concurrent_message_appends_do_not_lose_writes ... ignored, requires the isolated Postgres test database
+test conflict_lookup_empty_world_uses_object_arguments ... ignored, requires Memgraph; makes no AI calls
+test conflict_lookup_excludes_resolved_and_foreign_records ... ignored, requires Memgraph; makes no AI calls
+test conflict_message_sources_accumulate_without_duplicates ... ignored, requires Memgraph; makes no AI calls
+test conflict_targets::accepted_description_does_not_keep_old_search_embedding ... ignored, requires Memgraph; makes no AI calls
+test conflict_targets::conflict_targets_reject_foreign_entities ... ignored, requires Memgraph; makes no AI calls
+test conflict_targets::conflict_targets_reject_non_property_labels ... ignored, requires Memgraph; makes no AI calls
+test conflict_targets::conflict_targets_report_then_accept_saved_property ... ignored, requires isolated Postgres and Memgraph; makes no AI calls
+test dbos_research_registration_starts_and_shuts_down ... ignored, requires isolated QA Postgres; makes no AI calls
+test durable_research::durable_research_invalid_arguments_return_to_model ... ignored, requires isolated QA Postgres; model responses are local and free
+test durable_research::durable_research_restart_skips_recorded_model_and_tool_calls ... ignored, requires isolated QA Postgres; model responses are local and free
+test durable_research::durable_research_reuses_completed_workflow ... ignored, requires isolated QA Postgres; model responses are local and free
+test durable_research::durable_research_unknown_tool_fails_without_execution ... ignored, requires isolated QA Postgres; model responses are local and free
+test graph_batch_foreign_endpoint_rolls_back_changes ... ignored, requires Memgraph
+test graph_batch_missing_endpoint_rolls_back_entities ... ignored, requires Memgraph
+test graph_batch_rejects_retargeting_saved_relationship_id ... ignored, requires Memgraph
+test graph_batch_retry_preserves_distinct_connections ... ignored, requires Memgraph
+test graph_delete_entity_removes_attached_conflicts ... ignored, requires live Memgraph
+test graph_entity_properties_round_trip_without_loss ... ignored, requires live Memgraph
+test graph_page_empty_world_has_no_cursor_or_edges ... ignored, requires Memgraph; makes no AI calls
+test graph_page_exact_limit_has_no_next_cursor ... ignored, requires Memgraph; makes no AI calls
+test graph_page_keeps_edges_within_its_nodes_and_world ... ignored, requires Memgraph; makes no AI calls
+test graph_page_rejects_invalid_limits_and_cursors ... ignored, requires Memgraph; makes no AI calls
+test graph_relationship_injection_is_rejected ... ignored, requires live Memgraph
+test graph_relationship_retry_does_not_duplicate_edges ... ignored, requires live Memgraph
+test graph_relationships_cannot_cross_worlds ... ignored, requires live Memgraph
+test graph_retry_preserves_entity_identity ... ignored, requires live Memgraph
+test graph_source_message_ids_accumulate_without_duplicates ... ignored, requires Memgraph; makes no AI calls
+test legacy_graph_records_without_source_ids_remain_readable ... ignored, requires Memgraph; makes no AI calls
+test auth_requests::confirmation_requests_require_user_identity ... ok
+test auth_requests::confirmation_requests_accept_valid_inputs ... ok
+test message_id_migration_preserves_history_and_existing_ids ... ignored, requires isolated Postgres; makes no AI calls
+test message_lookup::message_lookup_preserves_each_stored_role ... ignored, requires isolated Postgres; makes no AI calls
+test message_lookup::message_lookup_rejects_wrong_scope_and_missing_sources ... ignored, requires isolated Postgres; makes no AI calls
+test message_lookup::message_lookup_returns_none_after_conversation_deletion ... ignored, requires isolated Postgres; makes no AI calls
+test research_retry::missing_research_uses_only_earlier_messages ... ignored, requires QA Postgres and Memgraph; no model calls
+test auth_requests::confirmation_requests_reject_empty_or_oversized_tokens ... ok
+test auth_requests::reset_request_rejects_weak_passwords ... ok
+test researcher_agent_has_complete_lore_tools ... ignored, requires Memgraph; makes no AI calls
+test researcher_read_preserves_details_and_rejects_foreign_entities ... ignored, requires Memgraph; makes no AI calls
+test researcher_smoke_conversation ... ignored, paid conversation smoke test; requires explicit authorization, isolated Postgres, and Memgraph
+test stored_message_ids_survive_repeated_reads ... ignored, requires isolated Postgres; makes no AI calls
+test research_status::research_status_preserves_workflow_meaning ... ok
+test world_deletion_cannot_queue_cleanup_for_another_users_world ... ignored, requires the isolated Postgres test database
+test world_deletion_commits_its_cleanup_job ... ignored, requires the isolated Postgres test database
+test world_deletion_rolls_back_when_cleanup_job_insertion_fails ... ignored, requires the isolated Postgres test database
+test world_reads_conflict_pages_preserve_filters_and_scope ... ignored, requires Memgraph; makes no AI calls
+test world_reads_reject_foreign_users_and_missing_records ... ignored, requires isolated Postgres and live Memgraph; makes no AI calls
+test logging::request_failure_logs_hide_internal_payloads ... ok
+test tool_text_graph_conversion_preserves_normalized_values ... ok
+test tool_text_search_rejects_invalid_queries_before_execution ... ok
+test tool_text_schemas_publish_string_length_bounds ... ok
+test tool_text_graph_rejects_invalid_names_aliases_and_descriptions ... ok
+test logging::request_logs_hide_query_credentials_and_body ... ok
+
+test result: ok. 11 passed; 0 failed; 61 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

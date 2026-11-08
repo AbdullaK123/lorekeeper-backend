@@ -1,0 +1,93 @@
+    Blocking waiting for file lock on build directory
+   Compiling lorekeeper-backend v0.1.0 (/root/lorekeeper-backend)
+warning: unused import: `crate::app::world`
+ --> src/data/repositories/conversation.rs:1:5
+  |
+1 | use crate::app::world;
+  |     ^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `crate::data::ResearchStatus::NotSubmitted`
+ --> src/data/models/conversations.rs:1:5
+  |
+1 | use crate::data::ResearchStatus::NotSubmitted;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: ambiguous glob re-exports
+ --> src/data/mod.rs:5:9
+  |
+5 | pub use repositories::*;
+  |         ^^^^^^^^^^^^^^^ the name `graph` in the type namespace is first re-exported here
+6 | pub use models::*;
+  |         --------- but the name `graph` in the type namespace is also re-exported here
+  |
+  = note: `#[warn(ambiguous_glob_reexports)]` on by default
+
+warning: ambiguous glob re-exports
+ --> src/data/mod.rs:5:9
+  |
+5 | pub use repositories::*;
+  |         ^^^^^^^^^^^^^^^ the name `user` in the type namespace is first re-exported here
+6 | pub use models::*;
+  |         --------- but the name `user` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+ --> src/data/mod.rs:5:9
+  |
+5 | pub use repositories::*;
+  |         ^^^^^^^^^^^^^^^ the name `world` in the type namespace is first re-exported here
+6 | pub use models::*;
+  |         --------- but the name `world` in the type namespace is also re-exported here
+
+warning: unused import: `ResolveConflictRequest`
+ --> src/service/world.rs:4:27
+  |
+4 |     RelationshipResponse, ResolveConflictRequest, UpdateWorldRequest, WorldRepository,
+  |                           ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `serde::Serialize`
+  --> src/service/conversation.rs:12:5
+   |
+12 | use serde::Serialize;
+   |     ^^^^^^^^^^^^^^^^
+
+warning: fields `pool` and `graph` are never read
+  --> src/app/app.rs:23:5
+   |
+22 | pub struct AppState {
+   |            -------- fields in this struct
+23 |     pool: PgPool,
+   |     ^^^^
+24 |     graph: Graph,
+   |     ^^^^^
+   |
+   = note: `AppState` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `lorekeeper-backend` (lib test) generated 8 warnings (run `cargo fix --lib -p lorekeeper-backend --tests` to apply 4 suggestions)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 59.71s
+warning: the following packages contain code that will be rejected by a future version of Rust: proc-macro-error2 v2.0.1
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
+     Running unittests src/lib.rs (target/debug/deps/lorekeeper_backend-77dfcd278e161a86)
+
+running 16 tests
+test data::repositories::user::tests::auth_tokens_concurrent_consumers_cannot_both_succeed ... ok
+test data::repositories::user::tests::auth_tokens_concurrent_password_updates_cannot_both_commit ... ok
+test data::repositories::user::tests::auth_tokens_expired_token_cannot_be_consumed ... ok
+test data::repositories::user::tests::auth_tokens_purpose_lifetimes_are_not_swapped ... ok
+test data::repositories::user::tests::auth_tokens_reissue_invalidates_the_previous_link ... ok
+test data::repositories::user::tests::auth_tokens_reset_commits_password_with_token_consumption ... ok
+test data::repositories::user::tests::auth_tokens_reset_failure_restores_consumed_token ... ok
+test data::repositories::user::tests::auth_tokens_reset_secret_cannot_be_replayed_through_service ... ok
+test data::repositories::user::tests::auth_tokens_reset_with_expired_secret_cannot_change_password ... ok
+test data::repositories::user::tests::auth_tokens_reset_with_invalid_secret_cannot_change_password ... ok
+test data::repositories::user::tests::auth_tokens_valid_token_cannot_be_reused ... ok
+test data::repositories::user::tests::auth_tokens_verification_failure_restores_consumed_token ... ok
+test data::repositories::user::tests::auth_tokens_verification_rollback_restores_account_and_token ... ok
+test data::repositories::user::tests::auth_tokens_wrong_hash_does_not_consume_a_valid_link ... ok
+test data::repositories::user::tests::auth_tokens_wrong_purpose_cannot_consume_the_token ... ok
+test data::repositories::user::tests::auth_tokens_wrong_user_cannot_consume_the_token ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 14 filtered out; finished in 9.91s
+

@@ -1,0 +1,239 @@
+
+running 59 tests
+test auth_tokens::auth_tokens_concurrent_consumers_cannot_both_succeed ... ok
+test auth_tokens::auth_tokens_expired_token_cannot_be_consumed ... ok
+test auth_tokens::auth_tokens_purpose_lifetimes_are_not_swapped ... ok
+test auth_tokens::auth_tokens_reissue_invalidates_the_previous_link ... ok
+test auth_tokens::auth_tokens_reset_commits_password_with_token_consumption ... ok
+test auth_tokens::auth_tokens_reset_failure_restores_consumed_token ... ok
+test auth_tokens::auth_tokens_reset_secret_cannot_be_replayed_through_service ... ok
+test auth_tokens::auth_tokens_reset_with_expired_secret_cannot_change_password ... ok
+test auth_tokens::auth_tokens_reset_with_invalid_secret_cannot_change_password ... ok
+test auth_tokens::auth_tokens_valid_token_cannot_be_reused ... ok
+test auth_tokens::auth_tokens_verification_rollback_restores_account_and_token ... ok
+test auth_tokens::auth_tokens_wrong_hash_does_not_consume_a_valid_link ... ok
+test auth_tokens::auth_tokens_wrong_purpose_cannot_consume_the_token ... ok
+test auth_tokens::auth_tokens_wrong_user_cannot_consume_the_token ... ok
+test chat_agent_has_no_graph_write_tools ... ok
+test chat_canon_context::current_lore_is_system_context_without_rewriting_old_user_messages ... ok
+test cleanup_retries_failed_job_removal_without_blocking_other_jobs ... ok
+test concurrent_message_appends_do_not_lose_writes ... ok
+test conflict_lookup_empty_world_uses_object_arguments ... ok
+test conflict_lookup_excludes_resolved_and_foreign_records ... ok
+test conflict_message_sources_accumulate_without_duplicates ... ok
+test conflict_targets::accepted_description_does_not_keep_old_search_embedding ... ok
+test conflict_targets::conflict_targets_reject_foreign_entities ... ok
+test conflict_targets::conflict_targets_reject_non_property_labels ... ok
+test conflict_targets::conflict_targets_report_then_accept_saved_property ... ok
+test dbos_research_registration_starts_and_shuts_down ... 2026-11-08T07:47:54.148270Z  INFO adversarial_live::app::app: initializing application
+2026-11-08T07:47:54.148763Z  INFO adversarial_live::infrastructure::database: connecting to Postgres max_connections=20
+2026-11-08T07:47:54.227397Z  INFO adversarial_live::infrastructure::database: Postgres pool ready
+2026-11-08T07:47:54.227509Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:47:54.227756Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:47:54.228886Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:47:54.228953Z  INFO adversarial_live::app::app: assembling application services
+2026-11-08T07:47:54.288849Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T07:47:54.364711Z  INFO adversarial_live::app::app: graph constraints and indexes ready
+2026-11-08T07:47:54.366446Z  INFO adversarial_live::app::dbos: initializing DBOS research workflow
+2026-11-08T07:47:55.235584Z  INFO sqlx::postgres::notice: trigger "dbos_streams_trigger" for relation "dbos.streams" does not exist, skipping
+2026-11-08T07:47:55.422238Z  INFO dbos::instance: DBOS launched app_name="lorekeeper" executor_id="local" app_version="dev-v1"
+2026-11-08T07:47:55.422446Z  INFO adversarial_live::app::dbos: DBOS research workflow ready
+2026-11-08T07:47:55.565492Z  INFO dbos::connection: DBOS client connected app_name="<none>"
+2026-11-08T07:47:55.566951Z  INFO tokio_cron_scheduler::job_scheduler: Uninited
+2026-11-08T07:47:55.568001Z  INFO tokio_cron_scheduler::job_scheduler: Job creator created
+2026-11-08T07:47:55.568062Z  INFO adversarial_live::cron_worker: world cleanup scheduler started interval_seconds=5
+2026-11-08T07:47:55.568107Z  INFO adversarial_live::app::app: application services ready
+2026-11-08T07:47:55.584178Z  INFO adversarial_live::app::playground: serving development playground at /
+2026-11-08T07:47:55.585105Z  INFO adversarial_live::app::app: application routes and middleware ready
+2026-11-08T07:47:55.585581Z  INFO dbos::instance: cancelled workflows still running; they stay PENDING cancelled=2
+2026-11-08T07:47:55.587375Z  INFO dbos::instance: DBOS shut down app_name="lorekeeper"
+ok
+test durable_research::durable_research_invalid_arguments_return_to_model ... 2026-11-08T07:47:55.781996Z  INFO sqlx::postgres::notice: schema "dbos" already exists, skipping
+2026-11-08T07:47:55.784476Z  INFO sqlx::postgres::notice: relation "dbos_migrations" already exists, skipping
+2026-11-08T07:47:55.822092Z  INFO dbos::instance: DBOS launched app_name="test-ea6609d1-7afe-4bd5-a9aa-586bee9843ad" executor_id="test-ea6609d1-7afe-4bd5-a9aa-586bee9843ad" app_version="test-ea6609d1-7afe-4bd5-a9aa-586bee9843ad"
+2026-11-08T07:47:55.978990Z  INFO dbos::instance: cancelled workflows still running; they stay PENDING cancelled=2
+2026-11-08T07:47:55.980005Z  INFO dbos::instance: DBOS shut down app_name="test-ea6609d1-7afe-4bd5-a9aa-586bee9843ad"
+ok
+test durable_research::durable_research_restart_skips_recorded_model_and_tool_calls ... 2026-11-08T07:47:56.154419Z  INFO sqlx::postgres::notice: schema "dbos" already exists, skipping
+2026-11-08T07:47:56.157757Z  INFO sqlx::postgres::notice: relation "dbos_migrations" already exists, skipping
+2026-11-08T07:47:56.184267Z  INFO dbos::instance: DBOS launched app_name="test-9d84a8b2-b294-4ae4-8fb0-f02fc00a0c57" executor_id="test-9d84a8b2-b294-4ae4-8fb0-f02fc00a0c57" app_version="test-9d84a8b2-b294-4ae4-8fb0-f02fc00a0c57"
+2026-11-08T07:47:56.320318Z  INFO dbos::instance: cancelled workflows still running; they stay PENDING cancelled=3
+2026-11-08T07:47:56.323665Z  INFO dbos::instance: DBOS shut down app_name="test-9d84a8b2-b294-4ae4-8fb0-f02fc00a0c57"
+2026-11-08T07:47:56.495180Z  INFO sqlx::postgres::notice: schema "dbos" already exists, skipping
+2026-11-08T07:47:56.497137Z  INFO sqlx::postgres::notice: relation "dbos_migrations" already exists, skipping
+2026-11-08T07:47:56.544021Z  INFO dbos::recovery: re-enqueued workflows a previous run left PENDING workflows=1
+2026-11-08T07:47:56.544079Z  INFO dbos::instance: DBOS launched app_name="test-9d84a8b2-b294-4ae4-8fb0-f02fc00a0c57" executor_id="test-9d84a8b2-b294-4ae4-8fb0-f02fc00a0c57" app_version="test-9d84a8b2-b294-4ae4-8fb0-f02fc00a0c57"
+2026-11-08T07:47:56.728136Z  WARN dbos::sysdb::postgres: workflow already exists on a different queue; the stored queue is kept workflow_id=e8c5ef86-c4e9-4946-b797-48bd5b3cd855 stored=Some("_dbos_internal_queue") provided=None
+2026-11-08T07:47:56.734585Z  INFO dbos::instance: cancelled workflows still running; they stay PENDING cancelled=2
+2026-11-08T07:47:56.736334Z  INFO dbos::instance: DBOS shut down app_name="test-9d84a8b2-b294-4ae4-8fb0-f02fc00a0c57"
+ok
+test durable_research::durable_research_reuses_completed_workflow ... 2026-11-08T07:47:57.042967Z  INFO sqlx::postgres::notice: schema "dbos" already exists, skipping
+2026-11-08T07:47:57.045264Z  INFO sqlx::postgres::notice: relation "dbos_migrations" already exists, skipping
+2026-11-08T07:47:57.241614Z  INFO dbos::instance: DBOS launched app_name="test-ed031cad-1f74-40d3-a05c-8914c3501384" executor_id="test-ed031cad-1f74-40d3-a05c-8914c3501384" app_version="test-ed031cad-1f74-40d3-a05c-8914c3501384"
+2026-11-08T07:47:57.652545Z  INFO dbos::instance: cancelled workflows still running; they stay PENDING cancelled=2
+2026-11-08T07:47:57.654317Z  INFO dbos::instance: DBOS shut down app_name="test-ed031cad-1f74-40d3-a05c-8914c3501384"
+ok
+test durable_research::durable_research_unknown_tool_fails_without_execution ... 2026-11-08T07:47:58.089000Z  INFO sqlx::postgres::notice: schema "dbos" already exists, skipping
+2026-11-08T07:47:58.091307Z  INFO sqlx::postgres::notice: relation "dbos_migrations" already exists, skipping
+2026-11-08T07:47:58.157665Z  INFO dbos::instance: DBOS launched app_name="test-9e2d1b89-2432-4fde-b07d-d145b1acd5b2" executor_id="test-9e2d1b89-2432-4fde-b07d-d145b1acd5b2" app_version="test-9e2d1b89-2432-4fde-b07d-d145b1acd5b2"
+2026-11-08T07:47:58.349973Z  WARN workflow{workflow_id=9ca4ab35-616d-4796-98fc-31a741bd83c8 name=research}: adversarial_live::service::ai::researcher: research model produced an invalid tool request
+2026-11-08T07:47:58.362008Z  INFO dbos::instance: cancelled workflows still running; they stay PENDING cancelled=2
+2026-11-08T07:47:58.364093Z  INFO dbos::instance: DBOS shut down app_name="test-9e2d1b89-2432-4fde-b07d-d145b1acd5b2"
+ok
+test graph_batch_foreign_endpoint_rolls_back_changes ... 2026-11-08T07:47:58.366926Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:47:58.367119Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:47:58.367808Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:47:58.369770Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T07:47:58.540667Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-foreign-c42d41b8-71ca-444b-8168-9abb81028fce" entities=1 relationships=0 retractions=0
+2026-11-08T07:47:58.673747Z  WARN adversarial_live::data::repositories::graph: graph batch failed; rolling back world_id="qa-graph-f527e9a0-92f1-4e3f-a01d-0e4156db66a6"
+ok
+test graph_batch_missing_endpoint_rolls_back_entities ... 2026-11-08T07:47:58.789396Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:47:58.789599Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:47:58.791017Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:47:58.791445Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T07:47:58.857599Z  WARN adversarial_live::data::repositories::graph: graph batch failed; rolling back world_id="qa-graph-30beea03-cf1e-49dd-8f28-12948b9cd936"
+ok
+test graph_batch_rejects_retargeting_saved_relationship_id ... 2026-11-08T07:47:58.866336Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:47:58.866453Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:47:58.866972Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:47:58.867790Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T07:47:59.345023Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-516d0f0d-38e5-42bb-b6eb-3013e5015d56" entities=3 relationships=1 retractions=0
+2026-11-08T07:47:59.349209Z  WARN adversarial_live::data::repositories::graph: graph batch failed; rolling back world_id="qa-graph-516d0f0d-38e5-42bb-b6eb-3013e5015d56"
+ok
+test graph_batch_retry_preserves_distinct_connections ... 2026-11-08T07:47:59.437690Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:47:59.437861Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:47:59.438561Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:47:59.439725Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T07:47:59.884771Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-39d2212c-6886-45e9-b143-ec88894427c7" entities=2 relationships=0 retractions=0
+2026-11-08T07:47:59.903439Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-39d2212c-6886-45e9-b143-ec88894427c7" entities=0 relationships=2 retractions=0
+2026-11-08T07:47:59.917571Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-39d2212c-6886-45e9-b143-ec88894427c7" entities=0 relationships=2 retractions=0
+2026-11-08T07:47:59.962655Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-39d2212c-6886-45e9-b143-ec88894427c7" entities=0 relationships=0 retractions=1
+ok
+test graph_delete_entity_removes_attached_conflicts ... 2026-11-08T07:48:00.052512Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:48:00.052663Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:48:00.053414Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:48:00.053656Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T07:48:00.385825Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-0a917f06-423b-49f2-956a-0c9212c4fb35" entities=1 relationships=0 retractions=0
+2026-11-08T07:48:00.408915Z  INFO neo4rs::pool: creating new connection...
+ok
+test graph_entity_properties_round_trip_without_loss ... 2026-11-08T07:48:00.470911Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:48:00.471079Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:48:00.471848Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:48:00.472286Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T07:48:00.633856Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-9e8a684b-6eb4-4f03-9583-90c889aa95cd" entities=1 relationships=0 retractions=0
+ok
+test graph_page_empty_world_has_no_cursor_or_edges ... 2026-11-08T07:48:00.649442Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:48:00.649657Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:48:00.650727Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:48:00.657845Z  INFO neo4rs::pool: creating new connection...
+ok
+test graph_page_exact_limit_has_no_next_cursor ... 2026-11-08T07:48:00.684946Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:48:00.685111Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:48:00.686294Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:48:00.689488Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T07:48:00.832010Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-fb8ea7bd-c62c-43ca-a017-eea9cf8417a6" entities=1 relationships=0 retractions=0
+ok
+test graph_page_keeps_edges_within_its_nodes_and_world ... 2026-11-08T07:48:00.891874Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:48:00.892058Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:48:00.892947Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:48:00.893237Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T07:48:01.450291Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-0c2de750-443e-4774-a0f9-179ed022b9e5" entities=3 relationships=3 retractions=0
+2026-11-08T07:48:01.636677Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-8631c583-1ed5-4cd0-8bd9-e867b7346ca2" entities=1 relationships=0 retractions=0
+2026-11-08T07:48:01.637296Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:48:01.637429Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:48:01.638513Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:48:01.638705Z  INFO neo4rs::pool: creating new connection...
+ok
+test graph_page_rejects_invalid_limits_and_cursors ... 2026-11-08T07:48:01.896696Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:48:01.896920Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:48:01.897994Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+ok
+test graph_relationship_injection_is_rejected ... 2026-11-08T07:48:01.900213Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:48:01.900397Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:48:01.901306Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+ok
+test graph_relationship_retry_does_not_duplicate_edges ... 2026-11-08T07:48:01.903748Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:48:01.903977Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:48:01.905014Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:48:01.905373Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T07:48:02.112942Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-01ec5f8b-17b0-4ee2-b3d7-5638e6efbf76" entities=1 relationships=0 retractions=0
+2026-11-08T07:48:02.258789Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-01ec5f8b-17b0-4ee2-b3d7-5638e6efbf76" entities=1 relationships=0 retractions=0
+2026-11-08T07:48:02.276845Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-01ec5f8b-17b0-4ee2-b3d7-5638e6efbf76" entities=0 relationships=1 retractions=0
+2026-11-08T07:48:02.290843Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-01ec5f8b-17b0-4ee2-b3d7-5638e6efbf76" entities=0 relationships=1 retractions=0
+ok
+test graph_relationships_cannot_cross_worlds ... 2026-11-08T07:48:02.299128Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:48:02.299277Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:48:02.300190Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:48:02.302524Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T07:48:02.456904Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-751de394-529e-44ec-bf10-45a312504243" entities=1 relationships=0 retractions=0
+2026-11-08T07:48:02.631747Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-3c3c429a-c4eb-4128-a9a3-882f7f336423" entities=1 relationships=0 retractions=0
+2026-11-08T07:48:02.648342Z  WARN adversarial_live::data::repositories::graph: graph batch failed; rolling back world_id="qa-graph-751de394-529e-44ec-bf10-45a312504243"
+ok
+test graph_retry_preserves_entity_identity ... 2026-11-08T07:48:02.657460Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:48:02.658066Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:48:02.658576Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:48:02.659131Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T07:48:02.805508Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-c6a7ad39-4ac5-47ea-9a03-c71e26a323b9" entities=1 relationships=0 retractions=0
+2026-11-08T07:48:02.969431Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-c6a7ad39-4ac5-47ea-9a03-c71e26a323b9" entities=1 relationships=0 retractions=0
+ok
+test graph_source_message_ids_accumulate_without_duplicates ... 2026-11-08T07:48:02.984004Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:48:02.984145Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:48:02.984666Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:48:02.984862Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T07:48:03.239964Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-53a01bdc-e756-49c7-b088-811d1c8a0b12" entities=2 relationships=1 retractions=0
+2026-11-08T07:48:03.529075Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-53a01bdc-e756-49c7-b088-811d1c8a0b12" entities=2 relationships=1 retractions=0
+2026-11-08T07:48:03.875659Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-53a01bdc-e756-49c7-b088-811d1c8a0b12" entities=2 relationships=1 retractions=0
+ok
+test legacy_graph_records_without_source_ids_remain_readable ... 2026-11-08T07:48:04.011091Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:48:04.011429Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:48:04.013113Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:48:04.016035Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T07:48:04.382552Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-legacy-sources-533184c5-146e-463b-b5b1-8901879e358e" entities=2 relationships=1 retractions=0
+ok
+test message_id_migration_preserves_history_and_existing_ids ... ok
+test message_lookup::message_lookup_preserves_each_stored_role ... ok
+test message_lookup::message_lookup_rejects_wrong_scope_and_missing_sources ... ok
+test message_lookup::message_lookup_returns_none_after_conversation_deletion ... ok
+test research_retry::missing_research_uses_only_earlier_messages ... 2026-11-08T07:48:05.850377Z  INFO sqlx::postgres::notice: schema "dbos" already exists, skipping
+2026-11-08T07:48:05.854143Z  INFO sqlx::postgres::notice: relation "dbos_migrations" already exists, skipping
+2026-11-08T07:48:05.898758Z  INFO dbos::instance: DBOS launched app_name="retry-test-f7d91a61-d56a-4932-987d-30748c4b8db0" executor_id="retry-test-f7d91a61-d56a-4932-987d-30748c4b8db0" app_version="retry-test-f7d91a61-d56a-4932-987d-30748c4b8db0"
+2026-11-08T07:48:06.187672Z  INFO dbos::connection: DBOS client connected app_name="<none>"
+2026-11-08T07:48:06.188151Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:48:06.188261Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:48:06.188815Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:48:06.309342Z  INFO conversation.retry_research{world_id=01a1ba20-f93a-73c9-ad41-201bbe4f9367 user_id=7837ff17-92b5-4b48-be88-e7a99f87ce92 message_id=6a3aee8c-8f24-415e-a40c-811c187ade38}: adversarial_live::service::conversation: research retry submitted workflow_id=6a3aee8c-8f24-415e-a40c-811c187ade38
+2026-11-08T07:48:06.370968Z  INFO dbos::instance: cancelled workflows still running; they stay PENDING cancelled=2
+2026-11-08T07:48:06.372832Z  INFO dbos::instance: DBOS shut down app_name="retry-test-f7d91a61-d56a-4932-987d-30748c4b8db0"
+ok
+test researcher_agent_has_complete_lore_tools ... 2026-11-08T07:48:06.404996Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:48:06.405373Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:48:06.407411Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+ok
+test researcher_read_preserves_details_and_rejects_foreign_entities ... 2026-11-08T07:48:06.414270Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:48:06.414421Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:48:06.414955Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:48:06.415246Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T07:48:06.721096Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-c2914cee-4dd0-470e-a42d-c0008dc9d767" entities=2 relationships=1 retractions=0
+ok
+test stored_message_ids_survive_repeated_reads ... ok
+test world_deletion_cannot_queue_cleanup_for_another_users_world ... ok
+test world_deletion_commits_its_cleanup_job ... 2026-11-08T07:48:07.278793Z  INFO adversarial_live::data::repositories::world: world deletion and graph cleanup job committed world_id=01a1ba20-ffd8-7c5e-85b5-b0460032371f
+ok
+test world_deletion_rolls_back_when_cleanup_job_insertion_fails ... ok
+test world_reads_conflict_pages_preserve_filters_and_scope ... 2026-11-08T07:48:07.474531Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:48:07.474712Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:48:07.475476Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:48:07.476015Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T07:48:07.639002Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="qa-graph-640c10a6-b267-4899-8485-0295eef628c7" entities=1 relationships=0 retractions=0
+ok
+test world_reads_reject_foreign_users_and_missing_records ... 2026-11-08T07:48:07.848720Z  INFO adversarial_live::infrastructure::database: connecting to Memgraph max_connections=10
+2026-11-08T07:48:07.848839Z  INFO neo4rs::pool: creating connection pool with max size 10
+2026-11-08T07:48:07.849330Z  INFO adversarial_live::infrastructure::database: Memgraph connection ready
+2026-11-08T07:48:07.849466Z  INFO neo4rs::pool: creating new connection...
+2026-11-08T07:48:08.149527Z  INFO adversarial_live::data::repositories::graph: graph batch committed world_id="01a1ba21-021d-76bc-a426-ce601cf05c76" entities=2 relationships=1 retractions=0
+2026-11-08T07:48:08.238972Z  INFO world.resolve_conflict{conflict_id=52f73ea7-414e-444d-b579-2173bbcfe0eb world_id=01a1ba21-021d-76bc-a426-ce601cf05c76 user_id=75b3055c-d11e-422d-9299-8f1c7038f409}: adversarial_live::service::world: keep-existing conflict decision saved
+2026-11-08T07:48:08.253051Z  INFO world.resolve_conflict{conflict_id=52f73ea7-414e-444d-b579-2173bbcfe0eb world_id=01a1ba21-021d-76bc-a426-ce601cf05c76 user_id=75b3055c-d11e-422d-9299-8f1c7038f409}: adversarial_live::service::world: keep-existing conflict decision saved
+ok
+
+test result: ok. 59 passed; 0 failed; 0 ignored; 0 measured; 27 filtered out; finished in 27.02s
+

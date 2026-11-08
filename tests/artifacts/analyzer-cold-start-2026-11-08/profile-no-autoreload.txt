@@ -1,0 +1,403 @@
+2026-11-08T12:29:38.043390443+04:00  INFO server version 0.3.3105-standalone will start
+2026-11-08T12:29:38.043523468+04:00  INFO InitializeParams: {"processId":311133,"rootUri":"file:///root/lorekeeper-backend","capabilities":{"workspace":{"configuration":false},"textDocument":{"hover":{"contentFormat":["markdown","plaintext"]}},"window":{"workDoneProgress":true}},"initializationOptions":{"checkOnSave":true,"check":{"command":"check","allTargets":false,"extraArgs":[]},"cargo":{"allTargets":false,"autoreload":false,"targetDir":true,"extraArgs":["--jobs","2"],"buildScripts":{"enable":true},"extraEnv":{"SQLX_OFFLINE":"false","DATABASE_URL":"postgresql://dev:password@localhost:5433/app_db","CARGO_INCREMENTAL":"1"}},"numThreads":4,"lru":{"capacity":64},"cachePriming":{"enable":false},"procMacro":{"enable":true,"processes":1,"ignored":{"tracing-attributes":["instrument"]}},"diagnostics":{"disabled":["attribute-expansion-disabled"]},"files":{"exclude":["target",".git","playground/node_modules","playground/dist","tests/artifacts"]},"server":{"extraEnv":{"RA_PROFILE":"*@3>100","SQLX_OFFLINE":"false","DATABASE_URL":"postgresql://dev:password@localhost:5433/app_db"}}},"workspaceFolders":[{"uri":"file:///root/lorekeeper-backend","name":"lorekeeper-backend"}]}
+2026-11-08T12:29:38.044376861+04:00  INFO updating config from JSON: {
+  "checkOnSave": true,
+  "check": {
+    "command": "check",
+    "allTargets": false,
+    "extraArgs": []
+  },
+  "cargo": {
+    "allTargets": false,
+    "autoreload": false,
+    "targetDir": true,
+    "extraArgs": [
+      "--jobs",
+      "2"
+    ],
+    "buildScripts": {
+      "enable": true
+    },
+    "extraEnv": {
+      "SQLX_OFFLINE": "false",
+      "DATABASE_URL": "postgresql://dev:password@localhost:5433/app_db",
+      "CARGO_INCREMENTAL": "1"
+    }
+  },
+  "numThreads": 4,
+  "lru": {
+    "capacity": 64
+  },
+  "cachePriming": {
+    "enable": false
+  },
+  "procMacro": {
+    "enable": true,
+    "processes": 1,
+    "ignored": {
+      "tracing-attributes": [
+        "instrument"
+      ]
+    }
+  },
+  "diagnostics": {
+    "disabled": [
+      "attribute-expansion-disabled"
+    ]
+  },
+  "files": {
+    "exclude": [
+      "target",
+      ".git",
+      "playground/node_modules",
+      "playground/dist",
+      "tests/artifacts"
+    ]
+  },
+  "server": {
+    "extraEnv": {
+      "RA_PROFILE": "*@3>100",
+      "SQLX_OFFLINE": "false",
+      "DATABASE_URL": "postgresql://dev:password@localhost:5433/app_db"
+    }
+  }
+}
+2026-11-08T12:29:38.047852902+04:00  INFO discovered projects: [CargoToml(ManifestPath { file: AbsPathBuf("/root/lorekeeper-backend/Cargo.toml") })]
+2026-11-08T12:29:38.047923138+04:00  INFO initial config: Config {
+    discovered_projects_from_filesystem: [
+        CargoToml(
+            ManifestPath {
+                file: AbsPathBuf(
+                    "/root/lorekeeper-backend/Cargo.toml",
+                ),
+            },
+        ),
+    ],
+    discovered_projects_from_command: [],
+    workspace_roots: [
+        AbsPathBuf(
+            "/root/lorekeeper-backend",
+        ),
+    ],
+    caps: ClientCapabilities(
+        ClientCapabilities {
+            workspace: Some(
+                WorkspaceClientCapabilities {
+                    apply_edit: None,
+                    workspace_edit: None,
+                    did_change_configuration: None,
+                    did_change_watched_files: None,
+                    symbol: None,
+                    execute_command: None,
+                    workspace_folders: None,
+                    configuration: Some(
+                        false,
+                    ),
+                    semantic_tokens: None,
+                    code_lens: None,
+                    file_operations: None,
+                    inline_value: None,
+                    inlay_hint: None,
+                    diagnostics: None,
+                    folding_range: None,
+                    text_document_content: None,
+                },
+            ),
+            text_document: Some(
+                TextDocumentClientCapabilities {
+                    synchronization: None,
+                    filters: None,
+                    completion: None,
+                    hover: Some(
+                        HoverClientCapabilities {
+                            dynamic_registration: None,
+                            content_format: Some(
+                                [
+                                    Markdown,
+                                    PlainText,
+                                ],
+                            ),
+                        },
+                    ),
+                    signature_help: None,
+                    declaration: None,
+                    definition: None,
+                    type_definition: None,
+                    implementation: None,
+                    references: None,
+                    document_highlight: None,
+                    document_symbol: None,
+                    code_action: None,
+                    code_lens: None,
+                    document_link: None,
+                    color_provider: None,
+                    formatting: None,
+                    range_formatting: None,
+                    on_type_formatting: None,
+                    rename: None,
+                    folding_range: None,
+                    selection_range: None,
+                    publish_diagnostics: None,
+                    call_hierarchy: None,
+                    semantic_tokens: None,
+                    linked_editing_range: None,
+                    moniker: None,
+                    type_hierarchy: None,
+                    inline_value: None,
+                    inlay_hint: None,
+                    diagnostic: None,
+                    inline_completion: None,
+                },
+            ),
+            notebook_document: None,
+            window: Some(
+                WindowClientCapabilities {
+                    work_done_progress: Some(
+                        true,
+                    ),
+                    show_message: None,
+                    show_document: None,
+                },
+            ),
+            general: None,
+            experimental: None,
+        },
+    ),
+    root_path: AbsPathBuf(
+        "/root/lorekeeper-backend",
+    ),
+    snippets: [
+        Snippet {
+            postfix_triggers: [
+                "ok",
+            ],
+            prefix_triggers: [],
+            scope: Expr,
+            description: Some(
+                "Wrap the expression in a `Result::Ok`",
+            ),
+            snippet: "Ok(${receiver})",
+            requires: [],
+        },
+        Snippet {
+            postfix_triggers: [
+                "pinbox",
+            ],
+            prefix_triggers: [],
+            scope: Expr,
+            description: Some(
+                "Put the expression into a pinned `Box`",
+            ),
+            snippet: "Box::pin(${receiver})",
+            requires: [
+                ModPath {
+                    kind: Plain,
+                    segments: [
+                        Name {
+                            symbol: "std",
+                            ctx: (),
+                        },
+                        Name {
+                            symbol: "boxed",
+                            ctx: (),
+                        },
+                        Name {
+                            symbol: "Box",
+                            ctx: (),
+                        },
+                    ],
+                },
+            ],
+        },
+        Snippet {
+            postfix_triggers: [
+                "arc",
+            ],
+            prefix_triggers: [],
+            scope: Expr,
+            description: Some(
+                "Put the expression into an `Arc`",
+            ),
+            snippet: "Arc::new(${receiver})",
+            requires: [
+                ModPath {
+                    kind: Plain,
+                    segments: [
+                        Name {
+                            symbol: "std",
+                            ctx: (),
+                        },
+                        Name {
+                            symbol: "sync",
+                            ctx: (),
+                        },
+                        Name {
+                            symbol: "Arc",
+                            ctx: (),
+                        },
+                    ],
+                },
+            ],
+        },
+        Snippet {
+            postfix_triggers: [
+                "some",
+            ],
+            prefix_triggers: [],
+            scope: Expr,
+            description: Some(
+                "Wrap the expression in an `Option::Some`",
+            ),
+            snippet: "Some(${receiver})",
+            requires: [],
+        },
+        Snippet {
+            postfix_triggers: [
+                "err",
+            ],
+            prefix_triggers: [],
+            scope: Expr,
+            description: Some(
+                "Wrap the expression in a `Result::Err`",
+            ),
+            snippet: "Err(${receiver})",
+            requires: [],
+        },
+        Snippet {
+            postfix_triggers: [
+                "rc",
+            ],
+            prefix_triggers: [],
+            scope: Expr,
+            description: Some(
+                "Put the expression into an `Rc`",
+            ),
+            snippet: "Rc::new(${receiver})",
+            requires: [
+                ModPath {
+                    kind: Plain,
+                    segments: [
+                        Name {
+                            symbol: "std",
+                            ctx: (),
+                        },
+                        Name {
+                            symbol: "rc",
+                            ctx: (),
+                        },
+                        Name {
+                            symbol: "Rc",
+                            ctx: (),
+                        },
+                    ],
+                },
+            ],
+        },
+    ],
+    client_info: None,
+    client_config: (
+        FullConfigInput {
+            global: GlobalConfigInput {
+                cachePriming_enable: false,
+                files_exclude: [
+                    "target",
+                    ".git",
+                    "playground/node_modules",
+                    "playground/dist",
+                    "tests/artifacts",
+                ],
+                lru_capacity: Some(
+                    64,
+                ),
+                numThreads: Some(
+                    Concrete(
+                        4,
+                    ),
+                ),
+                procMacro_enable: true,
+                procMacro_processes: Concrete(
+                    1,
+                ),
+            },
+            workspace: WorkspaceConfigInput {
+                cargo_allTargets: false,
+                cargo_autoreload: false,
+                cargo_buildScripts_enable: true,
+                cargo_extraArgs: [
+                    "--jobs",
+                    "2",
+                ],
+                cargo_extraEnv: {
+                    "SQLX_OFFLINE": Some(
+                        "false",
+                    ),
+                    "DATABASE_URL": Some(
+                        "postgresql://dev:password@localhost:5433/app_db",
+                    ),
+                    "CARGO_INCREMENTAL": Some(
+                        "1",
+                    ),
+                },
+                cargo_targetDir: Some(
+                    UseSubdirectory(
+                        true,
+                    ),
+                ),
+                checkOnSave: true,
+                check_allTargets: Some(
+                    false,
+                ),
+                check_command: "check",
+                check_extraArgs: [],
+                procMacro_ignored: {
+                    "tracing-attributes": [
+                        "instrument",
+                    ],
+                },
+            },
+            local: LocalConfigInput {
+                diagnostics_disabled: {
+                    "attribute-expansion-disabled",
+                },
+            },
+            client: ClientConfigInput,
+        },
+        ConfigErrors(
+            [],
+        ),
+    ),
+    user_config: None,
+    ratoml_file: {},
+    source_root_parent_map: {},
+    validation_errors: ConfigErrors(
+        [],
+    ),
+    detached_files: [],
+}
+2026-11-08T12:29:38.052070569+04:00  INFO will fetch workspaces cause=startup
+2026-11-08T12:29:41.825772347+04:00  INFO did fetch workspaces workspaces=[Ok(Cargo { root: Some("lorekeeper-backend"), n_packages: 728, n_sysroot_crates: 26, n_rustc_compiler_crates: 0, n_rustc_cfg: 38, n_cfg_overrides: 2, n_extra_includes: 0, toolchain: Some(Version { major: 1, minor: 98, patch: 1 }), data_layout: Ok(TargetData { data_layout: "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-i128:128-f80:128-n8:16:32:64-S128", arch: Other }), set_test: true, build_scripts: "ok" })]
+2026-11-08T12:29:41.825954996+04:00  INFO GlobalState::handle_event{event=Event::Task}:GlobalState::switch_workspaces: will switch workspaces cause=fetched workspace
+2026-11-08T12:29:41.825960524+04:00  INFO GlobalState::handle_event{event=Event::Task}:GlobalState::switch_workspaces: cause=fetched workspace force_crate_graph_reload=false switching_from_empty_workspace=true
+2026-11-08T12:29:41.829031114+04:00  INFO GlobalState::handle_event{event=Event::Task}:GlobalState::switch_workspaces: abandon build scripts for workspaces
+2026-11-08T12:29:41.835512869+04:00  INFO GlobalState::handle_event{event=Event::Task}:GlobalState::switch_workspaces: Spawning proc-macro servers
+2026-11-08T12:29:41.83564369+04:00  INFO GlobalState::handle_event{event=Event::Task}:GlobalState::switch_workspaces: Spawning proc-macro server at /root/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/libexec/rust-analyzer-proc-macro-srv
+2026-11-08T12:29:41.84221037+04:00  INFO GlobalState::handle_event{event=Event::Task}:GlobalState::switch_workspaces: recreating the crate graph cause="fetched workspace"
+2026-11-08T12:29:41.842239941+04:00  INFO GlobalState::handle_event{event=Event::Task}:GlobalState::switch_workspaces: Building Crate Graph cause="fetched workspace"
+2026-11-08T12:29:41.853911805+04:00  INFO GlobalState::handle_event{event=Event::Task}:GlobalState::switch_workspaces:GlobalState::reload_flycheck: Spawning flycheck id=0 workspace_root=AbsPathBuf("/root/lorekeeper-backend")
+2026-11-08T12:29:41.855061734+04:00  INFO GlobalState::handle_event{event=Event::Task}:GlobalState::switch_workspaces: did switch workspaces
+2026-11-08T12:29:41.85509537+04:00  INFO GlobalState::handle_event{event=Event::Task}: will fetch build data cause=workspace updated
+2026-11-08T12:29:44.457173456+04:00  INFO GlobalState::handle_event{event=Event::Vfs}:GlobalState::handle_event/vfs:GlobalState::handle_vfs_msg:GlobalState::handle_vfs_msg/progress:vfs_load{total=742}:GlobalState::handle_event{event=Event::Vfs}:GlobalState::switch_workspaces: will switch workspaces cause=fetched build data
+2026-11-08T12:29:44.457255628+04:00  INFO GlobalState::handle_event{event=Event::Vfs}:GlobalState::handle_event/vfs:GlobalState::handle_vfs_msg:GlobalState::handle_vfs_msg/progress:vfs_load{total=742}:GlobalState::handle_event{event=Event::Vfs}:GlobalState::switch_workspaces: cause=fetched build data force_crate_graph_reload=false switching_from_empty_workspace=false
+2026-11-08T12:29:44.464420961+04:00  INFO GlobalState::handle_event{event=Event::Vfs}:GlobalState::handle_event/vfs:GlobalState::handle_vfs_msg:GlobalState::handle_vfs_msg/progress:vfs_load{total=742}:GlobalState::handle_event{event=Event::Vfs}:GlobalState::switch_workspaces: set build scripts to workspaces
+2026-11-08T12:29:44.469979384+04:00  INFO GlobalState::handle_event{event=Event::Vfs}:GlobalState::handle_event/vfs:GlobalState::handle_vfs_msg:GlobalState::handle_vfs_msg/progress:vfs_load{total=742}:GlobalState::handle_event{event=Event::Vfs}:GlobalState::switch_workspaces: same workspace, but new build data
+2026-11-08T12:29:44.482654508+04:00  INFO GlobalState::handle_event{event=Event::Vfs}:GlobalState::handle_event/vfs:GlobalState::handle_vfs_msg:GlobalState::handle_vfs_msg/progress:vfs_load{total=742}:GlobalState::handle_event{event=Event::Vfs}:GlobalState::switch_workspaces: recreating the crate graph cause="fetched build data"
+2026-11-08T12:29:44.482701759+04:00  INFO GlobalState::handle_event{event=Event::Vfs}:GlobalState::handle_event/vfs:GlobalState::handle_vfs_msg:GlobalState::handle_vfs_msg/progress:vfs_load{total=742}:GlobalState::handle_event{event=Event::Vfs}:GlobalState::switch_workspaces: Building Crate Graph cause="fetched build data"
+2026-11-08T12:29:45.054820939+04:00  INFO GlobalState::handle_event{event=Event::Vfs}:GlobalState::handle_event/vfs:GlobalState::handle_vfs_msg:GlobalState::handle_vfs_msg/progress:vfs_load{total=742}:GlobalState::handle_event{event=Event::Vfs}:GlobalState::switch_workspaces: did switch workspaces
+2026-11-08T12:29:46.138443982+04:00  INFO GlobalState::handle_event{event=Event::Vfs}:GlobalState::handle_event/vfs:GlobalState::handle_vfs_msg:GlobalState::handle_vfs_msg/progress:vfs_load{total=742}:GlobalState::handle_event{event=Event::Vfs}: will load proc macros cause=fetched build data
+    4283ms GlobalState::handle_event @ event = Event::Vfs 
+      4283ms GlobalState::handle_event/vfs
+        4283ms GlobalState::handle_vfs_msg
+     470ms GlobalState::handle_event @ event = Event::Vfs 
+       470ms GlobalState::handle_event/vfs
+         470ms GlobalState::handle_vfs_msg
+2026-11-08T12:29:46.642117579+04:00  INFO GlobalState::handle_event{event=Event::Task}:GlobalState::handle_event/task:GlobalState::reload_flycheck: Spawning flycheck id=0 workspace_root=AbsPathBuf("/root/lorekeeper-backend")

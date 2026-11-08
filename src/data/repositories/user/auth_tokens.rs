@@ -9,18 +9,18 @@ use crate::{
     infrastructure::InfrastructureError,
 };
 
-#[derive(Clone)]
-pub struct AuthTokenRepository {
-    pub pool: PgPool,
+#[derive(Clone, Debug)]
+pub(super) struct AuthTokenRepository {
+    pool: PgPool,
 }
 
 impl AuthTokenRepository {
-    pub fn new(pool: PgPool) -> Self {
+    pub(super) fn new(pool: PgPool) -> Self {
         Self { pool }
     }
 
     #[tracing::instrument(name = "repository.auth_token.upsert", level = "debug", skip_all, fields(user_id = %user_id))]
-    pub async fn upsert_token(
+    pub(super) async fn upsert_token(
         &self,
         user_id: Uuid,
         purpose: AuthTokenPurpose,
@@ -62,7 +62,7 @@ impl AuthTokenRepository {
     }
 
     #[tracing::instrument(name = "repository.auth_token.consume", level = "debug", skip_all, fields(user_id = %user_id))]
-    pub async fn consume_token(
+    pub(super) async fn consume_token(
         &self,
         user_id: Uuid,
         purpose: AuthTokenPurpose,

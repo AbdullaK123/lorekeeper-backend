@@ -1,0 +1,3 @@
+[build]
+# Limit memory pressure while compiling two crates in parallel.
+jobs = 2

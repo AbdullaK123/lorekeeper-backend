@@ -1,8 +1,6 @@
 use crate::app::{create_auth_controller, create_world_controller, setup_dbos};
 use crate::cron_worker::start_scheduler;
-use crate::data::{
-    AuthTokenRepository, ConversationRepository, GraphRepository, UserRepository, WorldRepository,
-};
+use crate::data::{ConversationRepository, GraphRepository, UserRepository, WorldRepository};
 use crate::infrastructure::{
     Settings, create_graph, create_pool, load_config, load_prompt, load_settings,
 };
@@ -63,16 +61,10 @@ async fn bootstrap(
     tracing::info!("assembling application services");
     let graph_repo = GraphRepository::new(graph.clone());
     let user_repo = UserRepository::new(pool.clone());
-    let auth_token_repo = AuthTokenRepository::new(pool.clone());
     let world_repo = WorldRepository::new(pool.clone());
     let conversation_repo = ConversationRepository::new(pool.clone());
-    let auth_service = AuthService::new(
-        pool.clone(),
-        user_repo,
-        auth_token_repo,
-        &settings.resend_api_key,
-        &settings.api_base_url,
-    );
+    let auth_service =
+        AuthService::new(user_repo, &settings.resend_api_key, &settings.api_base_url);
     let world_service = WorldService::new(world_repo.clone(), graph_repo.clone());
 
     graph_repo

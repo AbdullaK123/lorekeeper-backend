@@ -1,0 +1,13 @@
+
+running 8 tests
+test names_reject_direction_controls_and_nul ... ok
+test json_cannot_bypass_validation ... ok
+test field_types_enforce_their_limits ... ok
+test names_normalize_equivalent_spellings_and_hidden_padding ... ok
+test passwords_preserve_exact_contents ... ok
+test password_debug_output_hides_credentials ... ok
+test prose_preserves_lines_and_language_joiners ... ok
+test raw_padding_cannot_evade_length_limit ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

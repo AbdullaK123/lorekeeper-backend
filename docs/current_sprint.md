@@ -1,5 +1,122 @@
 # Current Sprint
 
+## User repository owns auth transactions — 2026-11-08
+
+Implemented the planned ownership refactor in repositories/user/mod.rs and its private auth_tokens child.
+UserRepository constructs the child and exposes issue_auth_token, reset_password_with_token, and verify_email_with_token.
+The parent consumes the token and changes the user on one connection, then commits or rolls back.
+AuthService no longer holds a pool or token repository. Hashing and email delivery stay outside transactions.
+Bootstrap supplies only UserRepository and email settings to AuthService. Existing SQL and token lifetimes stay unchanged; no migration is needed.
+All 14 existing auth database tests move beside the private child. Two added tests cover verification failure/retry/replay and concurrent password updates.
+All 16 pass against the isolated QA database in 9.91 seconds. All-target compilation passes with existing warnings.
+Changed Rust files pass formatting checks; git diff --check passes. No emails, model calls, browser tests, Docker rebuild, or deployment occur.
+Evidence: tests/artifacts/user-repository-ownership-2026-11-08/summary.md.
+Product scope and epic acceptance stay unchanged. Logged-out reset requests, confirmation pages, and session policy remain pending.
+The separate analyzer cold-start issue remains open; this refactor makes no startup performance claim.
+
+## User repository transaction ownership proposal — 2026-11-08
+
+Plan only: UserRepository owns its PgPool and privately constructs AuthTokenRepository from a cloned pool handle.
+Proposed layout: repositories/user/mod.rs for the parent and repositories/user/auth_tokens.rs for token queries.
+The parent exposes token issuance, reset_password_with_token, and verify_email_with_token.
+Reset and verification methods begin one transaction, consume the matching valid token through the child, update the user, then commit.
+A failed consume or user update rolls back; a missing user also rolls back before returning None. Preserve invalid-token and missing-user error distinctions.
+Existing user-update queries become private connection-aware helpers. The child receives that same PgConnection for consumption and never commits it.
+AuthService keeps password/submitted-token hashing, response mapping, URL building, and email delivery; its pool and direct token-repository dependency are removed.
+Bootstrap constructs only UserRepository for the auth data dependency. Email/provider work and password hashing remain outside database transactions.
+Adapt token lifecycle fixtures and retain rollback, replay, expiry, purpose, and concurrency coverage. No migration is proposed.
+No application code changes or tests occur in this planning turn. Product scope, priorities, and epic acceptance remain unchanged.
+
+## Analyzer cold-start source duplication — 2026-11-08
+
+The analyzer remains CPU-heavy with Cargo idle; one fresh instance reaches about 4.3 GB resident memory after two minutes.
+Confirmed main.rs and the integration harness independently declare the full application source tree.
+Excluding tests does not reduce observed memory use and is reverted. Disabling native diagnostics also leaves heavy startup work and is reverted.
+Added src/lib.rs. The binary and native integration harness now import that shared library rather than declaring application modules twice.
+Two existing researcher entry points used by integration tests are public across the new crate boundary; their bodies are unchanged.
+Test IDE services and native diagnostics remain enabled. No test assertions or application business logic change.
+Updated library-test commands and project layout documentation.
+Removed unused direct anyhow/clap dependencies; the full Cargo metadata package list drops from 823 to 810.
+Final all-target test compilation passes with warnings in 54.95 seconds.
+Library tests: 13 pass and the existing ranking failure remains. Integration pure tests: 11 pass; text-type tests: eight pass.
+All 59 free database regressions pass in 19.19 seconds. No emails or paid AI calls occur.
+Bounded profiling identifies costly VFS handling and repeated workspace fetches, but establishes no editor-startup speedup.
+Cold start remains open. The three settings experiments show no verified improvement and are reverted.
+Temporary RA_PROFILE/RA_LOG settings capture the next real editor startup. Full window reload is required: server restarts reuse old environment settings.
+Next: inspect the real startup trace and remove temporary profiling settings after diagnosis.
+Evidence: [cold-start investigation](../tests/artifacts/analyzer-cold-start-2026-11-08/summary.md).
+Editor startup improvement remains unverified. Scope, priorities, remaining product work, and epic acceptance stay unchanged.
+
+## Development compile and analyzer startup tuning — 2026-11-08
+
+Found rust-analyzer still forces CARGO_INCREMENTAL=0 and Cargo uses full default debug data.
+Enabled incremental reuse in the development profile and rust-analyzer's Cargo environment.
+Development debug data now uses line-tables-only; source-line backtraces remain, full debugger local/type data does not.
+Added a two-job Cargo default and changed the analyzer's Cargo invocation to two jobs.
+Release settings and separate IDE/terminal caches remain unchanged. No caches are deleted.
+Warmed the analyzer cache with online SQLx validation: profile-change preparation takes 231.29 seconds wall time.
+The unchanged repeat check passes in 5.18 seconds, including a package-cache lock wait. Both checks pass with warnings.
+This is not a changed-source rebuild or full IDE-startup benchmark; no before/after speedup is established.
+The separate terminal build cache can still need its first dependency rebuild with the new profile.
+Workspace JSONC and inherited Cargo arguments validate; whitespace checks pass.
+Evidence: [development build tuning](../tests/artifacts/development-build-tuning-2026-11-08/summary.md).
+README documents the tradeoff. No application logic, tests, email sends, or paid AI calls change or run.
+Actual editor startup and editing latency remain unmeasured. Story scope, delivery priorities, and acceptance stay unchanged.
+
+## Rust-analyzer responsiveness tuning — 2026-11-08
+
+Measured the active analyzer at about 3.2 GB resident RAM and 1.3 GB process swap on a 12-thread host.
+Language-server logs show garbage-collection pauses up to 2.28 seconds during file changes.
+Updated workspace settings: four analysis workers, 64 cached syntax trees, and ignored instrument expansion from tracing-attributes.
+Only the intentional attribute-expansion-disabled notice is suppressed; unlinked-file diagnostics remain enabled.
+SQLx, Askama, other macros, check-on-save, and online database checks remain enabled.
+Validated all rust-analyzer setting names against installed extension 0.3.3105 and parsed the workspace JSONC.
+The extension log confirms receipt of four workers and the ignored instrument configuration.
+Online SQLx API compilation passes with warnings in 1.06 seconds. Whitespace checks pass.
+The existing process still has its old worker count and memory footprint; reload the VS Code window to fully apply startup settings.
+Editing latency and memory improvements remain unmeasured. No application code, test run, email, or provider calls occur.
+Delivery priorities, story scope, and epic acceptance remain unchanged.
+
+## Module-tree IDE warning — 2026-11-08
+
+Verified repositories/mod.rs declares graph, and graph/mod.rs declares entities.
+The former graph.rs no longer exists; an open editor tab may still reference that deleted file.
+The source module chain is intact. The warning is consistent with stale rust-analyzer state after the file move.
+Next: close the deleted graph.rs tab and run rust-analyzer: Reload Workspace; restart the server if needed.
+IDE recovery is not yet confirmed. No application code or settings changes and no tests occur.
+Do not disable unlinked-file diagnostics. Delivery priorities, story scope, and acceptance remain unchanged.
+
+## GraphRepository child repository refactor — 2026-11-08
+
+Replaced graph.rs with graph/mod.rs and five private child repositories.
+The constructor assembles children from clones of the same Graph handle.
+Shared row and identifier helpers are private functions in helpers.rs.
+The parent delegates the existing API and coordinates graph pages, batch writes, and conflict acceptance.
+Children accept the parent's mutable transaction; only the parent commits or rolls back shared writes.
+Source comparison confirms all 41 Cypher literals and 33 public signatures are preserved.
+The first compile exposed an extracted transaction reborrow error; fixed before regression testing.
+All-target offline compilation passes with warnings in 40.38 seconds. Formatting and whitespace checks pass.
+Existing tests: 59 free database regressions pass in 27.02 seconds.
+The application pure target has 13 passes; the integration pure target has 24 passes.
+Both targets retain the same known duplicate-row ranking failure in unchanged in-memory ranking code.
+The full suite is not green. That previously discussed issue remains outside this refactor.
+No new tests, email sends, paid AI calls, browser run, Docker rebuild, or deployment occur.
+Evidence: [refactor checks](../tests/artifacts/graph-repository-refactor-2026-11-08/summary.md).
+Story scope, delivery priorities, and epic acceptance remain unchanged. Graph database regression checks pass.
+
+## GraphRepository split proposal — 2026-11-08
+
+Sketched child repositories for entities, relationships, conflicts, graph conversations, and graph maintenance.
+The parent constructor assembles children using clones of the same neo4rs Graph handle.
+The parent keeps the public API and coordinates get_graph, update_graph_batch, and accept_conflict.
+Children own queries. Cross-repository writes receive the same mutable transaction from the parent.
+Only the parent commits or rolls back cross-repository operations; no nested child transactions are proposed.
+Entity search stays with entities. Shared row helpers remain private functions; no generic repository abstraction is proposed.
+GraphConversationRepository remains distinct from the existing Postgres ConversationRepository.
+This is a proposal, not an implemented refactor. No application code changes or tests occur.
+Next: agree the split, then extract entity operations first while preserving existing signatures and behavior.
+Delivery priorities, story requirements, and epic acceptance remain unchanged.
+
 ## Auth logging gaps — 2026-11-07
 
 Added auth outcome events for rejected requests/tokens, transaction commits, rollbacks, and transaction failures.
