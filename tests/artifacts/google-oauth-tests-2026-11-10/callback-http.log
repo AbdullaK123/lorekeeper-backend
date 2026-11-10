@@ -1,0 +1,20 @@
+
+running 3 tests
+test app::app::oauth_callback_tests::google_callback_rejects_a_different_browser_state ... ok
+test app::app::oauth_callback_tests::google_cancellation_clears_state_without_creating_a_session ... ok
+test app::app::oauth_callback_tests::google_missing_attempt_failure_clears_the_state_cookie ... FAILED
+
+failures:
+
+---- app::app::oauth_callback_tests::google_missing_attempt_failure_clears_the_state_cookie stdout ----
+
+thread 'app::app::oauth_callback_tests::google_missing_attempt_failure_clears_the_state_cookie' (1551673) panicked at src/app/oauth_callback_tests.rs:174:5:
+Failed callback leaves a stale OAuth state cookie in the browser
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    app::app::oauth_callback_tests::google_missing_attempt_failure_clears_the_state_cookie
+
+test result: FAILED. 2 passed; 1 failed; 0 ignored; 0 measured; 43 filtered out; finished in 0.67s
+

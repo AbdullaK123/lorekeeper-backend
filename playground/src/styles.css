@@ -168,3 +168,6 @@ details[open] summary { margin-bottom: 8px; }
   .app { grid-template-rows: minmax(120px, 30vh) minmax(0, 1fr); }
   .sidebar { display: flex; border-bottom: 1px solid var(--line); }
 }
+
+.google-signin { border: 1px solid var(--line); background: var(--bg); min-height: 44px; }
+.google-signin:hover:not(:disabled) { background: var(--line); }

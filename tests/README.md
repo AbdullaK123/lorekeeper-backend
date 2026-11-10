@@ -238,3 +238,13 @@ Run with `ENV=dev` and `ENV=prod` to check the Secure flag. No signing-key setti
 
 The same workflow now covers email verification requests and confirmation, including expiry, wrong-user/invalid secrets, replay, persisted verification, and already-verified request rejection.
 Latest evidence: [verification HTTP checks](artifacts/email-verification-http-2026-11-08/summary.md).
+
+### Google OAuth local tests
+
+Use `DATABASE_URL=postgresql://dev:password@localhost:5433/lorekeeper_adversarial` and `SQLX_OFFLINE=true`.
+Run repository tests with `cargo test --offline --jobs 2 --lib data::repositories::user::tests:: -- --ignored --test-threads=1`.
+Run local token-server tests with `cargo test --offline --jobs 2 --lib service::auth::auth::oauth_tests:: -- --ignored --test-threads=1`.
+Callback router tests additionally require local Memgraph on 7687 and `OPENROUTER_API_KEY=qa-not-sent`:
+`cargo test --offline --jobs 2 --lib app::app::oauth_callback_tests:: -- --ignored --test-threads=1`.
+No Google discovery, real Google tokens, emails, or paid model requests occur.
+One callback-cookie cleanup test currently fails. [Results](artifacts/google-oauth-tests-2026-11-10/summary.md).

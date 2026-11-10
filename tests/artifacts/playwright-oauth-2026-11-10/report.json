@@ -1,0 +1,21 @@
+{
+  "scope": "Playground UI with controlled OAuth/session fixtures; no live provider calls",
+  "checks": [
+    {
+      "scenario": "success",
+      "passed": true
+    },
+    {
+      "scenario": "cancel",
+      "passed": true
+    },
+    {
+      "scenario": "blocked",
+      "passed": true
+    },
+    {
+      "scenario": "session-error",
+      "passed": true
+    }
+  ]
+}

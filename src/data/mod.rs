@@ -1,6 +1,6 @@
-pub mod repositories;
 pub mod errors;
 pub mod models;
+pub mod repositories;
 
-pub use repositories::*;
 pub use models::*;
+pub use repositories::*;

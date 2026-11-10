@@ -1,6 +1,6 @@
-use thiserror::Error;
-use sqlx;
 use neo4rs;
+use sqlx;
+use thiserror::Error;
 
 #[derive(Error, Debug)]
 pub enum InfrastructureError {
@@ -17,5 +17,5 @@ pub enum InfrastructureError {
     #[error("Invalid Cypher identifier: {0}")]
     CypherInjection(String),
     #[error("Internal error: {0}")]
-    InternalError(String)
+    InternalError(String),
 }

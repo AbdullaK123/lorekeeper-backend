@@ -14,6 +14,52 @@ function AuthScreen({ onAuthed }) {
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
 
+  const oauthCleanup = useRef(null);
+  useEffect(() => () => oauthCleanup.current?.(), []);
+
+  function googleLogin() {
+    const popup = window.open("/api/auth/google", "lorekeeper-google", "popup,width=520,height=720");
+    if (!popup) {
+      setError("Allow pop-ups, then try Google sign-in again.");
+      return;
+    }
+    setBusy(true);
+    setError("");
+    const deadline = Date.now() + 10 * 60 * 1000;
+    let stopped = false;
+    function stop() {
+      stopped = true;
+      clearTimeout(timer);
+      popup.close();
+      setBusy(false);
+    }
+    oauthCleanup.current = stop;
+    let timer;
+    async function check() {
+      try {
+        const user = await api.me();
+        if (stopped) return;
+        stop();
+        onAuthed(user);
+        return;
+      } catch (err) {
+        if (stopped) return;
+        if (err.status !== 401) {
+          stop();
+          setError("Could not check your session. Try signing in again.");
+          return;
+        }
+      }
+      if (popup.closed || Date.now() >= deadline) {
+        stop();
+        setError("Google sign-in did not finish. Please try again.");
+        return;
+      }
+      timer = setTimeout(check, 1000);
+    }
+    timer = setTimeout(check, 1000);
+  }
+
   async function submit(e) {
     e.preventDefault();
     setBusy(true);
@@ -35,6 +81,8 @@ function AuthScreen({ onAuthed }) {
         <div className="brand">
           <span className="brand-mark" aria-hidden>◈</span> Lorekeeper <span className="tag">playground</span>
         </div>
+        <button type="button" className="google-signin" disabled={busy} onClick={googleLogin}>Continue with Google</button>
+        <p className="muted small">Google opens in a separate window. Close it if sign-in fails or you cancel.</p>
         <div className="seg" role="tablist">
           <button type="button" role="tab" aria-selected={mode === "login"} className={mode === "login" ? "on" : ""} onClick={() => setMode("login")}>Log in</button>
           <button type="button" role="tab" aria-selected={mode === "signup"} className={mode === "signup" ? "on" : ""} onClick={() => setMode("signup")}>Sign up</button>
@@ -49,7 +97,7 @@ function AuthScreen({ onAuthed }) {
           {mode === "signup" && <span className="hint">8+ chars, upper + lower case, a number, a symbol.</span>}
         </label>
         {error && <p className="error" role="alert">{error}</p>}
-        <button className="primary" disabled={busy}>{busy ? "…" : mode === "login" ? "Log in" : "Create account"}</button>
+        <button className="primary" disabled={busy}>{busy ? "Signing in…" : mode === "login" ? "Log in" : "Create account"}</button>
       </form>
     </div>
   );

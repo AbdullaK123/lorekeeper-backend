@@ -44,6 +44,27 @@ npm run dev
 Open http://localhost:5173. Vite proxies /api requests to the backend's normal routes.
 The built static copy and live-reload copy use the same client paths.
 
+## Google sign-in
+
+Select **Continue with Google** on the login or signup screen.
+Allow the sign-in window. The playground checks `/auth/me` once per second.
+After login, it closes the window and loads your account.
+If Google reports an error, close the window and retry.
+The check stops after ten minutes, on session-check errors, or when you close the window.
+The backend still returns JSON from its callback. No callback redirect changes are needed.
+Use the same hostname for the playground and `API_BASE_URL`, so cookies reach both.
+The backend must run the current Google routes and have working Google credentials.
+
+Browser regression test:
+
+```sh
+PLAYWRIGHT_MODULE=/path/to/playwright/index.mjs \
+PLAYWRIGHT_CHROMIUM_EXECUTABLE=/path/to/chromium \
+QA_BASE_URL=http://127.0.0.1:5173 node tests/playwright_oauth.mjs
+```
+
+This test uses controlled OAuth/session responses. It checks the UI, not Google's live service.
+
 ## Chat and stream
 
 1. Log in or create a test account.

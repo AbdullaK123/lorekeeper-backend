@@ -1,0 +1,14 @@
+
+running 9 tests
+test service::auth::auth::oauth_tests::google_completion_creates_a_verified_user_and_usable_session ... ok
+test service::auth::auth::oauth_tests::google_expired_attempt_cannot_reach_the_token_server ... ok
+test service::auth::auth::oauth_tests::google_expired_id_token_cannot_create_an_account ... ok
+test service::auth::auth::oauth_tests::google_missing_email_cannot_create_an_account ... ok
+test service::auth::auth::oauth_tests::google_unverified_email_cannot_create_an_account ... ok
+test service::auth::auth::oauth_tests::google_wrong_audience_cannot_create_an_account ... ok
+test service::auth::auth::oauth_tests::google_wrong_issuer_cannot_create_an_account ... ok
+test service::auth::auth::oauth_tests::google_wrong_nonce_cannot_create_an_account ... ok
+test service::auth::auth::oauth_tests::google_wrong_signature_cannot_create_an_account ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 34 filtered out; finished in 1.46s
+

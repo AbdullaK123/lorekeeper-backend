@@ -137,3 +137,7 @@ async fn bootstrap(
     tracing::info!("application services ready");
     (app_state, scheduler, dbos)
 }
+
+#[cfg(test)]
+#[path = "oauth_callback_tests.rs"]
+mod oauth_callback_tests;

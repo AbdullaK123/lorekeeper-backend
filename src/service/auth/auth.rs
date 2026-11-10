@@ -318,3 +318,7 @@ impl AuthService {
         Ok((user, token, session.expires_at))
     }
 }
+
+#[cfg(test)]
+#[path = "oauth_tests.rs"]
+mod oauth_tests;

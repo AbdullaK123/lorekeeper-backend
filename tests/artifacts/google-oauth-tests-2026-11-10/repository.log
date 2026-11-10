@@ -1,0 +1,196 @@
+   Compiling subtle v2.6.1
+   Compiling libm v0.2.16
+   Compiling ctutils v0.4.8
+   Compiling hybrid-array v0.4.15
+   Compiling crypto-common v0.2.2
+   Compiling num-traits v0.2.19
+   Compiling const-oid v0.9.6
+   Compiling block-buffer v0.12.1
+   Compiling url v2.5.8
+   Compiling digest v0.11.3
+   Compiling digest v0.10.7
+   Compiling rustls v0.23.45
+   Compiling sha2 v0.10.9
+   Compiling pem-rfc7468 v1.0.0
+   Compiling der v0.8.3
+   Compiling chrono v0.4.45
+   Compiling tokio-rustls v0.26.5
+   Compiling cpubits v0.1.1
+   Compiling crypto-bigint v0.7.11
+   Compiling hyper-rustls v0.27.10
+   Compiling spki v0.8.1
+   Compiling tower-http v0.6.11
+   Compiling hmac v0.13.0
+   Compiling ff v0.14.0
+   Compiling either v1.18.0
+   Compiling pkcs8 v0.11.0
+   Compiling group v0.14.0
+   Compiling sha2 v0.11.1
+   Compiling base16ct v1.0.0
+   Compiling sec1 v0.8.1
+   Compiling rustls-platform-verifier v0.7.1
+   Compiling signature v3.0.0
+   Compiling pem-rfc7468 v0.7.0
+   Compiling spin v0.9.9
+   Compiling lazy_static v1.5.0
+   Compiling der v0.7.10
+   Compiling reqwest v0.13.5
+   Compiling elliptic-curve v0.14.3
+   Compiling primefield v0.14.0
+   Compiling hmac v0.12.1
+   Compiling atoi v2.0.0
+   Compiling sqlx-core v0.8.6
+   Compiling hkdf v0.12.4
+   Compiling wnaf v0.14.1
+   Compiling spki v0.7.3
+   Compiling rig-http v0.44.0
+   Compiling rfc6979 v0.6.0
+   Compiling md-5 v0.10.6
+   Compiling num-integer v0.1.47
+   Compiling sqlx-postgres v0.8.6
+   Compiling num-iter v0.1.46
+   Compiling ecdsa v0.17.0
+   Compiling sqlx-core v0.9.0
+   Compiling rig-reqwest v0.44.0
+   Compiling pkcs8 v0.10.2
+   Compiling primeorder v0.14.0
+   Compiling hkdf v0.13.0
+   Compiling md-5 v0.11.0
+   Compiling ordered-float v5.5.0
+   Compiling sqlx-postgres v0.9.0
+   Compiling rig-core v0.44.0
+   Compiling curve25519-dalek v5.0.0
+   Compiling pkcs1 v0.7.5
+   Compiling sqlx-macros-core v0.8.6
+   Compiling num-bigint-dig v0.8.6
+   Compiling ed25519 v3.0.0
+   Compiling reqwest v0.12.28
+   Compiling signature v2.2.0
+   Compiling phc v0.6.1
+   Compiling ordered-float v2.10.1
+   Compiling serde-value v0.7.0
+   Compiling password-hash v0.6.1
+   Compiling rsa v0.9.10
+   Compiling rig-agent v0.44.0
+   Compiling oauth2 v5.0.0
+   Compiling ed25519-dalek v3.0.0
+   Compiling croner v3.0.1
+   Compiling sqlx-macros v0.8.6
+   Compiling chrono-tz v0.8.6
+   Compiling serde_with v3.24.0
+   Compiling chrono-tz v0.10.4
+   Compiling sqlx v0.9.0
+   Compiling p384 v0.14.0
+   Compiling p256 v0.14.0
+   Compiling sharded-slab v0.1.7
+   Compiling itertools v0.14.0
+   Compiling blake2 v0.11.0
+   Compiling serde_plain v1.0.2
+   Compiling serde_yaml_bw v2.5.8
+   Compiling openidconnect v4.1.0
+   Compiling resend-rs v0.35.1
+   Compiling tracing-subscriber v0.3.23
+   Compiling tokio-cron-scheduler v0.15.1
+   Compiling dbos v0.5.0
+   Compiling neo4rs v0.8.0
+   Compiling argon2 v0.6.0
+   Compiling validator v0.21.0
+   Compiling rig v0.44.0
+   Compiling sqlx v0.8.6
+   Compiling lorekeeper-backend v0.1.0 (/root/lorekeeper-backend)
+warning: unused import: `crate::app::world`
+ --> src/data/repositories/conversation.rs:1:5
+  |
+1 | use crate::app::world;
+  |     ^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `crate::data::ResearchStatus::NotSubmitted`
+ --> src/data/models/conversations.rs:1:5
+  |
+1 | use crate::data::ResearchStatus::NotSubmitted;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: ambiguous glob re-exports
+ --> src/data/mod.rs:5:9
+  |
+5 | pub use repositories::*;
+  |         ^^^^^^^^^^^^^^^ the name `graph` in the type namespace is first re-exported here
+6 | pub use models::*;
+  |         --------- but the name `graph` in the type namespace is also re-exported here
+  |
+  = note: `#[warn(ambiguous_glob_reexports)]` on by default
+
+warning: ambiguous glob re-exports
+ --> src/data/mod.rs:5:9
+  |
+5 | pub use repositories::*;
+  |         ^^^^^^^^^^^^^^^ the name `user` in the type namespace is first re-exported here
+6 | pub use models::*;
+  |         --------- but the name `user` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+ --> src/data/mod.rs:5:9
+  |
+5 | pub use repositories::*;
+  |         ^^^^^^^^^^^^^^^ the name `world` in the type namespace is first re-exported here
+6 | pub use models::*;
+  |         --------- but the name `world` in the type namespace is also re-exported here
+
+warning: unused import: `ResolveConflictRequest`
+ --> src/service/world.rs:4:27
+  |
+4 |     RelationshipResponse, ResolveConflictRequest, UpdateWorldRequest, WorldRepository,
+  |                           ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `serde::Serialize`
+  --> src/service/conversation.rs:12:5
+   |
+12 | use serde::Serialize;
+   |     ^^^^^^^^^^^^^^^^
+
+warning: fields `pool` and `graph` are never read
+  --> src/app/app.rs:24:5
+   |
+22 | pub struct AppState {
+   |            -------- fields in this struct
+23 |     pub is_prod: bool,
+24 |     pool: PgPool,
+   |     ^^^^
+25 |     graph: Graph,
+   |     ^^^^^
+   |
+   = note: `AppState` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `lorekeeper-backend` (lib test) generated 8 warnings (run `cargo fix --lib -p lorekeeper-backend --tests` to apply 4 suggestions)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2m 45s
+warning: the following packages contain code that will be rejected by a future version of Rust: proc-macro-error2 v2.0.1
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
+     Running unittests src/lib.rs (target/debug/deps/lorekeeper_backend-18ad549b18f759b8)
+
+running 20 tests
+test data::repositories::user::tests::auth_tokens_concurrent_consumers_cannot_both_succeed ... ok
+test data::repositories::user::tests::auth_tokens_concurrent_password_updates_cannot_both_commit ... ok
+test data::repositories::user::tests::auth_tokens_expired_token_cannot_be_consumed ... ok
+test data::repositories::user::tests::auth_tokens_purpose_lifetimes_are_not_swapped ... ok
+test data::repositories::user::tests::auth_tokens_reissue_invalidates_the_previous_link ... ok
+test data::repositories::user::tests::auth_tokens_reset_commits_password_with_token_consumption ... ok
+test data::repositories::user::tests::auth_tokens_reset_failure_restores_consumed_token ... ok
+test data::repositories::user::tests::auth_tokens_reset_secret_cannot_be_replayed_through_service ... ok
+test data::repositories::user::tests::auth_tokens_reset_with_expired_secret_cannot_change_password ... ok
+test data::repositories::user::tests::auth_tokens_reset_with_invalid_secret_cannot_change_password ... ok
+test data::repositories::user::tests::auth_tokens_session_delete_failure_rolls_back_password_and_token ... ok
+test data::repositories::user::tests::auth_tokens_valid_token_cannot_be_reused ... ok
+test data::repositories::user::tests::auth_tokens_verification_failure_restores_consumed_token ... ok
+test data::repositories::user::tests::auth_tokens_verification_rollback_restores_account_and_token ... ok
+test data::repositories::user::tests::auth_tokens_wrong_hash_does_not_consume_a_valid_link ... ok
+test data::repositories::user::tests::auth_tokens_wrong_purpose_cannot_consume_the_token ... ok
+test data::repositories::user::tests::auth_tokens_wrong_user_cannot_consume_the_token ... ok
+test data::repositories::user::tests::google_login_cannot_silently_link_an_existing_email ... ok
+test data::repositories::user::tests::google_login_reuses_the_user_and_creates_distinct_sessions ... ok
+test data::repositories::user::tests::google_session_insert_failure_cannot_leave_a_new_user ... ok
+
+test result: ok. 20 passed; 0 failed; 0 ignored; 0 measured; 23 filtered out; finished in 12.84s
+

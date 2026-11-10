@@ -1,5 +1,55 @@
 # Lorekeeper — User Stories
 
+## Google login database confirmation — 2026-11-10
+
+Read-only inspection of local app_db finds one Google-linked user: verified, passwordless, with one active session.
+This confirms persisted identity/session creation after the user's sign-in. Browser cookie delivery and /auth/me are not checked this turn.
+No personal data or token values are printed. No application edits, automated tests, or provider calls occur.
+All four PM docs reviewed. Product scope stays unchanged; full browser acceptance still needs its remaining checks.
+
+## Google consent branding diagnosis — 2026-11-10
+
+The local Google start route returns 303. Its client ID matches the current .env; stale runtime credentials are not the cause at this endpoint.
+Its callback is http://localhost:8000/api/auth/google/callback. No redirect was followed and no credentials were printed.
+Google branding belongs to the Cloud project, shared across its clients. Nexus Writer branding suggests the configured client uses that project's branding.
+Use a separate Nexlore Cloud project/client for separate branding, then update credentials and recreate the API container.
+Google Console project ownership/branding is not inspected. No application edits or tests occur; live acceptance stays pending.
+All four PM docs reviewed. Scope and story acceptance remain unchanged.
+
+## Playground Google sign-in — 2026-11-10
+
+Added Google sign-in through a separate browser window. The playground checks its session and closes the window after login.
+Cancellation, blocked pop-ups, session-check errors, and a ten-minute limit have visible feedback. Unmount stops polling.
+The backend callback keeps its JSON response. The playground and API must use the same hostname for cookies.
+Build and six existing playground tests pass. Four Playwright UI checks pass with controlled provider/session responses.
+The running API returns 404 for Google start, so this run does not establish live backend/provider acceptance.
+Evidence: tests/artifacts/playwright-oauth-2026-11-10/report.json and screenshots. Live Google sign-in remains pending.
+All four PM docs reviewed. Product scope and epic acceptance remain unchanged.
+
+## OAuth callback cookie cleanup fixed — 2026-11-10
+
+The callback collects its result inside an async block. The outer handler removes oauth_state on success and handler errors.
+Successful login still adds the session cookie. Error responses keep their original status.
+All three local callback HTTP tests pass, including the previously failing missing-attempt cleanup test.
+Formatting and git diff --check pass. No live Google sign-ins, emails, or paid calls occur.
+Query extractor rejection occurs before handler cleanup and remains outside this change.
+All four PM docs reviewed. Product scope stays unchanged; live Google/browser acceptance remains pending.
+
+## OAuth cookie cleanup cause — 2026-11-10
+
+Inspection confirms callback service errors return through `?` before cookie removal.
+Proposed fix: collect the callback result, then return cookie removal with either response.
+This covers handler errors; query extractor rejection occurs before the handler runs.
+No application code changes or tests occur this turn. Scope and acceptance remain unchanged.
+The failing callback cleanup test remains the next check after implementation.
+
+## Google OAuth regression tests — 2026-11-10
+
+US-040 gains passing evidence for local token verification, passwordless signup/session atomicity, replay rejection, cancellation, and browser-state mismatch. Missing-attempt callback cleanup fails. Full Google/browser sign-in is not accepted.
+Executed results: 64 pass, two fail. One failure is the newly demonstrated stale OAuth state cookie after a callback service error; the other is the existing retrieval-ranking test.
+No production logic fixes, real Google sign-ins, emails, paid calls, or deployments occur. Formatting/whitespace checks pass and QA user fixtures are removed.
+Evidence: tests/artifacts/google-oauth-tests-2026-11-10/summary.md. All four PM docs reviewed; product scope stays unchanged.
+
 ## OAuth cancellation branch implemented — 2026-11-10
 
 OAuthParams now accepts optional code/error values and requires state. After browser-state validation, only code-present/error-absent proceeds to exchange.
