@@ -3,6 +3,8 @@ use crate::service::{EmailService, GoogleClient, ServiceError};
 use argon2::{Argon2, PasswordHash, PasswordHasher, PasswordVerifier};
 use chrono::{DateTime, Utc};
 use openidconnect::core::CoreAuthenticationFlow;
+use openidconnect::reqwest::Client;
+use openidconnect::{AuthorizationCode, PkceCodeVerifier, TokenResponse};
 use openidconnect::{CsrfToken, Nonce, PkceCodeChallenge, Scope};
 use sha2::{Digest, Sha256};
 use tokio;
@@ -14,6 +16,7 @@ pub struct AuthService {
     email_service: EmailService,
     api_base_url: String,
     oauth_client: GoogleClient,
+    http_client: Client,
 }
 
 impl AuthService {
@@ -22,12 +25,14 @@ impl AuthService {
         resend_api_key: &str,
         api_base_url: &str,
         client: GoogleClient,
+        http_client: Client,
     ) -> Self {
         Self {
             user_repo,
             email_service: EmailService::new(resend_api_key),
             api_base_url: api_base_url.trim_end_matches('/').to_owned(),
             oauth_client: client,
+            http_client,
         }
     }
 
@@ -78,7 +83,13 @@ impl AuthService {
         let password_hash = Self::hash_password(payload.password.into_inner()).await?;
         let user = self
             .user_repo
-            .sign_up(payload.username.into_inner(), payload.email, password_hash)
+            .sign_up(
+                payload.username.into_inner(),
+                payload.email,
+                Some(password_hash),
+                None,
+                false,
+            )
             .await?;
         tracing::info!(user_id = %user.id, "account created");
         Ok(user.into())
@@ -243,5 +254,67 @@ impl AuthService {
 
         tracing::debug!(provider = "google", "OAuth login attempt stored");
         Ok((url.to_string(), state.secret().to_owned()))
+    }
+
+    #[tracing::instrument(name = "auth.complete_google_login", level = "info", skip_all)]
+    pub async fn complete_google_login(
+        &self,
+        state_hash: String,
+        code: String,
+    ) -> Result<(User, String, DateTime<Utc>), ServiceError> {
+        let attempt = self
+            .user_repo
+            .consume_login_attempt(state_hash)
+            .await?
+            .ok_or(ServiceError::AuthError)?;
+        let tokens = self
+            .oauth_client
+            .exchange_code(AuthorizationCode::new(code))
+            .map_err(|_| ServiceError::InternalError("Google token endpoint unavailable".into()))?
+            .set_pkce_verifier(PkceCodeVerifier::new(attempt.pkce_verifier))
+            .request_async(&self.http_client)
+            .await
+            .map_err(|_| ServiceError::InternalError("Google token exchange failed".into()))?;
+
+        let id_token = tokens.id_token().ok_or(ServiceError::AuthError)?;
+
+        let verifier = self.oauth_client.id_token_verifier();
+        let nonce = Nonce::new(attempt.nonce);
+
+        let claims = id_token
+            .claims(&verifier, &nonce)
+            .map_err(|_| ServiceError::AuthError)?;
+
+        let google_sub = claims.subject().as_str();
+        let (username, email) = match self.user_repo.get_user_by_google_sub(google_sub).await? {
+            Some(user) => (user.username, user.email),
+            None => {
+                if claims.email_verified() != Some(true) {
+                    return Err(ServiceError::AuthError);
+                }
+                let email = claims
+                    .email()
+                    .ok_or(ServiceError::AuthError)?
+                    .as_str()
+                    .to_owned();
+                let username = claims
+                    .name()
+                    .and_then(|name| name.get(None))
+                    .map(|name| name.as_str())
+                    .unwrap_or("Writer")
+                    .to_owned();
+                (username, email)
+            }
+        };
+
+        let token = nanoid::nanoid!();
+        let token_hash = hex::encode(Sha256::digest(token.as_bytes()));
+        let (user, session) = self
+            .user_repo
+            .login_with_google(google_sub, &username, &email, &token_hash)
+            .await?;
+
+        tracing::info!(user_id = %user.id, "Google login completed");
+        Ok((user, token, session.expires_at))
     }
 }

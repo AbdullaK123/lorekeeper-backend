@@ -15,6 +15,7 @@ pub struct User {
     pub password_hash: Option<String>,
     pub created_at: DateTime<Utc>,
     pub updated_at: DateTime<Utc>,
+    pub google_sub: Option<String>,
 }
 
 fn validate_password(password: &PasswordInput) -> Result<(), validator::ValidationError> {

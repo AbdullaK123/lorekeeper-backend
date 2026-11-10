@@ -1,5 +1,209 @@
 # Lorekeeper — Design and Development Lifecycle
 
+## OAuth cancellation branch implemented — 2026-11-10
+
+OAuthParams now accepts optional code/error values and requires state. After browser-state validation, only code-present/error-absent proceeds to exchange.
+Cancellation or invalid code/error combinations clear oauth_state and return a generic authentication error response. Provider text is not echoed or logged.
+The callback now returns a concrete Response for both success and cancellation, and has skip_all tracing.
+Applied the authored google_sub migration to isolated QA Postgres, refreshed SQLx metadata, and compile-checked all targets. Final offline all-target check passes with existing warnings.
+Formatting and git diff --check pass. No tests, Google discovery/sign-in, real emails, or paid calls occur.
+Other early error paths still return via ? and do not yet share cookie cleanup. Integrated OAuth runtime tests and live acceptance remain pending.
+All four PM docs reviewed. Scope and product acceptance stay unchanged.
+
+## OAuth cancellation handling guidance — 2026-11-10
+
+Propose optional code/error fields while keeping state required. Validate state/cookie before interpreting the result.
+Accept only code-present/error-absent for exchange. Denial or invalid combinations return a generic auth error response paired with cookie removal; never echo provider error descriptions.
+Use a concrete axum Response return so cancellation and successful JSON can each call into_response. Extract code before calling the service.
+Other early errors currently using ? still require unified cookie cleanup later; this guidance does not claim all error paths are covered.
+All four PM docs reviewed. Teaching only: no application edits, compilation, provider calls, or tests. Verification remains pending.
+
+## Callback route registration confirmed — 2026-11-10
+
+Inspection confirms the cookie helper and all call sites remain present. The user has registered GET /google/callback.
+Next: support provider denial callbacks where error is present instead of code, and ensure temporary cookie cleanup on failure responses.
+Schema/cache refresh, all-target compilation, and OAuth integration tests remain pending.
+All four PM docs reviewed. No application edits or tests occur this turn. Runtime sign-in acceptance stays open.
+
+## Cookie helper reapplied and verified on disk — 2026-11-10
+
+User reports the prior edits are missing. Inspection confirms the controller again contains inline cookie builders and an unfinished callback response; the helper is absent.
+Reapplied the helper, its login/logout/Google call sites, the Deserialize import, and the callback's cookie/JSON success response.
+Read the saved file after formatting: auth_cookie exists at line 17; one Cookie::build remains inside the helper; five call sites use it.
+Formatting and git diff --check pass. No compilation or tests run. Cause of the missing prior edits is not established.
+All four PM docs reviewed. Callback registration, error handling, and integrated verification remain pending; acceptance is unchanged.
+
+## Shared auth-cookie helper added — 2026-11-10
+
+Added private AppState::auth_cookie(name, value) in the auth controller file. The helper uses existing is_prod state and configures Path=/, HttpOnly, SameSite=Lax, and production Secure.
+Password login, logout removal, Google start, and Google callback success now use the helper. Lifetimes stay explicit at the call sites: stored session expiry versus ten-minute OAuth state.
+Filled the callback's success cookie/JSON response using the committed user/token/expiry; it clears oauth_state and does not insert another session.
+Added the missing Deserialize import. Formatting and git diff --check pass. No compilation, tests, migrations, provider calls, or SQLx refresh occur.
+Callback route registration, provider-denial/error handling, updated schema/cache, and integrated verification remain pending.
+All four PM docs reviewed. Product scope and acceptance remain unchanged.
+
+## Google completion uses atomic login — 2026-11-10
+
+Updated complete_google_login to generate a raw session token/hash after Google validation and call UserRepository::login_with_google for the atomic user/session operation.
+It now returns (User, raw token, database session expiry). It no longer signs up a new user independently of session insertion.
+Existing subject lookup retains the prior behavior and supplies saved profile inputs; only new subjects require a present verified email. The parent transaction performs the authoritative user resolution.
+Added skip_all service tracing and a safe success event after repository commit. Updated callback destructuring for the new result; its cookie/response body remains unfinished.
+Formatting and git diff --check pass. No compilation, SQLx refresh, migrations, provider calls, or tests occur this turn.
+Next: build the callback session cookie from the returned token/expiry, remove oauth_state, return the response, and register/verify the route.
+All four PM docs reviewed. Product scope and acceptance remain unchanged.
+
+## Google user/session repository transaction added — 2026-11-10
+
+Added UserRepository::login_with_google(google_sub, username, email, session_token_hash), returning the committed (User, SessionRow).
+The method resolves an existing subject or inserts a verified passwordless user, then inserts its session on the same transaction connection. Errors explicitly roll back; success logs only after commit.
+Existing subject profiles remain unchanged. The insertion conflict target handles repeated subject creation; existing-email collisions retain the Conflict response without linking accounts.
+SessionRepository now exposes a connection-aware insert shared by normal creation and the parent's transaction. Raw session secrets remain a service responsibility; the repo takes only a hash.
+Added three database tests covering returning-user reuse, failed session insertion rolling back user creation, and rejection of existing-email collisions.
+Formatting and git diff --check pass. Tests and compilation are not run while surrounding callback code is unfinished; new SQLx query metadata and google_sub schema verification remain pending.
+Next: AuthService generates the session token/hash and calls this parent method after Google verification, returning user/raw token/expiry for the cookie response.
+All four PM docs reviewed. No service/controller wiring, migration execution, provider calls, or acceptance completion occur this turn.
+
+## Google first-login transaction boundary — 2026-11-10
+
+User identifies that first-time Google user creation and local session insertion should share a database transaction.
+Current signup and session-create queries independently use the pool, so this boundary is not implemented.
+Revise the proposed callback flow: AuthService verifies Google outside the transaction and generates a session secret/hash; UserRepository resolves/creates the user and inserts the session on one transaction connection, then commits.
+Return committed user/session expiry to the service/controller; set the raw-token cookie only after commit. The session child needs a connection-aware insertion path.
+If session insertion fails, roll back new user creation. Existing-user login can use the same parent operation. Google token exchange and attempt consumption are not rolled back by this local transaction.
+All four PM docs reviewed. Design discussion only: no application edits or tests. Previous separate controller create_session guidance is superseded for Google completion.
+
+## Callback session response next step — 2026-11-10
+
+The callback currently stops after obtaining User from complete_google_login.
+Next reuse the password-login session creation and cookie policy, remove oauth_state at Path=/, and return the updated jar plus UserResponse JSON as a backend-only interim response.
+Then register GET /google/callback. A frontend success redirect is deferred until its destination is defined.
+All four PM docs reviewed. No application edits or tests occur. Denial handling and integrated compilation/testing remain pending.
+
+## OAuth constructor wiring fixed — 2026-11-10
+
+Bootstrap now passes the retained HTTP client alongside GoogleClient to AuthService::new.
+Fixed the OAuth factory return type to refer to reqwest::Client, avoiding the missing Client import.
+Updated the auth repository test constructor with local synthetic provider metadata and a no-redirect HTTP client; it performs no Google discovery.
+The callback already uses params.code in the user's current source, so no argument edit is needed there.
+Formatting and git diff --check pass. No compilation, tests, migrations, provider requests, or SQLx refresh occur while callback response handling remains unfinished.
+All four PM docs reviewed. Next: create the callback session/cookies and response, then register the route and handle denial. Sign-in acceptance remains pending.
+
+## Remaining Google integration checklist — 2026-11-10
+
+Source inspection identifies immediate wiring blockers: callback passes undefined code instead of params.code; bootstrap omits the new HTTP-client constructor argument; repository test constructor also needs updating.
+Callback still needs local session creation, secure session cookie, temporary-state cookie removal, a response, and GET /google/callback registration.
+OAuthParams still requires code and cannot represent Google denial error responses. Add callback/service skip_all tracing before testing.
+Apply google_sub migration and refresh affected SQLx metadata. Compile all targets and add local-provider tests for state, replay/expiry, token validation, identity resolution, and sessions before live acceptance.
+Frontend success destination remains a separate decision. No full Google sign-in has been verified.
+All four PM docs reviewed. No application edits, compilation, database operations, provider calls, or tests occur this turn.
+
+## Explicit signup verification flag added — 2026-11-10
+
+Repository signup now takes verified: bool and inserts it with the user's password hash and Google subject in one statement.
+Password signup passes Some(password_hash), None, false. Google signup passes None, Some(subject), true after its verified-email claim guard.
+Updated both source call sites, including the stale password-signup signature. Public signup payload remains unchanged; verification is selected by server code.
+Formatting and git diff --check pass. No compilation, SQLx cache refresh, migrations, provider calls, or tests occur while callback wiring remains unfinished.
+All four PM docs reviewed. Next: finish callback/session response and verify the integrated flow. Product scope and acceptance stay unchanged.
+
+## Google user resolution review — 2026-11-10
+
+Inspection confirms complete_google_login returns existing subject matches or creates a passwordless user from claims after requiring a verified email.
+Observed mismatch: repository signup still omits verified, so new Google users retain the database default false despite the verified claim check.
+Next correction: pass an explicit verified flag into repository signup and insert it atomically. Password signup passes false; Google signup passes true only after the existing claim check.
+Email uniqueness still rejects existing-account collisions through the current repository mapping. Callback completion and tests remain pending.
+All four PM docs reviewed. No application edits, compilation, provider calls, migrations, or tests occur. Google sign-in is not yet complete.
+
+## Reading Google signup claims — 2026-11-10
+
+Checked installed 4.1.0 claim accessors. email() returns an optional email; email_verified() returns Option<bool>; name() returns an optional localized claim whose get(None) reads the default-language name.
+Guidance extracts an owned email, requires email_verified=true for new Google signup, and uses the default display name with a Writer fallback as the initial username.
+Display name is not the identity key; continue using verified subject for account lookup. Existing subject matches need not be recreated.
+All four PM docs reviewed. No application edits, compilation, provider calls, or tests occur. Signup integration remains pending.
+
+## Signup supports Google subjects — 2026-11-10
+
+Changed UserRepository::sign_up to accept Option<String> for password_hash and google_sub, and insert both through bound SQL parameters.
+Updated the existing password signup caller to pass Some(password_hash), None. Public signup request fields stay unchanged; clients cannot submit arbitrary Google subjects through signup.
+Google callback code can pass None for password_hash and Some(verified_claim_subject) for google_sub. The existing verified default is unchanged; this does not treat subject presence as email verification.
+Formatting and git diff --check pass. No compilation, SQLx metadata refresh, migrations, or tests occur while the callback flow remains unfinished.
+Next: complete verified-email handling and user resolution in the callback service before creating the session.
+All four PM docs reviewed. Product scope and acceptance remain unchanged.
+
+## Google user resolution flow discussion — 2026-11-10
+
+User proposes returning an existing google_sub match or creating a passwordless user for a new subject. This matches the nullable password_hash schema.
+Creation must use verified ID-token claims: store google_sub, required email, username, and NULL password_hash. Only set verified=true when Google's email_verified claim is true.
+Recommended initial policy: require a present verified email for Google signup and reject existing-email collisions for explicit linking later; do not silently attach a new subject.
+Service should return User; controller then creates the normal local session. No implementation or acceptance of account-linking behavior is recorded yet.
+All four PM docs reviewed. No application edits, migrations, compilation, provider calls, or tests occur.
+
+## Google user lookup added — 2026-11-10
+
+User model now has google_sub: Option<String>. Added UserRepository::get_user_by_google_sub(&str), using a bound query and fetch_optional to return Result<Option<User>, InfrastructureError>.
+Tracing skips all arguments and does not log the provider subject or returned user.
+Formatting and git diff --check pass. No compilation, tests, migration execution, or SQLx metadata refresh occur; surrounding OAuth callback/service work remains unfinished.
+The new query needs database/SQLx verification once the schema and unfinished flow are ready. Next service step is resolving verified claims.subject() through this lookup.
+All four PM docs reviewed. Google sign-in and product acceptance remain pending.
+
+## Google subject uniqueness follow-up — 2026-11-10
+
+Inspection confirms the new google_sub declaration is nullable and UNIQUE.
+User model still needs google_sub: Option<String> to match the added column returned by existing SELECT/RETURNING * queries after migration.
+Next repository operation is get_user_by_google_sub returning Option<User>. Keep Google subject internal; public UserResponse need not expose it.
+All four PM docs reviewed. No application edits, migration runs, compilation, or tests occur. Identity resolution remains incomplete.
+
+## Google subject migration review — 2026-11-10
+
+The migration adds a nullable TEXT google_sub column, preserving existing password users.
+UNIQUE is missing. Add it so one non-null Google subject cannot belong to multiple local users. PostgreSQL's default unique semantics allow multiple NULL values.
+All four PM docs reviewed. Inspection only: no application or migration edits, SQL execution, compilation, or tests. Identity mapping remains pending.
+
+## Google identity mapping next step — 2026-11-10
+
+Inspection confirms code exchange, PKCE verification input, and ID-token claims validation are written. The service still lacks its final return.
+Next proposed schema slice for the selected Google-only scope: nullable UNIQUE users.google_sub to map the verified Google subject to the local user.
+Existing google_sub resolves the account. New identities may create passwordless users; an existing email without that mapping requires an explicit account-linking policy, not silent merge.
+Propose rejecting an email collision and requiring existing-account login for later linking. This policy is not accepted or implemented yet.
+The eventual service return should be User, enabling the controller's existing custom-session creation.
+All four PM docs reviewed. No application edits, migration changes, compilation, provider calls, or tests. Sign-in remains incomplete.
+
+## Google code exchange guidance — 2026-11-10
+
+Checked installed openidconnect 4.1.0 async example. complete_google_login now accepts code but still returns saved nonce/verifier without exchanging it.
+Guidance uses exchange_code(AuthorizationCode), set_pkce_verifier with the saved raw verifier, and request_async with a retained no-redirect HTTP client.
+Then require id_token and call claims with the configured ID-token verifier and saved Nonce. Only verified claims can drive identity lookup.
+AuthService currently lacks the reusable HTTP client field; constructor/bootstrap wiring is a prerequisite. Provider identity mapping and final user return type remain unimplemented.
+All four PM docs reviewed. No application edits, network requests, compilation, or tests occur. Sign-in remains incomplete.
+
+## Service attempt consumption review — 2026-11-10
+
+Inspection confirms complete_google_login atomically consumes the attempt and maps absent/expired/replayed state to AuthError.
+The draft returns nonce/verifier only and does not accept Google's authorization code. It is not yet a completed login operation.
+Next: accept code too, retain nonce/verifier inside AuthService, exchange code with the saved verifier using the no-redirect async HTTP client, then validate the ID token with the saved nonce.
+All four PM docs reviewed. No application edits, compilation, provider calls, or tests occur. Full callback and identity mapping remain pending.
+
+## Callback browser-state check reviewed — 2026-11-10
+
+Inspection confirms missing-cookie rejection and comparison of cookie/query state hashes occur before any attempt consumption.
+Next service slice: complete_google_login receives authorization code and checked state hash, consumes the unexpired attempt through UserRepository, and maps None to AuthError.
+Keep saved nonce/verifier and token exchange inside AuthService. Controller retains cookie/query handling.
+All four PM docs reviewed. No application edits or tests occur. Callback return, registration, denial handling, exchange, and identity mapping remain pending.
+
+## Callback draft state-check guidance — 2026-11-10
+
+The draft reads oauth_state and hashes returned state but does not compare them. Cookie presence alone does not bind the callback to its browser.
+Next compare SHA-256 hashes of returned state and cookie value, rejecting mismatches before consuming any saved attempt.
+The ok_or_else call passes an error value instead of a closure; use ok_or for the fixed error, or wrap it in a closure.
+The callback remains unregistered/incomplete and requires code-only OAuthParams, so provider-denial handling also remains pending.
+All four PM docs reviewed. No application edits, compilation, or tests occur. Sign-in remains unverified.
+
+## Next OAuth slice: callback validation — 2026-11-10
+
+Next implement GET /auth/google/callback inputs and browser binding before any token exchange.
+Read returned state/code (or provider denial), require matching oauth_state cookie using a timing-safe comparison, then atomically consume the hashed unexpired attempt.
+Reject absent/mismatched/expired/reused attempts and clear the temporary cookie in the callback response. Preserve nonce/verifier for the next token exchange step.
+No callback route exists at review time. All four PM docs reviewed; no application changes or tests occur. Full Google sign-in remains pending.
+
 ## Google login tracing added — 2026-11-10
 
 Confirmed the start route returns the updated ten-minute oauth_state cookie and Google redirect.

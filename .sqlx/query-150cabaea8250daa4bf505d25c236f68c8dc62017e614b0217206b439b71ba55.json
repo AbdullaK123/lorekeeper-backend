@@ -1,6 +1,6 @@
 {
   "db_name": "PostgreSQL",
-  "query": "\n            INSERT INTO users (username, email, password_hash)\n            VALUES ($1, $2, $3)\n            RETURNING *\n            ",
+  "query": "INSERT INTO users (username, email, password_hash, google_sub, verified)\n                     VALUES ($1, $2, NULL, $3, TRUE)\n                     ON CONFLICT (google_sub) DO UPDATE SET google_sub = EXCLUDED.google_sub\n                     RETURNING *",
   "describe": {
     "columns": [
       {
@@ -37,6 +37,11 @@
         "ordinal": 6,
         "name": "verified",
         "type_info": "Bool"
+      },
+      {
+        "ordinal": 7,
+        "name": "google_sub",
+        "type_info": "Text"
       }
     ],
     "parameters": {
@@ -53,8 +58,9 @@
       true,
       false,
       false,
-      false
+      false,
+      true
     ]
   },
-  "hash": "2eb75cdfc4755a2055cbc35d184a26eb02ce90b1be099a1c616ed4a64fe00cd3"
+  "hash": "150cabaea8250daa4bf505d25c236f68c8dc62017e614b0217206b439b71ba55"
 }

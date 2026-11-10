@@ -37,6 +37,11 @@
         "ordinal": 6,
         "name": "verified",
         "type_info": "Bool"
+      },
+      {
+        "ordinal": 7,
+        "name": "google_sub",
+        "type_info": "Text"
       }
     ],
     "parameters": {
@@ -52,7 +57,8 @@
       true,
       false,
       false,
-      false
+      false,
+      true
     ]
   },
   "hash": "fd787cadc1785759389969d66d5ab2c684cfcc38a6df79153a36da808c1ec127"

@@ -4,12 +4,25 @@ use crate::data::{
     LoginRequest, PasswordResetParams, PasswordResetPayload, PasswordResetRequest, SignupRequest,
     UserResponse, VerifyEmailRequest,
 };
-use axum::extract::State;
-use axum::response::{IntoResponse, Redirect};
+use axum::extract::{Query, State};
+use axum::response::{IntoResponse, Redirect, Response};
 use axum::routing::{get, post};
 use axum::{Json, Router};
 use axum_extra::extract::cookie::{Cookie, CookieJar, SameSite};
+use serde::Deserialize;
 use serde_json::json;
+use sha2::{Digest, Sha256};
+
+impl AppState {
+    fn auth_cookie(&self, name: &'static str, value: impl Into<String>) -> Cookie<'static> {
+        Cookie::build((name, value.into()))
+            .path("/")
+            .http_only(true)
+            .same_site(SameSite::Lax)
+            .secure(self.is_prod)
+            .build()
+    }
+}
 
 #[tracing::instrument(name = "controller.auth.login", level = "debug", skip_all)]
 async fn login(
@@ -26,13 +39,8 @@ async fn login(
 
     let expiry = time::OffsetDateTime::from_unix_timestamp(expires_at.timestamp())
         .map_err(|error| AppError::InternalError(error.to_string()))?;
-    let cookie = Cookie::build(("session_id", token))
-        .path("/")
-        .http_only(true)
-        .same_site(SameSite::Lax)
-        .secure(ctx.is_prod)
-        .expires(expiry)
-        .build();
+    let mut cookie = ctx.auth_cookie("session_id", token);
+    cookie.set_expires(expiry);
 
     tracing::info!(user_id = %user.id, expires_at=%expires_at, "login session established");
     Ok((cookies.add(cookie), Json(user.into())))
@@ -54,7 +62,7 @@ async fn logout(
 
     tracing::info!(user_id = %user_id, "login session ended");
     Ok((
-        cookies.remove(Cookie::build(("session_id", "")).path("/").build()),
+        cookies.remove(ctx.auth_cookie("session_id", "")),
         Json(json!({
             "message": "Successfully logged out."
         })),
@@ -145,16 +153,62 @@ async fn begin_google_login(
 ) -> Result<impl IntoResponse, AppError> {
     let (url, state) = ctx.auth_service.begin_google_login().await?;
 
-    let cookie = Cookie::build(("oauth_state", state))
-        .http_only(true)
-        .path("/")
-        .same_site(SameSite::Lax)
-        .secure(ctx.is_prod)
-        .max_age(time::Duration::minutes(10))
-        .build();
+    let mut cookie = ctx.auth_cookie("oauth_state", state);
+    cookie.set_max_age(time::Duration::minutes(10));
 
     tracing::info!(provider = "google", "OAuth redirect prepared");
     Ok((cookies.add(cookie), Redirect::to(&url)))
+}
+
+#[derive(Clone, Deserialize)]
+pub struct OAuthParams {
+    pub code: Option<String>,
+    pub state: String,
+    pub error: Option<String>,
+}
+
+#[tracing::instrument(name = "controller.auth.google_callback", level = "debug", skip_all)]
+async fn google_auth_callback(
+    cookies: CookieJar,
+    Query(params): Query<OAuthParams>,
+    State(ctx): State<AppState>,
+) -> Result<Response, AppError> {
+    let cookie = cookies
+        .get("oauth_state")
+        .ok_or_else(|| AppError::AuthError("Invalid credentials".into()))?;
+
+    let state_hash = hex::encode(Sha256::digest(params.state.as_bytes()));
+
+    let cookie_hash = hex::encode(Sha256::digest(cookie.value().as_bytes()));
+
+    if state_hash != cookie_hash {
+        return Err(AppError::AuthError("Invalid OAuth state".into()));
+    }
+
+    let code = match (params.code, params.error) {
+        (Some(code), None) => code,
+        _ => {
+            tracing::info!(provider = "google", "OAuth callback cancelled or invalid");
+            let cookies = cookies.remove(ctx.auth_cookie("oauth_state", ""));
+            let error = AppError::AuthError("Google sign-in cancelled or invalid".into());
+            return Ok((cookies, error.into_response()).into_response());
+        }
+    };
+
+    let (user, token, expires_at) = ctx
+        .auth_service
+        .complete_google_login(state_hash, code)
+        .await?;
+
+    let expiry = time::OffsetDateTime::from_unix_timestamp(expires_at.timestamp())
+        .map_err(|error| AppError::InternalError(error.to_string()))?;
+    let mut cookie = ctx.auth_cookie("session_id", token);
+    cookie.set_expires(expiry);
+    let cookies = cookies
+        .remove(ctx.auth_cookie("oauth_state", ""))
+        .add(cookie);
+
+    Ok((cookies, Json(UserResponse::from(user))).into_response())
 }
 
 pub fn create_auth_controller() -> Router<AppState> {
@@ -171,4 +225,5 @@ pub fn create_auth_controller() -> Router<AppState> {
         )
         .route("/email_verification", post(verify_email))
         .route("/google", get(begin_google_login))
+        .route("/google/callback", get(google_auth_callback))
 }

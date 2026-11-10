@@ -63,7 +63,7 @@ async fn bootstrap(
     let user_repo = UserRepository::new(pool.clone());
     let world_repo = WorldRepository::new(pool.clone());
     let conversation_repo = ConversationRepository::new(pool.clone());
-    let oauth_client = create_core_client(settings)
+    let (oauth_client, http_client) = create_core_client(settings)
         .await
         .expect("Failed to initialize Google OAuth client");
     let auth_service = AuthService::new(
@@ -71,6 +71,7 @@ async fn bootstrap(
         &settings.resend_api_key,
         &settings.api_base_url,
         oauth_client,
+        http_client,
     );
     let world_service = WorldService::new(world_repo.clone(), graph_repo.clone());
 

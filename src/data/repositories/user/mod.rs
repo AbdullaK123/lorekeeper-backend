@@ -37,18 +37,22 @@ impl UserRepository {
         &self,
         username: String,
         email: String,
-        password_hash: String,
+        password_hash: Option<String>,
+        google_sub: Option<String>,
+        verified: bool,
     ) -> Result<User, InfrastructureError> {
         let result = sqlx::query_as!(
             User,
             "
-            INSERT INTO users (username, email, password_hash)
-            VALUES ($1, $2, $3)
+            INSERT INTO users (username, email, password_hash, google_sub, verified)
+            VALUES ($1, $2, $3, $4, $5)
             RETURNING *
             ",
             username,
             email,
-            password_hash
+            password_hash,
+            google_sub,
+            verified
         )
         .fetch_one(&self.pool)
         .await
@@ -63,6 +67,74 @@ impl UserRepository {
         })?;
 
         Ok(result)
+    }
+
+    /// Resolve a verified Google identity and create its local session atomically.
+    #[tracing::instrument(name = "repository.user.login_with_google", level = "info", skip_all)]
+    pub async fn login_with_google(
+        &self,
+        google_sub: &str,
+        username: &str,
+        email: &str,
+        session_token_hash: &str,
+    ) -> Result<(User, SessionRow), InfrastructureError> {
+        let mut tx = self.pool.begin().await?;
+        let result = async {
+            let existing = sqlx::query_as!(
+                User,
+                "SELECT * FROM users WHERE google_sub = $1 FOR UPDATE",
+                google_sub
+            )
+            .fetch_optional(&mut *tx)
+            .await?;
+
+            let user = match existing {
+                Some(user) => user,
+                None => sqlx::query_as!(
+                    User,
+                    "INSERT INTO users (username, email, password_hash, google_sub, verified)
+                     VALUES ($1, $2, NULL, $3, TRUE)
+                     ON CONFLICT (google_sub) DO UPDATE SET google_sub = EXCLUDED.google_sub
+                     RETURNING *",
+                    username,
+                    email,
+                    google_sub
+                )
+                .fetch_one(&mut *tx)
+                .await
+                .map_err(|error| {
+                    if error.as_database_error().is_some_and(|error| {
+                        error.is_unique_violation() && error.constraint() == Some("users_email_key")
+                    }) {
+                        InfrastructureError::Conflict(
+                            "An account with this email already exists".into(),
+                        )
+                    } else {
+                        error.into()
+                    }
+                })?,
+            };
+            let session = self
+                .sessions
+                .create_on_connection(session_token_hash, &user.id, &mut tx)
+                .await?;
+            Ok::<_, InfrastructureError>((user, session))
+        }
+        .await;
+
+        match result {
+            Ok((user, session)) => {
+                tx.commit().await?;
+                tracing::info!(user_id = %user.id, "Google user and session committed");
+                Ok((user, session))
+            }
+            Err(error) => {
+                tracing::warn!("rolling back Google login transaction");
+                tx.rollback().await?;
+                tracing::debug!("Google login transaction rolled back");
+                Err(error)
+            }
+        }
     }
 
     #[tracing::instrument(name = "repository.user.get_user_by_email", level = "debug", skip_all)]
@@ -82,6 +154,29 @@ impl UserRepository {
         .fetch_optional(&self.pool)
         .await?;
         Ok(result)
+    }
+
+    #[tracing::instrument(
+        name = "repository.user.get_user_by_google_sub",
+        level = "debug",
+        skip_all
+    )]
+    pub async fn get_user_by_google_sub(
+        &self,
+        google_sub: &str,
+    ) -> Result<Option<User>, InfrastructureError> {
+        let user = sqlx::query_as!(
+            User,
+            "
+            SELECT *
+            FROM users
+            WHERE google_sub = $1
+            ",
+            google_sub
+        )
+        .fetch_optional(&self.pool)
+        .await?;
+        Ok(user)
     }
 
     #[tracing::instrument(name = "repository.user.get_user_by_id", level = "debug", skip_all)]

@@ -16,7 +16,9 @@ pub type GoogleClient = CoreClient<
 >;
 
 #[tracing::instrument(name = "auth.google.create_client", level = "info", skip_all)]
-pub async fn create_core_client(settings: &Settings) -> Result<GoogleClient, ServiceError> {
+pub async fn create_core_client(
+    settings: &Settings,
+) -> Result<(GoogleClient, reqwest::Client), ServiceError> {
     let http_client = reqwest::Client::builder()
         .redirect(reqwest::redirect::Policy::none())
         .build()
@@ -69,5 +71,5 @@ pub async fn create_core_client(settings: &Settings) -> Result<GoogleClient, Ser
     )
     .set_redirect_uri(redirect_url);
     tracing::info!(provider = "google", "OpenID client ready");
-    Ok(client)
+    Ok((client, http_client))
 }

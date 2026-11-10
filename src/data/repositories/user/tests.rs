@@ -48,10 +48,33 @@ impl Fixture {
     }
 
     fn auth_service(&self) -> service::AuthService {
+        // Password/token tests never contact an OAuth provider.
+        let metadata: openidconnect::core::CoreProviderMetadata =
+            serde_json::from_value(serde_json::json!({
+                "issuer": "http://127.0.0.1:9",
+                "authorization_endpoint": "http://127.0.0.1:9/authorize",
+                "token_endpoint": "http://127.0.0.1:9/token",
+                "jwks_uri": "http://127.0.0.1:9/jwks",
+                "response_types_supported": ["code"],
+                "subject_types_supported": ["public"],
+                "id_token_signing_alg_values_supported": ["RS256"]
+            }))
+            .unwrap();
+        let oauth_client = openidconnect::core::CoreClient::from_provider_metadata(
+            metadata,
+            openidconnect::ClientId::new("qa-client".into()),
+            Some(openidconnect::ClientSecret::new("qa-secret".into())),
+        );
+        let http_client = openidconnect::reqwest::Client::builder()
+            .redirect(openidconnect::reqwest::redirect::Policy::none())
+            .build()
+            .unwrap();
         service::AuthService::new(
             data::UserRepository::new(self.pool.clone()),
             "re_test_not_sent",
             "https://api.example.test",
+            oauth_client,
+            http_client,
         )
     }
 
@@ -739,5 +762,122 @@ async fn auth_tokens_session_delete_failure_rolls_back_password_and_token() {
     assert!(
         revoked.is_none(),
         "Successful retry leaves the old session active"
+    );
+}
+
+#[tokio::test]
+#[ignore = "requires isolated Postgres; no email or model calls"]
+async fn google_login_reuses_the_user_and_creates_distinct_sessions() {
+    let f = Fixture::new().await;
+    let repo = data::UserRepository::new(f.pool.clone());
+    let sub = uuid::Uuid::new_v4().to_string();
+    let email = format!("google-{sub}@example.com");
+    let first_hash = hex::encode(Sha256::digest(format!("first-{sub}")));
+    let second_hash = hex::encode(Sha256::digest(format!("second-{sub}")));
+    let (first, session) = repo
+        .login_with_google(&sub, "Google QA", &email, &first_hash)
+        .await
+        .unwrap();
+    let (second, second_session) = repo
+        .login_with_google(&sub, "Changed name", "changed@example.com", &second_hash)
+        .await
+        .unwrap();
+    let count: i64 = sqlx::query_scalar("SELECT count(*) FROM sessions WHERE user_id=$1")
+        .bind(first.id)
+        .fetch_one(&f.pool)
+        .await
+        .unwrap();
+    sqlx::query("DELETE FROM users WHERE id=$1")
+        .bind(first.id)
+        .execute(&f.pool)
+        .await
+        .unwrap();
+    f.cleanup().await;
+    assert!(
+        first.verified && first.password_hash.is_none(),
+        "Google signup does not create a verified passwordless account"
+    );
+    assert_eq!(
+        first.google_sub.as_deref(),
+        Some(sub.as_str()),
+        "Google signup loses the external identity"
+    );
+    assert_eq!(
+        session.user_id, first.id,
+        "Session belongs to a different account"
+    );
+    assert_eq!(
+        second.id, first.id,
+        "Returning Google login creates a duplicate user"
+    );
+    assert_eq!(
+        second.email, email,
+        "Returning Google login silently replaces the local email"
+    );
+    assert_eq!(
+        second_session.user_id, first.id,
+        "Returning login creates a session for a different account"
+    );
+    assert_eq!(count, 2, "Repeated Google login loses a committed session");
+}
+
+#[tokio::test]
+#[ignore = "requires isolated Postgres; no email or model calls"]
+async fn google_session_insert_failure_cannot_leave_a_new_user() {
+    let f = Fixture::new().await;
+    let repo = data::UserRepository::new(f.pool.clone());
+    let sub = uuid::Uuid::new_v4().to_string();
+    let email = format!("google-{sub}@example.com");
+    let hash = hex::encode(Sha256::digest(sub.as_bytes()));
+    repo.create_session(&hash, &f.user).await.unwrap();
+    let failed = repo
+        .login_with_google(&sub, "Google QA", &email, &hash)
+        .await;
+    let orphan = repo.get_user_by_google_sub(&sub).await.unwrap();
+    let original = repo.get_session(&hash).await.unwrap();
+    f.cleanup().await;
+    assert!(
+        failed.is_err(),
+        "Duplicate session token reports a successful Google login"
+    );
+    assert!(
+        orphan.is_none(),
+        "Failed session insertion leaves an unwanted new user"
+    );
+    assert_eq!(
+        original.map(|session| session.user_id),
+        Some(f.user),
+        "Failed login changes another user's session"
+    );
+}
+
+#[tokio::test]
+#[ignore = "requires isolated Postgres; no email or model calls"]
+async fn google_login_cannot_silently_link_an_existing_email() {
+    let f = Fixture::new().await;
+    let repo = data::UserRepository::new(f.pool.clone());
+    let existing = repo.get_user_by_id(f.user).await.unwrap().unwrap();
+    let sub = uuid::Uuid::new_v4().to_string();
+    let hash = hex::encode(Sha256::digest(sub.as_bytes()));
+    let failed = repo
+        .login_with_google(&sub, "Google QA", &existing.email, &hash)
+        .await;
+    let user = repo.get_user_by_id(f.user).await.unwrap().unwrap();
+    let session = repo.get_session(&hash).await.unwrap();
+    f.cleanup().await;
+    assert!(
+        matches!(
+            failed,
+            Err(infrastructure::InfrastructureError::Conflict(_))
+        ),
+        "Email collision creates or links an account without consent"
+    );
+    assert!(
+        user.google_sub.is_none(),
+        "Google login silently links the existing password account"
+    );
+    assert!(
+        session.is_none(),
+        "Rejected Google identity still receives a session"
     );
 }

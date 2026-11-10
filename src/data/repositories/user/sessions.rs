@@ -18,6 +18,18 @@ impl SessionRepository {
         token_hash: &str,
         user_id: &Uuid,
     ) -> Result<SessionRow, InfrastructureError> {
+        let mut connection = self.pool.acquire().await?;
+        self.create_on_connection(token_hash, user_id, &mut connection)
+            .await
+    }
+
+    #[tracing::instrument(name = "repository.session.create_on_connection", level = "debug", skip_all, fields(user_id = %user_id))]
+    pub(super) async fn create_on_connection(
+        &self,
+        token_hash: &str,
+        user_id: &Uuid,
+        connection: &mut PgConnection,
+    ) -> Result<SessionRow, InfrastructureError> {
         Ok(sqlx::query_as!(
             SessionRow,
             "
@@ -28,7 +40,7 @@ impl SessionRepository {
             token_hash,
             user_id
         )
-        .fetch_one(&self.pool)
+        .fetch_one(connection)
         .await?)
     }
 
