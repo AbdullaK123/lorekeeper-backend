@@ -1,13 +1,15 @@
 mod auth_tokens;
+mod login_attempts;
 mod sessions;
 
 #[cfg(test)]
 mod tests;
 
 use crate::data::models::User;
-use crate::data::{AuthTokenPurpose, AuthTokenRow, SessionRow};
+use crate::data::{AuthTokenPurpose, AuthTokenRow, LoginAttemptRow, SessionRow};
 use crate::infrastructure::InfrastructureError;
 use auth_tokens::AuthTokenRepository;
+use login_attempts::LoginAttemptsRepository;
 use sessions::SessionRepository;
 use sqlx::PgPool;
 use uuid::Uuid;
@@ -17,6 +19,7 @@ pub struct UserRepository {
     pool: PgPool,
     auth_tokens: AuthTokenRepository,
     sessions: SessionRepository,
+    login_attempts: LoginAttemptsRepository,
 }
 
 impl UserRepository {
@@ -24,6 +27,7 @@ impl UserRepository {
         Self {
             auth_tokens: AuthTokenRepository::new(pool.clone()),
             sessions: SessionRepository::new(pool.clone()),
+            login_attempts: LoginAttemptsRepository::new(pool.clone()),
             pool,
         }
     }
@@ -298,5 +302,32 @@ impl UserRepository {
         user_id: &Uuid,
     ) -> Result<bool, InfrastructureError> {
         Ok(self.sessions.delete(token_hash, user_id).await?)
+    }
+    #[tracing::instrument(
+        name = "repository.user.create_login_attempt",
+        level = "debug",
+        skip_all
+    )]
+    pub async fn create_login_attempt(
+        &self,
+        state_hash: String,
+        nonce: String,
+        pkce_verifier: String,
+    ) -> Result<LoginAttemptRow, InfrastructureError> {
+        self.login_attempts
+            .create(state_hash, nonce, pkce_verifier)
+            .await
+    }
+
+    #[tracing::instrument(
+        name = "repository.user.consume_login_attempt",
+        level = "debug",
+        skip_all
+    )]
+    pub async fn consume_login_attempt(
+        &self,
+        state_hash: String,
+    ) -> Result<Option<LoginAttemptRow>, InfrastructureError> {
+        self.login_attempts.consume(state_hash).await
     }
 }

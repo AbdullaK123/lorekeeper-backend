@@ -1,5 +1,187 @@
 # Lorekeeper — Design and Development Lifecycle
 
+## Google login tracing added — 2026-11-10
+
+Confirmed the start route returns the updated ten-minute oauth_state cookie and Google redirect.
+Added skip_all spans to the handler, service, discovery factory, and attempt child queries. Events record provider, setup stage, stored attempts, prepared redirects, and consume match status.
+No credentials, state/hashes, nonce, PKCE verifier, URLs, or return values are logged. Updated docs/logging.md.
+Compile checking exposed an ambiguous child import and uncached new queries. Fixed the import, applied the authored OAuth-attempt migration only to QA, and refreshed SQLx metadata.
+Online library compilation and the final offline library check pass with existing warnings. Formatting and git diff --check pass.
+No tests, Google discovery requests, real sign-ins, emails, or paid calls occur. Full test-target compilation is not checked this turn.
+Next: callback browser-state validation and atomic attempt consumption, followed by token exchange and identity mapping.
+All four PM docs reviewed. Google sign-in remains incomplete; product scope and acceptance stay unchanged.
+
+## Google start handler draft review — 2026-11-10
+
+The draft calls AuthService and builds oauth_state with HttpOnly, Path=/, SameSite=Lax, and production Secure.
+Remaining: a ten-minute cookie max_age, returning updated CookieJar with Redirect::to, registering GET /google in the auth router, and a skip_all tracing span.
+The current handler has no return expression. No callback implementation exists yet.
+All four PM docs reviewed. No application edits, compilation, migrations, provider requests, or tests occur. Google flow remains incomplete.
+
+## Google login-start persistence review — 2026-11-10
+
+Inspection confirms begin_google_login hashes generated state, saves nonce/verifier with the attempt, then returns URL/raw state after a successful insert.
+Next: GET /auth/google sets a ten-minute HttpOnly oauth_state cookie at Path=/ with SameSite=Lax and production Secure, then returns that updated jar plus a redirect.
+The callback must compare query state with the cookie before consuming the unexpired attempt. This is not implemented yet.
+All four PM docs reviewed. No application edits, compilation, database execution, or tests occur; sign-in remains incomplete.
+
+## Persisting Google login attempts guidance — 2026-11-10
+
+begin_google_login now declares a URL/state pair return but still stops after URL generation.
+Next: SHA-256 hash state.secret(), save that hash plus nonce.secret() and verifier.secret() through create_login_attempt, then return URL and raw state only after persistence succeeds.
+Keep raw nonce/verifier in the database for callback validation/exchange; do not log these values or the generated URL.
+All four PM docs reviewed. Guidance only: no application edits, migration execution, compilation, or tests. Controller redirect remains pending.
+
+## Login-attempt forwarding methods added — 2026-11-10
+
+Added UserRepository::create_login_attempt and consume_login_attempt, forwarding to the existing child with unchanged result types.
+Both spans use skip_all so state hashes, nonces, verifiers, and return values are not logged.
+Changed file is formatted and git diff --check passes. No compilation, tests, migrations, or provider calls occur for these mechanical wrappers.
+Next: persist the generated attempt from AuthService and return URL/raw state for the controller.
+All four PM docs reviewed. Google login remains incomplete; scope and acceptance stay unchanged.
+
+## Login-attempt child construction confirmed — 2026-11-10
+
+Inspection confirms UserRepository holds and constructs LoginAttemptsRepository; the child derives Debug.
+Forwarding methods are still absent. Next: expose create_login_attempt returning LoginAttemptRow and consume_login_attempt returning Option<LoginAttemptRow> through the parent.
+All four PM docs reviewed. No application edits, compilation, or tests occur. AuthService persistence remains pending.
+
+## Optional attempt consumption confirmed — 2026-11-10
+
+Inspection confirms LoginAttemptRow spelling is corrected and consume now uses fetch_optional with an Option return.
+Next: UserRepository holds/constructs LoginAttemptsRepository and forwards create/consume operations. Child needs Debug to match the parent's existing derive.
+All four PM docs reviewed. No application edits, compilation, migration runs, or tests. OAuth integration remains pending.
+
+## Login-attempt repository review — 2026-11-10
+
+Model and child queries now exist. consume uses atomic DELETE RETURNING with an expiry predicate.
+Issue: fetch_one turns expected expired/missing/replayed attempts into RowNotFound database errors. Recommend fetch_optional and Result<Option<LoginAttemptRow>, InfrastructureError> for service-level authentication rejection.
+Model name currently has a typo: LoginAttempRow. The parent declares the module but has not constructed/held the child or exposed its operations.
+All four PM docs reviewed. Inspection only: no application edits, compilation, database execution, or tests. Callback wiring remains pending.
+
+## OAuth attempt migration typo corrected — 2026-11-10
+
+Inspection confirms expires_at now uses TIMESTAMPTZ. The previously identified SQL type typo is fixed in source.
+Next: add the attempt row model and child repository with create and atomic consume operations; consume deletes and returns only unexpired matching rows.
+All four PM docs reviewed. No application edits, migration execution, compilation, or tests occur. Database verification and OAuth flow remain pending.
+
+## OAuth attempt migration review — 2026-11-10
+
+Reviewed migrations/20261110065905_oauth_attempts.sql. Fields, nullability, primary key, and ten-minute expiry match the proposed attempt store.
+One SQL type typo remains: TIMESTAMPZ must be TIMESTAMPTZ.
+All four PM docs reviewed. No application/migration edits, database execution, or tests occur. Migration is not verified or applied by this turn.
+
+## Google login-attempt migration scope — 2026-11-10
+
+Inspection confirms begin_google_login generates URL/state/nonce/PKCE values but has no return or persistence yet.
+Next migration proposal: google_login_attempts(state_hash TEXT primary key, nonce TEXT not null, pkce_verifier TEXT not null, expires_at TIMESTAMPTZ not null default NOW()+10 minutes).
+No user_id is required because identity is unknown at login start. Store the actual verifier for exchange; a hash cannot replace it.
+The controller needs raw state for its temporary browser cookie, so returning only the URL is insufficient. Return URL/state after saving the attempt.
+Consume matching unexpired rows atomically during callback. Google identity mapping is a separate later schema task.
+All four PM docs reviewed. No migration/application edits, database operations, compilation, or tests occur. Sign-in remains incomplete.
+
+## Google login-start design proposal — 2026-11-10
+
+Split work into authorization URL generation, temporary login-attempt storage, and a controller redirect.
+AuthService generates URL, state, nonce, and PKCE verifier using the configured Google client and email/profile scopes.
+Proposed persistence: a short-lived Google login-attempt row with state hash, nonce, PKCE verifier, and expiry. The browser gets a temporary HttpOnly state cookie at Path=/ with Lax/production Secure policy.
+The callback must match query state to browser state, atomically consume the unexpired attempt, then use its verifier and nonce for token exchange/validation.
+This browser binding is required; a state value stored only in the database is insufficient to connect the callback to the initiating browser.
+First implementation slice is just URL/value generation in AuthService; storage and routes follow before any live login flow is usable.
+All four PM docs reviewed. No application edits, migrations, network requests, or tests occur. This storage design is proposed, not implemented or accepted.
+
+## OAuth startup handling follow-up — 2026-11-10
+
+Inspection confirms bootstrap now awaits Google client discovery and handles failure with an explicit startup expect.
+The reviewed tuple-return mismatch is resolved in source. No compile or live discovery verification occurs.
+Next slice: build the Google authorization URL and retain browser-bound temporary login state for the callback.
+All four PM docs reviewed. No application edits or tests occur. Google sign-in acceptance remains pending.
+
+## Bootstrap OAuth wiring review — 2026-11-10
+
+AuthService now accepts and stores a completed GoogleClient; bootstrap awaits its factory before construction.
+One compile blocker remains: bootstrap returns a tuple but uses ? on discovery. Match existing startup behavior with an explicit expect, or deliberately change the full startup error return chain.
+Recommend the local expect for this step; do not expand the refactor into unrelated startup APIs.
+All four PM docs reviewed. No application edits, compilation, discovery calls, or tests occur. Wiring is not yet verified.
+
+## Async Google factory type mismatch — 2026-11-10
+
+AuthService::new assigns create_core_client directly to a GoogleClient field. The async call returns a Future yielding Result<GoogleClient, ServiceError>.
+Explain that await obtains the Result and error handling obtains the client. The synchronous constructor cannot await.
+Keep discovery in async bootstrap and pass the completed GoogleClient into the constructor. The factory expects &Settings, not an owned Arc clone.
+Bootstrap still calls the old constructor signature and must be aligned when the user completes this change.
+All four PM docs reviewed. No application edits, compilation, or tests occur. Integration remains incomplete.
+
+## Google client factory review — 2026-11-10
+
+Inspection confirms the factory now discovers Google metadata, constructs the correctly typed client with credentials, and sets the callback URL.
+Next: call the factory once during bootstrap and retain the client for AuthService. Retain/reuse a no-redirect async HTTP client for later token exchanges too.
+No OAuth start/callback routes or login-attempt storage exist yet. Callback registration must still match the configured URL.
+All four PM docs reviewed. No application edits, compilation, live discovery, or tests occur. Setup is reviewed by inspection only; acceptance stays pending.
+
+## Constructing the discovered Google client — 2026-11-10
+
+Inspection confirms async HTTP client and provider discovery are written. The function still lacks its return value.
+Next guidance constructs CoreClient from metadata and owned ClientId/ClientSecret, then sets the exact Google callback RedirectUrl.
+Installed 4.1.0 source confirms endpoint states: EndpointSet, three EndpointNotSet, then two EndpointMaybeSet. A GoogleClient alias represents that return type.
+Credentials are cloned once because the client owns them. Callback URL derives from API_BASE_URL plus /auth/google/callback and must match registration.
+All four PM docs reviewed. No application edits, discovery requests, compilation, or tests occur. Google setup remains unverified.
+
+## Google discovery implementation guidance — 2026-11-10
+
+openidconnect 4.1.0 is now present and oauth.rs contains an empty create_core_client stub.
+First slice: make setup async, build the re-exported reqwest client with redirects disabled, and call CoreProviderMetadata::discover_async for https://accounts.google.com.
+Map setup/discovery errors to ServiceError; never log Settings or secrets. Construct the client once during startup.
+The plain CoreClient return annotation uses unset endpoint defaults; final client construction will need the discovered endpoint type reflected in its return type.
+Reviewed installed crate source after the documentation fetch failed. No application edits, network discovery requests, or tests occur this turn.
+All four PM docs reviewed. Client construction and Google sign-in acceptance remain pending.
+
+## OpenID Connect crate walkthrough — 2026-11-10
+
+Explained openidconnect 4.1.0 using its official documentation: discover provider metadata, construct CoreClient, build authorization URLs, exchange callback codes asynchronously, then verify ID-token claims.
+The application still owns browser-bound login-attempt state, state/nonce/PKCE persistence, user identity mapping, and local session creation.
+No dependency is installed yet. First implementation slice remains Google discovery/client construction at startup.
+Reviewed all four PM docs. Teaching only: no application edits, tests, or provider changes. Delivery status stays unchanged.
+
+## Credentials wrapper removed — 2026-11-10
+
+User removes GoogleOAuthCredentials and its getter, exposing client_id/client_secret on Settings directly.
+This avoids a one-use borrowed wrapper and lifetime plumbing. Setup functions can still accept &str arguments for only the values they need.
+All four PM docs reviewed. Inspection only: no application edits or tests occur. Google setup remains pending; scope and acceptance stay unchanged.
+
+## Borrowed credentials tradeoffs — 2026-11-10
+
+Inspection confirms the getter now returns GoogleOAuthCredentials<'_> tied to Settings.
+The wrapper narrows a function's inputs to Google credentials, groups related fields, and borrows existing strings without allocating copies.
+It does not encrypt or redact secrets. Its references cannot outlive Settings; an owned OpenID client can copy the required values at startup.
+Teaching only: no application changes or tests occur. All four PM docs reviewed; delivery status and scope stay unchanged.
+
+## Borrowed Google credentials review — 2026-11-10
+
+Settings now declares client_id/client_secret and returns a borrowed GoogleOAuthCredentials view.
+The getter's independent lifetime parameter is not tied to &self. Use get_oauth_creds(&self) -> GoogleOAuthCredentials<'_> so the return borrows Settings.
+No client construction or OAuth routes exist yet. Environment values are not read or displayed during this review.
+Reviewed all four PM docs. No application edits, compilation, or tests occur. Google integration and acceptance remain pending.
+
+## Google sign-in selected — 2026-11-10
+
+User selects Google as the first OAuth sign-in provider for US-040.
+Proposed Rust integration uses openidconnect and Google's OpenID Connect authorization-code server flow.
+Routes: GET /auth/google starts the browser redirect; GET /auth/google/callback validates the login attempt, exchanges the code, verifies the ID token, resolves the provider identity, and creates the existing app session.
+Use Google's stable sub claim for identity, not email as the identity key. Account-linking rules remain undecided.
+Login attempts need browser-bound, expiring state/nonce and PKCE data. Implementation must validate returned tokens through the library.
+First setup step: create a Google Web application OAuth client and register the exact callback URL. Keep its secret in settings, never source or logs.
+Checked official Google documentation and openidconnect crate documentation. No dependency additions, application edits, tests, or Google configuration changes occur.
+Reviewed all four PM docs. Provider choice is settled; implementation and epic acceptance remain pending.
+
+## Next feature proposal: OAuth sign-in — 2026-11-08
+
+Password recovery, verification, and custom-session HTTP checks now have evidence. Frontend confirmation pages stay deferred.
+Propose OAuth sign-in (US-040, Epic 9) as the next backend feature. No provider is selected yet.
+First agree the provider and account-linking behavior, then design provider identity storage and login/callback routes using the existing session service.
+This is a priority proposal, not implementation approval or epic completion.
+Reviewed all four PM docs and Epic 9 scope. No application changes or tests occur this turn.
+
 ## Verification HTTP workflow passed — 2026-11-08
 
 Tests use the actual verification request and confirmation routes, existing email template, session extractor, token expiry, and Postgres flag update. Confirmation continues to accept JSON credentials without a session.

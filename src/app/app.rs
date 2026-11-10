@@ -6,7 +6,7 @@ use crate::infrastructure::{
 };
 use crate::service::{
     AuthService, ChatAgentFactory, ConversationService, ResearcherService, RetrievalService,
-    WorldService,
+    WorldService, create_core_client,
 };
 use axum::Router;
 use axum::routing::get;
@@ -63,8 +63,15 @@ async fn bootstrap(
     let user_repo = UserRepository::new(pool.clone());
     let world_repo = WorldRepository::new(pool.clone());
     let conversation_repo = ConversationRepository::new(pool.clone());
-    let auth_service =
-        AuthService::new(user_repo, &settings.resend_api_key, &settings.api_base_url);
+    let oauth_client = create_core_client(settings)
+        .await
+        .expect("Failed to initialize Google OAuth client");
+    let auth_service = AuthService::new(
+        user_repo,
+        &settings.resend_api_key,
+        &settings.api_base_url,
+        oauth_client,
+    );
     let world_service = WorldService::new(world_repo.clone(), graph_repo.clone());
 
     graph_repo

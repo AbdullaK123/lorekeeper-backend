@@ -5,7 +5,7 @@ use crate::data::{
     UserResponse, VerifyEmailRequest,
 };
 use axum::extract::State;
-use axum::response::IntoResponse;
+use axum::response::{IntoResponse, Redirect};
 use axum::routing::{get, post};
 use axum::{Json, Router};
 use axum_extra::extract::cookie::{Cookie, CookieJar, SameSite};
@@ -138,6 +138,25 @@ async fn verify_email(
     Ok(Json(user))
 }
 
+#[tracing::instrument(name = "controller.auth.begin_google_login", level = "debug", skip_all)]
+async fn begin_google_login(
+    cookies: CookieJar,
+    State(ctx): State<AppState>,
+) -> Result<impl IntoResponse, AppError> {
+    let (url, state) = ctx.auth_service.begin_google_login().await?;
+
+    let cookie = Cookie::build(("oauth_state", state))
+        .http_only(true)
+        .path("/")
+        .same_site(SameSite::Lax)
+        .secure(ctx.is_prod)
+        .max_age(time::Duration::minutes(10))
+        .build();
+
+    tracing::info!(provider = "google", "OAuth redirect prepared");
+    Ok((cookies.add(cookie), Redirect::to(&url)))
+}
+
 pub fn create_auth_controller() -> Router<AppState> {
     Router::new()
         .route("/me", get(get_profile))
@@ -151,4 +170,5 @@ pub fn create_auth_controller() -> Router<AppState> {
             post(request_email_verification),
         )
         .route("/email_verification", post(verify_email))
+        .route("/google", get(begin_google_login))
 }

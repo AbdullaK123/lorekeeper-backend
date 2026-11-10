@@ -25,6 +25,8 @@ pub struct Settings {
     pub api_base_url: String,
     cors_allowed_origins: Vec<String>,
     pub env: Environment,
+    pub client_id: String,
+    pub client_secret: String,
 }
 
 impl Settings {

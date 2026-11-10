@@ -1,7 +1,9 @@
 use crate::data::{AuthTokenPurpose, SignupRequest, User, UserRepository, UserResponse};
-use crate::service::{EmailService, ServiceError};
+use crate::service::{EmailService, GoogleClient, ServiceError};
 use argon2::{Argon2, PasswordHash, PasswordHasher, PasswordVerifier};
 use chrono::{DateTime, Utc};
+use openidconnect::core::CoreAuthenticationFlow;
+use openidconnect::{CsrfToken, Nonce, PkceCodeChallenge, Scope};
 use sha2::{Digest, Sha256};
 use tokio;
 use uuid::Uuid;
@@ -11,14 +13,21 @@ pub struct AuthService {
     user_repo: UserRepository,
     email_service: EmailService,
     api_base_url: String,
+    oauth_client: GoogleClient,
 }
 
 impl AuthService {
-    pub fn new(user_repo: UserRepository, resend_api_key: &str, api_base_url: &str) -> Self {
+    pub fn new(
+        user_repo: UserRepository,
+        resend_api_key: &str,
+        api_base_url: &str,
+        client: GoogleClient,
+    ) -> Self {
         Self {
             user_repo,
             email_service: EmailService::new(resend_api_key),
             api_base_url: api_base_url.trim_end_matches('/').to_owned(),
+            oauth_client: client,
         }
     }
 
@@ -204,5 +213,35 @@ impl AuthService {
         let deleted = self.user_repo.delete_session(&token_hash, user_id).await?;
         tracing::debug!(deleted, "session deletion completed");
         Ok(deleted)
+    }
+
+    #[tracing::instrument(name = "auth.begin_google_login", level = "info", skip_all)]
+    pub async fn begin_google_login(&self) -> Result<(String, String), ServiceError> {
+        let (challenge, verifier) = PkceCodeChallenge::new_random_sha256();
+
+        let (url, state, nonce) = self
+            .oauth_client
+            .authorize_url(
+                CoreAuthenticationFlow::AuthorizationCode,
+                CsrfToken::new_random,
+                Nonce::new_random,
+            )
+            .add_scope(Scope::new("email".into()))
+            .add_scope(Scope::new("profile".into()))
+            .set_pkce_challenge(challenge)
+            .url();
+
+        let state_hash = hex::encode(Sha256::digest(state.secret().as_bytes()));
+
+        self.user_repo
+            .create_login_attempt(
+                state_hash,
+                nonce.secret().to_owned(),
+                verifier.secret().to_owned(),
+            )
+            .await?;
+
+        tracing::debug!(provider = "google", "OAuth login attempt stored");
+        Ok((url.to_string(), state.secret().to_owned()))
     }
 }

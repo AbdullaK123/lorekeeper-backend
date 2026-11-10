@@ -78,3 +78,11 @@ Spans skip all arguments and return values. They include explicit user IDs where
 Events record missing cookies, missing/expired sessions, resolved user IDs, expiry, and deletion counts.
 Deletion counts inside repository queries describe executed statements. Password-reset commit events establish persistence.
 Raw cookie tokens, token hashes, and cookie headers are never included in these events.
+
+## Google login start — 2026-11-10
+
+Google client setup, the start handler/service, and login-attempt child operations have named spans using skip_all.
+Setup failures record only the provider and failing stage. Database failures record only the operation.
+Events distinguish provider discovery, client readiness, saved attempts, prepared redirects, and matched/missing consume results.
+They never include settings, client secrets, state values/hashes, nonce, PKCE verifier, generated URLs, or return values.
+A prepared redirect is not a completed Google sign-in. Callback handling remains unimplemented.
