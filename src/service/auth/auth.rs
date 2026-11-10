@@ -320,5 +320,5 @@ impl AuthService {
 }
 
 #[cfg(test)]
-#[path = "oauth_tests.rs"]
+#[path = "../../../tests/unit/oauth_service.rs"]
 mod oauth_tests;

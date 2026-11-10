@@ -99,17 +99,16 @@ ENV=dev
 API_BASE_URL=http://localhost:8000/api
 ```
 
-Export settings and apply migrations before starting:
+Export settings before starting (the API applies pending migrations during bootstrap):
 
 ```sh
 set -a
 source .env
 set +a
-cargo sqlx migrate run
 SQLX_OFFLINE=true cargo run
 ```
 
-The app does not load `.env` itself or apply application migrations automatically.
+The app does not load `.env` itself. Bootstrap applies pending application migrations before creating services and workers. Startup stops if migration fails.
 DBOS initializes its own system schema during startup.
 The app creates graph constraints and indexes during bootstrap.
 Non-secret settings live in [config.yaml](src/app/config/config.yaml).
@@ -132,7 +131,7 @@ Built playground files remain available only when ENV=dev.
 docker build -t lorekeeper-backend:local .
 ```
 
-For the local Compose stack, start the databases and apply application migrations first.
+For the local Compose stack, start the databases first. The API applies pending migrations during bootstrap.
 Then run:
 
 ```sh
@@ -140,7 +139,7 @@ docker compose up -d --build api
 ```
 
 Compose supplies database service names inside the shared network.
-API startup does not apply application migrations. Use the SQLx command from local setup before starting it.
+API startup applies embedded application migrations. The SQLx command from local setup is also available for manual migration.
 No OpenRouter key or database credentials are needed during image compilation.
 The build uses SQLX_OFFLINE and checked-in .sqlx metadata.
 .dockerignore excludes local secrets, build output, Git state, and test artifacts from the context.

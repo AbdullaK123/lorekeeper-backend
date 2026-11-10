@@ -1,5 +1,39 @@
 # Lorekeeper — User Stories
 
+## SQLx Google field metadata refreshed — 2026-11-10
+
+Local Postgres is healthy and users.google_sub exists. The previously missing .sqlx cache is regenerated against app_db.
+Online all-target compilation through cargo sqlx prepare passes. All eight user-returning query metadata entries include google_sub.
+An offline library check also passes with existing warnings. The reported missing-field error is not reproduced by the compiler.
+Rust Analyzer still needs a workspace/server restart to discard its previous macro expansion; editor refresh is not verified from this session.
+No application logic edits or tests occur. All four PM docs reviewed; scope and acceptance remain unchanged.
+
+## Bootstrap application migrations — 2026-11-10
+
+Bootstrap now runs embedded SQLx migrations before repository/service/worker creation. Migration failure stops startup and emits an error log.
+Docker's API build stage copies migrations for compile-time embedding. README startup instructions reflect automatic migration.
+Offline library checks are blocked by missing .sqlx query metadata. The first incremental check also panics; a non-incremental retry reports missing metadata without that panic.
+No missing cache files are restored. Whitespace checks pass. Runtime migration execution, tests, and Docker rebuild are not verified this turn.
+All four PM docs reviewed. Product scope and acceptance remain unchanged; refresh query metadata before build verification.
+
+## Tests moved outside source — 2026-11-10
+
+Moved five Rust unit-test modules into tests/unit, including the previously inline playground tests.
+Test-only path declarations preserve private access and existing test names. No production API visibility changes occur.
+Moved the playground client test into tests/playground and updated its npm command. AGENTS.md now records this location rule.
+Rust library tests compile: 13 pass, one existing duplicate-row ranking failure, 32 ignored storage/provider tests.
+All six playground client tests pass. Source scan finds no test functions under src or playground/src; git diff --check passes.
+No live storage/provider tests run. All four PM docs reviewed; product scope and acceptance remain unchanged.
+
+## Missing Google field diagnostic checked — 2026-11-10
+
+User repository queries select/return all columns; prepared user query metadata includes google_sub.
+Offline library cargo check passes with existing warnings. Online check fails because localhost:5433 refuses connections.
+Docker Compose lists no running app-db container. Rust Analyzer settings require live SQLx checks against that database.
+The reported missing-field diagnostic is not reproduced by the current offline compiler check; stale IDE macro expansion remains possible.
+Next: start the local database, then reload the Rust Analyzer workspace. No application edits or tests occur.
+All four PM docs reviewed. Delivery scope and acceptance remain unchanged.
+
 ## Google login database confirmation — 2026-11-10
 
 Read-only inspection of local app_db finds one Google-linked user: verified, passwordless, with one active session.

@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { buildRequest, operations } from "./workbench.js";
-import { api, inspectRequest } from "./api.js";
+import { buildRequest, operations } from "../../playground/src/workbench.js";
+import { api, inspectRequest } from "../../playground/src/api.js";
 
 const operation = (id) => operations.find((item) => item.id === id);
 

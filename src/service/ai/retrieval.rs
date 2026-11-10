@@ -173,4 +173,5 @@ impl RetrievalService {
 }
 
 #[cfg(test)]
+#[path = "../../../tests/unit/retrieval.rs"]
 mod tests;

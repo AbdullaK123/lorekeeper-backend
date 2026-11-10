@@ -3,6 +3,7 @@ mod login_attempts;
 mod sessions;
 
 #[cfg(test)]
+#[path = "../../../../tests/unit/user_repository.rs"]
 mod tests;
 
 use crate::data::models::User;

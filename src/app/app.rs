@@ -58,6 +58,13 @@ async fn bootstrap(
     graph: Graph,
     settings: &Settings,
 ) -> (AppState, JobScheduler, DBOS) {
+    tracing::info!("applying Postgres migrations");
+    sqlx::migrate!("./migrations")
+        .run(&pool)
+        .await
+        .inspect_err(|_| tracing::error!("Postgres migrations failed; stopping startup"))
+        .expect("Failed to apply Postgres migrations");
+    tracing::info!("Postgres migrations ready");
     tracing::info!("assembling application services");
     let graph_repo = GraphRepository::new(graph.clone());
     let user_repo = UserRepository::new(pool.clone());
@@ -139,5 +146,5 @@ async fn bootstrap(
 }
 
 #[cfg(test)]
-#[path = "oauth_callback_tests.rs"]
+#[path = "../../tests/unit/oauth_callback.rs"]
 mod oauth_callback_tests;

@@ -15,3 +15,8 @@ Do not invent progress or repeat historical entries just to change a file.
 State when no code changes or tests occur. Do not mark unverified work complete.
 Backend routes and development tools alone do not complete product epics.
 Update `docs/product_soul.md` when the audience, purpose, or product scope changes.
+
+## Test locations
+
+Keep test implementations under the root `tests/` directory, outside `src/`.
+Unit tests can use `#[cfg(test)]` and `#[path]` declarations to retain private access.

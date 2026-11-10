@@ -248,3 +248,8 @@ Callback router tests additionally require local Memgraph on 7687 and `OPENROUTE
 `cargo test --offline --jobs 2 --lib app::app::oauth_callback_tests:: -- --ignored --test-threads=1`.
 No Google discovery, real Google tokens, emails, or paid model requests occur.
 One callback-cookie cleanup test currently fails. [Results](artifacts/google-oauth-tests-2026-11-10/summary.md).
+
+## Test locations
+
+Rust unit test implementations live in `tests/unit/`. Source modules load them with test-only path declarations, preserving private access. Run them with `cargo test --lib`.
+Playground client tests live in `tests/playground/`. Run them with `npm --prefix playground test`.
