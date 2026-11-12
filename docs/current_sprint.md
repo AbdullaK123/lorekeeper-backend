@@ -1,5 +1,16 @@
 # Current Sprint
 
+## US-043 backend scope closed — 2026-11-12
+
+Decision (developer): cut unlinking from scope. Keep logged-in /google as the link entry point.
+US-043 backend scope is linking only, verified by 33/33 OAuth tests. Frontend link UI waits with other deferred frontend work.
+No code changes or tests in this step. Uncommitted: migration, link code, tests, .sqlx, docs.
+
+## US-043 scope check — 2026-11-12
+
+Developer: US-043 is overcomplicated. Review: the story has no written acceptance criteria. Its goal (keep access, no duplicate accounts) is met by linking.
+Recommendation: close US-043 backend scope at linking. Keep current /google behavior. Move unlink to a later story. Awaiting developer decision; no status change yet.
+
 ## Overwrite rule complete — 2026-11-12
 
 At the developer's request, Claude wrote the service step: when set_google_sub updates no row, return Conflict if the user exists, AuthError if gone. Regenerated .sqlx; offline check passes.

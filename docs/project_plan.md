@@ -1,5 +1,9 @@
 # Lorekeeper — Project Plan
 
+## US-043 closed (backend) — 2026-11-12
+
+Unlinking cut. Linking backend done and tested. Next backend priority returns to the open plan items: billing and usage, concurrent-edit protection, stale-embedding repair.
+
 ## US-043 next steps — 2026-11-12
 
 Linking done and tested (33/33). Next: decide if logged-in /google should always link; then build unlink.

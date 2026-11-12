@@ -1,5 +1,9 @@
 # Lorekeeper — User Stories
 
+## US-043 scope — 2026-11-12
+
+Scope cut: no unlinking. Backend acceptance: linking keeps one account per writer, rejects foreign or replacing links, and only the starting session can finish a link. Verified by 33/33 OAuth tests. Frontend link UI deferred with other frontend stories.
+
 ## US-043 link evidence — 2026-11-12
 
 Google link path: 33/33 service and route tests pass. Story not accepted: unlink and the implicit-link-on-/google question remain.
@@ -1582,7 +1586,7 @@ Operator stories support the writer-facing service.
 - **US-040:** As a writer, I want to sign in through a supported OAuth provider so I can access my account without another password.
 - **US-041:** As a writer, I want to verify my email address so I can receive account messages at an address I control.
 - **US-042:** As a writer, I want to reset a forgotten password securely so I can recover access to my worlds.
-- **US-043:** As a writer, I want to manage linked sign-in methods safely so I can keep access without creating duplicate accounts.
+- **US-043:** As a writer, I want to manage linked sign-in methods safely so I can keep access without creating duplicate accounts. *(Scope 2026-11-12: Google linking only; unlinking cut. Backend accepted; frontend deferred.)*
 - **US-044:** As a writer, I want to receive clear account recovery errors so I can understand my next safe step.
 
 ## Epic 10: Manage My Subscription and Payments

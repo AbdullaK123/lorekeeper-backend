@@ -1,5 +1,9 @@
 # Lorekeeper — Design and Development Lifecycle
 
+## Account linking scope — 2026-11-12
+
+No unlink route by design: unlinking could lock out Google-only writers. Logged-in GET /auth/google links; logged-out GET /auth/google signs in.
+
 ## Linking status — 2026-11-12
 
 Overwrite rule implemented: link never replaces an existing google_sub (Conflict). Tests pass.
