@@ -1,5 +1,13 @@
 # Lorekeeper — Design and Development Lifecycle
 
+## Known limit removed — 2026-11-12
+
+RRF now counts each entity once per search list. The duplicate-row ranking test passes.
+
+## Known limit: conflict resolution race — 2026-11-12
+
+Resolving a conflict while the research agent updates the same entity can lose one write. Accepted as a known limit for a single-writer app.
+
 ## Account linking scope — 2026-11-12
 
 No unlink route by design: unlinking could lock out Google-only writers. Logged-in GET /auth/google links; logged-out GET /auth/google signs in.

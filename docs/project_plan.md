@@ -1,5 +1,13 @@
 # Lorekeeper — Project Plan
 
+## Test suite green (non-live) — 2026-11-12
+
+RRF duplicate-row fix lands; 14/14 non-live lib tests pass. Next remains usage limits (Epic 11).
+
+## Priority change — 2026-11-12
+
+Concurrent-edit protection downgraded to a known limit: single-writer app, only conflict resolution can race the research agent. Next backend priority: billing and usage (Epics 10-11).
+
 ## US-043 closed (backend) — 2026-11-12
 
 Unlinking cut. Linking backend done and tested. Next backend priority returns to the open plan items: billing and usage, concurrent-edit protection, stale-embedding repair.

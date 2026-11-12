@@ -115,8 +115,13 @@ impl RetrievalService {
     fn rrf(lists: Vec<Vec<Entity>>, k: f64) -> Vec<Entity> {
         let mut scoreboard: HashMap<String, f64> = HashMap::new();
         for list in &lists {
+            // Count each entity once per list, at its best (first) rank.
+            let mut counted = HashSet::new();
             for (i, entity) in list.iter().enumerate() {
-                *scoreboard.entry(entity.id.clone()).or_insert(0.0) += 1.0 / (k + i as f64 + 1.0);
+                if counted.insert(entity.id.as_str()) {
+                    *scoreboard.entry(entity.id.clone()).or_insert(0.0) +=
+                        1.0 / (k + i as f64 + 1.0);
+                }
             }
         }
         let mut entities: Vec<Entity> = lists.into_iter().flatten().collect();

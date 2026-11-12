@@ -1,5 +1,27 @@
 # Current Sprint
 
+## RRF duplicate-row fix — 2026-11-12
+
+At the developer's request, Claude changed RetrievalService::rrf to count each entity once per list, at its best rank.
+Result: all 14 non-live lib tests pass, including the previously failing duplicate-row test. Live suites not rerun.
+
+## Explained failing ranking test — 2026-11-12
+
+Explained duplicate_rows_in_one_search_must_not_outvote_two_independent_searches: rrf scores every row, so an entity repeated within one list gains points per copy. Defensive test; no evidence yet that either search returns duplicates.
+No code changes or tests.
+
+## Remaining-work inventory — 2026-11-12
+
+Listed remaining work from user_stories and project_plan Stage 7 for the developer. Noted the plan's order: usage accounting before billing.
+No code changes, tests, or status changes.
+
+## Next slice after US-043 — 2026-11-12
+
+Developer committed the linking work (05d01bc). Open backend items: concurrent-edit protection, billing/usage (Epics 10-11), stale-vector repair.
+Recommendation: concurrent-edit protection first. It guards against silent data loss; the background research agent and the writer can edit the same entity.
+Correction (developer): single-writer app. No user entity-edit route exists; writes come from the research agent and conflict resolution. Remaining race is narrow (resolve a conflict while research updates that entity). Downgraded to a known limit. Revised recommendation: billing and usage next.
+No code changes or tests. No status change.
+
 ## US-043 backend scope closed — 2026-11-12
 
 Decision (developer): cut unlinking from scope. Keep logged-in /google as the link entry point.

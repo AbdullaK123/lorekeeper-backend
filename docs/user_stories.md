@@ -1,5 +1,9 @@
 # Lorekeeper — User Stories
 
+## Retrieval ranking — 2026-11-12
+
+RRF duplicate-row defect fixed (supports US-016/US-017 ranking). No acceptance status change.
+
 ## US-043 scope — 2026-11-12
 
 Scope cut: no unlinking. Backend acceptance: linking keeps one account per writer, rejects foreign or replacing links, and only the starting session can finish a link. Verified by 33/33 OAuth tests. Frontend link UI deferred with other frontend stories.
