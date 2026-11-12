@@ -28,6 +28,10 @@ sqlx migrate run
 SQLX_OFFLINE=true cargo test --offline --jobs 2 --test adversarial_live -- --ignored --nocapture --test-threads=1 --skip adversarial_live_api --skip researcher_smoke_conversation
 ```
 
+OAuth tests run from the library target: `cargo test --lib oauth -- --ignored --test-threads=1` with `OPENROUTER_API_KEY=qa-not-sent`.
+The callback router tests need DBOS system tables. A fresh QA database has none until one DBOS instance launches against it (set `DBOS__APPVERSION`).
+One callback test briefly renames `sessions` to inject a lookup failure. Run OAuth tests serially.
+
 The command above selects free native database tests. Run the HTTP wrapper separately below.
 The HTTP test server uses port 18000. The existing server can stay running on port 8000.
 The harness refuses another database name. Fault injection uses a trigger scoped to one test conversation.

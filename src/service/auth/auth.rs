@@ -227,7 +227,10 @@ impl AuthService {
     }
 
     #[tracing::instrument(name = "auth.begin_google_login", level = "info", skip_all)]
-    pub async fn begin_google_login(&self) -> Result<(String, String), ServiceError> {
+    pub async fn begin_google_login(
+        &self,
+        user_id: Option<Uuid>,
+    ) -> Result<(String, String), ServiceError> {
         let (challenge, verifier) = PkceCodeChallenge::new_random_sha256();
 
         let (url, state, nonce) = self
@@ -249,6 +252,7 @@ impl AuthService {
                 state_hash,
                 nonce.secret().to_owned(),
                 verifier.secret().to_owned(),
+                user_id,
             )
             .await?;
 
@@ -261,10 +265,11 @@ impl AuthService {
         &self,
         state_hash: String,
         code: String,
+        user_id: Option<Uuid>,
     ) -> Result<(User, String, DateTime<Utc>), ServiceError> {
         let attempt = self
             .user_repo
-            .consume_login_attempt(state_hash)
+            .consume_login_attempt(state_hash, user_id)
             .await?
             .ok_or(ServiceError::AuthError)?;
         let tokens = self
@@ -286,6 +291,24 @@ impl AuthService {
             .map_err(|_| ServiceError::AuthError)?;
 
         let google_sub = claims.subject().as_str();
+
+        if let Some(id) = attempt.user_id {
+            let linked = self
+                .user_repo
+                .set_google_sub(id, google_sub.to_string())
+                .await?;
+
+            if linked.is_none() {
+                // No row updated: either the user is gone, or they already link another Google account.
+                return match self.user_repo.get_user_by_id(id).await? {
+                    Some(_) => Err(ServiceError::Conflict(
+                        "A Google account is already linked".into(),
+                    )),
+                    None => Err(ServiceError::AuthError),
+                };
+            }
+        }
+
         let (username, email) = match self.user_repo.get_user_by_google_sub(google_sub).await? {
             Some(user) => (user.username, user.email),
             None => {

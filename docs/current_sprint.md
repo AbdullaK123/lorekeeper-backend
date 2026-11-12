@@ -1,5 +1,91 @@
 # Current Sprint
 
+## Overwrite rule complete — 2026-11-12
+
+At the developer's request, Claude wrote the service step: when set_google_sub updates no row, return Conflict if the user exists, AuthError if gone. Regenerated .sqlx; offline check passes.
+Result: 33/33 OAuth tests pass (ignored live set). Non-live lib tests pass.
+US-043 remaining: unlink, and whether logged-in /google should always link.
+
+## Overwrite rule: reject — 2026-11-12
+
+Decision: linking never replaces an existing google_sub. Developer updated set_google_sub to update only when google_sub is NULL or the same.
+Service step pending: on None, return Conflict when the user exists, AuthError when gone. .sqlx cache not yet regenerated (offline build fails).
+Result: 32 pass, 1 fail (now returns AuthError, test expects Conflict). Clarified that test's failure message.
+
+## Session lookup fix verified — 2026-11-12
+
+Developer switched Google start and callback to Option<UserId>. Session-lookup errors now surface.
+Result: 32 pass, 1 fail. Remaining failure: overwrite rule (google_link_silently_replaces_an_existing_google_link) still undecided.
+
+## Remaining Google link tests — 2026-11-12
+
+QA database: created DBOS system tables by launching DBOS once from a throwaway scratchpad program. The 3 existing callback tests now pass.
+Added 4 route tests (tests/unit/oauth_callback.rs): logged-in start records the user; stale session cookie still allows plain login; failed session lookup on start; callback with another user's session for a link attempt.
+Added 1 service test for the proposed rule: linking must not replace an existing google_sub.
+Result: 31 pass, 2 fail. Both failures are real findings, not test faults:
+- google_start_hides_a_failed_session_lookup: Result<UserId> + .ok() treats a DB error as logged out, so a link silently becomes a plain login. Verified the test passes when begin_google_login takes Option<UserId> (developer's OptionalFromRequestParts impl); code restored.
+- google_link_silently_replaces_an_existing_google_link: encodes the undecided overwrite rule. Delete it if replacing is the chosen behavior.
+Fault injection note: the QA role is a superuser, so REVOKE does nothing; the test renames sessions briefly instead. tests/README.md updated.
+
+## More Google link tests — 2026-11-12
+
+Added 9 link tests: forged tokens during a link (nonce, signature, audience, issuer, expired), expired link attempt, link replay, re-linking the same Google account, and a deterministic race of two links for one Google account.
+Result: 25/25 OAuth service tests pass. Race test passed 3 more reruns.
+Mutation check: disabling the unique-violation → Conflict mapping fails the race test. Code restored.
+Still not covered: overwrite of an existing google_sub (undecided), HTTP routes (QA DB lacks DBOS tables), Result<UserId> extractor hiding session-lookup DB errors.
+
+## Google link tests — 2026-11-12
+
+Added 7 live link tests to tests/unit/oauth_service.rs (fixture: optional link user, local password users, cleanup).
+Covers: link keeps the existing account; same-email link; another user's session; logged-out callback; Google account owned by another user (Conflict); deleted linking user; plain login with a session present.
+Result: 16/16 OAuth service tests pass against lorekeeper_adversarial.
+Mutation check: disabling the service link branch and the consume user filter fails 5 of 7 link tests. The deleted-user test is guarded by the ON DELETE CASCADE foreign key instead. Code restored.
+Not covered: overwrite of an existing google_sub (undecided), concurrent links, HTTP callback tests (QA DB lacks DBOS tables).
+
+## Google account linking backend — 2026-11-12
+
+Developer built the link path. A logged-in user who starts Google sign-in saves their user ID with the attempt.
+The callback reads the session. consume matches only the same user. complete_google_login sets google_sub first, then logs in normally.
+set_google_sub maps a duplicate Google account to Conflict. Migration 20261111190939 adds nullable user_id with ON DELETE CASCADE.
+Mechanical: updated old OAuth unit-test call sites; regenerated .sqlx; offline check passes.
+Created QA database lorekeeper_adversarial and applied all migrations.
+Checks: 9/9 OAuth service tests pass (plain Google login unchanged). 3 callback tests fail at setup: the new QA DB has no DBOS system tables.
+Not tested: any link scenario. Open: /google reuse means any logged-in Google sign-in links; overwrite of an existing google_sub; OptionalFromRequestParts impl unused.
+
+## Planning check — 2026-11-11
+
+Reviewed all four PM docs. Next slice is unchanged: design Google account linking (US-043).
+Start with link request/callback behavior and the transaction boundary. Other docs need no change.
+No code changes or tests occur. No delivery status changes.
+Recall check on row locks before linking design: correct. Next: design the link flow.
+Explained account linking against the existing Google login flow. Developer drafts the link flow next.
+Re-explained linking with a sequence diagram on request.
+Developer identified the need for a migration: google_login_attempts must store the linking user's ID.
+Decision: nullable user_id. NULL = plain Google login (returning user or new signup); set = link to that user.
+Developer wrote migration 20261111190939 (nullable UUID user_id). Under review: no foreign key to users yet. Not applied or tested.
+Decision: user_id references users(id) ON DELETE CASCADE, so deleting a user removes pending link attempts.
+Migration updated with the foreign key; reviewed correct. Not yet applied or tested.
+LoginAttemptsRepository: create stores optional user_id; consume only matches when the attempt has no user or the same user. Reviewed: logic correct.
+Build fails: UserRepository wrappers (user/mod.rs:414, :427) not updated; .sqlx cache missing for both changed queries. No tests run.
+Repository wrappers and service begin/complete now take Option<Uuid>. Controllers pass None. Developer proposes a new link-start handler; callback path not yet link-aware. No tests run.
+Developer found the first failure: callback passes None to complete_google_login, so consume rejects link attempts. Fix: read the session user optionally in the callback.
+Callback and /google start now read the session (Result<UserId>) and pass it through; OptionalFromRequestParts added but unused. /google is reused for linking when a session exists (open design point).
+Remaining: complete_google_login ignores attempt.user_id and always runs find-or-create login. No tests run.
+Next: a repository query to set google_sub on the linking user. users.google_sub is already UNIQUE. Open: behavior when the user already has a different google_sub.
+Developer added UserRepository::set_google_sub (UPDATE with NOT EXISTS guard, returns Option<User>). Review: NOT EXISTS does not stop concurrent links; UNIQUE still raises 23505 then. Recommend plain UPDATE + map unique violation. Overwrite of an existing google_sub still open. Service branch not wired. No tests run.
+Developer found the review too dense; re-explained in plain words. No new decisions.
+set_google_sub simplified to a plain UPDATE. Remaining: map the duplicate-account error to InfrastructureError::Conflict; wire the service link branch. No tests run.
+Duplicate-account error now maps to Conflict (flows to ServiceError::Conflict). Recommended service step: when attempt.user_id is set, call set_google_sub before the existing lookup, then let the normal login run. Not yet built or tested.
+Link branch added, but its None arm returns AuthError for every plain Google login (my instruction was ambiguous). Fix: only act when user_id is set; check set_google_sub's None. Not built or tested.
+
+## Next backend slice after Google sign-in — 2026-11-10
+
+Google sign-in has persisted-user/session evidence. Account linking remains separate unfinished work under US-043.
+Recommend authenticated Google linking for existing password accounts. Current email collisions reject login rather than link accounts.
+Link only after the user proves both identities: an existing local session and verified Google login. Preserve the existing user ID and worlds.
+First design slice: define the link request/callback behavior and transaction boundary before implementation.
+Billing and usage remain required later work. All four PM docs reviewed; no code changes or tests occur and no full epic is newly accepted.
+
 ## SQLx Google field metadata refreshed — 2026-11-10
 
 Local Postgres is healthy and users.google_sub exists. The previously missing .sqlx cache is regenerated against app_db.

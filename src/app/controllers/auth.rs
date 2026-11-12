@@ -149,9 +149,12 @@ async fn verify_email(
 #[tracing::instrument(name = "controller.auth.begin_google_login", level = "debug", skip_all)]
 async fn begin_google_login(
     cookies: CookieJar,
+    session: Option<UserId>,
     State(ctx): State<AppState>,
 ) -> Result<impl IntoResponse, AppError> {
-    let (url, state) = ctx.auth_service.begin_google_login().await?;
+    let user_id = session.map(|session| session.0);
+
+    let (url, state) = ctx.auth_service.begin_google_login(user_id).await?;
 
     let mut cookie = ctx.auth_cookie("oauth_state", state);
     cookie.set_max_age(time::Duration::minutes(10));
@@ -170,9 +173,12 @@ pub struct OAuthParams {
 #[tracing::instrument(name = "controller.auth.google_callback", level = "debug", skip_all)]
 async fn google_auth_callback(
     cookies: CookieJar,
+    session: Option<UserId>,
     Query(params): Query<OAuthParams>,
     State(ctx): State<AppState>,
 ) -> Result<Response, AppError> {
+    let user_id = session.map(|session| session.0);
+
     let result: Result<_, AppError> = async {
         let cookie = cookies
             .get("oauth_state")
@@ -196,7 +202,7 @@ async fn google_auth_callback(
 
         let (user, token, expires_at) = ctx
             .auth_service
-            .complete_google_login(state_hash, code)
+            .complete_google_login(state_hash, code, user_id)
             .await?;
         let expiry = time::OffsetDateTime::from_unix_timestamp(expires_at.timestamp())
             .map_err(|error| AppError::InternalError(error.to_string()))?;

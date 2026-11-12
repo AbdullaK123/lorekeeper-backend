@@ -1,11 +1,39 @@
 use crate::app::AppState;
 use crate::app::errors::AppError;
-use axum::extract::FromRequestParts;
+use axum::extract::{FromRequestParts, OptionalFromRequestParts};
 use axum::http::request::Parts;
 use axum_extra::extract::cookie::CookieJar;
 use uuid::Uuid;
 
 pub struct UserId(pub Uuid);
+
+impl OptionalFromRequestParts<AppState> for UserId {
+    type Rejection = AppError;
+
+    async fn from_request_parts(
+        parts: &mut Parts,
+        state: &AppState,
+    ) -> Result<Option<Self>, Self::Rejection> {
+        let cookies = CookieJar::from_headers(&parts.headers);
+
+        let cookie = cookies.get("session_id");
+
+        match cookie {
+            Some(cookie) => {
+                let user_id: Option<Uuid> = state
+                    .auth_service
+                    .get_user_id_from_session(cookie.value())
+                    .await?;
+
+                match user_id {
+                    Some(user_id) => Ok(Some(UserId(user_id))),
+                    None => Ok(None),
+                }
+            }
+            None => Ok(None),
+        }
+    }
+}
 
 impl FromRequestParts<AppState> for UserId {
     type Rejection = AppError;

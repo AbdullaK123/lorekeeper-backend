@@ -1,4 +1,5 @@
 use sqlx::PgPool;
+use uuid::Uuid;
 
 use crate::{data::LoginAttemptRow, infrastructure::InfrastructureError};
 
@@ -18,17 +19,19 @@ impl LoginAttemptsRepository {
         state_hash: String,
         nonce: String,
         pkce_verifier: String,
+        user_id: Option<Uuid>,
     ) -> Result<LoginAttemptRow, InfrastructureError> {
         let result = sqlx::query_as!(
             LoginAttemptRow,
             "
-            INSERT INTO google_login_attempts (state_hash, nonce, pkce_verifier) 
-            VALUES ($1, $2, $3)
+            INSERT INTO google_login_attempts (state_hash, nonce, pkce_verifier, user_id) 
+            VALUES ($1, $2, $3, $4)
             RETURNING *
             ",
             state_hash,
             nonce,
-            pkce_verifier
+            pkce_verifier,
+            user_id
         )
         .fetch_one(&self.pool)
         .await
@@ -44,15 +47,19 @@ impl LoginAttemptsRepository {
     pub async fn consume(
         &self,
         state_hash: String,
+        user_id: Option<Uuid>,
     ) -> Result<Option<LoginAttemptRow>, InfrastructureError> {
         let result = sqlx::query_as!(
             LoginAttemptRow,
             "
             DELETE FROM google_login_attempts
-            WHERE state_hash=$1 AND expires_at > NOW()
+            WHERE state_hash=$1 
+                AND (user_id IS NULL OR user_id=$2::uuid) 
+                AND expires_at > NOW()
             RETURNING *
             ",
-            state_hash
+            state_hash,
+            user_id
         )
         .fetch_optional(&self.pool)
         .await

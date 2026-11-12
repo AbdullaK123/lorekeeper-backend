@@ -409,9 +409,10 @@ impl UserRepository {
         state_hash: String,
         nonce: String,
         pkce_verifier: String,
+        user_id: Option<Uuid>,
     ) -> Result<LoginAttemptRow, InfrastructureError> {
         self.login_attempts
-            .create(state_hash, nonce, pkce_verifier)
+            .create(state_hash, nonce, pkce_verifier, user_id)
             .await
     }
 
@@ -423,7 +424,34 @@ impl UserRepository {
     pub async fn consume_login_attempt(
         &self,
         state_hash: String,
+        user_id: Option<Uuid>,
     ) -> Result<Option<LoginAttemptRow>, InfrastructureError> {
-        self.login_attempts.consume(state_hash).await
+        self.login_attempts.consume(state_hash, user_id).await
+    }
+
+    pub async fn set_google_sub(
+        &self,
+        id: Uuid,
+        sub: String,
+    ) -> Result<Option<User>, InfrastructureError> {
+        Ok(sqlx::query_as!(
+            User,
+            "
+            UPDATE users SET google_sub = $2
+            WHERE id = $1 AND (google_sub IS NULL OR google_sub = $2)
+            RETURNING *
+
+            ",
+            id,
+            sub
+        )
+        .fetch_optional(&self.pool)
+        .await
+        .map_err(|e| match e {
+            sqlx::Error::Database(db) if db.is_unique_violation() => {
+                InfrastructureError::Conflict("Google account already linked".into())
+            }
+            other => other.into(),
+        })?)
     }
 }

@@ -1,5 +1,41 @@
 # Lorekeeper — Design and Development Lifecycle
 
+## Linking status — 2026-11-12
+
+Overwrite rule implemented: link never replaces an existing google_sub (Conflict). Tests pass.
+
+## Overwrite rule — 2026-11-12
+
+Decision: a link never replaces an existing Google link. Writers unlink first (unlink not built).
+
+## Session lookup fix — 2026-11-12
+
+Google start and callback use Option<UserId>; the hidden-error test passes. 32/33 link tests pass. Overwrite rule still open.
+
+## Linking known limits — 2026-11-12
+
+Google start and callback read the session with Result<UserId>.ok(), which hides database errors. Option<UserId> propagates them.
+An existing google_sub is replaced without warning; a failing test encodes the proposed reject rule.
+
+## Linking behavior verified — 2026-11-12
+
+Tests confirm: link keeps the user ID; only the starting session can finish; duplicate Google account gives Conflict; user deletion cancels pending links.
+Known limit: an existing google_sub is replaced without warning.
+
+## Google account linking backend — 2026-11-12
+
+US-043 linking path is implemented in the backend but not accepted. No link tests exist yet.
+Plain Google login tests pass (9/9). Callback tests need DBOS system tables in the new QA database.
+Open design points: logged-in /google always links; existing google_sub is overwritten without warning.
+
+## Next backend slice after Google sign-in — 2026-11-10
+
+Google sign-in has persisted-user/session evidence. Account linking remains separate unfinished work under US-043.
+Recommend authenticated Google linking for existing password accounts. Current email collisions reject login rather than link accounts.
+Link only after the user proves both identities: an existing local session and verified Google login. Preserve the existing user ID and worlds.
+First design slice: define the link request/callback behavior and transaction boundary before implementation.
+Billing and usage remain required later work. All four PM docs reviewed; no code changes or tests occur and no full epic is newly accepted.
+
 ## SQLx Google field metadata refreshed — 2026-11-10
 
 Local Postgres is healthy and users.google_sub exists. The previously missing .sqlx cache is regenerated against app_db.

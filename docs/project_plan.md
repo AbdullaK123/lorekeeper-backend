@@ -1,5 +1,35 @@
 # Lorekeeper — Project Plan
 
+## US-043 next steps — 2026-11-12
+
+Linking done and tested (33/33). Next: decide if logged-in /google should always link; then build unlink.
+
+## Session lookup fix — 2026-11-12
+
+Google start and callback use Option<UserId>; the hidden-error test passes. 32/33 link tests pass. Overwrite rule still open.
+
+## US-043 next steps — 2026-11-12
+
+Fix: use Option<UserId> in Google start/callback so session-lookup errors surface. Decide the overwrite rule. Then unlinking.
+
+## US-043 link test evidence — 2026-11-12
+
+Linking service path has 16 passing tests. Next: decide the overwrite rule and whether logged-in /google always links.
+
+## Google account linking backend — 2026-11-12
+
+US-043 linking path is implemented in the backend but not accepted. No link tests exist yet.
+Plain Google login tests pass (9/9). Callback tests need DBOS system tables in the new QA database.
+Open design points: logged-in /google always links; existing google_sub is overwritten without warning.
+
+## Next backend slice after Google sign-in — 2026-11-10
+
+Google sign-in has persisted-user/session evidence. Account linking remains separate unfinished work under US-043.
+Recommend authenticated Google linking for existing password accounts. Current email collisions reject login rather than link accounts.
+Link only after the user proves both identities: an existing local session and verified Google login. Preserve the existing user ID and worlds.
+First design slice: define the link request/callback behavior and transaction boundary before implementation.
+Billing and usage remain required later work. All four PM docs reviewed; no code changes or tests occur and no full epic is newly accepted.
+
 ## SQLx Google field metadata refreshed — 2026-11-10
 
 Local Postgres is healthy and users.google_sub exists. The previously missing .sqlx cache is regenerated against app_db.

@@ -1,6 +1,6 @@
 {
   "db_name": "PostgreSQL",
-  "query": "\n            INSERT INTO google_login_attempts (state_hash, nonce, pkce_verifier) \n            VALUES ($1, $2, $3)\n            RETURNING *\n            ",
+  "query": "\n            DELETE FROM google_login_attempts\n            WHERE state_hash=$1 \n                AND (user_id IS NULL OR user_id=$2::uuid) \n                AND expires_at > NOW()\n            RETURNING *\n            ",
   "describe": {
     "columns": [
       {
@@ -22,21 +22,26 @@
         "ordinal": 3,
         "name": "expires_at",
         "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 4,
+        "name": "user_id",
+        "type_info": "Uuid"
       }
     ],
     "parameters": {
       "Left": [
         "Text",
-        "Text",
-        "Text"
+        "Uuid"
       ]
     },
     "nullable": [
       false,
       false,
       false,
-      false
+      false,
+      true
     ]
   },
-  "hash": "22b73b7108618de92973128563df51d5d6f383f0d7c93d64e14db7c190019361"
+  "hash": "24df60b7d7255c301187fb3e15b612543aef894b0ec7dc11b50cffe2946073fc"
 }
